@@ -1,0 +1,148 @@
+.uploader {
+    width: 100%;
+}
+
+.dropzone {
+    position: relative;
+    border: 2px dashed var(--color-primary);
+    border-radius: var(--radius-xl);
+    padding: 4rem 2rem;
+    text-align: center;
+    transition: all var(--transition-base);
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.02);
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropzone:hover {
+    border-color: var(--color-primary);
+    background: rgba(139, 92, 246, 0.05);
+}
+
+.dropzone.dragging {
+    border-color: var(--color-primary);
+    background: rgba(139, 92, 246, 0.1);
+    transform: scale(1.01);
+}
+
+.dropzone.hasImage {
+    padding: 0;
+    border: none;
+    background: transparent;
+}
+
+.uploadIcon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    background: rgba(139, 92, 246, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+    transition: all var(--transition-base);
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.1);
+}
+
+.dropzone:hover .uploadIcon {
+    background: var(--color-primary);
+    color: white;
+    transform: scale(1.1);
+    box-shadow: var(--shadow-glow);
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 0.75rem;
+    font-family: 'Outfit', sans-serif;
+}
+
+.subtitle {
+    font-size: 1.125rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 1rem;
+}
+
+.formats {
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+    opacity: 0.6;
+}
+
+.fileInput {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.preview {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    animation: fadeIn 0.3s ease-out;
+    border: 1px solid var(--color-border);
+}
+
+.preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: var(--radius-xl);
+}
+
+.removeBtn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-base);
+    z-index: 10;
+}
+
+.removeBtn:hover {
+    background: var(--color-primary);
+    transform: scale(1.1);
+    border-color: var(--color-primary);
+}
+
+@media (max-width: 640px) {
+    .dropzone {
+        padding: 2rem 1rem;
+        min-height: 250px;
+    }
+
+    .uploadIcon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .uploadIcon svg {
+        width: 32px;
+        height: 32px;
+    }
+
+    .title {
+        font-size: 1.25rem;
+    }
+}
