@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import CategoryTabs from '@/components/CategoryTabs'
@@ -14,25 +14,28 @@ import FAQ from '@/components/FAQ'
 import ToolsGrid from '@/components/ToolsGrid'
 import AuthPopup from '@/components/AuthPopup'
 import PromoPopup from '@/components/PromoPopup'
+import ResultDisplay from '@/components/ResultDisplay'
+import RelatedTools from '@/components/RelatedTools'
 import { commonFaqItems } from '@/utils/commonFaqItems'
 import styles from '../watermark-remover/watermark.module.css'
 
 export default function RemoveWatermarkVideo() {
     const [uploadedImage, setUploadedImage] = useState<File | null>(null)
+    const [originalPreview, setOriginalPreview] = useState<string | null>(null)
     const [isProcessing, setIsProcessing] = useState(false)
     const [processedImage, setProcessedImage] = useState<string | null>(null)
     const [showAuthPopup, setShowAuthPopup] = useState(false)
     const [showPromoPopup, setShowPromoPopup] = useState(false)
+    const [isAuthenticated, setIsAuthenticated] = useState(false)
+    const uploadRef = useRef<HTMLDivElement>(null)
 
-    const handleImageUpload = (file: File) => {
+    const handleImageUpload = (file: File, preview: string) => {
+        setUploadedImage(file)
+        setOriginalPreview(preview)
+        setProcessedImage(preview) // Simulated processed image
         const isAuthenticated = localStorage.getItem('userAuthenticated')
-
         if (!isAuthenticated) {
             setShowAuthPopup(true)
-            setUploadedImage(file)
-        } else {
-            setUploadedImage(file)
-            setProcessedImage(null)
         }
     }
 
@@ -66,6 +69,25 @@ export default function RemoveWatermarkVideo() {
         localStorage.setItem('userCredits', '1')
     }
 
+    const handleDownload = () => {
+        if (!processedImage) return
+        const link = document.createElement('a')
+        link.href = processedImage
+        link.download = 'processed-video.mp4'
+        link.click()
+    }
+
+    const handleGenerateNew = () => {
+        setUploadedImage(null)
+        setOriginalPreview(null)
+        setProcessedImage(null)
+
+        setTimeout(() => {
+            if (uploadRef.current) {
+                uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' })
+            }
+        }, 100)
+    }
 
 
     return (
@@ -86,7 +108,7 @@ export default function RemoveWatermarkVideo() {
 
                         <CategoryTabs />
 
-                        <div className={styles.uploadSection}>
+                        <div ref={uploadRef} className={styles.uploadSection}>
                             <ImageUploader
                                 onImageUpload={handleImageUpload}
                                 uploadText="Drag your video here"
@@ -94,45 +116,16 @@ export default function RemoveWatermarkVideo() {
                                 acceptedFormats="video/mp4,video/quicktime,video/x-msvideo,video/avi"
                             />
 
-                            {uploadedImage && !processedImage && (
-                                <button
-                                    className="btn btn-primary"
-                                    onClick={handleProcess}
-                                    disabled={isProcessing}
-                                    style={{ marginTop: '1.5rem', width: '100%', maxWidth: '400px' }}
-                                >
-                                    {isProcessing ? (
-                                        <>
-                                            <span className={styles.spinner}></span>
-                                            Processing...
-                                        </>
-                                    ) : (
-                                        <>
-                                            Remove Watermark
-                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                                <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                                            </svg>
-                                        </>
-                                    )}
-                                </button>
-                            )}
-
-                            {processedImage && (
-                                <div className={styles.result}>
-                                    <div className={styles.comparison}>
-                                        <div className={styles.comparisonItem}>
-                                            <span className={styles.comparisonLabel}>Before</span>
-                                            <img src={URL.createObjectURL(uploadedImage!)} alt="Before" loading="lazy" />
-                                        </div>
-                                        <div className={styles.comparisonItem}>
-                                            <span className={styles.comparisonLabel}>After</span>
-                                            <img src={processedImage} alt="After" loading="lazy" />
-                                        </div>
-                                    </div>
-                                    <button className="btn btn-primary" style={{ width: '100%', maxWidth: '400px', marginTop: '1.5rem' }}>
-                                        Download Video
-                                    </button>
-                                </div>
+                            {processedImage && originalPreview && (
+                                <>
+                                    <ResultDisplay
+                                        originalImage={originalPreview}
+                                        processedImage={processedImage}
+                                        onDownload={handleDownload}
+                                        onGenerateNew={handleGenerateNew}
+                                    />
+                                    <RelatedTools />
+                                </>
                             )}
                         </div>
 
@@ -218,6 +211,7 @@ export default function RemoveWatermarkVideo() {
 
                         <div className={styles.steps}>
                             <div className={styles.step}>
+                                <div className={styles.stepNumber}>1</div>
                                 <div className={styles.stepIcon}>📤</div>
                                 <h3 className={styles.stepTitle}>Upload your video</h3>
                                 <p className={styles.stepText}>
@@ -226,6 +220,7 @@ export default function RemoveWatermarkVideo() {
                             </div>
 
                             <div className={styles.step}>
+                                <div className={styles.stepNumber}>2</div>
                                 <div className={styles.stepIcon}>🤖</div>
                                 <h3 className={styles.stepTitle}>AI removes watermark from video automatically</h3>
                                 <p className={styles.stepText}>
@@ -234,6 +229,7 @@ export default function RemoveWatermarkVideo() {
                             </div>
 
                             <div className={styles.step}>
+                                <div className={styles.stepNumber}>3</div>
                                 <div className={styles.stepIcon}>⬇️</div>
                                 <h3 className={styles.stepTitle}>Download your clean video instantly</h3>
                                 <p className={styles.stepText}>

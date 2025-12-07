@@ -54,7 +54,11 @@ const tools = [
     }
 ]
 
-export default function ToolsGrid() {
+interface ToolsGridProps {
+    customImages?: { [key: string]: string }
+}
+
+export default function ToolsGrid({ customImages = {} }: ToolsGridProps) {
     return (
         <section className={styles.toolsSection}>
             <div className="container">
@@ -63,11 +67,19 @@ export default function ToolsGrid() {
                 <div className={styles.grid}>
                     {tools.map((tool, index) => (
                         <Link href={tool.href} key={index} className={styles.toolCard}>
-                            <div className={styles.iconCircle}>
-                                <span className={styles.icon}>{tool.icon}</span>
+                            <div className={styles.imageHeader}>
+                                {customImages[tool.title] ? (
+                                    <img
+                                        src={customImages[tool.title]}
+                                        alt={tool.title}
+                                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                                    />
+                                ) : null}
                             </div>
-                            <h3 className={styles.toolTitle}>{tool.title}</h3>
-                            <p className={styles.toolDescription}>{tool.description}</p>
+                            <div className={styles.cardContent}>
+                                <h3 className={styles.toolTitle}>{tool.title}</h3>
+                                <p className={styles.toolDescription}>{tool.description}</p>
+                            </div>
                         </Link>
                     ))}
                 </div>

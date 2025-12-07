@@ -5,13 +5,13 @@ import styles from './Pricing.module.css'
 
 export default function Pricing() {
     const [isYearly, setIsYearly] = useState(true)
-    const [selectedCredits, setSelectedCredits] = useState(2400)
+    const [selectedCredits, setSelectedCredits] = useState(1200)
 
     const creditOptions = [
-        { credits: 1200, monthlyCredits: 120, label: isYearly ? '1200' : '120', yearlyPrice: 6.90, monthlyPrice: 13.80 },
-        { credits: 2400, monthlyCredits: 240, label: isYearly ? '2400' : '240', yearlyPrice: 9.90, monthlyPrice: 19.80 },
-        { credits: 6000, monthlyCredits: 600, label: isYearly ? '6000' : '600', yearlyPrice: 22.90, monthlyPrice: 45.80 },
-        { credits: 12000, monthlyCredits: 1200, label: isYearly ? '12000' : '1200', yearlyPrice: 39.90, monthlyPrice: 79.80 }
+        { credits: 1200, monthlyCredits: 100, label: isYearly ? '1200' : '100', yearlyPrice: 5.50, monthlyPrice: 10.90 },
+        { credits: 2400, monthlyCredits: 200, label: isYearly ? '2400' : '200', yearlyPrice: 8.50, monthlyPrice: 16.90 },
+        { credits: 6000, monthlyCredits: 500, label: isYearly ? '6000' : '500', yearlyPrice: 13, monthlyPrice: 25.90 },
+        { credits: 12000, monthlyCredits: 1000, label: isYearly ? '12000' : '1000', yearlyPrice: 15, monthlyPrice: 29.90 }
     ]
 
     const getCurrentPrice = () => {
@@ -76,6 +76,7 @@ export default function Pricing() {
                 {/* Pro Plan */}
                 <div className={`${styles.plan} ${styles.proPlan}`}>
                     <div className={styles.popularBadge}>Most popular</div>
+                    <div className={styles.discountBadge}>25%<br />OFF</div>
                     <div className={styles.planHeader}>
                         <h3 className={styles.planTitle}>Pro Plan</h3>
 
@@ -114,7 +115,7 @@ export default function Pricing() {
                     </div>
 
                     <button className={styles.proButton}>
-                        Get Pro now <span className={styles.buttonPrice}>${price.toFixed(2)}</span>
+                        Get Pro now <span className={styles.buttonPrice}>${isYearly ? Math.round(price * 12) : price.toFixed(2)}</span>
                     </button>
 
                     <ul className={styles.features}>
