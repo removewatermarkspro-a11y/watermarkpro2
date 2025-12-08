@@ -16,7 +16,7 @@ import AuthPopup from '@/components/AuthPopup'
 import PromoPopup from '@/components/PromoPopup'
 import ResultDisplay from '@/components/ResultDisplay'
 import RelatedTools from '@/components/RelatedTools'
-import { commonFaqItems } from '@/utils/commonFaqItems'
+import { objectRemovalFaqItems } from '@/utils/faqItems'
 import styles from '../watermark-remover/watermark.module.css'
 
 export default function RemoveObject() {
@@ -207,7 +207,7 @@ export default function RemoveObject() {
                             uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' })
                         }
                     }} />
-                    <FAQ items={commonFaqItems} />
+                    <FAQ items={objectRemovalFaqItems} />
 
                     <ToolsGrid />
                 </div>

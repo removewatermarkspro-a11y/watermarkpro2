@@ -16,7 +16,7 @@ import AuthPopup from '@/components/AuthPopup'
 import PromoPopup from '@/components/PromoPopup'
 import ResultDisplay from '@/components/ResultDisplay'
 import RelatedTools from '@/components/RelatedTools'
-import { commonFaqItems } from '@/utils/commonFaqItems'
+import { commonFaqItems } from '@/utils/faqItems'
 import styles from '../watermark-remover/watermark.module.css'
 
 export default function RemoveWatermarkVideo() {

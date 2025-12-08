@@ -16,7 +16,7 @@ import AuthPopup from '@/components/AuthPopup'
 import PromoPopup from '@/components/PromoPopup'
 import ResultDisplay from '@/components/ResultDisplay'
 import RelatedTools from '@/components/RelatedTools'
-import { commonFaqItems } from '@/utils/commonFaqItems'
+import { replaceBackgroundFaqItems } from '@/utils/faqItems'
 import styles from '../watermark-remover/watermark.module.css'
 
 export default function ReplaceBackground() {
@@ -207,7 +207,7 @@ export default function ReplaceBackground() {
                             uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' })
                         }
                     }} />
-                    <FAQ items={commonFaqItems} />
+                    <FAQ items={replaceBackgroundFaqItems} />
 
                     <ToolsGrid />
                 </div>
