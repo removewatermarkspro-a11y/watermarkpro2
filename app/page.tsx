@@ -64,6 +64,20 @@ export default function WatermarkRemover() {
         }, 100)
     }
 
+    const handleGetStarted = () => {
+        const authenticated = localStorage.getItem('userAuthenticated') === 'true'
+
+        if (!authenticated) {
+            // User not authenticated - show auth popup
+            setShowAuthPopup(true)
+        } else {
+            // User authenticated - scroll to upload section
+            if (uploadRef.current) {
+                uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' })
+            }
+        }
+    }
+
     return (
         <>
             <Header />
@@ -127,7 +141,7 @@ export default function WatermarkRemover() {
                                 <div className={styles.featureContent}>
                                     <h3>Free Watermark Remover Online – Fast AI Watermark Deleter</h3>
                                     <p className={styles.sectionText}>Our advanced AI delivers a powerful free watermark remover designed for high-precision cleanup on both images and videos. By analyzing every pixel, the system can remove watermark from photo, delete logos, text, objects, and even handle complex backgrounds while seamlessly erasing watermarks. Whether you want to enhance your images or use a TikTok watermark remover for social content, you always get smooth, natural, and trace-free results every time.</p>
-                                    <button className="btn btn-primary">Get Started<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button>
+                                    <button className="btn btn-primary" onClick={handleGetStarted}>Get Started<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button>
                                 </div>
                             </div>
                             <div className={styles.featureItem}>
@@ -141,7 +155,7 @@ export default function WatermarkRemover() {
                                 <div className={styles.featureContent}>
                                     <h3>Fast TikTok Watermark Remover for Video</h3>
                                     <p className={styles.sectionText}>Enjoy ultra-fast performance with our optimized engine created for efficient watermark remover video processing. In just seconds, you can delete watermark from video, refine your footage, or remove watermark from any clip across all major formats. Ideal for creators, editors, or anyone searching how to remove watermark from photo or video, the automated workflow keeps everything simple while maintaining top-tier quality.</p>
-                                    <button className="btn btn-primary">Get Started<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button>
+                                    <button className="btn btn-primary" onClick={handleGetStarted}>Get Started<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button>
                                 </div>
                             </div>
                             <div className={styles.featureItem}>
@@ -155,7 +169,7 @@ export default function WatermarkRemover() {
                                 <div className={styles.featureContent}>
                                     <h3>Remove Watermark from Photo & Video – Complete Solution</h3>
                                     <p className={styles.sectionText}>Compatible with MP4, MOV, AVI and more, this free watermark remover acts as both a universal watermark deleter and a precise tool to remove TikTok watermark with professional accuracy. Whether your files come from social media, downloads, or personal recordings, you can easily remove watermarks from any video format and achieve clean, polished, high-quality results.</p>
-                                    <button className="btn btn-primary">Get Started<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button>
+                                    <button className="btn btn-primary" onClick={handleGetStarted}>Get Started<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button>
                                 </div>
                             </div>
                         </div>

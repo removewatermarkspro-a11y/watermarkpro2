@@ -85,6 +85,16 @@ export default function AutoRemovePeople() {
         }, 100)
     }
 
+    const handleGetStarted = () => {
+        const authenticated = localStorage.getItem('userAuthenticated') === 'true'
+        if (!authenticated) {
+            setShowAuthPopup(true)
+        } else {
+            if (uploadRef.current) {
+                uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' })
+            }
+        }
+    }
 
     return (
         <>
@@ -137,7 +147,7 @@ export default function AutoRemovePeople() {
                                 <div className={styles.featureContent}>
                                     <h3>Smart People Remover Online – Fast AI Person Deleter</h3>
                                     <p className={styles.sectionText}>Our advanced AI delivers a powerful smart people removal tool designed for high-precision cleanup on all types of photos. By analyzing every pixel, the system can remove people from images, erase unwanted subjects, delete distractions, and even handle complex backgrounds while seamlessly reconstructing missing areas. Whether you want to enhance your shots or clean up travel and social content with one-click precision, you always get smooth, natural, and trace-free results every time.</p>
-                                    <button className="btn btn-primary">Get Started<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button>
+                                    <button className="btn btn-primary" onClick={handleGetStarted}>Get Started<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button>
                                 </div>
                             </div>
                             <div className={styles.featureItem}>
@@ -151,7 +161,7 @@ export default function AutoRemovePeople() {
                                 <div className={styles.featureContent}>
                                     <h3>Fast One-Click People Remover for Any Photo</h3>
                                     <p className={styles.sectionText}>Enjoy ultra-fast performance with our optimized engine created for efficient AI people removal. In just seconds, you can erase strangers, refine backgrounds, or remove a person from any image across all major formats. Ideal for creators, photographers, editors, or anyone searching how to remove people from photos quickly, the automated workflow keeps everything simple while maintaining top-tier quality.</p>
-                                    <button className="btn btn-primary">Get Started<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button>
+                                    <button className="btn btn-primary" onClick={handleGetStarted}>Get Started<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button>
                                 </div>
                             </div>
                             <div className={styles.featureItem}>
@@ -165,7 +175,7 @@ export default function AutoRemovePeople() {
                                 <div className={styles.featureContent}>
                                     <h3>Remove People From Photos – Complete AI Solution</h3>
                                     <p className={styles.sectionText}>Compatible with JPG, PNG, JPEG and more, this smart people remover acts as both a universal object eraser and a precise tool to delete unwanted individuals with professional accuracy. Whether your files come from social media, travel albums, group shots, or personal collections, you can effortlessly remove people from any image and achieve clean, polished, high-quality results.</p>
-                                    <button className="btn btn-primary">Get Started<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button>
+                                    <button className="btn btn-primary" onClick={handleGetStarted}>Get Started<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button>
                                 </div>
                             </div>
                         </div>

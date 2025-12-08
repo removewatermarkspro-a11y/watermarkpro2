@@ -85,6 +85,16 @@ export default function RemoveText() {
         }, 100)
     }
 
+    const handleGetStarted = () => {
+        const authenticated = localStorage.getItem('userAuthenticated') === 'true'
+        if (!authenticated) {
+            setShowAuthPopup(true)
+        } else {
+            if (uploadRef.current) {
+                uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' })
+            }
+        }
+    }
 
     return (
         <>
@@ -139,7 +149,7 @@ export default function RemoveText() {
                                     <p className={styles.sectionText}>
                                         Our advanced AI provides a powerful remove text from image free solution capable of delivering high-precision results on all types of photos. By analyzing every pixel, the system can remove text from photo, erase captions, unwanted labels, watermarks, and objects while preserving natural texture. Whether you need to clean graphics or fix pictures with an AI text remover, you always get smooth and realistic results with no visible traces.
                                     </p>
-                                    <button className="btn btn-primary">Get Started<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button>
+                                    <button className="btn btn-primary" onClick={handleGetStarted}>Get Started<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button>
                                 </div>
                             </div>
                             <div className={styles.featureItem}>
@@ -151,7 +161,7 @@ export default function RemoveText() {
                                     <p className={styles.sectionText}>
                                         Enjoy lightning-fast performance with our optimized engine built for efficient AI text removal. In just seconds, you can remove text from image, fix scans, clean screenshots, or erase words from photos across all major formats. Perfect for designers, students, creators, or anyone searching how to remove text from image free, this automated workflow keeps everything effortless while maintaining top-tier quality.
                                     </p>
-                                    <button className="btn btn-primary">Get Started<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button>
+                                    <button className="btn btn-primary" onClick={handleGetStarted}>Get Started<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button>
                                 </div>
                             </div>
                             <div className={styles.featureItem}>
@@ -163,7 +173,7 @@ export default function RemoveText() {
                                     <p className={styles.sectionText}>
                                         Compatible with PNG, JPG, JPEG and more, this tool works as both a universal free AI text remover and a precise solution to clean any image instantly. Whether the source is a screenshot, document, meme, artwork or social media graphic, you can remove text from photo in seconds and achieve clean, polished, professional-looking results without manual editing.
                                     </p>
-                                    <button className="btn btn-primary">Get Started<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button>
+                                    <button className="btn btn-primary" onClick={handleGetStarted}>Get Started<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button>
                                 </div>
                             </div>
                         </div>

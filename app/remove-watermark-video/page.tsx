@@ -89,6 +89,16 @@ export default function RemoveWatermarkVideo() {
         }, 100)
     }
 
+    const handleGetStarted = () => {
+        const authenticated = localStorage.getItem('userAuthenticated') === 'true'
+        if (!authenticated) {
+            setShowAuthPopup(true)
+        } else {
+            if (uploadRef.current) {
+                uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' })
+            }
+        }
+    }
 
     return (
         <>
@@ -153,7 +163,7 @@ export default function RemoveWatermarkVideo() {
                                     <p className={styles.sectionText}>
                                         Our AI-powered tool offers a free remove watermark video solution that delivers high-precision results on all types of footage. By analyzing each frame in detail, it can erase logos, text, watermarks, and unwanted overlays while maintaining crisp video quality. Whether you're cleaning up clips for social media or fixing downloaded content, you get smooth and natural results without traces or distortion.
                                     </p>
-                                    <button className="btn btn-primary">
+                                    <button className="btn btn-primary" onClick={handleGetStarted}>
                                         Get Started
                                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                                             <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
@@ -171,7 +181,7 @@ export default function RemoveWatermarkVideo() {
                                     <p className={styles.sectionText}>
                                         Enjoy lightning-fast processing with our optimized engine built for free video watermark removal. In just a few seconds, you can remove watermark from video, improve your footage, or clean up scenes across MP4, MOV, AVI, and many other formats. Perfect for creators, editors, or anyone searching how to remove watermark from video effortlessly, the automated workflow keeps everything simple and reliable.
                                     </p>
-                                    <button className="btn btn-primary">
+                                    <button className="btn btn-primary" onClick={handleGetStarted}>
                                         Get Started
                                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                                             <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
@@ -189,7 +199,7 @@ export default function RemoveWatermarkVideo() {
                                     <p className={styles.sectionText}>
                                         This all-in-one tool works as a universal free watermark remover video service capable of handling both simple and complex cases. Whether your clips come from TikTok, downloads, screen recordings, or personal projects, you can instantly delete watermarks and achieve clean, polished visuals. Whatever the source, the system ensures stable quality and professional-looking results every time.
                                     </p>
-                                    <button className="btn btn-primary">
+                                    <button className="btn btn-primary" onClick={handleGetStarted}>
                                         Get Started
                                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                                             <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />

@@ -85,6 +85,16 @@ export default function RemoveObject() {
         }, 100)
     }
 
+    const handleGetStarted = () => {
+        const authenticated = localStorage.getItem('userAuthenticated') === 'true'
+        if (!authenticated) {
+            setShowAuthPopup(true)
+        } else {
+            if (uploadRef.current) {
+                uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' })
+            }
+        }
+    }
 
     return (
         <>
@@ -137,7 +147,7 @@ export default function RemoveObject() {
                                 <div className={styles.featureContent}>
                                     <h3>Free Object Remover Online – Fast AI Object Deletion</h3>
                                     <p className={styles.sectionText}>Our advanced AI delivers a powerful free object remover designed for high-precision cleanup on all types of images. By analyzing every pixel, the system can remove unwanted objects from photos, erase people, text, clutter, and even manage complex backgrounds while seamlessly reconstructing missing details. Whether you want to enhance your pictures or clean up scenes for social content, you always get smooth, natural, and trace-free results every time.</p>
-                                    <button className="btn btn-primary">Get Started<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button>
+                                    <button className="btn btn-primary" onClick={handleGetStarted}>Get Started<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button>
                                 </div>
                             </div>
                             <div className={styles.featureItem}>
@@ -151,7 +161,7 @@ export default function RemoveObject() {
                                 <div className={styles.featureContent}>
                                     <h3>Fast AI Tool to Remove Unwanted Objects Instantly</h3>
                                     <p className={styles.sectionText}>Enjoy ultra-fast performance with our optimized engine created for efficient AI object removal. In just seconds, you can erase objects from any image, refine backgrounds, or fix imperfections across all major formats. Ideal for creators, photographers, editors, or anyone searching how to remove objects from photos easily, the automated workflow keeps everything simple while maintaining top-tier quality.</p>
-                                    <button className="btn btn-primary">Get Started<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button>
+                                    <button className="btn btn-primary" onClick={handleGetStarted}>Get Started<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button>
                                 </div>
                             </div>
                             <div className={styles.featureItem}>
@@ -165,7 +175,7 @@ export default function RemoveObject() {
                                 <div className={styles.featureContent}>
                                     <h3>Remove Objects from Photos – Complete AI Solution</h3>
                                     <p className={styles.sectionText}>Compatible with JPG, PNG, JPEG and more, this free object remover acts as both a universal cleanup tool and a precise solution to remove objects from images with professional accuracy. Whether your files come from social media, downloads, screenshots, or personal photo collections, you can easily delete unwanted elements and achieve clean, polished, high-quality results.</p>
-                                    <button className="btn btn-primary">Get Started<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button>
+                                    <button className="btn btn-primary" onClick={handleGetStarted}>Get Started<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button>
                                 </div>
                             </div>
                         </div>

@@ -85,6 +85,16 @@ export default function ImageUpscaler() {
         }, 100)
     }
 
+    const handleGetStarted = () => {
+        const authenticated = localStorage.getItem('userAuthenticated') === 'true'
+        if (!authenticated) {
+            setShowAuthPopup(true)
+        } else {
+            if (uploadRef.current) {
+                uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' })
+            }
+        }
+    }
 
     return (
         <>
@@ -137,7 +147,7 @@ export default function ImageUpscaler() {
                                 <div className={styles.featureContent}>
                                     <h3>AI Image Upscaler Online – Fast 4K Enhancement Tool</h3>
                                     <p className={styles.sectionText}>Our advanced AI delivers a powerful free image upscaler designed for high-precision enhancement on all types of photos. By analyzing every pixel, the system can upscale images to 4K, restore fine details, improve textures, sharpen edges, and even fix low-resolution or blurry shots while preserving natural quality. Whether you want to enhance your images or prepare ultra-HD visuals for social content, you always get crisp, smooth, and stunning results every time.</p>
-                                    <button className="btn btn-primary">Get Started<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button>
+                                    <button className="btn btn-primary" onClick={handleGetStarted}>Get Started<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button>
                                 </div>
                             </div>
                             <div className={styles.featureItem}>
@@ -151,7 +161,7 @@ export default function ImageUpscaler() {
                                 <div className={styles.featureContent}>
                                     <h3>Fast AI Upscaler for Ultra-HD 4K Quality</h3>
                                     <p className={styles.sectionText}>Enjoy ultra-fast performance with our optimized engine created for efficient AI image upscaling. In just seconds, you can upscale photos to 4K, refine clarity, boost definition, or convert low-res images into professional-grade visuals across all major formats. Ideal for creators, designers, photographers, or anyone searching how to upscale images instantly, the automated workflow keeps everything simple while delivering top-tier quality.</p>
-                                    <button className="btn btn-primary">Get Started<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button>
+                                    <button className="btn btn-primary" onClick={handleGetStarted}>Get Started<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button>
                                 </div>
                             </div>
                             <div className={styles.featureItem}>
@@ -165,7 +175,7 @@ export default function ImageUpscaler() {
                                 <div className={styles.featureContent}>
                                     <h3>Upscale Photos to 4K – Complete AI Enhancement Solution</h3>
                                     <p className={styles.sectionText}>Compatible with JPG, PNG, JPEG and more, this AI upscaler acts as both a universal enhancement tool and a precise solution to upscale images with professional accuracy. Whether your files come from social media, old archives, product photography, or personal collections, you can easily enlarge any image and achieve clean, polished, high-resolution 4K results.</p>
-                                    <button className="btn btn-primary">Get Started<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button>
+                                    <button className="btn btn-primary" onClick={handleGetStarted}>Get Started<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button>
                                 </div>
                             </div>
                         </div>

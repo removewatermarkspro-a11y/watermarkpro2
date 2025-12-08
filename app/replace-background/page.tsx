@@ -85,6 +85,16 @@ export default function ReplaceBackground() {
         }, 100)
     }
 
+    const handleGetStarted = () => {
+        const authenticated = localStorage.getItem('userAuthenticated') === 'true'
+        if (!authenticated) {
+            setShowAuthPopup(true)
+        } else {
+            if (uploadRef.current) {
+                uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' })
+            }
+        }
+    }
 
     return (
         <>
@@ -137,7 +147,7 @@ export default function ReplaceBackground() {
                                 <div className={styles.featureContent}>
                                     <h3>Free Background Remover Online – Fast AI Background Eraser</h3>
                                     <p className={styles.sectionText}>Our advanced AI delivers a powerful free background remover designed for high-precision editing on all types of photos. By analyzing every pixel, the system can remove background from image, isolate the subject, erase objects, and handle complex edges while generating a smooth transparent result. Whether you want to enhance your pictures or prepare clean visuals for social content, you always get natural, crisp, and professional-quality results every time.</p>
-                                    <button className="btn btn-primary">Get Started<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button>
+                                    <button className="btn btn-primary" onClick={handleGetStarted}>Get Started<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button>
                                 </div>
                             </div>
                             <div className={styles.featureItem}>
@@ -151,7 +161,7 @@ export default function ReplaceBackground() {
                                 <div className={styles.featureContent}>
                                     <h3>Fast AI Background Remover for Any Image</h3>
                                     <p className={styles.sectionText}>Enjoy ultra-fast performance with our optimized engine created for efficient background removal. In just seconds, you can erase background from photo, refine outlines, or turn any picture into a transparent PNG across all major formats. Ideal for creators, editors, businesses, or anyone searching how to remove background from image instantly, the automated workflow keeps everything simple while delivering top-tier quality.</p>
-                                    <button className="btn btn-primary">Get Started<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button>
+                                    <button className="btn btn-primary" onClick={handleGetStarted}>Get Started<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button>
                                 </div>
                             </div>
                             <div className={styles.featureItem}>
@@ -165,7 +175,7 @@ export default function ReplaceBackground() {
                                 <div className={styles.featureContent}>
                                     <h3>Remove Background from Photos – Complete AI Solution</h3>
                                     <p className={styles.sectionText}>Compatible with JPG, PNG, JPEG and more, this free background remover acts as both a universal background eraser and a precise tool to cut out subjects with professional accuracy. Whether your files come from social media, downloads, product shoots, or personal galleries, you can easily remove backgrounds from any image and achieve clean, polished, high-resolution results.</p>
-                                    <button className="btn btn-primary">Get Started<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button>
+                                    <button className="btn btn-primary" onClick={handleGetStarted}>Get Started<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button>
                                 </div>
                             </div>
                         </div>
