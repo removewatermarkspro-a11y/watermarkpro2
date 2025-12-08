@@ -188,28 +188,25 @@ export default function AutoRemovePeople() {
                         </div>
                         <div className={styles.steps}>
                             <div className={styles.step}>
-                                <div className={styles.stepNumber}>1</div>
-                                <div className={styles.stepIcon}>📤</div>
-                                <h3 className={styles.stepTitle}>Upload your image</h3>
+                                <div className={styles.stepNumber}>1</div>                                <h3 className={styles.stepTitle}>Upload your image</h3>
                                 <p className={styles.stepText}>Start by uploading your photo directly from your device or dragging it into the interface. Our platform supports all common formats, making it easy to automatically detect and remove people from your images with just a single click. Perfect for travel photos, real-estate shots, architectural images, or any scene where you want a clean, people-free environment.</p>
                             </div>
                             <div className={styles.step}>
-                                <div className={styles.stepNumber}>2</div>
-                                <div className={styles.stepIcon}>🤖</div>
-                                <h3 className={styles.stepTitle}>AI detects and removes people automatically</h3>
+                                <div className={styles.stepNumber}>2</div>                                <h3 className={styles.stepTitle}>AI detects and removes people automatically</h3>
                                 <p className={styles.stepText}>Once your image is uploaded, our powerful AI people remover scans the entire photo to detect all individuals and erase them with high accuracy. This advanced tool reconstructs the background intelligently, filling gaps naturally and seamlessly. The process is fully automated, allowing you to remove people from images quickly, cleanly, and without editing skills.</p>
                             </div>
                             <div className={styles.step}>
-                                <div className={styles.stepNumber}>3</div>
-                                <div className={styles.stepIcon}>⬇️</div>
-                                <h3 className={styles.stepTitle}>Download your people-free result instantly</h3>
+                                <div className={styles.stepNumber}>3</div>                                <h3 className={styles.stepTitle}>Download your people-free result instantly</h3>
                                 <p className={styles.stepText}>In just a few seconds, your new person-free image is ready. Simply download the final result in high quality and use it anywhere—real-estate listings, travel galleries, architectural visuals, or personal archives. With our fast and reliable one-click people removal tool, getting clean, empty scenes has never been easier.</p>
                             </div>
                         </div>
                     </section>
 
-                    <Pricing />
-                    <Testimonials />
+                    <Pricing />                    <Testimonials onCtaClick={() => {
+                        if (uploadRef.current) {
+                            uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' })
+                        }
+                    }} />
                     <FAQ items={commonFaqItems} />
 
                     <ToolsGrid />

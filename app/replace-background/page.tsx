@@ -188,28 +188,25 @@ export default function ReplaceBackground() {
                         </div>
                         <div className={styles.steps}>
                             <div className={styles.step}>
-                                <div className={styles.stepNumber}>1</div>
-                                <div className={styles.stepIcon}>📤</div>
-                                <h3 className={styles.stepTitle}>Upload your image</h3>
+                                <div className={styles.stepNumber}>1</div>                                <h3 className={styles.stepTitle}>Upload your image</h3>
                                 <p className={styles.stepText}>Start by uploading your photo directly from your device or dragging it into the interface. Our platform supports all common formats, making it easy to remove background from image or create transparent backgrounds with just a single click. Whether it's for product photos, portraits, or design assets, the system prepares your file instantly.</p>
                             </div>
                             <div className={styles.step}>
-                                <div className={styles.stepNumber}>2</div>
-                                <div className={styles.stepIcon}>🎨</div>
-                                <h3 className={styles.stepTitle}>AI removes the background automatically</h3>
+                                <div className={styles.stepNumber}>2</div>                                <h3 className={styles.stepTitle}>AI removes the background automatically</h3>
                                 <p className={styles.stepText}>Once your image is uploaded, our powerful AI background remover analyzes every pixel to detect the subject and erase the background with high precision. This advanced tool reconstructs edges intelligently, acting as a smart background eraser capable of handling hair, shadows, and detailed textures. The process is fully automated, allowing you to remove backgrounds quickly, cleanly, and without editing skills.</p>
                             </div>
                             <div className={styles.step}>
-                                <div className={styles.stepNumber}>3</div>
-                                <div className={styles.stepIcon}>⬇️</div>
-                                <h3 className={styles.stepTitle}>Download your clean result instantly</h3>
+                                <div className={styles.stepNumber}>3</div>                                <h3 className={styles.stepTitle}>Download your clean result instantly</h3>
                                 <p className={styles.stepText}>In just a few seconds, your new background-free image is ready. Simply download the final result in high quality and use it wherever you need—e-commerce, social media, presentations, design projects, or personal archives. With our fast and reliable background removal tool, getting a clean, professional-looking cutout has never been easier.</p>
                             </div>
                         </div>
                     </section>
 
-                    <Pricing />
-                    <Testimonials />
+                    <Pricing />                    <Testimonials onCtaClick={() => {
+                        if (uploadRef.current) {
+                            uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' })
+                        }
+                    }} />
                     <FAQ items={commonFaqItems} />
 
                     <ToolsGrid />

@@ -184,21 +184,18 @@ export default function WatermarkRemover() {
                         <div className={styles.steps}>
                             <div className={styles.step}>
                                 <div className={styles.stepNumber}>1</div>
-                                <div className={styles.stepIcon}>📤</div>
                                 <h3 className={styles.stepTitle}>Upload your image</h3>
                                 <p className={styles.stepText}>Start by uploading your picture directly from your device or dragging it into the interface. Our platform supports all common formats, making it easy to remove watermark from photo or remove watermark from image with just a single click. Whether the watermark is text, a logo, or a graphic overlay, the system prepares your file instantly for watermark removal.</p>
                             </div>
 
                             <div className={styles.step}>
                                 <div className={styles.stepNumber}>2</div>
-                                <div className={styles.stepIcon}>🤖</div>
                                 <h3 className={styles.stepTitle}>AI removes the watermark automatically</h3>
                                 <p className={styles.stepText}>Once your image is uploaded, our powerful AI watermark remover analyzes every pixel to detect and erase the watermark with high precision. This advanced image watermark remover reconstructs the background intelligently, acting as a smart watermark eraser capable of handling even complex textures. The process is fully automated, allowing you to remove watermark from photo quickly, cleanly, and without any editing skills.</p>
                             </div>
 
                             <div className={styles.step}>
                                 <div className={styles.stepNumber}>3</div>
-                                <div className={styles.stepIcon}>⬇️</div>
                                 <h3 className={styles.stepTitle}>Download your clean result instantly</h3>
                                 <p className={styles.stepText}>In just a few seconds, your new watermark-free image is ready. Simply download the final result in high quality and use it wherever you need—social media, presentations, design projects, or personal archives. With our fast and reliable photo watermark remover, getting a clean, professional image has never been easier.</p>
                             </div>
@@ -206,7 +203,11 @@ export default function WatermarkRemover() {
                     </section>
 
                     <Pricing />
-                    <Testimonials />
+                    <Testimonials onCtaClick={() => {
+                        if (uploadRef.current) {
+                            uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' })
+                        }
+                    }} />
                     <FAQ items={commonFaqItems} />
                     <ToolsGrid
                         customImages={{

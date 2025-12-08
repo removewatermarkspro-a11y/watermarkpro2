@@ -186,28 +186,25 @@ export default function RemoveText() {
                         </div>
                         <div className={styles.steps}>
                             <div className={styles.step}>
-                                <div className={styles.stepNumber}>1</div>
-                                <div className={styles.stepIcon}>📤</div>
-                                <h3 className={styles.stepTitle}>Upload your image with text</h3>
+                                <div className={styles.stepNumber}>1</div>                                <h3 className={styles.stepTitle}>Upload your image with text</h3>
                                 <p className={styles.stepText}>Start by uploading your photo directly from your device or dragging it into the interface. Our platform supports all common image formats, making it easy to remove text from image or remove text from photo with just a single click. Whether the text is a date stamp, caption, watermark text, or any unwanted overlay, the system prepares your file instantly for text removal.</p>
                             </div>
                             <div className={styles.step}>
-                                <div className={styles.stepNumber}>2</div>
-                                <div className={styles.stepIcon}>🤖</div>
-                                <h3 className={styles.stepTitle}>AI removes text automatically</h3>
+                                <div className={styles.stepNumber}>2</div>                                <h3 className={styles.stepTitle}>AI removes text automatically</h3>
                                 <p className={styles.stepText}>Once your image is uploaded, our powerful AI text remover analyzes every pixel to detect and erase the text with high precision. This advanced remove text from image tool reconstructs the background intelligently, capable of handling even complex textures behind the text. The process is fully automated, allowing you to remove text from photo quickly, cleanly, and without any editing skills.</p>
                             </div>
                             <div className={styles.step}>
-                                <div className={styles.stepNumber}>3</div>
-                                <div className={styles.stepIcon}>⬇️</div>
-                                <h3 className={styles.stepTitle}>Download your text-free result instantly</h3>
+                                <div className={styles.stepNumber}>3</div>                                <h3 className={styles.stepTitle}>Download your text-free result instantly</h3>
                                 <p className={styles.stepText}>In just a few seconds, your new text-free image is ready. Simply download the final result in high quality and use it wherever you need—social media, presentations, design projects, or personal archives. With our fast and reliable text removal tool, getting a clean, professional image has never been easier.</p>
                             </div>
                         </div>
                     </section>
 
-                    <Pricing />
-                    <Testimonials />
+                    <Pricing />                    <Testimonials onCtaClick={() => {
+                        if (uploadRef.current) {
+                            uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' })
+                        }
+                    }} />
                     <FAQ items={commonFaqItems} />
 
                     <ToolsGrid />

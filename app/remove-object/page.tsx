@@ -188,28 +188,25 @@ export default function RemoveObject() {
                         </div>
                         <div className={styles.steps}>
                             <div className={styles.step}>
-                                <div className={styles.stepNumber}>1</div>
-                                <div className={styles.stepIcon}>📤</div>
-                                <h3 className={styles.stepTitle}>Upload your image</h3>
+                                <div className={styles.stepNumber}>1</div>                                <h3 className={styles.stepTitle}>Upload your image</h3>
                                 <p className={styles.stepText}>Start by uploading your photo directly from your device or dragging it into the interface. Our platform supports all common formats, making it easy to remove unwanted objects, people, or elements from your images with a single click. Whether it's a distraction, a stranger, a blemish, or any unwanted detail, the system prepares your file instantly for AI-powered removal.</p>
                             </div>
                             <div className={styles.step}>
-                                <div className={styles.stepNumber}>2</div>
-                                <div className={styles.stepIcon}>🎯</div>
-                                <h3 className={styles.stepTitle}>AI removes objects automatically</h3>
+                                <div className={styles.stepNumber}>2</div>                                <h3 className={styles.stepTitle}>AI removes objects automatically</h3>
                                 <p className={styles.stepText}>Once your image is uploaded, our powerful AI object remover scans every pixel to detect and erase unwanted elements with high precision. This advanced system rebuilds the background intelligently, filling gaps naturally and seamlessly. The process is fully automated, allowing you to remove objects quickly, cleanly, and without any editing skills.</p>
                             </div>
                             <div className={styles.step}>
-                                <div className={styles.stepNumber}>3</div>
-                                <div className={styles.stepIcon}>⬇️</div>
-                                <h3 className={styles.stepTitle}>Download your clean result instantly</h3>
+                                <div className={styles.stepNumber}>3</div>                                <h3 className={styles.stepTitle}>Download your clean result instantly</h3>
                                 <p className={styles.stepText}>In just a few seconds, your new object-free image is ready. Simply download the final result in high quality and use it wherever you need—social media, presentations, design projects, or personal archives. With our fast and reliable object removal tool, achieving a clean, flawless image has never been easier.</p>
                             </div>
                         </div>
                     </section>
 
-                    <Pricing />
-                    <Testimonials />
+                    <Pricing />                    <Testimonials onCtaClick={() => {
+                        if (uploadRef.current) {
+                            uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' })
+                        }
+                    }} />
                     <FAQ items={commonFaqItems} />
 
                     <ToolsGrid />

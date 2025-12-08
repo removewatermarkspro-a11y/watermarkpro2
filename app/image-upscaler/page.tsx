@@ -188,28 +188,25 @@ export default function ImageUpscaler() {
                         </div>
                         <div className={styles.steps}>
                             <div className={styles.step}>
-                                <div className={styles.stepNumber}>1</div>
-                                <div className={styles.stepIcon}>📤</div>
-                                <h3 className={styles.stepTitle}>Upload your image</h3>
+                                <div className={styles.stepNumber}>1</div>                                <h3 className={styles.stepTitle}>Upload your image</h3>
                                 <p className={styles.stepText}>Start by uploading your low-resolution photo directly from your device or dragging it into the interface. Our platform supports all common formats, making it easy to upscale images up to 4× their original size. Whether you need to restore old photos, enlarge product shots, or improve visual clarity, the system prepares your file instantly for AI upscaling.</p>
                             </div>
                             <div className={styles.step}>
-                                <div className={styles.stepNumber}>2</div>
-                                <div className={styles.stepIcon}>🚀</div>
-                                <h3 className={styles.stepTitle}>AI upscales and enhances automatically</h3>
+                                <div className={styles.stepNumber}>2</div>                                <h3 className={styles.stepTitle}>AI upscales and enhances automatically</h3>
                                 <p className={styles.stepText}>Once your image is uploaded, our powerful AI image upscaler analyzes every pixel and intelligently increases resolution up to stunning 4K quality. This advanced tool restores lost details, sharpens edges, enhances textures, and boosts clarity while maintaining a natural, realistic appearance. The process is fully automated, allowing you to upscale images quickly without losing quality or introducing artifacts.</p>
                             </div>
                             <div className={styles.step}>
-                                <div className={styles.stepNumber}>3</div>
-                                <div className={styles.stepIcon}>⬇️</div>
-                                <h3 className={styles.stepTitle}>Download your enhanced result instantly</h3>
+                                <div className={styles.stepNumber}>3</div>                                <h3 className={styles.stepTitle}>Download your enhanced result instantly</h3>
                                 <p className={styles.stepText}>In just a few seconds, your new ultra-HD image is ready. Simply download the final result in beautiful 4K quality and use it wherever you need—printing, large displays, professional portfolios, e-commerce, or digital archives. With our fast and reliable AI upscaler, creating crystal-clear, high-quality images has never been easier.</p>
                             </div>
                         </div>
                     </section>
 
-                    <Pricing />
-                    <Testimonials />
+                    <Pricing />                    <Testimonials onCtaClick={() => {
+                        if (uploadRef.current) {
+                            uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' })
+                        }
+                    }} />
                     <FAQ items={commonFaqItems} />
 
                     <ToolsGrid />

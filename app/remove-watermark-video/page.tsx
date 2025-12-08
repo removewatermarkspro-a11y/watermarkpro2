@@ -221,27 +221,21 @@ export default function RemoveWatermarkVideo() {
 
                         <div className={styles.steps}>
                             <div className={styles.step}>
-                                <div className={styles.stepNumber}>1</div>
-                                <div className={styles.stepIcon}>📤</div>
-                                <h3 className={styles.stepTitle}>Upload your video</h3>
+                                <div className={styles.stepNumber}>1</div>                                <h3 className={styles.stepTitle}>Upload your video</h3>
                                 <p className={styles.stepText}>
                                     Start by uploading your video file directly from your device or dragging it into the interface. Our platform supports MP4, MOV, AVI, and all popular video formats, making it easy to remove watermark from video with just a single click. Whether the watermark is text, a logo, or a tiktok watermark, the system prepares your file instantly for video watermark removal.
                                 </p>
                             </div>
 
                             <div className={styles.step}>
-                                <div className={styles.stepNumber}>2</div>
-                                <div className={styles.stepIcon}>🤖</div>
-                                <h3 className={styles.stepTitle}>AI removes watermark from video automatically</h3>
+                                <div className={styles.stepNumber}>2</div>                                <h3 className={styles.stepTitle}>AI removes watermark from video automatically</h3>
                                 <p className={styles.stepText}>
                                     Once your video is uploaded, our powerful video watermark remover analyzes every frame to detect and erase the watermark with high precision. This advanced tool processes each frame intelligently, acting as a smart watermark eraser for videos capable of handling even complex overlays. The process is fully automated, allowing you to remove tiktok watermark or any video watermark quickly and cleanly.
                                 </p>
                             </div>
 
                             <div className={styles.step}>
-                                <div className={styles.stepNumber}>3</div>
-                                <div className={styles.stepIcon}>⬇️</div>
-                                <h3 className={styles.stepTitle}>Download your clean video instantly</h3>
+                                <div className={styles.stepNumber}>3</div>                                <h3 className={styles.stepTitle}>Download your clean video instantly</h3>
                                 <p className={styles.stepText}>
                                     In just a few moments, your new watermark-free video is ready. Simply download the final result in high quality and use it wherever you need—social media posts, presentations, content creation, or personal archives. With our fast and reliable video watermark remover, getting clean, professional videos has never been easier.
                                 </p>
@@ -252,8 +246,11 @@ export default function RemoveWatermarkVideo() {
                     {/* Pricing Section */}
                     <Pricing />
 
-                    {/* Testimonials Section */}
-                    <Testimonials />
+                    {/* Testimonials Section */}                    <Testimonials onCtaClick={() => {
+                        if (uploadRef.current) {
+                            uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' })
+                        }
+                    }} />
 
                     {/* FAQ Section */}
                     <FAQ items={commonFaqItems} />
