@@ -209,7 +209,7 @@ export default function ReplaceBackground() {
                     }} />
                     <FAQ items={replaceBackgroundFaqItems} />
 
-                    <ToolsGrid />
+                    <ToolsGrid customImages={{ 'Free Watermark Remover': '/images/tools/tool-card-replace-bg-page.png', 'Replace Background': '/images/tools/tool-card-replace-bg-replace-page.png', 'Remove Background': '/images/tools/tool-card-remove-bg-replace-page.png', 'Remove Object': '/images/tools/tool-card-remove-object-replace-page.png' }} />
                 </div>
             </main>
             <Footer />

@@ -209,7 +209,7 @@ export default function ImageUpscaler() {
                     }} />
                     <FAQ items={imageUpscalerFaqItems} />
 
-                    <ToolsGrid />
+                    <ToolsGrid customImages={{ 'Free Watermark Remover': '/images/tools/tool-card-upscaler-page.png', 'Replace Background': '/images/tools/tool-card-replace-bg-upscaler-page.png', 'Remove Background': '/images/tools/tool-card-remove-bg-upscaler-page.png', 'Remove Object': '/images/tools/tool-card-remove-object-upscaler-page.png' }} />
                 </div>
             </main>
             <Footer />

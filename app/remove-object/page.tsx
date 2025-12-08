@@ -209,7 +209,7 @@ export default function RemoveObject() {
                     }} />
                     <FAQ items={objectRemovalFaqItems} />
 
-                    <ToolsGrid />
+                    <ToolsGrid customImages={{ 'Free Watermark Remover': '/images/tools/tool-card-object-page.png', 'Replace Background': '/images/tools/tool-card-replace-bg-object.png', 'Remove Background': '/images/tools/tool-card-remove-bg-object.png', 'Remove Object': '/images/tools/tool-card-remove-object-object-page.png' }} />
                 </div>
             </main>
             <Footer />

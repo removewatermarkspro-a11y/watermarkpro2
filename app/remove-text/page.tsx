@@ -207,7 +207,7 @@ export default function RemoveText() {
                     }} />
                     <FAQ items={textRemovalFaqItems} />
 
-                    <ToolsGrid />
+                    <ToolsGrid customImages={{ 'Free Watermark Remover': '/images/tools/tool-card-text-page.png', 'Replace Background': '/images/tools/tool-card-replace-bg-text.png', 'Remove Background': '/images/tools/tool-card-remove-bg-text.png', 'Remove Object': '/images/tools/tool-card-remove-object-text.png' }} />
                 </div>
             </main>
             <Footer />

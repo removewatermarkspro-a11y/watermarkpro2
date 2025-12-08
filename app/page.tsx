@@ -211,7 +211,10 @@ export default function WatermarkRemover() {
                     <FAQ items={commonFaqItems} />
                     <ToolsGrid
                         customImages={{
-                            'Free Watermark Remover': '/images/tools/watermark-remover.png'
+                            'Free Watermark Remover': '/images/tools/watermark-remover.png',
+                            'Replace Background': '/images/tools/tool-card-replace-bg-home.png',
+                            'Remove Background': '/images/tools/tool-card-remove-bg-home.png',
+                            'Remove Object': '/images/tools/tool-card-remove-object-home.png'
                         }}
                     />
                 </div>

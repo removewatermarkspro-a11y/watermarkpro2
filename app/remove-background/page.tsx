@@ -210,7 +210,7 @@ export default function RemoveBackground() {
                     }} />
                     <FAQ items={backgroundRemovalFaqItems} />
 
-                    <ToolsGrid />
+                    <ToolsGrid customImages={{ 'Free Watermark Remover': '/images/tools/tool-card-remove-bg-page.png', 'Replace Background': '/images/tools/tool-card-replace-bg-remove-page.png', 'Remove Background': '/images/tools/tool-card-remove-bg-remove-bg-page.png', 'Remove Object': '/images/tools/tool-card-remove-object-remove-bg-page.png' }} />
                 </div>
             </main>
             <Footer />

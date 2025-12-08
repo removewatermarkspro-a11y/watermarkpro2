@@ -209,7 +209,7 @@ export default function AutoRemovePeople() {
                     }} />
                     <FAQ items={peopleRemovalFaqItems} />
 
-                    <ToolsGrid />
+                    <ToolsGrid customImages={{ 'Free Watermark Remover': '/images/tools/tool-card-auto-people-page.png', 'Replace Background': '/images/tools/tool-card-replace-bg-people-page.png', 'Remove Background': '/images/tools/tool-card-remove-bg-people-page.png', 'Remove Object': '/images/tools/tool-card-remove-object-people-page.png' }} />
                 </div >
             </main >
             <Footer />

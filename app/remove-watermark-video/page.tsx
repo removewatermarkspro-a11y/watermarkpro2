@@ -255,7 +255,7 @@ export default function RemoveWatermarkVideo() {
                     {/* FAQ Section */}
                     <FAQ items={commonFaqItems} />
 
-                    <ToolsGrid />
+                    <ToolsGrid customImages={{ 'Free Watermark Remover': '/images/tools/tool-card-video-page.png', 'Replace Background': '/images/tools/tool-card-replace-bg-video.png', 'Remove Background': '/images/tools/tool-card-remove-bg-video.png', 'Remove Object': '/images/tools/tool-card-remove-object-video.png' }} />
                 </div>
             </main>
             <Footer />
