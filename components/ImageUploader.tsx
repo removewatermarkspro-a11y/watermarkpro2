@@ -3,6 +3,7 @@
 import { useState, useCallback } from 'react'
 import styles from './ImageUploader.module.css'
 import ProcessingPopup from './ProcessingPopup'
+import NoCreditsPopup from './NoCreditsPopup'
 
 interface ImageUploaderProps {
     onImageUpload: (file: File, preview: string) => void
@@ -23,6 +24,7 @@ export default function ImageUploader({
 }: ImageUploaderProps) {
     const [isDragging, setIsDragging] = useState(false)
     const [isProcessing, setIsProcessing] = useState(false)
+    const [showNoCreditsPopup, setShowNoCreditsPopup] = useState(false)
 
     const handleDragOver = useCallback((e: React.DragEvent) => {
         e.preventDefault()
@@ -89,8 +91,8 @@ export default function ImageUploader({
                 }
                 reader.readAsDataURL(file)
             } else {
-                // No credits left - could show a popup or message
-                alert('You have no credits left. Please purchase more credits to continue.')
+                // No credits left - show NoCreditsPopup
+                setShowNoCreditsPopup(true)
             }
         }
     }
@@ -98,6 +100,7 @@ export default function ImageUploader({
     return (
         <>
             <ProcessingPopup isOpen={isProcessing} />
+            <NoCreditsPopup isOpen={showNoCreditsPopup} onClose={() => setShowNoCreditsPopup(false)} />
             <div className={styles.uploader}>
                 <div
                     className={`${styles.dropzone} ${isDragging ? styles.dragging : ''}`}
@@ -108,7 +111,7 @@ export default function ImageUploader({
                     <div className={styles.uploadIcon}>
                         <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
                             <path d="M12 4L12 16M12 4L8 8M12 4L16 8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                            <path d="M4 17V19C4 20.1046 4.89543 21 6 21H18C19.1046 21 20 20.1046 20 19V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                            <path d="M4 17V19C4 20.1046 4.89543 21 6 21H18C19.1046 21 20 19V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
                         </svg>
                     </div>
                     <h3 className={styles.title}>{uploadText}</h3>

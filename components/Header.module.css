@@ -173,6 +173,10 @@
     cursor: pointer;
     transition: all var(--transition-fast);
     font-family: 'Inter', sans-serif;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .userBtn:hover {
