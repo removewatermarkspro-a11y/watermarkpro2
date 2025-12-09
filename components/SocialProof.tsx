@@ -1,23 +1,30 @@
+import { testimonialsByPage } from '@/utils/testimonialData'
 import styles from './SocialProof.module.css'
 
 interface SocialProofProps {
     showAvatars?: boolean
+    pageId?: string
 }
 
-export default function SocialProof({ showAvatars = true }: SocialProofProps) {
+export default function SocialProof({ showAvatars = true, pageId = 'home' }: SocialProofProps) {
+    // Get testimonials for the current page, or fallback to home
+    const pageTestimonials = testimonialsByPage[pageId] || testimonialsByPage['home']
+
+    // Get the first 4 avatars
+    const avatars = pageTestimonials.slice(0, 4).map(t => t.avatar)
+
     return (
         <div className={styles.socialProof}>
             {showAvatars && (
                 <div className={styles.avatars}>
-                    <div className={styles.avatar} style={{ backgroundImage: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' }}>
-                        <span>JD</span>
-                    </div>
-                    <div className={styles.avatar} style={{ backgroundImage: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)' }}>
-                        <span>SM</span>
-                    </div>
-                    <div className={styles.avatar} style={{ backgroundImage: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)' }}>
-                        <span>AK</span>
-                    </div>
+                    {avatars.map((avatar, index) => (
+                        <img
+                            key={index}
+                            src={avatar}
+                            alt="User avatar"
+                            className={styles.avatar}
+                        />
+                    ))}
                     <div className={styles.avatarCount}>+20K</div>
                 </div>
             )}

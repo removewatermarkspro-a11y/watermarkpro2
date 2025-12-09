@@ -102,7 +102,7 @@ export default function ReplaceBackground() {
             <main className={styles.main}>
                 <div className="container">
                     <section className={styles.hero}>
-                        <SocialProof />
+                        <SocialProof pageId="replace-background" />
                         <h1 className={styles.title}><span className={styles.violetText}>Free</span> instantly swap backgrounds</h1>
                         <p className={styles.description}>Change photo backgrounds instantly with AI. Replace any background with custom images, colors, or professional studio backdrops.</p>
                         <CategoryTabs />
@@ -202,14 +202,17 @@ export default function ReplaceBackground() {
                         </div>
                     </section>
 
-                    <Pricing />                    <Testimonials onCtaClick={() => {
-                        if (uploadRef.current) {
-                            uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' })
-                        }
-                    }} />
+                    <Pricing />
+                    <Testimonials
+                        pageId="replace-background"
+                        onCtaClick={() => {
+                            if (uploadRef.current) {
+                                uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' })
+                            }
+                        }} />
                     <FAQ items={replaceBackgroundFaqItems} />
 
-                    <ToolsGrid customImages={{ 'Free Watermark Remover': '/images/tools/tool-card-replace-bg-page.png', 'Replace Background': '/images/tools/tool-card-replace-bg-replace-page.png', 'Remove Background': '/images/tools/tool-card-remove-bg-replace-page.png', 'Remove Object': '/images/tools/tool-card-remove-object-replace-page.png' }} />
+                    <ToolsGrid customImages={{ 'Free Watermark Remover': '/images/tools/tool-card-replace-bg-page.png', 'Replace Background': '/images/tools/tool-card-replace-bg-replace-page.png', 'Remove Background': '/images/tools/tool-card-remove-bg-replace-page.png', 'Remove Object': '/images/tools/tool-card-remove-object-replace-page.png', 'Image Upscaler': '/images/tools/upscaler-lion.jpg', 'Auto Remove People': '/images/tools/people-remover-field-man.jpg', 'Remove Text': '/images/tools/remove-text-beige.jpg' }} />
                 </div>
             </main>
             <Footer />

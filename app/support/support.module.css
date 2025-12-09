@@ -1,0 +1,53 @@
+.main {
+    min-height: calc(100vh - 80px);
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
+}
+
+.supportContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.98);
+    border-radius: 1rem;
+    padding: 3rem 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 2rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.description {
+    font-size: 1.125rem;
+    color: #475569;
+    line-height: 1.8;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.emailText {
+    color: #a855f7;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .main {
+        padding: 2rem 0;
+    }
+
+    .supportContainer {
+        padding: 2rem 1.5rem;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+}

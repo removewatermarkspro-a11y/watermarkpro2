@@ -102,7 +102,7 @@ export default function ImageUpscaler() {
             <main className={styles.main}>
                 <div className="container">
                     <section className={styles.hero}>
-                        <SocialProof />
+                        <SocialProof pageId="image-upscaler" />
                         <h1 className={styles.title}><span className={styles.violetText}>Free</span> upscale images to 4K with AI precision</h1>
                         <p className={styles.description}>Upscale images with AI to 4x resolution. Enhance photo quality, increase resolution, and add realistic details automatically.</p>
                         <CategoryTabs />
@@ -202,14 +202,17 @@ export default function ImageUpscaler() {
                         </div>
                     </section>
 
-                    <Pricing />                    <Testimonials onCtaClick={() => {
-                        if (uploadRef.current) {
-                            uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' })
-                        }
-                    }} />
+                    <Pricing />
+                    <Testimonials
+                        pageId="image-upscaler"
+                        onCtaClick={() => {
+                            if (uploadRef.current) {
+                                uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' })
+                            }
+                        }} />
                     <FAQ items={imageUpscalerFaqItems} />
 
-                    <ToolsGrid customImages={{ 'Free Watermark Remover': '/images/tools/tool-card-upscaler-page.png', 'Replace Background': '/images/tools/tool-card-replace-bg-upscaler-page.png', 'Remove Background': '/images/tools/tool-card-remove-bg-upscaler-page.png', 'Remove Object': '/images/tools/tool-card-remove-object-upscaler-page.png' }} />
+                    <ToolsGrid customImages={{ 'Free Watermark Remover': '/images/tools/tool-card-upscaler-page.png', 'Replace Background': '/images/tools/tool-card-replace-bg-upscaler-page.png', 'Remove Background': '/images/tools/tool-card-remove-bg-upscaler-page.png', 'Remove Object': '/images/tools/tool-card-remove-object-upscaler-page.png', 'Image Upscaler': '/images/tools/upscaler-fox.jpg', 'Auto Remove People': '/images/tools/people-remover-colosseum.jpg', 'Remove Text': '/images/tools/remove-text-lime.jpg' }} />
                 </div>
             </main>
             <Footer />

@@ -84,7 +84,7 @@ export default function WatermarkRemover() {
             <main className={styles.main}>
                 <div className="container">
                     <section className={styles.hero}>
-                        <SocialProof />
+                        <SocialProof pageId="home" />
 
                         <h1 className={styles.title}>
                             <span className={styles.violetText}>Free</span> watermark remover
@@ -203,18 +203,23 @@ export default function WatermarkRemover() {
                     </section>
 
                     <Pricing />
-                    <Testimonials onCtaClick={() => {
-                        if (uploadRef.current) {
-                            uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' })
-                        }
-                    }} />
+                    <Testimonials
+                        pageId="home"
+                        onCtaClick={() => {
+                            if (uploadRef.current) {
+                                uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' })
+                            }
+                        }} />
                     <FAQ items={commonFaqItems} />
                     <ToolsGrid
                         customImages={{
                             'Free Watermark Remover': '/images/tools/watermark-remover.png',
                             'Replace Background': '/images/tools/tool-card-replace-bg-home.png',
                             'Remove Background': '/images/tools/tool-card-remove-bg-home.png',
-                            'Remove Object': '/images/tools/tool-card-remove-object-home.png'
+                            'Remove Object': '/images/tools/tool-card-remove-object-home.png',
+                            'Image Upscaler': '/images/tools/upscaler-panda.jpg',
+                            'Auto Remove People': '/images/tools/people-remover-street-man.jpg',
+                            'Remove Text': '/images/tools/remove-text-green.jpg'
                         }}
                     />
                 </div>

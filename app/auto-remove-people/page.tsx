@@ -102,7 +102,7 @@ export default function AutoRemovePeople() {
             <main className={styles.main}>
                 <div className="container">
                     <section className={styles.hero}>
-                        <SocialProof />
+                        <SocialProof pageId="auto-remove-people" />
                         <h1 className={styles.title}><span className={styles.violetText}>Free</span> smart people removal with one click</h1>
                         <p className={styles.description}>Automatically remove people and crowds from photos with AI. Get clean, tourist-free shots of landmarks and locations instantly.</p>
                         <CategoryTabs />
@@ -202,14 +202,17 @@ export default function AutoRemovePeople() {
                         </div>
                     </section>
 
-                    <Pricing />                    <Testimonials onCtaClick={() => {
-                        if (uploadRef.current) {
-                            uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' })
-                        }
-                    }} />
+                    <Pricing />
+                    <Testimonials
+                        pageId="auto-remove-people"
+                        onCtaClick={() => {
+                            if (uploadRef.current) {
+                                uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' })
+                            }
+                        }} />
                     <FAQ items={peopleRemovalFaqItems} />
 
-                    <ToolsGrid customImages={{ 'Free Watermark Remover': '/images/tools/tool-card-auto-people-page.png', 'Replace Background': '/images/tools/tool-card-replace-bg-people-page.png', 'Remove Background': '/images/tools/tool-card-remove-bg-people-page.png', 'Remove Object': '/images/tools/tool-card-remove-object-people-page.png' }} />
+                    <ToolsGrid customImages={{ 'Free Watermark Remover': '/images/tools/tool-card-auto-people-page.png', 'Replace Background': '/images/tools/tool-card-replace-bg-people-page.png', 'Remove Background': '/images/tools/tool-card-remove-bg-people-page.png', 'Remove Object': '/images/tools/tool-card-remove-object-people-page.png', 'Image Upscaler': '/images/tools/upscaler-tiger.jpg', 'Auto Remove People': '/images/tools/people-remover-museum.jpg', 'Remove Text': '/images/tools/remove-text-pink.jpg' }} />
                 </div >
             </main >
             <Footer />

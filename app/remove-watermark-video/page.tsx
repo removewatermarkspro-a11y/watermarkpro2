@@ -106,7 +106,7 @@ export default function RemoveWatermarkVideo() {
             <main className={styles.main}>
                 <div className="container">
                     <section className={styles.hero}>
-                        <SocialProof />
+                        <SocialProof pageId="remove-watermark-video" />
 
                         <h1 className={styles.title}>
                             <span className={styles.violetText}>Free</span> watermark remover from video
@@ -246,16 +246,19 @@ export default function RemoveWatermarkVideo() {
                     {/* Pricing Section */}
                     <Pricing />
 
-                    {/* Testimonials Section */}                    <Testimonials onCtaClick={() => {
-                        if (uploadRef.current) {
-                            uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' })
-                        }
-                    }} />
+                    {/* Testimonials Section */}
+                    <Testimonials
+                        pageId="remove-watermark-video"
+                        onCtaClick={() => {
+                            if (uploadRef.current) {
+                                uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' })
+                            }
+                        }} />
 
                     {/* FAQ Section */}
                     <FAQ items={commonFaqItems} />
 
-                    <ToolsGrid customImages={{ 'Free Watermark Remover': '/images/tools/tool-card-video-page.png', 'Replace Background': '/images/tools/tool-card-replace-bg-video.png', 'Remove Background': '/images/tools/tool-card-remove-bg-video.png', 'Remove Object': '/images/tools/tool-card-remove-object-video.png' }} />
+                    <ToolsGrid customImages={{ 'Free Watermark Remover': '/images/tools/tool-card-video-page.png', 'Replace Background': '/images/tools/tool-card-replace-bg-video.png', 'Remove Background': '/images/tools/tool-card-remove-bg-video.png', 'Remove Object': '/images/tools/tool-card-remove-object-video.png', 'Image Upscaler': '/images/tools/upscaler-panther.jpg', 'Auto Remove People': '/images/tools/people-remover-street-woman.jpg', 'Remove Text': '/images/tools/remove-text-dark-blue.jpg' }} />
                 </div>
             </main>
             <Footer />

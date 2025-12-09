@@ -103,7 +103,7 @@ export default function RemoveBackground() {
             <main className={styles.main}>
                 <div className="container">
                     <section className={styles.hero}>
-                        <SocialProof />
+                        <SocialProof pageId="remove-background" />
                         <h1 className={styles.title}><span className={styles.violetText}>Free</span> remove background from image instantly</h1>
                         <p className={styles.description}>Remove image backgrounds instantly with AI. Create transparent PNGs, isolate subjects, and get professional cutouts in seconds.</p>
                         <CategoryTabs />
@@ -203,14 +203,17 @@ export default function RemoveBackground() {
                         </div>
                     </section>
 
-                    <Pricing />                    <Testimonials onCtaClick={() => {
-                        if (uploadRef.current) {
-                            uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' })
-                        }
-                    }} />
+                    <Pricing />
+                    <Testimonials
+                        pageId="remove-background"
+                        onCtaClick={() => {
+                            if (uploadRef.current) {
+                                uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' })
+                            }
+                        }} />
                     <FAQ items={backgroundRemovalFaqItems} />
 
-                    <ToolsGrid customImages={{ 'Free Watermark Remover': '/images/tools/tool-card-remove-bg-page.png', 'Replace Background': '/images/tools/tool-card-replace-bg-remove-page.png', 'Remove Background': '/images/tools/tool-card-remove-bg-remove-bg-page.png', 'Remove Object': '/images/tools/tool-card-remove-object-remove-bg-page.png' }} />
+                    <ToolsGrid customImages={{ 'Free Watermark Remover': '/images/tools/tool-card-remove-bg-page.png', 'Replace Background': '/images/tools/tool-card-replace-bg-remove-page.png', 'Remove Background': '/images/tools/tool-card-remove-bg-remove-bg-page.png', 'Remove Object': '/images/tools/tool-card-remove-object-remove-bg-page.png', 'Image Upscaler': '/images/tools/upscaler-bear.jpg', 'Auto Remove People': '/images/tools/people-remover-station.jpg', 'Remove Text': '/images/tools/remove-text-orange.jpg' }} />
                 </div>
             </main>
             <Footer />

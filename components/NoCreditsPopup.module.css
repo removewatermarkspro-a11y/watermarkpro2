@@ -202,27 +202,43 @@
 .promoContent {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 1.5rem;
 }
 
+.leftContent {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.rightContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
 .discount {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 900;
     color: #ff6b35;
     line-height: 1;
 }
 
 .promoText {
-    flex: 1;
     font-size: 0.9375rem;
     color: #666;
     font-weight: 500;
+    line-height: 1.3;
 }
 
 .expiresText {
-    font-size: 0.875rem;
+    font-size: 0.75rem;
     color: #999;
-    margin-top: 0.25rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 .countdown {
@@ -313,12 +329,26 @@
     }
 
     .discount {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .promoContent {
         flex-direction: column;
         align-items: flex-start;
         gap: 1rem;
+    }
+
+    .rightContent {
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .expiresText {
+        text-align: left;
+    }
+
+    .countdown {
+        width: 100%;
+        justify-content: flex-start;
     }
 }

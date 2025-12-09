@@ -163,12 +163,12 @@
 }
 
 .userBtn {
-    background: #a855f7;
-    color: white;
-    border: none;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--color-text);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 0.75rem 1.75rem;
     border-radius: var(--radius-full);
-    font-weight: 600;
+    font-weight: 500;
     font-size: 0.9375rem;
     cursor: pointer;
     transition: all var(--transition-fast);
@@ -180,9 +180,9 @@
 }
 
 .userBtn:hover {
-    background: #9333ea;
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(168, 85, 247, 0.3);
 }
 
 .userMenuWrapper {
@@ -272,6 +272,9 @@
     cursor: pointer;
     transition: all var(--transition-fast);
     font-family: 'Inter', sans-serif;
+    display: block;
+    text-align: center;
+    text-decoration: none;
 }
 
 .unlockProBtn:hover {

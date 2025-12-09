@@ -102,7 +102,7 @@ export default function RemoveText() {
             <main className={styles.main}>
                 <div className="container">
                     <section className={styles.hero}>
-                        <SocialProof />
+                        <SocialProof pageId="remove-text" />
                         <h1 className={styles.title}>
                             <span className={styles.violetText}>Free</span> remove text from image ai
                         </h1>
@@ -200,14 +200,17 @@ export default function RemoveText() {
                         </div>
                     </section>
 
-                    <Pricing />                    <Testimonials onCtaClick={() => {
-                        if (uploadRef.current) {
-                            uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' })
-                        }
-                    }} />
+                    <Pricing />
+                    <Testimonials
+                        pageId="remove-text"
+                        onCtaClick={() => {
+                            if (uploadRef.current) {
+                                uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' })
+                            }
+                        }} />
                     <FAQ items={textRemovalFaqItems} />
 
-                    <ToolsGrid customImages={{ 'Free Watermark Remover': '/images/tools/tool-card-text-page.png', 'Replace Background': '/images/tools/tool-card-replace-bg-text.png', 'Remove Background': '/images/tools/tool-card-remove-bg-text.png', 'Remove Object': '/images/tools/tool-card-remove-object-text.png' }} />
+                    <ToolsGrid customImages={{ 'Free Watermark Remover': '/images/tools/tool-card-text-page.png', 'Replace Background': '/images/tools/tool-card-replace-bg-text.png', 'Remove Background': '/images/tools/tool-card-remove-bg-text.png', 'Remove Object': '/images/tools/tool-card-remove-object-text.png', 'Image Upscaler': '/images/tools/upscaler-owl.jpg', 'Auto Remove People': '/images/tools/people-remover-beach-woman.jpg', 'Remove Text': '/images/tools/remove-text-light-blue.jpg' }} />
                 </div>
             </main>
             <Footer />

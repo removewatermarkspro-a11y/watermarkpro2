@@ -10,7 +10,7 @@ interface NoCreditsPopupProps {
 }
 
 export default function NoCreditsPopup({ isOpen, onClose }: NoCreditsPopupProps) {
-    const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 })
+    const [timeLeft, setTimeLeft] = useState({ minutes: 0, seconds: 0 })
 
     useEffect(() => {
         if (isOpen) {
@@ -24,20 +24,32 @@ export default function NoCreditsPopup({ isOpen, onClose }: NoCreditsPopupProps)
     }, [isOpen])
 
     useEffect(() => {
-        // Calculate time left until end of current day
+        // Calculate time left for 15-minute countdown
         const calculateTimeLeft = () => {
-            const now = new Date()
-            const endOfDay = new Date()
-            endOfDay.setHours(23, 59, 59, 999)
+            const savedEndTime = localStorage.getItem('promoEndTime')
+            const now = Date.now()
 
-            const diff = endOfDay.getTime() - now.getTime()
+            let endTime: number
 
-            const days = Math.floor(diff / (1000 * 60 * 60 * 24))
-            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
-            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))
+            if (savedEndTime) {
+                endTime = parseInt(savedEndTime)
+                // If timer has expired, reset to 15 minutes
+                if (endTime <= now) {
+                    endTime = now + (15 * 60 * 1000)
+                    localStorage.setItem('promoEndTime', endTime.toString())
+                }
+            } else {
+                // Set new timer for 15 minutes
+                endTime = now + (15 * 60 * 1000)
+                localStorage.setItem('promoEndTime', endTime.toString())
+            }
+
+            const diff = endTime - now
+
+            const minutes = Math.floor(diff / (1000 * 60))
             const seconds = Math.floor((diff % (1000 * 60)) / 1000)
 
-            setTimeLeft({ days, hours, minutes, seconds })
+            setTimeLeft({ minutes, seconds })
         }
 
         if (isOpen) {
@@ -92,18 +104,20 @@ export default function NoCreditsPopup({ isOpen, onClose }: NoCreditsPopupProps)
                             </div>
 
                             <div className={styles.promoContent}>
-                                <div className={styles.discount}>-50%</div>
-                                <div className={styles.promoText}>
-                                    <div>On all annual plans</div>
-                                    <div className={styles.expiresText}>Expires in</div>
+                                <div className={styles.leftContent}>
+                                    <div className={styles.discount}>-50%</div>
+                                    <div className={styles.promoText}>On all annual plans</div>
                                 </div>
-                                <div className={styles.countdown}>
-                                    <div className={styles.timeBox}>
-                                        <div className={styles.timeValue}>{String(timeLeft.hours).padStart(2, '0')}</div>
-                                    </div>
-                                    <span className={styles.timeSeparator}>:</span>
-                                    <div className={styles.timeBox}>
-                                        <div className={styles.timeValue}>{String(timeLeft.minutes).padStart(2, '0')}</div>
+                                <div className={styles.rightContent}>
+                                    <div className={styles.expiresText}>Expires in</div>
+                                    <div className={styles.countdown}>
+                                        <div className={styles.timeBox}>
+                                            <div className={styles.timeValue}>{String(timeLeft.minutes).padStart(2, '0')}</div>
+                                        </div>
+                                        <span className={styles.timeSeparator}>:</span>
+                                        <div className={styles.timeBox}>
+                                            <div className={styles.timeValue}>{String(timeLeft.seconds).padStart(2, '0')}</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

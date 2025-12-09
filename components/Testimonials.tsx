@@ -1,66 +1,13 @@
 import styles from './Testimonials.module.css'
+import { testimonialsByPage } from '@/utils/testimonialData'
 
 interface TestimonialsProps {
     onCtaClick?: () => void
+    pageId?: 'home' | 'auto-remove-people' | 'image-upscaler' | 'remove-background' | 'remove-object' | 'remove-text' | 'remove-watermark-video' | 'replace-background'
 }
 
-export default function Testimonials({ onCtaClick }: TestimonialsProps = {}) {
-    const testimonials = [
-        {
-            name: "Jake Rodriguez",
-            role: "Video Editor",
-            text: "I use a lot of TikTok clips for edits, so finding a good tiktok watermark remover was important. This tool removes the TikTok logo cleanly and much faster than other apps I've tried. Definitely recommended.",
-            avatar: "JR"
-        },
-        {
-            name: "Michael Torres",
-            role: "Filmmaker",
-            text: "I needed to delete watermark from video for some old footage, and the results were amazing. The video looked untouched and the process was super quick. Great for content creators.",
-            avatar: "MT"
-        },
-        {
-            name: "David Kim",
-            role: "Social Media Manager",
-            text: "As someone who edits videos daily, having a reliable watermark remover video tool is a must. This one removed the logo cleanly and kept the quality high, which is usually hard to find.",
-            avatar: "DK"
-        },
-        {
-            name: "Tom Wilson",
-            role: "Freelance Editor",
-            text: "I saw this tool mentioned online and decided to try it. The watermark remover did a great job on both pictures and videos. I even used it to remove watermark from photo with text overlays, and it handled everything easily.",
-            avatar: "TW"
-        },
-        {
-            name: "Lisa Anderson",
-            role: "Photographer",
-            text: "This is the first time a watermark eraser didn't leave strange smudges or blurry spots. I tested it on pictures with complicated backgrounds and the watermark removal was flawless.",
-            avatar: "LA"
-        },
-        {
-            name: "Sarah Mitchell",
-            role: "Content Creator",
-            text: "I was really surprised by how well this watermark remover works. I needed to remove watermark from photo for a client project, and the results looked completely natural. It's way better than anything I've used before.",
-            avatar: "SM"
-        },
-        {
-            name: "Emma Chen",
-            role: "Digital Marketer",
-            text: "The AI behind this tool is impressive. The ai watermark remover detects the watermark instantly and rebuilds the background perfectly. I've used it to remove watermark from image dozens of times already.",
-            avatar: "EC"
-        },
-        {
-            name: "Nina Patel",
-            role: "YouTube Creator",
-            text: "I was expecting much, but this tool can truly remove watermark from video better than some paid software. The interface is simple and the results look professional.",
-            avatar: "NP"
-        },
-        {
-            name: "Maria Santos",
-            role: "Graphic Designer",
-            text: "I upload a lot of images online and sometimes forget to save the originals. The image watermark remover helped me restore several important photos with almost perfect accuracy. Love it.",
-            avatar: "MS"
-        }
-    ]
+export default function Testimonials({ onCtaClick, pageId = 'home' }: TestimonialsProps) {
+    const testimonials = testimonialsByPage[pageId] || testimonialsByPage['home']
 
     return (
         <section id="testimonials" className={styles.testimonials}>
@@ -84,7 +31,13 @@ export default function Testimonials({ onCtaClick }: TestimonialsProps = {}) {
                         <p className={styles.text}>{testimonial.text}</p>
                         <div className={styles.header}>
                             <div className={styles.avatar}>
-                                {testimonial.avatar}
+                                <img
+                                    src={testimonial.avatar}
+                                    alt={testimonial.name}
+                                    width={48}
+                                    height={48}
+                                    style={{ borderRadius: '50%', objectFit: 'cover', width: '100%', height: '100%' }}
+                                />
                             </div>
                             <div>
                                 <div className={styles.name}>{testimonial.name}</div>

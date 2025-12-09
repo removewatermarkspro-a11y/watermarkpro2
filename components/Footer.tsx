@@ -11,7 +11,7 @@ export default function Footer() {
                     <div className={styles.section}>
                         <div className={styles.brand}>
                             <span className={styles.logoIcon}>✨</span>
-                            <span className={styles.logoText}>AI Image Editor</span>
+                            <span className={styles.logoText}>Remove watermark pro</span>
                         </div>
                         <p className={styles.description}>
                             Professional AI-powered image editing tools for creators, photographers, and businesses.
@@ -43,7 +43,7 @@ export default function Footer() {
                             <li><Link href="/about">About Us</Link></li>
                             <li><Link href="/pricing">Pricing</Link></li>
                             <li><Link href="/blog">Blog</Link></li>
-                            <li><Link href="/contact">Contact</Link></li>
+                            <li><Link href="/support">Contact</Link></li>
                         </ul>
                     </div>
 
@@ -59,7 +59,7 @@ export default function Footer() {
 
                 <div className={styles.bottom}>
                     <p className={styles.copyright}>
-                        © {currentYear} AI Image Editor. All rights reserved.
+                        © {currentYear} Remove watermark pro. All rights reserved.
                     </p>
                     <div className={styles.social}>
                         <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">

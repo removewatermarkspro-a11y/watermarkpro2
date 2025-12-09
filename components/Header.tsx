@@ -142,7 +142,7 @@ export default function Header() {
                                 </div>
                             )}
                             <button className={styles.navLink} style={{ background: 'none', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.9375rem' }}>
-                                <span>🌍</span> English
+                                <img src="https://flagcdn.com/us.svg" alt="US Flag" width={20} height={15} style={{ display: 'block' }} /> English
                             </button>
                             {isAuthenticated ? (
                                 <>
@@ -170,9 +170,9 @@ export default function Header() {
                                                     Support
                                                 </Link>
                                                 <div className={styles.userMenuDivider}></div>
-                                                <button className={styles.unlockProBtn}>
+                                                <Link href="/pricing" className={styles.unlockProBtn} style={{ boxShadow: 'var(--shadow-glow)' }} onClick={() => setShowUserMenu(false)}>
                                                     Unlock Pro now
-                                                </button>
+                                                </Link>
                                                 <div className={styles.userMenuDivider}></div>
                                                 <button onClick={handleLogout} className={styles.logoutBtn}>
                                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
@@ -183,7 +183,7 @@ export default function Header() {
                                             </div>
                                         )}
                                     </div>
-                                    <Link href="/pricing" className="btn btn-primary">Unlock Pro now</Link>
+                                    <Link href="/pricing" className="btn btn-primary" style={{ boxShadow: 'var(--shadow-glow)' }}>Unlock Pro now</Link>
                                 </>
                             ) : (
                                 <>
