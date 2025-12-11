@@ -179,7 +179,7 @@ export default function RemoveWatermarkVideo() {
                                             display: 'block'
                                         }}
                                     >
-                                        <source src="https://cdn.qwenlm.ai/output/5b1600ce-3b2b-419d-868c-ab0ce61be2c4/i2v/270d91b3-f72a-4388-8e65-d1d6ebbe510e/d2b9f522-1288-491d-ae49-89627e5ce8cf.mp4?key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXNvdXJjZV91c2VyX2lkIjoiNWIxNjAwY2UtM2IyYi00MTlkLTg2OGMtYWIwY2U2MWJlMmM0IiwicmVzb3VyY2VfaWQiOiJkMmI5ZjUyMi0xMjg4LTQ5MWQtYWU0OS04OTYyN2U1Y2U4Y2YiLCJyZXNvdXJjZV9jaGF0X2lkIjpudWxsfQ.pRHWRg4nMA955J62I1jp5jw6Go0cxVMQDD7bfFVQNlY" type="video/mp4" />
+                                        <source src="/videos/watermark-removal-demo.mp4" type="video/mp4" />
                                         Your browser does not support the video tag.
                                     </video>
                                 </div>
