@@ -4,6 +4,8 @@ import { useState, useCallback } from 'react'
 import styles from './ImageUploader.module.css'
 import ProcessingPopup from './ProcessingPopup'
 import NoCreditsPopup from './NoCreditsPopup'
+import { useAuth } from '@/contexts/AuthContext'
+import { consumeCredit } from '@/lib/supabase'
 import { useLanguage } from '@/contexts/LanguageContext'
 import { translations } from '@/locales/translations'
 
@@ -27,6 +29,7 @@ export default function ImageUploader({
     const [isDragging, setIsDragging] = useState(false)
     const [isProcessing, setIsProcessing] = useState(false)
     const [showNoCreditsPopup, setShowNoCreditsPopup] = useState(false)
+    const { user, credits, refreshCredits } = useAuth()
     const { language } = useLanguage()
     const t = translations[language]
 
@@ -44,7 +47,7 @@ export default function ImageUploader({
         e.preventDefault()
         setIsDragging(false)
 
-        if (!isAuthenticated && onAuthRequired) {
+        if (!user && onAuthRequired) {
             onAuthRequired()
             return
         }
@@ -53,10 +56,10 @@ export default function ImageUploader({
         if (files.length > 0) {
             handleFile(files[0])
         }
-    }, [isAuthenticated, onAuthRequired])
+    }, [user, onAuthRequired])
 
     const handleFileInput = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-        if (!isAuthenticated && onAuthRequired) {
+        if (!user && onAuthRequired) {
             onAuthRequired()
             e.target.value = '' // Reset file input
             return
@@ -66,34 +69,43 @@ export default function ImageUploader({
         if (files && files.length > 0) {
             handleFile(files[0])
         }
-    }, [isAuthenticated, onAuthRequired])
+    }, [user, onAuthRequired])
 
-    const handleFile = (file: File) => {
+    const handleFile = async (file: File) => {
+        if (!user) {
+            if (onAuthRequired) onAuthRequired()
+            return
+        }
+
         if (file.type.startsWith('image/') || file.type.startsWith('video/')) {
             // Check if user has credits
-            const credits = parseInt(localStorage.getItem('userCredits') || '0')
-
             if (credits > 0) {
-                // Consume 1 credit
-                const newCredits = credits - 1
-                localStorage.setItem('userCredits', newCredits.toString())
-
-                // Notify Header about credit change
-                window.dispatchEvent(new Event('authStateChanged'))
-
                 // Show processing popup
                 setIsProcessing(true)
 
-                // Process the file after 6 seconds
-                const reader = new FileReader()
-                reader.onload = (e) => {
-                    setTimeout(() => {
-                        const preview = e.target?.result as string
-                        setIsProcessing(false)
-                        onImageUpload(file, preview)
-                    }, 6000)
+                // Consume credit from database
+                const operationType = file.type.startsWith('video/') ? 'video_watermark_removal' : 'watermark_removal'
+                const success = await consumeCredit(user.id, operationType, file.size)
+
+                if (success) {
+                    // Refresh credits in UI
+                    await refreshCredits()
+
+                    // Process the file after 6 seconds
+                    const reader = new FileReader()
+                    reader.onload = (e) => {
+                        setTimeout(() => {
+                            const preview = e.target?.result as string
+                            setIsProcessing(false)
+                            onImageUpload(file, preview)
+                        }, 6000)
+                    }
+                    reader.readAsDataURL(file)
+                } else {
+                    setIsProcessing(false)
+                    // Failed to consume credit - show no credits popup
+                    setShowNoCreditsPopup(true)
                 }
-                reader.readAsDataURL(file)
             } else {
                 // No credits left - show NoCreditsPopup
                 setShowNoCreditsPopup(true)

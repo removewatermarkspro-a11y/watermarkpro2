@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { useState, useEffect, useRef } from 'react'
 import styles from './Header.module.css'
 import AuthPopup from './AuthPopup'
+import { useAuth } from '@/contexts/AuthContext'
 import { useLanguage } from '@/contexts/LanguageContext'
 import { translations } from '@/locales/translations'
 
@@ -12,40 +13,9 @@ export default function Header() {
     const [showAuthPopup, setShowAuthPopup] = useState(false)
     const { language, setLanguage } = useLanguage()
     const t = translations[language]
-    const [isAuthenticated, setIsAuthenticated] = useState(false)
-    const [credits, setCredits] = useState(0)
-    const [userEmail, setUserEmail] = useState('')
+    const { user, credits, signOut } = useAuth()
     const [showUserMenu, setShowUserMenu] = useState(false)
     const userMenuRef = useRef<HTMLDivElement>(null)
-
-    useEffect(() => {
-        // Check authentication status on mount
-        const authenticated = localStorage.getItem('userAuthenticated') === 'true'
-        const userCredits = parseInt(localStorage.getItem('userCredits') || '0')
-        const email = localStorage.getItem('userEmail') || 'user@example.com'
-        setIsAuthenticated(authenticated)
-        setCredits(userCredits)
-        setUserEmail(email)
-    }, [])
-
-    useEffect(() => {
-        // Listen for storage changes (when user logs in from other popups)
-        const handleStorageChange = () => {
-            const authenticated = localStorage.getItem('userAuthenticated') === 'true'
-            const userCredits = parseInt(localStorage.getItem('userCredits') || '0')
-            const email = localStorage.getItem('userEmail') || 'user@example.com'
-            setIsAuthenticated(authenticated)
-            setCredits(userCredits)
-            setUserEmail(email)
-        }
-
-        // Listen for custom auth event
-        window.addEventListener('authStateChanged', handleStorageChange)
-
-        return () => {
-            window.removeEventListener('authStateChanged', handleStorageChange)
-        }
-    }, [])
 
     useEffect(() => {
         // Close user menu when clicking outside
@@ -77,38 +47,23 @@ export default function Header() {
 
     const handleAuthClose = () => {
         setShowAuthPopup(false)
-        // Only update auth state if user actually logged in (check localStorage)
-        const authenticated = localStorage.getItem('userAuthenticated') === 'true'
-        const userCredits = parseInt(localStorage.getItem('userCredits') || '0')
-        const email = localStorage.getItem('userEmail') || ''
-
-        if (authenticated) {
-            setIsAuthenticated(true)
-            setCredits(userCredits)
-            setUserEmail(email)
-        }
     }
 
-    const handleLogout = () => {
-        localStorage.removeItem('userAuthenticated')
-        localStorage.removeItem('userCredits')
-        localStorage.removeItem('userEmail')
-        setIsAuthenticated(false)
-        setCredits(0)
-        setUserEmail('')
+    const handleLogout = async () => {
+        await signOut()
         setShowUserMenu(false)
     }
 
     const getUserName = () => {
-        if (userEmail) {
-            return userEmail.split('@')[0].charAt(0).toUpperCase() + userEmail.split('@')[0].slice(1)
+        if (user?.email) {
+            return user.email.split('@')[0].charAt(0).toUpperCase() + user.email.split('@')[0].slice(1)
         }
         return 'User'
     }
 
     const getUserInitial = () => {
-        if (userEmail) {
-            return userEmail.charAt(0).toUpperCase()
+        if (user?.email) {
+            return user.email.charAt(0).toUpperCase()
         }
         return 'U'
     }
@@ -145,7 +100,7 @@ export default function Header() {
                         </div>
 
                         <div className={styles.actions}>
-                            {isAuthenticated && (
+                            {user && (
                                 <div className={styles.creditsDisplay}>
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
                                         <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#a855f7" stroke="#a855f7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -178,7 +133,7 @@ export default function Header() {
                                     </button>
                                 </div>
                             </div>
-                            {isAuthenticated ? (
+                            {user ? (
                                 <>
                                     <div className={styles.userMenuWrapper} ref={userMenuRef}>
                                         <button className={styles.userBtn} onClick={() => setShowUserMenu(!showUserMenu)}>
@@ -188,7 +143,7 @@ export default function Header() {
                                             <div className={styles.userMenu}>
                                                 <div className={styles.userMenuHeader}>
                                                     <div className={styles.userName}>{getUserName()}</div>
-                                                    <div className={styles.userEmail}>{userEmail}</div>
+                                                    <div className={styles.userEmail}>{user.email}</div>
                                                 </div>
                                                 <div className={styles.userMenuDivider}></div>
                                                 <Link href="/account" className={styles.userMenuItem}>
@@ -264,7 +219,7 @@ export default function Header() {
                                 {t.header.blog}
                             </Link>
                             <div className={styles.mobileMenuActions}>
-                                {isAuthenticated ? (
+                                {user ? (
                                     <>
                                         <button className="btn btn-secondary">{getUserInitial()}</button>
                                         <button className="btn btn-primary">{t.header.unlockPro}</button>

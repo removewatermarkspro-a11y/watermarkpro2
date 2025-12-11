@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import { LanguageProvider } from '@/contexts/LanguageContext'
+import { AuthProvider } from '@/contexts/AuthContext'
 
 export const metadata: Metadata = {
     title: 'AI Image Editor - Remove Watermarks, Backgrounds & More',
@@ -22,9 +23,11 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body>
-                <LanguageProvider>
-                    {children}
-                </LanguageProvider>
+                <AuthProvider>
+                    <LanguageProvider>
+                        {children}
+                    </LanguageProvider>
+                </AuthProvider>
             </body>
         </html>
     )
