@@ -146,6 +146,7 @@ export const translations = {
         },
         // Image Uploader
         imageUploader: {
+            dragImageHere: "Drag your image here",
             clickToBrowse: "or click to browse"
         },
         // Processing Popup
@@ -409,6 +410,7 @@ export const translations = {
         },
         // Image Uploader
         imageUploader: {
+            dragImageHere: "Glissez votre image ici",
             clickToBrowse: "ou cliquez pour parcourir"
         },
         // Processing Popup
