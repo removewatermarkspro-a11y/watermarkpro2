@@ -212,7 +212,7 @@ export default function ImageUpscaler() {
                         }} />
                     <FAQ items={imageUpscalerFaqItems} />
 
-                    <ToolsGrid customImages={{ 'Free Watermark Remover': '/images/tools/tool-card-upscaler-page.png', 'Replace Background': '/images/tools/tool-card-replace-bg-upscaler-page.png', 'Remove Background': '/images/tools/tool-card-remove-bg-upscaler-page.png', 'Remove Object': '/images/tools/tool-card-remove-object-upscaler-page.png', 'Image Upscaler': '/images/tools/upscaler-fox.jpg', 'Auto Remove People': '/images/tools/people-remover-colosseum.jpg', 'Remove Text': '/images/tools/remove-text-lime.jpg' }} />
+                    <ToolsGrid customImages={{ 'tool1': '/images/tools/tool-card-upscaler-page.png', 'tool2': '/images/tools/video-watermark-7.png', 'tool3': '/images/tools/remove-text-lime.jpg', 'tool4': '/images/tools/tool-card-remove-object-upscaler-page.png', 'tool5': '/images/tools/tool-card-replace-bg-upscaler-page.png', 'tool6': '/images/tools/tool-card-remove-bg-upscaler-page.png', 'tool7': '/images/tools/people-remover-colosseum.jpg', 'tool8': '/images/tools/upscaler-fox.jpg' }} />
                 </div>
             </main>
             <Footer />

@@ -3,6 +3,8 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import styles from './NoCreditsPopup.module.css'
+import { useLanguage } from '@/contexts/LanguageContext'
+import { translations } from '@/locales/translations'
 
 interface NoCreditsPopupProps {
     isOpen: boolean
@@ -11,6 +13,8 @@ interface NoCreditsPopupProps {
 
 export default function NoCreditsPopup({ isOpen, onClose }: NoCreditsPopupProps) {
     const [timeLeft, setTimeLeft] = useState({ minutes: 0, seconds: 0 })
+    const { language } = useLanguage()
+    const t = translations[language]
 
     useEffect(() => {
         if (isOpen) {
@@ -88,28 +92,28 @@ export default function NoCreditsPopup({ isOpen, onClose }: NoCreditsPopupProps)
                     <div className={styles.rightSection}>
                         <div className={styles.badge}>
                             <span className={styles.badgeIcon}>🔥</span>
-                            UPGRADE NOW
+                            {t.noCreditsPopup.badge}
                         </div>
 
-                        <h2 className={styles.title}>Have more images?</h2>
+                        <h2 className={styles.title}>{t.noCreditsPopup.title}</h2>
 
                         <p className={styles.subtitle}>
-                            Remove watermarks in bulk with premium credits
+                            {t.noCreditsPopup.subtitle}
                         </p>
 
                         <div className={styles.promoBox}>
                             <div className={styles.promoHeader}>
                                 <span className={styles.promoIcon}>🔥</span>
-                                EXCLUSIVE OFFER
+                                {t.noCreditsPopup.promoHeader}
                             </div>
 
                             <div className={styles.promoContent}>
                                 <div className={styles.leftContent}>
-                                    <div className={styles.discount}>-50%</div>
-                                    <div className={styles.promoText}>On all annual plans</div>
+                                    <div className={styles.discount}>{t.noCreditsPopup.discount}</div>
+                                    <div className={styles.promoText}>{t.noCreditsPopup.promoText}</div>
                                 </div>
                                 <div className={styles.rightContent}>
-                                    <div className={styles.expiresText}>Expires in</div>
+                                    <div className={styles.expiresText}>{t.noCreditsPopup.expiresText}</div>
                                     <div className={styles.countdown}>
                                         <div className={styles.timeBox}>
                                             <div className={styles.timeValue}>{String(timeLeft.minutes).padStart(2, '0')}</div>
@@ -128,24 +132,24 @@ export default function NoCreditsPopup({ isOpen, onClose }: NoCreditsPopupProps)
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                                     <path d="M7 10L9 12L13 8M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z" stroke="#8b5cf6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
-                                <span>Unlimited daily processing</span>
+                                <span>{t.noCreditsPopup.unlimitedProcessing}</span>
                             </div>
                             <div className={styles.feature}>
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                                     <path d="M7 10L9 12L13 8M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z" stroke="#8b5cf6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
-                                <span>Batch processing support</span>
+                                <span>{t.noCreditsPopup.batchProcessing}</span>
                             </div>
                             <div className={styles.feature}>
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                                     <path d="M7 10L9 12L13 8M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z" stroke="#8b5cf6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
-                                <span>Priority processing speed</span>
+                                <span>{t.noCreditsPopup.prioritySpeed}</span>
                             </div>
                         </div>
 
                         <Link href="/pricing" className={styles.ctaButton} onClick={onClose}>
-                            Get More Credits
+                            {t.noCreditsPopup.button}
                         </Link>
                     </div>
                 </div>

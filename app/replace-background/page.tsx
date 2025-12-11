@@ -16,6 +16,7 @@ import AuthPopup from '@/components/AuthPopup'
 import PromoPopup from '@/components/PromoPopup'
 import ResultDisplay from '@/components/ResultDisplay'
 import RelatedTools from '@/components/RelatedTools'
+import PromptInput from '@/components/PromptInput'
 import { replaceBackgroundFaqItems } from '@/utils/faqItems'
 import styles from '../watermark-remover/watermark.module.css'
 
@@ -106,6 +107,7 @@ export default function ReplaceBackground() {
                         <h1 className={styles.title}><span className={styles.violetText}>Free</span> instantly swap backgrounds</h1>
                         <p className={styles.description}>Change photo backgrounds instantly with AI. Replace any background with custom images, colors, or professional studio backdrops.</p>
                         <CategoryTabs />
+                        <PromptInput placeholder="Describe the background you want to create..." />
                         <div ref={uploadRef} className={styles.uploadSection}>
                             <ImageUploader
                                 onImageUpload={handleImageUpload}
@@ -212,7 +214,7 @@ export default function ReplaceBackground() {
                         }} />
                     <FAQ items={replaceBackgroundFaqItems} />
 
-                    <ToolsGrid customImages={{ 'Free Watermark Remover': '/images/tools/tool-card-replace-bg-page.png', 'Replace Background': '/images/tools/tool-card-replace-bg-replace-page.png', 'Remove Background': '/images/tools/tool-card-remove-bg-replace-page.png', 'Remove Object': '/images/tools/tool-card-remove-object-replace-page.png', 'Image Upscaler': '/images/tools/upscaler-lion.jpg', 'Auto Remove People': '/images/tools/people-remover-field-man.jpg', 'Remove Text': '/images/tools/remove-text-beige.jpg' }} />
+                    <ToolsGrid customImages={{ 'tool1': '/images/tools/tool-card-replace-bg-page.png', 'tool2': '/images/tools/video-watermark-5.png', 'tool3': '/images/tools/remove-text-beige.jpg', 'tool4': '/images/tools/tool-card-remove-object-replace-page.png', 'tool5': '/images/tools/tool-card-replace-bg-replace-page.png', 'tool6': '/images/tools/tool-card-remove-bg-replace-page.png', 'tool7': '/images/tools/people-remover-field-man.jpg', 'tool8': '/images/tools/upscaler-lion.jpg' }} />
                 </div>
             </main>
             <Footer />

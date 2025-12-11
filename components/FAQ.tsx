@@ -2,6 +2,8 @@
 
 import { useState } from 'react'
 import styles from './FAQ.module.css'
+import { useLanguage } from '@/contexts/LanguageContext'
+import { translations } from '@/locales/translations'
 
 interface FAQItem {
     question: string
@@ -14,6 +16,8 @@ interface FAQProps {
 
 export default function FAQ({ items }: FAQProps) {
     const [openIndex, setOpenIndex] = useState<number | null>(null)
+    const { language } = useLanguage()
+    const t = translations[language]
 
     const toggleItem = (index: number) => {
         setOpenIndex(openIndex === index ? null : index)
@@ -25,7 +29,7 @@ export default function FAQ({ items }: FAQProps) {
                 <div style={{ textAlign: 'center' }}>
                     <span className={styles.badge}>FAQ</span>
                     <h2 className={styles.title}>
-                        Frequently Asked Questions
+                        {t.faq.title}
                     </h2>
                 </div>
 

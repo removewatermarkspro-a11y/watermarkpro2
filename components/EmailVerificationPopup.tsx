@@ -2,6 +2,8 @@
 
 import { useEffect } from 'react'
 import styles from './EmailVerificationPopup.module.css'
+import { useLanguage } from '@/contexts/LanguageContext'
+import { translations } from '@/locales/translations'
 
 interface EmailVerificationPopupProps {
     isOpen: boolean
@@ -11,6 +13,8 @@ interface EmailVerificationPopupProps {
 }
 
 export default function EmailVerificationPopup({ isOpen, onClose, onBack, email }: EmailVerificationPopupProps) {
+    const { language } = useLanguage()
+    const t = translations[language]
     useEffect(() => {
         if (isOpen) {
             document.body.style.overflow = 'hidden'
@@ -53,9 +57,9 @@ export default function EmailVerificationPopup({ isOpen, onClose, onBack, email 
                             </svg>
                         </button>
 
-                        <h2 className={styles.title}>You've got mail</h2>
+                        <h2 className={styles.title}>{t.emailVerificationPopup.title}</h2>
                         <p className={styles.description}>
-                            A login link has been sent to <strong>{maskEmail(email)}</strong>. Click the link to access your account
+                            {t.emailVerificationPopup.subtitle} <strong>{maskEmail(email)}</strong>. Click the link to access your account
                         </p>
 
                         <div className={styles.emailDisplay}>
@@ -66,7 +70,7 @@ export default function EmailVerificationPopup({ isOpen, onClose, onBack, email 
                         </div>
 
                         <button className={styles.resendButton} onClick={handleResendEmail}>
-                            Resend email
+                            {t.emailVerificationPopup.resendLink}
                         </button>
                     </div>
 

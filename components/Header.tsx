@@ -4,10 +4,14 @@ import Link from 'next/link'
 import { useState, useEffect, useRef } from 'react'
 import styles from './Header.module.css'
 import AuthPopup from './AuthPopup'
+import { useLanguage } from '@/contexts/LanguageContext'
+import { translations } from '@/locales/translations'
 
 export default function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
     const [showAuthPopup, setShowAuthPopup] = useState(false)
+    const { language, setLanguage } = useLanguage()
+    const t = translations[language]
     const [isAuthenticated, setIsAuthenticated] = useState(false)
     const [credits, setCredits] = useState(0)
     const [userEmail, setUserEmail] = useState('')
@@ -61,13 +65,14 @@ export default function Header() {
     }, [showUserMenu])
 
     const features = [
-        { name: 'Watermark Remover', href: '/' },
-        { name: 'Remove Background', href: '/remove-background' },
-        { name: 'Replace Background', href: '/replace-background' },
-        { name: 'Remove Object', href: '/remove-object' },
-        { name: 'Remove Text', href: '/remove-text' },
-        { name: 'Auto Remove People', href: '/auto-remove-people' },
-        { name: 'Image Upscaler', href: '/image-upscaler' },
+        { name: t.header.featuresMenu.watermarkRemover, href: '/' },
+        { name: t.header.featuresMenu.videoWatermark, href: '/remove-watermark-video' },
+        { name: t.header.featuresMenu.removeBackground, href: '/remove-background' },
+        { name: t.header.featuresMenu.replaceBackground, href: '/replace-background' },
+        { name: t.header.featuresMenu.removeObject, href: '/remove-object' },
+        { name: t.header.featuresMenu.removeText, href: '/remove-text' },
+        { name: t.header.featuresMenu.autoRemovePeople, href: '/auto-remove-people' },
+        { name: t.header.featuresMenu.imageUpscaler, href: '/image-upscaler' },
     ]
 
     const handleAuthClose = () => {
@@ -101,20 +106,27 @@ export default function Header() {
         return 'User'
     }
 
+    const getUserInitial = () => {
+        if (userEmail) {
+            return userEmail.charAt(0).toUpperCase()
+        }
+        return 'U'
+    }
+
     return (
         <>
             <header className={styles.header}>
                 <div className="container">
                     <nav className={styles.nav}>
                         <Link href="/" className={styles.logo}>
-                            <span className={styles.logoIcon}>✨</span>
+                            <img src="/logo.png" alt="Remove Watermark Pro" className={styles.logoIcon} />
                             <span className={styles.logoText}>Remove watermark pro</span>
                         </Link>
 
                         <div className={styles.desktopMenu}>
                             <div className={styles.dropdown}>
                                 <button className={styles.dropdownButton}>
-                                    Features
+                                    {t.header.features}
                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                                         <path d="M4 6L8 10L12 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
                                     </svg>
@@ -127,9 +139,9 @@ export default function Header() {
                                     ))}
                                 </div>
                             </div>
-                            <Link href="/pricing" className={styles.navLink}>Pricing</Link>
-                            <Link href="/blog" className={styles.navLink}>Blog</Link>
-                            <Link href="/#testimonials" className={styles.navLink}>Testimonials</Link>
+                            <Link href="/pricing" className={styles.navLink}>{t.header.pricing}</Link>
+                            <Link href="/blog" className={styles.navLink}>{t.header.blog}</Link>
+                            <Link href="/#testimonials" className={styles.navLink}>{t.header.testimonials}</Link>
                         </div>
 
                         <div className={styles.actions}>
@@ -138,17 +150,39 @@ export default function Header() {
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
                                         <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#a855f7" stroke="#a855f7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
-                                    <span>{credits} credit{credits !== 1 ? 's' : ''}</span>
+                                    <span>{credits} {t.header.credits}</span>
                                 </div>
                             )}
-                            <button className={styles.navLink} style={{ background: 'none', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.9375rem' }}>
-                                <img src="https://flagcdn.com/us.svg" alt="US Flag" width={20} height={15} style={{ display: 'block' }} /> English
-                            </button>
+                            <div className={styles.dropdown}>
+                                <button className={styles.languageButton}>
+                                    <img
+                                        src={language === 'en' ? "https://flagcdn.com/us.svg" : "https://flagcdn.com/fr.svg"}
+                                        alt={language === 'en' ? "US Flag" : "French Flag"}
+                                        width={20}
+                                        height={15}
+                                        style={{ display: 'block' }}
+                                    />
+                                    {language === 'en' ? 'English' : 'Français'}
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <path d="M4 6L8 10L12 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                                    </svg>
+                                </button>
+                                <div className={styles.dropdownContent}>
+                                    <button className={styles.languageItem} onClick={() => setLanguage('en')}>
+                                        <img src="https://flagcdn.com/us.svg" alt="US Flag" width={20} height={15} />
+                                        English
+                                    </button>
+                                    <button className={styles.languageItem} onClick={() => setLanguage('fr')}>
+                                        <img src="https://flagcdn.com/fr.svg" alt="French Flag" width={20} height={15} />
+                                        Français
+                                    </button>
+                                </div>
+                            </div>
                             {isAuthenticated ? (
                                 <>
                                     <div className={styles.userMenuWrapper} ref={userMenuRef}>
                                         <button className={styles.userBtn} onClick={() => setShowUserMenu(!showUserMenu)}>
-                                            User
+                                            {getUserInitial()}
                                         </button>
                                         {showUserMenu && (
                                             <div className={styles.userMenu}>
@@ -161,7 +195,7 @@ export default function Header() {
                                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                                                         <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                                     </svg>
-                                                    My account
+                                                    {t.header.account}
                                                 </Link>
                                                 <Link href="/support" className={styles.userMenuItem}>
                                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
@@ -171,24 +205,24 @@ export default function Header() {
                                                 </Link>
                                                 <div className={styles.userMenuDivider}></div>
                                                 <Link href="/pricing" className={styles.unlockProBtn} style={{ boxShadow: 'var(--shadow-glow)' }} onClick={() => setShowUserMenu(false)}>
-                                                    Unlock Pro now
+                                                    {t.header.unlockPro}
                                                 </Link>
                                                 <div className={styles.userMenuDivider}></div>
                                                 <button onClick={handleLogout} className={styles.logoutBtn}>
                                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                                                         <path d="M9 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H9M16 17L21 12M21 12L16 7M21 12H9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                                     </svg>
-                                                    Logout
+                                                    {t.header.logout}
                                                 </button>
                                             </div>
                                         )}
                                     </div>
-                                    <Link href="/pricing" className="btn btn-primary" style={{ boxShadow: 'var(--shadow-glow)' }}>Unlock Pro now</Link>
+                                    <Link href="/pricing" className="btn btn-primary" style={{ boxShadow: 'var(--shadow-glow)' }}>{t.header.unlockPro}</Link>
                                 </>
                             ) : (
                                 <>
-                                    <button onClick={() => setShowAuthPopup(true)} className={styles.loginBtn}>Sign In</button>
-                                    <button onClick={() => setShowAuthPopup(true)} className="btn btn-primary">Get Started Free</button>
+                                    <button onClick={() => setShowAuthPopup(true)} className={styles.loginBtn}>{t.header.signIn}</button>
+                                    <button onClick={() => setShowAuthPopup(true)} className="btn btn-primary">{t.header.signIn}</button>
                                 </>
                             )}
                         </div>
@@ -224,24 +258,24 @@ export default function Header() {
                                 ))}
                             </div>
                             <Link href="/pricing" className={styles.mobileMenuItem} onClick={() => setMobileMenuOpen(false)}>
-                                Pricing
+                                {t.header.pricing}
                             </Link>
                             <Link href="/blog" className={styles.mobileMenuItem} onClick={() => setMobileMenuOpen(false)}>
-                                Blog
+                                {t.header.blog}
                             </Link>
                             <div className={styles.mobileMenuActions}>
                                 {isAuthenticated ? (
                                     <>
-                                        <button className="btn btn-secondary">User</button>
-                                        <button className="btn btn-primary">Unlock Pro</button>
+                                        <button className="btn btn-secondary">{getUserInitial()}</button>
+                                        <button className="btn btn-primary">{t.header.unlockPro}</button>
                                     </>
                                 ) : (
                                     <>
                                         <button onClick={() => { setShowAuthPopup(true); setMobileMenuOpen(false); }} className="btn btn-secondary">
-                                            Sign In
+                                            {t.header.signIn}
                                         </button>
                                         <button onClick={() => { setShowAuthPopup(true); setMobileMenuOpen(false); }} className="btn btn-primary">
-                                            Get Started Free
+                                            {t.header.signIn}
                                         </button>
                                     </>
                                 )}

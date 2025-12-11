@@ -2,12 +2,16 @@
 
 import { useEffect } from 'react'
 import styles from './ProcessingPopup.module.css'
+import { useLanguage } from '@/contexts/LanguageContext'
+import { translations } from '@/locales/translations'
 
 interface ProcessingPopupProps {
     isOpen: boolean
 }
 
 export default function ProcessingPopup({ isOpen }: ProcessingPopupProps) {
+    const { language } = useLanguage()
+    const t = translations[language]
     useEffect(() => {
         if (isOpen) {
             document.body.style.overflow = 'hidden'
@@ -35,8 +39,8 @@ export default function ProcessingPopup({ isOpen }: ProcessingPopupProps) {
                     </div>
                 </div>
 
-                <h2 className={styles.title}>Traitement de votre image...</h2>
-                <p className={styles.subtitle}>Notre IA supprime les filigranes...</p>
+                <h2 className={styles.title}>{t.processingPopup.title}</h2>
+                <p className={styles.subtitle}>{t.processingPopup.subtitle}</p>
 
                 <div className={styles.dots}>
                     <span className={styles.dot}></span>

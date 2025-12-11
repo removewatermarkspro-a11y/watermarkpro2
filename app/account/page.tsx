@@ -83,6 +83,14 @@ export default function Account() {
         alert('Your subscription has been cancelled. You will continue to have access until ' + billingCycle.end)
     }
 
+    const handleAcceptPromo = () => {
+        // Apply 20% discount
+        const discountedPrice = planType === 'pro' ? '$7.99' : '$7.99'
+        alert(`Great! You keep your subscription with 20% off. New price: ${discountedPrice}/month for the next month!`)
+        setShowCancelPopup(false)
+        // In a real app, you would update the subscription with the promotional price
+    }
+
     const getInitial = () => {
         return userName.charAt(0).toUpperCase() || 'U'
     }
@@ -121,13 +129,13 @@ export default function Account() {
 
                         {/* User Profile Section */}
                         <div className={styles.profileSection}>
-                            <h2 className={styles.sectionTitle}>Mon compte</h2>
+                            <h2 className={styles.sectionTitle}>My Account</h2>
                             <div className={styles.profileContent}>
                                 <div className={styles.avatarContainer}>
                                     <div className={styles.avatar}>{getInitial()}</div>
                                 </div>
                                 <div className={styles.formGroup}>
-                                    <label className={styles.formLabel}>Nom</label>
+                                    <label className={styles.formLabel}>Name</label>
                                     <input
                                         type="text"
                                         className={styles.formInput}
@@ -136,7 +144,7 @@ export default function Account() {
                                     />
                                 </div>
                                 <div className={styles.formGroup}>
-                                    <label className={styles.formLabel}>E-mail</label>
+                                    <label className={styles.formLabel}>Email</label>
                                     <input
                                         type="email"
                                         className={styles.formInput}
@@ -154,6 +162,7 @@ export default function Account() {
                 isOpen={showCancelPopup}
                 onClose={() => setShowCancelPopup(false)}
                 onConfirm={handleCancelSubscription}
+                onAcceptPromo={handleAcceptPromo}
             />
         </>
     )

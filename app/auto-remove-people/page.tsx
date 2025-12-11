@@ -16,6 +16,7 @@ import AuthPopup from '@/components/AuthPopup'
 import PromoPopup from '@/components/PromoPopup'
 import ResultDisplay from '@/components/ResultDisplay'
 import RelatedTools from '@/components/RelatedTools'
+import PromptInput from '@/components/PromptInput'
 import { peopleRemovalFaqItems } from '@/utils/faqItems'
 import styles from '../watermark-remover/watermark.module.css'
 
@@ -106,6 +107,7 @@ export default function AutoRemovePeople() {
                         <h1 className={styles.title}><span className={styles.violetText}>Free</span> smart people removal with one click</h1>
                         <p className={styles.description}>Automatically remove people and crowds from photos with AI. Get clean, tourist-free shots of landmarks and locations instantly.</p>
                         <CategoryTabs />
+                        <PromptInput placeholder="Describe who you want to remove from the photo..." />
                         <div ref={uploadRef} className={styles.uploadSection}>
                             <ImageUploader
                                 onImageUpload={handleImageUpload}
@@ -212,7 +214,7 @@ export default function AutoRemovePeople() {
                         }} />
                     <FAQ items={peopleRemovalFaqItems} />
 
-                    <ToolsGrid customImages={{ 'Free Watermark Remover': '/images/tools/tool-card-auto-people-page.png', 'Replace Background': '/images/tools/tool-card-replace-bg-people-page.png', 'Remove Background': '/images/tools/tool-card-remove-bg-people-page.png', 'Remove Object': '/images/tools/tool-card-remove-object-people-page.png', 'Image Upscaler': '/images/tools/upscaler-tiger.jpg', 'Auto Remove People': '/images/tools/people-remover-museum.jpg', 'Remove Text': '/images/tools/remove-text-pink.jpg' }} />
+                    <ToolsGrid customImages={{ 'tool1': '/images/tools/tool-card-auto-people-page.png', 'tool2': '/images/tools/video-watermark-6.png', 'tool3': '/images/tools/remove-text-pink.jpg', 'tool4': '/images/tools/tool-card-remove-object-people-page.png', 'tool5': '/images/tools/tool-card-replace-bg-people-page.png', 'tool6': '/images/tools/tool-card-remove-bg-people-page.png', 'tool7': '/images/tools/people-remover-museum.jpg', 'tool8': '/images/tools/upscaler-tiger.jpg' }} />
                 </div >
             </main >
             <Footer />

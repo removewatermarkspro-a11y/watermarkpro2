@@ -3,6 +3,8 @@
 import { useEffect, useState } from 'react'
 import styles from './AuthPopup.module.css'
 import EmailVerificationPopup from './EmailVerificationPopup'
+import { useLanguage } from '@/contexts/LanguageContext'
+import { translations } from '@/locales/translations'
 
 interface AuthPopupProps {
     isOpen: boolean
@@ -12,6 +14,8 @@ interface AuthPopupProps {
 export default function AuthPopup({ isOpen, onClose }: AuthPopupProps) {
     const [email, setEmail] = useState('')
     const [showVerification, setShowVerification] = useState(false)
+    const { language } = useLanguage()
+    const t = translations[language]
 
     useEffect(() => {
         if (isOpen) {
@@ -77,8 +81,8 @@ export default function AuthPopup({ isOpen, onClose }: AuthPopupProps) {
 
                 <div className={styles.modalContent}>
                     <div className={styles.formSection}>
-                        <h2 className={styles.title}>Sign in</h2>
-                        <p className={styles.subtitle}>1 free credit when you sign up !</p>
+                        <h2 className={styles.title}>{t.authPopup.title}</h2>
+                        <p className={styles.subtitle}>{t.authPopup.subtitle}</p>
 
                         <div className={styles.buttons}>
                             <button className={styles.googleButton} onClick={handleGoogleLogin}>
@@ -88,16 +92,16 @@ export default function AuthPopup({ isOpen, onClose }: AuthPopupProps) {
                                     <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05" />
                                     <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335" />
                                 </svg>
-                                Continue with Google
+                                {t.authPopup.googleButton}
                             </button>
 
                             <div className={styles.divider}>
-                                <span>OU</span>
+                                <span>{t.authPopup.divider}</span>
                             </div>
 
                             <input
                                 type="email"
-                                placeholder="Enter your email"
+                                placeholder={t.authPopup.emailPlaceholder}
                                 className={styles.emailInput}
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
@@ -105,12 +109,12 @@ export default function AuthPopup({ isOpen, onClose }: AuthPopupProps) {
                             />
 
                             <button className={styles.emailButton} onClick={handleEmailSubmit}>
-                                Continue with Email
+                                {t.authPopup.emailButton}
                             </button>
                         </div>
 
                         <p className={styles.terms}>
-                            By continuing, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
+                            {t.authPopup.termsText} <a href="#">{t.authPopup.termsLink}</a> {t.authPopup.and} <a href="#">{t.authPopup.privacyLink}</a>.
                         </p>
                     </div>
 

@@ -4,6 +4,8 @@ import { useState, useCallback } from 'react'
 import styles from './ImageUploader.module.css'
 import ProcessingPopup from './ProcessingPopup'
 import NoCreditsPopup from './NoCreditsPopup'
+import { useLanguage } from '@/contexts/LanguageContext'
+import { translations } from '@/locales/translations'
 
 interface ImageUploaderProps {
     onImageUpload: (file: File, preview: string) => void
@@ -25,6 +27,8 @@ export default function ImageUploader({
     const [isDragging, setIsDragging] = useState(false)
     const [isProcessing, setIsProcessing] = useState(false)
     const [showNoCreditsPopup, setShowNoCreditsPopup] = useState(false)
+    const { language } = useLanguage()
+    const t = translations[language]
 
     const handleDragOver = useCallback((e: React.DragEvent) => {
         e.preventDefault()
@@ -114,8 +118,8 @@ export default function ImageUploader({
                             <path d="M4 17V19C4 20.1046 4.89543 21 6 21H18C19.1046 21 20 19V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
                         </svg>
                     </div>
-                    <h3 className={styles.title}>{uploadText}</h3>
-                    <p className={styles.subtitle}>or click to browse</p>
+                    <h3 className={styles.title}>{t.imageUploader.dragImageHere}</h3>
+                    <p className={styles.subtitle}>{t.imageUploader.clickToBrowse}</p>
                     <p className={styles.formats}>{formatText}</p>
                     <input
                         type="file"

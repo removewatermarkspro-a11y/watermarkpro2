@@ -213,7 +213,7 @@ export default function RemoveBackground() {
                         }} />
                     <FAQ items={backgroundRemovalFaqItems} />
 
-                    <ToolsGrid customImages={{ 'Free Watermark Remover': '/images/tools/tool-card-remove-bg-page.png', 'Replace Background': '/images/tools/tool-card-replace-bg-remove-page.png', 'Remove Background': '/images/tools/tool-card-remove-bg-remove-bg-page.png', 'Remove Object': '/images/tools/tool-card-remove-object-remove-bg-page.png', 'Image Upscaler': '/images/tools/upscaler-bear.jpg', 'Auto Remove People': '/images/tools/people-remover-station.jpg', 'Remove Text': '/images/tools/remove-text-orange.jpg' }} />
+                    <ToolsGrid customImages={{ 'tool1': '/images/tools/tool-card-remove-bg-page.png', 'tool2': '/images/tools/video-watermark-4.png', 'tool3': '/images/tools/remove-text-orange.jpg', 'tool4': '/images/tools/tool-card-remove-object-remove-bg-page.png', 'tool5': '/images/tools/tool-card-replace-bg-remove-page.png', 'tool6': '/images/tools/tool-card-remove-bg-remove-bg-page.png', 'tool7': '/images/tools/people-remover-station.jpg', 'tool8': '/images/tools/upscaler-bear.jpg' }} />
                 </div>
             </main>
             <Footer />

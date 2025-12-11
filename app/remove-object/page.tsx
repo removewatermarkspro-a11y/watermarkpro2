@@ -16,6 +16,7 @@ import AuthPopup from '@/components/AuthPopup'
 import PromoPopup from '@/components/PromoPopup'
 import ResultDisplay from '@/components/ResultDisplay'
 import RelatedTools from '@/components/RelatedTools'
+import PromptInput from '@/components/PromptInput'
 import { objectRemovalFaqItems } from '@/utils/faqItems'
 import styles from '../watermark-remover/watermark.module.css'
 
@@ -106,6 +107,7 @@ export default function RemoveObject() {
                         <h1 className={styles.title}><span className={styles.violetText}>Free</span> remove any objects from your images</h1>
                         <p className={styles.description}>Erase any unwanted object from photos with AI. Remove people, cars, buildings, or any element from your images in seconds.</p>
                         <CategoryTabs />
+                        <PromptInput placeholder="Describe what object you want to remove..." />
                         <div ref={uploadRef} className={styles.uploadSection}>
                             <ImageUploader
                                 onImageUpload={handleImageUpload}
@@ -212,7 +214,7 @@ export default function RemoveObject() {
                         }} />
                     <FAQ items={objectRemovalFaqItems} />
 
-                    <ToolsGrid customImages={{ 'Free Watermark Remover': '/images/tools/tool-card-object-page.png', 'Replace Background': '/images/tools/tool-card-replace-bg-object.png', 'Remove Background': '/images/tools/tool-card-remove-bg-object.png', 'Remove Object': '/images/tools/tool-card-remove-object-object-page.png', 'Image Upscaler': '/images/tools/upscaler-penguin.jpg', 'Auto Remove People': '/images/tools/people-remover-field-woman.jpg', 'Remove Text': '/images/tools/remove-text-yellow.jpg' }} />
+                    <ToolsGrid customImages={{ 'tool1': '/images/tools/tool-card-object-page.png', 'tool2': '/images/tools/video-watermark-2.png', 'tool3': '/images/tools/remove-text-yellow.jpg', 'tool4': '/images/tools/tool-card-remove-object-object-page.png', 'tool5': '/images/tools/tool-card-replace-bg-object.png', 'tool6': '/images/tools/tool-card-remove-bg-object.png', 'tool7': '/images/tools/people-remover-field-woman.jpg', 'tool8': '/images/tools/upscaler-penguin.jpg' }} />
                 </div>
             </main>
             <Footer />

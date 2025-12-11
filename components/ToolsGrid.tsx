@@ -2,6 +2,8 @@
 
 import Link from 'next/link'
 import styles from './ToolsGrid.module.css'
+import { useLanguage } from '@/contexts/LanguageContext'
+import { translations } from '@/locales/translations'
 
 const tools = [
     {
@@ -59,22 +61,84 @@ interface ToolsGridProps {
 }
 
 export default function ToolsGrid({ customImages = {} }: ToolsGridProps) {
+    const { language } = useLanguage()
+    const t = translations[language]
+
+    const tools = [
+        {
+            title: t.toolsGrid.tool1Title,
+            description: t.toolsGrid.tool1Description,
+            icon: '✨',
+            href: '/',
+            image: customImages['tool1']
+        },
+        {
+            title: t.toolsGrid.tool2Title,
+            description: t.toolsGrid.tool2Description,
+            icon: '🎬',
+            href: '/remove-watermark-video',
+            image: customImages['tool2']
+        },
+        {
+            title: t.toolsGrid.tool3Title,
+            description: t.toolsGrid.tool3Description,
+            icon: '📝',
+            href: '/remove-text',
+            image: customImages['tool3']
+        },
+        {
+            title: t.toolsGrid.tool4Title,
+            description: t.toolsGrid.tool4Description,
+            icon: '🎯',
+            href: '/remove-object',
+            image: customImages['tool4']
+        },
+        {
+            title: t.toolsGrid.tool5Title,
+            description: t.toolsGrid.tool5Description,
+            icon: '🎨',
+            href: '/replace-background',
+            image: customImages['tool5']
+        },
+        {
+            title: t.toolsGrid.tool6Title,
+            description: t.toolsGrid.tool6Description,
+            icon: '✂️',
+            href: '/remove-background',
+            image: customImages['tool6']
+        },
+        {
+            title: t.toolsGrid.tool7Title,
+            description: t.toolsGrid.tool7Description,
+            icon: '👥',
+            href: '/auto-remove-people',
+            image: customImages['tool7']
+        },
+        {
+            title: t.toolsGrid.tool8Title,
+            description: t.toolsGrid.tool8Description,
+            icon: '📈',
+            href: '/image-upscaler',
+            image: customImages['tool8']
+        }
+    ]
+
     return (
         <section className={styles.toolsSection}>
             <div className="container">
-                <h2 className={styles.title}>Explore Our Complete Suite of AI Tools</h2>
+                <h2 className={styles.title}>{t.toolsGrid.title}</h2>
 
                 <div className={styles.grid}>
                     {tools.map((tool, index) => (
                         <Link href={tool.href} key={index} className={styles.toolCard}>
                             <div className={styles.imageHeader}>
-                                {customImages[tool.title] ? (
+                                {tool.image && (
                                     <img
-                                        src={customImages[tool.title]}
+                                        src={tool.image}
                                         alt={tool.title}
                                         style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                                     />
-                                ) : null}
+                                )}
                             </div>
                             <div className={styles.cardContent}>
                                 <h3 className={styles.toolTitle}>{tool.title}</h3>
@@ -86,7 +150,7 @@ export default function ToolsGrid({ customImages = {} }: ToolsGridProps) {
 
                 <div className={styles.ctaContainer}>
                     <Link href="/" className={styles.ctaButton}>
-                        Get started for free
+                        {t.toolsGrid.getStartedButton}
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                             <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
                         </svg>

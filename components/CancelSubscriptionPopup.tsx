@@ -1,16 +1,81 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import styles from './CancelSubscriptionPopup.module.css'
 
 interface CancelSubscriptionPopupProps {
     isOpen: boolean
     onClose: () => void
     onConfirm: () => void
+    onAcceptPromo?: () => void
 }
 
-export default function CancelSubscriptionPopup({ isOpen, onClose, onConfirm }: CancelSubscriptionPopupProps) {
+interface Question {
+    title: string
+    options: string[]
+}
+
+const FEEDBACK_QUESTIONS: Question[] = [
+    {
+        title: "Why do you want to cancel?",
+        options: [
+            "Too expensive for me",
+            "I don't use the service enough",
+            "Technical issues or bugs",
+            "Missing features",
+            "Switching to another service",
+            "Other"
+        ]
+    },
+    {
+        title: "How satisfied are you with our features?",
+        options: [
+            "Watermark removal quality is poor",
+            "Background removal doesn't work well",
+            "Limited editing options",
+            "Processing is too slow",
+            "Features are too complicated",
+            "Features meet my expectations"
+        ]
+    },
+    {
+        title: "How easy is our platform to use?",
+        options: [
+            "Interface is confusing",
+            "Hard to find features",
+            "Upload process is complicated",
+            "Results are difficult to download",
+            "Not enough tutorials or guides",
+            "Easy and intuitive to use"
+        ]
+    },
+    {
+        title: "How do you feel about the pricing?",
+        options: [
+            "Too expensive compared to competitors",
+            "Not enough credits per month",
+            "Would prefer a different payment model",
+            "Pricing is unclear",
+            "Good value for money",
+            "Fair pricing overall"
+        ]
+    },
+    {
+        title: "How was your experience with support?",
+        options: [
+            "Never received help when needed",
+            "Support response was too slow",
+            "Support couldn't solve my problem",
+            "No issues, didn't need support",
+            "Support was helpful",
+            "Haven't contacted support yet"
+        ]
+    }
+]
+
+export default function CancelSubscriptionPopup({ isOpen, onClose, onConfirm, onAcceptPromo }: CancelSubscriptionPopupProps) {
     const popupRef = useRef<HTMLDivElement>(null)
+    const [selectedAnswers, setSelectedAnswers] = useState<{ [key: number]: string[] }>({})
 
     useEffect(() => {
         if (isOpen) {
@@ -23,6 +88,33 @@ export default function CancelSubscriptionPopup({ isOpen, onClose, onConfirm }: 
             document.body.style.overflow = 'unset'
         }
     }, [isOpen])
+
+    useEffect(() => {
+        if (!isOpen) {
+            setSelectedAnswers({})
+        }
+    }, [isOpen])
+
+    const toggleAnswer = (questionIndex: number, answer: string) => {
+        setSelectedAnswers(prev => {
+            const currentAnswers = prev[questionIndex] || []
+            const newAnswers = currentAnswers.includes(answer)
+                ? currentAnswers.filter(a => a !== answer)
+                : [...currentAnswers, answer]
+
+            return {
+                ...prev,
+                [questionIndex]: newAnswers
+            }
+        })
+    }
+
+    const handleAcceptPromo = () => {
+        if (onAcceptPromo) {
+            onAcceptPromo()
+        }
+        onClose()
+    }
 
     if (!isOpen) return null
 
@@ -44,11 +136,46 @@ export default function CancelSubscriptionPopup({ isOpen, onClose, onConfirm }: 
                     </p>
                 </div>
 
-                <div className={styles.actions}>
-                    <button className={styles.stayBtn} onClick={onClose}>
+                {FEEDBACK_QUESTIONS.map((question, questionIndex) => (
+                    <div key={questionIndex} className={styles.reasonsSection}>
+                        <h3 className={styles.reasonsTitle}>{question.title}</h3>
+                        <div className={styles.reasonsList}>
+                            {question.options.map((option, optionIndex) => (
+                                <label key={optionIndex} className={styles.reasonItem}>
+                                    <input
+                                        type="checkbox"
+                                        className={styles.checkbox}
+                                        checked={selectedAnswers[questionIndex]?.includes(option) || false}
+                                        onChange={() => toggleAnswer(questionIndex, option)}
+                                    />
+                                    <span className={styles.reasonText}>{option}</span>
+                                </label>
+                            ))}
+                        </div>
+                    </div>
+                ))}
+
+                <div className={styles.promoBox}>
+                    <div className={styles.promoBadge}>
+                        <span className={styles.promoIcon}>🎁</span>
+                        <span className={styles.promoPercentage}>20% OFF</span>
+                    </div>
+                    <div className={styles.promoContent}>
+                        <h4 className={styles.promoTitle}>Special Offer!</h4>
+                        <p className={styles.promoText}>
+                            Stay with us and enjoy <strong>20% off</strong> your next month!
+                        </p>
+                        <button className={styles.promoBtn} onClick={handleAcceptPromo}>
+                            Claim 20% Discount
+                        </button>
+                    </div>
+                </div>
+
+                <div className={styles.finalActions}>
+                    <button className={styles.staySubscribedBtn} onClick={onClose}>
                         Stay Subscribed
                     </button>
-                    <button className={styles.cancelBtn} onClick={onConfirm}>
+                    <button className={styles.finalCancelBtn} onClick={onConfirm}>
                         Cancel Subscription
                     </button>
                 </div>

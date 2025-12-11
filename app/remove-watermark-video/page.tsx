@@ -19,6 +19,14 @@ import RelatedTools from '@/components/RelatedTools'
 import { commonFaqItems } from '@/utils/faqItems'
 import styles from '../watermark-remover/watermark.module.css'
 
+// Declare YouTube types
+declare global {
+    interface Window {
+        YT: any;
+        onYouTubeIframeAPIReady: () => void;
+    }
+}
+
 export default function RemoveWatermarkVideo() {
     const [uploadedImage, setUploadedImage] = useState<File | null>(null)
     const [originalPreview, setOriginalPreview] = useState<string | null>(null)
@@ -28,6 +36,8 @@ export default function RemoveWatermarkVideo() {
     const [showPromoPopup, setShowPromoPopup] = useState(false)
     const [isAuthenticated, setIsAuthenticated] = useState(false)
     const uploadRef = useRef<HTMLDivElement>(null)
+    const playerRef = useRef<any>(null)
+    const videoContainerRef = useRef<HTMLDivElement>(null)
 
     const handleImageUpload = (file: File, preview: string) => {
         setUploadedImage(file)
@@ -156,7 +166,22 @@ export default function RemoveWatermarkVideo() {
                         <div className={styles.featureGrid}>
                             <div className={styles.featureItem}>
                                 <div className={styles.featureImage}>
-                                    🎬
+                                    <video
+                                        autoPlay
+                                        loop
+                                        muted
+                                        playsInline
+                                        style={{
+                                            width: '100%',
+                                            height: '100%',
+                                            objectFit: 'cover',
+                                            borderRadius: '12px',
+                                            display: 'block'
+                                        }}
+                                    >
+                                        <source src="https://cdn.qwenlm.ai/output/5b1600ce-3b2b-419d-868c-ab0ce61be2c4/i2v/270d91b3-f72a-4388-8e65-d1d6ebbe510e/d2b9f522-1288-491d-ae49-89627e5ce8cf.mp4?key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXNvdXJjZV91c2VyX2lkIjoiNWIxNjAwY2UtM2IyYi00MTlkLTg2OGMtYWIwY2U2MWJlMmM0IiwicmVzb3VyY2VfaWQiOiJkMmI5ZjUyMi0xMjg4LTQ5MWQtYWU0OS04OTYyN2U1Y2U4Y2YiLCJyZXNvdXJjZV9jaGF0X2lkIjpudWxsfQ.pRHWRg4nMA955J62I1jp5jw6Go0cxVMQDD7bfFVQNlY" type="video/mp4" />
+                                        Your browser does not support the video tag.
+                                    </video>
                                 </div>
                                 <div className={styles.featureContent}>
                                     <h3>Free Remove Watermark Video Online – Fast & Accurate</h3>
@@ -174,7 +199,7 @@ export default function RemoveWatermarkVideo() {
 
                             <div className={styles.featureItem}>
                                 <div className={styles.featureImage}>
-                                    ⚡
+                                    <img src="/images/features/video-page-tiktok-girls.png" alt="Remove TikTok Watermark" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '12px' }} />
                                 </div>
                                 <div className={styles.featureContent}>
                                     <h3>Fast Free Watermark Remover for Any Video Format</h3>
@@ -192,7 +217,7 @@ export default function RemoveWatermarkVideo() {
 
                             <div className={styles.featureItem}>
                                 <div className={styles.featureImage}>
-                                    ✓
+                                    <img src="/images/features/video-page-red-panda.png" alt="Video Watermark Removal" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '12px' }} />
                                 </div>
                                 <div className={styles.featureContent}>
                                     <h3>Complete Solution to Remove Watermark from Video Free</h3>
@@ -258,7 +283,7 @@ export default function RemoveWatermarkVideo() {
                     {/* FAQ Section */}
                     <FAQ items={commonFaqItems} />
 
-                    <ToolsGrid customImages={{ 'Free Watermark Remover': '/images/tools/tool-card-video-page.png', 'Replace Background': '/images/tools/tool-card-replace-bg-video.png', 'Remove Background': '/images/tools/tool-card-remove-bg-video.png', 'Remove Object': '/images/tools/tool-card-remove-object-video.png', 'Image Upscaler': '/images/tools/upscaler-panther.jpg', 'Auto Remove People': '/images/tools/people-remover-street-woman.jpg', 'Remove Text': '/images/tools/remove-text-dark-blue.jpg' }} />
+                    <ToolsGrid customImages={{ 'tool1': '/images/tools/tool-card-video-page.png', 'tool2': '/images/tools/video-watermark-8.png', 'tool3': '/images/tools/remove-text-dark-blue.jpg', 'tool4': '/images/tools/tool-card-remove-object-video.png', 'tool5': '/images/tools/tool-card-replace-bg-video.png', 'tool6': '/images/tools/tool-card-remove-bg-video.png', 'tool7': '/images/tools/people-remover-street-woman.jpg', 'tool8': '/images/tools/upscaler-panther.jpg' }} />
                 </div>
             </main>
             <Footer />

@@ -1,5 +1,8 @@
 'use client'
 
+import { useLanguage } from '@/contexts/LanguageContext'
+import { translations } from '@/locales/translations'
+
 interface Tool {
     title: string
     description: string
@@ -7,20 +10,23 @@ interface Tool {
 }
 
 export default function RelatedTools() {
+    const { language } = useLanguage()
+    const t = translations[language]
+
     const tools: Tool[] = [
         {
-            title: "Supprimer l'objet",
-            description: "Remove any object",
+            title: t.relatedTools.tool1.title,
+            description: t.relatedTools.tool1.description,
             link: "/remove-object"
         },
         {
-            title: "Supprimer l'arrière-plan",
-            description: "Remove backgrounds",
+            title: t.relatedTools.tool2.title,
+            description: t.relatedTools.tool2.description,
             link: "/remove-background"
         },
         {
-            title: "Remplacer l'arrière-plan",
-            description: "Replace backgrounds",
+            title: t.relatedTools.tool3.title,
+            description: t.relatedTools.tool3.description,
             link: "/replace-background"
         }
     ]
@@ -29,8 +35,8 @@ export default function RelatedTools() {
         <div className="related-tools">
             <div className="tools-header">
                 <div className="header-text">
-                    <h3>Try these tools next</h3>
-                    <p>Enhance your images even more</p>
+                    <h3>{t.relatedTools.title}</h3>
+                    <p>{t.relatedTools.subtitle}</p>
                 </div>
             </div>
 
@@ -42,7 +48,7 @@ export default function RelatedTools() {
                             <p>{tool.description}</p>
                         </div>
                         <a href={tool.link} className="tool-button">
-                            Try now
+                            {t.relatedTools.tryNowButton}
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                                 <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>

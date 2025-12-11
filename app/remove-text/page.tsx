@@ -210,7 +210,7 @@ export default function RemoveText() {
                         }} />
                     <FAQ items={textRemovalFaqItems} />
 
-                    <ToolsGrid customImages={{ 'Free Watermark Remover': '/images/tools/tool-card-text-page.png', 'Replace Background': '/images/tools/tool-card-replace-bg-text.png', 'Remove Background': '/images/tools/tool-card-remove-bg-text.png', 'Remove Object': '/images/tools/tool-card-remove-object-text.png', 'Image Upscaler': '/images/tools/upscaler-owl.jpg', 'Auto Remove People': '/images/tools/people-remover-beach-woman.jpg', 'Remove Text': '/images/tools/remove-text-light-blue.jpg' }} />
+                    <ToolsGrid customImages={{ 'tool1': '/images/tools/tool-card-text-page.png', 'tool2': '/images/tools/video-watermark-3.png', 'tool3': '/images/tools/remove-text-light-blue.jpg', 'tool4': '/images/tools/tool-card-remove-object-text.png', 'tool5': '/images/tools/tool-card-replace-bg-text.png', 'tool6': '/images/tools/tool-card-remove-bg-text.png', 'tool7': '/images/tools/people-remover-beach-woman.jpg', 'tool8': '/images/tools/upscaler-owl.jpg' }} />
                 </div>
             </main>
             <Footer />

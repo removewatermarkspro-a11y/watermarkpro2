@@ -3,19 +3,23 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import styles from './CategoryTabs.module.css'
+import { useLanguage } from '@/contexts/LanguageContext'
+import { translations } from '@/locales/translations'
 
 export default function CategoryTabs() {
     const pathname = usePathname()
+    const { language } = useLanguage()
+    const t = translations[language]
 
     const categories = [
-        { name: 'Free watermark remover', href: '/' },
-        { name: 'Remove watermark from video', href: '/remove-watermark-video' },
-        { name: 'Remove text', href: '/remove-text' },
-        { name: 'Remove object', href: '/remove-object' },
-        { name: 'Replace background', href: '/replace-background' },
-        { name: 'Remove background', href: '/remove-background' },
-        { name: 'Auto remove people', href: '/auto-remove-people' },
-        { name: 'Image upscaler', href: '/image-upscaler' },
+        { name: t.categoryTabs.watermarkRemover, href: '/' },
+        { name: t.categoryTabs.videoWatermark, href: '/remove-watermark-video' },
+        { name: t.categoryTabs.removeText, href: '/remove-text' },
+        { name: t.categoryTabs.removeObject, href: '/remove-object' },
+        { name: t.categoryTabs.replaceBackground, href: '/replace-background' },
+        { name: t.categoryTabs.removeBackground, href: '/remove-background' },
+        { name: t.categoryTabs.autoRemovePeople, href: '/auto-remove-people' },
+        { name: t.categoryTabs.imageUpscaler, href: '/image-upscaler' },
     ]
 
     return (

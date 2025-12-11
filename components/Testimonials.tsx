@@ -1,5 +1,10 @@
+'use client'
+
 import styles from './Testimonials.module.css'
 import { testimonialsByPage } from '@/utils/testimonialData'
+import { testimonialsByPageFr } from '@/utils/testimonialDataFr'
+import { useLanguage } from '@/contexts/LanguageContext'
+import { translations } from '@/locales/translations'
 
 interface TestimonialsProps {
     onCtaClick?: () => void
@@ -7,7 +12,11 @@ interface TestimonialsProps {
 }
 
 export default function Testimonials({ onCtaClick, pageId = 'home' }: TestimonialsProps) {
-    const testimonials = testimonialsByPage[pageId] || testimonialsByPage['home']
+    const { language } = useLanguage()
+    const t = translations[language]
+    const testimonials = language === 'fr'
+        ? (testimonialsByPageFr[pageId] || testimonialsByPage[pageId] || testimonialsByPage['home'])
+        : (testimonialsByPage[pageId] || testimonialsByPage['home'])
 
     return (
         <section id="testimonials" className={styles.testimonials}>
@@ -19,7 +28,7 @@ export default function Testimonials({ onCtaClick, pageId = 'home' }: Testimonia
             </span>
 
             <h2 className={styles.title}>
-                Don't take it from us,<br />hear it from our users
+                {t.testimonials.title}<br />{t.testimonials.subtitle}
             </h2>
 
             <div className={styles.grid}>
@@ -56,19 +65,19 @@ export default function Testimonials({ onCtaClick, pageId = 'home' }: Testimonia
                             <span className={styles.miniAvatar}>👤</span>
                             <span className={styles.miniAvatar}>👤</span>
                         </span>
-                        Trusted by 20,000+ users
+                        {t.testimonialsCta.trustedBadge}
                     </div>
 
                     <h3 className={styles.ctaTitle}>
-                        Ready to clean your images?
+                        {t.testimonialsCta.title}
                     </h3>
 
                     <p className={styles.ctaText}>
-                        From removing watermarks to erasing unwanted objects — unlock professional photo editing. All powered by AI.
+                        {t.testimonialsCta.text}
                     </p>
 
                     <button className={styles.ctaButton} onClick={onCtaClick}>
-                        Start Now for Free
+                        {t.testimonialsCta.button}
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                             <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
                         </svg>

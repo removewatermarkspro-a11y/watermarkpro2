@@ -1,6 +1,8 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
+import { useLanguage } from '@/contexts/LanguageContext'
+import { translations } from '@/locales/translations'
 
 interface ResultDisplayProps {
     originalImage: string
@@ -16,6 +18,8 @@ export default function ResultDisplay({
     onGenerateNew
 }: ResultDisplayProps) {
     const resultRef = useRef<HTMLDivElement>(null)
+    const { language } = useLanguage()
+    const t = translations[language]
 
     useEffect(() => {
         // Auto-scroll to results when component mounts with a small delay
@@ -38,20 +42,20 @@ export default function ResultDisplay({
             <div className="result-header">
                 <div className="success-indicator">
                     <span className="success-dot"></span>
-                    <span className="success-text">Téléchargement réussi !</span>
+                    <span className="success-text">{t.resultDisplay.successMessage}</span>
                 </div>
             </div>
 
             <div className="comparison-grid">
                 <div className="comparison-column">
-                    <span className="column-label">Avant</span>
+                    <span className="column-label">{t.resultDisplay.before}</span>
                     <div className="image-box">
                         <img src={originalImage} alt="Original" />
                     </div>
                 </div>
 
                 <div className="comparison-column">
-                    <span className="column-label">Après</span>
+                    <span className="column-label">{t.resultDisplay.after}</span>
                     <div className="image-box processed">
                         <img src={processedImage} alt="Processed" />
                         <div className="checkmark">
@@ -69,14 +73,14 @@ export default function ResultDisplay({
                         <path d="M10 3L10 13M10 13L6 9M10 13L14 9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                         <path d="M3 17h14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
                     </svg>
-                    Télécharger l'image
+                    {t.resultDisplay.downloadButton}
                 </button>
                 <button className="btn-generate-new" onClick={onGenerateNew}>
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                         <path d="M4 10a6 6 0 1 1 12 0 6 6 0 0 1-12 0z" stroke="currentColor" strokeWidth="1.5" fill="none" />
                         <path d="M16 4l-2 2 2 2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
-                    Generate a new one
+                    {t.resultDisplay.generateNewButton}
                 </button>
             </div>
 

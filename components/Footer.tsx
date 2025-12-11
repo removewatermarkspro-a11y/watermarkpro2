@@ -1,8 +1,15 @@
+'use client'
+
 import Link from 'next/link'
+import Image from 'next/image'
 import styles from './Footer.module.css'
+import { useLanguage } from '@/contexts/LanguageContext'
+import { translations } from '@/locales/translations'
 
 export default function Footer() {
     const currentYear = new Date().getFullYear()
+    const { language } = useLanguage()
+    const t = translations[language]
 
     return (
         <footer className={styles.footer}>
@@ -10,56 +17,55 @@ export default function Footer() {
                 <div className={styles.content}>
                     <div className={styles.section}>
                         <div className={styles.brand}>
-                            <span className={styles.logoIcon}>✨</span>
+                            <Image src="/logo.png" alt="Remove Watermark Pro" width={60} height={60} className={styles.logoIcon} />
                             <span className={styles.logoText}>Remove watermark pro</span>
                         </div>
                         <p className={styles.description}>
-                            Professional AI-powered image editing tools for creators, photographers, and businesses.
+                            {t.footer.description}
                         </p>
                     </div>
 
                     <div className={styles.section}>
-                        <h4 className={styles.title}>Features</h4>
+                        <h4 className={styles.title}>{t.footer.features}</h4>
                         <ul className={styles.links}>
-                            <li><Link href="/watermark-remover">Watermark Remover</Link></li>
-                            <li><Link href="/remove-background">Remove Background</Link></li>
-                            <li><Link href="/replace-background">Replace Background</Link></li>
-                            <li><Link href="/remove-object">Remove Object</Link></li>
+                            <li><Link href="/">{t.footer.watermarkRemover}</Link></li>
+                            <li><Link href="/remove-background">{t.footer.removeBackground}</Link></li>
+                            <li><Link href="/replace-background">{t.footer.replaceBackground}</Link></li>
+                            <li><Link href="/remove-object">{t.footer.removeObject}</Link></li>
                         </ul>
                     </div>
 
                     <div className={styles.section}>
-                        <h4 className={styles.title}>More Tools</h4>
+                        <h4 className={styles.title}>{t.footer.moreTools}</h4>
                         <ul className={styles.links}>
-                            <li><Link href="/remove-text">Remove Text</Link></li>
-                            <li><Link href="/auto-remove-people">Auto Remove People</Link></li>
-                            <li><Link href="/image-upscaler">Image Upscaler</Link></li>
+                            <li><Link href="/remove-text">{t.footer.removeText}</Link></li>
+                            <li><Link href="/auto-remove-people">{t.footer.autoRemovePeople}</Link></li>
+                            <li><Link href="/image-upscaler">{t.footer.imageUpscaler}</Link></li>
                         </ul>
                     </div>
 
                     <div className={styles.section}>
-                        <h4 className={styles.title}>Company</h4>
+                        <h4 className={styles.title}>{t.footer.company}</h4>
                         <ul className={styles.links}>
-                            <li><Link href="/about">About Us</Link></li>
-                            <li><Link href="/pricing">Pricing</Link></li>
-                            <li><Link href="/blog">Blog</Link></li>
-                            <li><Link href="/support">Contact</Link></li>
+                            <li><Link href="/pricing">{t.footer.pricing}</Link></li>
+                            <li><Link href="/blog">{t.footer.blog}</Link></li>
+                            <li><Link href="/support">{t.footer.contact}</Link></li>
                         </ul>
                     </div>
 
                     <div className={styles.section}>
-                        <h4 className={styles.title}>Legal</h4>
+                        <h4 className={styles.title}>{t.footer.legal}</h4>
                         <ul className={styles.links}>
-                            <li><Link href="/privacy">Privacy Policy</Link></li>
-                            <li><Link href="/terms">Terms of Service</Link></li>
-                            <li><Link href="/cookies">Cookie Policy</Link></li>
+                            <li><Link href="/privacy">{t.footer.privacy}</Link></li>
+                            <li><Link href="/terms">{t.footer.terms}</Link></li>
+                            <li><Link href="/cookies">{t.footer.cookies}</Link></li>
                         </ul>
                     </div>
                 </div>
 
                 <div className={styles.bottom}>
                     <p className={styles.copyright}>
-                        © {currentYear} Remove watermark pro. All rights reserved.
+                        {t.footer.copyright.replace('{year}', currentYear.toString())}
                     </p>
                     <div className={styles.social}>
                         <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">

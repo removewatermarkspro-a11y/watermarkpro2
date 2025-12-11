@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import { LanguageProvider } from '@/contexts/LanguageContext'
 
 export const metadata: Metadata = {
     title: 'AI Image Editor - Remove Watermarks, Backgrounds & More',
@@ -19,8 +20,12 @@ export default function RootLayout({
     children: React.ReactNode
 }) {
     return (
-        <html lang="fr">
-            <body>{children}</body>
+        <html lang="en">
+            <body>
+                <LanguageProvider>
+                    {children}
+                </LanguageProvider>
+            </body>
         </html>
     )
 }
