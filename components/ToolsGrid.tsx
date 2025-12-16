@@ -62,7 +62,7 @@ interface ToolsGridProps {
 
 export default function ToolsGrid({ customImages = {} }: ToolsGridProps) {
     const { language } = useLanguage()
-    const t = translations[language]
+    const t = (translations as any)[language] || translations.en
 
     const tools = [
         {

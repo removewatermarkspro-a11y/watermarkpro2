@@ -13,7 +13,7 @@ import styles from './account.module.css'
 export default function Account() {
     const { user } = useAuth()
     const { language } = useLanguage()
-    const t = translations[language]
+    const t = (translations as any)[language] || translations.en
     const [userEmail, setUserEmail] = useState('')
     const [userName, setUserName] = useState('')
     const [billingCycle, setBillingCycle] = useState({ start: '', end: '' })

@@ -1,4 +1,7 @@
-import { FAQItem } from './commonFaqItems'
+export interface FAQItem {
+    question: string
+    answer: string
+}
 
 export const soraRemoverFaqItemsDe: FAQItem[] = [
     {

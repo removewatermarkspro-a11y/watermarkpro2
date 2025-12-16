@@ -11,7 +11,7 @@ interface ProcessingPopupProps {
 
 export default function ProcessingPopup({ isOpen }: ProcessingPopupProps) {
     const { language } = useLanguage()
-    const t = translations[language]
+    const t = (translations as any)[language] || translations.en
     useEffect(() => {
         if (isOpen) {
             document.body.style.overflow = 'hidden'

@@ -39,7 +39,7 @@ const defaultExamples: Example[] = [
 
 export default function ExamplesSection({ examples = defaultExamples }: ExamplesSectionProps = {}) {
     const { language } = useLanguage()
-    const t = translations[language]
+    const t = (translations as any)[language] || translations.en
 
     // Map English titles to translated titles
     const getTranslatedTitle = (title: string) => {

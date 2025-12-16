@@ -13,29 +13,29 @@ import { translations } from '@/locales/translations'
 
 interface TestimonialsProps {
     onCtaClick?: () => void
-    pageId?: 'home' | 'auto-remove-people' | 'image-upscaler' | 'remove-background' | 'remove-object' | 'remove-text' | 'remove-watermark-video' | 'replace-background'
+    pageId?: 'home' | 'auto-remove-people' | 'image-upscaler' | 'remove-background' | 'remove-object' | 'remove-text' | 'remove-watermark-video' | 'replace-background' | 'free-sora-remover'
 }
 
 export default function Testimonials({ onCtaClick, pageId = 'home' }: TestimonialsProps) {
     const { language } = useLanguage()
-    const t = translations[language]
+    const t = (translations as any)[language] || translations.en
 
     // Map pageId to testimonial keys
     const testimonialKey = pageId === 'home' ? 'home' : pageId
 
     const testimonials = language === 'ko'
-        ? (testimonialDataKo[testimonialKey] || testimonialsByPage[pageId] || testimonialsByPage['home'])
+        ? ((testimonialDataKo as any)[testimonialKey] || (testimonialsByPage as any)[pageId] || testimonialsByPage['home'])
         : language === 'no'
-            ? (testimonialDataNo[testimonialKey] || testimonialsByPage[pageId] || testimonialsByPage['home'])
+            ? ((testimonialDataNo as any)[testimonialKey] || (testimonialsByPage as any)[pageId] || testimonialsByPage['home'])
             : language === 'de'
-                ? (testimonialDataDe[testimonialKey] || testimonialsByPage[pageId] || testimonialsByPage['home'])
+                ? ((testimonialDataDe as any)[testimonialKey] || (testimonialsByPage as any)[pageId] || testimonialsByPage['home'])
                 : language === 'fr'
-                    ? (testimonialsByPageFr[pageId] || testimonialsByPage[pageId] || testimonialsByPage['home'])
+                    ? ((testimonialsByPageFr as any)[pageId] || (testimonialsByPage as any)[pageId] || testimonialsByPage['home'])
                     : language === 'es'
-                        ? (testimonialDataEs[testimonialKey] || testimonialsByPage[pageId] || testimonialsByPage['home'])
+                        ? ((testimonialDataEs as any)[testimonialKey] || (testimonialsByPage as any)[pageId] || testimonialsByPage['home'])
                         : language === 'pt'
-                            ? (testimonialsByPagePt[pageId] || testimonialsByPage[pageId] || testimonialsByPage['home'])
-                            : (testimonialsByPage[pageId] || testimonialsByPage['home'])
+                            ? ((testimonialsByPagePt as any)[pageId] || (testimonialsByPage as any)[pageId] || testimonialsByPage['home'])
+                            : ((testimonialsByPage as any)[pageId] || testimonialsByPage['home'])
 
     return (
         <section id="testimonials" className={styles.testimonials}>
@@ -51,7 +51,7 @@ export default function Testimonials({ onCtaClick, pageId = 'home' }: Testimonia
             </h2>
 
             <div className={styles.grid}>
-                {testimonials.map((testimonial, index) => (
+                {testimonials.map((testimonial: any, index: number) => (
                     <div key={index} className={styles.card}>
                         <div className={styles.stars}>
                             {'⭐'.repeat(5)}

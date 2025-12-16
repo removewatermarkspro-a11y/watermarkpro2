@@ -14,7 +14,7 @@ interface EmailVerificationPopupProps {
 
 export default function EmailVerificationPopup({ isOpen, onClose, onBack, email }: EmailVerificationPopupProps) {
     const { language } = useLanguage()
-    const t = translations[language]
+    const t = (translations as any)[language] || translations.en
     useEffect(() => {
         if (isOpen) {
             document.body.style.overflow = 'hidden'

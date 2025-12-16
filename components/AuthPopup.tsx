@@ -18,7 +18,7 @@ export default function AuthPopup({ isOpen, onClose }: AuthPopupProps) {
     const [error, setError] = useState('')
     const { signInWithGoogle, signInWithEmail } = useAuth()
     const { language } = useLanguage()
-    const t = translations[language]
+    const t = (translations as any)[language] || translations.en
 
     if (!isOpen) return null
 

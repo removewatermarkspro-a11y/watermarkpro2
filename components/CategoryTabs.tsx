@@ -9,7 +9,7 @@ import { translations } from '@/locales/translations'
 export default function CategoryTabs() {
     const pathname = usePathname()
     const { language } = useLanguage()
-    const t = translations[language]
+    const t = (translations as any)[language] || translations.en
 
     const categories = [
         { name: t.categoryTabs.watermarkRemover, href: '/' },

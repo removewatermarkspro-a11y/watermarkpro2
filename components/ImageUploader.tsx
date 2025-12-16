@@ -31,7 +31,7 @@ export default function ImageUploader({
     const [showNoCreditsPopup, setShowNoCreditsPopup] = useState(false)
     const { user, credits, refreshCredits } = useAuth()
     const { language } = useLanguage()
-    const t = translations[language]
+    const t = (translations as any)[language] || translations.en
     const fileInputRef = useRef<HTMLInputElement>(null)
 
     // Debug: Log auth state on mount and when it changes

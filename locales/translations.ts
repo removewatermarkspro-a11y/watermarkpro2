@@ -4233,3 +4233,6 @@ const noTranslations = {
 
 // Add Norwegian to translations object
 (translations as any).no = noTranslations;
+
+// Add Spanish to translations object (using English as fallback for now)
+(translations as any).es = translations.en;

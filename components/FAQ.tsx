@@ -17,7 +17,7 @@ interface FAQProps {
 export default function FAQ({ items }: FAQProps) {
     const [openIndex, setOpenIndex] = useState<number | null>(null)
     const { language } = useLanguage()
-    const t = translations[language]
+    const t = (translations as any)[language] || translations.en
 
     const toggleItem = (index: number) => {
         setOpenIndex(openIndex === index ? null : index)

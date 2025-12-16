@@ -18,7 +18,7 @@ import ResultDisplay from '@/components/ResultDisplay'
 import RelatedTools from '@/components/RelatedTools'
 import { commonFaqItems } from '@/utils/faqItems'
 import { commonFaqItemsFr } from '@/utils/commonFaqItemsFr'
-import { commonFaqItemsDe } from '@/utils/commonFaqItemsDe'
+import { videoWatermarkFaqItemsDe } from '@/utils/commonFaqItemsDe'
 import { commonFaqItemsEs } from '@/utils/commonFaqItemsEs'
 import { videoWatermarkFaqItemsPt } from '@/utils/videoWatermarkFaqItemsPt'
 import { videoWatermarkFaqItemsKo } from '@/utils/videoWatermarkFaqItemsKo'
@@ -47,7 +47,7 @@ export default function RemoveWatermarkVideo() {
     const playerRef = useRef<any>(null)
     const videoContainerRef = useRef<HTMLDivElement>(null)
     const { language } = useLanguage()
-    const t = translations[language]
+    const t = (translations as any)[language] || translations.en
 
     const handleImageUpload = (file: File, preview: string) => {
         setUploadedImage(file)
@@ -294,7 +294,7 @@ export default function RemoveWatermarkVideo() {
                     {/* FAQ Section */}
                     <FAQ items={
                         language === 'fr' ? commonFaqItemsFr :
-                            language === 'de' ? commonFaqItemsDe :
+                            language === 'de' ? videoWatermarkFaqItemsDe :
                                 language === 'es' ? commonFaqItemsEs :
                                     language === 'pt' ? videoWatermarkFaqItemsPt :
                                         language === 'ko' ? videoWatermarkFaqItemsKo :

@@ -9,7 +9,7 @@ export default function Pricing() {
     const [isYearly, setIsYearly] = useState(true)
     const [selectedCredits, setSelectedCredits] = useState(1200)
     const { language } = useLanguage()
-    const t = translations[language]
+    const t = (translations as any)[language] || translations.en
 
     const creditOptions = [
         { credits: 1200, monthlyCredits: 100, label: isYearly ? '1200' : '100', yearlyPrice: 44.90, monthlyPrice: 6.90 },

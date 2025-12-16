@@ -19,7 +19,7 @@ export default function ResultDisplay({
 }: ResultDisplayProps) {
     const resultRef = useRef<HTMLDivElement>(null)
     const { language } = useLanguage()
-    const t = translations[language]
+    const t = (translations as any)[language] || translations.en
 
     useEffect(() => {
         // Auto-scroll to results when component mounts with a small delay

@@ -9,7 +9,7 @@ import { translations } from '@/locales/translations'
 export default function Footer() {
     const currentYear = new Date().getFullYear()
     const { language } = useLanguage()
-    const t = translations[language]
+    const t = (translations as any)[language] || translations.en
 
     return (
         <footer className={styles.footer}>

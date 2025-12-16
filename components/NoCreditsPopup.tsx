@@ -14,7 +14,7 @@ interface NoCreditsPopupProps {
 export default function NoCreditsPopup({ isOpen, onClose }: NoCreditsPopupProps) {
     const [timeLeft, setTimeLeft] = useState({ minutes: 0, seconds: 0 })
     const { language } = useLanguage()
-    const t = translations[language]
+    const t = (translations as any)[language] || translations.en
 
     useEffect(() => {
         if (isOpen) {

@@ -34,7 +34,7 @@ export default function WatermarkRemover() {
     const [isAuthenticated, setIsAuthenticated] = useState(false)
     const uploadRef = useRef<HTMLDivElement>(null)
     const { language } = useLanguage()
-    const t = translations[language]
+    const t = (translations as any)[language] || translations.en
 
     useEffect(() => {
         const authenticated = localStorage.getItem('userAuthenticated') === 'true'

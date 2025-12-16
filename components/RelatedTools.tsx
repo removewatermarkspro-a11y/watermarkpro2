@@ -11,7 +11,7 @@ interface Tool {
 
 export default function RelatedTools() {
     const { language } = useLanguage()
-    const t = translations[language]
+    const t = (translations as any)[language] || translations.en
 
     const tools: Tool[] = [
         {
