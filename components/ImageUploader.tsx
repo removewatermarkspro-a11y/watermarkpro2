@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useEffect, useRef } from 'react'
 import styles from './ImageUploader.module.css'
 import ProcessingPopup from './ProcessingPopup'
 import NoCreditsPopup from './NoCreditsPopup'
@@ -21,8 +21,8 @@ interface ImageUploaderProps {
 export default function ImageUploader({
     onImageUpload,
     acceptedFormats = 'image/jpeg,image/png,image/webp,image/jpg',
-    uploadText = 'Drag your image here',
-    formatText = 'JPG, PNG, WEBP up to 10MB',
+    uploadText,
+    formatText,
     isAuthenticated = true,
     onAuthRequired
 }: ImageUploaderProps) {
@@ -32,6 +32,39 @@ export default function ImageUploader({
     const { user, credits, refreshCredits } = useAuth()
     const { language } = useLanguage()
     const t = translations[language]
+    const fileInputRef = useRef<HTMLInputElement>(null)
+
+    // Debug: Log auth state on mount and when it changes
+    useEffect(() => {
+        console.log('[ImageUploader] Auth state changed - user:', user, 'credits:', credits, 'onAuthRequired:', !!onAuthRequired)
+    }, [user, credits, onAuthRequired])
+
+    const handleClick = useCallback((e: React.MouseEvent) => {
+        console.log('[ImageUploader] handleClick - user:', user, 'onAuthRequired:', !!onAuthRequired)
+
+        if (!user && onAuthRequired) {
+            console.log('[ImageUploader] User not authenticated, triggering auth popup')
+            e.preventDefault()
+            e.stopPropagation()
+            onAuthRequired()
+            return false
+        }
+
+        // User is authenticated, allow file input to be triggered
+        console.log('[ImageUploader] User authenticated, opening file dialog')
+    }, [user, onAuthRequired])
+
+    const handleFileInputClick = useCallback((e: React.MouseEvent<HTMLInputElement>) => {
+        console.log('[ImageUploader] handleFileInputClick - user:', user)
+
+        if (!user && onAuthRequired) {
+            console.log('[ImageUploader] Preventing file input, user not authenticated')
+            e.preventDefault()
+            e.stopPropagation()
+            onAuthRequired()
+            return false
+        }
+    }, [user, onAuthRequired])
 
     const handleDragOver = useCallback((e: React.DragEvent) => {
         e.preventDefault()
@@ -47,7 +80,10 @@ export default function ImageUploader({
         e.preventDefault()
         setIsDragging(false)
 
+        console.log('[ImageUploader] handleDrop - user:', user, 'onAuthRequired:', !!onAuthRequired)
+
         if (!user && onAuthRequired) {
+            console.log('[ImageUploader] User not authenticated, triggering auth popup')
             onAuthRequired()
             return
         }
@@ -59,7 +95,10 @@ export default function ImageUploader({
     }, [user, onAuthRequired])
 
     const handleFileInput = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+        console.log('[ImageUploader] handleFileInput - user:', user, 'onAuthRequired:', !!onAuthRequired)
+
         if (!user && onAuthRequired) {
+            console.log('[ImageUploader] User not authenticated, triggering auth popup')
             onAuthRequired()
             e.target.value = '' // Reset file input
             return
@@ -123,6 +162,7 @@ export default function ImageUploader({
                     onDragOver={handleDragOver}
                     onDragLeave={handleDragLeave}
                     onDrop={handleDrop}
+                    onClick={handleClick}
                 >
                     <div className={styles.uploadIcon}>
                         <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
@@ -130,13 +170,15 @@ export default function ImageUploader({
                             <path d="M4 17V19C4 20.1046 4.89543 21 6 21H18C19.1046 21 20 19V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
                         </svg>
                     </div>
-                    <h3 className={styles.title}>{t.imageUploader.dragImageHere}</h3>
+                    <h3 className={styles.title}>{uploadText || t.imageUploader.uploadText}</h3>
                     <p className={styles.subtitle}>{t.imageUploader.clickToBrowse}</p>
-                    <p className={styles.formats}>{formatText}</p>
+                    <p className={styles.formats}>{formatText || t.imageUploader.formatText}</p>
                     <input
+                        ref={fileInputRef}
                         type="file"
                         accept={acceptedFormats}
                         onChange={handleFileInput}
+                        onClick={handleFileInputClick}
                         className={styles.fileInput}
                     />
                 </div>

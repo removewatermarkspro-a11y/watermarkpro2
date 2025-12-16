@@ -90,7 +90,7 @@ export default function Pricing() {
                 {/* Pro Plan */}
                 <div className={`${styles.plan} ${styles.proPlan}`}>
                     <div className={styles.popularBadge}>{t.pricing.pro.badge}</div>
-                    <div className={styles.discountBadge}>{t.pricing.pro.discount.split('\n')[0]}<br />{t.pricing.pro.discount.split('\n')[1]}</div>
+                    <div className={styles.discountBadge}>25%<br />OFF</div>
                     <div className={styles.planHeader}>
                         <h3 className={styles.planTitle}>{t.pricing.pro.title}</h3>
 

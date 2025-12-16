@@ -11,11 +11,24 @@ import { translations } from '@/locales/translations'
 export default function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
     const [showAuthPopup, setShowAuthPopup] = useState(false)
+    const [mounted, setMounted] = useState(false)
     const { language, setLanguage } = useLanguage()
-    const t = translations[language]
+    const t = (translations as any)[language]
     const { user, credits, signOut } = useAuth()
     const [showUserMenu, setShowUserMenu] = useState(false)
     const userMenuRef = useRef<HTMLDivElement>(null)
+
+    const getUserInitial = () => {
+        if (user?.email) {
+            return user.email.charAt(0).toUpperCase()
+        }
+        return 'U'
+    }
+
+    // Prevent hydration mismatch by waiting for client-side mount
+    useEffect(() => {
+        setMounted(true)
+    }, [])
 
     useEffect(() => {
         // Close user menu when clicking outside
@@ -61,13 +74,6 @@ export default function Header() {
         return 'User'
     }
 
-    const getUserInitial = () => {
-        if (user?.email) {
-            return user.email.charAt(0).toUpperCase()
-        }
-        return 'U'
-    }
-
     return (
         <>
             <header className={styles.header}>
@@ -111,29 +117,49 @@ export default function Header() {
                             <div className={styles.dropdown}>
                                 <button className={styles.languageButton}>
                                     <img
-                                        src={language === 'en' ? "https://flagcdn.com/us.svg" : "https://flagcdn.com/fr.svg"}
-                                        alt={language === 'en' ? "US Flag" : "French Flag"}
+                                        src={language === 'en' ? "https://flagcdn.com/us.svg" : language === 'fr' ? "https://flagcdn.com/fr.svg" : language === 'de' ? "https://flagcdn.com/de.svg" : language === 'es' ? "https://flagcdn.com/es.svg" : language === 'pt' ? "https://flagcdn.com/pt.svg" : language === 'ko' ? "https://flagcdn.com/kr.svg" : "https://flagcdn.com/no.svg"}
+                                        alt={language === 'en' ? "US Flag" : language === 'fr' ? "French Flag" : language === 'de' ? "German Flag" : language === 'es' ? "Spanish Flag" : language === 'pt' ? "Portuguese Flag" : language === 'ko' ? "Korean Flag" : "Norwegian Flag"}
                                         width={20}
                                         height={15}
                                         style={{ display: 'block' }}
                                     />
-                                    {language === 'en' ? 'English' : 'Français'}
+                                    {language === 'en' ? 'English' : language === 'fr' ? 'Français' : language === 'de' ? 'Deutsch' : language === 'es' ? 'Español' : language === 'pt' ? 'Português' : language === 'ko' ? '한국어' : 'Norsk'}
                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                                         <path d="M4 6L8 10L12 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
                                     </svg>
                                 </button>
                                 <div className={styles.dropdownContent}>
-                                    <button className={styles.languageItem} onClick={() => setLanguage('en')}>
+                                    <button onClick={() => setLanguage('en')} className={styles.languageItem}>
                                         <img src="https://flagcdn.com/us.svg" alt="US Flag" width={20} height={15} />
                                         English
                                     </button>
-                                    <button className={styles.languageItem} onClick={() => setLanguage('fr')}>
+                                    <button onClick={() => setLanguage('fr')} className={styles.languageItem}>
                                         <img src="https://flagcdn.com/fr.svg" alt="French Flag" width={20} height={15} />
                                         Français
                                     </button>
+                                    <button onClick={() => setLanguage('de')} className={styles.languageItem}>
+                                        <img src="https://flagcdn.com/de.svg" alt="German Flag" width={20} height={15} />
+                                        Deutsch
+                                    </button>
+                                    <button onClick={() => setLanguage('es')} className={styles.languageItem}>
+                                        <img src="https://flagcdn.com/es.svg" alt="Spanish Flag" width={20} height={15} />
+                                        Español
+                                    </button>
+                                    <button onClick={() => setLanguage('pt')} className={styles.languageItem}>
+                                        <img src="https://flagcdn.com/pt.svg" alt="Portuguese Flag" width={20} height={15} />
+                                        Português
+                                    </button>
+                                    <button onClick={() => setLanguage('ko')} className={styles.languageItem}>
+                                        <img src="https://flagcdn.com/kr.svg" alt="Korean Flag" width={20} height={15} />
+                                        한국어
+                                    </button>
+                                    <button onClick={() => setLanguage('no')} className={styles.languageItem}>
+                                        <img src="https://flagcdn.com/no.svg" alt="Norwegian Flag" width={20} height={15} />
+                                        Norsk
+                                    </button>
                                 </div>
                             </div>
-                            {user ? (
+                            {mounted && user ? (
                                 <>
                                     <div className={styles.userMenuWrapper} ref={userMenuRef}>
                                         <button className={styles.userBtn} onClick={() => setShowUserMenu(!showUserMenu)}>
@@ -174,11 +200,10 @@ export default function Header() {
                                     </div>
                                     <Link href="/pricing" className="btn btn-primary" style={{ boxShadow: 'var(--shadow-glow)' }}>{t.header.unlockPro}</Link>
                                 </>
+                            ) : mounted ? (
+                                <button onClick={() => setShowAuthPopup(true)} className="btn btn-primary">{t.header.signIn}</button>
                             ) : (
-                                <>
-                                    <button onClick={() => setShowAuthPopup(true)} className={styles.loginBtn}>{t.header.signIn}</button>
-                                    <button onClick={() => setShowAuthPopup(true)} className="btn btn-primary">{t.header.signIn}</button>
-                                </>
+                                <div style={{ width: '100px', height: '40px' }}></div>
                             )}
                         </div>
 
@@ -199,6 +224,14 @@ export default function Header() {
 
                     {mobileMenuOpen && (
                         <div className={styles.mobileMenu}>
+                            {user && (
+                                <div className={styles.mobileCreditsDisplay}>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                        <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#a855f7" stroke="#a855f7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    </svg>
+                                    <span>{credits} {t.header.credits}</span>
+                                </div>
+                            )}
                             <div className={styles.mobileMenuSection}>
                                 <p className={styles.mobileMenuTitle}>Features</p>
                                 {features.map((feature) => (
@@ -219,21 +252,20 @@ export default function Header() {
                                 {t.header.blog}
                             </Link>
                             <div className={styles.mobileMenuActions}>
-                                {user ? (
+                                {mounted && user ? (
                                     <>
-                                        <button className="btn btn-secondary">{getUserInitial()}</button>
-                                        <button className="btn btn-primary">{t.header.unlockPro}</button>
+                                        <Link href="/account" className="btn btn-secondary" onClick={() => setMobileMenuOpen(false)}>
+                                            {getUserInitial()}
+                                        </Link>
+                                        <Link href="/pricing" className="btn btn-primary" onClick={() => setMobileMenuOpen(false)}>
+                                            {t.header.unlockPro}
+                                        </Link>
                                     </>
-                                ) : (
-                                    <>
-                                        <button onClick={() => { setShowAuthPopup(true); setMobileMenuOpen(false); }} className="btn btn-secondary">
-                                            {t.header.signIn}
-                                        </button>
-                                        <button onClick={() => { setShowAuthPopup(true); setMobileMenuOpen(false); }} className="btn btn-primary">
-                                            {t.header.signIn}
-                                        </button>
-                                    </>
-                                )}
+                                ) : mounted ? (
+                                    <button onClick={() => { setShowAuthPopup(true); setMobileMenuOpen(false); }} className="btn btn-primary">
+                                        {t.header.signIn}
+                                    </button>
+                                ) : null}
                             </div>
                         </div>
                     )}

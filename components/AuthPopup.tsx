@@ -70,19 +70,19 @@ export default function AuthPopup({ isOpen, onClose }: AuthPopupProps) {
                                     <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="#a855f7" strokeWidth="2" fill="none" />
                                     <path d="m22 6-10 7L2 6" stroke="#a855f7" strokeWidth="2" strokeLinecap="round" />
                                 </svg>
-                                <h2 className={styles.title}>Check your email</h2>
+                                <h2 className={styles.title}>{t.authPopup.checkEmailTitle}</h2>
                                 <p className={styles.subtitle} style={{ marginTop: '16px' }}>
-                                    We've sent a magic link to <strong>{email}</strong>
+                                    {t.authPopup.magicLinkSent} <strong>{email}</strong>
                                 </p>
                                 <p style={{ color: '#888', marginTop: '12px', fontSize: '14px' }}>
-                                    Click the link in the email to sign in to your account.
+                                    {t.authPopup.clickLinkToSignIn}
                                 </p>
                                 <button
                                     className={styles.emailButton}
                                     onClick={handleClose}
                                     style={{ marginTop: '24px' }}
                                 >
-                                    Got it
+                                    {t.authPopup.gotIt}
                                 </button>
                             </div>
                         </div>
@@ -156,7 +156,7 @@ export default function AuthPopup({ isOpen, onClose }: AuthPopupProps) {
                                 onClick={handleEmailSubmit}
                                 disabled={isLoading || !email}
                             >
-                                {isLoading ? 'Sending...' : t.authPopup.emailButton}
+                                {isLoading ? t.authPopup.sending : t.authPopup.emailButton}
                             </button>
                         </div>
 

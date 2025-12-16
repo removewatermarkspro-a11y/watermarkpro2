@@ -20,6 +20,7 @@ export default function CategoryTabs() {
         { name: t.categoryTabs.removeBackground, href: '/remove-background' },
         { name: t.categoryTabs.autoRemovePeople, href: '/auto-remove-people' },
         { name: t.categoryTabs.imageUpscaler, href: '/image-upscaler' },
+        { name: t.categoryTabs.soraRemover, href: '/free-sora-remover' },
     ]
 
     return (

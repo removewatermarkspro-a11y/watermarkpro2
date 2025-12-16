@@ -14,6 +14,11 @@ import FAQ from '@/components/FAQ'
 import ToolsGrid from '@/components/ToolsGrid'
 import { commonFaqItems } from '@/utils/faqItems'
 import { commonFaqItemsFr } from '@/utils/commonFaqItemsFr'
+import { watermarkRemovalFaqItemsDe } from '@/utils/commonFaqItemsDe'
+import { commonFaqItemsEs } from '@/utils/commonFaqItemsEs'
+import { commonFaqItemsPt } from '@/utils/commonFaqItemsPt'
+import { commonFaqItemsKo } from '@/utils/commonFaqItemsKo'
+import { watermarkRemovalFaqItemsNo } from '@/utils/commonFaqItemsNo'
 import AuthPopup from '@/components/AuthPopup'
 import ResultDisplay from '@/components/ResultDisplay'
 import RelatedTools from '@/components/RelatedTools'
@@ -215,7 +220,7 @@ export default function WatermarkRemover() {
                                 uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' })
                             }
                         }} />
-                    <FAQ items={language === 'fr' ? commonFaqItemsFr : commonFaqItems} />
+                    <FAQ items={language === 'fr' ? commonFaqItemsFr : language === 'de' ? watermarkRemovalFaqItemsDe : language === 'es' ? commonFaqItemsEs : language === 'pt' ? commonFaqItemsPt : language === 'ko' ? commonFaqItemsKo : language === 'no' ? watermarkRemovalFaqItemsNo : commonFaqItems} />
                     <ToolsGrid
                         customImages={{
                             'tool1': '/images/tools/watermark-remover.png',

@@ -440,6 +440,28 @@
     border-top: 1px solid var(--color-border);
 }
 
+.mobileCreditsDisplay {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    background: rgba(168, 85, 247, 0.1);
+    border-radius: var(--radius-lg);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #a855f7;
+    margin-bottom: 1rem;
+}
+
+.mobileCreditsDisplay svg {
+    flex-shrink: 0;
+}
+
+.mobileCreditsDisplay span {
+    color: white;
+}
+
+
 @media (max-width: 1024px) {
     .desktopMenu {
         display: none;
@@ -455,5 +477,22 @@
 
     .mobileMenu {
         display: block;
+    }
+
+    .logo {
+        padding-left: 0;
+    }
+
+    .logoIcon {
+        width: 50px;
+        height: 50px;
+        position: relative;
+        left: 0;
+        transform: none;
+        margin-right: 0.5rem;
+    }
+
+    .logoText {
+        font-size: 1rem;
     }
 }

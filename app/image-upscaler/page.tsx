@@ -17,6 +17,14 @@ import PromoPopup from '@/components/PromoPopup'
 import ResultDisplay from '@/components/ResultDisplay'
 import RelatedTools from '@/components/RelatedTools'
 import { imageUpscalerFaqItems } from '@/utils/faqItems'
+import { imageUpscalerFaqItemsFr } from '@/utils/commonFaqItemsFr'
+import { imageUpscalerFaqItemsDe } from '@/utils/commonFaqItemsDe'
+import { imageUpscalerFaqItemsEs } from '@/utils/imageUpscalerFaqItemsEs'
+import { imageUpscalerFaqItemsPt } from '@/utils/imageUpscalerFaqItemsPt'
+import { imageUpscalerFaqItemsKo } from '@/utils/imageUpscalerFaqItemsKo'
+import { imageUpscalerFaqItemsNo } from '@/utils/imageUpscalerFaqItemsNo'
+import { useLanguage } from '@/contexts/LanguageContext'
+import { translations } from '@/locales/translations'
 import styles from '../watermark-remover/watermark.module.css'
 
 export default function ImageUpscaler() {
@@ -28,6 +36,8 @@ export default function ImageUpscaler() {
     const [showPromoPopup, setShowPromoPopup] = useState(false)
     const [isAuthenticated, setIsAuthenticated] = useState(false)
     const uploadRef = useRef<HTMLDivElement>(null)
+    const { language } = useLanguage()
+    const t = translations[language]
 
     useEffect(() => {
         const authenticated = localStorage.getItem('userAuthenticated') === 'true'
@@ -103,8 +113,8 @@ export default function ImageUpscaler() {
                 <div className="container">
                     <section className={styles.hero}>
                         <SocialProof pageId="image-upscaler" />
-                        <h1 className={styles.title}><span className={styles.violetText}>Free</span> upscale images to 4K with AI precision</h1>
-                        <p className={styles.description}>Upscale images with AI to 4x resolution. Enhance photo quality, increase resolution, and add realistic details automatically.</p>
+                        <h1 className={styles.title}><span className={styles.violetText}>{t.imageUpscalerPage.hero.titleHighlight}</span> {t.imageUpscalerPage.hero.title}</h1>
+                        <p className={styles.description}>{t.imageUpscalerPage.hero.description}</p>
                         <CategoryTabs />
                         <div ref={uploadRef} className={styles.uploadSection}>
                             <ImageUploader
@@ -133,7 +143,7 @@ export default function ImageUpscaler() {
 
                     <section className={styles.features}>
                         <div style={{ textAlign: 'center' }}>
-                            <span className={styles.badge}>POWERFUL FEATURES</span>
+                            <span className={styles.badge}>{t.imageUpscalerPage.features.badge}</span>
                         </div>
                         <div className={styles.featureGrid}>
                             <div className={styles.featureItem}>
@@ -145,9 +155,9 @@ export default function ImageUpscaler() {
                                     />
                                 </div>
                                 <div className={styles.featureContent}>
-                                    <h3>AI Image Upscaler Online – Fast 4K Enhancement Tool</h3>
-                                    <p className={styles.sectionText}>Our advanced AI delivers a powerful free image upscaler designed for high-precision enhancement on all types of photos. By analyzing every pixel, the system can upscale images to 4K, restore fine details, improve textures, sharpen edges, and even fix low-resolution or blurry shots while preserving natural quality. Whether you want to enhance your images or prepare ultra-HD visuals for social content, you always get crisp, smooth, and stunning results every time.</p>
-                                    <button className="btn btn-primary" onClick={handleGetStarted}>Get Started<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button>
+                                    <h3>{t.imageUpscalerPage.features.feature1.title}</h3>
+                                    <p className={styles.sectionText}>{t.imageUpscalerPage.features.feature1.description}</p>
+                                    <button className="btn btn-primary" onClick={handleGetStarted}>{t.imageUpscalerPage.features.feature1.button}<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button>
                                 </div>
                             </div>
                             <div className={styles.featureItem}>
@@ -159,9 +169,9 @@ export default function ImageUpscaler() {
                                     />
                                 </div>
                                 <div className={styles.featureContent}>
-                                    <h3>Fast AI Upscaler for Ultra-HD 4K Quality</h3>
-                                    <p className={styles.sectionText}>Enjoy ultra-fast performance with our optimized engine created for efficient AI image upscaling. In just seconds, you can upscale photos to 4K, refine clarity, boost definition, or convert low-res images into professional-grade visuals across all major formats. Ideal for creators, designers, photographers, or anyone searching how to upscale images instantly, the automated workflow keeps everything simple while delivering top-tier quality.</p>
-                                    <button className="btn btn-primary" onClick={handleGetStarted}>Get Started<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button>
+                                    <h3>{t.imageUpscalerPage.features.feature2.title}</h3>
+                                    <p className={styles.sectionText}>{t.imageUpscalerPage.features.feature2.description}</p>
+                                    <button className="btn btn-primary" onClick={handleGetStarted}>{t.imageUpscalerPage.features.feature2.button}<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button>
                                 </div>
                             </div>
                             <div className={styles.featureItem}>
@@ -173,9 +183,9 @@ export default function ImageUpscaler() {
                                     />
                                 </div>
                                 <div className={styles.featureContent}>
-                                    <h3>Upscale Photos to 4K – Complete AI Enhancement Solution</h3>
-                                    <p className={styles.sectionText}>Compatible with JPG, PNG, JPEG and more, this AI upscaler acts as both a universal enhancement tool and a precise solution to upscale images with professional accuracy. Whether your files come from social media, old archives, product photography, or personal collections, you can easily enlarge any image and achieve clean, polished, high-resolution 4K results.</p>
-                                    <button className="btn btn-primary" onClick={handleGetStarted}>Get Started<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button>
+                                    <h3>{t.imageUpscalerPage.features.feature3.title}</h3>
+                                    <p className={styles.sectionText}>{t.imageUpscalerPage.features.feature3.description}</p>
+                                    <button className="btn btn-primary" onClick={handleGetStarted}>{t.imageUpscalerPage.features.feature3.button}<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button>
                                 </div>
                             </div>
                         </div>
@@ -183,21 +193,21 @@ export default function ImageUpscaler() {
 
                     <section className={styles.howItWorks}>
                         <div style={{ textAlign: 'center' }}>
-                            <span className={styles.badge}>HOW IT WORKS</span>
-                            <h2 className={styles.sectionTitle}>Upscale Images in 3 Simple Steps</h2>
+                            <span className={styles.badge}>{t.imageUpscalerPage.howItWorks.badge}</span>
+                            <h2 className={styles.sectionTitle}>{t.imageUpscalerPage.howItWorks.title}</h2>
                         </div>
                         <div className={styles.steps}>
                             <div className={styles.step}>
-                                <div className={styles.stepNumber}>1</div>                                <h3 className={styles.stepTitle}>Upload your image</h3>
-                                <p className={styles.stepText}>Start by uploading your low-resolution photo directly from your device or dragging it into the interface. Our platform supports all common formats, making it easy to upscale images up to 4× their original size. Whether you need to restore old photos, enlarge product shots, or improve visual clarity, the system prepares your file instantly for AI upscaling.</p>
+                                <div className={styles.stepNumber}>1</div>                                <h3 className={styles.stepTitle}>{t.imageUpscalerPage.howItWorks.step1.title}</h3>
+                                <p className={styles.stepText}>{t.imageUpscalerPage.howItWorks.step1.description}</p>
                             </div>
                             <div className={styles.step}>
-                                <div className={styles.stepNumber}>2</div>                                <h3 className={styles.stepTitle}>AI upscales and enhances automatically</h3>
-                                <p className={styles.stepText}>Once your image is uploaded, our powerful AI image upscaler analyzes every pixel and intelligently increases resolution up to stunning 4K quality. This advanced tool restores lost details, sharpens edges, enhances textures, and boosts clarity while maintaining a natural, realistic appearance. The process is fully automated, allowing you to upscale images quickly without losing quality or introducing artifacts.</p>
+                                <div className={styles.stepNumber}>2</div>                                <h3 className={styles.stepTitle}>{t.imageUpscalerPage.howItWorks.step2.title}</h3>
+                                <p className={styles.stepText}>{t.imageUpscalerPage.howItWorks.step2.description}</p>
                             </div>
                             <div className={styles.step}>
-                                <div className={styles.stepNumber}>3</div>                                <h3 className={styles.stepTitle}>Download your enhanced result instantly</h3>
-                                <p className={styles.stepText}>In just a few seconds, your new ultra-HD image is ready. Simply download the final result in beautiful 4K quality and use it wherever you need—printing, large displays, professional portfolios, e-commerce, or digital archives. With our fast and reliable AI upscaler, creating crystal-clear, high-quality images has never been easier.</p>
+                                <div className={styles.stepNumber}>3</div>                                <h3 className={styles.stepTitle}>{t.imageUpscalerPage.howItWorks.step3.title}</h3>
+                                <p className={styles.stepText}>{t.imageUpscalerPage.howItWorks.step3.description}</p>
                             </div>
                         </div>
                     </section>
@@ -210,8 +220,15 @@ export default function ImageUpscaler() {
                                 uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' })
                             }
                         }} />
-                    <FAQ items={imageUpscalerFaqItems} />
-
+                    <FAQ items={
+                        language === 'fr' ? imageUpscalerFaqItemsFr :
+                            language === 'de' ? imageUpscalerFaqItemsDe :
+                                language === 'es' ? imageUpscalerFaqItemsEs :
+                                    language === 'pt' ? imageUpscalerFaqItemsPt :
+                                        language === 'ko' ? imageUpscalerFaqItemsKo :
+                                            language === 'no' ? imageUpscalerFaqItemsNo :
+                                                imageUpscalerFaqItems
+                    } />
                     <ToolsGrid customImages={{ 'tool1': '/images/tools/tool-card-upscaler-page.png', 'tool2': '/images/tools/video-watermark-7.png', 'tool3': '/images/tools/remove-text-lime.jpg', 'tool4': '/images/tools/tool-card-remove-object-upscaler-page.png', 'tool5': '/images/tools/tool-card-replace-bg-upscaler-page.png', 'tool6': '/images/tools/tool-card-remove-bg-upscaler-page.png', 'tool7': '/images/tools/people-remover-colosseum.jpg', 'tool8': '/images/tools/upscaler-fox.jpg' }} />
                 </div>
             </main>

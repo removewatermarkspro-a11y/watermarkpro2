@@ -2,7 +2,7 @@
 
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react'
 
-type Language = 'en' | 'fr'
+export type Language = 'en' | 'fr' | 'de' | 'es' | 'pt' | 'ko' | 'no'
 
 interface LanguageContextType {
     language: Language
@@ -17,7 +17,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     useEffect(() => {
         // Load language preference from localStorage
         const savedLanguage = localStorage.getItem('language') as Language
-        if (savedLanguage && (savedLanguage === 'en' || savedLanguage === 'fr')) {
+        if (savedLanguage && ['en', 'fr', 'de', 'es', 'pt', 'ko', 'no'].includes(savedLanguage)) {
             setLanguageState(savedLanguage)
         }
     }, [])

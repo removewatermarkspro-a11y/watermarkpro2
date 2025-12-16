@@ -5,9 +5,15 @@ import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import CancelSubscriptionPopup from '@/components/CancelSubscriptionPopup'
+import { useAuth } from '@/contexts/AuthContext'
+import { useLanguage } from '@/contexts/LanguageContext'
+import { translations } from '@/locales/translations'
 import styles from './account.module.css'
 
 export default function Account() {
+    const { user } = useAuth()
+    const { language } = useLanguage()
+    const t = translations[language]
     const [userEmail, setUserEmail] = useState('')
     const [userName, setUserName] = useState('')
     const [billingCycle, setBillingCycle] = useState({ start: '', end: '' })
@@ -16,15 +22,17 @@ export default function Account() {
     const [planPrice, setPlanPrice] = useState('$0.00')
 
     useEffect(() => {
-        // Load user data from localStorage
-        const email = localStorage.getItem('userEmail') || 'user@example.com'
+        if (!user) return
+
+        // Get user data from Supabase Auth
+        const email = user.email || 'user@example.com'
         const name = email.split('@')[0]
         const formattedName = name.charAt(0).toUpperCase() + name.slice(1)
 
         setUserEmail(email)
         setUserName(formattedName)
 
-        // Check plan type
+        // Check plan type (still using localStorage for now, can be migrated to Supabase later)
         const userPlan = localStorage.getItem('userPlan') || 'free'
         setPlanType(userPlan as 'free' | 'pro')
 
@@ -34,18 +42,9 @@ export default function Account() {
             setPlanPrice('$0.00')
         }
 
-        // Calculate billing cycle based on registration date
-        const registrationDate = localStorage.getItem('userRegistrationDate')
-        let startDate: Date
-
-        if (registrationDate) {
-            startDate = new Date(registrationDate)
-        } else {
-            // If no registration date, use current date and save it
-            startDate = new Date()
-            localStorage.setItem('userRegistrationDate', startDate.toISOString())
-        }
-
+        // Calculate billing cycle based on user creation date from Supabase
+        const createdAt = user.created_at ? new Date(user.created_at) : new Date()
+        const startDate = createdAt
         const endDate = new Date(startDate)
         endDate.setMonth(endDate.getMonth() + 1)
 
@@ -70,7 +69,7 @@ export default function Account() {
             start: formatDate(startDate),
             end: formatDate(endDate)
         })
-    }, [])
+    }, [user])
 
     const handleCancelSubscription = () => {
         // Cancel the subscription
@@ -106,36 +105,36 @@ export default function Account() {
                             <h1 className={styles.planTitle}>{planType === 'pro' ? 'Pro' : 'Free'}</h1>
                             <div className={styles.billingInfo}>
                                 <div className={styles.billingItem}>
-                                    <span className={styles.billingLabel}>Pricing</span>
+                                    <span className={styles.billingLabel}>{t.accountPage.pricing}</span>
                                     <span className={styles.billingValue}>{planPrice}/month</span>
                                 </div>
                                 <div className={styles.billingItem}>
-                                    <span className={styles.billingLabel}>Current billing cycle</span>
+                                    <span className={styles.billingLabel}>{t.accountPage.billingCycle}</span>
                                     <span className={styles.billingValue}>{billingCycle.start} - {billingCycle.end}</span>
                                 </div>
                             </div>
                             <div className={styles.actionButtons}>
                                 <Link href="/pricing" className={styles.changePlanBtn}>
-                                    Change Plan
+                                    {t.accountPage.changePlan}
                                 </Link>
                                 <button className={styles.cancelSubBtn} onClick={() => setShowCancelPopup(true)}>
-                                    Cancel Subscription
+                                    {t.accountPage.cancelSubscription}
                                 </button>
                             </div>
                             <div className={styles.warningMessage}>
-                                Your {planType === 'pro' ? 'Pro' : 'free'} Remove watermark pro subscription ends on {billingCycle.end} - upgrade now to continue enjoying our services!
+                                {(planType === 'pro' ? t.accountPage.warningPro : t.accountPage.warningFree).replace('{{date}}', billingCycle.end)}
                             </div>
                         </div>
 
                         {/* User Profile Section */}
                         <div className={styles.profileSection}>
-                            <h2 className={styles.sectionTitle}>My Account</h2>
+                            <h2 className={styles.sectionTitle}>{t.accountPage.myAccount}</h2>
                             <div className={styles.profileContent}>
                                 <div className={styles.avatarContainer}>
                                     <div className={styles.avatar}>{getInitial()}</div>
                                 </div>
                                 <div className={styles.formGroup}>
-                                    <label className={styles.formLabel}>Name</label>
+                                    <label className={styles.formLabel}>{t.accountPage.name}</label>
                                     <input
                                         type="text"
                                         className={styles.formInput}
@@ -144,7 +143,7 @@ export default function Account() {
                                     />
                                 </div>
                                 <div className={styles.formGroup}>
-                                    <label className={styles.formLabel}>Email</label>
+                                    <label className={styles.formLabel}>{t.accountPage.email}</label>
                                     <input
                                         type="email"
                                         className={styles.formInput}

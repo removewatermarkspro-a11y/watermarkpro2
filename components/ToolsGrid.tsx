@@ -120,6 +120,13 @@ export default function ToolsGrid({ customImages = {} }: ToolsGridProps) {
             icon: '📈',
             href: '/image-upscaler',
             image: customImages['tool8']
+        },
+        {
+            title: t.toolsGrid.tool9Title,
+            description: t.toolsGrid.tool9Description,
+            icon: '🎥',
+            href: '/free-sora-remover',
+            image: customImages['tool9']
         }
     ]
 

@@ -3,6 +3,11 @@
 import styles from './Testimonials.module.css'
 import { testimonialsByPage } from '@/utils/testimonialData'
 import { testimonialsByPageFr } from '@/utils/testimonialDataFr'
+import { testimonialDataDe } from '@/utils/testimonialDataDe'
+import { testimonialDataEs } from '@/utils/testimonialDataEs'
+import { testimonialsByPage as testimonialsByPagePt } from '@/utils/testimonialDataPt'
+import { testimonialDataKo } from '@/utils/testimonialDataKo'
+import { testimonialDataNo } from '@/utils/testimonialDataNo'
 import { useLanguage } from '@/contexts/LanguageContext'
 import { translations } from '@/locales/translations'
 
@@ -14,9 +19,23 @@ interface TestimonialsProps {
 export default function Testimonials({ onCtaClick, pageId = 'home' }: TestimonialsProps) {
     const { language } = useLanguage()
     const t = translations[language]
-    const testimonials = language === 'fr'
-        ? (testimonialsByPageFr[pageId] || testimonialsByPage[pageId] || testimonialsByPage['home'])
-        : (testimonialsByPage[pageId] || testimonialsByPage['home'])
+
+    // Map pageId to testimonial keys
+    const testimonialKey = pageId === 'home' ? 'home' : pageId
+
+    const testimonials = language === 'ko'
+        ? (testimonialDataKo[testimonialKey] || testimonialsByPage[pageId] || testimonialsByPage['home'])
+        : language === 'no'
+            ? (testimonialDataNo[testimonialKey] || testimonialsByPage[pageId] || testimonialsByPage['home'])
+            : language === 'de'
+                ? (testimonialDataDe[testimonialKey] || testimonialsByPage[pageId] || testimonialsByPage['home'])
+                : language === 'fr'
+                    ? (testimonialsByPageFr[pageId] || testimonialsByPage[pageId] || testimonialsByPage['home'])
+                    : language === 'es'
+                        ? (testimonialDataEs[testimonialKey] || testimonialsByPage[pageId] || testimonialsByPage['home'])
+                        : language === 'pt'
+                            ? (testimonialsByPagePt[pageId] || testimonialsByPage[pageId] || testimonialsByPage['home'])
+                            : (testimonialsByPage[pageId] || testimonialsByPage['home'])
 
     return (
         <section id="testimonials" className={styles.testimonials}>
@@ -24,7 +43,7 @@ export default function Testimonials({ onCtaClick, pageId = 'home' }: Testimonia
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" style={{ marginRight: '0.5rem' }}>
                     <path d="M10 2L12 8H18L13 12L15 18L10 14L5 18L7 12L2 8H8L10 2Z" fill="currentColor" />
                 </svg>
-                HUNDREDS OF REVIEWS
+                {t.testimonialsCta.badge}
             </span>
 
             <h2 className={styles.title}>

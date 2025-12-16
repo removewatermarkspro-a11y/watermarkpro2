@@ -492,5 +492,63 @@ export const testimonialsByPage: Record<string, Testimonial[]> = {
             text: "Virtual staging with background replacement has transformed our online presentations. Products look amazing in any setting, boosting customer confidence and sales!",
             avatar: avatarPool[19]
         }
+    ],
+
+    // Free Sora Remover
+    'free-sora-remover': [
+        {
+            name: "Marcus Reynolds",
+            role: "AI Content Creator",
+            text: "Sora generates amazing videos, but the watermark was a problem. This tool removes it perfectly without affecting video quality. Now I can use my AI videos professionally!",
+            avatar: avatarPool[0]
+        },
+        {
+            name: "Derek Chang",
+            role: "Digital Marketer",
+            text: "Removing the Sora watermark from AI-generated videos is essential for client work. This tool does it seamlessly in seconds. Game changer for marketing campaigns!",
+            avatar: avatarPool[1]
+        },
+        {
+            name: "Ryan Foster",
+            role: "Video Editor",
+            text: "I use Sora for b-roll footage, but the watermark is distracting. This AI remover cleans it up flawlessly. The output looks completely professional!",
+            avatar: avatarPool[2]
+        },
+        {
+            name: "Laura Mitchell",
+            role: "Creative Director",
+            text: "Our agency uses AI-generated content a lot. Removing Sora watermarks quickly is crucial for client presentations. This tool delivers perfect results every time!",
+            avatar: avatarPool[10]
+        },
+        {
+            name: "Jennifer Park",
+            role: "Social Media Manager",
+            text: "Sora creates stunning visuals, but watermarks don't fit our brand. This tool removes them cleanly, making AI content ready for social media instantly!",
+            avatar: avatarPool[11]
+        },
+        {
+            name: "Rachel Kim",
+            role: "Content Strategist",
+            text: "AI video generation is the future, but watermarks limit usability. This remover solves that problem perfectly. Now I can integrate Sora videos seamlessly!",
+            avatar: avatarPool[12]
+        },
+        {
+            name: "Trevor Johnson",
+            role: "Filmmaker",
+            text: "Sora is incredible for concept videos, but I can't show watermarks to clients. This tool removes them instantly while preserving quality. Absolutely essential!",
+            avatar: avatarPool[3]
+        },
+        {
+            name: "Nina Rodriguez",
+            role: "Brand Designer",
+            text: "Using AI-generated videos for branding requires clean, watermark-free content. This tool handles Sora watermarks perfectly. Professional results in seconds!",
+            avatar: avatarPool[13]
+        },
+        {
+            name: "Samantha Lee",
+            role: "YouTube Creator",
+            text: "Incorporating Sora videos into my content workflow is easy now. The watermark remover is fast and accurate, keeping my videos looking polished and professional!",
+            avatar: avatarPool[14]
+        }
     ]
 }
