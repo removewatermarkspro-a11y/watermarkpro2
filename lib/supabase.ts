@@ -71,14 +71,17 @@ export interface DownloadHistory {
 // Helper functions
 export const getUserCredits = async (userId: string): Promise<number> => {
     const { data, error } = await supabase
-        .rpc('get_user_credits', { p_user_id: userId })
+        .from('credits')
+        .select('balance')
+        .eq('user_id', userId)
+        .single()
 
     if (error) {
         console.error('Error fetching credits:', error)
         return 0
     }
 
-    return data || 0
+    return data?.balance || 0
 }
 
 export const consumeCredit = async (
@@ -87,20 +90,49 @@ export const consumeCredit = async (
     fileSize?: number,
     processingTime?: number
 ): Promise<boolean> => {
-    const { data, error } = await supabase
-        .rpc('consume_credit', {
-            p_user_id: userId,
-            p_operation_type: operationType,
-            p_file_size: fileSize,
-            p_processing_time: processingTime
-        })
+    try {
+        // First, check if user has credits
+        const { data: creditsData, error: creditsError } = await supabase
+            .from('credits')
+            .select('balance')
+            .eq('user_id', userId)
+            .single()
 
-    if (error) {
+        if (creditsError || !creditsData || creditsData.balance < 1) {
+            console.error('Insufficient credits or error:', creditsError)
+            return false
+        }
+
+        // Decrement credit
+        const { error: updateError } = await supabase
+            .from('credits')
+            .update({
+                balance: creditsData.balance - 1,
+                last_updated: new Date().toISOString()
+            })
+            .eq('user_id', userId)
+
+        if (updateError) {
+            console.error('Error updating credits:', updateError)
+            return false
+        }
+
+        // Record usage history
+        await supabase
+            .from('usage_history')
+            .insert({
+                user_id: userId,
+                operation_type: operationType,
+                credits_used: 1,
+                file_size: fileSize,
+                processing_time: processingTime
+            })
+
+        return true
+    } catch (error) {
         console.error('Error consuming credit:', error)
         return false
     }
-
-    return data
 }
 
 export const addCredits = async (userId: string, amount: number): Promise<boolean> => {
