@@ -232,7 +232,7 @@ export default function AutoRemovePeople() {
                                                 peopleRemovalFaqItems
                     } />
 
-                    <ToolsGrid customImages={{ 'tool1': '/images/tools/tool-card-auto-people-page.png', 'tool2': '/images/tools/video-watermark-6.png', 'tool3': '/images/tools/remove-text-pink.jpg', 'tool4': '/images/tools/tool-card-remove-object-people-page.png', 'tool5': '/images/tools/tool-card-replace-bg-people-page.png', 'tool6': '/images/tools/tool-card-remove-bg-people-page.png', 'tool7': '/images/tools/people-remover-museum.jpg', 'tool8': '/images/tools/upscaler-tiger.jpg' }} />
+                    <ToolsGrid customImages={{ 'tool1': '/images/tools/tool-card-auto-people-page.png', 'tool2': '/images/tools/video-watermark-6.png', 'tool3': '/images/tools/remove-text-pink.jpg', 'tool4': '/images/tools/tool-card-remove-object-people-page.png', 'tool5': '/images/tools/tool-card-replace-bg-people-page.png', 'tool6': '/images/tools/tool-card-remove-bg-people-page.png', 'tool7': '/images/tools/people-remover-museum.jpg', 'tool8': '/images/tools/upscaler-tiger.jpg', 'tool9': '/images/tools/sora-remover-7.png' }} />
                 </div >
             </main >
             <Footer />

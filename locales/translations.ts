@@ -1,4 +1,4 @@
-export const translations = {
+﻿export const translations = {
     en: {
         // Hero Section
         hero: {
@@ -1305,7 +1305,8 @@ export const translations = {
             replaceBackground: "Hintergrund ersetzen",
             removeBackground: "Hintergrund entfernen",
             autoRemovePeople: "Personen automatisch entfernen",
-            imageUpscaler: "Bild-Vergrößerer"
+            imageUpscaler: "Bild-Vergrößerer",
+            soraRemover: "Kostenloser Sora-Entferner"
         },
         // Examples Section
         examples: {
@@ -1347,6 +1348,8 @@ export const translations = {
             tool7Description: "Die KI kann das Bild analysieren und Personen automatisch entfernen, genau wie sie Wasserzeichen von Bildern oder Text entfernt. Perfekt zum Bereinigen von Fotos, Schutz der Privatsphäre oder Vorbereitung kreativer Projekte.",
             tool8Title: "Bild-Vergrößerer",
             tool8Description: "Verbessern Sie Ihre Fotoauflösung mit unserem KI-basierten Vergrößerer. Es funktioniert perfekt nach einem Wasserzeichen-Entferner und ermöglicht es Ihnen, eine bereits bereinigte Datei zu optimieren, während ausgezeichnete Schärfe erhalten bleibt.",
+            tool9Title: "Kostenloser Sora Wasserzeichen-Entferner",
+            tool9Description: "Entfernen Sie Wasserzeichen aus Sora AI-generierten Videos sofort. Unser spezialisiertes Tool erkennt und entfernt OpenAI Sora Branding, Logos und Wasserzeichen während die Videoqualität erhalten bleibt, perfekt für professionelle Content-Erstellung.",
             getStartedButton: "Kostenlos starten"
         },
         // Pricing Section
@@ -1565,6 +1568,52 @@ export const translations = {
                 step3: {
                     title: "Laden Sie Ihr sauberes Video sofort herunter",
                     description: "In nur wenigen Augenblicken ist Ihr neues wasserzeichenfreies Video fertig. Laden Sie einfach das Endergebnis in hoher Qualität herunter und verwenden Sie es, wo immer Sie es benötigen – Social-Media-Beiträge, Präsentationen, Content-Erstellung oder persönliche Archive. Mit unserem schnellen und zuverlässigen Video-Wasserzeichen-Entferner war es noch nie einfacher, saubere, professionelle Videos zu erhalten."
+                }
+            }
+        },
+        // Sora Remover Page - German version
+        soraRemoverPage: {
+            hero: {
+                title: "sora wasserzeichen entferner",
+                titleHighlight: "Kostenlos",
+                description: "Entfernen Sie Sora AI Wasserzeichen sofort aus Videos mit KI. Entfernen Sie OpenAI Sora Branding, Logos und Wasserzeichen aus KI-generierten Videos in Sekunden."
+            },
+            uploader: {
+                uploadText: "Ziehen Sie Ihr Sora-Video hierher",
+                formatText: "MP4, MOV, AVI bis zu 100MB"
+            },
+            features: {
+                badge: "LEISTUNGSSTARKE FUNKTIONEN",
+                feature1: {
+                    title: "Kostenloser Sora Wasserzeichen-Entferner – Entfernen Sie OpenAI Sora Branding sofort",
+                    description: "Unsere fortschrittliche KI bietet einen spezialisierten kostenlosen Sora-Entferner, der entwickelt wurde, um Sora-Wasserzeichen aus KI-generierten Videos mit punktgenauer Präzision zu entfernen. Das System analysiert intelligent jeden Frame, um OpenAI Sora Logos, Textüberlagerungen und Branding-Elemente zu erkennen und zu löschen, während eine makellose Videoqualität erhalten bleibt. Perfekt für Content-Ersteller, Filmemacher und Vermarkter, die den Sora AI Video-Generator verwenden und sauberes, wasserzeichenfreies Material für professionelle Projekte, YouTube-Inhalte oder Social-Media-Kampagnen benötigen. Erleben Sie nahtlose Wasserzeichenentfernung, die die ursprüngliche Klarheit und filmische Qualität Ihres Videos bewahrt.",
+                    button: "Jetzt starten"
+                },
+                feature2: {
+                    title: "Schnelle KI-gestützte Sora Logo-Entfernung für professionelle Qualität",
+                    description: "Erleben Sie blitzschnelle Sora-Wasserzeichenentfernung mit unserer optimierten Engine für die Bereinigung KI-generierter Videos. In Sekunden können Sie Sora-Branding entfernen, OpenAI-Wasserzeichen löschen und Ihre Sora AI Videos in MP4, MOV, AVI und WebM-Formaten polieren. Unsere intelligente Verarbeitung verarbeitet 4K, HD und sogar 8K-Material nahtlos. Ideal für professionelle Filmemacher, YouTuber und Content-Ersteller, die Wasserzeichen schnell aus Sora-Videos entfernen müssen, während sie Broadcast-Qualität erhalten. Der automatisierte Workflow liefert erstklassige Qualität, die mit manueller Bearbeitung konkurriert.",
+                    button: "Jetzt starten"
+                },
+                feature3: {
+                    title: "Vollständiger Sora Video Wasserzeichen-Entferner – Professionelle KI-Lösung",
+                    description: "Unser umfassendes Sora-Entferner-Tool verarbeitet alle OpenAI Sora Wasserzeichen-Varianten mit professioneller Genauigkeit. Ob Ihre Videos Eck-Branding, zentrierte Logos, animierte Wasserzeichen oder Textüberlagerungen von der Sora AI Plattform enthalten, Sie können Sora-Wasserzeichen sofort entfernen und broadcast-bereites Material erreichen. Kompatibel mit allen von OpenAI Sora generierten Videoformaten, gewährleistet unser System makellose Wasserzeichenentfernung bei gleichzeitiger Bewahrung von flüssiger Bewegung, natürlicher Beleuchtung und Farbbalance. Perfekt, um KI-generierte Sequenzen in polierte, professionelle Visuals zu verwandeln, die für jede Plattform bereit sind.",
+                    button: "Jetzt starten"
+                }
+            },
+            howItWorks: {
+                badge: "WIE ES FUNKTIONIERT",
+                title: "Entfernen Sie Sora-Wasserzeichen in 3 einfachen Schritten",
+                step1: {
+                    title: "Laden Sie Ihr Sora AI Video hoch",
+                    description: "Beginnen Sie, indem Sie Ihr Sora-generiertes Video direkt von Ihrem Gerät hochladen oder es in unsere Oberfläche ziehen. Unsere Plattform unterstützt alle Standard-Videoformate einschließlich MP4, MOV, AVI, WebM und MKV, die von OpenAI Sora produziert werden. Ob Ihr Video Eck-Wasserzeichen, Logos, Textüberlagerungen oder Zeitstempel enthält, unser intelligentes System erkennt das Format sofort und bereitet Ihr Material für KI-gestützte Wasserzeichenentfernung vor. Der Upload-Prozess ist schnell, sicher und verarbeitet Dateien bis zu 4K und 8K Auflösung mit Leichtigkeit."
+                },
+                step2: {
+                    title: "KI entfernt Sora-Wasserzeichen automatisch",
+                    description: "Nach dem Hochladen verwendet unser spezialisierter Sora-Wasserzeichen-Entferner fortschrittliche KI-Algorithmen, um jeden Frame mit chirurgischer Präzision zu analysieren. Das System erkennt und löscht intelligent alle OpenAI Sora Branding-Elemente einschließlich Logos, Text, Wasserzeichen und Überlagerungen, während Hintergründe nahtlos rekonstruiert werden. Unsere KI erhält flüssigen Bewegungsfluss, bewahrt die ursprüngliche Beleuchtung und gewährleistet Farbkonsistenz über die gesamte Timeline. Der vollautomatische Prozess liefert saubere, professionelle Ergebnisse in Sekunden ohne manuelle Bearbeitungsfähigkeiten oder komplexes Software-Wissen zu erfordern."
+                },
+                step3: {
+                    title: "Laden Sie Ihr wasserzeichenfreies Sora-Video herunter",
+                    description: "In Momenten ist Ihr makelloses, wasserzeichenfreies Sora AI Video zum Download in voller Originalqualität ohne Kompressionsverlust bereit. Laden Sie Ihr sauberes Material herunter, bereit zur Verwendung für YouTube-Uploads, Instagram Reels, TikTok, professionelle Portfolios, Kundenpräsentationen oder kommerzielle Kampagnen. Mit unserer schnellen, zuverlässigen Sora-Entferner-Technologie war das Erstellen atemberaubender, markenfreier KI-Videos noch nie einfacher. Erleben Sie die Freiheit perfekt sauberen, kinematografischen Materials, bereit, Ihr Publikum ohne ablenkende Wasserzeichen zu beeindrucken."
                 }
             }
         },
@@ -1850,7 +1899,8 @@ const enTranslations = (translations as any).en;
         replaceBackground: "Reemplazar fondo",
         removeBackground: "Eliminar fondo",
         autoRemovePeople: "Eliminar personas automáticamente",
-        imageUpscaler: "Ampliar imagen"
+        imageUpscaler: "Ampliar imagen",
+        soraRemover: "Removedor Sora"
     },
     examples: {
         before: "Antes",
@@ -1915,6 +1965,8 @@ const enTranslations = (translations as any).en;
         tool7Description: "La IA puede analizar la imagen y eliminar personas automáticamente, al igual que elimina marcas de agua de imágenes o texto. Perfecto para limpiar fotos, proteger la privacidad o preparar proyectos creativos.",
         tool8Title: "Ampliador de Imagen",
         tool8Description: "Mejora la resolución de tu foto con nuestro ampliador basado en IA. Funciona perfectamente después de un removedor de marcas de agua, lo que te permite optimizar un archivo ya limpio manteniendo una excelente nitidez.",
+        tool9Title: "Removedor de Marcas de Agua Sora Gratis",
+        tool9Description: "Elimina marcas de agua de videos generados por Sora AI al instante. Nuestra herramienta especializada detecta y elimina el branding de Sora mientras preserva la calidad del video, perfecto para la creación de contenido profesional.",
         getStartedButton: "Comienza gratis"
     },
     pricing: {
@@ -1975,7 +2027,8 @@ const enTranslations = (translations as any).en;
             removeObject: "Eliminar objeto",
             removeText: "Eliminar texto",
             autoRemovePeople: "Eliminar personas automáticamente",
-            imageUpscaler: "Ampliar imagen"
+            imageUpscaler: "Ampliar imagen",
+            soraRemover: "Removedor Sora gratuito"
         }
     },
     imageUploader: {
@@ -2058,6 +2111,26 @@ const enTranslations = (translations as any).en;
         and: "y",
         privacyLink: "Política de privacidad"
     },
+    emailVerificationPopup: {
+        title: "Revisa tu bandeja de entrada",
+        subtitle: "Hemos enviado un código de verificación a",
+        codePlaceholder: "Ingresa el código de verificación",
+        verifyButton: "Verificar correo electrónico",
+        backButton: "Volver al inicio de sesión",
+        resendText: "No recibiste el código?",
+        resendLink: "Reenviar"
+    },
+    accountPage: {
+        pricing: "Precios",
+        billingCycle: "Ciclo de facturación actual",
+        changePlan: "Cambiar plan",
+        cancelSubscription: "Cancelar suscripción",
+        warningFree: "Tu suscripción gratuita de Remove watermark pro termina el {{date}} - actualiza ahora para seguir disfrutando de nuestros servicios!",
+        warningPro: "Tu suscripción Pro de Remove watermark pro termina el {{date}} - actualiza ahora para seguir disfrutando de nuestros servicios!",
+        myAccount: "Mi cuenta",
+        name: "Nombre",
+        email: "Correo electrónico"
+    },
     promoPopup: {
         badge: "OFERTA ESPECIAL",
         title: "¡Obtén 50% de descuento en tu primer mes!",
@@ -2133,6 +2206,51 @@ const enTranslations = (translations as any).en;
             feature3: "Todas las herramientas",
             feature4: "Calidad HD",
             button: "Comprar ahora"
+        }
+    },
+    soraRemoverPage: {
+        hero: {
+            title: "removedor de marcas de agua sora",
+            titleHighlight: "Gratis",
+            description: "Elimina marcas de agua de Sora AI de videos al instante con IA. Remueve el branding de OpenAI Sora, logos y marcas de agua de videos generados por IA en segundos."
+        },
+        uploader: {
+            uploadText: "Arrastra tu video Sora aquí",
+            formatText: "MP4, MOV, AVI hasta 100MB"
+        },
+        features: {
+            badge: "CARACTERÍSTICAS PODEROSAS",
+            feature1: {
+                title: "Removedor de Marcas de Agua Sora Gratis – Elimina el Branding de OpenAI Sora al Instante",
+                description: "Nuestra IA avanzada proporciona un removedor Sora gratuito especializado diseñado para eliminar marcas de agua de Sora de videos generados por IA con precisión milimétrica. El sistema analiza inteligentemente cada fotograma para detectar y borrar logos de OpenAI Sora, superposiciones de texto y elementos de branding mientras mantiene una calidad de video prístina. Perfecto para creadores de contenido, cineastas y especialistas en marketing que usan el generador de videos Sora AI y necesitan material limpio sin marcas de agua para proyectos profesionales, contenido de YouTube o campañas en redes sociales. Experimenta una eliminación perfecta de marcas de agua que preserva la claridad original y la calidad cinematográfica de tu video.",
+                button: "Comenzar"
+            },
+            feature2: {
+                title: "Eliminación Rápida de Logos Sora con IA para Calidad Profesional",
+                description: "Experimenta una eliminación de marcas de agua Sora ultrarrápida con nuestro motor optimizado creado para la limpieza de videos generados por IA. En segundos, puedes eliminar el branding de Sora, borrar marcas de agua de OpenAI y pulir tus videos Sora AI en formatos MP4, MOV, AVI y WebM. Nuestro procesamiento inteligente maneja material 4K, HD e incluso 8K sin problemas. Ideal para cineastas profesionales, YouTubers y creadores de contenido que necesitan eliminar marcas de agua de videos Sora rápidamente mientras mantienen resultados de calidad broadcast. El flujo de trabajo automatizado ofrece una calidad de primer nivel que rivaliza con la edición manual.",
+                button: "Comenzar"
+            },
+            feature3: {
+                title: "Removedor Completo de Marcas de Agua de Video Sora – Solución AI Profesional",
+                description: "Nuestra herramienta removedor Sora integral maneja todas las variantes de marcas de agua de OpenAI Sora con precisión profesional. Ya sea que tus videos tengan branding en las esquinas, logos centrados, marcas de agua animadas o superposiciones de texto de la plataforma Sora AI, puedes eliminar instantáneamente las marcas de agua Sora y lograr material listo para broadcast. Compatible con todos los formatos de video generados por OpenAI Sora, nuestro sistema garantiza una eliminación impecable de marcas de agua mientras preserva el movimiento suave, la iluminación natural y el equilibrio de color. Perfecto para transformar secuencias generadas por IA en visuales pulidos de grado profesional listos para cualquier plataforma.",
+                button: "Comenzar"
+            }
+        },
+        howItWorks: {
+            badge: "CÓMO FUNCIONA",
+            title: "Elimina Marcas de Agua Sora en 3 Simples Pasos",
+            step1: {
+                title: "Sube tu video Sora AI",
+                description: "Comienza subiendo tu video generado por Sora directamente desde tu dispositivo o arrastrándolo a nuestra interfaz. Nuestra plataforma es compatible con todos los formatos de video estándar incluyendo MP4, MOV, AVI, WebM y MKV producidos por OpenAI Sora. Ya sea que tu video contenga marcas de agua en las esquinas, logos, superposiciones de texto o marcas de tiempo, nuestro sistema inteligente reconoce instantáneamente el formato y prepara tu material para la eliminación de marcas de agua con IA. El proceso de carga es rápido, seguro y maneja archivos de hasta 4K y 8K con facilidad."
+            },
+            step2: {
+                title: "La IA elimina la marca de agua Sora automáticamente",
+                description: "Una vez subido, nuestro removedor de marcas de agua Sora especializado emplea algoritmos de IA avanzados para analizar cada fotograma con precisión quirúrgica. El sistema detecta y borra inteligentemente todos los elementos de branding de OpenAI Sora incluyendo logos, texto, marcas de agua y superposiciones mientras reconstruye los fondos sin problemas. Nuestra IA mantiene el flujo de movimiento suave, preserva la iluminación original y asegura la consistencia de color en toda la línea de tiempo. El proceso totalmente automatizado ofrece resultados limpios y profesionales en segundos sin requerir habilidades de edición manual o conocimiento de software complejo."
+            },
+            step3: {
+                title: "Descarga tu video Sora sin marcas de agua",
+                description: "En momentos, tu video Sora AI prístino y sin marcas de agua está listo para descargar en calidad original completa sin pérdida de compresión. Descarga tu material limpio listo para usar en cargas de YouTube, Instagram Reels, TikTok, portafolios profesionales, presentaciones de clientes o campañas comerciales. Con nuestra tecnología removedor Sora rápida y confiable, crear videos AI impresionantes y sin marca nunca ha sido tan fácil. Experimenta la libertad de material perfectamente limpio con calidad de cine listo para impresionar a tu audiencia sin marcas de agua que distraigan."
+            }
         }
     },
     videoWatermarkPage: {
@@ -3061,7 +3179,7 @@ export const koTranslations = {
     ...enTranslations,
     hero: {
         titleHighlight: "무료",
-        titleMain: "워터마크 제거",
+        titleMain: "워터마크 제거 도구",
         description: "이미지를 업로드하고 워터마크를 선택하면 AI가 원본 품질을 유지하면서 지능적으로 제거합니다. 즉시 전문적인 결과를 얻으세요."
     },
     features: {
@@ -3101,8 +3219,8 @@ export const koTranslations = {
     videoWatermarkPage: {
         hero: {
             titleHighlight: "무료",
-            titleMain: "비디오에서 워터마크 제거",
-            description: "비디오를 업로드하고 워터마크를 선택하면 TikTok, YouTube 또는 모든 비디오 소스에서 AI가 로고와 텍스트를 원활하게 제거합니다. 전문적인 결과를 즉시 얻으세요."
+            title: "비디오 워터마크 제거 도구",
+            description: "AI로 비디오에서 워터마크를 제거하세요. TikTok 로고, 텍스트 오버레이, MP4, MOV, AVI 파일의 비디오 워터마크를 몇 초 만에 삭제합니다."
         },
         features: {
             badge: "강력한 기능",
@@ -3148,8 +3266,8 @@ export const koTranslations = {
     removeTextPage: {
         hero: {
             titleHighlight: "무료",
-            titleMain: "이미지에서 텍스트 제거",
-            description: "이미지를 업로드하고 제거할 텍스트를 선택하세요. AI가 워터마크, 캡션, 로고, 날짜 스탬프 또는 원치 않는 텍스트를 자동으로 감지하고 삭제합니다. 즉시 깨끗한 결과를 얻으세요."
+            title: "AI 이미지 텍스트 제거 도구",
+            description: "AI로 이미지에서 텍스트, 캡션, 자막을 즉시 제거하세요. 원치 않는 텍스트 오버레이를 지워 몇 초 만에 사진을 깨끗하게 정리합니다."
         },
         features: {
             badge: "강력한 기능",
@@ -3189,8 +3307,8 @@ export const koTranslations = {
     removeObjectPage: {
         hero: {
             titleHighlight: "무료",
-            titleMain: "이미지에서 객체 제거",
-            description: "이미지를 업로드하고 제거할 객체를 선택하세요. AI가 원치 않는 객체, 사람, 배경 요소 또는 방해 요소를 자동으로 감지하고 삭제합니다. 즉시 깨끗한 결과를 얻으세요."
+            title: "이미지에서 모든 객체 제거",
+            description: "AI로 사진에서 원치 않는 객체를 지우세요. 몇 초 만에 이미지에서 사람, 자동차, 건물 또는 모든 요소를 제거합니다."
         },
         features: {
             badge: "강력한 기능",
@@ -3230,8 +3348,8 @@ export const koTranslations = {
     replaceBackgroundPage: {
         hero: {
             titleHighlight: "무료",
-            titleMain: "이미지 배경 교체",
-            description: "이미지를 업로드하고 원하는 배경을 설명하세요. AI가 자동으로 배경을 제거하고 사용자 정의 이미지, 색상 또는 전문 스튜디오 배경으로 교체합니다. 즉시 전문적인 결과를 얻으세요.",
+            title: "배경 즉시 교체",
+            description: "AI로 사진 배경을 즉시 변경하세요. 모든 배경을 사용자 정의 이미지, 색상 또는 전문 스튜디오 배경으로 교체합니다.",
             promptPlaceholder: "생성하려는 배경을 설명하세요..."
         },
         features: {
@@ -3272,7 +3390,7 @@ export const koTranslations = {
     removeBackgroundPage: {
         hero: {
             titleHighlight: "무료",
-            titleMain: "이미지에서 배경 즉시 제거",
+            title: "이미지 배경 즉시 제거",
             description: "AI로 이미지 배경을 즉시 제거하세요. 투명 PNG를 만들고, 주제를 분리하며, 몇 초 만에 전문적인 컷아웃을 얻으세요."
         },
         features: {
@@ -3313,7 +3431,7 @@ export const koTranslations = {
     peopleRemovalPage: {
         hero: {
             titleHighlight: "무료",
-            titleMain: "한 번의 클릭으로 스마트 사람 제거",
+            title: "원클릭 스마트 사람 제거",
             description: "AI로 사진에서 사람과 군중을 자동으로 제거하세요. 랜드마크와 장소의 깨끗하고 관광객 없는 샷을 즉시 얻으세요.",
             promptPlaceholder: "사진에서 제거하려는 사람을 설명하세요..."
         },
@@ -3355,8 +3473,8 @@ export const koTranslations = {
     imageUpscalerPage: {
         hero: {
             titleHighlight: "무료",
-            titleMain: "AI 이미지 업스케일러 – 품질 손실 없이 사진 확대",
-            description: "AI로 이미지를 즉시 확대하세요. 품질을 향상시키고, 픽셀을 선명하게 하며, 몇 초 만에 전문적인 고해상도 결과를 얻으세요."
+            title: "AI로 이미지를 4K로 업스케일",
+            description: "AI로 이미지를 4배 해상도로 업스케일하세요. 사진 품질을 향상시키고, 해상도를 높이며, 자동으로 사실적인 디테일을 추가합니다."
         },
         features: {
             badge: "강력한 기능",
@@ -4234,5 +4352,188 @@ const noTranslations = {
 // Add Norwegian to translations object
 (translations as any).no = noTranslations;
 
-// Add Spanish to translations object (using English as fallback for now)
-(translations as any).es = translations.en;
+// Add Norwegian Sora page to translations object
+if (!(translations as any).no) {
+    (translations as any).no = {};
+}
+(translations as any).no.toolsGrid = {
+    ...(translations as any).no.toolsGrid,
+    tool9Title: "Gratis Sora Vannmerke-fjerning",
+    tool9Description: "Fjern vannmerker fra Sora AI-genererte videoer øyeblikkelig. Vårt spesialiserte verktøy oppdager og fjerner OpenAI Sora-branding, logoer og vannmerker samtidig som videokvaliteten opprettholdes, perfekt for profesjonell innholdsskaping."
+};
+(translations as any).no.categoryTabs = {
+    ...(translations as any).no.categoryTabs,
+    soraRemover: "Gratis Sora-fjerning"
+};
+(translations as any).no.soraRemoverPage = {
+    hero: {
+        title: "sora vannmerke-fjerning",
+        titleHighlight: "Gratis",
+        description: "Fjern Sora AI-vannmerker fra videoer øyeblikkelig med AI. Fjern OpenAI Sora-branding, logoer og vannmerker fra AI-genererte videoer på sekunder."
+    },
+    uploader: {
+        uploadText: "Dra din Sora-video hit",
+        formatText: "MP4, MOV, AVI opp til 100MB"
+    },
+    features: {
+        badge: "KRAFTIGE FUNKSJONER",
+        feature1: {
+            title: "Gratis Sora Vannmerke-fjerning – Fjern OpenAI Sora-branding Øyeblikkelig",
+            description: "Vår avanserte AI gir en spesialisert gratis Sora-fjerning designet for å fjerne Sora-vannmerker fra AI-genererte videoer med punktlig presisjon. Systemet analyserer intelligent hver ramme for å oppdage og slette OpenAI Sora-logoer, tekstoverlegg og brandingelementer samtidig som det opprettholder feilfri videokvalitet. Perfekt for innholdsskapere, filmskapere og markedsførere som bruker Sora AI videogeneratoren som trenger rent, vannmerkefritt materiale for profesjonelle prosjekter, YouTube-innhold eller sosiale mediekampanjer. Opplev sømløs vannmerkefjerning som bevarer videoens opprinnelige klarhet og filmkvalitet.",
+            button: "Kom i gang"
+        },
+        feature2: {
+            title: "Rask AI-drevet Sora Logo-fjerning for Profesjonell Kvalitet",
+            description: "Opplev lynrask Sora vannmerkefjerning med vår optimaliserte motor bygget for AI-generert videorensing. På sekunder kan du fjerne Sora-branding, slette OpenAI-vannmerker og polere dine Sora AI-videoer i MP4, MOV, AVI og WebM-formater. Vår intelligente behandling håndterer 4K, HD og til og med 8K-materiale feilfritt. Ideelt for profesjonelle filmskapere, YouTubere og innholdsskapere som trenger å fjerne vannmerker fra Sora-videoer raskt samtidig som de opprettholder kringkastingskvalitetsresultater. Den automatiserte arbeidsflyten leverer førsteklasses kvalitet som konkurrerer med manuell redigering.",
+            button: "Kom i gang"
+        },
+        feature3: {
+            title: "Komplett Sora Video Vannmerke-fjerning – Profesjonell AI-løsning",
+            description: "Vårt omfattende Sora-fjerningsverktøy håndterer alle OpenAI Sora vannmerkevarianter med profesjonell presisjon. Enten videoene dine inneholder hjørnebranding, sentrerte logoer, animerte vannmerker eller tekstoverlegg fra Sora AI-plattformen, kan du umiddelbart fjerne Sora-vannmerker og oppnå kringkastingsklart materiale. Kompatibel med alle videoformater generert av OpenAI Sora, sikrer systemet vårt feilfri vannmerkefjerning samtidig som det bevarer jevn bevegelse, naturlig belysning og fargebalanse. Perfekt for å transformere AI-genererte sekvenser til polerte, profesjonelle visuelle elementer klare for hvilken som helst plattform.",
+            button: "Kom i gang"
+        }
+    },
+    howItWorks: {
+        badge: "HVORDAN DET FUNGERER",
+        title: "Fjern Sora-vannmerker i 3 Enkle Trinn",
+        step1: {
+            title: "Last opp din Sora AI-video",
+            description: "Begynn med å laste opp din Sora-genererte video direkte fra enheten din eller dra den til grensesnittet vårt. Plattformen vår støtter alle standard videoformater inkludert MP4, MOV, AVI, WebM og MKV produsert av OpenAI Sora. Enten videoen din inneholder hjørnevannmerker, logoer, tekstoverlegg eller tidsstempler, gjenkjenner vårt intelligente system umiddelbart formatet og forbereder materialet ditt for AI-drevet vannmerkefjerning. Opplastingsprosessen er rask, sikker og håndterer filer opp til 4K og 8K oppløsning med letthet."
+        },
+        step2: {
+            title: "AI fjerner Sora-vannmerke automatisk",
+            description: "Når den er lastet opp, bruker vår spesialiserte Sora vannmerke-fjerning avanserte AI-algoritmer for å analysere hver ramme med kirurgisk presisjon. Systemet oppdager og sletter intelligent alle OpenAI Sora-brandingelementer inkludert logoer, tekst, vannmerker og overlegg samtidig som det rekonstruerer bakgrunner sømløst. Vår AI opprettholder jevn bevegelsesflyt, bevarer original belysning og sikrer fargekonsistens gjennom hele tidslinjen. Den fullautomatiske prosessen leverer rene, profesjonelle resultater på sekunder uten å kreve manuelle redigeringsferdigheter eller kompleks programvarekunnskap."
+        },
+        step3: {
+            title: "Last ned din vannmerkefrie Sora-video",
+            description: "På øyeblikk er din feilfrie, vannmerkefrie Sora AI-video klar for nedlasting i full original kvalitet uten kompresjonstap. Last ned ditt rene materiale klart til bruk for YouTube-opplastinger, Instagram Reels, TikTok, profesjonelle porteføljer, klientpresentasjoner eller kommersielle kampanjer. Med vår raske og pålitelige Sora-fjerningsteknologi har det aldri vært enklere å lage fantastiske, merkefrie AI-videoer. Opplev friheten til perfekt rent materiale med filmkvalitet klar til å imponere publikummet ditt uten distraherende vannmerker."
+        }
+    }
+};
+
+// Add Portuguese Sora page to translations object
+if (!(translations as any).pt) {
+    (translations as any).pt = {};
+}
+(translations as any).pt.toolsGrid = {
+    ...(translations as any).pt.toolsGrid,
+    tool9Title: "Removedor de Marca d'Água Sora Gratuito",
+    tool9Description: "Remova marcas d'água de vídeos gerados por Sora AI instantaneamente. Nossa ferramenta especializada detecta e remove branding OpenAI Sora, logotipos e marcas d'água preservando a qualidade do vídeo, perfeito para criação de conteúdo profissional."
+};
+(translations as any).pt.categoryTabs = {
+    ...(translations as any).pt.categoryTabs,
+    soraRemover: "Removedor Sora gratuito"
+};
+(translations as any).pt.soraRemoverPage = {
+    hero: {
+        title: "removedor de marca d'água sora",
+        titleHighlight: "Gratuito",
+        description: "Remova marcas d'água Sora AI de vídeos instantaneamente com IA. Remova branding, logotipos e marcas d'água OpenAI Sora de vídeos gerados por IA em segundos."
+    },
+    uploader: {
+        uploadText: "Arraste seu vídeo Sora aqui",
+        formatText: "MP4, MOV, AVI até 100MB"
+    },
+    features: {
+        badge: "RECURSOS PODEROSOS",
+        feature1: {
+            title: "Removedor de Marca d'Água Sora Gratuito – Remova Branding OpenAI Sora Instantaneamente",
+            description: "Nossa IA avançada fornece um removedor Sora gratuito especializado projetado para remover marcas d'água Sora de vídeos gerados por IA com precisão pontual. O sistema analisa inteligentemente cada quadro para detectar e apagar logotipos OpenAI Sora, sobreposições de texto e elementos de branding enquanto mantém qualidade de vídeo impecável. Perfeito para criadores de conteúdo, cineastas e profissionais de marketing usando o gerador de vídeos Sora AI que precisam de material limpo e sem marcas d'água para projetos profissionais, conteúdo do YouTube ou campanhas de mídia social. Experimente remoção perfeita de marcas d'água que preserva a clareza original e qualidade cinematográfica do seu vídeo.",
+            button: "Começar"
+        },
+        feature2: {
+            title: "Remoção Rápida de Logo Sora com IA para Qualidade Profissional",
+            description: "Experimente remoção de marca d'água Sora ultrarrápida com nosso motor otimizado construído para limpeza de vídeos gerados por IA. Em segundos, você pode remover branding Sora, apagar marcas d'água OpenAI e polir seus vídeos Sora AI em formatos MP4, MOV, AVI e WebM. Nosso processamento inteligente lida com material 4K, HD e até 8K perfeitamente. Ideal para cineastas profissionais, YouTubers e criadores de conteúdo que precisam remover marcas d'água de vídeos Sora rapidamente mantendo resultados de qualidade broadcast. O fluxo de trabalho automatizado entrega qualidade de primeira linha que rivaliza com edição manual.",
+            button: "Começar"
+        },
+        feature3: {
+            title: "Removedor Completo de Marca d'Água de Vídeo Sora – Solução IA Profissional",
+            description: "Nossa ferramenta removedor Sora abrangente lida com todas as variantes de marca d'água OpenAI Sora com precisão profissional. Seja seus vídeos apresentando branding de canto, logotipos centralizados, marcas d'água animadas ou sobreposições de texto da plataforma Sora AI, você pode remover instantaneamente marcas d'água Sora e alcançar material pronto para broadcast. Compatível com todos os formatos de vídeo gerados por OpenAI Sora, nosso sistema garante remoção impecável de marcas d'água preservando movimento suave, iluminação natural e equilíbrio de cores. Perfeito para transformar sequências geradas por IA em visuais polidos de nível profissional prontos para qualquer plataforma.",
+            button: "Começar"
+        }
+    },
+    howItWorks: {
+        badge: "COMO FUNCIONA",
+        title: "Remova Marcas d'Água Sora em 3 Passos Simples",
+        step1: {
+            title: "Carregue seu vídeo Sora AI",
+            description: "Comece enviando seu vídeo gerado por Sora diretamente do seu dispositivo ou arrastando-o para nossa interface. Nossa plataforma suporta todos os formatos de vídeo padrão incluindo MP4, MOV, AVI, WebM e MKV produzidos por OpenAI Sora. Seja seu vídeo contendo marcas d'água de canto, logotipos, sobreposições de texto ou carimbos de hora, nosso sistema inteligente reconhece instantaneamente o formato e prepara seu material para remoção de marca d'água com IA. O processo de upload é rápido, seguro e lida com arquivos até resolução 4K e 8K com facilidade."
+        },
+        step2: {
+            title: "IA remove marca d'água Sora automaticamente",
+            description: "Uma vez enviado, nosso removedor de marca d'água Sora especializado emprega algoritmos de IA avançados para analisar cada quadro com precisão cirúrgica. O sistema detecta e apaga inteligentemente todos os elementos de branding OpenAI Sora incluindo logotipos, texto, marcas d'água e sobreposições enquanto reconstrói fundos perfeitamente. Nossa IA mantém fluxo de movimento suave, preserva iluminação original e garante consistência de cores em toda a linha do tempo. O processo totalmente automatizado entrega resultados limpos e profissionais em segundos sem exigir habilidades de edição manual ou conhecimento de software complexo."
+        },
+        step3: {
+            title: "Baixe seu vídeo Sora sem marca d'água",
+            description: "Em momentos, seu vídeo Sora AI impecável e sem marca d'água está pronto para download em qualidade original completa sem perda de compressão. Baixe seu material limpo pronto para usar em uploads do YouTube, Instagram Reels, TikTok, portfólios profissionais, apresentações de clientes ou campanhas comerciais. Com nossa tecnologia removedor Sora rápida e confiável, criar vídeos IA impressionantes e sem marca nunca foi tão fácil. Experimente a liberdade de material perfeitamente limpo com qualidade cinematográfica pronta para impressionar seu público sem marcas d'água distrativas."
+        }
+    }
+};
+
+// Add Korean Sora page to translations object
+if (!(translations as any).ko) {
+    (translations as any).ko = {};
+}
+(translations as any).ko.toolsGrid = {
+    ...(translations as any).ko.toolsGrid,
+    tool9Title: "무료 Sora 워터마크 제거기",
+    tool9Description: "Sora AI 생성 비디오에서 워터마크를 즉시 제거하세요. 당사의 전문 도구는 OpenAI Sora 브랜딩, 로고 및 워터마크를 감지하고 제거하여 비디오 품질을 유지하며 전문적인 콘텐츠 제작에 완벽합니다."
+};
+(translations as any).ko.categoryTabs = {
+    ...(translations as any).ko.categoryTabs,
+    soraRemover: "무료 Sora 제거기"
+};
+(translations as any).ko.soraRemoverPage = {
+    hero: {
+        title: "sora 워터마크 제거기",
+        titleHighlight: "무료",
+        description: "AI로 비디오에서 Sora AI 워터마크를 즉시 제거하세요. OpenAI Sora 브랜딩, 로고 및 워터마크를 몇 초 만에 AI 생성 비디오에서 제거합니다."
+    },
+    uploader: {
+        uploadText: "Sora 비디오를 여기에 드래그하세요",
+        formatText: "MP4, MOV, AVI 최대 100MB"
+    },
+    features: {
+        badge: "강력한 기능",
+        feature1: {
+            title: "무료 Sora 워터마크 제거기 – OpenAI Sora 브랜딩 즉시 제거",
+            description: "당사의 고급 AI는 정밀한 정확도로 AI 생성 비디오에서 Sora 워터마크를 제거하도록 설계된 전문 무료 Sora 제거기를 제공합니다. 시스템은 각 프레임을 지능적으로 분석하여 완벽한 비디오 품질을 유지하면서 OpenAI Sora 로고, 텍스트 오버레이 및 브랜딩 요소를 감지하고 지웁니다. 전문 프로젝트, YouTube 콘텐츠 또는 소셜 미디어 캠페인을 위해 깨끗하고 워터마크가 없는 영상이 필요한 Sora AI 비디오 생성기를 사용하는 콘텐츠 제작자, 영화 제작자 및 마케팅 담당자에게 완벽합니다. 비디오의 원래 선명도와 영화적 품질을 보존하는 원활한 워터마크 제거를 경험하세요.",
+            button: "시작하기"
+        },
+        feature2: {
+            title: "전문가급 품질을 위한 빠른 AI 기반 Sora 로고 제거",
+            description: "AI 생성 비디오 정리를 위해 구축된 최적화된 엔진으로 초고속 Sora 워터마크 제거를 경험하세요. 몇 초 만에 Sora 브랜딩을 제거하고 OpenAI 워터마크를 지우며 MP4, MOV, AVI 및 WebM 형식의 Sora AI 비디오를 다듬을 수 있습니다. 당사의 지능형 처리는 4K, HD 및 8K 영상까지 완벽하게 처리합니다. 방송 품질 결과를 유지하면서 Sora 비디오에서 워터마크를 빠르게 제거해야 하는 전문 영화 제작자, YouTuber 및 콘텐츠 제작자에게 이상적입니다. 자동화된 워크플로우는 수동 편집과 경쟁하는 최고 품질을 제공합니다.",
+            button: "시작하기"
+        },
+        feature3: {
+            title: "완전한 Sora 비디오 워터마크 제거기 – 전문 AI 솔루션",
+            description: "당사의 포괄적인 Sora 제거기 도구는 전문적인 정확도로 모든 OpenAI Sora 워터마크 변형을 처리합니다. 비디오에 코너 브랜딩, 중앙 로고, 애니메이션 워터마크 또는 Sora AI 플랫폼의 텍스트 오버레이가 있든 관계없이 즉시 Sora 워터마크를 제거하고 방송 준비 영상을 얻을 수 있습니다. OpenAI Sora에서 생성된 모든 비디오 형식과 호환되는 당사 시스템은 부드러운 움직임, 자연스러운 조명 및 색상 균형을 유지하면서 완벽한 워터마크 제거를 보장합니다. AI 생성 시퀀스를 모든 플랫폼에서 사용할 수 있는 세련된 전문 수준의 비주얼로 변환하는 데 완벽합니다.",
+            button: "시작하기"
+        }
+    },
+    howItWorks: {
+        badge: "작동 방식",
+        title: "3단계로 Sora 워터마크 제거",
+        step1: {
+            title: "Sora AI 비디오 업로드",
+            description: "장치에서 직접 Sora 생성 비디오를 업로드하거나 인터페이스로 드래그하여 시작하세요. 당사 플랫폼은 OpenAI Sora에서 생성된 MP4, MOV, AVI, WebM 및 MKV를 포함한 모든 표준 비디오 형식을 지원합니다. 비디오에 코너 워터마크, 로고, 텍스트 오버레이 또는 타임스탬프가 포함되어 있든 관계없이 당사의 지능형 시스템은 즉시 형식을 인식하고 AI 기반 워터마크 제거를 위해 영상을 준비합니다. 업로드 프로세스는 빠르고 안전하며 4K 및 8K 해상도까지의 파일을 쉽게 처리합니다."
+        },
+        step2: {
+            title: "AI가 자동으로 Sora 워터마크 제거",
+            description: "업로드되면 당사의 전문 Sora 워터마크 제거기는 고급 AI 알고리즘을 사용하여 외과적 정밀도로 각 프레임을 분석합니다. 시스템은 배경을 완벽하게 재구성하면서 로고, 텍스트, 워터마크 및 오버레이를 포함한 모든 OpenAI Sora 브랜딩 요소를 지능적으로 감지하고 지웁니다. 당사의 AI는 부드러운 움직임 흐름을 유지하고 원래 조명을 보존하며 타임라인 전체에서 색상 일관성을 보장합니다. 완전 자동화된 프로세스는 수동 편집 기술이나 복잡한 소프트웨어 지식 없이도 몇 초 만에 깨끗하고 전문적인 결과를 제공합니다."
+        },
+        step3: {
+            title: "워터마크 없는 Sora 비디오 다운로드",
+            description: "순간적으로 완벽하고 워터마크가 없는 Sora AI 비디오가 압축 손실 없이 완전한 원본 품질로 다운로드할 준비가 됩니다. YouTube 업로드, Instagram Reels, TikTok, 전문 포트폴리오, 고객 프레젠테이션 또는 상업 캠페인에 사용할 수 있는 깨끗한 영상을 다운로드하세요. 빠르고 안정적인 Sora 제거기 기술로 브랜드가 없는 멋진 AI 비디오를 만드는 것이 그 어느 때보다 쉬워졌습니다. 방해되는 워터마크 없이 청중에게 깊은 인상을 줄 준비가 된 완벽하게 깨끗한 영화적 품질의 영상의 자유를 경험하세요."
+        }
+    }
+};
+
+
+
+
+
+
+
+
+

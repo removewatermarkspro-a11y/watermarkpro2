@@ -492,5 +492,63 @@ export const testimonialsByPage: Record<string, Testimonial[]> = {
             text: "Impressionante! A IA amplia fotos adicionando detalhes realistas. Uso para todas as minhas impressões de grande formato agora.",
             avatar: avatarPool[6]
         }
+    ],
+
+    // Free Sora Remover - Portuguese version
+    'free-sora-remover': [
+        {
+            name: "Lucas Martins",
+            role: "Criador de Vídeos IA",
+            avatar: avatarPool[0],
+            text: "Este removedor de marca d'água Sora é revolucionário! Crio muitos vídeos com OpenAI Sora e sempre tive problemas com o branding. Agora posso remover marcas d'água Sora em segundos e meu conteúdo fica completamente profissional. A IA faz um trabalho incrível - nem dá pra ver que a marca d'água estava lá!"
+        },
+        {
+            name: "Sofia Dubois",
+            role: "Gerente de Marketing de Conteúdo",
+            avatar: avatarPool[10],
+            text: "Finalmente, uma ferramenta que realmente funciona para vídeos Sora AI! Precisava remover o branding OpenAI Sora para projetos de clientes e esta ferramenta entregou perfeitamente. Super rápido, qualidade incrível e a remoção de marca d'água é impecável. Altamente recomendado para quem trabalha com conteúdo gerado por Sora!"
+        },
+        {
+            name: "Alexandre Petit",
+            role: "YouTuber e Cineasta",
+            avatar: avatarPool[1],
+            text: "Tenho usado Sora AI para gerar conteúdo de vídeo para meu canal do YouTube, mas as marcas d'água sempre foram um problema. Este removedor Sora resolveu tudo - resultados limpos e profissionais toda vez. Agora é uma parte essencial do meu fluxo de trabalho de vídeo. Vale cada centavo!"
+        },
+        {
+            name: "Maria Laurent",
+            role: "Especialista em Mídias Sociais",
+            avatar: avatarPool[11],
+            text: "O melhor removedor de marca d'água Sora que encontrei! Funciona perfeitamente em todos os meus vídeos gerados por IA. O processo automatizado é tão simples e os resultados são de qualidade broadcast. Não preciso mais passar horas tentando editar manualmente as marcas d'água. Esta ferramenta é indispensável para criadores de conteúdo!"
+        },
+        {
+            name: "Jennifer Park",
+            role: "Gerente de Mídias Sociais",
+            avatar: avatarPool[11],
+            text: "Sora cria visuais impressionantes, mas as marcas d'água não combinam com nossa marca. Esta ferramenta as remove perfeitamente, tornando o conteúdo IA pronto para mídias sociais instantaneamente!"
+        },
+        {
+            name: "Rachel Kim",
+            role: "Estrategista de Conteúdo",
+            avatar: avatarPool[12],
+            text: "Geração de vídeo IA é o futuro, mas marcas d'água limitam a usabilidade. Este removedor resolve esse problema perfeitamente. Agora posso integrar vídeos Sora perfeitamente!"
+        },
+        {
+            name: "Trevor Johnson",
+            role: "Cineasta",
+            avatar: avatarPool[3],
+            text: "Sora é incrível para vídeos conceituais, mas não posso mostrar marcas d'água para clientes. Esta ferramenta as remove instantaneamente preservando a qualidade. Absolutamente essencial!"
+        },
+        {
+            name: "Nina Rodriguez",
+            role: "Designer de Marca",
+            avatar: avatarPool[13],
+            text: "Usar vídeos gerados por IA para branding requer conteúdo limpo, sem marcas d'água. Esta ferramenta lida com marcas d'água Sora perfeitamente. Resultados profissionais em segundos!"
+        },
+        {
+            name: "Samantha Lee",
+            role: "Criadora do YouTube",
+            avatar: avatarPool[14],
+            text: "Integrar vídeos Sora no meu fluxo de trabalho de conteúdo é fácil agora. O removedor de marca d'água é rápido e preciso, mantendo meus vídeos polidos e profissionais!"
+        }
     ]
 }

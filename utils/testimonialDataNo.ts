@@ -542,6 +542,71 @@ export const testimonialDataNo: Record<string, any[]> = {
             rating: 5,
             text: "Enkel å bruke og utrolig effektiv. Oppskalerer bilder til HD på sekunder. Mine bilder ser så mye mer profesjonelle ut nå!"
         }
+    ],
+    'free-sora-remover': [
+        {
+            name: "Lucas Martin",
+            role: "AI-videoskaper",
+            avatar: avatarPool[12],
+            rating: 5,
+            text: "Denne Sora vannmerke-fjerneren er en game-changer! Jeg lager mange videoer med OpenAI Sora og var alltid plaget av branding. Nå kan jeg fjerne Sora-vannmerker på sekunder, og innholdet mitt ser helt profesjonelt ut. AI gjør en utrolig jobb - du kan ikke engang se at vannmerket var der!"
+        },
+        {
+            name: "Sofia Dubois",
+            role: "Innholdsmarkedsføringsleder",
+            avatar: avatarPool[13],
+            rating: 5,
+            text: "Endelig et verktøy som virkelig fungerer for Sora AI-videoer! Måtte fjerne OpenAI Sora-branding for klientprosjekter, og dette verktøyet leverte perfekt. Superkjapt, fantastisk kvalitet, og vannmerkefjerningen er feilfri. Sterkt anbefalt for alle som jobber med Sora-generert innhold!"
+        },
+        {
+            name: "Alexandre Petit",
+            role: "YouTuber og filmskaper",
+            avatar: avatarPool[14],
+            rating: 5,
+            text: "Har brukt Sora AI til å generere videoinnhold for YouTube-kanalen min, men vannmerkene var alltid et problem. Denne Sora-fjerneren løste alt - rene, profesjonelle resultater hver gang. Nå er det en viktig del av min videoarbeidsflyt. Verdt hver krone!"
+        },
+        {
+            name: "Maria Laurent",
+            role: "Sosiale medier-ekspert",
+            avatar: avatarPool[15],
+            rating: 5,
+            text: "Den beste Sora vannmerke-fjerneren jeg har funnet! Fungerer perfekt på alle mine AI-genererte videoer. Den automatiserte prosessen er så enkel, og resultatene er av kringkastingskvalitet. Trenger ikke lenger bruke timer på å prøve å redigere vannmerker manuelt. Dette verktøyet er essensielt for innholdsskapere!"
+        },
+        {
+            name: "Jennifer Park",
+            role: "Sosiale medier-manager",
+            avatar: avatarPool[16],
+            rating: 5,
+            text: "Sora skaper fantastiske visuelle elementer, men vannmerkene passer ikke vår merkevare. Dette verktøyet fjerner dem perfekt og gjør AI-innholdet klart for sosiale medier øyeblikkelig!"
+        },
+        {
+            name: "Rachel Kim",
+            role: "Innholdsstrateg",
+            avatar: avatarPool[17],
+            rating: 5,
+            text: "AI-videogenerering er fremtiden, men vannmerker begrenser brukervennligheten. Denne fjerneren løser det problemet perfekt. Nå kan jeg integrere Sora-videoer sømløst!"
+        },
+        {
+            name: "Trevor Johnson",
+            role: "Filmskaper",
+            avatar: avatarPool[18],
+            rating: 5,
+            text: "Sora er fantastisk for konseptvideoer, men jeg kan ikke vise vannmerker til klienter. Dette verktøyet fjerner dem øyeblikkelig samtidig som kvaliteten opprettholdes. Absolutt essensielt!"
+        },
+        {
+            name: "Nina Rodriguez",
+            role: "Merkedesigner",
+            avatar: avatarPool[19],
+            rating: 5,
+            text: "Å bruke AI-genererte videoer for merkevarebygging krever rent, vannmerkefritt innhold. Dette verktøyet håndterer Sora-vannmerker perfekt. Profesjonelle resultater på sekunder!"
+        },
+        {
+            name: "Samantha Lee",
+            role: "YouTube-skaper",
+            avatar: avatarPool[0],
+            rating: 5,
+            text: "Å integrere Sora-videoer i min innholdsarbeidsflyt er nå enkelt. Vannmerke-fjerneren er rask og nøyaktig, og holder videoene mine polerte og profesjonelle!"
+        }
     ]
 };
 

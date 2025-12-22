@@ -18,6 +18,11 @@ import ResultDisplay from '@/components/ResultDisplay'
 import RelatedTools from '@/components/RelatedTools'
 import { soraRemoverFaqItems } from '@/utils/soraRemoverFaqItems'
 import { soraRemoverFaqItemsFr } from '@/utils/soraRemoverFaqItemsFr'
+import { soraRemoverFaqItemsEs } from '@/utils/soraRemoverFaqItemsEs'
+import { soraRemoverFaqItemsDe } from '@/utils/soraRemoverFaqItemsDe'
+import { soraRemoverFaqItemsPt } from '@/utils/soraRemoverFaqItemsPt'
+import { soraRemoverFaqItemsKo } from '@/utils/soraRemoverFaqItemsKo'
+import { soraRemoverFaqItemsNo } from '@/utils/soraRemoverFaqItemsNo'
 import { soraRemoverTestimonialDataFr } from '@/utils/soraRemoverTestimonialData'
 import { useLanguage } from '@/contexts/LanguageContext'
 import { translations } from '@/locales/translations'
@@ -42,8 +47,16 @@ export default function RemoveWatermarkVideo() {
     const uploadRef = useRef<HTMLDivElement>(null)
     const playerRef = useRef<any>(null)
     const videoContainerRef = useRef<HTMLDivElement>(null)
+    const soraVideoRef = useRef<HTMLVideoElement>(null)
     const { language } = useLanguage()
     const t = (translations as any)[language] || translations.en
+
+    // Set video playback speed to 75% for smoother viewing
+    useEffect(() => {
+        if (soraVideoRef.current) {
+            soraVideoRef.current.playbackRate = 0.75
+        }
+    }, [])
     // Fallback to English for soraRemoverPage if not available in current language
     const soraPage = t?.soraRemoverPage || {
         hero: {
@@ -89,7 +102,7 @@ export default function RemoveWatermarkVideo() {
     }
 
     // Select FAQ items based on language
-    const faqItems = language === 'fr' ? soraRemoverFaqItemsFr : soraRemoverFaqItems
+    const faqItems = language === 'fr' ? soraRemoverFaqItemsFr : language === 'es' ? soraRemoverFaqItemsEs : language === 'de' ? soraRemoverFaqItemsDe : language === 'pt' ? soraRemoverFaqItemsPt : language === 'ko' ? soraRemoverFaqItemsKo : language === 'no' ? soraRemoverFaqItemsNo : soraRemoverFaqItems
 
     const handleImageUpload = (file: File, preview: string) => {
         setUploadedImage(file)
@@ -220,6 +233,7 @@ export default function RemoveWatermarkVideo() {
                             <div className={styles.featureItem}>
                                 <div className={styles.featureImage}>
                                     <video
+                                        ref={soraVideoRef}
                                         autoPlay
                                         loop
                                         muted
@@ -232,7 +246,7 @@ export default function RemoveWatermarkVideo() {
                                             display: 'block'
                                         }}
                                     >
-                                        <source src="/videos/watermark-removal-demo.mp4" type="video/mp4" />
+                                        <source src="/videos/video sora remover.mp4" type="video/mp4" />
                                         Your browser does not support the video tag.
                                     </video>
                                 </div>
@@ -252,7 +266,7 @@ export default function RemoveWatermarkVideo() {
 
                             <div className={styles.featureItem}>
                                 <div className={styles.featureImage}>
-                                    <img src="/images/features/video-page-tiktok-girls.png" alt="Remove TikTok Watermark" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '12px' }} />
+                                    <img src="/images/features/sora-page-woman-v4.png" alt="Remove Sora Watermark" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '12px' }} />
                                 </div>
                                 <div className={styles.featureContent}>
                                     <h3>{soraPage.features.feature2.title}</h3>
@@ -270,7 +284,7 @@ export default function RemoveWatermarkVideo() {
 
                             <div className={styles.featureItem}>
                                 <div className={styles.featureImage}>
-                                    <img src="/images/features/video-page-red-panda.png" alt="Video Watermark Removal" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '12px' }} />
+                                    <img src="/images/features/sora-page-man.png" alt="Sora Video Watermark Removal" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '12px' }} />
                                 </div>
                                 <div className={styles.featureContent}>
                                     <h3>{soraPage.features.feature3.title}</h3>
@@ -335,7 +349,7 @@ export default function RemoveWatermarkVideo() {
 
                     {/* FAQ Section */}
                     <FAQ items={faqItems} />
-                    <ToolsGrid customImages={{ 'tool1': '/images/tools/tool-card-video-page.png', 'tool2': '/images/tools/video-watermark-8.png', 'tool3': '/images/tools/remove-text-dark-blue.jpg', 'tool4': '/images/tools/tool-card-remove-object-video.png', 'tool5': '/images/tools/tool-card-replace-bg-video.png', 'tool6': '/images/tools/tool-card-remove-bg-video.png', 'tool7': '/images/tools/people-remover-street-woman.jpg', 'tool8': '/images/tools/upscaler-panther.jpg' }} />
+                    <ToolsGrid customImages={{ 'tool1': '/images/tools/sora-page-tool1.png', 'tool2': '/images/tools/sora-page-tool2.png', 'tool3': '/images/tools/sora-page-tool3.jpg', 'tool4': '/images/tools/sora-page-tool4.png', 'tool5': '/images/tools/sora-page-tool5.png', 'tool6': '/images/tools/sora-page-tool6.png', 'tool7': '/images/tools/sora-page-tool7.jpg', 'tool8': '/images/tools/sora-page-tool8.jpg', 'tool9': '/images/tools/sora-remover-9.png' }} />
                 </div>
             </main>
             <Footer />

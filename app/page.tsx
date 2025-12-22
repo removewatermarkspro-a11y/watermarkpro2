@@ -230,7 +230,8 @@ export default function WatermarkRemover() {
                             'tool5': '/images/tools/tool-card-replace-bg-home.png',
                             'tool6': '/images/tools/tool-card-remove-bg-home.png',
                             'tool7': '/images/tools/people-remover-street-man.jpg',
-                            'tool8': '/images/tools/upscaler-panda.jpg'
+                            'tool8': '/images/tools/upscaler-panda.jpg',
+                            'tool9': '/images/tools/sora-remover-1.png'
                         }}
                     />
                 </div>

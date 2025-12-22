@@ -301,7 +301,7 @@ export default function RemoveWatermarkVideo() {
                                             language === 'no' ? videoWatermarkFaqItemsNo :
                                                 commonFaqItems
                     } />
-                    <ToolsGrid customImages={{ 'tool1': '/images/tools/tool-card-video-page.png', 'tool2': '/images/tools/video-watermark-8.png', 'tool3': '/images/tools/remove-text-dark-blue.jpg', 'tool4': '/images/tools/tool-card-remove-object-video.png', 'tool5': '/images/tools/tool-card-replace-bg-video.png', 'tool6': '/images/tools/tool-card-remove-bg-video.png', 'tool7': '/images/tools/people-remover-street-woman.jpg', 'tool8': '/images/tools/upscaler-panther.jpg' }} />
+                    <ToolsGrid customImages={{ 'tool1': '/images/tools/tool-card-video-page.png', 'tool2': '/images/tools/video-watermark-8.png', 'tool3': '/images/tools/remove-text-dark-blue.jpg', 'tool4': '/images/tools/tool-card-remove-object-video.png', 'tool5': '/images/tools/tool-card-replace-bg-video.png', 'tool6': '/images/tools/tool-card-remove-bg-video.png', 'tool7': '/images/tools/people-remover-street-woman.jpg', 'tool8': '/images/tools/upscaler-panther.jpg', 'tool9': '/images/tools/sora-remover-2.png' }} />
                 </div>
             </main>
             <Footer />
