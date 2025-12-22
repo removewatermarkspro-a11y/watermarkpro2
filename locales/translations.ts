@@ -2120,17 +2120,6 @@ const enTranslations = (translations as any).en;
         resendText: "No recibiste el código?",
         resendLink: "Reenviar"
     },
-    accountPage: {
-        pricing: "Precios",
-        billingCycle: "Ciclo de facturación actual",
-        changePlan: "Cambiar plan",
-        cancelSubscription: "Cancelar suscripción",
-        warningFree: "Tu suscripción gratuita de Remove watermark pro termina el {{date}} - actualiza ahora para seguir disfrutando de nuestros servicios!",
-        warningPro: "Tu suscripción Pro de Remove watermark pro termina el {{date}} - actualiza ahora para seguir disfrutando de nuestros servicios!",
-        myAccount: "Mi cuenta",
-        name: "Nombre",
-        email: "Correo electrónico"
-    },
     promoPopup: {
         badge: "OFERTA ESPECIAL",
         title: "¡Obtén 50% de descuento en tu primer mes!",
