@@ -2554,7 +2554,7 @@ const enTranslations = (translations as any).en;
 
 // Add Portuguese using English as base
 (translations as any).pt = {
-    ...enTranslations,
+    ...translations.en,
     // Override with Portuguese translations for common elements
     hero: {
         titleHighlight: "Grátis",
