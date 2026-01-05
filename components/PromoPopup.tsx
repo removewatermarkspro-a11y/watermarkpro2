@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import styles from './PromoPopup.module.css'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 interface PromoPopupProps {
     isOpen: boolean
@@ -63,7 +64,8 @@ export default function PromoPopup({ isOpen, onClose }: PromoPopupProps) {
     }
 
     const handleGoToPricing = () => {
-        router.push('/pricing')
+        const pricingUrl = language === 'fr' ? '/fr/tarifs' : language === 'de' ? '/de/preise' : language === 'es' ? '/es/precios' : language === 'pt' ? '/pt/precos' : language === 'ko' ? '/ko/pricing' : language === 'no' ? '/no/priser' : '/pricing'
+        router.push(pricingUrl)
         onClose()
     }
 

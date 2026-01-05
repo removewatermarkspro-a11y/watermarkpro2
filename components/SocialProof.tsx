@@ -1,4 +1,6 @@
 import { testimonialsByPage } from '@/utils/testimonialData'
+import { useLanguage } from '@/contexts/LanguageContext'
+import { translations } from '@/locales/translations'
 import styles from './SocialProof.module.css'
 
 interface SocialProofProps {
@@ -7,6 +9,9 @@ interface SocialProofProps {
 }
 
 export default function SocialProof({ showAvatars = true, pageId = 'home' }: SocialProofProps) {
+    const { language } = useLanguage()
+    const t = (translations as any)[language] || translations.en
+
     // Get testimonials for the current page, or fallback to home
     const pageTestimonials = testimonialsByPage[pageId] || testimonialsByPage['home']
 
@@ -28,7 +33,7 @@ export default function SocialProof({ showAvatars = true, pageId = 'home' }: Soc
                     <div className={styles.avatarCount}>+20K</div>
                 </div>
             )}
-            <p className={styles.text}>Trusted by 20,000+ users</p>
+            <p className={styles.text}>{t.testimonialsCta?.trustedBadge || 'Trusted by 20,000+ users'}</p>
         </div>
     )
 }

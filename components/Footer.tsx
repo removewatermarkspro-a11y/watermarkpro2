@@ -28,28 +28,30 @@ export default function Footer() {
                     <div className={styles.section}>
                         <h4 className={styles.title}>{t.footer.features}</h4>
                         <ul className={styles.links}>
-                            <li><Link href="/">{t.footer.watermarkRemover}</Link></li>
-                            <li><Link href="/remove-background">{t.footer.removeBackground}</Link></li>
-                            <li><Link href="/replace-background">{t.footer.replaceBackground}</Link></li>
-                            <li><Link href="/remove-object">{t.footer.removeObject}</Link></li>
+                            <li><Link href={language === 'fr' ? '/fr/enlever-filigrane' : language === 'de' ? '/de/wasserzeichen-entfernen' : language === 'es' ? '/es/eliminar-marca-agua' : language === 'pt' ? '/pt/remover-marca-dagua' : language === 'ko' ? '/ko/watermark-remover' : language === 'no' ? '/no/fjern-vannmerke' : '/watermark-remover'}>{t.footer.watermarkRemover}</Link></li>
+                            <li><Link href={language === 'fr' ? '/fr/enlever-filigrane-video' : language === 'de' ? '/de/wasserzeichen-entfernen-video' : language === 'es' ? '/es/eliminar-marca-agua-video' : language === 'pt' ? '/pt/remover-marca-dagua-video' : language === 'ko' ? '/ko/watermark-remover-video' : language === 'no' ? '/no/fjern-vannmerke-video' : '/remove-watermark-video'}>{t.footer.videoWatermark}</Link></li>
+                            <li><Link href={language === 'fr' ? '/fr/supprimer-arriere-plan' : language === 'de' ? '/de/hintergrund-entfernen' : language === 'es' ? '/es/eliminar-fondo-imagen' : language === 'pt' ? '/pt/remover-fundo-imagem' : language === 'ko' ? '/ko/background-remover' : language === 'no' ? '/no/fjern-bakgrunn' : '/background-remover'}>{t.footer.removeBackground}</Link></li>
+                            <li><Link href={language === 'fr' ? '/fr/changer-arriere-plan' : language === 'de' ? '/de/hintergrund-wechseln' : language === 'es' ? '/es/cambiar-fondo-imagen' : language === 'pt' ? '/pt/trocar-fundo-imagem' : language === 'ko' ? '/ko/background-changer-ai' : language === 'no' ? '/no/endre-bakgrunn' : '/background-changer-ai'}>{t.footer.replaceBackground}</Link></li>
+                            <li><Link href={language === 'fr' ? '/fr/supprimer-objet-image' : language === 'de' ? '/de/objekt-entfernen' : language === 'es' ? '/es/eliminar-objeto-imagen' : language === 'pt' ? '/pt/remover-objeto-imagem' : language === 'ko' ? '/ko/object-remover-ai' : language === 'no' ? '/no/fjern-objekt-fra-bilde' : '/object-remover-ai'}>{t.footer.removeObject}</Link></li>
                         </ul>
                     </div>
 
                     <div className={styles.section}>
                         <h4 className={styles.title}>{t.footer.moreTools}</h4>
                         <ul className={styles.links}>
-                            <li><Link href="/remove-text">{t.footer.removeText}</Link></li>
-                            <li><Link href="/auto-remove-people">{t.footer.autoRemovePeople}</Link></li>
-                            <li><Link href="/image-upscaler">{t.footer.imageUpscaler}</Link></li>
+                            <li><Link href={language === 'fr' ? '/fr/supprimer-texte-image' : language === 'de' ? '/de/text-entfernen' : language === 'es' ? '/es/eliminar-texto-imagen' : language === 'pt' ? '/pt/remover-texto-imagem' : language === 'ko' ? '/ko/text-remover-ai' : language === 'no' ? '/no/fjern-tekst-fra-bilde' : '/text-remover-ai'}>{t.footer.removeText}</Link></li>
+                            <li><Link href={language === 'fr' ? '/fr/effacer-personnes-photo' : language === 'de' ? '/de/personen-entfernen' : language === 'es' ? '/es/eliminar-personas-foto' : language === 'pt' ? '/pt/remover-pessoas-foto' : language === 'ko' ? '/ko/people-remover-ai' : language === 'no' ? '/no/fjern-personer-foto' : '/people-remover-ai'}>{t.footer.autoRemovePeople}</Link></li>
+                            <li><Link href={language === 'fr' ? '/fr/agrandir-image' : language === 'de' ? '/de/bild-hochskalieren' : language === 'es' ? '/es/mejorar-calidad-imagen' : language === 'pt' ? '/pt/melhorar-qualidade-imagem' : language === 'ko' ? '/ko/image-upscaler-ai' : language === 'no' ? '/no/forbedre-bildekvalitet' : '/image-upscaler-ai'}>{t.footer.imageUpscaler}</Link></li>
+                            <li><Link href={language === 'fr' ? '/fr/enlever-filigrane-sora' : language === 'de' ? '/de/sora-wasserzeichen-entfernen' : language === 'es' ? '/es/eliminar-marca-agua-sora' : language === 'pt' ? '/pt/remover-marca-dagua-sora' : language === 'ko' ? '/ko/sora-watermark-remover' : language === 'no' ? '/no/fjern-sora-vannmerke' : '/sora-watermark-remover'}>{t.footer.soraRemover}</Link></li>
                         </ul>
                     </div>
 
                     <div className={styles.section}>
                         <h4 className={styles.title}>{t.footer.company}</h4>
                         <ul className={styles.links}>
-                            <li><Link href="/pricing">{t.footer.pricing}</Link></li>
+                            <li><Link href={language === 'fr' ? '/fr/tarifs' : language === 'de' ? '/de/preise' : language === 'es' ? '/es/precios' : language === 'pt' ? '/pt/precos' : language === 'ko' ? '/ko/pricing' : language === 'no' ? '/no/priser' : '/pricing'}>{t.footer.pricing}</Link></li>
                             <li><Link href="/blog">{t.footer.blog}</Link></li>
-                            <li><Link href="/support">{t.footer.contact}</Link></li>
+                            <li><Link href={language === 'fr' ? '/fr/support' : language === 'de' ? '/de/support' : language === 'es' ? '/es/soporte' : language === 'pt' ? '/pt/suporte' : language === 'ko' ? '/ko/support' : language === 'no' ? '/no/support' : '/support'}>{t.footer.contact}</Link></li>
                         </ul>
                     </div>
 

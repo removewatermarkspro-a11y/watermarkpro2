@@ -34,7 +34,7 @@ export default function FAQ({ items }: FAQProps) {
                 </div>
 
                 <div className={styles.grid}>
-                    {items.map((item, index) => (
+                    {items?.map((item, index) => (
                         <div
                             key={index}
                             className={`${styles.item} ${openIndex === index ? styles.itemOpen : ''}`}

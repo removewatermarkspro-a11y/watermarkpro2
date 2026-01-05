@@ -21,25 +21,48 @@ const defaultExamples: Example[] = [
         title: 'Remove any watermark',
         beforeImage: '/images/hero-comparison-v2.png',
         afterImage: '/images/hero-comparison-v2.png',
-        link: '/'
+        link: '/watermark-remover'
     },
     {
         title: 'Instantly swap backgrounds',
         beforeImage: '/images/example-swap-background-v2.png',
         afterImage: '/images/example-swap-background-v2.png',
-        link: '/replace-background'
+        link: '/background-changer-ai'
     },
     {
         title: 'Remove unwanted object',
         beforeImage: '/images/example-remove-object.png',
         afterImage: '/images/example-remove-object.png',
-        link: '/remove-object'
+        link: '/object-remover-ai'
     }
 ]
 
 export default function ExamplesSection({ examples = defaultExamples }: ExamplesSectionProps = {}) {
     const { language } = useLanguage()
     const t = (translations as any)[language] || translations.en
+
+    // Update examples with language-aware URLs
+    const localizedExamples = examples.map(example => {
+        if (example.title === 'Remove any watermark') {
+            return {
+                ...example,
+                link: language === 'fr' ? '/fr/enlever-filigrane' : language === 'de' ? '/de/wasserzeichen-entfernen' : language === 'es' ? '/es/eliminar-marca-agua' : language === 'pt' ? '/pt/remover-marca-dagua' : language === 'ko' ? '/ko/watermark-remover' : language === 'no' ? '/no/fjern-vannmerke' : '/watermark-remover'
+            }
+        }
+        if (example.title === 'Remove unwanted object') {
+            return {
+                ...example,
+                link: language === 'fr' ? '/fr/supprimer-objet-image' : language === 'de' ? '/de/objekt-entfernen' : language === 'es' ? '/es/eliminar-objeto-imagen' : language === 'pt' ? '/pt/remover-objeto-imagem' : language === 'ko' ? '/ko/object-remover-ai' : language === 'no' ? '/no/fjern-objekt-fra-bilde' : '/object-remover-ai'
+            }
+        }
+        if (example.title === 'Instantly swap backgrounds') {
+            return {
+                ...example,
+                link: language === 'fr' ? '/fr/changer-arriere-plan' : language === 'de' ? '/de/hintergrund-wechseln' : language === 'es' ? '/es/cambiar-fondo-imagen' : language === 'pt' ? '/pt/trocar-fundo-imagem' : language === 'ko' ? '/ko/background-changer-ai' : language === 'no' ? '/no/endre-bakgrunn' : '/background-changer-ai'
+            }
+        }
+        return example
+    })
 
     // Map English titles to translated titles
     const getTranslatedTitle = (title: string) => {
@@ -52,7 +75,7 @@ export default function ExamplesSection({ examples = defaultExamples }: Examples
     return (
         <section className={styles.examples}>
             <div className={styles.grid}>
-                {examples.map((example, index) => (
+                {localizedExamples.map((example, index) => (
                     <div key={index} className={styles.card}>
                         <div className={styles.imageComparison} style={{ padding: 0, overflow: 'hidden', display: 'block', position: 'relative' }}>
                             <span className={styles.labelLeft}>{t.examples.before}</span>

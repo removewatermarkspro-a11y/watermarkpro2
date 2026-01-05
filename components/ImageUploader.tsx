@@ -14,6 +14,7 @@ interface ImageUploaderProps {
     acceptedFormats?: string
     uploadText?: string
     formatText?: string
+    processingText?: string
     isAuthenticated?: boolean
     onAuthRequired?: () => void
 }
@@ -23,6 +24,7 @@ export default function ImageUploader({
     acceptedFormats = 'image/jpeg,image/png,image/webp,image/jpg',
     uploadText,
     formatText,
+    processingText,
     isAuthenticated = true,
     onAuthRequired
 }: ImageUploaderProps) {
@@ -154,7 +156,7 @@ export default function ImageUploader({
 
     return (
         <>
-            <ProcessingPopup isOpen={isProcessing} />
+            <ProcessingPopup isOpen={isProcessing} processingText={processingText} />
             <NoCreditsPopup isOpen={showNoCreditsPopup} onClose={() => setShowNoCreditsPopup(false)} />
             <div className={styles.uploader}>
                 <div
