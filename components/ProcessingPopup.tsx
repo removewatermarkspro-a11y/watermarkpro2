@@ -7,9 +7,10 @@ import { translations } from '@/locales/translations'
 
 interface ProcessingPopupProps {
     isOpen: boolean
+    processingText?: string
 }
 
-export default function ProcessingPopup({ isOpen }: ProcessingPopupProps) {
+export default function ProcessingPopup({ isOpen, processingText }: ProcessingPopupProps) {
     const { language } = useLanguage()
     const t = (translations as any)[language] || translations.en
     useEffect(() => {
@@ -39,7 +40,7 @@ export default function ProcessingPopup({ isOpen }: ProcessingPopupProps) {
                     </div>
                 </div>
 
-                <h2 className={styles.title}>{t.processingPopup.title}</h2>
+                <h2 className={styles.title}>{processingText || t.processingPopup.title}</h2>
                 <p className={styles.subtitle}>{t.processingPopup.subtitle}</p>
 
                 <div className={styles.dots}>

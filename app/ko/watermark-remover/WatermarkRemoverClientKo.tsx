@@ -1,0 +1,245 @@
+'use client'
+
+import { useState, useRef } from 'react'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
+import CategoryTabs from '@/components/CategoryTabs'
+import SocialProof from '@/components/SocialProof'
+import RatingBadges from '@/components/RatingBadges'
+import ImageUploader from '@/components/ImageUploader'
+import ExamplesSection from '@/components/ExamplesSection'
+import Pricing from '@/components/Pricing'
+import Testimonials from '@/components/Testimonials'
+import FAQ from '@/components/FAQ'
+import ToolsGrid from '@/components/ToolsGrid'
+import { commonFaqItemsKo } from '@/utils/commonFaqItemsKo'
+import AuthPopup from '@/components/AuthPopup'
+import ResultDisplay from '@/components/ResultDisplay'
+import RelatedTools from '@/components/RelatedTools'
+import { useAuth } from '@/contexts/AuthContext'
+import { translations } from '@/locales/translations'
+import styles from '@/app/watermark-remover/watermark.module.css'
+
+export default function WatermarkRemoverClientKo() {
+    const [uploadedImage, setUploadedImage] = useState<File | null>(null)
+    const [originalPreview, setOriginalPreview] = useState<string | null>(null)
+    const [processedImage, setProcessedImage] = useState<string | null>(null)
+    const [showAuthPopup, setShowAuthPopup] = useState(false)
+    const uploadRef = useRef<HTMLDivElement>(null)
+    const { user } = useAuth()
+
+    // Force Korean language
+    const t = (translations as any).ko
+
+    const handleImageUpload = (file: File, preview: string) => {
+        setUploadedImage(file)
+        setOriginalPreview(preview)
+        setProcessedImage(preview)
+    }
+
+    const handleAuthClose = () => {
+        setShowAuthPopup(false)
+    }
+
+    const handleDownload = () => {
+        if (!processedImage) return
+        const link = document.createElement('a')
+        link.href = processedImage
+        link.download = 'processed-image.png'
+        link.click()
+    }
+
+    const handleGenerateNew = () => {
+        setUploadedImage(null)
+        setOriginalPreview(null)
+        setProcessedImage(null)
+
+        setTimeout(() => {
+            if (uploadRef.current) {
+                uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' })
+            }
+        }, 100)
+    }
+
+    const handleGetStarted = () => {
+        if (!user) {
+            // User not authenticated - show auth popup
+            setShowAuthPopup(true)
+        } else {
+            // User authenticated - scroll to upload section
+            if (uploadRef.current) {
+                uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' })
+            }
+        }
+    }
+
+    return (
+        <>
+            <Header />
+            <main className={styles.main}>
+                <div className="container">
+                    <section className={styles.hero}>
+                        <SocialProof pageId="home" />
+
+                        <h1 className={styles.title}>
+                            <span className={styles.violetText}>{t.hero.titleHighlight}</span> {t.hero.titleMain}
+                        </h1>
+
+                        <p className={styles.description}>
+                            {t.hero.description}
+                        </p>
+
+                        <CategoryTabs />
+
+                        <div ref={uploadRef} className={styles.uploadSection}>
+                            <ImageUploader
+                                onImageUpload={handleImageUpload}
+                                isAuthenticated={!!user}
+                                onAuthRequired={() => setShowAuthPopup(true)}
+                            />
+
+                            {processedImage && originalPreview && (
+                                <>
+                                    <ResultDisplay
+                                        originalImage={originalPreview}
+                                        processedImage={processedImage}
+                                        onDownload={handleDownload}
+                                        onGenerateNew={handleGenerateNew}
+                                    />
+                                    <RelatedTools />
+                                </>
+                            )}
+                        </div>
+
+                        <div className={styles.ratingsBelow}>
+                            <RatingBadges />
+                        </div>
+                    </section>
+
+                    <ExamplesSection />
+
+                    <section className={styles.features}>
+                        <div style={{ textAlign: 'center' }}>
+                            <span className={styles.badge}>{t.features.badge}</span>
+                        </div>
+
+                        <div className={styles.featureGrid}>
+                            <div className={styles.featureItem}>
+                                <div className={styles.featureImage} style={{ padding: 0, overflow: 'hidden' }}>
+                                    <img
+                                        src="/images/feature-watermark-remover.png"
+                                        alt="워터마크 제거 전후 비교"
+                                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                                    />
+                                </div>
+                                <div className={styles.featureContent}>
+                                    <h3>{t.features.feature1.title}</h3>
+                                    <p className={styles.sectionText}>{t.features.feature1.description}</p>
+                                    <button className="btn btn-primary" onClick={handleGetStarted}>
+                                        {t.features.feature1.button}
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div className={styles.featureItem}>
+                                <div className={styles.featureImage} style={{ padding: 0, overflow: 'hidden' }}>
+                                    <img
+                                        src="/images/feature-tiktok-remover-v2.png"
+                                        alt="TikTok 워터마크 제거 전후 비교"
+                                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                                    />
+                                </div>
+                                <div className={styles.featureContent}>
+                                    <h3>{t.features.feature2.title}</h3>
+                                    <p className={styles.sectionText}>{t.features.feature2.description}</p>
+                                    <button className="btn btn-primary" onClick={handleGetStarted}>
+                                        {t.features.feature2.button}
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div className={styles.featureItem}>
+                                <div className={styles.featureImage} style={{ padding: 0, overflow: 'hidden' }}>
+                                    <img
+                                        src="/images/feature-watermark-remover-3.jpg"
+                                        alt="워터마크 제거 완전한 솔루션"
+                                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                                    />
+                                </div>
+                                <div className={styles.featureContent}>
+                                    <h3>{t.features.feature3.title}</h3>
+                                    <p className={styles.sectionText}>{t.features.feature3.description}</p>
+                                    <button className="btn btn-primary" onClick={handleGetStarted}>
+                                        {t.features.feature3.button}
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section className={styles.howItWorks}>
+                        <div style={{ textAlign: 'center' }}>
+                            <span className={styles.badge}>{t.howItWorks.badge}</span>
+                            <h2 className={styles.sectionTitle}>{t.howItWorks.title}</h2>
+                        </div>
+
+                        <div className={styles.steps}>
+                            <div className={styles.step}>
+                                <div className={styles.stepNumber}>1</div>
+                                <h3 className={styles.stepTitle}>{t.howItWorks.step1.title}</h3>
+                                <p className={styles.stepText}>{t.howItWorks.step1.description}</p>
+                            </div>
+
+                            <div className={styles.step}>
+                                <div className={styles.stepNumber}>2</div>
+                                <h3 className={styles.stepTitle}>{t.howItWorks.step2.title}</h3>
+                                <p className={styles.stepText}>{t.howItWorks.step2.description}</p>
+                            </div>
+
+                            <div className={styles.step}>
+                                <div className={styles.stepNumber}>3</div>
+                                <h3 className={styles.stepTitle}>{t.howItWorks.step3.title}</h3>
+                                <p className={styles.stepText}>{t.howItWorks.step3.description}</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <Pricing />
+                    <Testimonials
+                        pageId="home"
+                        onCtaClick={() => {
+                            if (uploadRef.current) {
+                                uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' })
+                            }
+                        }}
+                    />
+                    <FAQ items={commonFaqItemsKo} />
+                    <ToolsGrid
+                        customImages={{
+                            'tool1': '/images/tools/watermark-remover.png',
+                            'tool2': '/images/tools/video-watermark-home.png',
+                            'tool3': '/images/tools/remove-text-green.jpg',
+                            'tool4': '/images/tools/tool-card-remove-object-home.png',
+                            'tool5': '/images/tools/tool-card-replace-bg-home.png',
+                            'tool6': '/images/tools/tool-card-remove-bg-home.png',
+                            'tool7': '/images/tools/people-remover-street-man.jpg',
+                            'tool8': '/images/tools/upscaler-panda.jpg',
+                            'tool9': '/images/tools/sora-remover-1.png'
+                        }}
+                    />
+                </div>
+            </main>
+            <Footer />
+            <AuthPopup isOpen={showAuthPopup} onClose={handleAuthClose} />
+        </>
+    )
+}

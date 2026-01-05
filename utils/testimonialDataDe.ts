@@ -24,6 +24,64 @@ const avatarPool = [
 
 // Témoignages allemands par page
 export const testimonialDataDe: { [key: string]: Array<{ name: string; role: string; text: string; avatar: string }> } = {
+    // Home page - same as watermark-remover
+    'home': [
+        {
+            name: "Thomas Müller",
+            role: "Professioneller Fotograf",
+            text: "Wasserzeichen von Stockfotos zu entfernen ist jetzt mühelos. Die KI bewahrt die Qualität perfekt. Unverzichtbar für meine Arbeit!",
+            avatar: avatarPool[0]
+        },
+        {
+            name: "Anna Schmidt",
+            role: "Content Creator",
+            text: "TikTok-Wasserzeichen in Sekunden entfernen! Meine Videos sehen jetzt so professionell aus. Absolut beeindruckendes Tool!",
+            avatar: avatarPool[1]
+        },
+        {
+            name: "Michael Weber",
+            role: "Grafikdesigner",
+            text: "Logos und Text von Bildern für Kundenprojekte zu entfernen spart Stunden. Die Ergebnisse sind immer sauber und natürlich.",
+            avatar: avatarPool[2]
+        },
+        {
+            name: "Sophie Fischer",
+            role: "Social Media Manager",
+            text: "Wasserzeichen von heruntergeladenen Bildern zu entfernen ist so schnell. Ich kann meine Beiträge mühelos bereinigen!",
+            avatar: avatarPool[3]
+        },
+        {
+            name: "Lukas Becker",
+            role: "Video Editor",
+            text: "Wasserzeichen aus Videos zu entfernen war noch nie so einfach. Die KI macht es automatisch. Riesiger Zeitsparer!",
+            avatar: avatarPool[4]
+        },
+        {
+            name: "Emma Hoffmann",
+            role: "Marketingdirektorin",
+            text: "Wir verwenden dies, um Bilder für Kampagnen zu bereinigen. Wasserzeichen zu entfernen ist nahtlos und die Qualität ist erstklassig.",
+            avatar: avatarPool[5]
+        },
+        {
+            name: "Felix Wagner",
+            role: "Freiberuflicher Designer",
+            text: "Wasserzeichen von Fotos für Kunden zu entfernen ist jetzt sofort. Die KI erstellt perfekte, saubere Ergebnisse jedes Mal.",
+            avatar: avatarPool[6]
+        },
+        {
+            name: "Laura Schulz",
+            role: "Reisebloggerin",
+            text: "Wasserzeichen von meinen Reisefotos zu entfernen macht sie teilbar. Meine Galerie sieht jetzt so viel besser aus!",
+            avatar: avatarPool[7]
+        },
+        {
+            name: "Jonas Richter",
+            role: "Markendesigner",
+            text: "Wasserzeichen von Bildern für Kundenprojekte zu entfernen ist mühelos. Die KI macht alles professionell und sauber.",
+            avatar: avatarPool[8]
+        }
+    ],
+
     // Watermark Remover - Version allemande
     'watermark-remover': [
         {

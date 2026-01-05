@@ -17,17 +17,17 @@ export default function RelatedTools() {
         {
             title: t.relatedTools.tool1.title,
             description: t.relatedTools.tool1.description,
-            link: "/remove-object"
+            link: "/object-remover-ai"
         },
         {
             title: t.relatedTools.tool2.title,
             description: t.relatedTools.tool2.description,
-            link: "/remove-background"
+            link: "/background-remover"
         },
         {
             title: t.relatedTools.tool3.title,
             description: t.relatedTools.tool3.description,
-            link: "/replace-background"
+            link: "/background-changer-ai"
         }
     ]
 

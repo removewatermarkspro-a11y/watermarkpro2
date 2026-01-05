@@ -10,12 +10,24 @@ export default function AuthCallback() {
     useEffect(() => {
         // Handle the OAuth callback
         supabase.auth.getSession().then(({ data: { session } }) => {
+            // Get user's language preference from localStorage
+            const userLanguage = localStorage.getItem('language') || 'en'
+
+            // Determine redirect URL based on language
+            let redirectUrl = '/watermark-remover' // default English
+            if (userLanguage === 'fr') redirectUrl = '/fr/enlever-filigrane'
+            else if (userLanguage === 'de') redirectUrl = '/de/wasserzeichen-entfernen'
+            else if (userLanguage === 'es') redirectUrl = '/es/eliminar-marca-agua'
+            else if (userLanguage === 'pt') redirectUrl = '/pt/remover-marca-dagua'
+            else if (userLanguage === 'ko') redirectUrl = '/ko/watermark-remover'
+            else if (userLanguage === 'no') redirectUrl = '/no/fjern-vannmerke'
+
             if (session) {
-                // Redirect to home page after successful auth
-                router.push('/')
+                // Redirect to language-appropriate page after successful auth
+                router.push(redirectUrl)
             } else {
-                // If no session, redirect to home anyway
-                router.push('/')
+                // If no session, redirect to language-appropriate page anyway
+                router.push(redirectUrl)
             }
         })
     }, [router])

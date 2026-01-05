@@ -645,3 +645,6 @@ export const imageUpscalerFaqItemsDe = [
         answer: "Sie können es mit einem anderen Guthaben erneut versuchen, aber es werden keine Rückerstattungen gewährt. Unser Tool ist sehr genau, aber die Ergebnisse können je nach Bild variieren."
     }
 ]
+
+// Export common FAQ items for German (uses watermark removal FAQs as default)
+export const commonFaqItemsDe = watermarkRemovalFaqItemsDe
