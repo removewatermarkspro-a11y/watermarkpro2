@@ -21,19 +21,24 @@ import { commonFaqItemsKo } from '@/utils/commonFaqItemsKo'
 import AuthPopup from '@/components/AuthPopup'
 import ResultDisplay from '@/components/ResultDisplay'
 import RelatedTools from '@/components/RelatedTools'
+import ProcessingPopup from '@/components/ProcessingPopup'
 import { useAuth } from '@/contexts/AuthContext'
 import { useLanguage } from '@/contexts/LanguageContext'
+import { useImageEdit } from '@/hooks/useImageEdit'
 import { translations } from '@/locales/translations'
 import styles from '@/app/watermark-remover/watermark.module.css'
 
 export default function WatermarkRemoverClient() {
     const [uploadedImage, setUploadedImage] = useState<File | null>(null)
     const [originalPreview, setOriginalPreview] = useState<string | null>(null)
-    const [processedImage, setProcessedImage] = useState<string | null>(null)
     const [showAuthPopup, setShowAuthPopup] = useState(false)
     const uploadRef = useRef<HTMLDivElement>(null)
     const { user } = useAuth()
     const { language } = useLanguage()
+    const { editImage, isLoading, error, editedImageUrl, reset } = useImageEdit({
+        operationType: 'watermark-remover',
+        userId: user?.id
+    })
 
     // Use current language from context
     const t = (translations as any)[language] || translations.en
@@ -50,10 +55,16 @@ export default function WatermarkRemoverClient() {
         }
     }
 
-    const handleImageUpload = (file: File, preview: string) => {
+    const handleImageUpload = async (file: File, preview: string) => {
         setUploadedImage(file)
         setOriginalPreview(preview)
-        setProcessedImage(preview)
+
+        // Call Qwen API to remove watermark
+        try {
+            await editImage({ imageFile: file })
+        } catch (err) {
+            console.error('Error removing watermark:', err)
+        }
     }
 
     const handleAuthClose = () => {
@@ -61,9 +72,9 @@ export default function WatermarkRemoverClient() {
     }
 
     const handleDownload = () => {
-        if (!processedImage) return
+        if (!editedImageUrl) return
         const link = document.createElement('a')
-        link.href = processedImage
+        link.href = editedImageUrl
         link.download = 'processed-image.png'
         link.click()
     }
@@ -71,7 +82,7 @@ export default function WatermarkRemoverClient() {
     const handleGenerateNew = () => {
         setUploadedImage(null)
         setOriginalPreview(null)
-        setProcessedImage(null)
+        reset()
 
         setTimeout(() => {
             if (uploadRef.current) {
@@ -117,11 +128,11 @@ export default function WatermarkRemoverClient() {
                                 onAuthRequired={() => setShowAuthPopup(true)}
                             />
 
-                            {processedImage && originalPreview && (
+                            {editedImageUrl && originalPreview && (
                                 <>
                                     <ResultDisplay
                                         originalImage={originalPreview}
-                                        processedImage={processedImage}
+                                        processedImage={editedImageUrl}
                                         onDownload={handleDownload}
                                         onGenerateNew={handleGenerateNew}
                                     />
@@ -146,7 +157,7 @@ export default function WatermarkRemoverClient() {
                             <div className={styles.featureItem}>
                                 <div className={styles.featureImage} style={{ padding: 0, overflow: 'hidden' }}>
                                     <img
-                                        src="/images/feature-watermark-remover.png"
+                                        src="/images-optimized/free-watermark-remover-feature.webp"
                                         alt="Watermark Remover Before and After"
                                         style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                                     />
@@ -166,10 +177,9 @@ export default function WatermarkRemoverClient() {
                             <div className={styles.featureItem}>
                                 <div className={styles.featureImage} style={{ padding: 0, overflow: 'hidden' }}>
                                     <img
-                                        src="/images/feature-tiktok-remover-v2.png"
+                                        src="/images-optimized/remove-tiktok-watermark-ai.webp"
                                         alt="TikTok Watermark Remover Before and After"
-                                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                                    />
+                                        style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy" decoding="async" />
                                 </div>
                                 <div className={styles.featureContent}>
                                     <h3>{t.features.feature2.title}</h3>
@@ -186,10 +196,9 @@ export default function WatermarkRemoverClient() {
                             <div className={styles.featureItem}>
                                 <div className={styles.featureImage} style={{ padding: 0, overflow: 'hidden' }}>
                                     <img
-                                        src="/images/feature-watermark-remover-3.jpg"
+                                        src="/images-optimized/ai-watermark-removal-tool.webp"
                                         alt="Watermark Remover Complete Solution"
-                                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                                    />
+                                        style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy" decoding="async" />
                                 </div>
                                 <div className={styles.featureContent}>
                                     <h3>{t.features.feature3.title}</h3>
@@ -244,21 +253,22 @@ export default function WatermarkRemoverClient() {
                     <FAQ items={getFaqItems()} />
                     <ToolsGrid
                         customImages={{
-                            'tool1': '/images/tools/watermark-remover.png',
-                            'tool2': '/images/tools/video-watermark-home.png',
-                            'tool3': '/images/tools/remove-text-green.jpg',
-                            'tool4': '/images/tools/tool-card-remove-object-home.png',
-                            'tool5': '/images/tools/tool-card-replace-bg-home.png',
-                            'tool6': '/images/tools/tool-card-remove-bg-home.png',
-                            'tool7': '/images/tools/people-remover-street-man.jpg',
-                            'tool8': '/images/tools/upscaler-panda.jpg',
-                            'tool9': '/images/tools/sora-remover-1.png'
+                            'tool1': '/images-optimized/free-watermark-remover-tool.webp',
+                            'tool2': '/images-optimized/video-watermark-remover-home.webp',
+                            'tool3': '/images-optimized/text-remover-green-card.webp',
+                            'tool4': '/images-optimized/object-remover-home-tool.webp',
+                            'tool5': '/images-optimized/replace-background-home-tool.webp',
+                            'tool6': '/images-optimized/background-remover-home-tool.webp',
+                            'tool7': '/images-optimized/people-remover-street-man-card.webp',
+                            'tool8': '/images-optimized/image-upscaler-panda-card.webp',
+                            'tool9': '/images-optimized/free-sora-watermark-remover-1.webp'
                         }}
                     />
                 </div>
             </main>
             <Footer />
             <AuthPopup isOpen={showAuthPopup} onClose={handleAuthClose} />
+            <ProcessingPopup isOpen={isLoading} />
         </>
     )
 }

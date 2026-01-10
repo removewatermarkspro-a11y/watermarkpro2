@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useRef } from 'react'
+import { useState, useRef } from 'react'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import CategoryTabs from '@/components/CategoryTabs'
@@ -13,9 +13,9 @@ import Testimonials from '@/components/Testimonials'
 import FAQ from '@/components/FAQ'
 import ToolsGrid from '@/components/ToolsGrid'
 import AuthPopup from '@/components/AuthPopup'
-import PromoPopup from '@/components/PromoPopup'
 import ResultDisplay from '@/components/ResultDisplay'
 import RelatedTools from '@/components/RelatedTools'
+import ProcessingPopup from '@/components/ProcessingPopup'
 import { textRemovalFaqItems } from '@/utils/faqItems'
 import { textRemovalFaqItemsFr } from '@/utils/commonFaqItemsFr'
 import { removeTextFaqItemsDe } from '@/utils/commonFaqItemsDe'
@@ -23,71 +23,54 @@ import { textRemovalFaqItemsEs } from '@/utils/textRemovalFaqItemsEs'
 import { textRemovalFaqItemsPt } from '@/utils/textRemovalFaqItemsPt'
 import { textRemovalFaqItemsKo } from '@/utils/textRemovalFaqItemsKo'
 import { textRemovalFaqItemsNo } from '@/utils/textRemovalFaqItemsNo'
+import { useAuth } from '@/contexts/AuthContext'
 import { useLanguage } from '@/contexts/LanguageContext'
+import { useImageEdit } from '@/hooks/useImageEdit'
 import { translations } from '@/locales/translations'
 import styles from '../watermark-remover/watermark.module.css'
 
 export default function TextRemoverClient() {
     const [uploadedImage, setUploadedImage] = useState<File | null>(null)
     const [originalPreview, setOriginalPreview] = useState<string | null>(null)
-    const [isProcessing, setIsProcessing] = useState(false)
-    const [processedImage, setProcessedImage] = useState<string | null>(null)
     const [showAuthPopup, setShowAuthPopup] = useState(false)
-    const [showPromoPopup, setShowPromoPopup] = useState(false)
-    const [isAuthenticated, setIsAuthenticated] = useState(false)
     const uploadRef = useRef<HTMLDivElement>(null)
+    const { user } = useAuth()
     const { language } = useLanguage()
+    const { editImage, isLoading, error, editedImageUrl, reset } = useImageEdit({
+        operationType: 'remove-text',
+        userId: user?.id
+    })
     // Force English language
     const t = (translations as any).en
 
-    useEffect(() => {
-        const authenticated = localStorage.getItem('userAuthenticated') === 'true'
-        setIsAuthenticated(authenticated)
-    }, [])
-
-    const handleImageUpload = (file: File, preview: string) => {
+    const handleImageUpload = async (file: File, preview: string) => {
         setUploadedImage(file)
         setOriginalPreview(preview)
-        setProcessedImage(preview) // Simulated processed image
-    }
 
-    const handleProcess = async () => {
-        if (!uploadedImage) return
-        const credits = parseInt(localStorage.getItem('userCredits') || '0')
-        if (credits === 0) {
-            setShowPromoPopup(true)
-            return
+        // Call Qwen API to remove text
+        try {
+            await editImage({ imageFile: file })
+        } catch (err) {
+            console.error('Error removing text:', err)
         }
-        setIsProcessing(true)
-        setTimeout(() => {
-            const reader = new FileReader()
-            reader.onload = (e) => {
-                setProcessedImage(e.target?.result as string)
-                setIsProcessing(false)
-                localStorage.setItem('userCredits', (credits - 1).toString())
-            }
-            reader.readAsDataURL(uploadedImage)
-        }, 2000)
     }
 
     const handleAuthClose = () => {
         setShowAuthPopup(false)
-        const authenticated = localStorage.getItem('userAuthenticated') === 'true'
-        setIsAuthenticated(authenticated)
     }
 
     const handleDownload = () => {
-        if (!processedImage) return
+        if (!editedImageUrl) return
         const link = document.createElement('a')
-        link.href = processedImage
-        link.download = 'processed-image.png'
+        link.href = editedImageUrl
+        link.download = 'text-removed-image.png'
         link.click()
     }
 
     const handleGenerateNew = () => {
         setUploadedImage(null)
         setOriginalPreview(null)
-        setProcessedImage(null)
+        reset()
 
         setTimeout(() => {
             if (uploadRef.current) {
@@ -97,8 +80,7 @@ export default function TextRemoverClient() {
     }
 
     const handleGetStarted = () => {
-        const authenticated = localStorage.getItem('userAuthenticated') === 'true'
-        if (!authenticated) {
+        if (!user) {
             setShowAuthPopup(true)
         } else {
             if (uploadRef.current) {
@@ -124,15 +106,15 @@ export default function TextRemoverClient() {
                         <div ref={uploadRef} className={styles.uploadSection}>
                             <ImageUploader
                                 onImageUpload={handleImageUpload}
-                                isAuthenticated={isAuthenticated}
+                                isAuthenticated={!!user}
                                 onAuthRequired={() => setShowAuthPopup(true)}
                             />
 
-                            {processedImage && originalPreview && (
+                            {editedImageUrl && originalPreview && (
                                 <>
                                     <ResultDisplay
                                         originalImage={originalPreview}
-                                        processedImage={processedImage}
+                                        processedImage={editedImageUrl}
                                         onDownload={handleDownload}
                                         onGenerateNew={handleGenerateNew}
                                     />
@@ -153,7 +135,7 @@ export default function TextRemoverClient() {
                         <div className={styles.featureGrid}>
                             <div className={styles.featureItem}>
                                 <div className={styles.featureImage} style={{ padding: 0, overflow: 'hidden' }}>
-                                    <img src="/images/feature-remove-text-tablet.png" alt="Remove text from image" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                    <img src="/images-optimized/delete-text-from-photo.webp" alt="Remove text from image" style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy" decoding="async" />
                                 </div>
                                 <div className={styles.featureContent}>
                                     <h3>{t.removeTextPage.features.feature1.title}</h3>
@@ -165,7 +147,7 @@ export default function TextRemoverClient() {
                             </div>
                             <div className={styles.featureItem}>
                                 <div className={styles.featureImage} style={{ padding: 0, overflow: 'hidden' }}>
-                                    <img src="/images/feature-remove-text-tshirt.jpg" alt="Fast text removal" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                    <img src="/images-optimized/remove-text-from-tshirt-photo.webp" alt="Fast text removal" style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy" decoding="async" />
                                 </div>
                                 <div className={styles.featureContent}>
                                     <h3>{t.removeTextPage.features.feature2.title}</h3>
@@ -177,7 +159,7 @@ export default function TextRemoverClient() {
                             </div>
                             <div className={styles.featureItem}>
                                 <div className={styles.featureImage} style={{ padding: 0, overflow: 'hidden' }}>
-                                    <img src="/images/feature-remove-text-paint.png" alt="Complete text removal solution" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                    <img src="/images-optimized/remove-text-from-image-ai.webp" alt="Complete text removal solution" style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy" decoding="async" />
                                 </div>
                                 <div className={styles.featureContent}>
                                     <h3>{t.removeTextPage.features.feature3.title}</h3>
@@ -221,12 +203,12 @@ export default function TextRemoverClient() {
                         }} />
                     <FAQ items={textRemovalFaqItems} />
 
-                    <ToolsGrid customImages={{ 'tool1': '/images/tools/tool-card-text-page.png', 'tool2': '/images/tools/video-watermark-3.png', 'tool3': '/images/tools/remove-text-light-blue.jpg', 'tool4': '/images/tools/tool-card-remove-object-text.png', 'tool5': '/images/tools/tool-card-replace-bg-text.png', 'tool6': '/images/tools/tool-card-remove-bg-text.png', 'tool7': '/images/tools/people-remover-beach-woman.jpg', 'tool8': '/images/tools/upscaler-owl.jpg', 'tool9': '/images/tools/sora-remover-3.png' }} />
+                    <ToolsGrid customImages={{ 'tool1': '/images-optimized/ai-text-remover-tool.webp', 'tool2': '/images-optimized/video-watermark-remover-3.webp', 'tool3': '/images-optimized/text-remover-light-blue-card.webp', 'tool4': '/images-optimized/remove-object-text-tool.webp', 'tool5': '/images-optimized/replace-background-text-tool.webp', 'tool6': '/images-optimized/remove-background-text-tool.webp', 'tool7': '/images-optimized/people-remover-beach-woman-card.webp', 'tool8': '/images-optimized/image-upscaler-owl-card.webp', 'tool9': '/images-optimized/free-sora-watermark-remover-3.webp' }} />
                 </div>
             </main>
             <Footer />
             <AuthPopup isOpen={showAuthPopup} onClose={handleAuthClose} />
-            <PromoPopup isOpen={showPromoPopup} onClose={() => setShowPromoPopup(false)} />
+            <ProcessingPopup isOpen={isLoading} />
         </>
     )
 }

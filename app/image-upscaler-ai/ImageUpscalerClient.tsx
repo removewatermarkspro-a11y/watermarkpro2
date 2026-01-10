@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useRef } from 'react'
+import { useState, useRef } from 'react'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import CategoryTabs from '@/components/CategoryTabs'
@@ -13,55 +13,57 @@ import Testimonials from '@/components/Testimonials'
 import FAQ from '@/components/FAQ'
 import ToolsGrid from '@/components/ToolsGrid'
 import AuthPopup from '@/components/AuthPopup'
-import PromoPopup from '@/components/PromoPopup'
 import ResultDisplay from '@/components/ResultDisplay'
 import RelatedTools from '@/components/RelatedTools'
+import ProcessingPopup from '@/components/ProcessingPopup'
 import { imageUpscalerFaqItems } from '@/utils/faqItems'
+import { useAuth } from '@/contexts/AuthContext'
 import { useLanguage } from '@/contexts/LanguageContext'
+import { useImageEdit } from '@/hooks/useImageEdit'
 import { translations } from '@/locales/translations'
 import styles from '../watermark-remover/watermark.module.css'
 
 export default function ImageUpscalerClient() {
     const [uploadedImage, setUploadedImage] = useState<File | null>(null)
     const [originalPreview, setOriginalPreview] = useState<string | null>(null)
-    const [processedImage, setProcessedImage] = useState<string | null>(null)
     const [showAuthPopup, setShowAuthPopup] = useState(false)
-    const [showPromoPopup, setShowPromoPopup] = useState(false)
-    const [isAuthenticated, setIsAuthenticated] = useState(false)
     const uploadRef = useRef<HTMLDivElement>(null)
+    const { user } = useAuth()
     const { language } = useLanguage()
+    const { editImage, isLoading, error, editedImageUrl, reset } = useImageEdit({
+        operationType: 'image-upscaler',
+        userId: user?.id
+    })
     // Force English language
     const t = (translations as any).en
 
-    useEffect(() => {
-        const authenticated = localStorage.getItem('userAuthenticated') === 'true'
-        setIsAuthenticated(authenticated)
-    }, [])
-
-    const handleImageUpload = (file: File, preview: string) => {
+    const handleImageUpload = async (file: File, preview: string) => {
         setUploadedImage(file)
         setOriginalPreview(preview)
-        setProcessedImage(preview)
+
+        try {
+            await editImage({ imageFile: file })
+        } catch (err) {
+            console.error('Error upscaling image:', err)
+        }
     }
 
     const handleAuthClose = () => {
         setShowAuthPopup(false)
-        const authenticated = localStorage.getItem('userAuthenticated') === 'true'
-        setIsAuthenticated(authenticated)
     }
 
     const handleDownload = () => {
-        if (!processedImage) return
+        if (!editedImageUrl) return
         const link = document.createElement('a')
-        link.href = processedImage
-        link.download = 'processed-image.png'
+        link.href = editedImageUrl
+        link.download = 'upscaled-image.png'
         link.click()
     }
 
     const handleGenerateNew = () => {
         setUploadedImage(null)
         setOriginalPreview(null)
-        setProcessedImage(null)
+        reset()
         setTimeout(() => {
             if (uploadRef.current) {
                 uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' })
@@ -70,8 +72,7 @@ export default function ImageUpscalerClient() {
     }
 
     const handleGetStarted = () => {
-        const authenticated = localStorage.getItem('userAuthenticated') === 'true'
-        if (!authenticated) {
+        if (!user) {
             setShowAuthPopup(true)
         } else {
             if (uploadRef.current) {
@@ -91,10 +92,10 @@ export default function ImageUpscalerClient() {
                         <p className={styles.description}>{t.imageUpscalerPage.hero.description}</p>
                         <CategoryTabs />
                         <div ref={uploadRef} className={styles.uploadSection}>
-                            <ImageUploader onImageUpload={handleImageUpload} isAuthenticated={isAuthenticated} onAuthRequired={() => setShowAuthPopup(true)} />
-                            {processedImage && originalPreview && (
+                            <ImageUploader onImageUpload={handleImageUpload} isAuthenticated={!!user} onAuthRequired={() => setShowAuthPopup(true)} />
+                            {editedImageUrl && originalPreview && (
                                 <>
-                                    <ResultDisplay originalImage={originalPreview} processedImage={processedImage} onDownload={handleDownload} onGenerateNew={handleGenerateNew} />
+                                    <ResultDisplay originalImage={originalPreview} processedImage={editedImageUrl} onDownload={handleDownload} onGenerateNew={handleGenerateNew} />
                                     <RelatedTools />
                                 </>
                             )}
@@ -111,7 +112,7 @@ export default function ImageUpscalerClient() {
                         <div className={styles.featureGrid}>
                             <div className={styles.featureItem}>
                                 <div className={styles.featureImage} style={{ padding: 0, overflow: 'hidden' }}>
-                                    <img src="/images/feature-upscale-woman.jpg" alt="Image Upscaler" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                    <img src="/images-optimized/upscale-portrait-photo-ai.webp" alt="Image Upscaler" style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy" decoding="async" />
                                 </div>
                                 <div className={styles.featureContent}>
                                     <h3>{t.imageUpscalerPage.features.feature1.title}</h3>
@@ -121,7 +122,7 @@ export default function ImageUpscalerClient() {
                             </div>
                             <div className={styles.featureItem}>
                                 <div className={styles.featureImage} style={{ padding: 0, overflow: 'hidden' }}>
-                                    <img src="/images/feature-upscale-cat-new.png" alt="Image Upscaler" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                    <img src="/images-optimized/enhance-cat-image-quality.webp" alt="Image Upscaler" style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy" decoding="async" />
                                 </div>
                                 <div className={styles.featureContent}>
                                     <h3>{t.imageUpscalerPage.features.feature2.title}</h3>
@@ -131,7 +132,7 @@ export default function ImageUpscalerClient() {
                             </div>
                             <div className={styles.featureItem}>
                                 <div className={styles.featureImage} style={{ padding: 0, overflow: 'hidden' }}>
-                                    <img src="/images/feature-upscale-boat.png" alt="Image Upscaler" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                    <img src="/images-optimized/photo-upscaler-boat-example.webp" alt="Image Upscaler" style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy" decoding="async" />
                                 </div>
                                 <div className={styles.featureContent}>
                                     <h3>{t.imageUpscalerPage.features.feature3.title}</h3>
@@ -166,12 +167,12 @@ export default function ImageUpscalerClient() {
                     <Pricing />
                     <Testimonials pageId="image-upscaler" onCtaClick={() => { if (uploadRef.current) uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' }) }} />
                     <FAQ items={imageUpscalerFaqItems} />
-                    <ToolsGrid customImages={{ 'tool1': '/images/tools/tool-card-upscaler-page.png', 'tool2': '/images/tools/video-watermark-7.png', 'tool3': '/images/tools/remove-text-lime.jpg', 'tool4': '/images/tools/tool-card-remove-object-upscaler-page.png', 'tool5': '/images/tools/tool-card-replace-bg-upscaler-page.png', 'tool6': '/images/tools/tool-card-remove-bg-upscaler-page.png', 'tool7': '/images/tools/people-remover-colosseum.jpg', 'tool8': '/images/tools/upscaler-fox.jpg', 'tool9': '/images/tools/sora-remover-8.png' }} />
+                    <ToolsGrid customImages={{ 'tool1': '/images-optimized/ai-image-upscaler-tool.webp', 'tool2': '/images-optimized/video-watermark-remover-7.webp', 'tool3': '/images-optimized/text-remover-lime-card.webp', 'tool4': '/images-optimized/remove-object-upscaler-tool.webp', 'tool5': '/images-optimized/replace-background-upscaler-tool.webp', 'tool6': '/images-optimized/remove-background-upscaler-tool.webp', 'tool7': '/images-optimized/people-remover-colosseum-card.webp', 'tool8': '/images-optimized/image-upscaler-fox-card.webp', 'tool9': '/images-optimized/free-sora-watermark-remover-8.webp' }} />
                 </div>
             </main>
             <Footer />
             <AuthPopup isOpen={showAuthPopup} onClose={handleAuthClose} />
-            <PromoPopup isOpen={showPromoPopup} onClose={() => setShowPromoPopup(false)} />
+            <ProcessingPopup isOpen={isLoading} />
         </>
     )
 }
