@@ -12,12 +12,12 @@ import Pricing from '@/components/Pricing'
 import Testimonials from '@/components/Testimonials'
 import FAQ from '@/components/FAQ'
 import ToolsGrid from '@/components/ToolsGrid'
-import { textRemovalFaqItems } from '@/utils/textRemovalFaqItems'
-import { textRemovalFaqItemsFr } from '@/utils/textRemovalFaqItemsFr'
-import { textRemovalFaqItemsDe } from '@/utils/textRemovalFaqItemsDe'
-import { textRemovalFaqItemsEs } from '@/utils/textRemovalFaqItemsEs'
-import { textRemovalFaqItemsPt } from '@/utils/textRemovalFaqItemsPt'
-import { textRemovalFaqItemsKo } from '@/utils/textRemovalFaqItemsKo'
+import { commonFaqItems } from '@/utils/faqItems'
+import { commonFaqItemsFr } from '@/utils/commonFaqItemsFr'
+import { commonFaqItemsDe } from '@/utils/commonFaqItemsDe'
+import { commonFaqItemsEs } from '@/utils/commonFaqItemsEs'
+import { commonFaqItemsPt } from '@/utils/commonFaqItemsPt'
+import { commonFaqItemsKo } from '@/utils/commonFaqItemsKo'
 import AuthPopup from '@/components/AuthPopup'
 import ResultDisplay from '@/components/ResultDisplay'
 import RelatedTools from '@/components/RelatedTools'
@@ -46,12 +46,12 @@ export default function RemoveTextClient() {
     // Get FAQ items based on current language
     const getFaqItems = () => {
         switch (language) {
-            case 'fr': return textRemovalFaqItemsFr
-            case 'de': return textRemovalFaqItemsDe
-            case 'es': return textRemovalFaqItemsEs
-            case 'pt': return textRemovalFaqItemsPt
-            case 'ko': return textRemovalFaqItemsKo
-            default: return textRemovalFaqItems
+            case 'fr': return commonFaqItemsFr
+            case 'de': return commonFaqItemsDe
+            case 'es': return commonFaqItemsEs
+            case 'pt': return commonFaqItemsPt
+            case 'ko': return commonFaqItemsKo
+            default: return commonFaqItems
         }
     }
 
@@ -107,7 +107,7 @@ export default function RemoveTextClient() {
             <main className={styles.main}>
                 <div className="container">
                     <section className={styles.hero}>
-                        <SocialProof pageId="text-removal" />
+                        <SocialProof pageId="remove-text" />
 
                         <h1 className={styles.title}>
                             <span className={styles.violetText}>{t.textRemoval?.hero?.titleHighlight || 'Free'}</span> {t.textRemoval?.hero?.titleMain || 'Text Remover from Image'}
@@ -175,7 +175,7 @@ export default function RemoveTextClient() {
 
                     <Pricing />
                     <Testimonials
-                        pageId="text-removal"
+                        pageId="remove-text"
                         onCtaClick={() => {
                             if (uploadRef.current) {
                                 uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' })
