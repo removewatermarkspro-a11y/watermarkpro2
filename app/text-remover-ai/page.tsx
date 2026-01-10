@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import TextRemoverClient from './TextRemoverClient'
-import StructuredData, { createSoftwareSchema } from '@/components/StructuredData'
+import StructuredData, { createSoftwareSchema, createFAQSchema } from '@/components/StructuredData'
+import { textRemovalFaqItems } from '@/utils/faqItems'
 
 export const metadata: Metadata = {
     title: 'Text Remover AI Free | Erase Text from Photos Instantly',

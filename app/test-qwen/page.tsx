@@ -64,7 +64,7 @@ export default function TestQwenPage() {
                 {preview && (
                     <div className={styles.preview}>
                         <h3>Image originale:</h3>
-                        <img src={preview} alt="Original" />
+                        <img src={preview} alt="Original" loading="lazy" decoding="async" />
                     </div>
                 )}
 
@@ -95,7 +95,7 @@ export default function TestQwenPage() {
             {editedImageUrl && (
                 <div className={styles.result}>
                     <h3>✨ Image éditée:</h3>
-                    <img src={editedImageUrl} alt="Edited" />
+                    <img src={editedImageUrl} alt="Edited" loading="lazy" decoding="async" />
                     <div className={styles.actions}>
                         <a
                             href={editedImageUrl}

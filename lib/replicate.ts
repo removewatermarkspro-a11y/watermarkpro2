@@ -7,14 +7,14 @@ const replicate = new Replicate({
 
 // Prompt mapping for different operations
 export const PROMPT_MAPPING = {
-    'watermark-remover': 'enleve le filigrane',
-    'remove-text': 'enleve le texte',
-    'remove-background': 'enleve le fond',
-    'image-upscaler': 'améliore la qualité de l\'image',
+    'watermark-remover': 'Enlève le filigrane de cette image',
+    'remove-text': 'Enlève tout le texte de cette image',
+    'remove-background': 'Enlève l\'arrière-plan de cette image',
+    'image-upscaler': 'Améliore la qualité et la résolution de cette image',
+    'auto-remove-people': 'Enlève toutes les personnes de cette image',
     // User input prompts for these:
     'remove-object': '', // User provides
     'replace-background': '', // User provides
-    'auto-remove-people': '', // User provides
 } as const
 
 export type OperationType = keyof typeof PROMPT_MAPPING
@@ -41,10 +41,10 @@ export async function editImage({
 }: EditImageParams): Promise<EditImageResult> {
     try {
         // Get the prompt based on operation type
-        let prompt = PROMPT_MAPPING[operationType]
+        let prompt: string = PROMPT_MAPPING[operationType]
 
         // Use user prompt for operations that require it
-        if (['remove-object', 'replace-background', 'auto-remove-people'].includes(operationType)) {
+        if (['remove-object', 'replace-background'].includes(operationType)) {
             if (!userPrompt || userPrompt.trim() === '') {
                 return {
                     success: false,

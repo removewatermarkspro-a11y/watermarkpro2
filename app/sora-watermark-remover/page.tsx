@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import SoraWatermarkRemoverClient from './SoraWatermarkRemoverClient'
-import StructuredData, { createSoftwareSchema } from '@/components/StructuredData'
+import StructuredData, { createSoftwareSchema, createFAQSchema } from '@/components/StructuredData'
+import { soraRemoverFaqItems } from '@/utils/soraRemoverFaqItems'
 
 export const metadata: Metadata = {
     title: 'Sora Watermark Remover | Remove OpenAI Sora Logos Instantly',
@@ -29,7 +30,7 @@ export const metadata: Metadata = {
         type: 'website',
         images: [
             {
-                url: 'https://removewatermarkspro.com/og-image-sora.jpg',
+                url: 'https://removewatermarkspro.com/og-sora-remover.jpg',
                 width: 1200,
                 height: 630,
                 alt: 'Sora Watermark Remover Tool - Before and After'
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'Free Sora Watermark Remover | Remove OpenAI Sora Logo & Branding',
         description: 'Remove Sora AI watermarks instantly. Free tool to erase OpenAI Sora logos, branding & watermarks from AI-generated videos.',
-        images: ['https://removewatermarkspro.com/og-image-sora.jpg']
+        images: ['https://removewatermarkspro.com/og-sora-remover.jpg']
     },
 
     robots: {

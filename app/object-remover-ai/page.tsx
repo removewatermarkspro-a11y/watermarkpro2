@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import ObjectRemoverClient from './ObjectRemoverClient'
-import StructuredData, { createSoftwareSchema } from '@/components/StructuredData'
+import StructuredData, { createSoftwareSchema, createFAQSchema } from '@/components/StructuredData'
+import { objectRemovalFaqItems } from '@/utils/faqItems'
 
 export const metadata: Metadata = {
     title: 'Object Remover AI Free | Delete Unwanted Objects Fast',

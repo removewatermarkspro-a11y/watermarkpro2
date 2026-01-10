@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import BackgroundRemoverClient from './BackgroundRemoverClient'
-import StructuredData, { createSoftwareSchema } from '@/components/StructuredData'
+import StructuredData, { createSoftwareSchema, createFAQSchema } from '@/components/StructuredData'
+import { backgroundRemovalFaqItems } from '@/utils/faqItems'
 
 export const metadata: Metadata = {
     title: 'Background Remover AI | Remove Photo Backgrounds in 1 Click',

@@ -64,8 +64,7 @@ export default function Testimonials({ onCtaClick, pageId = 'home' }: Testimonia
                                     alt={testimonial.name}
                                     width={48}
                                     height={48}
-                                    style={{ borderRadius: '50%', objectFit: 'cover', width: '100%', height: '100%' }}
-                                />
+                                    style={{ borderRadius: '50%', objectFit: 'cover', width: '100%', height: '100%' }} loading="lazy" decoding="async" />
                             </div>
                             <div>
                                 <div className={styles.name}>{testimonial.name}</div>

@@ -19,20 +19,20 @@ interface ExamplesSectionProps {
 const defaultExamples: Example[] = [
     {
         title: 'Remove any watermark',
-        beforeImage: '/images/hero-comparison-v2.png',
-        afterImage: '/images/hero-comparison-v2.png',
+        beforeImage: '/images-optimized/ai-watermark-remover-comparison.webp',
+        afterImage: '/images-optimized/ai-watermark-remover-comparison.webp',
         link: '/watermark-remover'
     },
     {
         title: 'Instantly swap backgrounds',
-        beforeImage: '/images/example-swap-background-v2.png',
-        afterImage: '/images/example-swap-background-v2.png',
+        beforeImage: '/images-optimized/ai-background-changer-example.webp',
+        afterImage: '/images-optimized/ai-background-changer-example.webp',
         link: '/background-changer-ai'
     },
     {
         title: 'Remove unwanted object',
-        beforeImage: '/images/example-remove-object.png',
-        afterImage: '/images/example-remove-object.png',
+        beforeImage: '/images-optimized/ai-object-removal-example.webp',
+        afterImage: '/images-optimized/ai-object-removal-example.webp',
         link: '/object-remover-ai'
     }
 ]
@@ -83,8 +83,7 @@ export default function ExamplesSection({ examples = defaultExamples }: Examples
                             <img
                                 src={example.beforeImage || example.afterImage}
                                 alt={getTranslatedTitle(example.title)}
-                                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                            />
+                                style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy" decoding="async" />
                         </div>
                         <div className={styles.cardContent}>
                             <h3 className={styles.title}>{getTranslatedTitle(example.title)}</h3>

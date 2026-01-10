@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import BackgroundReplacerClient from './BackgroundReplacerClient'
-import StructuredData, { createSoftwareSchema } from '@/components/StructuredData'
+import StructuredData, { createSoftwareSchema, createFAQSchema } from '@/components/StructuredData'
+import { replaceBackgroundFaqItems } from '@/utils/faqItems'
 
 export const metadata: Metadata = {
     title: 'Background Changer AI | Replace Photo Backgrounds Instantly',

@@ -201,6 +201,12 @@ export const translations = {
                 soraRemover: "Sora watermark remover"
             }
         },
+        // Blog Page
+        blogPage: {
+            badge: "LATEST BLOGS",
+            title: "Remove Watermark Pro Blog",
+            description: "Unlock the full potential of AI-powered image editing with our expert blog. Learn how to remove watermarks from photos and videos, enhance image quality, upscale resolution, and master advanced photo editing techniques. From free watermark removal tools to professional background editing, object removal, and AI enhancement—discover step-by-step tutorials, insider tips, and proven strategies. Perfect for content creators, photographers, social media managers, and digital marketers looking to create stunning, professional-grade visuals that drive engagement and stand out online."
+        },
         // Image Uploader
         imageUploader: {
             uploadText: "Drag your image here",
@@ -519,7 +525,7 @@ export const translations = {
                     description: "Start by uploading your photo directly from your device or dragging it into the interface. Our platform supports all common formats, making it easy to remove background from image or create transparent backgrounds with just a single click. Whether it's for product photos, portraits, or design assets, the system prepares your file instantly."
                 },
                 step2: {
-                    title: "AI 이미지 화질 개선",
+                    title: "AI removes background automatically",
                     description: "Once your image is uploaded, our powerful AI background remover analyzes every pixel to detect the subject and erase the background with high precision. This advanced tool reconstructs edges intelligently, acting as a smart background eraser capable of handling hair, shadows, and detailed textures. The process is fully automated, allowing you to remove backgrounds quickly, cleanly, and without editing skills."
                 },
                 step3: {
@@ -2180,7 +2186,7 @@ const enTranslations = (translations as any).en;
         testimonials: "Testimonios",
         credits: "créditos",
         signIn: "Iniciar sesión",
-        unlockPro: "Desbloquear Pro ahora",
+        unlockPro: "Desbloquear Pro",
         account: "Mi cuenta",
         signOut: "Cerrar sesión",
         featuresMenu: {

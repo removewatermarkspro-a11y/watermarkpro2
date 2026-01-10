@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import ImageUpscalerClient from './ImageUpscalerClient'
-import StructuredData, { createSoftwareSchema } from '@/components/StructuredData'
+import StructuredData, { createSoftwareSchema, createFAQSchema } from '@/components/StructuredData'
+import { imageUpscalerFaqItems } from '@/utils/faqItems'
 
 export const metadata: Metadata = {
     title: 'Image Upscaler AI Free | Enhance Photos to 4K Quality',

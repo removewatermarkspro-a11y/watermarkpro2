@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useRef } from 'react'
+import { useState, useRef } from 'react'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import CategoryTabs from '@/components/CategoryTabs'
@@ -13,56 +13,58 @@ import Testimonials from '@/components/Testimonials'
 import FAQ from '@/components/FAQ'
 import ToolsGrid from '@/components/ToolsGrid'
 import AuthPopup from '@/components/AuthPopup'
-import PromoPopup from '@/components/PromoPopup'
 import ResultDisplay from '@/components/ResultDisplay'
 import RelatedTools from '@/components/RelatedTools'
+import ProcessingPopup from '@/components/ProcessingPopup'
 import PromptInput from '@/components/PromptInput'
 import { peopleRemovalFaqItems } from '@/utils/faqItems'
+import { useAuth } from '@/contexts/AuthContext'
 import { useLanguage } from '@/contexts/LanguageContext'
+import { useImageEdit } from '@/hooks/useImageEdit'
 import { translations } from '@/locales/translations'
 import styles from '../watermark-remover/watermark.module.css'
 
 export default function PeopleRemoverClient() {
     const [uploadedImage, setUploadedImage] = useState<File | null>(null)
     const [originalPreview, setOriginalPreview] = useState<string | null>(null)
-    const [processedImage, setProcessedImage] = useState<string | null>(null)
     const [showAuthPopup, setShowAuthPopup] = useState(false)
-    const [showPromoPopup, setShowPromoPopup] = useState(false)
-    const [isAuthenticated, setIsAuthenticated] = useState(false)
     const uploadRef = useRef<HTMLDivElement>(null)
+    const { user } = useAuth()
     const { language } = useLanguage()
+    const { editImage, isLoading, error, editedImageUrl, reset } = useImageEdit({
+        operationType: 'auto-remove-people',
+        userId: user?.id
+    })
     // Force English language
     const t = (translations as any).en
 
-    useEffect(() => {
-        const authenticated = localStorage.getItem('userAuthenticated') === 'true'
-        setIsAuthenticated(authenticated)
-    }, [])
-
-    const handleImageUpload = (file: File, preview: string) => {
+    const handleImageUpload = async (file: File, preview: string) => {
         setUploadedImage(file)
         setOriginalPreview(preview)
-        setProcessedImage(preview)
+
+        try {
+            await editImage({ imageFile: file })
+        } catch (err) {
+            console.error('Error removing people:', err)
+        }
     }
 
     const handleAuthClose = () => {
         setShowAuthPopup(false)
-        const authenticated = localStorage.getItem('userAuthenticated') === 'true'
-        setIsAuthenticated(authenticated)
     }
 
     const handleDownload = () => {
-        if (!processedImage) return
+        if (!editedImageUrl) return
         const link = document.createElement('a')
-        link.href = processedImage
-        link.download = 'processed-image.png'
+        link.href = editedImageUrl
+        link.download = 'people-removed.png'
         link.click()
     }
 
     const handleGenerateNew = () => {
         setUploadedImage(null)
         setOriginalPreview(null)
-        setProcessedImage(null)
+        reset()
         setTimeout(() => {
             if (uploadRef.current) {
                 uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' })
@@ -71,8 +73,7 @@ export default function PeopleRemoverClient() {
     }
 
     const handleGetStarted = () => {
-        const authenticated = localStorage.getItem('userAuthenticated') === 'true'
-        if (!authenticated) {
+        if (!user) {
             setShowAuthPopup(true)
         } else {
             if (uploadRef.current) {
@@ -93,10 +94,10 @@ export default function PeopleRemoverClient() {
                         <CategoryTabs />
                         <PromptInput placeholder={t.peopleRemovalPage.hero.promptPlaceholder} />
                         <div ref={uploadRef} className={styles.uploadSection}>
-                            <ImageUploader onImageUpload={handleImageUpload} isAuthenticated={isAuthenticated} onAuthRequired={() => setShowAuthPopup(true)} />
-                            {processedImage && originalPreview && (
+                            <ImageUploader onImageUpload={handleImageUpload} isAuthenticated={!!user} onAuthRequired={() => setShowAuthPopup(true)} />
+                            {editedImageUrl && originalPreview && (
                                 <>
-                                    <ResultDisplay originalImage={originalPreview} processedImage={processedImage} onDownload={handleDownload} onGenerateNew={handleGenerateNew} />
+                                    <ResultDisplay originalImage={originalPreview} processedImage={editedImageUrl} onDownload={handleDownload} onGenerateNew={handleGenerateNew} />
                                     <RelatedTools />
                                 </>
                             )}
@@ -113,7 +114,7 @@ export default function PeopleRemoverClient() {
                         <div className={styles.featureGrid}>
                             <div className={styles.featureItem}>
                                 <div className={styles.featureImage} style={{ padding: 0, overflow: 'hidden' }}>
-                                    <img src="/images/feature-people-remover-beach-new.png" alt="People Remover" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                    <img src="/images-optimized/beach-photo-people-remover.webp" alt="People Remover" style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy" decoding="async" />
                                 </div>
                                 <div className={styles.featureContent}>
                                     <h3>{t.peopleRemovalPage.features.feature1.title}</h3>
@@ -123,7 +124,7 @@ export default function PeopleRemoverClient() {
                             </div>
                             <div className={styles.featureItem}>
                                 <div className={styles.featureImage} style={{ padding: 0, overflow: 'hidden' }}>
-                                    <img src="/images/feature-people-remover-street.jpg" alt="People Remover" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                    <img src="/images-optimized/street-people-remover-ai.webp" alt="People Remover" style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy" decoding="async" />
                                 </div>
                                 <div className={styles.featureContent}>
                                     <h3>{t.peopleRemovalPage.features.feature2.title}</h3>
@@ -133,7 +134,7 @@ export default function PeopleRemoverClient() {
                             </div>
                             <div className={styles.featureItem}>
                                 <div className={styles.featureImage} style={{ padding: 0, overflow: 'hidden' }}>
-                                    <img src="/images/feature-people-remover-plaza.jpg" alt="People Remover" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                    <img src="/images-optimized/plaza-people-removal-tool.webp" alt="People Remover" style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy" decoding="async" />
                                 </div>
                                 <div className={styles.featureContent}>
                                     <h3>{t.peopleRemovalPage.features.feature3.title}</h3>
@@ -168,12 +169,12 @@ export default function PeopleRemoverClient() {
                     <Pricing />
                     <Testimonials pageId="auto-remove-people" onCtaClick={() => { if (uploadRef.current) uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' }) }} />
                     <FAQ items={peopleRemovalFaqItems} />
-                    <ToolsGrid customImages={{ 'tool1': '/images/tools/tool-card-auto-people-page.png', 'tool2': '/images/tools/video-watermark-6.png', 'tool3': '/images/tools/remove-text-pink.jpg', 'tool4': '/images/tools/tool-card-remove-object-people-page.png', 'tool5': '/images/tools/tool-card-replace-bg-people-page.png', 'tool6': '/images/tools/tool-card-remove-bg-people-page.png', 'tool7': '/images/tools/people-remover-museum.jpg', 'tool8': '/images/tools/upscaler-tiger.jpg', 'tool9': '/images/tools/sora-remover-7.png' }} />
+                    <ToolsGrid customImages={{ 'tool1': '/images-optimized/ai-people-remover-tool.webp', 'tool2': '/images-optimized/video-watermark-remover-6.webp', 'tool3': '/images-optimized/text-remover-pink-card.webp', 'tool4': '/images-optimized/remove-object-people-tool.webp', 'tool5': '/images-optimized/replace-background-people-tool.webp', 'tool6': '/images-optimized/remove-background-people-tool.webp', 'tool7': '/images-optimized/people-remover-museum-card.webp', 'tool8': '/images-optimized/image-upscaler-tiger-card.webp', 'tool9': '/images-optimized/free-sora-watermark-remover-7.webp' }} />
                 </div>
             </main>
             <Footer />
             <AuthPopup isOpen={showAuthPopup} onClose={handleAuthClose} />
-            <PromoPopup isOpen={showPromoPopup} onClose={() => setShowPromoPopup(false)} />
+            <ProcessingPopup isOpen={isLoading} />
         </>
     )
 }

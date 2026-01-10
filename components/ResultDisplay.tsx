@@ -50,14 +50,14 @@ export default function ResultDisplay({
                 <div className="comparison-column">
                     <span className="column-label">{t.resultDisplay.before}</span>
                     <div className="image-box">
-                        <img src={originalImage} alt="Original" />
+                        <img src={originalImage} alt="Original" loading="lazy" decoding="async" />
                     </div>
                 </div>
 
                 <div className="comparison-column">
                     <span className="column-label">{t.resultDisplay.after}</span>
                     <div className="image-box processed">
-                        <img src={processedImage} alt="Processed" />
+                        <img src={processedImage} alt="Processed" loading="lazy" decoding="async" />
                         <div className="checkmark">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <path d="M5 13l4 4L19 7" stroke="#a855f7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />

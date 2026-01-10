@@ -127,7 +127,7 @@ export default function WatermarkRemoverClientKo() {
                             <div className={styles.featureItem}>
                                 <div className={styles.featureImage} style={{ padding: 0, overflow: 'hidden' }}>
                                     <img
-                                        src="/images/feature-watermark-remover.png"
+                                        src="/images-optimized/free-watermark-remover-feature.webp"
                                         alt="워터마크 제거 전후 비교"
                                         style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                                     />
@@ -147,10 +147,9 @@ export default function WatermarkRemoverClientKo() {
                             <div className={styles.featureItem}>
                                 <div className={styles.featureImage} style={{ padding: 0, overflow: 'hidden' }}>
                                     <img
-                                        src="/images/feature-tiktok-remover-v2.png"
+                                        src="/images-optimized/remove-tiktok-watermark-ai.webp"
                                         alt="TikTok 워터마크 제거 전후 비교"
-                                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                                    />
+                                        style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy" decoding="async" />
                                 </div>
                                 <div className={styles.featureContent}>
                                     <h3>{t.features.feature2.title}</h3>
@@ -167,10 +166,9 @@ export default function WatermarkRemoverClientKo() {
                             <div className={styles.featureItem}>
                                 <div className={styles.featureImage} style={{ padding: 0, overflow: 'hidden' }}>
                                     <img
-                                        src="/images/feature-watermark-remover-3.jpg"
+                                        src="/images-optimized/ai-watermark-removal-tool.webp"
                                         alt="워터마크 제거 완전한 솔루션"
-                                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                                    />
+                                        style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy" decoding="async" />
                                 </div>
                                 <div className={styles.featureContent}>
                                     <h3>{t.features.feature3.title}</h3>
@@ -225,15 +223,15 @@ export default function WatermarkRemoverClientKo() {
                     <FAQ items={commonFaqItemsKo} />
                     <ToolsGrid
                         customImages={{
-                            'tool1': '/images/tools/watermark-remover.png',
-                            'tool2': '/images/tools/video-watermark-home.png',
-                            'tool3': '/images/tools/remove-text-green.jpg',
-                            'tool4': '/images/tools/tool-card-remove-object-home.png',
-                            'tool5': '/images/tools/tool-card-replace-bg-home.png',
-                            'tool6': '/images/tools/tool-card-remove-bg-home.png',
-                            'tool7': '/images/tools/people-remover-street-man.jpg',
-                            'tool8': '/images/tools/upscaler-panda.jpg',
-                            'tool9': '/images/tools/sora-remover-1.png'
+                            'tool1': '/images-optimized/free-watermark-remover-tool.webp',
+                            'tool2': '/images-optimized/video-watermark-remover-home.webp',
+                            'tool3': '/images-optimized/text-remover-green-card.webp',
+                            'tool4': '/images-optimized/object-remover-home-tool.webp',
+                            'tool5': '/images-optimized/replace-background-home-tool.webp',
+                            'tool6': '/images-optimized/background-remover-home-tool.webp',
+                            'tool7': '/images-optimized/people-remover-street-man-card.webp',
+                            'tool8': '/images-optimized/image-upscaler-panda-card.webp',
+                            'tool9': '/images-optimized/free-sora-watermark-remover-1.webp'
                         }}
                     />
                 </div>

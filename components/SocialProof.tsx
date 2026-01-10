@@ -28,7 +28,7 @@ export default function SocialProof({ showAvatars = true, pageId = 'home' }: Soc
                             src={avatar}
                             alt="User avatar"
                             className={styles.avatar}
-                        />
+                        loading="lazy" decoding="async" />
                     ))}
                     <div className={styles.avatarCount}>+20K</div>
                 </div>

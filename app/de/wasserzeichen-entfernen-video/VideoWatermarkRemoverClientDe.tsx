@@ -162,7 +162,7 @@ export default function VideoWatermarkRemoverClientDe() {
 
                             <div className={styles.featureItem}>
                                 <div className={styles.featureImage}>
-                                    <img src="/images/features/video-page-tiktok-girls.png" alt="TikTok Wasserzeichen Entfernen" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '12px' }} />
+                                    <img src="/images-optimized/remove-tiktok-watermark-video.webp" alt="TikTok Wasserzeichen Entfernen" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '12px' }} loading="lazy" decoding="async" />
                                 </div>
                                 <div className={styles.featureContent}>
                                     <h3>{t.videoWatermarkPage.features.feature2.title}</h3>
@@ -180,7 +180,7 @@ export default function VideoWatermarkRemoverClientDe() {
 
                             <div className={styles.featureItem}>
                                 <div className={styles.featureImage}>
-                                    <img src="/images/features/video-page-red-panda.png" alt="Video Wasserzeichen Entfernung" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '12px' }} />
+                                    <img src="/images-optimized/video-watermark-removal-example.webp" alt="Video Wasserzeichen Entfernung" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '12px' }} loading="lazy" decoding="async" />
                                 </div>
                                 <div className={styles.featureContent}>
                                     <h3>{t.videoWatermarkPage.features.feature3.title}</h3>
@@ -245,15 +245,15 @@ export default function VideoWatermarkRemoverClientDe() {
                     <FAQ items={videoWatermarkFaqItemsDe} />
                     <ToolsGrid
                         customImages={{
-                            'tool1': '/images/tools/tool-card-video-page.png',
-                            'tool2': '/images/tools/video-watermark-8.png',
-                            'tool3': '/images/tools/remove-text-dark-blue.jpg',
-                            'tool4': '/images/tools/tool-card-remove-object-video.png',
-                            'tool5': '/images/tools/tool-card-replace-bg-video.png',
-                            'tool6': '/images/tools/tool-card-remove-bg-video.png',
-                            'tool7': '/images/tools/people-remover-street-woman.jpg',
-                            'tool8': '/images/tools/upscaler-panther.jpg',
-                            'tool9': '/images/tools/sora-remover-2.png'
+                            'tool1': '/images-optimized/video-watermark-remover-tool.webp',
+                            'tool2': '/images-optimized/video-watermark-remover-8.webp',
+                            'tool3': '/images-optimized/text-remover-dark-blue-card.webp',
+                            'tool4': '/images-optimized/remove-object-video-tool.webp',
+                            'tool5': '/images-optimized/replace-background-video-tool.webp',
+                            'tool6': '/images-optimized/remove-background-video-tool.webp',
+                            'tool7': '/images-optimized/people-remover-street-woman-card.webp',
+                            'tool8': '/images-optimized/image-upscaler-panther-card.webp',
+                            'tool9': '/images-optimized/free-sora-watermark-remover-2.webp'
                         }}
                     />
                 </div>
