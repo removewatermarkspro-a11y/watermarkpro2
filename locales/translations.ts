@@ -703,6 +703,7 @@ export const translations = {
             }
         }
     },
+    pt: {} as any,
     fr: {
         // Hero Section
         hero: {
@@ -4853,6 +4854,9 @@ if (!(translations as any).ko) {
         button: "Start gratis nå"
     }
 };
+
+// Portuguese translations - using English as fallback for now
+(translations as any).pt = (translations as any).en;
 
 
 

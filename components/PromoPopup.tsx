@@ -12,6 +12,7 @@ interface PromoPopupProps {
 
 export default function PromoPopup({ isOpen, onClose }: PromoPopupProps) {
     const router = useRouter()
+    const { language } = useLanguage()
     const [timeLeft, setTimeLeft] = useState<number>(0)
 
     useEffect(() => {
