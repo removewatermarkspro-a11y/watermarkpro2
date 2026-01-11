@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { editImage, OperationType } from '@/lib/replicate'
-import { consumeCredit, getUserCredits } from '@/lib/supabase'
+import { getServerUserCredits, consumeCreditServer } from '@/lib/supabase-server'
 
 export async function POST(request: NextRequest) {
     try {
@@ -17,12 +17,9 @@ export async function POST(request: NextRequest) {
             )
         }
 
-        // TODO: Fix Supabase RLS to allow server-side credit checking
-        // For now, skipping server-side credit check as RLS blocks access
-        // Credits are validated client-side and consumed after processing
-        /*
+        // Check credits using server-side client (bypasses RLS)
         if (userId) {
-            const credits = await getUserCredits(userId)
+            const credits = await getServerUserCredits(userId)
             console.log('[edit-image API] User credits:', credits, 'for userId:', userId?.substring(0, 8) + '...')
 
             if (credits < 1) {
@@ -33,7 +30,6 @@ export async function POST(request: NextRequest) {
                 )
             }
         }
-        */
 
         // Edit the image using Replicate
         const result = await editImage({
@@ -49,9 +45,9 @@ export async function POST(request: NextRequest) {
             )
         }
 
-        // Consume credit if userId provided
+        // Consume credit using server-side client (bypasses RLS)
         if (userId) {
-            await consumeCredit(userId, operationType)
+            await consumeCreditServer(userId, operationType)
         }
 
         return NextResponse.json({
@@ -66,3 +62,4 @@ export async function POST(request: NextRequest) {
         )
     }
 }
+
