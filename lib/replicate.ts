@@ -65,7 +65,7 @@ export async function editImage({
 
         // Call Qwen Image Edit Plus model
         const output = await replicate.run(
-            "qwen/qwen-image-edit-plus:latest",
+            "qwen/qwen-image-edit-plus",
             {
                 input: {
                     image: [imageBase64],
