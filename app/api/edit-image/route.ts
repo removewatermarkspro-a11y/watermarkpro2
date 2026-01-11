@@ -7,6 +7,8 @@ export async function POST(request: NextRequest) {
         const body = await request.json()
         const { imageBase64, operationType, userPrompt, userId } = body
 
+        console.log('[edit-image API] Request received:', { operationType, userId: userId?.substring(0, 8) + '...' })
+
         // Validate required fields
         if (!imageBase64 || !operationType) {
             return NextResponse.json(
@@ -18,7 +20,10 @@ export async function POST(request: NextRequest) {
         // Check if user has credits (if userId provided)
         if (userId) {
             const credits = await getUserCredits(userId)
+            console.log('[edit-image API] User credits:', credits, 'for userId:', userId?.substring(0, 8) + '...')
+
             if (credits < 1) {
+                console.log('[edit-image API] Insufficient credits, returning 402')
                 return NextResponse.json(
                     { error: 'Insufficient credits' },
                     { status: 402 }

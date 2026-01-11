@@ -70,6 +70,8 @@ export interface DownloadHistory {
 
 // Helper functions
 export const getUserCredits = async (userId: string): Promise<number> => {
+    console.log('[getUserCredits] Fetching credits for userId:', userId)
+
     const { data, error } = await supabase
         .from('credits')
         .select('balance')
@@ -77,10 +79,11 @@ export const getUserCredits = async (userId: string): Promise<number> => {
         .single()
 
     if (error) {
-        console.error('Error fetching credits:', error)
+        console.error('[getUserCredits] Error fetching credits:', error.message, error.code, 'for userId:', userId)
         return 0
     }
 
+    console.log('[getUserCredits] Result:', data, 'for userId:', userId)
     return data?.balance || 0
 }
 
