@@ -123,6 +123,13 @@ export default function ImageUploader({
             return
         }
 
+        // Check credits before processing
+        if (!credits || credits < 1) {
+            console.log('[ImageUploader] Insufficient credits, showing NoCreditsPopup')
+            setShowNoCreditsPopup(true)
+            return
+        }
+
         if (file.type.startsWith('image/')) {
             // Show processing popup
             setIsProcessing(true)

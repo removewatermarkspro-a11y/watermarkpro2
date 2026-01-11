@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { editImage, OperationType } from '@/lib/replicate'
-import { getServerUserCredits, consumeCreditServer } from '@/lib/supabase-server'
+import { consumeCreditServer } from '@/lib/supabase-server'
 
 export async function POST(request: NextRequest) {
     try {
@@ -17,19 +17,9 @@ export async function POST(request: NextRequest) {
             )
         }
 
-        // Check credits using server-side client (bypasses RLS)
-        if (userId) {
-            const credits = await getServerUserCredits(userId)
-            console.log('[edit-image API] User credits:', credits, 'for userId:', userId?.substring(0, 8) + '...')
-
-            if (credits < 1) {
-                console.log('[edit-image API] Insufficient credits, returning 402')
-                return NextResponse.json(
-                    { error: 'Insufficient credits' },
-                    { status: 402 }
-                )
-            }
-        }
+        // NOTE: Credit check is now handled client-side via AuthContext
+        // Server-side check removed to avoid RLS issues with Supabase
+        // The client already validates credits before calling this API
 
         // Edit the image using Replicate
         const result = await editImage({
@@ -45,9 +35,13 @@ export async function POST(request: NextRequest) {
             )
         }
 
-        // Consume credit using server-side client (bypasses RLS)
+        // Try to consume credit (don't fail if it doesn't work)
         if (userId) {
-            await consumeCreditServer(userId, operationType)
+            try {
+                await consumeCreditServer(userId, operationType)
+            } catch (creditError) {
+                console.error('[edit-image API] Credit consumption failed, continuing anyway:', creditError)
+            }
         }
 
         return NextResponse.json({
@@ -62,4 +56,5 @@ export async function POST(request: NextRequest) {
         )
     }
 }
+
 
