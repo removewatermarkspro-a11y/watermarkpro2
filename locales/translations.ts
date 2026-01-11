@@ -844,14 +844,6 @@ export const translations = {
                 button: "Acheter maintenant"
             }
         },
-        // Testimonials CTA
-        testimonialsCta: {
-            badge: "DES CENTAINES D'AVIS",
-            trustedBadge: "Approuvé par plus de 20 000 utilisateurs",
-            title: "Prêt à nettoyer vos images ?",
-            text: "De la suppression des filigranes à l'effacement des objets indésirables — débloquez l'édition photo professionnelle. Tout alimenté par l'IA.",
-            button: "Commencer Gratuitement"
-        },
         // Processing Popup
         processingPopup: {
             title: "Traitement de votre image...",
@@ -1514,14 +1506,6 @@ export const translations = {
                 credits: "Guthaben",
                 button: "Jetzt kaufen"
             }
-        },
-        // Testimonials CTA
-        testimonialsCta: {
-            badge: "HUNDERTE VON BEWERTUNGEN",
-            trustedBadge: "Vertraut von über 20.000 Nutzern",
-            title: "Bereit, Ihre Bilder zu bereinigen?",
-            text: "Vom Entfernen von Wasserzeichen bis zum Löschen unerwünschter Objekte – schalten Sie professionelle Fotobearbeitung frei. Alles angetrieben von KI.",
-            button: "Jetzt kostenlos starten"
         },
         // Processing Popup
         processingPopup: {
@@ -2748,14 +2732,6 @@ const enTranslations = (translations as any).en;
         },
         staySubscribed: "Mantener Suscripción",
         cancelButton: "Cancelar Suscripción"
-    },
-    // Testimonials CTA
-    testimonialsCta: {
-        badge: "CIENTOS DE RESEÑAS",
-        trustedBadge: "Confiado por más de 20,000 usuarios",
-        title: "¿Listo para limpiar tus imágenes?",
-        text: "Desde eliminar marcas de agua hasta borrar objetos no deseados — desbloquea la edición fotográfica profesional. Todo impulsado por IA.",
-        button: "Comenzar gratis ahora"
     }
 };
 
@@ -4058,14 +4034,6 @@ export const koTranslations = {
         },
         staySubscribed: "구독 유지",
         cancelButton: "구독 취소"
-    },
-    // Testimonials CTA
-    testimonialsCta: {
-        badge: "수백 개의 리뷰",
-        trustedBadge: "20,000명 이상의 사용자가 신뢰",
-        title: "이미지를 정리할 준비가 되셨나요?",
-        text: "워터마크 제거부터 원치 않는 객체 지우기까지 — 전문적인 사진 편집을 잠금 해제하세요. 모두 AI로 구동됩니다.",
-        button: "지금 무료로 시작하기"
     }
 };
 
