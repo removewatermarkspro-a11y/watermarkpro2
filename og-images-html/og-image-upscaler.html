@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Upscaler - OG Image</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            width: 1200px;
+            height: 630px;
+            overflow: hidden;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+        }
+        
+        .container {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Decorative elements */
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .circle1 {
+            width: 400px;
+            height: 400px;
+            top: -200px;
+            right: -100px;
+        }
+        
+        .circle2 {
+            width: 300px;
+            height: 300px;
+            bottom: -150px;
+            left: -100px;
+        }
+        
+        .circle3 {
+            width: 200px;
+            height: 200px;
+            top: 50%;
+            left: 10%;
+            opacity: 0.5;
+        }
+        
+        /* Content */
+        .content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            padding: 60px;
+        }
+        
+        .logo {
+            font-size: 32px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+        
+        h1 {
+            font-size: 72px;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .subtitle {
+            font-size: 36px;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 40px;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 12px 32px;
+            border-radius: 50px;
+            font-size: 24px;
+            font-weight: 600;
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        /* Brand */
+        .brand {
+            position: absolute;
+            bottom: 40px;
+            right: 60px;
+            font-size: 28px;
+            font-weight: 700;
+            color: white;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="circle circle1"></div>
+        <div class="circle circle2"></div>
+        <div class="circle circle3"></div>
+        
+        <div class="content">
+            <div class="logo">Remove Watermark Pro</div>
+            <h1>Image Upscaler</h1>
+            <div class="subtitle">Enhance Image Quality • AI 4x Upscale</div>
+            <div class="badge">Free AI Tool</div>
+        </div>
+        
+        <div class="brand">removewatermarkpro.com</div>
+    </div>
+</body>
+</html>

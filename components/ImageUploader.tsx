@@ -8,14 +8,18 @@ import { useAuth } from '@/contexts/AuthContext'
 import { consumeCredit } from '@/lib/supabase'
 import { useLanguage } from '@/contexts/LanguageContext'
 import { translations } from '@/locales/translations'
+import { OperationType } from '@/lib/replicate'
 
 interface ImageUploaderProps {
     onImageUpload: (file: File, preview: string) => void
     acceptedFormats?: string
     uploadText?: string
     formatText?: string
+    processingText?: string
     isAuthenticated?: boolean
     onAuthRequired?: () => void
+    operationType?: OperationType // Type of operation (watermark-remover, remove-text, etc.)
+    userPrompt?: string // For remove-object and replace-background operations
 }
 
 export default function ImageUploader({
@@ -23,8 +27,11 @@ export default function ImageUploader({
     acceptedFormats = 'image/jpeg,image/png,image/webp,image/jpg',
     uploadText,
     formatText,
+    processingText,
     isAuthenticated = true,
-    onAuthRequired
+    onAuthRequired,
+    operationType = 'watermark-remover',
+    userPrompt
 }: ImageUploaderProps) {
     const [isDragging, setIsDragging] = useState(false)
     const [isProcessing, setIsProcessing] = useState(false)
@@ -116,45 +123,76 @@ export default function ImageUploader({
             return
         }
 
-        if (file.type.startsWith('image/') || file.type.startsWith('video/')) {
-            // Check if user has credits
-            if (credits > 0) {
-                // Show processing popup
-                setIsProcessing(true)
+        // Check credits before processing
+        if (!credits || credits < 1) {
+            console.log('[ImageUploader] Insufficient credits, showing NoCreditsPopup')
+            setShowNoCreditsPopup(true)
+            return
+        }
 
-                // Consume credit from database
-                const operationType = file.type.startsWith('video/') ? 'video_watermark_removal' : 'watermark_removal'
-                const success = await consumeCredit(user.id, operationType, file.size)
+        if (file.type.startsWith('image/')) {
+            // Show processing popup
+            setIsProcessing(true)
 
-                if (success) {
-                    // Refresh credits in UI
-                    await refreshCredits()
+            try {
+                // Convert file to base64
+                const reader = new FileReader()
+                reader.onload = async (e) => {
+                    const imageBase64 = e.target?.result as string
 
-                    // Process the file after 6 seconds
-                    const reader = new FileReader()
-                    reader.onload = (e) => {
-                        setTimeout(() => {
-                            const preview = e.target?.result as string
+                    try {
+                        // Call the Replicate API
+                        const response = await fetch('/api/edit-image', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify({
+                                imageBase64,
+                                operationType,
+                                userPrompt,
+                                userId: user.id
+                            }),
+                        })
+
+                        const result = await response.json()
+
+                        if (result.success && result.imageUrl) {
+                            // Refresh credits in UI
+                            await refreshCredits()
+
                             setIsProcessing(false)
-                            onImageUpload(file, preview)
-                        }, 6000)
+                            // Pass the processed image URL to parent
+                            onImageUpload(file, result.imageUrl)
+                        } else {
+                            console.error('[ImageUploader] API error:', result.error)
+                            setIsProcessing(false)
+                            // If error is about credits, show no credits popup
+                            if (response.status === 402) {
+                                setShowNoCreditsPopup(true)
+                            } else {
+                                // For now, fallback to original image on error
+                                onImageUpload(file, imageBase64)
+                            }
+                        }
+                    } catch (apiError) {
+                        console.error('[ImageUploader] API call failed:', apiError)
+                        setIsProcessing(false)
+                        // Fallback to original image on error
+                        onImageUpload(file, e.target?.result as string)
                     }
-                    reader.readAsDataURL(file)
-                } else {
-                    setIsProcessing(false)
-                    // Failed to consume credit - show no credits popup
-                    setShowNoCreditsPopup(true)
                 }
-            } else {
-                // No credits left - show NoCreditsPopup
-                setShowNoCreditsPopup(true)
+                reader.readAsDataURL(file)
+            } catch (error) {
+                console.error('[ImageUploader] Error processing file:', error)
+                setIsProcessing(false)
             }
         }
     }
 
     return (
         <>
-            <ProcessingPopup isOpen={isProcessing} />
+            <ProcessingPopup isOpen={isProcessing} processingText={processingText} />
             <NoCreditsPopup isOpen={showNoCreditsPopup} onClose={() => setShowNoCreditsPopup(false)} />
             <div className={styles.uploader}>
                 <div

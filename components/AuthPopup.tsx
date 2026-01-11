@@ -87,6 +87,7 @@ export default function AuthPopup({ isOpen, onClose }: AuthPopupProps) {
                             </div>
                         </div>
                         <div className={styles.imageSection}>
+                            <img src="/images/auth-popup-image.png" alt="" className={styles.authImage} />
                             <div className={styles.imageOverlay}></div>
                         </div>
                     </div>
@@ -166,6 +167,7 @@ export default function AuthPopup({ isOpen, onClose }: AuthPopupProps) {
                     </div>
 
                     <div className={styles.imageSection}>
+                        <img src="/images/auth-popup-image.png" alt="" className={styles.authImage} />
                         <div className={styles.imageOverlay}></div>
                     </div>
                 </div>
