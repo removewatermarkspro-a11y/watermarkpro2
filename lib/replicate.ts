@@ -5,17 +5,24 @@ const replicate = new Replicate({
     auth: process.env.REPLICATE_API_TOKEN || '',
 })
 
-// Prompt mapping for different operations
+// Prompt mapping for different operations (French prompts for Qwen API)
+// Note: sora-remover and video-watermark will use a different API
 export const PROMPT_MAPPING = {
-    'watermark-remover': 'Enlève le filigrane de cette image',
-    'remove-text': 'Enlève tout le texte de cette image',
-    'remove-background': 'Enlève l\'arrière-plan de cette image',
-    'image-upscaler': 'Améliore la qualité et la résolution de cette image',
-    'auto-remove-people': 'Enlève toutes les personnes de cette image',
-    // User input prompts for these:
-    'remove-object': '', // User provides
-    'replace-background': '', // User provides
+    'watermark-remover': 'Supprime complètement le filigrane et la marque d\'eau de cette image tout en préservant la qualité originale',
+    'remove-text': 'Efface tout le texte visible de cette image en reconstruisant naturellement l\'arrière-plan',
+    'remove-background': 'Supprime l\'arrière-plan de cette image et rends-le transparent, garde uniquement le sujet principal',
+    'image-upscaler': 'Améliore la qualité, la netteté et la résolution de cette image en 4K avec des détails plus fins',
+    'auto-remove-people': 'Détecte et supprime toutes les personnes visibles de cette image en reconstruisant l\'arrière-plan naturellement',
+    // User input prompts for these (prefix will be added):
+    'remove-object': '', // User provides what object to remove
+    'replace-background': '', // User provides what background to add
 } as const
+
+// Prefix for user-provided prompts
+const USER_PROMPT_PREFIX = {
+    'remove-object': 'Supprime de cette image: ',
+    'replace-background': 'Remplace l\'arrière-plan de cette image par: ',
+}
 
 export type OperationType = keyof typeof PROMPT_MAPPING
 
@@ -51,7 +58,9 @@ export async function editImage({
                     error: 'User prompt is required for this operation'
                 }
             }
-            prompt = userPrompt
+            // Add French prefix to user prompt for better results
+            const prefix = USER_PROMPT_PREFIX[operationType as keyof typeof USER_PROMPT_PREFIX]
+            prompt = prefix + userPrompt
         }
 
         // Call Qwen Image Edit Plus model
