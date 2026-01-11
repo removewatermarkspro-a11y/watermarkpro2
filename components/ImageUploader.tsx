@@ -124,68 +124,61 @@ export default function ImageUploader({
         }
 
         if (file.type.startsWith('image/')) {
-            // Check if user has credits
-            if (credits > 0) {
-                // Show processing popup
-                setIsProcessing(true)
+            // Show processing popup
+            setIsProcessing(true)
 
-                try {
-                    // Convert file to base64
-                    const reader = new FileReader()
-                    reader.onload = async (e) => {
-                        const imageBase64 = e.target?.result as string
+            try {
+                // Convert file to base64
+                const reader = new FileReader()
+                reader.onload = async (e) => {
+                    const imageBase64 = e.target?.result as string
 
-                        try {
-                            // Call the Replicate API
-                            const response = await fetch('/api/edit-image', {
-                                method: 'POST',
-                                headers: {
-                                    'Content-Type': 'application/json',
-                                },
-                                body: JSON.stringify({
-                                    imageBase64,
-                                    operationType,
-                                    userPrompt,
-                                    userId: user.id
-                                }),
-                            })
+                    try {
+                        // Call the Replicate API
+                        const response = await fetch('/api/edit-image', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify({
+                                imageBase64,
+                                operationType,
+                                userPrompt,
+                                userId: user.id
+                            }),
+                        })
 
-                            const result = await response.json()
+                        const result = await response.json()
 
-                            if (result.success && result.imageUrl) {
-                                // Refresh credits in UI
-                                await refreshCredits()
+                        if (result.success && result.imageUrl) {
+                            // Refresh credits in UI
+                            await refreshCredits()
 
-                                setIsProcessing(false)
-                                // Pass the processed image URL to parent
-                                onImageUpload(file, result.imageUrl)
-                            } else {
-                                console.error('[ImageUploader] API error:', result.error)
-                                setIsProcessing(false)
-                                // If error is about credits, show no credits popup
-                                if (response.status === 402) {
-                                    setShowNoCreditsPopup(true)
-                                } else {
-                                    // For now, fallback to original image on error
-                                    onImageUpload(file, imageBase64)
-                                }
-                            }
-                        } catch (apiError) {
-                            console.error('[ImageUploader] API call failed:', apiError)
                             setIsProcessing(false)
-                            // Fallback to original image on error
-                            onImageUpload(file, e.target?.result as string)
+                            // Pass the processed image URL to parent
+                            onImageUpload(file, result.imageUrl)
+                        } else {
+                            console.error('[ImageUploader] API error:', result.error)
+                            setIsProcessing(false)
+                            // If error is about credits, show no credits popup
+                            if (response.status === 402) {
+                                setShowNoCreditsPopup(true)
+                            } else {
+                                // For now, fallback to original image on error
+                                onImageUpload(file, imageBase64)
+                            }
                         }
+                    } catch (apiError) {
+                        console.error('[ImageUploader] API call failed:', apiError)
+                        setIsProcessing(false)
+                        // Fallback to original image on error
+                        onImageUpload(file, e.target?.result as string)
                     }
-                    reader.readAsDataURL(file)
-                } catch (error) {
-                    console.error('[ImageUploader] Error processing file:', error)
-                    setIsProcessing(false)
-                    setShowNoCreditsPopup(true)
                 }
-            } else {
-                // No credits left - show NoCreditsPopup
-                setShowNoCreditsPopup(true)
+                reader.readAsDataURL(file)
+            } catch (error) {
+                console.error('[ImageUploader] Error processing file:', error)
+                setIsProcessing(false)
             }
         }
     }
