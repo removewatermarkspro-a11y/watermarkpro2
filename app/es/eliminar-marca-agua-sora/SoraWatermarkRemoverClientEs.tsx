@@ -268,7 +268,11 @@ export default function SoraWatermarkRemoverClientEs() {
 
                             <div className={styles.featureItem}>
                                 <div className={styles.featureImage}>
+<<<<<<< HEAD
                                     <img src="/images-optimized/sora-watermark-removal-ai.webp" alt="Remove Sora Watermark" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '12px' }} loading="lazy" decoding="async" />
+=======
+                                    <img src="/images/features/sora-page-woman-v4.png" alt="Remove Sora Watermark" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '12px' }} />
+>>>>>>> feature/qwen-api-integration
                                 </div>
                                 <div className={styles.featureContent}>
                                     <h3>{soraPage.features.feature2.title}</h3>
@@ -286,7 +290,11 @@ export default function SoraWatermarkRemoverClientEs() {
 
                             <div className={styles.featureItem}>
                                 <div className={styles.featureImage}>
+<<<<<<< HEAD
                                     <img src="/images-optimized/sora-ai-watermark-remover-man.webp" alt="Sora Video Watermark Removal" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '12px' }} loading="lazy" decoding="async" />
+=======
+                                    <img src="/images/features/sora-page-man.png" alt="Sora Video Watermark Removal" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '12px' }} />
+>>>>>>> feature/qwen-api-integration
                                 </div>
                                 <div className={styles.featureContent}>
                                     <h3>{soraPage.features.feature3.title}</h3>
@@ -351,7 +359,11 @@ export default function SoraWatermarkRemoverClientEs() {
 
                     {/* FAQ Section */}
                     <FAQ items={faqItems} />
+<<<<<<< HEAD
                     <ToolsGrid customImages={{ 'tool1': '/images-optimized/sora-watermark-remover-tool-1.webp', 'tool2': '/images-optimized/sora-watermark-remover-tool-2.webp', 'tool3': '/images-optimized/sora-watermark-remover-tool-3.webp', 'tool4': '/images-optimized/sora-watermark-remover-tool-4.webp', 'tool5': '/images-optimized/sora-watermark-remover-tool-5.webp', 'tool6': '/images-optimized/sora-watermark-remover-tool-6.webp', 'tool7': '/images-optimized/sora-watermark-remover-tool-7.webp', 'tool8': '/images-optimized/sora-watermark-remover-tool-8.webp', 'tool9': '/images-optimized/free-sora-watermark-remover-9.webp' }} />
+=======
+                    <ToolsGrid customImages={{ 'tool1': '/images/tools/sora-page-tool1.png', 'tool2': '/images/tools/sora-page-tool2.png', 'tool3': '/images/tools/sora-page-tool3.jpg', 'tool4': '/images/tools/sora-page-tool4.png', 'tool5': '/images/tools/sora-page-tool5.png', 'tool6': '/images/tools/sora-page-tool6.png', 'tool7': '/images/tools/sora-page-tool7.jpg', 'tool8': '/images/tools/sora-page-tool8.jpg', 'tool9': '/images/tools/sora-remover-9.png' }} />
+>>>>>>> feature/qwen-api-integration
                 </div>
             </main>
             <Footer />

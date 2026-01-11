@@ -1,7 +1,11 @@
 import type { Metadata } from 'next'
 import BackgroundReplacerClient from './BackgroundReplacerClient'
+<<<<<<< HEAD
 import StructuredData, { createSoftwareSchema, createFAQSchema } from '@/components/StructuredData'
 import { replaceBackgroundFaqItems } from '@/utils/faqItems'
+=======
+import StructuredData, { createSoftwareSchema } from '@/components/StructuredData'
+>>>>>>> feature/qwen-api-integration
 
 export const metadata: Metadata = {
     title: 'Background Changer AI | Replace Photo Backgrounds Instantly',

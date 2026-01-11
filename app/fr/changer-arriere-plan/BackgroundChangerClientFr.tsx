@@ -59,7 +59,11 @@ export default function BackgroundChangerClientFr() {
                     <section className={styles.features}>
                         <div style={{ textAlign: 'center' }}><span className={styles.badge}>{t.replaceBackgroundPage.features.badge}</span></div>
                         <div className={styles.featureGrid}>
+<<<<<<< HEAD
                             {[1, 2, 3].map(i => (<div key={i} className={styles.featureItem}><div className={styles.featureImage} style={{ padding: 0, overflow: 'hidden' }}><img src={`/images/feature-replace-background-${i === 1 ? '2.png' : i === 2 ? 'new-2.jpg' : '3.jpg'}`} alt="Feature" style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy" decoding="async" /></div><div className={styles.featureContent}><h3>{t.replaceBackgroundPage.features[`feature${i}`].title}</h3><p className={styles.sectionText}>{t.replaceBackgroundPage.features[`feature${i}`].description}</p><button className="btn btn-primary" onClick={() => { if (!localStorage.getItem('userAuthenticated')) setShowAuthPopup(true); else if (uploadRef.current) uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' }); }}>{t.replaceBackgroundPage.features[`feature${i}`].button}<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button></div></div>))}
+=======
+                            {[1, 2, 3].map(i => (<div key={i} className={styles.featureItem}><div className={styles.featureImage} style={{ padding: 0, overflow: 'hidden' }}><img src={`/images/feature-replace-background-${i === 1 ? '2.png' : i === 2 ? 'new-2.jpg' : '3.jpg'}`} alt="Feature" style={{ width: '100%', height: '100%', objectFit: 'cover' }} /></div><div className={styles.featureContent}><h3>{t.replaceBackgroundPage.features[`feature${i}`].title}</h3><p className={styles.sectionText}>{t.replaceBackgroundPage.features[`feature${i}`].description}</p><button className="btn btn-primary" onClick={() => { if (!localStorage.getItem('userAuthenticated')) setShowAuthPopup(true); else if (uploadRef.current) uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' }); }}>{t.replaceBackgroundPage.features[`feature${i}`].button}<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button></div></div>))}
+>>>>>>> feature/qwen-api-integration
                         </div>
                     </section>
                     <section className={styles.howItWorks}>
@@ -69,7 +73,11 @@ export default function BackgroundChangerClientFr() {
                     <Pricing />
                     <Testimonials pageId="replace-background" onCtaClick={() => { if (uploadRef.current) uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' }) }} />
                     <FAQ items={replaceBackgroundFaqItemsFr} />
+<<<<<<< HEAD
                     <ToolsGrid customImages={{ 'tool1': '/images-optimized/ai-background-changer-tool.webp', 'tool2': '/images-optimized/video-watermark-remover-5.webp', 'tool3': '/images-optimized/text-remover-beige-card.webp', 'tool4': '/images-optimized/remove-object-replace-tool.webp', 'tool5': '/images-optimized/background-replacement-main-tool.webp', 'tool6': '/images-optimized/remove-background-replace-tool.webp', 'tool7': '/images-optimized/people-remover-field-man-card.webp', 'tool8': '/images-optimized/image-upscaler-lion-card.webp', 'tool9': '/images-optimized/free-sora-watermark-remover-5.webp' }} />
+=======
+                    <ToolsGrid customImages={{ 'tool1': '/images/tools/tool-card-replace-bg-page.png', 'tool2': '/images/tools/video-watermark-5.png', 'tool3': '/images/tools/remove-text-beige.jpg', 'tool4': '/images/tools/tool-card-remove-object-replace-page.png', 'tool5': '/images/tools/tool-card-replace-bg-replace-page.png', 'tool6': '/images/tools/tool-card-remove-bg-replace-page.png', 'tool7': '/images/tools/people-remover-field-man.jpg', 'tool8': '/images/tools/upscaler-lion.jpg', 'tool9': '/images/tools/sora-remover-5.png' }} />
+>>>>>>> feature/qwen-api-integration
                 </div>
             </main>
             <Footer />

@@ -19,20 +19,35 @@ interface ExamplesSectionProps {
 const defaultExamples: Example[] = [
     {
         title: 'Remove any watermark',
+<<<<<<< HEAD
         beforeImage: '/images-optimized/ai-watermark-remover-comparison.webp',
         afterImage: '/images-optimized/ai-watermark-remover-comparison.webp',
+=======
+        beforeImage: '/images/hero-comparison-v2.png',
+        afterImage: '/images/hero-comparison-v2.png',
+>>>>>>> feature/qwen-api-integration
         link: '/watermark-remover'
     },
     {
         title: 'Instantly swap backgrounds',
+<<<<<<< HEAD
         beforeImage: '/images-optimized/ai-background-changer-example.webp',
         afterImage: '/images-optimized/ai-background-changer-example.webp',
+=======
+        beforeImage: '/images/example-swap-background-v2.png',
+        afterImage: '/images/example-swap-background-v2.png',
+>>>>>>> feature/qwen-api-integration
         link: '/background-changer-ai'
     },
     {
         title: 'Remove unwanted object',
+<<<<<<< HEAD
         beforeImage: '/images-optimized/ai-object-removal-example.webp',
         afterImage: '/images-optimized/ai-object-removal-example.webp',
+=======
+        beforeImage: '/images/example-remove-object.png',
+        afterImage: '/images/example-remove-object.png',
+>>>>>>> feature/qwen-api-integration
         link: '/object-remover-ai'
     }
 ]

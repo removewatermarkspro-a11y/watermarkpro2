@@ -95,7 +95,11 @@ export default function TextRemoverClientPt() {
                             {[1, 2, 3].map(i => (
                                 <div key={i} className={styles.featureItem}>
                                     <div className={styles.featureImage} style={{ padding: 0, overflow: 'hidden' }}>
+<<<<<<< HEAD
                                         <img src={`/images/feature-remove-text-${i === 1 ? 'tablet.png' : i === 2 ? 'tshirt.jpg' : 'paint.png'}`} alt="Feature" style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy" decoding="async" />
+=======
+                                        <img src={`/images/feature-remove-text-${i === 1 ? 'tablet.png' : i === 2 ? 'tshirt.jpg' : 'paint.png'}`} alt="Feature" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+>>>>>>> feature/qwen-api-integration
                                     </div>
                                     <div className={styles.featureContent}>
                                         <h3>{t.removeTextPage.features[`feature${i}`].title}</h3>
@@ -115,7 +119,11 @@ export default function TextRemoverClientPt() {
                     <Pricing />
                     <Testimonials pageId="remove-text" onCtaClick={() => { if (uploadRef.current) uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' }) }} />
                     <FAQ items={textRemovalFaqItemsPt} />
+<<<<<<< HEAD
                     <ToolsGrid customImages={{ 'tool1': '/images-optimized/ai-text-remover-tool.webp', 'tool2': '/images-optimized/video-watermark-remover-3.webp', 'tool3': '/images-optimized/text-remover-light-blue-card.webp', 'tool4': '/images-optimized/remove-object-text-tool.webp', 'tool5': '/images-optimized/replace-background-text-tool.webp', 'tool6': '/images-optimized/remove-background-text-tool.webp', 'tool7': '/images-optimized/people-remover-beach-woman-card.webp', 'tool8': '/images-optimized/image-upscaler-owl-card.webp', 'tool9': '/images-optimized/free-sora-watermark-remover-3.webp' }} />
+=======
+                    <ToolsGrid customImages={{ 'tool1': '/images/tools/tool-card-text-page.png', 'tool2': '/images/tools/video-watermark-3.png', 'tool3': '/images/tools/remove-text-light-blue.jpg', 'tool4': '/images/tools/tool-card-remove-object-text.png', 'tool5': '/images/tools/tool-card-replace-bg-text.png', 'tool6': '/images/tools/tool-card-remove-bg-text.png', 'tool7': '/images/tools/people-remover-beach-woman.jpg', 'tool8': '/images/tools/upscaler-owl.jpg', 'tool9': '/images/tools/sora-remover-3.png' }} />
+>>>>>>> feature/qwen-api-integration
                 </div>
             </main>
             <Footer />

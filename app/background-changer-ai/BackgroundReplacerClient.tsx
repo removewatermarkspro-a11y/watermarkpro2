@@ -113,7 +113,11 @@ export default function BackgroundReplacerClient() {
                         <div className={styles.featureGrid}>
                             <div className={styles.featureItem}>
                                 <div className={styles.featureImage} style={{ padding: 0, overflow: 'hidden' }}>
+<<<<<<< HEAD
                                     <img src="/images-optimized/replace-background-photo-ai.webp" alt="Replace Background" style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy" decoding="async" />
+=======
+                                    <img src="/images/feature-replace-background-2.png" alt="Replace Background" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+>>>>>>> feature/qwen-api-integration
                                 </div>
                                 <div className={styles.featureContent}>
                                     <h3>{t.replaceBackgroundPage.features.feature1.title}</h3>
@@ -123,7 +127,11 @@ export default function BackgroundReplacerClient() {
                             </div>
                             <div className={styles.featureItem}>
                                 <div className={styles.featureImage} style={{ padding: 0, overflow: 'hidden' }}>
+<<<<<<< HEAD
                                     <img src="/images-optimized/swap-image-background-ai.webp" alt="Replace Background" style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy" decoding="async" />
+=======
+                                    <img src="/images/feature-replace-background-new-2.jpg" alt="Replace Background" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+>>>>>>> feature/qwen-api-integration
                                 </div>
                                 <div className={styles.featureContent}>
                                     <h3>{t.replaceBackgroundPage.features.feature2.title}</h3>
@@ -133,7 +141,11 @@ export default function BackgroundReplacerClient() {
                             </div>
                             <div className={styles.featureItem}>
                                 <div className={styles.featureImage} style={{ padding: 0, overflow: 'hidden' }}>
+<<<<<<< HEAD
                                     <img src="/images-optimized/change-photo-background-free.webp" alt="Replace Background" style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy" decoding="async" />
+=======
+                                    <img src="/images/feature-replace-background-3.jpg" alt="Replace Background" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+>>>>>>> feature/qwen-api-integration
                                 </div>
                                 <div className={styles.featureContent}>
                                     <h3>{t.replaceBackgroundPage.features.feature3.title}</h3>
@@ -168,7 +180,11 @@ export default function BackgroundReplacerClient() {
                     <Pricing />
                     <Testimonials pageId="replace-background" onCtaClick={() => { if (uploadRef.current) uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' }) }} />
                     <FAQ items={replaceBackgroundFaqItems} />
+<<<<<<< HEAD
                     <ToolsGrid customImages={{ 'tool1': '/images-optimized/ai-background-changer-tool.webp', 'tool2': '/images-optimized/video-watermark-remover-5.webp', 'tool3': '/images-optimized/text-remover-beige-card.webp', 'tool4': '/images-optimized/remove-object-replace-tool.webp', 'tool5': '/images-optimized/background-replacement-main-tool.webp', 'tool6': '/images-optimized/remove-background-replace-tool.webp', 'tool7': '/images-optimized/people-remover-field-man-card.webp', 'tool8': '/images-optimized/image-upscaler-lion-card.webp', 'tool9': '/images-optimized/free-sora-watermark-remover-5.webp' }} />
+=======
+                    <ToolsGrid customImages={{ 'tool1': '/images/tools/tool-card-replace-bg-page.png', 'tool2': '/images/tools/video-watermark-5.png', 'tool3': '/images/tools/remove-text-beige.jpg', 'tool4': '/images/tools/tool-card-remove-object-replace-page.png', 'tool5': '/images/tools/tool-card-replace-bg-replace-page.png', 'tool6': '/images/tools/tool-card-remove-bg-replace-page.png', 'tool7': '/images/tools/people-remover-field-man.jpg', 'tool8': '/images/tools/upscaler-lion.jpg', 'tool9': '/images/tools/sora-remover-5.png' }} />
+>>>>>>> feature/qwen-api-integration
                 </div>
             </main>
             <Footer />

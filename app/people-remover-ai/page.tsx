@@ -1,7 +1,11 @@
 import type { Metadata } from 'next'
 import PeopleRemoverClient from './PeopleRemoverClient'
+<<<<<<< HEAD
 import StructuredData, { createSoftwareSchema, createFAQSchema } from '@/components/StructuredData'
 import { peopleRemovalFaqItems } from '@/utils/faqItems'
+=======
+import StructuredData, { createSoftwareSchema } from '@/components/StructuredData'
+>>>>>>> feature/qwen-api-integration
 
 export const metadata: Metadata = {
     title: 'People Remover AI Free | Delete People from Photos Fast',

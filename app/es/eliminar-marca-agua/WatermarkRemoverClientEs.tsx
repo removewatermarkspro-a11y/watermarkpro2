@@ -28,8 +28,13 @@ export default function WatermarkRemoverClientEs() {
     const uploadRef = useRef<HTMLDivElement>(null)
     const { user } = useAuth()
 
+<<<<<<< HEAD
     // Force Spanish language
     const t = translations.es
+=======
+    // Use English as fallback until Spanish translations are added
+    const t = translations.en
+>>>>>>> feature/qwen-api-integration
 
     const handleImageUpload = (file: File, preview: string) => {
         setUploadedImage(file)
@@ -128,7 +133,11 @@ export default function WatermarkRemoverClientEs() {
                             <div className={styles.featureItem}>
                                 <div className={styles.featureImage} style={{ padding: 0, overflow: 'hidden' }}>
                                     <img
+<<<<<<< HEAD
                                         src="/images-optimized/free-watermark-remover-feature.webp"
+=======
+                                        src="/images/feature-watermark-remover.png"
+>>>>>>> feature/qwen-api-integration
                                         alt="Eliminar Marca de Agua Antes y Después"
                                         style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                                     />
@@ -148,9 +157,16 @@ export default function WatermarkRemoverClientEs() {
                             <div className={styles.featureItem}>
                                 <div className={styles.featureImage} style={{ padding: 0, overflow: 'hidden' }}>
                                     <img
+<<<<<<< HEAD
                                         src="/images-optimized/remove-tiktok-watermark-ai.webp"
                                         alt="Eliminar Marca de Agua TikTok Antes y Después"
                                         style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy" decoding="async" />
+=======
+                                        src="/images/feature-tiktok-remover-v2.png"
+                                        alt="Eliminar Marca de Agua TikTok Antes y Después"
+                                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                                    />
+>>>>>>> feature/qwen-api-integration
                                 </div>
                                 <div className={styles.featureContent}>
                                     <h3>{t.features.feature2.title}</h3>
@@ -167,9 +183,16 @@ export default function WatermarkRemoverClientEs() {
                             <div className={styles.featureItem}>
                                 <div className={styles.featureImage} style={{ padding: 0, overflow: 'hidden' }}>
                                     <img
+<<<<<<< HEAD
                                         src="/images-optimized/ai-watermark-removal-tool.webp"
                                         alt="Solución Completa para Eliminar Marcas de Agua"
                                         style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy" decoding="async" />
+=======
+                                        src="/images/feature-watermark-remover-3.jpg"
+                                        alt="Solución Completa para Eliminar Marcas de Agua"
+                                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                                    />
+>>>>>>> feature/qwen-api-integration
                                 </div>
                                 <div className={styles.featureContent}>
                                     <h3>{t.features.feature3.title}</h3>
@@ -224,6 +247,7 @@ export default function WatermarkRemoverClientEs() {
                     <FAQ items={commonFaqItemsEs} />
                     <ToolsGrid
                         customImages={{
+<<<<<<< HEAD
                             'tool1': '/images-optimized/free-watermark-remover-tool.webp',
                             'tool2': '/images-optimized/video-watermark-remover-home.webp',
                             'tool3': '/images-optimized/text-remover-green-card.webp',
@@ -233,6 +257,17 @@ export default function WatermarkRemoverClientEs() {
                             'tool7': '/images-optimized/people-remover-street-man-card.webp',
                             'tool8': '/images-optimized/image-upscaler-panda-card.webp',
                             'tool9': '/images-optimized/free-sora-watermark-remover-1.webp'
+=======
+                            'tool1': '/images/tools/watermark-remover.png',
+                            'tool2': '/images/tools/video-watermark-home.png',
+                            'tool3': '/images/tools/remove-text-green.jpg',
+                            'tool4': '/images/tools/tool-card-remove-object-home.png',
+                            'tool5': '/images/tools/tool-card-replace-bg-home.png',
+                            'tool6': '/images/tools/tool-card-remove-bg-home.png',
+                            'tool7': '/images/tools/people-remover-street-man.jpg',
+                            'tool8': '/images/tools/upscaler-panda.jpg',
+                            'tool9': '/images/tools/sora-remover-1.png'
+>>>>>>> feature/qwen-api-integration
                         }}
                     />
                 </div>

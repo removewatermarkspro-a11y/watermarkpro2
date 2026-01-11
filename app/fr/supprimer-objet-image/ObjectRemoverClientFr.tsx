@@ -115,7 +115,11 @@ export default function ObjectRemoverClientFr() {
                         <div className={styles.featureGrid}>
                             <div className={styles.featureItem}>
                                 <div className={styles.featureImage} style={{ padding: 0, overflow: 'hidden' }}>
+<<<<<<< HEAD
                                     <img src="/images-optimized/delete-objects-from-image-ai.webp" alt="AI Object Removal" style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy" decoding="async" />
+=======
+                                    <img src="/images/feature-remove-object-3.png" alt="AI Object Removal" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+>>>>>>> feature/qwen-api-integration
                                 </div>
                                 <div className={styles.featureContent}>
                                     <h3>{t.removeObjectPage.features.feature1.title}</h3>
@@ -125,7 +129,11 @@ export default function ObjectRemoverClientFr() {
                             </div>
                             <div className={styles.featureItem}>
                                 <div className={styles.featureImage} style={{ padding: 0, overflow: 'hidden' }}>
+<<<<<<< HEAD
                                     <img src="/images-optimized/ai-object-remover-tool.webp" alt="AI Object Removal" style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy" decoding="async" />
+=======
+                                    <img src="/images/feature-remove-object-1.png" alt="AI Object Removal" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+>>>>>>> feature/qwen-api-integration
                                 </div>
                                 <div className={styles.featureContent}>
                                     <h3>{t.removeObjectPage.features.feature2.title}</h3>
@@ -135,7 +143,11 @@ export default function ObjectRemoverClientFr() {
                             </div>
                             <div className={styles.featureItem}>
                                 <div className={styles.featureImage} style={{ padding: 0, overflow: 'hidden' }}>
+<<<<<<< HEAD
                                     <img src="/images-optimized/remove-unwanted-objects-photo.webp" alt="Remove Objects" style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy" decoding="async" />
+=======
+                                    <img src="/images/feature-remove-object-2.jpg" alt="Remove Objects" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+>>>>>>> feature/qwen-api-integration
                                 </div>
                                 <div className={styles.featureContent}>
                                     <h3>{t.removeObjectPage.features.feature3.title}</h3>
@@ -170,7 +182,11 @@ export default function ObjectRemoverClientFr() {
                     <Pricing />
                     <Testimonials pageId="remove-object" onCtaClick={() => { if (uploadRef.current) uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' }) }} />
                     <FAQ items={objectRemovalFaqItemsFr} />
+<<<<<<< HEAD
                     <ToolsGrid customImages={{ 'tool1': '/images-optimized/ai-object-remover-tool.webp', 'tool2': '/images-optimized/video-watermark-remover-2.webp', 'tool3': '/images-optimized/text-remover-yellow-card.webp', 'tool4': '/images-optimized/object-removal-main-tool.webp', 'tool5': '/images-optimized/replace-background-object-tool.webp', 'tool6': '/images-optimized/remove-background-object-tool.webp', 'tool7': '/images-optimized/people-remover-field-woman-card.webp', 'tool8': '/images-optimized/image-upscaler-penguin-card.webp', 'tool9': '/images-optimized/free-sora-watermark-remover-4.webp' }} />
+=======
+                    <ToolsGrid customImages={{ 'tool1': '/images/tools/tool-card-object-page.png', 'tool2': '/images/tools/video-watermark-2.png', 'tool3': '/images/tools/remove-text-yellow.jpg', 'tool4': '/images/tools/tool-card-remove-object-object-page.png', 'tool5': '/images/tools/tool-card-replace-bg-object.png', 'tool6': '/images/tools/tool-card-remove-bg-object.png', 'tool7': '/images/tools/people-remover-field-woman.jpg', 'tool8': '/images/tools/upscaler-penguin.jpg', 'tool9': '/images/tools/sora-remover-4.png' }} />
+>>>>>>> feature/qwen-api-integration
                 </div>
             </main>
             <Footer />

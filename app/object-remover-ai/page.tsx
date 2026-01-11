@@ -1,7 +1,11 @@
 import type { Metadata } from 'next'
 import ObjectRemoverClient from './ObjectRemoverClient'
+<<<<<<< HEAD
 import StructuredData, { createSoftwareSchema, createFAQSchema } from '@/components/StructuredData'
 import { objectRemovalFaqItems } from '@/utils/faqItems'
+=======
+import StructuredData, { createSoftwareSchema } from '@/components/StructuredData'
+>>>>>>> feature/qwen-api-integration
 
 export const metadata: Metadata = {
     title: 'Object Remover AI Free | Delete Unwanted Objects Fast',

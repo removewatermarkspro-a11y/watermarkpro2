@@ -1,7 +1,11 @@
 import type { Metadata } from 'next'
 import ImageUpscalerClient from './ImageUpscalerClient'
+<<<<<<< HEAD
 import StructuredData, { createSoftwareSchema, createFAQSchema } from '@/components/StructuredData'
 import { imageUpscalerFaqItems } from '@/utils/faqItems'
+=======
+import StructuredData, { createSoftwareSchema } from '@/components/StructuredData'
+>>>>>>> feature/qwen-api-integration
 
 export const metadata: Metadata = {
     title: 'Image Upscaler AI Free | Enhance Photos to 4K Quality',

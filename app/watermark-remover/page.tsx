@@ -1,7 +1,11 @@
 import type { Metadata } from 'next'
 import WatermarkRemoverClient from './WatermarkRemoverClient'
+<<<<<<< HEAD
 import StructuredData, { websiteSchema, organizationSchema, createSoftwareSchema, createFAQSchema } from '@/components/StructuredData'
 import { commonFaqItems } from '@/utils/faqItems'
+=======
+import StructuredData, { websiteSchema, organizationSchema, createSoftwareSchema } from '@/components/StructuredData'
+>>>>>>> feature/qwen-api-integration
 
 export const metadata: Metadata = {
     title: 'Watermark Remover Free | AI Tool - Remove in 1 Second',
@@ -30,7 +34,11 @@ export const metadata: Metadata = {
         type: 'website',
         images: [
             {
+<<<<<<< HEAD
                 url: 'https://removewatermarkspro.com/og-watermark-remover.jpg',
+=======
+                url: 'https://removewatermarkspro.com/og-image-en.jpg',
+>>>>>>> feature/qwen-api-integration
                 width: 1200,
                 height: 630,
                 alt: 'Watermark Remover Tool - Before and After'
@@ -42,7 +50,11 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'Watermark Remover Free | Remove in 1 Click',
         description: 'Remove watermarks from images in 1 click. Free AI tool, fast and no signup required.',
+<<<<<<< HEAD
         images: ['https://removewatermarkspro.com/og-watermark-remover.jpg']
+=======
+        images: ['https://removewatermarkspro.com/og-image-en.jpg']
+>>>>>>> feature/qwen-api-integration
     },
 
     robots: {

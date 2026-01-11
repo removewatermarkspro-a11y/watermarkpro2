@@ -1,7 +1,11 @@
 import type { Metadata } from 'next'
 import VideoWatermarkRemoverClient from './VideoWatermarkRemoverClient'
+<<<<<<< HEAD
 import StructuredData, { createSoftwareSchema, createFAQSchema } from '@/components/StructuredData'
 import { commonFaqItems } from '@/utils/faqItems'
+=======
+import StructuredData, { createSoftwareSchema } from '@/components/StructuredData'
+>>>>>>> feature/qwen-api-integration
 
 export const metadata: Metadata = {
     title: 'Video Watermark Remover | Remove from MP4, MOV, AVI - Free',
@@ -30,7 +34,11 @@ export const metadata: Metadata = {
         type: 'website',
         images: [
             {
+<<<<<<< HEAD
                 url: 'https://removewatermarkspro.com/og-video-watermark.jpg',
+=======
+                url: 'https://removewatermarkspro.com/og-image-video-en.jpg',
+>>>>>>> feature/qwen-api-integration
                 width: 1200,
                 height: 630,
                 alt: 'Video Watermark Remover Tool - Before and After'
@@ -42,7 +50,11 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'Remove Watermark from Video Free | AI Video Watermark Remover',
         description: 'Remove watermarks from videos in 1 click. Free AI tool for MP4, MOV, AVI. Fast, no signup required.',
+<<<<<<< HEAD
         images: ['https://removewatermarkspro.com/og-video-watermark.jpg']
+=======
+        images: ['https://removewatermarkspro.com/og-image-video-en.jpg']
+>>>>>>> feature/qwen-api-integration
     },
 
     robots: {

@@ -1,0 +1,34 @@
+﻿git : remote: error: GH013: Repository rule violations found for refs/heads/test-push.        
+Au caractère Ligne:1 : 1
++ git push origin HEAD:test-push 2>&1 | Out-File -FilePath "error_full. ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo              : NotSpeci    fied: (remote: er    ror: ...t-push.            :String) []    , RemoteException
+    + FullyQualifiedE    rrorId : NativeCo    mmandError
+ 
+remote: 
+remote: - GITHUB PUSH PROTECTION        
+remote:   ÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇö        
+remote:     Resolve the following violations before pushing again        
+remote: 
+remote:     - Push cannot contain secrets        
+remote: 
+remote:             
+remote:      (?) Learn how to resolve a blocked push        
+remote:      https://docs.github.com/code-security/secret-scanning/working-with-secret-scanning-and-push-protection/working-with-push-protection-from-the-command-line#resolving-a-blocked-push        
+remote:             
+remote:             
+remote:       ÔÇöÔÇö Replicate API Token ÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇöÔÇö        
+remote:        locations:        
+remote:          - commit: 5743ee660f0bf3a70374b2eb859f918421c43fff        
+remote:            path: QWEN_SETUP.md:28        
+remote:          - commit: 5743ee660f0bf3a70374b2eb859f918421c43fff        
+remote:            path: QWEN_SETUP.md:39        
+remote:             
+remote:        (?) To push, remove secret from commit(s) or follow this URL to allow the secret.        
+remote:        https://github.com/removewatermarkspro-a11y/watermarkpro2/security/secret-scanning/unblock-secret/384ma7VgI2ncSzDabzVO1jN8wT5        
+remote:             
+remote: 
+remote: 
+To https://github.com/removewatermarkspro-a11y/watermarkpro2.git
+ ! [remote rejected] HEAD -> test-push (push declined due to repository rule violations)
+error: failed to push some refs to 'https://github.com/removewatermarkspro-a11y/watermarkpro2.git'
