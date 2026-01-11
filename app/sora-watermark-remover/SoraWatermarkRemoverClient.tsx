@@ -25,6 +25,7 @@ import { soraRemoverFaqItemsKo } from '@/utils/soraRemoverFaqItemsKo'
 import { soraRemoverFaqItemsNo } from '@/utils/soraRemoverFaqItemsNo'
 import { soraRemoverTestimonialDataFr } from '@/utils/soraRemoverTestimonialData'
 import { useLanguage } from '@/contexts/LanguageContext'
+import { useAuth } from '@/contexts/AuthContext'
 import { translations } from '@/locales/translations'
 import styles from '../watermark-remover/watermark.module.css'
 
@@ -43,12 +44,12 @@ export default function SoraWatermarkRemoverClient() {
     const [processedImage, setProcessedImage] = useState<string | null>(null)
     const [showAuthPopup, setShowAuthPopup] = useState(false)
     const [showPromoPopup, setShowPromoPopup] = useState(false)
-    const [isAuthenticated, setIsAuthenticated] = useState(false)
     const uploadRef = useRef<HTMLDivElement>(null)
     const playerRef = useRef<any>(null)
     const videoContainerRef = useRef<HTMLDivElement>(null)
     const soraVideoRef = useRef<HTMLVideoElement>(null)
     const { language } = useLanguage()
+    const { user, credits } = useAuth()
     const t = (translations as any)[language] || translations.en
 
     // Set video playback speed to 75% for smoother viewing
@@ -117,9 +118,8 @@ export default function SoraWatermarkRemoverClient() {
     const handleProcess = async () => {
         if (!uploadedImage) return
 
-        const credits = parseInt(localStorage.getItem('userCredits') || '0')
-
-        if (credits === 0) {
+        // Use credits from AuthContext (Supabase) instead of localStorage
+        if (!credits || credits < 1) {
             setShowPromoPopup(true)
             return
         }
@@ -165,8 +165,8 @@ export default function SoraWatermarkRemoverClient() {
     }
 
     const handleGetStarted = () => {
-        const authenticated = localStorage.getItem('userAuthenticated') === 'true'
-        if (!authenticated) {
+        // Use user from AuthContext instead of localStorage
+        if (!user) {
             setShowAuthPopup(true)
         } else {
             if (uploadRef.current) {
