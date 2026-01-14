@@ -59,7 +59,7 @@ export async function editImage({
             "qwen/qwen-image-edit-plus",
             {
                 input: {
-                    image: imageBase64,
+                    image: [imageBase64], // Qwen expects an array of images
                     prompt: prompt,
                     go_fast: true,
                     aspect_ratio: "match_input_image",
