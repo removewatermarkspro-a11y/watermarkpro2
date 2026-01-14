@@ -1504,14 +1504,6 @@ export const translations = {
                 button: "Jetzt kaufen"
             }
         },
-        // Testimonials CTA
-        testimonialsCta: {
-            badge: "HUNDERTE VON BEWERTUNGEN",
-            trustedBadge: "Vertraut von über 20.000 Nutzern",
-            title: "Bereit, Ihre Bilder zu bereinigen?",
-            text: "Vom Entfernen von Wasserzeichen bis zum Löschen unerwünschter Objekte – schalten Sie professionelle Fotobearbeitung frei. Alles angetrieben von KI.",
-            button: "Jetzt kostenlos starten"
-        },
         // Processing Popup
         processingPopup: {
             title: "Ihr Bild wird verarbeitet...",
