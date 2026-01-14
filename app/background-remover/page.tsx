@@ -1,11 +1,7 @@
 import type { Metadata } from 'next'
 import BackgroundRemoverClient from './BackgroundRemoverClient'
-<<<<<<< HEAD
 import StructuredData, { createSoftwareSchema, createFAQSchema } from '@/components/StructuredData'
 import { backgroundRemovalFaqItems } from '@/utils/faqItems'
-=======
-import StructuredData, { createSoftwareSchema } from '@/components/StructuredData'
->>>>>>> feature/qwen-api-integration
 
 export const metadata: Metadata = {
     title: 'Background Remover AI | Remove Photo Backgrounds in 1 Click',

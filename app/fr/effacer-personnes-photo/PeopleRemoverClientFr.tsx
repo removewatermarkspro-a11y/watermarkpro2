@@ -57,11 +57,7 @@ export default function PeopleRemoverClientFr() {
                     <section className={styles.features}>
                         <div style={{ textAlign: 'center' }}><span className={styles.badge}>{t.peopleRemovalPage.features.badge}</span></div>
                         <div className={styles.featureGrid}>
-<<<<<<< HEAD
                             {[1, 2, 3].map(i => (<div key={i} className={styles.featureItem}><div className={styles.featureImage} style={{ padding: 0, overflow: 'hidden' }}><img src={`/images/feature-people-remover-${i === 1 ? 'beach-new.png' : i === 2 ? 'street.jpg' : 'plaza.jpg'}`} alt="Feature" style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy" decoding="async" /></div><div className={styles.featureContent}><h3>{t.peopleRemovalPage.features[`feature${i}`].title}</h3><p className={styles.sectionText}>{t.peopleRemovalPage.features[`feature${i}`].description}</p><button className="btn btn-primary" onClick={() => { if (!localStorage.getItem('userAuthenticated')) setShowAuthPopup(true); else if (uploadRef.current) uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' }); }}>{t.peopleRemovalPage.features[`feature${i}`].button}<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button></div></div>))}
-=======
-                            {[1, 2, 3].map(i => (<div key={i} className={styles.featureItem}><div className={styles.featureImage} style={{ padding: 0, overflow: 'hidden' }}><img src={`/images/feature-people-remover-${i === 1 ? 'beach-new.png' : i === 2 ? 'street.jpg' : 'plaza.jpg'}`} alt="Feature" style={{ width: '100%', height: '100%', objectFit: 'cover' }} /></div><div className={styles.featureContent}><h3>{t.peopleRemovalPage.features[`feature${i}`].title}</h3><p className={styles.sectionText}>{t.peopleRemovalPage.features[`feature${i}`].description}</p><button className="btn btn-primary" onClick={() => { if (!localStorage.getItem('userAuthenticated')) setShowAuthPopup(true); else if (uploadRef.current) uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' }); }}>{t.peopleRemovalPage.features[`feature${i}`].button}<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button></div></div>))}
->>>>>>> feature/qwen-api-integration
                         </div>
                     </section>
                     <section className={styles.howItWorks}>
@@ -71,11 +67,7 @@ export default function PeopleRemoverClientFr() {
                     <Pricing />
                     <Testimonials pageId="auto-remove-people" onCtaClick={() => { if (uploadRef.current) uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' }) }} />
                     <FAQ items={peopleRemovalFaqItemsFr} />
-<<<<<<< HEAD
                     <ToolsGrid customImages={{ 'tool1': '/images-optimized/ai-people-remover-tool.webp', 'tool2': '/images-optimized/video-watermark-remover-6.webp', 'tool3': '/images-optimized/text-remover-pink-card.webp', 'tool4': '/images-optimized/remove-object-people-tool.webp', 'tool5': '/images-optimized/replace-background-people-tool.webp', 'tool6': '/images-optimized/remove-background-people-tool.webp', 'tool7': '/images-optimized/people-remover-museum-card.webp', 'tool8': '/images-optimized/image-upscaler-tiger-card.webp', 'tool9': '/images-optimized/free-sora-watermark-remover-7.webp' }} />
-=======
-                    <ToolsGrid customImages={{ 'tool1': '/images/tools/tool-card-auto-people-page.png', 'tool2': '/images/tools/video-watermark-6.png', 'tool3': '/images/tools/remove-text-pink.jpg', 'tool4': '/images/tools/tool-card-remove-object-people-page.png', 'tool5': '/images/tools/tool-card-replace-bg-people-page.png', 'tool6': '/images/tools/tool-card-remove-bg-people-page.png', 'tool7': '/images/tools/people-remover-museum.jpg', 'tool8': '/images/tools/upscaler-tiger.jpg', 'tool9': '/images/tools/sora-remover-7.png' }} />
->>>>>>> feature/qwen-api-integration
                 </div>
             </main>
             <Footer />

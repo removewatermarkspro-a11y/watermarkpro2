@@ -87,11 +87,7 @@ export default function AuthPopup({ isOpen, onClose }: AuthPopupProps) {
                             </div>
                         </div>
                         <div className={styles.imageSection}>
-<<<<<<< HEAD
                             <img src="/images-optimized/ai-watermark-remover-signup.webp" alt="" className={styles.authImage} loading="lazy" decoding="async" />
-=======
-                            <img src="/images/auth-popup-image.png" alt="" className={styles.authImage} />
->>>>>>> feature/qwen-api-integration
                             <div className={styles.imageOverlay}></div>
                         </div>
                     </div>
@@ -171,11 +167,7 @@ export default function AuthPopup({ isOpen, onClose }: AuthPopupProps) {
                     </div>
 
                     <div className={styles.imageSection}>
-<<<<<<< HEAD
                         <img src="/images-optimized/ai-watermark-remover-signup.webp" alt="" className={styles.authImage} loading="lazy" decoding="async" />
-=======
-                        <img src="/images/auth-popup-image.png" alt="" className={styles.authImage} />
->>>>>>> feature/qwen-api-integration
                         <div className={styles.imageOverlay}></div>
                     </div>
                 </div>

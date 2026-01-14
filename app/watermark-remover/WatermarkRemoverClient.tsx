@@ -21,24 +21,20 @@ import { commonFaqItemsKo } from '@/utils/commonFaqItemsKo'
 import AuthPopup from '@/components/AuthPopup'
 import ResultDisplay from '@/components/ResultDisplay'
 import RelatedTools from '@/components/RelatedTools'
-import ProcessingPopup from '@/components/ProcessingPopup'
 import { useAuth } from '@/contexts/AuthContext'
 import { useLanguage } from '@/contexts/LanguageContext'
-import { useImageEdit } from '@/hooks/useImageEdit'
 import { translations } from '@/locales/translations'
 import styles from '@/app/watermark-remover/watermark.module.css'
+
 
 export default function WatermarkRemoverClient() {
     const [uploadedImage, setUploadedImage] = useState<File | null>(null)
     const [originalPreview, setOriginalPreview] = useState<string | null>(null)
+    const [processedImageUrl, setProcessedImageUrl] = useState<string | null>(null)
     const [showAuthPopup, setShowAuthPopup] = useState(false)
     const uploadRef = useRef<HTMLDivElement>(null)
     const { user } = useAuth()
     const { language } = useLanguage()
-    const { editImage, isLoading, error, editedImageUrl, reset } = useImageEdit({
-        operationType: 'watermark-remover',
-        userId: user?.id
-    })
 
     // Use current language from context
     const t = (translations as any)[language] || translations.en
@@ -55,16 +51,17 @@ export default function WatermarkRemoverClient() {
         }
     }
 
-    const handleImageUpload = async (file: File, preview: string) => {
+    const handleImageUpload = async (file: File, processedImageUrl: string) => {
         setUploadedImage(file)
-        setOriginalPreview(preview)
-
-        // Call Qwen API to remove watermark
-        try {
-            await editImage({ imageFile: file })
-        } catch (err) {
-            console.error('Error removing watermark:', err)
+        // Store original preview for comparison display
+        const reader = new FileReader()
+        reader.onload = (e) => {
+            setOriginalPreview(e.target?.result as string)
         }
+        reader.readAsDataURL(file)
+
+        // Set the processed image URL from Replicate API
+        setProcessedImageUrl(processedImageUrl)
     }
 
     const handleAuthClose = () => {
@@ -72,9 +69,9 @@ export default function WatermarkRemoverClient() {
     }
 
     const handleDownload = () => {
-        if (!editedImageUrl) return
+        if (!processedImageUrl) return
         const link = document.createElement('a')
-        link.href = editedImageUrl
+        link.href = processedImageUrl
         link.download = 'processed-image.png'
         link.click()
     }
@@ -82,7 +79,7 @@ export default function WatermarkRemoverClient() {
     const handleGenerateNew = () => {
         setUploadedImage(null)
         setOriginalPreview(null)
-        reset()
+        setProcessedImageUrl(null)
 
         setTimeout(() => {
             if (uploadRef.current) {
@@ -128,11 +125,11 @@ export default function WatermarkRemoverClient() {
                                 onAuthRequired={() => setShowAuthPopup(true)}
                             />
 
-                            {editedImageUrl && originalPreview && (
+                            {processedImageUrl && originalPreview && (
                                 <>
                                     <ResultDisplay
                                         originalImage={originalPreview}
-                                        processedImage={editedImageUrl}
+                                        processedImage={processedImageUrl}
                                         onDownload={handleDownload}
                                         onGenerateNew={handleGenerateNew}
                                     />
@@ -268,7 +265,6 @@ export default function WatermarkRemoverClient() {
             </main>
             <Footer />
             <AuthPopup isOpen={showAuthPopup} onClose={handleAuthClose} />
-            <ProcessingPopup isOpen={isLoading} />
         </>
     )
 }

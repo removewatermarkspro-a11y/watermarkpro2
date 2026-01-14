@@ -282,33 +282,6 @@ export default function Header() {
                                 </button>
                                 <div className={styles.dropdownContent}>
                                     <button onClick={() => handleLanguageChange('en')} className={styles.languageItem}>
-<<<<<<< HEAD
-                                        <img src="https://flagcdn.com/us.svg" alt="US Flag" width={20} height={15} loading="lazy" decoding="async" />
-                                        English
-                                    </button>
-                                    <button onClick={() => handleLanguageChange('fr')} className={styles.languageItem}>
-                                        <img src="https://flagcdn.com/fr.svg" alt="French Flag" width={20} height={15} loading="lazy" decoding="async" />
-                                        Français
-                                    </button>
-                                    <button onClick={() => handleLanguageChange('de')} className={styles.languageItem}>
-                                        <img src="https://flagcdn.com/de.svg" alt="German Flag" width={20} height={15} loading="lazy" decoding="async" />
-                                        Deutsch
-                                    </button>
-                                    <button onClick={() => handleLanguageChange('es')} className={styles.languageItem}>
-                                        <img src="https://flagcdn.com/es.svg" alt="Spanish Flag" width={20} height={15} loading="lazy" decoding="async" />
-                                        Español
-                                    </button>
-                                    <button onClick={() => handleLanguageChange('pt')} className={styles.languageItem}>
-                                        <img src="https://flagcdn.com/pt.svg" alt="Portuguese Flag" width={20} height={15} loading="lazy" decoding="async" />
-                                        Português
-                                    </button>
-                                    <button onClick={() => handleLanguageChange('ko')} className={styles.languageItem}>
-                                        <img src="https://flagcdn.com/kr.svg" alt="Korean Flag" width={20} height={15} loading="lazy" decoding="async" />
-                                        한국어
-                                    </button>
-                                    <button onClick={() => handleLanguageChange('no')} className={styles.languageItem}>
-                                        <img src="https://flagcdn.com/no.svg" alt="Norwegian Flag" width={20} height={15} loading="lazy" decoding="async" />
-=======
                                         <img src="https://flagcdn.com/us.svg" alt="US Flag" width={20} height={15} />
                                         English
                                     </button>
@@ -334,7 +307,6 @@ export default function Header() {
                                     </button>
                                     <button onClick={() => handleLanguageChange('no')} className={styles.languageItem}>
                                         <img src="https://flagcdn.com/no.svg" alt="Norwegian Flag" width={20} height={15} />
->>>>>>> feature/qwen-api-integration
                                         Norsk
                                     </button>
                                 </div>
@@ -385,7 +357,7 @@ export default function Header() {
                             ) : (
                                 <div style={{ width: '100px', height: '40px' }}></div>
                             )}
-                        </div>
+                        </div >
 
                         <button
                             className={styles.mobileMenuBtn}
@@ -400,7 +372,7 @@ export default function Header() {
                                 )}
                             </svg>
                         </button>
-                    </nav>
+                    </nav >
 
                     {mobileMenuOpen && (
                         <div className={styles.mobileMenu}>
@@ -449,8 +421,8 @@ export default function Header() {
                             </div>
                         </div>
                     )}
-                </div>
-            </header>
+                </div >
+            </header >
             <AuthPopup isOpen={showAuthPopup} onClose={handleAuthClose} />
         </>
     )

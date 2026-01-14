@@ -128,11 +128,7 @@ export default function WatermarkRemoverClientDe() {
                             <div className={styles.featureItem}>
                                 <div className={styles.featureImage} style={{ padding: 0, overflow: 'hidden' }}>
                                     <img
-<<<<<<< HEAD
                                         src="/images-optimized/free-watermark-remover-feature.webp"
-=======
-                                        src="/images/feature-watermark-remover.png"
->>>>>>> feature/qwen-api-integration
                                         alt="Wasserzeichen Entfernen Vorher und Nachher"
                                         style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                                     />
@@ -152,16 +148,9 @@ export default function WatermarkRemoverClientDe() {
                             <div className={styles.featureItem}>
                                 <div className={styles.featureImage} style={{ padding: 0, overflow: 'hidden' }}>
                                     <img
-<<<<<<< HEAD
                                         src="/images-optimized/remove-tiktok-watermark-ai.webp"
                                         alt="TikTok Wasserzeichen Entfernen Vorher und Nachher"
                                         style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy" decoding="async" />
-=======
-                                        src="/images/feature-tiktok-remover-v2.png"
-                                        alt="TikTok Wasserzeichen Entfernen Vorher und Nachher"
-                                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                                    />
->>>>>>> feature/qwen-api-integration
                                 </div>
                                 <div className={styles.featureContent}>
                                     <h3>{t.features.feature2.title}</h3>
@@ -178,16 +167,9 @@ export default function WatermarkRemoverClientDe() {
                             <div className={styles.featureItem}>
                                 <div className={styles.featureImage} style={{ padding: 0, overflow: 'hidden' }}>
                                     <img
-<<<<<<< HEAD
                                         src="/images-optimized/ai-watermark-removal-tool.webp"
                                         alt="Komplette Wasserzeichen Entfernen Lösung"
                                         style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy" decoding="async" />
-=======
-                                        src="/images/feature-watermark-remover-3.jpg"
-                                        alt="Komplette Wasserzeichen Entfernen Lösung"
-                                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                                    />
->>>>>>> feature/qwen-api-integration
                                 </div>
                                 <div className={styles.featureContent}>
                                     <h3>{t.features.feature3.title}</h3>
@@ -242,7 +224,6 @@ export default function WatermarkRemoverClientDe() {
                     <FAQ items={watermarkRemovalFaqItemsDe} />
                     <ToolsGrid
                         customImages={{
-<<<<<<< HEAD
                             'tool1': '/images-optimized/free-watermark-remover-tool.webp',
                             'tool2': '/images-optimized/video-watermark-remover-home.webp',
                             'tool3': '/images-optimized/text-remover-green-card.webp',
@@ -252,17 +233,6 @@ export default function WatermarkRemoverClientDe() {
                             'tool7': '/images-optimized/people-remover-street-man-card.webp',
                             'tool8': '/images-optimized/image-upscaler-panda-card.webp',
                             'tool9': '/images-optimized/free-sora-watermark-remover-1.webp'
-=======
-                            'tool1': '/images/tools/watermark-remover.png',
-                            'tool2': '/images/tools/video-watermark-home.png',
-                            'tool3': '/images/tools/remove-text-green.jpg',
-                            'tool4': '/images/tools/tool-card-remove-object-home.png',
-                            'tool5': '/images/tools/tool-card-replace-bg-home.png',
-                            'tool6': '/images/tools/tool-card-remove-bg-home.png',
-                            'tool7': '/images/tools/people-remover-street-man.jpg',
-                            'tool8': '/images/tools/upscaler-panda.jpg',
-                            'tool9': '/images/tools/sora-remover-1.png'
->>>>>>> feature/qwen-api-integration
                         }}
                     />
                 </div>

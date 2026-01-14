@@ -64,11 +64,7 @@ export default function TestQwenPage() {
                 {preview && (
                     <div className={styles.preview}>
                         <h3>Image originale:</h3>
-<<<<<<< HEAD
                         <img src={preview} alt="Original" loading="lazy" decoding="async" />
-=======
-                        <img src={preview} alt="Original" />
->>>>>>> feature/qwen-api-integration
                     </div>
                 )}
 
@@ -99,11 +95,7 @@ export default function TestQwenPage() {
             {editedImageUrl && (
                 <div className={styles.result}>
                     <h3>✨ Image éditée:</h3>
-<<<<<<< HEAD
                     <img src={editedImageUrl} alt="Edited" loading="lazy" decoding="async" />
-=======
-                    <img src={editedImageUrl} alt="Edited" />
->>>>>>> feature/qwen-api-integration
                     <div className={styles.actions}>
                         <a
                             href={editedImageUrl}

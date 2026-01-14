@@ -54,12 +54,12 @@ export async function editImage({
             prompt = userPrompt
         }
 
-        // Call Qwen Image Edit Plus model
+        // Call Qwen Image Edit 2509 model (September 2025 version)
         const output = await replicate.run(
-            "qwen/qwen-image-edit-plus:latest",
+            "qwen/qwen-image-edit-2509",
             {
                 input: {
-                    image: [imageBase64],
+                    image: imageBase64,
                     prompt: prompt,
                     go_fast: true,
                     aspect_ratio: "match_input_image",
