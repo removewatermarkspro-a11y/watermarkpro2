@@ -44,15 +44,15 @@ export const translations = {
         },
         // Category Tabs (Pills)
         categoryTabs: {
-            watermarkRemover: "Watermark remover",
-            videoWatermark: "Video watermark remover",
-            removeText: "AI text remover",
-            removeObject: "AI object remover",
-            replaceBackground: "AI background changer",
-            removeBackground: "Background remover",
-            autoRemovePeople: "AI people remover",
-            imageUpscaler: "AI image upscaler",
-            soraRemover: "Sora watermark remover"
+            watermarkRemover: "Free watermark remover",
+            videoWatermark: "Remove watermark from video",
+            removeText: "Remove text",
+            removeObject: "Remove object",
+            replaceBackground: "Replace background",
+            removeBackground: "Remove background",
+            autoRemovePeople: "Auto remove people",
+            imageUpscaler: "Image upscaler",
+            soraRemover: "Sora Remover"
         },
         // Examples Section
         examples: {
@@ -190,22 +190,15 @@ export const translations = {
             account: "My account",
             logout: "Logout",
             featuresMenu: {
-                watermarkRemover: "Watermark remover",
-                videoWatermark: "Video watermark remover",
-                removeBackground: "Background remover",
-                replaceBackground: "AI background changer",
-                removeObject: "AI object remover",
-                removeText: "AI text remover",
-                autoRemovePeople: "AI people remover",
-                imageUpscaler: "AI image upscaler",
-                soraRemover: "Sora watermark remover"
+                watermarkRemover: "Watermark Remover",
+                videoWatermark: "Watermark Remover from Video",
+                removeBackground: "Remove Background",
+                replaceBackground: "Replace Background",
+                removeObject: "Remove Object",
+                removeText: "Remove Text",
+                autoRemovePeople: "Auto Remove People",
+                imageUpscaler: "Image Upscaler"
             }
-        },
-        // Blog Page
-        blogPage: {
-            badge: "LATEST BLOGS",
-            title: "Remove Watermark Pro Blog",
-            description: "Unlock the full potential of AI-powered image editing with our expert blog. Learn how to remove watermarks from photos and videos, enhance image quality, upscale resolution, and master advanced photo editing techniques. From free watermark removal tools to professional background editing, object removal, and AI enhancement—discover step-by-step tutorials, insider tips, and proven strategies. Perfect for content creators, photographers, social media managers, and digital marketers looking to create stunning, professional-grade visuals that drive engagement and stand out online."
         },
         // Image Uploader
         imageUploader: {
@@ -219,15 +212,14 @@ export const translations = {
             moreTools: "More Tools",
             company: "Company",
             legal: "Legal",
-            watermarkRemover: "Watermark remover",
-            videoWatermark: "Video watermark remover",
-            removeBackground: "Background remover",
-            replaceBackground: "AI background changer",
-            removeObject: "AI object remover",
-            removeText: "AI text remover",
-            autoRemovePeople: "AI people remover",
-            imageUpscaler: "AI image upscaler",
-            soraRemover: "Sora watermark remover",
+            watermarkRemover: "Free watermark remover",
+            videoWatermark: "Remove watermark from video",
+            removeBackground: "Remove background",
+            replaceBackground: "Replace background",
+            removeObject: "Remove object",
+            removeText: "Remove Text",
+            autoRemovePeople: "Auto Remove People",
+            imageUpscaler: "Image Upscaler",
             pricing: "Pricing",
             blog: "Blog",
             contact: "Contact",
@@ -245,11 +237,6 @@ export const translations = {
             divider: "OR",
             emailPlaceholder: "Enter your email",
             emailButton: "Continue with Email",
-            sending: "Sending...",
-            checkEmailTitle: "Check your email",
-            magicLinkSent: "We sent a magic link to",
-            clickLinkToSignIn: "Click the link in the email to sign in.",
-            gotIt: "Got it",
             termsText: "By continuing, you agree to our",
             termsLink: "Terms of Service",
             and: "and",
@@ -291,80 +278,10 @@ export const translations = {
             name: "Name",
             email: "Email"
         },
-        // Cancel Subscription Popup
-        cancelSubscriptionPopup: {
-            title: "Are you sure?",
-            message: "Do you really want to cancel your subscription? You will lose access to all premium features.",
-            questions: {
-                why: {
-                    title: "Why do you want to cancel?",
-                    options: [
-                        "Too expensive for me",
-                        "I don't use the service enough",
-                        "Technical issues or bugs",
-                        "Missing features",
-                        "Switching to another service",
-                        "Other"
-                    ]
-                },
-                features: {
-                    title: "How satisfied are you with our features?",
-                    options: [
-                        "Watermark removal quality is poor",
-                        "Background removal doesn't work well",
-                        "Limited editing options",
-                        "Processing is too slow",
-                        "Features are too complicated",
-                        "Features meet my expectations"
-                    ]
-                },
-                usability: {
-                    title: "How easy is our platform to use?",
-                    options: [
-                        "Interface is confusing",
-                        "Hard to find features",
-                        "Upload process is complicated",
-                        "Results are difficult to download",
-                        "Not enough tutorials or guides",
-                        "Easy and intuitive to use"
-                    ]
-                },
-                pricing: {
-                    title: "How do you feel about the pricing?",
-                    options: [
-                        "Too expensive compared to competitors",
-                        "Not enough credits per month",
-                        "Would prefer a different payment model",
-                        "Pricing is unclear",
-                        "Good value for money",
-                        "Fair pricing overall"
-                    ]
-                },
-                support: {
-                    title: "How was your experience with support?",
-                    options: [
-                        "Never received help when needed",
-                        "Support response was too slow",
-                        "Support couldn't solve my problem",
-                        "No issues, didn't need support",
-                        "Support was helpful",
-                        "Haven't contacted support yet"
-                    ]
-                }
-            },
-            promo: {
-                badge: "20% OFF",
-                title: "Special Offer!",
-                text: "Stay with us and enjoy <strong>20% off</strong> your next month!",
-                button: "Claim 20% Discount"
-            },
-            staySubscribed: "Stay Subscribed",
-            cancelButton: "Cancel Subscription"
-        },
         // Video Watermark Page
         videoWatermarkPage: {
             hero: {
-                title: "video watermark remover",
+                title: "watermark remover from video",
                 titleHighlight: "Free",
                 description: "Remove watermarks from videos with AI. Delete TikTok logos, text overlays, and video watermarks from MP4, MOV, AVI files in seconds."
             },
@@ -410,7 +327,7 @@ export const translations = {
         // Remove Text Page
         removeTextPage: {
             hero: {
-                title: "AI text remover",
+                title: "remove text from image ai",
                 titleHighlight: "Free",
                 description: "Instantly remove text, captions, and subtitles from images with AI. Clean up photos by erasing unwanted text overlays in seconds."
             },
@@ -452,7 +369,7 @@ export const translations = {
         // Remove Object Page
         removeObjectPage: {
             hero: {
-                title: "object remover AI",
+                title: "remove any objects from your images",
                 titleHighlight: "Free",
                 description: "Erase any unwanted object from photos with AI. Remove people, cars, buildings, or any element from your images in seconds.",
                 promptPlaceholder: "Describe what object you want to remove..."
@@ -495,7 +412,7 @@ export const translations = {
         // Remove Background Page
         removeBackgroundPage: {
             hero: {
-                title: "background remover",
+                title: "remove background from image instantly",
                 titleHighlight: "Free",
                 description: "Remove image backgrounds instantly with AI. Create transparent PNGs, isolate subjects, and get professional cutouts in seconds."
             },
@@ -537,7 +454,7 @@ export const translations = {
         // Replace Background Page
         replaceBackgroundPage: {
             hero: {
-                title: "background changer AI",
+                title: "instantly swap backgrounds",
                 titleHighlight: "Free",
                 description: "Change photo backgrounds instantly with AI. Replace any background with custom images, colors, or professional studio backdrops.",
                 promptPlaceholder: "Describe the background you want to create..."
@@ -580,7 +497,7 @@ export const translations = {
         // People Removal Page
         peopleRemovalPage: {
             hero: {
-                title: "people remover AI",
+                title: "smart people removal with one click",
                 titleHighlight: "Free",
                 description: "Automatically remove people and crowds from photos with AI. Get clean, tourist-free shots of landmarks and locations instantly.",
                 promptPlaceholder: "Describe who you want to remove from the photo..."
@@ -623,7 +540,7 @@ export const translations = {
         // Image Upscaler Page
         imageUpscalerPage: {
             hero: {
-                title: "AI image upscaler",
+                title: "upscale images to 4K with AI precision",
                 titleHighlight: "Free",
                 description: "Upscale images with AI to 4x resolution. Enhance photo quality, increase resolution, and add realistic details automatically."
             },
@@ -713,7 +630,7 @@ export const translations = {
         // Hero Section
         hero: {
             titleHighlight: "Gratuit",
-            titleMain: "Enlever un filigrane",
+            titleMain: "suppresseur de filigrane",
             description: "Téléchargez votre image, sélectionnez le filigrane et laissez notre IA le supprimer intelligemment tout en préservant la qualité d'origine. Résultats professionnels instantanés.",
         },
         // Features Section
@@ -754,14 +671,14 @@ export const translations = {
         },
         // Category Tabs (Pills)
         categoryTabs: {
-            watermarkRemover: "Suppresseur de filigrane",
-            videoWatermark: "Suppresseur de filigrane vidéo",
-            removeText: "Suppresseur de texte IA",
-            removeObject: "Suppresseur d'objet IA",
-            replaceBackground: "Changeur d'arrière-plan IA",
-            removeBackground: "Suppresseur d'arrière-plan",
-            autoRemovePeople: "Suppresseur de personnes IA",
-            imageUpscaler: "Agrandisseur d'image IA",
+            watermarkRemover: "Suppresseur de filigrane gratuit",
+            videoWatermark: "Supprimer le filigrane d'une vidéo",
+            removeText: "Supprimer le texte",
+            removeObject: "Supprimer l'objet",
+            replaceBackground: "Remplacer l'arrière-plan",
+            removeBackground: "Supprimer l'arrière-plan",
+            autoRemovePeople: "Supprimer les personnes",
+            imageUpscaler: "Agrandisseur d'image",
             soraRemover: "Suppresseur de filigrane Sora"
         },
         // Examples Section
@@ -849,6 +766,14 @@ export const translations = {
                 button: "Acheter maintenant"
             }
         },
+        // Testimonials CTA
+        testimonialsCta: {
+            badge: "DES CENTAINES D'AVIS",
+            trustedBadge: "Approuvé par plus de 20 000 utilisateurs",
+            title: "Prêt à nettoyer vos images ?",
+            text: "De la suppression des filigranes à l'effacement des objets indésirables — débloquez l'édition photo professionnelle. Tout alimenté par l'IA.",
+            button: "Commencer Gratuitement"
+        },
         // Processing Popup
         processingPopup: {
             title: "Traitement de votre image...",
@@ -892,15 +817,14 @@ export const translations = {
             account: "Mon compte",
             logout: "Déconnexion",
             featuresMenu: {
-                watermarkRemover: "Suppresseur de filigrane",
-                videoWatermark: "Suppresseur de filigrane vidéo",
-                removeBackground: "Suppresseur d'arrière-plan",
-                replaceBackground: "Changeur d'arrière-plan IA",
-                removeObject: "Suppresseur d'objet IA",
-                removeText: "Suppresseur de texte IA",
-                autoRemovePeople: "Suppresseur de personnes IA",
-                imageUpscaler: "Agrandisseur d'image IA",
-                soraRemover: "Suppresseur de filigrane Sora"
+                watermarkRemover: "Suppresseur de Filigrane",
+                videoWatermark: "Supprimer Filigrane Vidéo",
+                removeBackground: "Supprimer l'Arrière-plan",
+                replaceBackground: "Remplacer l'Arrière-plan",
+                removeObject: "Supprimer l'Objet",
+                removeText: "Supprimer le Texte",
+                autoRemovePeople: "Supprimer les Personnes",
+                imageUpscaler: "Agrandisseur d'Image"
             }
         },
         // Image Uploader
@@ -915,15 +839,14 @@ export const translations = {
             moreTools: "Plus d'Outils",
             company: "Entreprise",
             legal: "Légal",
-            watermarkRemover: "Suppresseur de filigrane",
-            videoWatermark: "Suppresseur de filigrane vidéo",
-            removeBackground: "Suppresseur d'arrière-plan",
-            replaceBackground: "Changeur d'arrière-plan IA",
-            removeObject: "Suppresseur d'objet IA",
-            removeText: "Suppresseur de texte IA",
-            autoRemovePeople: "Suppresseur de personnes IA",
-            imageUpscaler: "Agrandisseur d'image IA",
-            soraRemover: "Suppresseur de filigrane Sora",
+            watermarkRemover: "Suppresseur de filigrane gratuit",
+            videoWatermark: "Supprimer filigrane vidéo",
+            removeBackground: "Supprimer l'arrière-plan",
+            replaceBackground: "Remplacer l'arrière-plan",
+            removeObject: "Supprimer l'objet",
+            removeText: "Supprimer le Texte",
+            autoRemovePeople: "Supprimer les Personnes",
+            imageUpscaler: "Agrandisseur d'Image",
             pricing: "Tarifs",
             blog: "Blog",
             contact: "Contact",
@@ -985,7 +908,7 @@ export const translations = {
         // Video Watermark Page
         videoWatermarkPage: {
             hero: {
-                title: "Enlever un filigrane vidéo",
+                title: "suppresseur de filigrane vidéo",
                 titleHighlight: "Gratuit",
                 description: "Supprimez les filigranes des vidéos avec l'IA. Effacez les logos TikTok, les superpositions de texte et les filigranes vidéo des fichiers MP4, MOV, AVI en quelques secondes."
             },
@@ -1031,7 +954,7 @@ export const translations = {
         // Remove Text Page - French version
         removeTextPage: {
             hero: {
-                title: "Supprimer le texte d'une image",
+                title: "supprimer texte image ia",
                 titleHighlight: "Gratuit",
                 description: "Supprimez instantanément le texte, les légendes et les sous-titres des images avec l'IA. Nettoyez les photos en effaçant les superpositions de texte indésirables en quelques secondes."
             },
@@ -1073,8 +996,8 @@ export const translations = {
         // Remove Object Page - French version
         removeObjectPage: {
             hero: {
-                title: "Supprimer objet photo",
-                titleHighlight: "IA Gratuit",
+                title: "supprimer n'importe quel objet de vos images",
+                titleHighlight: "Gratuit",
                 description: "Effacez tout objet indésirable des photos avec l'IA. Supprimez les personnes, voitures, bâtiments ou tout élément de vos images en quelques secondes.",
                 promptPlaceholder: "Décrivez l'objet que vous souhaitez supprimer..."
             },
@@ -1116,7 +1039,7 @@ export const translations = {
         // Remove Background Page - French version
         removeBackgroundPage: {
             hero: {
-                title: "Supprimer l'arrière-plan",
+                title: "supprimer l'arrière-plan d'une image instantanément",
                 titleHighlight: "Gratuit",
                 description: "Supprimez instantanément les arrière-plans d'images avec l'IA. Créez des PNG transparents, isolez les sujets et obtenez des découpes professionnelles en quelques secondes."
             },
@@ -1158,7 +1081,7 @@ export const translations = {
         // Replace Background Page - French version
         replaceBackgroundPage: {
             hero: {
-                title: "Changer l'arrière-plan d'une photo",
+                title: "échanger instantanément les arrière-plans",
                 titleHighlight: "Gratuit",
                 description: "Changez instantanément les arrière-plans de photos avec l'IA. Remplacez n'importe quel arrière-plan par des images personnalisées, des couleurs ou des fonds de studio professionnels.",
                 promptPlaceholder: "Décrivez l'arrière-plan que vous souhaitez créer..."
@@ -1201,7 +1124,7 @@ export const translations = {
         // People Removal Page - French version
         peopleRemovalPage: {
             hero: {
-                title: "Effacer des personnes automatiquement",
+                title: "suppression intelligente de personnes en un clic",
                 titleHighlight: "Gratuit",
                 description: "Supprimez automatiquement les personnes et les foules des photos avec l'IA. Obtenez instantanément des clichés propres et sans touristes de monuments et lieux.",
                 promptPlaceholder: "Décrivez qui vous souhaitez supprimer de la photo..."
@@ -1244,7 +1167,7 @@ export const translations = {
         // Image Upscaler Page - French version
         imageUpscalerPage: {
             hero: {
-                title: "Améliorer qualité photo en 4K",
+                title: "agrandir les images en 4K avec précision IA",
                 titleHighlight: "Gratuit",
                 description: "Agrandissez les images avec l'IA jusqu'à 4x la résolution. Améliorez la qualité photo, augmentez la résolution et ajoutez des détails réalistes automatiquement."
             },
@@ -1286,7 +1209,7 @@ export const translations = {
         // Sora Remover Page
         soraRemoverPage: {
             hero: {
-                title: "Enlever le filigrane sora",
+                title: "suppresseur de filigrane sora",
                 titleHighlight: "Gratuit",
                 description: "Supprimez les filigranes Sora AI des vidéos instantanément avec l'IA. Retirez le branding OpenAI Sora, les logos et filigranes des vidéos générées par IA en quelques secondes."
             },
@@ -1328,47 +1251,13 @@ export const translations = {
                     description: "En quelques instants, votre vidéo Sora AI pristine sans filigrane est prête au téléchargement en qualité d'origine complète sans perte de compression. Téléchargez vos séquences propres prêtes à être utilisées pour les uploads YouTube, Instagram Reels, TikTok, portfolios professionnels, présentations clients ou campagnes commerciales. Avec notre technologie de suppresseur Sora rapide et fiable, créer des vidéos AI époustouflantes sans marque n'a jamais été aussi facile. Profitez de la liberté de séquences parfaitement propres de qualité cinéma prêtes à impressionner votre audience sans aucun filigrane distrayant."
                 }
             }
-        },
-        cancelSubscriptionPopup: {
-            title: "Êtes-vous sûr ?",
-            message: "Voulez-vous vraiment annuler votre abonnement ? Vous perdrez l'accès à toutes les fonctionnalités premium.",
-            questions: {
-                why: {
-                    title: "Pourquoi voulez-vous annuler ?",
-                    options: ["Trop cher pour moi", "Je n'utilise pas assez le service", "Problèmes techniques ou bugs", "Fonctionnalités manquantes", "Je passe à un autre service", "Autre"]
-                },
-                features: {
-                    title: "Êtes-vous satisfait de nos fonctionnalités ?",
-                    options: ["La qualité de suppression de filigrane est médiocre", "La suppression d'arrière-plan ne fonctionne pas bien", "Options d'édition limitées", "Le traitement est trop lent", "Les fonctionnalités sont trop compliquées", "Les fonctionnalités répondent à mes attentes"]
-                },
-                usability: {
-                    title: "Notre plateforme est-elle facile à utiliser ?",
-                    options: ["L'interface est confuse", "Difficile de trouver les fonctionnalités", "Le processus de téléchargement est compliqué", "Les résultats sont difficiles à télécharger", "Pas assez de tutoriels ou de guides", "Facile et intuitive à utiliser"]
-                },
-                pricing: {
-                    title: "Que pensez-vous de nos tarifs ?",
-                    options: ["Trop cher par rapport à la concurrence", "Pas assez de crédits par mois", "Je préférerais un modèle de paiement différent", "Les tarifs ne sont pas clairs", "Bon rapport qualité-prix", "Tarifs équitables dans l'ensemble"]
-                },
-                support: {
-                    title: "Comment s'est passée votre expérience avec le support ?",
-                    options: ["Je n'ai jamais reçu d'aide quand j'en avais besoin", "La réponse du support était trop lente", "Le support n'a pas pu résoudre mon problème", "Aucun problème, je n'avais pas besoin de support", "Le support a été utile", "Je n'ai pas encore contacté le support"]
-                }
-            },
-            promo: {
-                badge: "20% DE RÉDUCTION",
-                title: "Offre Spéciale !",
-                text: "Restez avec nous et profitez de <strong>20% de réduction</strong> sur votre prochain mois !",
-                button: "Réclamer 20% de réduction"
-            },
-            staySubscribed: "Rester Abonné",
-            cancelButton: "Annuler l'Abonnement"
         }
     },
     de: {
         // Hero Section
         hero: {
             titleHighlight: "Kostenlos",
-            titleMain: "Wasserzeichen entfernen mit KI",
+            titleMain: "Wasserzeichen-Entferner",
             description: "Laden Sie Ihr Bild hoch, wählen Sie das Wasserzeichen aus und lassen Sie unsere KI es intelligent entfernen, während die ursprüngliche Qualität erhalten bleibt. Professionelle Ergebnisse sofort.",
         },
         // Features Section
@@ -1409,15 +1298,14 @@ export const translations = {
         },
         // Category Tabs (Pills)
         categoryTabs: {
-            watermarkRemover: "Wasserzeichen-Entferner",
-            videoWatermark: "Video Wasserzeichen-Entferner",
-            removeText: "KI Text-Entferner",
-            removeObject: "KI Objekt-Entferner",
-            replaceBackground: "KI Hintergrund-Wechsler",
-            removeBackground: "Hintergrund-Entferner",
-            autoRemovePeople: "KI Personen-Entferner",
-            imageUpscaler: "KI Bild-Vergrößerer",
-            soraRemover: "Sora Wasserzeichen-Entferner"
+            watermarkRemover: "Kostenloser Wasserzeichen-Entferner",
+            videoWatermark: "Wasserzeichen aus Video entfernen",
+            removeText: "Text entfernen",
+            removeObject: "Objekt entfernen",
+            replaceBackground: "Hintergrund ersetzen",
+            removeBackground: "Hintergrund entfernen",
+            autoRemovePeople: "Personen automatisch entfernen",
+            imageUpscaler: "Bild-Vergrößerer"
         },
         // Examples Section
         examples: {
@@ -1459,8 +1347,6 @@ export const translations = {
             tool7Description: "Die KI kann das Bild analysieren und Personen automatisch entfernen, genau wie sie Wasserzeichen von Bildern oder Text entfernt. Perfekt zum Bereinigen von Fotos, Schutz der Privatsphäre oder Vorbereitung kreativer Projekte.",
             tool8Title: "Bild-Vergrößerer",
             tool8Description: "Verbessern Sie Ihre Fotoauflösung mit unserem KI-basierten Vergrößerer. Es funktioniert perfekt nach einem Wasserzeichen-Entferner und ermöglicht es Ihnen, eine bereits bereinigte Datei zu optimieren, während ausgezeichnete Schärfe erhalten bleibt.",
-            tool9Title: "Kostenloser Sora Wasserzeichen-Entferner",
-            tool9Description: "Entfernen Sie Wasserzeichen aus Sora AI-generierten Videos sofort. Unser spezialisiertes Tool erkennt und entfernt OpenAI Sora Branding, Logos und Wasserzeichen während die Videoqualität erhalten bleibt, perfekt für professionelle Content-Erstellung.",
             getStartedButton: "Kostenlos starten"
         },
         // Pricing Section
@@ -1503,6 +1389,14 @@ export const translations = {
                 credits: "Guthaben",
                 button: "Jetzt kaufen"
             }
+        },
+        // Testimonials CTA
+        testimonialsCta: {
+            badge: "HUNDERTE VON BEWERTUNGEN",
+            trustedBadge: "Vertraut von über 20.000 Nutzern",
+            title: "Bereit, Ihre Bilder zu bereinigen?",
+            text: "Vom Entfernen von Wasserzeichen bis zum Löschen unerwünschter Objekte – schalten Sie professionelle Fotobearbeitung frei. Alles angetrieben von KI.",
+            button: "Jetzt kostenlos starten"
         },
         // Processing Popup
         processingPopup: {
@@ -1548,14 +1442,13 @@ export const translations = {
             logout: "Abmelden",
             featuresMenu: {
                 watermarkRemover: "Wasserzeichen-Entferner",
-                videoWatermark: "Video Wasserzeichen-Entferner",
-                removeBackground: "Hintergrund-Entferner",
-                replaceBackground: "KI Hintergrund-Wechsler",
-                removeObject: "KI Objekt-Entferner",
-                removeText: "KI Text-Entferner",
-                autoRemovePeople: "KI Personen-Entferner",
-                imageUpscaler: "KI Bild-Vergrößerer",
-                soraRemover: "Sora-Wasserzeichen-Entferner"
+                videoWatermark: "Wasserzeichen-Entferner aus Video",
+                removeBackground: "Hintergrund entfernen",
+                replaceBackground: "Hintergrund ersetzen",
+                removeObject: "Objekt entfernen",
+                removeText: "Text entfernen",
+                autoRemovePeople: "Personen automatisch entfernen",
+                imageUpscaler: "Bild-Vergrößerer"
             }
         },
         // Image Uploader
@@ -1564,28 +1457,20 @@ export const translations = {
             formatText: "JPG, PNG, WEBP bis zu 10MB",
             clickToBrowse: "oder klicken Sie zum Durchsuchen"
         },
-        // Testimonials CTA
-        testimonialsCta: {
-            badge: "HUNDERTE VON BEWERTUNGEN",
-            trustedBadge: "Vertraut von über 20.000 Nutzern",
-            title: "Bereit, Ihre Bilder zu bereinigen?",
-            text: "Von der Entfernung von Wasserzeichen bis zum Löschen unerwünschter Objekte — professionelle Fotobearbeitung freischalten. Alles angetrieben von KI.",
-            button: "Jetzt kostenlos starten"
-        },
         // Footer
         footer: {
             features: "Funktionen",
             moreTools: "Weitere Tools",
             company: "Unternehmen",
             legal: "Rechtliches",
-            watermarkRemover: "Wasserzeichen-Entferner",
-            videoWatermark: "Video Wasserzeichen-Entferner",
-            removeBackground: "Hintergrund-Entferner",
-            replaceBackground: "KI Hintergrund-Wechsler",
-            removeObject: "KI Objekt-Entferner",
-            removeText: "KI Text-Entferner",
-            autoRemovePeople: "KI Personen-Entferner",
-            imageUpscaler: "KI Bild-Vergrößerer",
+            watermarkRemover: "Kostenloser Wasserzeichen-Entferner",
+            videoWatermark: "Wasserzeichen aus Video entfernen",
+            removeBackground: "Hintergrund entfernen",
+            replaceBackground: "Hintergrund ersetzen",
+            removeObject: "Objekt entfernen",
+            removeText: "Text entfernen",
+            autoRemovePeople: "Personen automatisch entfernen",
+            imageUpscaler: "Bild-Vergrößerer",
             pricing: "Preise",
             blog: "Blog",
             contact: "Kontakt",
@@ -1640,8 +1525,8 @@ export const translations = {
         // Video Watermark Page - German version
         videoWatermarkPage: {
             hero: {
+                title: "Wasserzeichen-Entferner aus Video",
                 titleHighlight: "Kostenlos",
-                title: "Video Wasserzeichen entfernen mit KI",
                 description: "Entfernen Sie Wasserzeichen aus Videos mit KI. Löschen Sie TikTok-Logos, Textüberlagerungen und Video-Wasserzeichen aus MP4-, MOV-, AVI-Dateien in Sekunden."
             },
             uploader: {
@@ -1683,57 +1568,11 @@ export const translations = {
                 }
             }
         },
-        // Sora Remover Page - German version
-        soraRemoverPage: {
-            hero: {
-                titleHighlight: "Kostenlos",
-                title: "Sora Wasserzeichen-Entferner",
-                description: "Entfernen Sie Sora AI Wasserzeichen sofort aus Videos mit KI. Entfernen Sie OpenAI Sora Branding, Logos und Wasserzeichen aus KI-generierten Videos in Sekunden."
-            },
-            uploader: {
-                uploadText: "Ziehen Sie Ihr Sora-Video hierher",
-                formatText: "MP4, MOV, AVI bis zu 100MB"
-            },
-            features: {
-                badge: "LEISTUNGSSTARKE FUNKTIONEN",
-                feature1: {
-                    title: "Kostenloser Sora Wasserzeichen-Entferner – Entfernen Sie OpenAI Sora Branding sofort",
-                    description: "Unsere fortschrittliche KI bietet einen spezialisierten kostenlosen Sora-Entferner, der entwickelt wurde, um Sora-Wasserzeichen aus KI-generierten Videos mit punktgenauer Präzision zu entfernen. Das System analysiert intelligent jeden Frame, um OpenAI Sora Logos, Textüberlagerungen und Branding-Elemente zu erkennen und zu löschen, während eine makellose Videoqualität erhalten bleibt. Perfekt für Content-Ersteller, Filmemacher und Vermarkter, die den Sora AI Video-Generator verwenden und sauberes, wasserzeichenfreies Material für professionelle Projekte, YouTube-Inhalte oder Social-Media-Kampagnen benötigen. Erleben Sie nahtlose Wasserzeichenentfernung, die die ursprüngliche Klarheit und filmische Qualität Ihres Videos bewahrt.",
-                    button: "Jetzt starten"
-                },
-                feature2: {
-                    title: "Schnelle KI-gestützte Sora Logo-Entfernung für professionelle Qualität",
-                    description: "Erleben Sie blitzschnelle Sora-Wasserzeichenentfernung mit unserer optimierten Engine für die Bereinigung KI-generierter Videos. In Sekunden können Sie Sora-Branding entfernen, OpenAI-Wasserzeichen löschen und Ihre Sora AI Videos in MP4, MOV, AVI und WebM-Formaten polieren. Unsere intelligente Verarbeitung verarbeitet 4K, HD und sogar 8K-Material nahtlos. Ideal für professionelle Filmemacher, YouTuber und Content-Ersteller, die Wasserzeichen schnell aus Sora-Videos entfernen müssen, während sie Broadcast-Qualität erhalten. Der automatisierte Workflow liefert erstklassige Qualität, die mit manueller Bearbeitung konkurriert.",
-                    button: "Jetzt starten"
-                },
-                feature3: {
-                    title: "Vollständiger Sora Video Wasserzeichen-Entferner – Professionelle KI-Lösung",
-                    description: "Unser umfassendes Sora-Entferner-Tool verarbeitet alle OpenAI Sora Wasserzeichen-Varianten mit professioneller Genauigkeit. Ob Ihre Videos Eck-Branding, zentrierte Logos, animierte Wasserzeichen oder Textüberlagerungen von der Sora AI Plattform enthalten, Sie können Sora-Wasserzeichen sofort entfernen und broadcast-bereites Material erreichen. Kompatibel mit allen von OpenAI Sora generierten Videoformaten, gewährleistet unser System makellose Wasserzeichenentfernung bei gleichzeitiger Bewahrung von flüssiger Bewegung, natürlicher Beleuchtung und Farbbalance. Perfekt, um KI-generierte Sequenzen in polierte, professionelle Visuals zu verwandeln, die für jede Plattform bereit sind.",
-                    button: "Jetzt starten"
-                }
-            },
-            howItWorks: {
-                badge: "WIE ES FUNKTIONIERT",
-                title: "Entfernen Sie Sora-Wasserzeichen in 3 einfachen Schritten",
-                step1: {
-                    title: "Laden Sie Ihr Sora AI Video hoch",
-                    description: "Beginnen Sie, indem Sie Ihr Sora-generiertes Video direkt von Ihrem Gerät hochladen oder es in unsere Oberfläche ziehen. Unsere Plattform unterstützt alle Standard-Videoformate einschließlich MP4, MOV, AVI, WebM und MKV, die von OpenAI Sora produziert werden. Ob Ihr Video Eck-Wasserzeichen, Logos, Textüberlagerungen oder Zeitstempel enthält, unser intelligentes System erkennt das Format sofort und bereitet Ihr Material für KI-gestützte Wasserzeichenentfernung vor. Der Upload-Prozess ist schnell, sicher und verarbeitet Dateien bis zu 4K und 8K Auflösung mit Leichtigkeit."
-                },
-                step2: {
-                    title: "KI entfernt Sora-Wasserzeichen automatisch",
-                    description: "Nach dem Hochladen verwendet unser spezialisierter Sora-Wasserzeichen-Entferner fortschrittliche KI-Algorithmen, um jeden Frame mit chirurgischer Präzision zu analysieren. Das System erkennt und löscht intelligent alle OpenAI Sora Branding-Elemente einschließlich Logos, Text, Wasserzeichen und Überlagerungen, während Hintergründe nahtlos rekonstruiert werden. Unsere KI erhält flüssigen Bewegungsfluss, bewahrt die ursprüngliche Beleuchtung und gewährleistet Farbkonsistenz über die gesamte Timeline. Der vollautomatische Prozess liefert saubere, professionelle Ergebnisse in Sekunden ohne manuelle Bearbeitungsfähigkeiten oder komplexes Software-Wissen zu erfordern."
-                },
-                step3: {
-                    title: "Laden Sie Ihr wasserzeichenfreies Sora-Video herunter",
-                    description: "In Momenten ist Ihr makelloses, wasserzeichenfreies Sora AI Video zum Download in voller Originalqualität ohne Kompressionsverlust bereit. Laden Sie Ihr sauberes Material herunter, bereit zur Verwendung für YouTube-Uploads, Instagram Reels, TikTok, professionelle Portfolios, Kundenpräsentationen oder kommerzielle Kampagnen. Mit unserer schnellen, zuverlässigen Sora-Entferner-Technologie war das Erstellen atemberaubender, markenfreier KI-Videos noch nie einfacher. Erleben Sie die Freiheit perfekt sauberen, kinematografischen Materials, bereit, Ihr Publikum ohne ablenkende Wasserzeichen zu beeindrucken."
-                }
-            }
-        },
         // Remove Text Page - German version
         removeTextPage: {
             hero: {
+                title: "Text aus Bild entfernen KI",
                 titleHighlight: "Kostenlos",
-                title: "Text aus Bild entfernen mit KI",
                 description: "Entfernen Sie sofort Text, Untertitel und Bildunterschriften aus Bildern mit KI. Bereinigen Sie Fotos, indem Sie unerwünschte Textüberlagerungen in Sekunden löschen."
             },
             features: {
@@ -1774,8 +1613,8 @@ export const translations = {
         // Remove Object Page - German version
         removeObjectPage: {
             hero: {
+                title: "entfernen Sie jedes Objekt aus Ihren Bildern",
                 titleHighlight: "Kostenlos",
-                title: "KI Objekt-Entferner",
                 description: "Löschen Sie jedes unerwünschte Objekt aus Fotos mit KI. Entfernen Sie Personen, Autos, Gebäude oder jedes Element aus Ihren Bildern in Sekunden.",
                 promptPlaceholder: "Beschreiben Sie, welches Objekt Sie entfernen möchten..."
             },
@@ -1817,8 +1656,8 @@ export const translations = {
         // Remove Background Page - German version
         removeBackgroundPage: {
             hero: {
+                title: "Hintergrund sofort aus Bild entfernen",
                 titleHighlight: "Kostenlos",
-                title: "Bilder freistellen mit KI",
                 description: "Entfernen Sie Bildhintergründe sofort mit KI. Erstellen Sie transparente PNGs, isolieren Sie Motive und erhalten Sie professionelle Ausschnitte in Sekunden."
             },
             features: {
@@ -1859,8 +1698,8 @@ export const translations = {
         // Replace Background Page - German version
         replaceBackgroundPage: {
             hero: {
+                title: "Hintergründe sofort austauschen",
                 titleHighlight: "Kostenlos",
-                title: "Hintergrund ändern mit KI",
                 description: "Ändern Sie Fotohintergründe sofort mit KI. Ersetzen Sie jeden Hintergrund durch benutzerdefinierte Bilder, Farben oder professionelle Studio-Hintergründe.",
                 promptPlaceholder: "Beschreiben Sie den Hintergrund, den Sie erstellen möchten..."
             },
@@ -1902,8 +1741,8 @@ export const translations = {
         // People Removal Page - German version
         peopleRemovalPage: {
             hero: {
+                title: "intelligente Personenentfernung mit einem Klick",
                 titleHighlight: "Kostenlos",
-                title: "Personen aus Bild entfernen mit KI",
                 description: "Entfernen Sie automatisch Personen und Menschenmengen aus Fotos mit KI. Erhalten Sie sofort saubere, touristenfreie Aufnahmen von Sehenswürdigkeiten und Orten.",
                 promptPlaceholder: "Beschreiben Sie, wen Sie aus dem Foto entfernen möchten..."
             },
@@ -1945,8 +1784,8 @@ export const translations = {
         // Image Upscaler Page - German version
         imageUpscalerPage: {
             hero: {
+                title: "Bilder auf 4K mit KI-Präzision vergrößern",
                 titleHighlight: "Kostenlos",
-                title: "Bild vergrößern auf 4K mit KI",
                 description: "Vergrößern Sie Bilder mit KI auf 4-fache Auflösung. Verbessern Sie die Fotoqualität, erhöhen Sie die Auflösung und fügen Sie automatisch realistische Details hinzu."
             },
             features: {
@@ -1983,40 +1822,6 @@ export const translations = {
                     description: "In nur wenigen Sekunden ist Ihr neues Ultra-HD-Bild fertig. Laden Sie einfach das Endergebnis in schöner 4K-Qualität herunter und verwenden Sie es, wo immer Sie es benötigen – Druck, große Displays, professionelle Portfolios, E-Commerce oder digitale Archive. Mit unserem schnellen und zuverlässigen KI-Vergrößerer war es noch nie einfacher, kristallklare, hochwertige Bilder zu erstellen."
                 }
             }
-        },
-        cancelSubscriptionPopup: {
-            title: "Sind Sie sicher?",
-            message: "Möchten Sie Ihr Abonnement wirklich kündigen? Sie verlieren den Zugriff auf alle Premium-Funktionen.",
-            questions: {
-                why: {
-                    title: "Warum möchten Sie kündigen?",
-                    options: ["Zu teuer für mich", "Ich nutze den Service nicht genug", "Technische Probleme oder Bugs", "Fehlende Funktionen", "Wechsel zu einem anderen Service", "Andere"]
-                },
-                features: {
-                    title: "Wie zufrieden sind Sie mit unseren Funktionen?",
-                    options: ["Wasserzeichen-Entfernungsqualität ist schlecht", "Hintergrundentfernung funktioniert nicht gut", "Begrenzte Bearbeitungsoptionen", "Verarbeitung ist zu langsam", "Funktionen sind zu kompliziert", "Funktionen erfüllen meine Erwartungen"]
-                },
-                usability: {
-                    title: "Wie einfach ist unsere Plattform zu bedienen?",
-                    options: ["Benutzeroberfläche ist verwirrend", "Schwer Funktionen zu finden", "Upload-Prozess ist kompliziert", "Ergebnisse sind schwer herunterzuladen", "Nicht genug Tutorials oder Anleitungen", "Einfach und intuitiv zu bedienen"]
-                },
-                pricing: {
-                    title: "Was denken Sie über unsere Preise?",
-                    options: ["Zu teuer im Vergleich zur Konkurrenz", "Nicht genug Credits pro Monat", "Würde ein anderes Zahlungsmodell bevorzugen", "Preise sind unklar", "Gutes Preis-Leistungs-Verhältnis", "Faire Preise insgesamt"]
-                },
-                support: {
-                    title: "Wie war Ihre Erfahrung mit dem Support?",
-                    options: ["Habe nie Hilfe erhalten wenn benötigt", "Support-Antwort war zu langsam", "Support konnte mein Problem nicht lösen", "Keine Probleme, brauchte keinen Support", "Support war hilfreich", "Habe den Support noch nicht kontaktiert"]
-                }
-            },
-            promo: {
-                badge: "20% RABATT",
-                title: "Sonderangebot!",
-                text: "Bleiben Sie bei uns und genießen Sie <strong>20% Rabatt</strong> auf Ihren nächsten Monat!",
-                button: "20% Rabatt einlösen"
-            },
-            staySubscribed: "Abonniert bleiben",
-            cancelButton: "Abonnement kündigen"
         }
     }
 }
@@ -2030,7 +1835,7 @@ const enTranslations = (translations as any).en;
     // Override with Spanish translations for common elements
     hero: {
         titleHighlight: "Gratis",
-        titleMain: "Eliminar marca de agua con IA",
+        titleMain: "removedor de marcas de agua",
         description: "Sube tu imagen, selecciona la marca de agua y deja que nuestra IA la elimine inteligentemente mientras preserva la calidad original. Resultados profesionales al instante."
     },
     faq: {
@@ -2038,15 +1843,14 @@ const enTranslations = (translations as any).en;
         subtitle: "Todo lo que necesitas saber sobre nuestro removedor de marcas de agua"
     },
     categoryTabs: {
-        watermarkRemover: "Eliminador de marca de agua",
-        videoWatermark: "Eliminador de marca de agua de video",
-        removeText: "Eliminador de texto IA",
-        removeObject: "Eliminador de objeto IA",
-        replaceBackground: "Cambiador de fondo IA",
-        removeBackground: "Eliminador de fondo",
-        autoRemovePeople: "Eliminador de personas IA",
-        imageUpscaler: "Ampliador de imagen IA",
-        soraRemover: "Eliminador de marca de agua Sora"
+        watermarkRemover: "Eliminar marca de agua",
+        videoWatermark: "Marca de agua de video",
+        removeText: "Eliminar texto",
+        removeObject: "Eliminar objeto",
+        replaceBackground: "Reemplazar fondo",
+        removeBackground: "Eliminar fondo",
+        autoRemovePeople: "Eliminar personas automáticamente",
+        imageUpscaler: "Ampliar imagen"
     },
     examples: {
         before: "Antes",
@@ -2111,8 +1915,6 @@ const enTranslations = (translations as any).en;
         tool7Description: "La IA puede analizar la imagen y eliminar personas automáticamente, al igual que elimina marcas de agua de imágenes o texto. Perfecto para limpiar fotos, proteger la privacidad o preparar proyectos creativos.",
         tool8Title: "Ampliador de Imagen",
         tool8Description: "Mejora la resolución de tu foto con nuestro ampliador basado en IA. Funciona perfectamente después de un removedor de marcas de agua, lo que te permite optimizar un archivo ya limpio manteniendo una excelente nitidez.",
-        tool9Title: "Removedor de Marcas de Agua Sora Gratis",
-        tool9Description: "Elimina marcas de agua de videos generados por Sora AI al instante. Nuestra herramienta especializada detecta y elimina el branding de Sora mientras preserva la calidad del video, perfecto para la creación de contenido profesional.",
         getStartedButton: "Comienza gratis"
     },
     pricing: {
@@ -2162,19 +1964,18 @@ const enTranslations = (translations as any).en;
         testimonials: "Testimonios",
         credits: "créditos",
         signIn: "Iniciar sesión",
-        unlockPro: "Desbloquear Pro",
+        unlockPro: "Desbloquear Pro ahora",
         account: "Mi cuenta",
         signOut: "Cerrar sesión",
         featuresMenu: {
-            watermarkRemover: "Eliminador de marca de agua",
-            videoWatermark: "Eliminador de marca de agua de video",
-            removeBackground: "Eliminador de fondo",
-            replaceBackground: "Cambiador de fondo IA",
-            removeObject: "Eliminador de objeto IA",
-            removeText: "Eliminador de texto IA",
-            autoRemovePeople: "Eliminador de personas IA",
-            imageUpscaler: "Ampliador de imagen IA",
-            soraRemover: "Eliminador de marca de agua Sora"
+            watermarkRemover: "Eliminador de marcas de agua gratuito",
+            videoWatermark: "Eliminar marca de agua del video",
+            removeBackground: "Eliminar fondo",
+            replaceBackground: "Reemplazar fondo",
+            removeObject: "Eliminar objeto",
+            removeText: "Eliminar texto",
+            autoRemovePeople: "Eliminar personas automáticamente",
+            imageUpscaler: "Ampliar imagen"
         }
     },
     imageUploader: {
@@ -2228,14 +2029,14 @@ const enTranslations = (translations as any).en;
         moreTools: "Más herramientas",
         company: "Empresa",
         legal: "Legal",
-        watermarkRemover: "Eliminador de marca de agua",
-        videoWatermark: "Eliminador de marca de agua de video",
-        removeBackground: "Eliminador de fondo",
-        replaceBackground: "Cambiador de fondo IA",
-        removeObject: "Eliminador de objeto IA",
-        removeText: "Eliminador de texto IA",
-        autoRemovePeople: "Eliminador de personas IA",
-        imageUpscaler: "Ampliador de imagen IA",
+        watermarkRemover: "Eliminador de marcas de agua gratuito",
+        videoWatermark: "Eliminar marca de agua del video",
+        removeBackground: "Eliminar fondo",
+        replaceBackground: "Reemplazar fondo",
+        removeObject: "Eliminar objeto",
+        removeText: "Eliminar texto",
+        autoRemovePeople: "Eliminar personas automáticamente",
+        imageUpscaler: "Ampliar imagen",
         pricing: "Precios",
         blog: "Blog",
         contact: "Contacto",
@@ -2256,15 +2057,6 @@ const enTranslations = (translations as any).en;
         termsLink: "Términos de servicio",
         and: "y",
         privacyLink: "Política de privacidad"
-    },
-    emailVerificationPopup: {
-        title: "Revisa tu bandeja de entrada",
-        subtitle: "Hemos enviado un código de verificación a",
-        codePlaceholder: "Ingresa el código de verificación",
-        verifyButton: "Verificar correo electrónico",
-        backButton: "Volver al inicio de sesión",
-        resendText: "No recibiste el código?",
-        resendLink: "Reenviar"
     },
     promoPopup: {
         badge: "OFERTA ESPECIAL",
@@ -2343,54 +2135,9 @@ const enTranslations = (translations as any).en;
             button: "Comprar ahora"
         }
     },
-    soraRemoverPage: {
-        hero: {
-            title: "Quitar marca de agua Sora",
-            titleHighlight: "Gratis",
-            description: "Elimina marcas de agua de Sora AI de videos al instante con IA. Remueve el branding de OpenAI Sora, logos y marcas de agua de videos generados por IA en segundos."
-        },
-        uploader: {
-            uploadText: "Arrastra tu video Sora aquí",
-            formatText: "MP4, MOV, AVI hasta 100MB"
-        },
-        features: {
-            badge: "CARACTERÍSTICAS PODEROSAS",
-            feature1: {
-                title: "Removedor de Marcas de Agua Sora Gratis – Elimina el Branding de OpenAI Sora al Instante",
-                description: "Nuestra IA avanzada proporciona un removedor Sora gratuito especializado diseñado para eliminar marcas de agua de Sora de videos generados por IA con precisión milimétrica. El sistema analiza inteligentemente cada fotograma para detectar y borrar logos de OpenAI Sora, superposiciones de texto y elementos de branding mientras mantiene una calidad de video prístina. Perfecto para creadores de contenido, cineastas y especialistas en marketing que usan el generador de videos Sora AI y necesitan material limpio sin marcas de agua para proyectos profesionales, contenido de YouTube o campañas en redes sociales. Experimenta una eliminación perfecta de marcas de agua que preserva la claridad original y la calidad cinematográfica de tu video.",
-                button: "Comenzar"
-            },
-            feature2: {
-                title: "Eliminación Rápida de Logos Sora con IA para Calidad Profesional",
-                description: "Experimenta una eliminación de marcas de agua Sora ultrarrápida con nuestro motor optimizado creado para la limpieza de videos generados por IA. En segundos, puedes eliminar el branding de Sora, borrar marcas de agua de OpenAI y pulir tus videos Sora AI en formatos MP4, MOV, AVI y WebM. Nuestro procesamiento inteligente maneja material 4K, HD e incluso 8K sin problemas. Ideal para cineastas profesionales, YouTubers y creadores de contenido que necesitan eliminar marcas de agua de videos Sora rápidamente mientras mantienen resultados de calidad broadcast. El flujo de trabajo automatizado ofrece una calidad de primer nivel que rivaliza con la edición manual.",
-                button: "Comenzar"
-            },
-            feature3: {
-                title: "Removedor Completo de Marcas de Agua de Video Sora – Solución AI Profesional",
-                description: "Nuestra herramienta removedor Sora integral maneja todas las variantes de marcas de agua de OpenAI Sora con precisión profesional. Ya sea que tus videos tengan branding en las esquinas, logos centrados, marcas de agua animadas o superposiciones de texto de la plataforma Sora AI, puedes eliminar instantáneamente las marcas de agua Sora y lograr material listo para broadcast. Compatible con todos los formatos de video generados por OpenAI Sora, nuestro sistema garantiza una eliminación impecable de marcas de agua mientras preserva el movimiento suave, la iluminación natural y el equilibrio de color. Perfecto para transformar secuencias generadas por IA en visuales pulidos de grado profesional listos para cualquier plataforma.",
-                button: "Comenzar"
-            }
-        },
-        howItWorks: {
-            badge: "CÓMO FUNCIONA",
-            title: "Elimina Marcas de Agua Sora en 3 Simples Pasos",
-            step1: {
-                title: "Sube tu video Sora AI",
-                description: "Comienza subiendo tu video generado por Sora directamente desde tu dispositivo o arrastrándolo a nuestra interfaz. Nuestra plataforma es compatible con todos los formatos de video estándar incluyendo MP4, MOV, AVI, WebM y MKV producidos por OpenAI Sora. Ya sea que tu video contenga marcas de agua en las esquinas, logos, superposiciones de texto o marcas de tiempo, nuestro sistema inteligente reconoce instantáneamente el formato y prepara tu material para la eliminación de marcas de agua con IA. El proceso de carga es rápido, seguro y maneja archivos de hasta 4K y 8K con facilidad."
-            },
-            step2: {
-                title: "La IA elimina la marca de agua Sora automáticamente",
-                description: "Una vez subido, nuestro removedor de marcas de agua Sora especializado emplea algoritmos de IA avanzados para analizar cada fotograma con precisión quirúrgica. El sistema detecta y borra inteligentemente todos los elementos de branding de OpenAI Sora incluyendo logos, texto, marcas de agua y superposiciones mientras reconstruye los fondos sin problemas. Nuestra IA mantiene el flujo de movimiento suave, preserva la iluminación original y asegura la consistencia de color en toda la línea de tiempo. El proceso totalmente automatizado ofrece resultados limpios y profesionales en segundos sin requerir habilidades de edición manual o conocimiento de software complejo."
-            },
-            step3: {
-                title: "Descarga tu video Sora sin marcas de agua",
-                description: "En momentos, tu video Sora AI prístino y sin marcas de agua está listo para descargar en calidad original completa sin pérdida de compresión. Descarga tu material limpio listo para usar en cargas de YouTube, Instagram Reels, TikTok, portafolios profesionales, presentaciones de clientes o campañas comerciales. Con nuestra tecnología removedor Sora rápida y confiable, crear videos AI impresionantes y sin marca nunca ha sido tan fácil. Experimenta la libertad de material perfectamente limpio con calidad de cine listo para impresionar a tu audiencia sin marcas de agua que distraigan."
-            }
-        }
-    },
     videoWatermarkPage: {
         hero: {
-            title: "Eliminar marca de agua TikTok",
+            title: "removedor de marcas de agua de video",
             titleHighlight: "Gratis",
             description: "Elimina marcas de agua de videos con IA. Borra logos de TikTok, superposiciones de texto y marcas de agua de video de archivos MP4, MOV, AVI en segundos."
         },
@@ -2435,7 +2182,7 @@ const enTranslations = (translations as any).en;
     },
     removeTextPage: {
         hero: {
-            title: "Quitar texto de imagen con IA",
+            title: "eliminar texto de imagen ia",
             titleHighlight: "Gratis",
             description: "Elimina instantáneamente texto, subtítulos y leyendas de imágenes con IA. Limpia fotos borrando superposiciones de texto no deseadas en segundos."
         },
@@ -2476,7 +2223,7 @@ const enTranslations = (translations as any).en;
     },
     removeObjectPage: {
         hero: {
-            title: "Quitar objeto de imagen con IA",
+            title: "eliminar cualquier objeto de tus imágenes",
             titleHighlight: "Gratis",
             description: "Borra cualquier objeto no deseado de las fotos con IA. Elimina personas, autos, edificios o cualquier elemento de tus imágenes en segundos.",
             promptPlaceholder: "Describe el objeto que deseas eliminar..."
@@ -2518,7 +2265,7 @@ const enTranslations = (translations as any).en;
     },
     replaceBackgroundPage: {
         hero: {
-            title: "Cambiar fondo de imagen con IA",
+            title: "cambiar fondos al instante",
             titleHighlight: "Gratis",
             description: "Cambia los fondos de las fotos al instante con IA. Reemplaza cualquier fondo con imágenes personalizadas, colores o fondos de estudio profesionales.",
             promptPlaceholder: "Describe el fondo que deseas crear..."
@@ -2560,7 +2307,7 @@ const enTranslations = (translations as any).en;
     },
     removeBackgroundPage: {
         hero: {
-            title: "Quitar fondo de imagen con IA",
+            title: "eliminar el fondo de una imagen al instante",
             titleHighlight: "Gratis",
             description: "Elimina fondos de imágenes al instante con IA. Crea PNG transparentes, aísla sujetos y obtén recortes profesionales en segundos."
         },
@@ -2601,7 +2348,7 @@ const enTranslations = (translations as any).en;
     },
     peopleRemovalPage: {
         hero: {
-            title: "Quitar personas de foto con IA",
+            title: "eliminación inteligente de personas con un clic",
             titleHighlight: "Gratis",
             description: "Elimina automáticamente personas y multitudes de fotos con IA. Obtén tomas limpias y sin turistas de monumentos y ubicaciones al instante.",
             promptPlaceholder: "Describe a quién deseas eliminar de la foto..."
@@ -2643,7 +2390,7 @@ const enTranslations = (translations as any).en;
     },
     imageUpscalerPage: {
         hero: {
-            title: "Mejorar calidad de imagen a 4K con IA",
+            title: "mejorar imágenes a 4K con precisión IA",
             titleHighlight: "Gratis",
             description: "Mejora imágenes con IA a resolución 4x. Mejora la calidad de las fotos, aumenta la resolución y añade detalles realistas automáticamente."
         },
@@ -2695,58 +2442,16 @@ const enTranslations = (translations as any).en;
         myAccount: "Mi cuenta",
         name: "Nombre",
         email: "Correo electrónico"
-    },
-    cancelSubscriptionPopup: {
-        title: "¿Estás seguro?",
-        message: "¿Realmente quieres cancelar tu suscripción? Perderás el acceso a todas las funciones premium.",
-        questions: {
-            why: {
-                title: "¿Por qué quieres cancelar?",
-                options: ["Demasiado caro para mí", "No uso el servicio lo suficiente", "Problemas técnicos o errores", "Faltan funciones", "Cambio a otro servicio", "Otro"]
-            },
-            features: {
-                title: "¿Qué tan satisfecho estás con nuestras funciones?",
-                options: ["La calidad de eliminación de marcas de agua es mala", "La eliminación de fondo no funciona bien", "Opciones de edición limitadas", "El procesamiento es demasiado lento", "Las funciones son demasiado complicadas", "Las funciones cumplen mis expectativas"]
-            },
-            usability: {
-                title: "¿Qué tan fácil es usar nuestra plataforma?",
-                options: ["La interfaz es confusa", "Difícil encontrar funciones", "El proceso de carga es complicado", "Los resultados son difíciles de descargar", "No hay suficientes tutoriales o guías", "Fácil e intuitiva de usar"]
-            },
-            pricing: {
-                title: "¿Qué opinas de nuestros precios?",
-                options: ["Demasiado caro comparado con la competencia", "No hay suficientes créditos por mes", "Preferiría un modelo de pago diferente", "Los precios no son claros", "Buena relación calidad-precio", "Precios justos en general"]
-            },
-            support: {
-                title: "¿Cómo fue tu experiencia con el soporte?",
-                options: ["Nunca recibí ayuda cuando la necesité", "La respuesta del soporte fue demasiado lenta", "El soporte no pudo resolver mi problema", "Sin problemas, no necesité soporte", "El soporte fue útil", "Aún no he contactado al soporte"]
-            }
-        },
-        promo: {
-            badge: "20% DE DESCUENTO",
-            title: "¡Oferta Especial!",
-            text: "¡Quédate con nosotros y disfruta de un <strong>20% de descuento</strong> en tu próximo mes!",
-            button: "Reclamar 20% de descuento"
-        },
-        staySubscribed: "Mantener Suscripción",
-        cancelButton: "Cancelar Suscripción"
-    },
-    // Testimonials CTA
-    testimonialsCta: {
-        badge: "CIENTOS DE RESEÑAS",
-        trustedBadge: "Confiado por más de 20,000 usuarios",
-        title: "¿Listo para limpiar tus imágenes?",
-        text: "Desde eliminar marcas de agua hasta borrar objetos no deseados — desbloquea la edición fotográfica profesional. Todo impulsado por IA.",
-        button: "Comenzar gratis ahora"
     }
 };
 
 // Add Portuguese using English as base
 (translations as any).pt = {
-    ...translations.en,
+    ...enTranslations,
     // Override with Portuguese translations for common elements
     hero: {
         titleHighlight: "Grátis",
-        titleMain: "Remover marca d'água com IA",
+        titleMain: "removedor de marca d'água",
         description: "Carregue sua imagem, selecione a marca d'água e deixe nossa IA removê-la de forma inteligente, preservando a qualidade original. Resultados profissionais instantaneamente."
     },
     faq: {
@@ -2754,14 +2459,14 @@ const enTranslations = (translations as any).en;
         subtitle: "Tudo o que você precisa saber sobre nosso removedor de marca d'água"
     },
     categoryTabs: {
-        watermarkRemover: "Removedor de marca d'água",
-        videoWatermark: "Removedor de marca d'água de vídeo",
-        removeText: "Removedor de texto IA",
-        removeObject: "Removedor de objeto IA",
-        replaceBackground: "Trocador de fundo IA",
-        removeBackground: "Removedor de fundo",
-        autoRemovePeople: "Removedor de pessoas IA",
-        imageUpscaler: "Ampliador de imagem IA"
+        watermarkRemover: "Remover marca d'água",
+        videoWatermark: "Marca d'água de vídeo",
+        removeText: "Remover texto",
+        removeObject: "Remover objeto",
+        replaceBackground: "Substituir fundo",
+        removeBackground: "Remover fundo",
+        autoRemovePeople: "Remover pessoas automaticamente",
+        imageUpscaler: "Ampliar imagem"
     },
     features: {
         badge: "RECURSOS PODEROSOS",
@@ -2868,9 +2573,8 @@ const enTranslations = (translations as any).en;
         getStartedButton: "Comece grátis"
     },
     videoWatermarkPage: {
-
         hero: {
-            title: "Remover marca d'água TikTok",
+            title: "removedor de marca d'água de vídeo",
             titleHighlight: "Grátis",
             description: "Remova instantaneamente marcas d'água, logotipos e sobreposições de vídeos com IA. Limpe filmagens apagando marcas d'água indesejadas em segundos."
         },
@@ -2915,7 +2619,7 @@ const enTranslations = (translations as any).en;
     },
     removeTextPage: {
         hero: {
-            title: "Tirar texto de imagem com IA",
+            title: "remover texto de imagem com ia",
             titleHighlight: "Grátis",
             description: "Remova instantaneamente texto, legendas e legendas de imagens com IA. Limpe fotos apagando sobreposições de texto indesejadas em segundos."
         },
@@ -2956,7 +2660,7 @@ const enTranslations = (translations as any).en;
     },
     removeObjectPage: {
         hero: {
-            title: "Remover objeto de imagem com IA",
+            title: "remover objeto",
             titleHighlight: "Grátis",
             description: "Apague instantaneamente objetos indesejados, pessoas e elementos de imagens com IA. Limpe fotos removendo qualquer coisa que você não queira em segundos."
         },
@@ -2997,7 +2701,7 @@ const enTranslations = (translations as any).en;
     },
     replaceBackgroundPage: {
         hero: {
-            title: "Trocar fundo de imagem com IA",
+            title: "substituir fundo",
             titleHighlight: "Grátis",
             description: "Troque instantaneamente fundos de imagens com IA. Substitua fundos por novos cenários, cores ou designs em segundos."
         },
@@ -3038,7 +2742,7 @@ const enTranslations = (translations as any).en;
     },
     removeBackgroundPage: {
         hero: {
-            title: "Tirar fundo de imagem com IA",
+            title: "remover fundo",
             titleHighlight: "Grátis",
             description: "Remova instantaneamente fundos de imagens com IA. Crie PNGs transparentes ou fundos brancos limpos em segundos."
         },
@@ -3079,7 +2783,7 @@ const enTranslations = (translations as any).en;
     },
     autoRemovePeoplePage: {
         hero: {
-            title: "Tirar pessoas de foto com IA",
+            title: "remover pessoas automaticamente",
             titleHighlight: "Grátis",
             description: "Remova automaticamente pessoas de imagens com IA. Limpe paisagens, fotos de propriedades e muito mais em segundos."
         },
@@ -3120,7 +2824,7 @@ const enTranslations = (translations as any).en;
     },
     imageUpscalerPage: {
         hero: {
-            title: "Melhorar qualidade de imagem a 4K com IA",
+            title: "ampliar imagem",
             titleHighlight: "Grátis",
             description: "Amplie instantaneamente imagens com IA. Aumente a resolução até 4x mantendo qualidade e detalhes em segundos."
         },
@@ -3349,40 +3053,6 @@ const enTranslations = (translations as any).en;
         myAccount: "Minha conta",
         name: "Nome",
         email: "E-mail"
-    },
-    cancelSubscriptionPopup: {
-        title: "Tem certeza?",
-        message: "Você realmente quer cancelar sua assinatura? Você perderá o acesso a todos os recursos premium.",
-        questions: {
-            why: {
-                title: "Por que você quer cancelar?",
-                options: ["Muito caro para mim", "Não uso o serviço o suficiente", "Problemas técnicos ou bugs", "Recursos ausentes", "Mudando para outro serviço", "Outro"]
-            },
-            features: {
-                title: "Quão satisfeito você está com nossos recursos?",
-                options: ["A qualidade de remoção de marca d'água é ruim", "A remoção de fundo não funciona bem", "Opções de edição limitadas", "O processamento é muito lento", "Os recursos são muito complicados", "Os recursos atendem minhas expectativas"]
-            },
-            usability: {
-                title: "Quão fácil é usar nossa plataforma?",
-                options: ["A interface é confusa", "Difícil encontrar recursos", "O processo de upload é complicado", "Os resultados são difíceis de baixar", "Não há tutoriais ou guias suficientes", "Fácil e intuitiva de usar"]
-            },
-            pricing: {
-                title: "O que você acha dos nossos preços?",
-                options: ["Muito caro comparado aos concorrentes", "Não há créditos suficientes por mês", "Preferiria um modelo de pagamento diferente", "Os preços não são claros", "Boa relação custo-benefício", "Preços justos no geral"]
-            },
-            support: {
-                title: "Como foi sua experiência com o suporte?",
-                options: ["Nunca recebi ajuda quando precisei", "A resposta do suporte foi muito lenta", "O suporte não conseguiu resolver meu problema", "Sem problemas, não precisei de suporte", "O suporte foi útil", "Ainda não entrei em contato com o suporte"]
-            }
-        },
-        promo: {
-            badge: "20% DE DESCONTO",
-            title: "Oferta Especial!",
-            text: "Fique conosco e aproveite <strong>20% de desconto</strong> no seu próximo mês!",
-            button: "Reivindicar 20% de desconto"
-        },
-        staySubscribed: "Manter Assinatura",
-        cancelButton: "Cancelar Assinatura"
     }
 };
 
@@ -3391,7 +3061,7 @@ export const koTranslations = {
     ...enTranslations,
     hero: {
         titleHighlight: "무료",
-        titleMain: "AI 워터마크 제거",
+        titleMain: "워터마크 제거",
         description: "이미지를 업로드하고 워터마크를 선택하면 AI가 원본 품질을 유지하면서 지능적으로 제거합니다. 즉시 전문적인 결과를 얻으세요."
     },
     features: {
@@ -3431,8 +3101,8 @@ export const koTranslations = {
     videoWatermarkPage: {
         hero: {
             titleHighlight: "무료",
-            title: "틱톡 워터마크 제거",
-            description: "AI로 비디오에서 워터마크를 제거하세요. TikTok 로고, 텍스트 오버레이, MP4, MOV, AVI 파일의 비디오 워터마크를 몇 초 만에 삭제합니다."
+            titleMain: "비디오에서 워터마크 제거",
+            description: "비디오를 업로드하고 워터마크를 선택하면 TikTok, YouTube 또는 모든 비디오 소스에서 AI가 로고와 텍스트를 원활하게 제거합니다. 전문적인 결과를 즉시 얻으세요."
         },
         features: {
             badge: "강력한 기능",
@@ -3478,8 +3148,8 @@ export const koTranslations = {
     removeTextPage: {
         hero: {
             titleHighlight: "무료",
-            title: "AI 텍스트 제거",
-            description: "AI로 이미지에서 텍스트, 캡션, 자막을 즉시 제거하세요. 원치 않는 텍스트 오버레이를 지워 몇 초 만에 사진을 깨끗하게 정리합니다."
+            titleMain: "이미지에서 텍스트 제거",
+            description: "이미지를 업로드하고 제거할 텍스트를 선택하세요. AI가 워터마크, 캡션, 로고, 날짜 스탬프 또는 원치 않는 텍스트를 자동으로 감지하고 삭제합니다. 즉시 깨끗한 결과를 얻으세요."
         },
         features: {
             badge: "강력한 기능",
@@ -3519,8 +3189,8 @@ export const koTranslations = {
     removeObjectPage: {
         hero: {
             titleHighlight: "무료",
-            title: "AI 물체 제거",
-            description: "AI로 사진에서 원치 않는 객체를 지우세요. 몇 초 만에 이미지에서 사람, 자동차, 건물 또는 모든 요소를 제거합니다."
+            titleMain: "이미지에서 객체 제거",
+            description: "이미지를 업로드하고 제거할 객체를 선택하세요. AI가 원치 않는 객체, 사람, 배경 요소 또는 방해 요소를 자동으로 감지하고 삭제합니다. 즉시 깨끗한 결과를 얻으세요."
         },
         features: {
             badge: "강력한 기능",
@@ -3560,8 +3230,8 @@ export const koTranslations = {
     replaceBackgroundPage: {
         hero: {
             titleHighlight: "무료",
-            title: "AI 배경 교체",
-            description: "AI로 사진 배경을 즉시 변경하세요. 모든 배경을 사용자 정의 이미지, 색상 또는 전문 스튜디오 배경으로 교체합니다.",
+            titleMain: "이미지 배경 교체",
+            description: "이미지를 업로드하고 원하는 배경을 설명하세요. AI가 자동으로 배경을 제거하고 사용자 정의 이미지, 색상 또는 전문 스튜디오 배경으로 교체합니다. 즉시 전문적인 결과를 얻으세요.",
             promptPlaceholder: "생성하려는 배경을 설명하세요..."
         },
         features: {
@@ -3602,7 +3272,7 @@ export const koTranslations = {
     removeBackgroundPage: {
         hero: {
             titleHighlight: "무료",
-            title: "AI 배경 제거",
+            titleMain: "이미지에서 배경 즉시 제거",
             description: "AI로 이미지 배경을 즉시 제거하세요. 투명 PNG를 만들고, 주제를 분리하며, 몇 초 만에 전문적인 컷아웃을 얻으세요."
         },
         features: {
@@ -3643,7 +3313,7 @@ export const koTranslations = {
     peopleRemovalPage: {
         hero: {
             titleHighlight: "무료",
-            title: "AI 사람 제거",
+            titleMain: "한 번의 클릭으로 스마트 사람 제거",
             description: "AI로 사진에서 사람과 군중을 자동으로 제거하세요. 랜드마크와 장소의 깨끗하고 관광객 없는 샷을 즉시 얻으세요.",
             promptPlaceholder: "사진에서 제거하려는 사람을 설명하세요..."
         },
@@ -3685,8 +3355,8 @@ export const koTranslations = {
     imageUpscalerPage: {
         hero: {
             titleHighlight: "무료",
-            title: "AI 이미지 화질 개선",
-            description: "AI로 이미지를 4배 해상도로 업스케일하세요. 사진 품질을 향상시키고, 해상도를 높이며, 자동으로 사실적인 디테일을 추가합니다."
+            titleMain: "AI 이미지 업스케일러 – 품질 손실 없이 사진 확대",
+            description: "AI로 이미지를 즉시 확대하세요. 품질을 향상시키고, 픽셀을 선명하게 하며, 몇 초 만에 전문적인 고해상도 결과를 얻으세요."
         },
         features: {
             badge: "강력한 기능",
@@ -3736,14 +3406,14 @@ export const koTranslations = {
         signIn: "로그인",
         logout: "로그아웃",
         featuresMenu: {
-            watermarkRemover: "AI 워터마크 제거",
-            videoWatermark: "틱톡 워터마크 제거",
-            removeBackground: "AI 배경 제거",
-            replaceBackground: "AI 배경 교체",
-            removeObject: "AI 물체 제거",
-            removeText: "AI 텍스트 제거",
-            autoRemovePeople: "AI 사람 제거",
-            imageUpscaler: "AI 화질 개선"
+            watermarkRemover: "워터마크 제거",
+            videoWatermark: "비디오에서 워터마크 제거",
+            removeBackground: "배경 제거",
+            replaceBackground: "배경 교체",
+            removeObject: "객체 제거",
+            removeText: "텍스트 제거",
+            autoRemovePeople: "사람 자동 제거",
+            imageUpscaler: "이미지 업스케일러"
         }
     },
     footer: {
@@ -3752,15 +3422,6 @@ export const koTranslations = {
         moreTools: "더 많은 도구",
         company: "회사",
         legal: "법률",
-        watermarkRemover: "AI 워터마크 제거",
-        videoWatermark: "틱톡 워터마크 제거",
-        removeBackground: "AI 배경 제거",
-        replaceBackground: "AI 배경 교체",
-        removeObject: "AI 물체 제거",
-        removeText: "AI 텍스트 제거",
-        autoRemovePeople: "AI 사람 제거",
-        imageUpscaler: "AI 화질 개선",
-        soraRemover: "Sora 워터마크 제거",
         pricing: "가격",
         blog: "블로그",
         contact: "연락처",
@@ -3777,15 +3438,14 @@ export const koTranslations = {
         dragImageHere: "여기에 이미지를 드래그하세요"
     },
     categoryTabs: {
-        watermarkRemover: "AI 워터마크 제거",
-        videoWatermark: "틱톡 워터마크 제거",
-        removeText: "AI 텍스트 제거",
-        removeObject: "AI 물체 제거",
-        replaceBackground: "AI 배경 교체",
-        removeBackground: "AI 배경 제거",
-        autoRemovePeople: "AI 사람 제거",
-        imageUpscaler: "AI 화질 개선",
-        soraRemover: "Sora 워터마크 제거"
+        watermarkRemover: "무료 워터마크 제거",
+        videoWatermark: "비디오에서 워터마크 제거",
+        removeText: "텍스트 제거",
+        removeObject: "객체 제거",
+        replaceBackground: "배경 교체",
+        removeBackground: "배경 제거",
+        autoRemovePeople: "사람 자동 제거",
+        imageUpscaler: "이미지 업스케일러"
     },
     processingPopup: {
         title: "이미지 처리 중...",
@@ -4005,48 +3665,6 @@ export const koTranslations = {
         myAccount: "내 계정",
         name: "이름",
         email: "이메일"
-    },
-    cancelSubscriptionPopup: {
-        title: "정말 취소하시겠습니까?",
-        message: "구독을 취소하시겠습니까? 모든 프리미엄 기능에 대한 액세스 권한을 잃게 됩니다.",
-        questions: {
-            why: {
-                title: "왜 취소하시나요?",
-                options: ["너무 비쌉니다", "서비스를 충분히 사용하지 않습니다", "기술적 문제 또는 버그", "기능 부족", "다른 서비스로 전환", "기타"]
-            },
-            features: {
-                title: "기능에 얼마나 만족하십니까?",
-                options: ["워터마크 제거 품질이 좋지 않습니다", "배경 제거가 잘 작동하지 않습니다", "편집 옵션이 제한적입니다", "처리 속도가 너무 느립니다", "기능이 너무 복잡합니다", "기능이 기대에 부응합니다"]
-            },
-            usability: {
-                title: "플랫폼 사용이 얼마나 쉬운가요?",
-                options: ["인터페이스가 혼란스럽습니다", "기능을 찾기 어렵습니다", "업로드 프로세스가 복잡합니다", "결과를 다운로드하기 어렵습니다", "튜토리얼이나 가이드가 부족합니다", "사용하기 쉽고 직관적입니다"]
-            },
-            pricing: {
-                title: "가격에 대해 어떻게 생각하십니까?",
-                options: ["경쟁사에 비해 너무 비쌉니다", "월별 크레딧이 충분하지 않습니다", "다른 결제 모델을 선호합니다", "가격이 명확하지 않습니다", "가성비가 좋습니다", "전반적으로 공정한 가격입니다"]
-            },
-            support: {
-                title: "지원 경험은 어떠셨나요?",
-                options: ["필요할 때 도움을 받지 못했습니다", "지원 응답이 너무 느렸습니다", "지원팀이 문제를 해결하지 못했습니다", "문제 없음, 지원이 필요하지 않았습니다", "지원이 도움이 되었습니다", "아직 지원팀에 연락하지 않았습니다"]
-            }
-        },
-        promo: {
-            badge: "20% 할인",
-            title: "특별 제안!",
-            text: "저희와 함께하시면 다음 달 <strong>20% 할인</strong> 혜택을 받으실 수 있습니다!",
-            button: "20% 할인 받기"
-        },
-        staySubscribed: "구독 유지",
-        cancelButton: "구독 취소"
-    },
-    // Testimonials CTA
-    testimonialsCta: {
-        badge: "수백 개의 리뷰",
-        trustedBadge: "20,000명 이상의 사용자가 신뢰",
-        title: "이미지를 정리할 준비가 되셨나요?",
-        text: "워터마크 제거부터 원치 않는 객체 지우기까지 — 전문적인 사진 편집을 잠금 해제하세요. 모두 AI로 구동됩니다.",
-        button: "지금 무료로 시작하기"
     }
 };
 
@@ -4061,7 +3679,7 @@ const noTranslations = {
     // Override with Norwegian translations for common elements
     hero: {
         titleHighlight: "Gratis",
-        titleMain: "AI vannmerke-fjerner",
+        titleMain: "vannmerke-fjerner",
         description: "Last opp bildet ditt, velg vannmerket, og la vår AI intelligent fjerne det mens den bevarer original kvalitet. Profesjonelle resultater øyeblikkelig."
     },
     features: {
@@ -4099,15 +3717,14 @@ const noTranslations = {
         }
     },
     categoryTabs: {
-        watermarkRemover: "AI Vannmerke-fjerner",
-        videoWatermark: "AI Vannmerke-fjerner fra video",
-        removeText: "AI Fjern tekst",
-        removeObject: "AI Fjern objekt",
-        replaceBackground: "AI Erstatt bakgrunn",
-        removeBackground: "AI Fjern bakgrunn",
-        autoRemovePeople: "AI Fjern personer",
-        imageUpscaler: "AI Forbedre bildekvalitet",
-        soraRemover: "Sora Vannmerke-fjerner"
+        watermarkRemover: "Gratis vannmerke-fjerner",
+        videoWatermark: "Fjern vannmerke fra video",
+        removeText: "Fjern tekst",
+        removeObject: "Fjern objekt",
+        replaceBackground: "Erstatt bakgrunn",
+        removeBackground: "Fjern bakgrunn",
+        autoRemovePeople: "Fjern personer automatisk",
+        imageUpscaler: "Bildeoppskalerer"
     },
     examples: {
         before: "Før",
@@ -4226,14 +3843,14 @@ const noTranslations = {
         account: "Min konto",
         logout: "Logg ut",
         featuresMenu: {
-            watermarkRemover: "AI Vannmerke-fjerner",
-            videoWatermark: "AI Vannmerke-fjerner fra video",
-            removeBackground: "AI Fjern bakgrunn",
-            replaceBackground: "AI Erstatt bakgrunn",
-            removeObject: "AI Fjern objekt",
-            removeText: "AI Fjern tekst",
-            autoRemovePeople: "AI Fjern personer",
-            imageUpscaler: "AI Forbedre bildekvalitet"
+            watermarkRemover: "Vannmerke-fjerner",
+            videoWatermark: "Fjern vannmerke fra video",
+            removeBackground: "Fjern bakgrunn",
+            replaceBackground: "Erstatt bakgrunn",
+            removeObject: "Fjern objekt",
+            removeText: "Fjern tekst",
+            autoRemovePeople: "Fjern personer automatisk",
+            imageUpscaler: "Bildeoppskalerer"
         }
     },
     footer: {
@@ -4241,14 +3858,14 @@ const noTranslations = {
         moreTools: "Flere verktøy",
         company: "Selskap",
         legal: "Juridisk",
-        watermarkRemover: "AI Vannmerke-fjerner",
-        videoWatermark: "AI Vannmerke-fjerner fra video",
-        removeBackground: "AI Fjern bakgrunn",
-        replaceBackground: "AI Erstatt bakgrunn",
-        removeObject: "AI Fjern objekt",
-        removeText: "AI Fjern tekst",
-        autoRemovePeople: "AI Fjern personer",
-        imageUpscaler: "AI Forbedre bildekvalitet",
+        watermarkRemover: "Gratis vannmerke-fjerner",
+        videoWatermark: "Fjern vannmerke fra video",
+        removeBackground: "Fjern bakgrunn",
+        replaceBackground: "Erstatt bakgrunn",
+        removeObject: "Fjern objekt",
+        removeText: "Fjern tekst",
+        autoRemovePeople: "Fjern personer automatisk",
+        imageUpscaler: "Bildeoppskalerer",
         pricing: "Priser",
         blog: "Blogg",
         contact: "Kontakt",
@@ -4321,7 +3938,7 @@ const noTranslations = {
     },
     videoWatermarkPage: {
         hero: {
-            title: "AI vannmerke-fjerner fra video",
+            title: "vannmerke-fjerner fra video",
             titleHighlight: "Gratis",
             description: "Fjern vannmerker fra videoer med AI. Slett TikTok-logoer, tekstoverlegg og video-vannmerker fra MP4, MOV, AVI-filer på sekunder."
         },
@@ -4368,7 +3985,7 @@ const noTranslations = {
     removeTextPage: {
         hero: {
             titleHighlight: "Gratis",
-            title: "AI fjern tekst fra bilde",
+            title: "fjern tekst fra bilde",
             description: "Last opp bildet ditt og velg teksten som skal fjernes. AI vil automatisk oppdage og slette vannmerker, bildetekster, logoer, datostempler eller uønsket tekst. Få rene resultater øyeblikkelig."
         },
         features: {
@@ -4409,7 +4026,7 @@ const noTranslations = {
     removeObjectPage: {
         hero: {
             titleHighlight: "Gratis",
-            title: "AI fjern objekt fra bilde",
+            title: "fjern objekt fra bilde",
             description: "Last opp bildet ditt og velg objektet som skal fjernes. AI vil automatisk oppdage og slette uønskede objekter, personer, merker eller elementer. Få rene resultater øyeblikkelig."
         },
         features: {
@@ -4450,7 +4067,7 @@ const noTranslations = {
     replaceBackgroundPage: {
         hero: {
             titleHighlight: "Gratis",
-            title: "AI erstatt bakgrunn",
+            title: "erstatt bakgrunn i bilde",
             description: "Last opp bildet ditt og velg en ny bakgrunn. AI vil automatisk fjerne den gamle bakgrunnen og erstatte den med det du velger. Få profesjonelle resultater øyeblikkelig."
         },
         features: {
@@ -4491,7 +4108,7 @@ const noTranslations = {
     removeBackgroundPage: {
         hero: {
             titleHighlight: "Gratis",
-            title: "AI fjern bakgrunn",
+            title: "fjern bakgrunn fra bilde",
             description: "Fjern bildebakgrunner øyeblikkelig med AI. Lag transparente PNG-er, isoler subjekter og få profesjonelle utklipp på sekunder."
         },
         features: {
@@ -4562,7 +4179,7 @@ const noTranslations = {
                 description: "Start ved å laste opp bildet ditt direkte fra enheten din eller dra det inn i grensesnittet. Vår plattform støtter alle vanlige formater, noe som gjør det enkelt å fjerne personer fra bilder med bare ett klikk. Enten det er turister, fotobombere eller folkemengder, forbereder systemet filen din øyeblikkelig for person-fjerning."
             },
             step2: {
-                title: "AI fjern personer",
+                title: "AI fjerner personer automatisk",
                 description: "Når bildet ditt er lastet opp, analyserer vår kraftige AI-person-fjerner hver piksel for å oppdage og slette personer med høy presisjon. Dette avanserte verktøyet rekonstruerer bakgrunnen intelligent og fungerer som en smart folkemengde-viskelær i stand til å håndtere selv komplekse scener. Prosessen er fullstendig automatisert, slik at du kan fjerne personer fra bilder raskt, rent og uten redigeringskunnskap."
             },
             step3: {
@@ -4574,7 +4191,7 @@ const noTranslations = {
     imageUpscalerPage: {
         hero: {
             titleHighlight: "Gratis",
-            title: "AI forbedre bildekvalitet",
+            title: "AI bilde-oppskalerer",
             description: "Øk bildeoppløsning og forbedre kvalitet med AI. Gjør uskarpe bilder skarpe, øk detaljer og få profesjonelle HD-resultater på sekunder."
         },
         features: {
@@ -4611,236 +4228,11 @@ const noTranslations = {
                 description: "På bare noen få sekunder er det nye høyoppløsnings-bildet ditt klart. Bare last ned det endelige resultatet i topp kvalitet og bruk det hvor du trenger det—trykk, design, sosiale medier eller profesjonelle prosjekter. Med vår raske og pålitelige AI-oppskalerer har det aldri vært enklere å få skarpe, HD-bilder."
             }
         }
-    },
-    cancelSubscriptionPopup: {
-        title: "Er du sikker?",
-        message: "Vil du virkelig kansellere abonnementet ditt? Du vil miste tilgang til alle premium-funksjoner.",
-        questions: {
-            why: {
-                title: "Hvorfor vil du kansellere?",
-                options: ["For dyrt for meg", "Jeg bruker ikke tjenesten nok", "Tekniske problemer eller feil", "Manglende funksjoner", "Bytter til en annen tjeneste", "Annet"]
-            },
-            features: {
-                title: "Hvor fornøyd er du med funksjonene våre?",
-                options: ["Vannmerke-fjerningskvaliteten er dårlig", "Bakgrunnsfjerning fungerer ikke bra", "Begrensede redigeringsalternativer", "Behandlingen er for treg", "Funksjonene er for kompliserte", "Funksjonene oppfyller forventningene mine"]
-            },
-            usability: {
-                title: "Hvor enkelt er plattformen vår å bruke?",
-                options: ["Grensesnittet er forvirrende", "Vanskelig å finne funksjoner", "Opplastingsprosessen er komplisert", "Resultatene er vanskelige å laste ned", "Ikke nok veiledninger eller guider", "Enkel og intuitiv å bruke"]
-            },
-            pricing: {
-                title: "Hva synes du om prisene våre?",
-                options: ["For dyrt sammenlignet med konkurrentene", "Ikke nok kreditter per måned", "Ville foretrukket en annen betalingsmodell", "Prisene er uklare", "Godt forhold mellom pris og kvalitet", "Rettferdige priser totalt sett"]
-            },
-            support: {
-                title: "Hvordan var din opplevelse med support?",
-                options: ["Fikk aldri hjelp når jeg trengte det", "Support-svaret var for tregt", "Support kunne ikke løse problemet mitt", "Ingen problemer, trengte ikke support", "Support var hjelpsom", "Har ikke kontaktet support ennå"]
-            }
-        },
-        promo: {
-            badge: "20% RABATT",
-            title: "Spesialtilbud!",
-            text: "Bli hos oss og nyt <strong>20% rabatt</strong> på neste måned!",
-            button: "Krev 20% rabatt"
-        },
-        staySubscribed: "Behold Abonnement",
-        cancelButton: "Kanseller Abonnement"
     }
 };
 
 // Add Norwegian to translations object
 (translations as any).no = noTranslations;
 
-// Add Norwegian Sora page to translations object
-if (!(translations as any).no) {
-    (translations as any).no = {};
-}
-(translations as any).no.toolsGrid = {
-    ...(translations as any).no.toolsGrid,
-    tool9Title: "Gratis Sora Vannmerke-fjerning",
-    tool9Description: "Fjern vannmerker fra Sora AI-genererte videoer øyeblikkelig. Vårt spesialiserte verktøy oppdager og fjerner OpenAI Sora-branding, logoer og vannmerker samtidig som videokvaliteten opprettholdes, perfekt for profesjonell innholdsskaping."
-};
-(translations as any).no.categoryTabs = {
-    ...(translations as any).no.categoryTabs,
-    soraRemover: "Sora Vannmerke-fjerner"
-};
-(translations as any).no.soraRemoverPage = {
-    hero: {
-        title: "sora vannmerke-fjerning",
-        titleHighlight: "Gratis",
-        description: "Fjern Sora AI-vannmerker fra videoer øyeblikkelig med AI. Fjern OpenAI Sora-branding, logoer og vannmerker fra AI-genererte videoer på sekunder."
-    },
-    uploader: {
-        uploadText: "Dra din Sora-video hit",
-        formatText: "MP4, MOV, AVI opp til 100MB"
-    },
-    features: {
-        badge: "KRAFTIGE FUNKSJONER",
-        feature1: {
-            title: "Gratis Sora Vannmerke-fjerning – Fjern OpenAI Sora-branding Øyeblikkelig",
-            description: "Vår avanserte AI gir en spesialisert gratis Sora-fjerning designet for å fjerne Sora-vannmerker fra AI-genererte videoer med punktlig presisjon. Systemet analyserer intelligent hver ramme for å oppdage og slette OpenAI Sora-logoer, tekstoverlegg og brandingelementer samtidig som det opprettholder feilfri videokvalitet. Perfekt for innholdsskapere, filmskapere og markedsførere som bruker Sora AI videogeneratoren som trenger rent, vannmerkefritt materiale for profesjonelle prosjekter, YouTube-innhold eller sosiale mediekampanjer. Opplev sømløs vannmerkefjerning som bevarer videoens opprinnelige klarhet og filmkvalitet.",
-            button: "Kom i gang"
-        },
-        feature2: {
-            title: "Rask AI-drevet Sora Logo-fjerning for Profesjonell Kvalitet",
-            description: "Opplev lynrask Sora vannmerkefjerning med vår optimaliserte motor bygget for AI-generert videorensing. På sekunder kan du fjerne Sora-branding, slette OpenAI-vannmerker og polere dine Sora AI-videoer i MP4, MOV, AVI og WebM-formater. Vår intelligente behandling håndterer 4K, HD og til og med 8K-materiale feilfritt. Ideelt for profesjonelle filmskapere, YouTubere og innholdsskapere som trenger å fjerne vannmerker fra Sora-videoer raskt samtidig som de opprettholder kringkastingskvalitetsresultater. Den automatiserte arbeidsflyten leverer førsteklasses kvalitet som konkurrerer med manuell redigering.",
-            button: "Kom i gang"
-        },
-        feature3: {
-            title: "Komplett Sora Video Vannmerke-fjerning – Profesjonell AI-løsning",
-            description: "Vårt omfattende Sora-fjerningsverktøy håndterer alle OpenAI Sora vannmerkevarianter med profesjonell presisjon. Enten videoene dine inneholder hjørnebranding, sentrerte logoer, animerte vannmerker eller tekstoverlegg fra Sora AI-plattformen, kan du umiddelbart fjerne Sora-vannmerker og oppnå kringkastingsklart materiale. Kompatibel med alle videoformater generert av OpenAI Sora, sikrer systemet vårt feilfri vannmerkefjerning samtidig som det bevarer jevn bevegelse, naturlig belysning og fargebalanse. Perfekt for å transformere AI-genererte sekvenser til polerte, profesjonelle visuelle elementer klare for hvilken som helst plattform.",
-            button: "Kom i gang"
-        }
-    },
-    howItWorks: {
-        badge: "HVORDAN DET FUNGERER",
-        title: "Fjern Sora-vannmerker i 3 Enkle Trinn",
-        step1: {
-            title: "Last opp din Sora AI-video",
-            description: "Begynn med å laste opp din Sora-genererte video direkte fra enheten din eller dra den til grensesnittet vårt. Plattformen vår støtter alle standard videoformater inkludert MP4, MOV, AVI, WebM og MKV produsert av OpenAI Sora. Enten videoen din inneholder hjørnevannmerker, logoer, tekstoverlegg eller tidsstempler, gjenkjenner vårt intelligente system umiddelbart formatet og forbereder materialet ditt for AI-drevet vannmerkefjerning. Opplastingsprosessen er rask, sikker og håndterer filer opp til 4K og 8K oppløsning med letthet."
-        },
-        step2: {
-            title: "AI fjerner Sora-vannmerke automatisk",
-            description: "Når den er lastet opp, bruker vår spesialiserte Sora vannmerke-fjerning avanserte AI-algoritmer for å analysere hver ramme med kirurgisk presisjon. Systemet oppdager og sletter intelligent alle OpenAI Sora-brandingelementer inkludert logoer, tekst, vannmerker og overlegg samtidig som det rekonstruerer bakgrunner sømløst. Vår AI opprettholder jevn bevegelsesflyt, bevarer original belysning og sikrer fargekonsistens gjennom hele tidslinjen. Den fullautomatiske prosessen leverer rene, profesjonelle resultater på sekunder uten å kreve manuelle redigeringsferdigheter eller kompleks programvarekunnskap."
-        },
-        step3: {
-            title: "Last ned din vannmerkefrie Sora-video",
-            description: "På øyeblikk er din feilfrie, vannmerkefrie Sora AI-video klar for nedlasting i full original kvalitet uten kompresjonstap. Last ned ditt rene materiale klart til bruk for YouTube-opplastinger, Instagram Reels, TikTok, profesjonelle porteføljer, klientpresentasjoner eller kommersielle kampanjer. Med vår raske og pålitelige Sora-fjerningsteknologi har det aldri vært enklere å lage fantastiske, merkefrie AI-videoer. Opplev friheten til perfekt rent materiale med filmkvalitet klar til å imponere publikummet ditt uten distraherende vannmerker."
-        }
-    }
-};
-
-// Add Portuguese Sora page to translations object
-if (!(translations as any).pt) {
-    (translations as any).pt = {};
-}
-(translations as any).pt.toolsGrid = {
-    ...(translations as any).pt.toolsGrid,
-    tool9Title: "Removedor de Marca d'Água Sora Gratuito",
-    tool9Description: "Remova marcas d'água de vídeos gerados por Sora AI instantaneamente. Nossa ferramenta especializada detecta e remove branding OpenAI Sora, logotipos e marcas d'água preservando a qualidade do vídeo, perfeito para criação de conteúdo profissional."
-};
-(translations as any).pt.categoryTabs = {
-    ...(translations as any).pt.categoryTabs,
-    soraRemover: "Removedor Sora gratuito"
-};
-(translations as any).pt.soraRemoverPage = {
-    hero: {
-        title: "removedor de marca d'água sora",
-        titleHighlight: "Gratuito",
-        description: "Remova marcas d'água Sora AI de vídeos instantaneamente com IA. Remova branding, logotipos e marcas d'água OpenAI Sora de vídeos gerados por IA em segundos."
-    },
-    uploader: {
-        uploadText: "Arraste seu vídeo Sora aqui",
-        formatText: "MP4, MOV, AVI até 100MB"
-    },
-    features: {
-        badge: "RECURSOS PODEROSOS",
-        feature1: {
-            title: "Removedor de Marca d'Água Sora Gratuito – Remova Branding OpenAI Sora Instantaneamente",
-            description: "Nossa IA avançada fornece um removedor Sora gratuito especializado projetado para remover marcas d'água Sora de vídeos gerados por IA com precisão pontual. O sistema analisa inteligentemente cada quadro para detectar e apagar logotipos OpenAI Sora, sobreposições de texto e elementos de branding enquanto mantém qualidade de vídeo impecável. Perfeito para criadores de conteúdo, cineastas e profissionais de marketing usando o gerador de vídeos Sora AI que precisam de material limpo e sem marcas d'água para projetos profissionais, conteúdo do YouTube ou campanhas de mídia social. Experimente remoção perfeita de marcas d'água que preserva a clareza original e qualidade cinematográfica do seu vídeo.",
-            button: "Começar"
-        },
-        feature2: {
-            title: "Remoção Rápida de Logo Sora com IA para Qualidade Profissional",
-            description: "Experimente remoção de marca d'água Sora ultrarrápida com nosso motor otimizado construído para limpeza de vídeos gerados por IA. Em segundos, você pode remover branding Sora, apagar marcas d'água OpenAI e polir seus vídeos Sora AI em formatos MP4, MOV, AVI e WebM. Nosso processamento inteligente lida com material 4K, HD e até 8K perfeitamente. Ideal para cineastas profissionais, YouTubers e criadores de conteúdo que precisam remover marcas d'água de vídeos Sora rapidamente mantendo resultados de qualidade broadcast. O fluxo de trabalho automatizado entrega qualidade de primeira linha que rivaliza com edição manual.",
-            button: "Começar"
-        },
-        feature3: {
-            title: "Removedor Completo de Marca d'Água de Vídeo Sora – Solução IA Profissional",
-            description: "Nossa ferramenta removedor Sora abrangente lida com todas as variantes de marca d'água OpenAI Sora com precisão profissional. Seja seus vídeos apresentando branding de canto, logotipos centralizados, marcas d'água animadas ou sobreposições de texto da plataforma Sora AI, você pode remover instantaneamente marcas d'água Sora e alcançar material pronto para broadcast. Compatível com todos os formatos de vídeo gerados por OpenAI Sora, nosso sistema garante remoção impecável de marcas d'água preservando movimento suave, iluminação natural e equilíbrio de cores. Perfeito para transformar sequências geradas por IA em visuais polidos de nível profissional prontos para qualquer plataforma.",
-            button: "Começar"
-        }
-    },
-    howItWorks: {
-        badge: "COMO FUNCIONA",
-        title: "Remova Marcas d'Água Sora em 3 Passos Simples",
-        step1: {
-            title: "Carregue seu vídeo Sora AI",
-            description: "Comece enviando seu vídeo gerado por Sora diretamente do seu dispositivo ou arrastando-o para nossa interface. Nossa plataforma suporta todos os formatos de vídeo padrão incluindo MP4, MOV, AVI, WebM e MKV produzidos por OpenAI Sora. Seja seu vídeo contendo marcas d'água de canto, logotipos, sobreposições de texto ou carimbos de hora, nosso sistema inteligente reconhece instantaneamente o formato e prepara seu material para remoção de marca d'água com IA. O processo de upload é rápido, seguro e lida com arquivos até resolução 4K e 8K com facilidade."
-        },
-        step2: {
-            title: "IA remove marca d'água Sora automaticamente",
-            description: "Uma vez enviado, nosso removedor de marca d'água Sora especializado emprega algoritmos de IA avançados para analisar cada quadro com precisão cirúrgica. O sistema detecta e apaga inteligentemente todos os elementos de branding OpenAI Sora incluindo logotipos, texto, marcas d'água e sobreposições enquanto reconstrói fundos perfeitamente. Nossa IA mantém fluxo de movimento suave, preserva iluminação original e garante consistência de cores em toda a linha do tempo. O processo totalmente automatizado entrega resultados limpos e profissionais em segundos sem exigir habilidades de edição manual ou conhecimento de software complexo."
-        },
-        step3: {
-            title: "Baixe seu vídeo Sora sem marca d'água",
-            description: "Em momentos, seu vídeo Sora AI impecável e sem marca d'água está pronto para download em qualidade original completa sem perda de compressão. Baixe seu material limpo pronto para usar em uploads do YouTube, Instagram Reels, TikTok, portfólios profissionais, apresentações de clientes ou campanhas comerciais. Com nossa tecnologia removedor Sora rápida e confiável, criar vídeos IA impressionantes e sem marca nunca foi tão fácil. Experimente a liberdade de material perfeitamente limpo com qualidade cinematográfica pronta para impressionar seu público sem marcas d'água distrativas."
-        }
-    }
-};
-
-// Add Korean Sora page to translations object
-if (!(translations as any).ko) {
-    (translations as any).ko = {};
-}
-(translations as any).ko.toolsGrid = {
-    ...(translations as any).ko.toolsGrid,
-    tool9Title: "무료 Sora 워터마크 제거기",
-    tool9Description: "Sora AI 생성 비디오에서 워터마크를 즉시 제거하세요. 당사의 전문 도구는 OpenAI Sora 브랜딩, 로고 및 워터마크를 감지하고 제거하여 비디오 품질을 유지하며 전문적인 콘텐츠 제작에 완벽합니다."
-};
-(translations as any).ko.categoryTabs = {
-    ...(translations as any).ko.categoryTabs,
-    soraRemover: "무료 Sora 제거기"
-};
-(translations as any).ko.soraRemoverPage = {
-    hero: {
-        title: "sora 워터마크 제거기",
-        titleHighlight: "무료",
-        description: "AI로 비디오에서 Sora AI 워터마크를 즉시 제거하세요. OpenAI Sora 브랜딩, 로고 및 워터마크를 몇 초 만에 AI 생성 비디오에서 제거합니다."
-    },
-    uploader: {
-        uploadText: "Sora 비디오를 여기에 드래그하세요",
-        formatText: "MP4, MOV, AVI 최대 100MB"
-    },
-    features: {
-        badge: "강력한 기능",
-        feature1: {
-            title: "무료 Sora 워터마크 제거기 – OpenAI Sora 브랜딩 즉시 제거",
-            description: "당사의 고급 AI는 정밀한 정확도로 AI 생성 비디오에서 Sora 워터마크를 제거하도록 설계된 전문 무료 Sora 제거기를 제공합니다. 시스템은 각 프레임을 지능적으로 분석하여 완벽한 비디오 품질을 유지하면서 OpenAI Sora 로고, 텍스트 오버레이 및 브랜딩 요소를 감지하고 지웁니다. 전문 프로젝트, YouTube 콘텐츠 또는 소셜 미디어 캠페인을 위해 깨끗하고 워터마크가 없는 영상이 필요한 Sora AI 비디오 생성기를 사용하는 콘텐츠 제작자, 영화 제작자 및 마케팅 담당자에게 완벽합니다. 비디오의 원래 선명도와 영화적 품질을 보존하는 원활한 워터마크 제거를 경험하세요.",
-            button: "시작하기"
-        },
-        feature2: {
-            title: "전문가급 품질을 위한 빠른 AI 기반 Sora 로고 제거",
-            description: "AI 생성 비디오 정리를 위해 구축된 최적화된 엔진으로 초고속 Sora 워터마크 제거를 경험하세요. 몇 초 만에 Sora 브랜딩을 제거하고 OpenAI 워터마크를 지우며 MP4, MOV, AVI 및 WebM 형식의 Sora AI 비디오를 다듬을 수 있습니다. 당사의 지능형 처리는 4K, HD 및 8K 영상까지 완벽하게 처리합니다. 방송 품질 결과를 유지하면서 Sora 비디오에서 워터마크를 빠르게 제거해야 하는 전문 영화 제작자, YouTuber 및 콘텐츠 제작자에게 이상적입니다. 자동화된 워크플로우는 수동 편집과 경쟁하는 최고 품질을 제공합니다.",
-            button: "시작하기"
-        },
-        feature3: {
-            title: "완전한 Sora 비디오 워터마크 제거기 – 전문 AI 솔루션",
-            description: "당사의 포괄적인 Sora 제거기 도구는 전문적인 정확도로 모든 OpenAI Sora 워터마크 변형을 처리합니다. 비디오에 코너 브랜딩, 중앙 로고, 애니메이션 워터마크 또는 Sora AI 플랫폼의 텍스트 오버레이가 있든 관계없이 즉시 Sora 워터마크를 제거하고 방송 준비 영상을 얻을 수 있습니다. OpenAI Sora에서 생성된 모든 비디오 형식과 호환되는 당사 시스템은 부드러운 움직임, 자연스러운 조명 및 색상 균형을 유지하면서 완벽한 워터마크 제거를 보장합니다. AI 생성 시퀀스를 모든 플랫폼에서 사용할 수 있는 세련된 전문 수준의 비주얼로 변환하는 데 완벽합니다.",
-            button: "시작하기"
-        }
-    },
-    howItWorks: {
-        badge: "작동 방식",
-        title: "3단계로 Sora 워터마크 제거",
-        step1: {
-            title: "Sora AI 비디오 업로드",
-            description: "장치에서 직접 Sora 생성 비디오를 업로드하거나 인터페이스로 드래그하여 시작하세요. 당사 플랫폼은 OpenAI Sora에서 생성된 MP4, MOV, AVI, WebM 및 MKV를 포함한 모든 표준 비디오 형식을 지원합니다. 비디오에 코너 워터마크, 로고, 텍스트 오버레이 또는 타임스탬프가 포함되어 있든 관계없이 당사의 지능형 시스템은 즉시 형식을 인식하고 AI 기반 워터마크 제거를 위해 영상을 준비합니다. 업로드 프로세스는 빠르고 안전하며 4K 및 8K 해상도까지의 파일을 쉽게 처리합니다."
-        },
-        step2: {
-            title: "AI가 자동으로 Sora 워터마크 제거",
-            description: "업로드되면 당사의 전문 Sora 워터마크 제거기는 고급 AI 알고리즘을 사용하여 외과적 정밀도로 각 프레임을 분석합니다. 시스템은 배경을 완벽하게 재구성하면서 로고, 텍스트, 워터마크 및 오버레이를 포함한 모든 OpenAI Sora 브랜딩 요소를 지능적으로 감지하고 지웁니다. 당사의 AI는 부드러운 움직임 흐름을 유지하고 원래 조명을 보존하며 타임라인 전체에서 색상 일관성을 보장합니다. 완전 자동화된 프로세스는 수동 편집 기술이나 복잡한 소프트웨어 지식 없이도 몇 초 만에 깨끗하고 전문적인 결과를 제공합니다."
-        },
-        step3: {
-            title: "워터마크 없는 Sora 비디오 다운로드",
-            description: "순간적으로 완벽하고 워터마크가 없는 Sora AI 비디오가 압축 손실 없이 완전한 원본 품질로 다운로드할 준비가 됩니다. YouTube 업로드, Instagram Reels, TikTok, 전문 포트폴리오, 고객 프레젠테이션 또는 상업 캠페인에 사용할 수 있는 깨끗한 영상을 다운로드하세요. 빠르고 안정적인 Sora 제거기 기술로 브랜드가 없는 멋진 AI 비디오를 만드는 것이 그 어느 때보다 쉬워졌습니다. 방해되는 워터마크 없이 청중에게 깊은 인상을 줄 준비가 된 완벽하게 깨끗한 영화적 품질의 영상의 자유를 경험하세요."
-        }
-    },
-    // Testimonials CTA
-    testimonialsCta: {
-        badge: "HUNDREVIS AV ANMELDELSER",
-        trustedBadge: "Klarert av over 20 000 brukere",
-        title: "Klar til å rense bildene dine?",
-        text: "Fra fjerning av vannmerker til sletting av uønskede objekter — lås opp profesjonell fotoredigering. Alt drevet av AI.",
-        button: "Start gratis nå"
-    }
-};
-
-
-
-
-
-
-
-
-
+// Add Spanish to translations object (using English as fallback for now)
+(translations as any).es = translations.en;
