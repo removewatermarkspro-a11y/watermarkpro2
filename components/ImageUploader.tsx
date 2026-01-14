@@ -157,12 +157,16 @@ export default function ImageUploader({
 
                         const result = await response.json()
 
+                        console.log('[ImageUploader] API response:', result)
+                        console.log('[ImageUploader] Image URL:', result.imageUrl)
+
                         if (result.success && result.imageUrl) {
                             // Refresh credits in UI
                             await refreshCredits()
 
                             setIsProcessing(false)
                             // Pass the processed image URL to parent
+                            console.log('[ImageUploader] Calling onImageUpload with URL:', result.imageUrl)
                             onImageUpload(file, result.imageUrl)
                         } else {
                             console.error('[ImageUploader] API error:', result.error)

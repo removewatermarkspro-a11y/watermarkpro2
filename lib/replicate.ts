@@ -78,6 +78,8 @@ export async function editImage({
             }
         }
 
+        console.log('[Replicate] Image generated successfully:', output[0])
+
         return {
             success: true,
             imageUrl: output[0]
