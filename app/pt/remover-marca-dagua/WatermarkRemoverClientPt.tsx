@@ -28,8 +28,8 @@ export default function WatermarkRemoverClientPt() {
     const uploadRef = useRef<HTMLDivElement>(null)
     const { user } = useAuth()
 
-    // Force Portuguese language
-    const t = translations.pt
+    // Use English as fallback until Portuguese translations are added
+    const t = translations.en
 
     const handleImageUpload = (file: File, preview: string) => {
         setUploadedImage(file)
