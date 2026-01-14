@@ -19,7 +19,6 @@ export async function POST(request: NextRequest) {
 
         // NOTE: Credit check is now handled client-side via AuthContext
         // Server-side check removed to avoid RLS issues with Supabase
-        // The client already validates credits before calling this API
 
         // Edit the image using Replicate
         const result = await editImage({
