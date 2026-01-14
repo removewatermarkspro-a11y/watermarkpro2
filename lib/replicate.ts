@@ -78,11 +78,30 @@ export async function editImage({
             }
         }
 
-        console.log('[Replicate] Image generated successfully:', output[0])
+        console.log('[Replicate] Raw output:', JSON.stringify(output, null, 2))
+        console.log('[Replicate] Output type:', typeof output)
+        console.log('[Replicate] Output[0]:', output[0])
+        console.log('[Replicate] Output[0] type:', typeof output[0])
+
+        // Extract the URL - Replicate might return an object with a url property
+        let imageUrl: string
+        if (typeof output[0] === 'string') {
+            imageUrl = output[0]
+        } else if (output[0] && typeof output[0] === 'object' && 'url' in output[0]) {
+            imageUrl = (output[0] as any).url
+        } else {
+            console.error('[Replicate] Unexpected output format:', output[0])
+            return {
+                success: false,
+                error: 'Unexpected output format from Replicate'
+            }
+        }
+
+        console.log('[Replicate] Final imageUrl:', imageUrl)
 
         return {
             success: true,
-            imageUrl: output[0]
+            imageUrl: imageUrl
         }
     } catch (error) {
         console.error('Error editing image with Replicate:', error)
