@@ -880,14 +880,6 @@ export const translations = {
             },
             tryNowButton: "Essayer maintenant"
         },
-        // Testimonials CTA
-        testimonialsCta: {
-            badge: "DES CENTAINES D'AVIS",
-            trustedBadge: "Approuvé par plus de 20 000 utilisateurs",
-            title: "Prêt à nettoyer vos images ?",
-            text: "De la suppression de filigranes à l'effacement d'objets indésirables — débloquez l'édition photo professionnelle. Le tout propulsé par l'IA.",
-            button: "Commencer gratuitement"
-        },
         // Header
         header: {
             features: "Fonctionnalités",
