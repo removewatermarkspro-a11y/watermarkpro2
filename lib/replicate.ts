@@ -54,50 +54,45 @@ export async function editImage({
             prompt = userPrompt
         }
 
-        // Call Qwen Image Edit Plus model
-        const output = await replicate.run(
-            "qwen/qwen-image-edit-plus",
-            {
-                input: {
-                    image: [imageBase64], // Qwen expects an array of images
-                    prompt: prompt,
-                    go_fast: true,
-                    aspect_ratio: "match_input_image",
-                    output_format: "webp",
-                    output_quality: 95,
-                    disable_safety_checker: false
-                }
+        // Call Qwen Image Edit Plus model using predictions API
+        const prediction = await replicate.predictions.create({
+            model: "qwen/qwen-image-edit-plus",
+            input: {
+                image: [imageBase64], // Qwen expects an array of images
+                prompt: prompt,
+                go_fast: true,
+                aspect_ratio: "match_input_image",
+                output_format: "webp",
+                output_quality: 95,
+                disable_safety_checker: false
             }
-        ) as string[]
+        })
+
+        // Wait for the prediction to complete
+        const finalPrediction = await replicate.wait(prediction)
+
+        console.log('[Replicate] Prediction completed:', finalPrediction.status)
+        console.log('[Replicate] Output:', finalPrediction.output)
 
         // Check if we got a result
-        if (!output || output.length === 0) {
+        if (!finalPrediction.output || finalPrediction.output.length === 0) {
             return {
                 success: false,
                 error: 'No image was generated'
             }
         }
 
-        console.log('[Replicate] Raw output:', JSON.stringify(output, null, 2))
-        console.log('[Replicate] Output type:', typeof output)
-        console.log('[Replicate] Output[0]:', output[0])
-        console.log('[Replicate] Output[0] type:', typeof output[0])
+        // The output should now be an array of URLs
+        const imageUrl = finalPrediction.output[0]
+        console.log('[Replicate] Final imageUrl:', imageUrl)
 
-        // Extract the URL - Replicate might return an object with a url property
-        let imageUrl: string
-        if (typeof output[0] === 'string') {
-            imageUrl = output[0]
-        } else if (output[0] && typeof output[0] === 'object' && 'url' in output[0]) {
-            imageUrl = (output[0] as any).url
-        } else {
-            console.error('[Replicate] Unexpected output format:', output[0])
+        if (typeof imageUrl !== 'string') {
+            console.error('[Replicate] Unexpected output type:', typeof imageUrl)
             return {
                 success: false,
                 error: 'Unexpected output format from Replicate'
             }
         }
-
-        console.log('[Replicate] Final imageUrl:', imageUrl)
 
         return {
             success: true,
