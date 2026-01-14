@@ -25,11 +25,7 @@
 Create a file named `.env.local` in the project root with:
 
 ```
-<<<<<<< HEAD
-REPLICATE_API_TOKEN=r8_CkM1ZAlVM7gkRbusxDrUlhMOyxjGzDH4b14ao
-=======
 REPLICATE_API_TOKEN=your_replicate_token_here
->>>>>>> feature/qwen-api-integration
 NEXT_PUBLIC_SUPABASE_URL=https://placeholder.supabase.co
 NEXT_PUBLIC_SUPABASE_ANON_KEY=placeholder-key
 ```
@@ -40,11 +36,7 @@ Go to your Vercel project → Settings → Environment Variables
 
 Add:
 - **Name**: `REPLICATE_API_TOKEN`
-<<<<<<< HEAD
-- **Value**: `r8_CkM1ZAlVM7gkRbusxDrUlhMOyxjGzDH4b14ao`
-=======
 - **Value**: `your_replicate_token_here`
->>>>>>> feature/qwen-api-integration
 - **Environments**: Production, Preview, Development
 
 ## 📝 How to Use in Components
