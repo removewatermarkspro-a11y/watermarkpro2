@@ -44,8 +44,17 @@ export async function editImage(
         // Get the prompt based on operation type
         let prompt: string = PROMPT_MAPPING[operationType]
 
+        // Handle auto-remove-people: use user prompt if provided, otherwise use default
+        if (operationType === 'auto-remove-people') {
+            if (userPrompt && userPrompt.trim() !== '') {
+                prompt = userPrompt
+            } else {
+                // Default: remove all people
+                prompt = 'Enlève toutes les personnes de cette image'
+            }
+        }
         // Use user prompt for operations that require it
-        if (['remove-object', 'replace-background', 'auto-remove-people'].includes(operationType)) {
+        else if (['remove-object', 'replace-background'].includes(operationType)) {
             if (!userPrompt || userPrompt.trim() === '') {
                 return {
                     success: false,
