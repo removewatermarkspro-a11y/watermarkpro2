@@ -33,12 +33,13 @@ interface EditImageResult {
 
 /**
  * Edit an image using Qwen Image Edit Plus model via Replicate
+ * Includes automatic retry logic for rate limiting (429 errors)
  */
-export async function editImage({
-    imageBase64,
-    operationType,
-    userPrompt
-}: EditImageParams): Promise<EditImageResult> {
+export async function editImage(
+    { imageBase64, operationType, userPrompt }: EditImageParams,
+    retryCount = 0,
+    maxRetries = 3
+): Promise<EditImageResult> {
     try {
         // Get the prompt based on operation type
         let prompt: string = PROMPT_MAPPING[operationType]
@@ -98,8 +99,34 @@ export async function editImage({
             success: true,
             imageUrl: imageUrl
         }
-    } catch (error) {
+    } catch (error: any) {
         console.error('Error editing image with Replicate:', error)
+
+        // Handle rate limiting (429 errors)
+        // Replicate throws ApiError with status 429 in the error message
+        const is429Error = error?.message?.includes('429') ||
+            error?.message?.includes('Too Many Requests') ||
+            error?.message?.includes('throttled')
+
+        if (is429Error && retryCount < maxRetries) {
+            // Try to extract retry_after from error message
+            let retryAfter = 4 // Default to 4 seconds
+            const retryMatch = error?.message?.match(/retry_after[\":]?\s*(\d+)/)
+            if (retryMatch) {
+                retryAfter = parseInt(retryMatch[1])
+            }
+
+            const waitTime = retryAfter * 1000 // Convert to milliseconds
+
+            console.log(`[Replicate] Rate limited. Retrying in ${retryAfter}s... (Attempt ${retryCount + 1}/${maxRetries})`)
+
+            // Wait before retrying
+            await new Promise(resolve => setTimeout(resolve, waitTime))
+
+            // Retry the request
+            return editImage({ imageBase64, operationType, userPrompt }, retryCount + 1, maxRetries)
+        }
+
         return {
             success: false,
             error: error instanceof Error ? error.message : 'Unknown error occurred'
