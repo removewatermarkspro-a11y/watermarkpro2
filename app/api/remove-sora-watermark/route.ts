@@ -4,35 +4,24 @@ import { consumeCreditServer } from '@/lib/supabase-server'
 
 export async function POST(request: NextRequest) {
     try {
-        const formData = await request.formData()
-        const videoFile = formData.get('video') as File
-        const userId = formData.get('userId') as string
+        const body = await request.json()
+        const { videoUrl, userId } = body
 
         console.log('[remove-sora-watermark API] Request received:', {
             userId: userId?.substring(0, 8) + '...',
-            fileName: videoFile?.name,
-            fileSize: videoFile?.size
+            videoUrl: videoUrl?.substring(0, 50) + '...'
         })
 
         // Validate required fields
-        if (!videoFile) {
+        if (!videoUrl) {
             return NextResponse.json(
-                { error: 'Missing required field: video file' },
+                { error: 'Missing required field: videoUrl' },
                 { status: 400 }
             )
         }
 
-        // Convert File to base64 data URL for Replicate
-        const arrayBuffer = await videoFile.arrayBuffer()
-        const buffer = Buffer.from(arrayBuffer)
-        const base64 = buffer.toString('base64')
-        const mimeType = videoFile.type || 'video/mp4'
-        const dataUrl = `data:${mimeType};base64,${base64}`
-
-        console.log('[remove-sora-watermark API] Video converted to data URL, size:', dataUrl.length)
-
         // Remove Sora watermark using Replicate
-        const result = await removeSoraWatermark(dataUrl)
+        const result = await removeSoraWatermark(videoUrl)
 
         if (!result.success) {
             return NextResponse.json(
