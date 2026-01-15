@@ -11,7 +11,7 @@ export const PROMPT_MAPPING = {
     'remove-text': 'Enlève tout le texte de cette image',
     'remove-background': 'Enlève l\'arrière-plan de cette image',
     'image-upscaler': 'Améliore la qualité et la résolution de cette image',
-    'auto-remove-people': 'Enlève toutes les personnes de cette image',
+    'auto-remove-people': '', // User provides specific instructions
     // User input prompts for these:
     'remove-object': '', // User provides
     'replace-background': '', // User provides
@@ -45,7 +45,7 @@ export async function editImage(
         let prompt: string = PROMPT_MAPPING[operationType]
 
         // Use user prompt for operations that require it
-        if (['remove-object', 'replace-background'].includes(operationType)) {
+        if (['remove-object', 'replace-background', 'auto-remove-people'].includes(operationType)) {
             if (!userPrompt || userPrompt.trim() === '') {
                 return {
                     success: false,
