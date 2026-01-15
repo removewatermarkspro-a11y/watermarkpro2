@@ -28,6 +28,7 @@ export default function PeopleRemoverClient() {
     const [uploadedImage, setUploadedImage] = useState<File | null>(null)
     const [originalPreview, setOriginalPreview] = useState<string | null>(null)
     const [showAuthPopup, setShowAuthPopup] = useState(false)
+    const [userPrompt, setUserPrompt] = useState<string>('')
     const uploadRef = useRef<HTMLDivElement>(null)
     const { user } = useAuth()
     const { language } = useLanguage()
@@ -43,7 +44,7 @@ export default function PeopleRemoverClient() {
         setOriginalPreview(preview)
 
         try {
-            await editImage({ imageFile: file })
+            await editImage({ imageFile: file, userPrompt: userPrompt || undefined })
         } catch (err) {
             console.error('Error removing people:', err)
         }
@@ -92,7 +93,10 @@ export default function PeopleRemoverClient() {
                         <h1 className={styles.title}><span className={styles.violetText}>{t.peopleRemovalPage.hero.titleHighlight}</span> {t.peopleRemovalPage.hero.title}</h1>
                         <p className={styles.description}>{t.peopleRemovalPage.hero.description}</p>
                         <CategoryTabs />
-                        <PromptInput placeholder={t.peopleRemovalPage.hero.promptPlaceholder} />
+                        <PromptInput
+                            placeholder={t.peopleRemovalPage.hero.promptPlaceholder}
+                            onChange={(prompt) => setUserPrompt(prompt)}
+                        />
                         <div ref={uploadRef} className={styles.uploadSection}>
                             <ImageUploader onImageUpload={handleImageUpload} isAuthenticated={!!user} onAuthRequired={() => setShowAuthPopup(true)} />
                             {editedImageUrl && originalPreview && (

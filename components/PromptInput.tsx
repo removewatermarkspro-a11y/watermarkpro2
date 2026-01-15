@@ -6,11 +6,13 @@ import styles from './PromptInput.module.css'
 interface PromptInputProps {
     placeholder?: string
     onPromptSubmit?: (prompt: string) => void
+    onChange?: (prompt: string) => void
 }
 
 export default function PromptInput({
     placeholder = "Describe what you want to do...",
-    onPromptSubmit
+    onPromptSubmit,
+    onChange
 }: PromptInputProps) {
     const [prompt, setPrompt] = useState('')
 
@@ -19,6 +21,14 @@ export default function PromptInput({
         e.stopPropagation()
         if (prompt.trim() && onPromptSubmit) {
             onPromptSubmit(prompt)
+        }
+    }
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const newValue = e.target.value
+        setPrompt(newValue)
+        if (onChange) {
+            onChange(newValue)
         }
     }
 
@@ -44,7 +54,7 @@ export default function PromptInput({
                 <input
                     type="text"
                     value={prompt}
-                    onChange={(e) => setPrompt(e.target.value)}
+                    onChange={handleChange}
                     placeholder={placeholder}
                     className={styles.promptInput}
                 />
