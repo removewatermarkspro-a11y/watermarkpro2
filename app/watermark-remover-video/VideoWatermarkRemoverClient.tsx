@@ -46,6 +46,7 @@ export default function VideoWatermarkRemoverClient() {
     const uploadRef = useRef<HTMLDivElement>(null)
     const playerRef = useRef<any>(null)
     const videoContainerRef = useRef<HTMLDivElement>(null)
+    const { user } = useAuth()
     const { language } = useLanguage()
     const { user, credits } = useAuth()
     const t = (translations as any)[language] || translations.en
@@ -54,7 +55,7 @@ export default function VideoWatermarkRemoverClient() {
         setUploadedImage(file)
         setOriginalPreview(preview)
         setProcessedImage(preview) // Simulated processed image
-        const isAuthenticated = localStorage.getItem('userAuthenticated')
+        const isAuthenticated = user
         if (!isAuthenticated) {
             setShowAuthPopup(true)
         }

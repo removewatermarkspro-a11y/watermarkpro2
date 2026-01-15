@@ -18,6 +18,7 @@ import ResultDisplay from '@/components/ResultDisplay'
 import RelatedTools from '@/components/RelatedTools'
 import PromptInput from '@/components/PromptInput'
 import { objectRemovalFaqItems } from '@/utils/faqItems'
+import { useAuth } from '@/contexts/AuthContext'
 import { useLanguage } from '@/contexts/LanguageContext'
 import { translations } from '@/locales/translations'
 import styles from '../watermark-remover/watermark.module.css'
@@ -31,12 +32,13 @@ export default function ObjectRemoverClient() {
     const [showPromoPopup, setShowPromoPopup] = useState(false)
     const [isAuthenticated, setIsAuthenticated] = useState(false)
     const uploadRef = useRef<HTMLDivElement>(null)
+    const { user } = useAuth()
     const { language } = useLanguage()
     // Force English language
     const t = (translations as any).en
 
     useEffect(() => {
-        const authenticated = localStorage.getItem('userAuthenticated') === 'true'
+        const authenticated = !!user
         setIsAuthenticated(authenticated)
     }, [])
 
@@ -48,7 +50,7 @@ export default function ObjectRemoverClient() {
 
     const handleAuthClose = () => {
         setShowAuthPopup(false)
-        const authenticated = localStorage.getItem('userAuthenticated') === 'true'
+        const authenticated = !!user
         setIsAuthenticated(authenticated)
     }
 
@@ -72,7 +74,7 @@ export default function ObjectRemoverClient() {
     }
 
     const handleGetStarted = () => {
-        const authenticated = localStorage.getItem('userAuthenticated') === 'true'
+        const authenticated = !!user
         if (!authenticated) {
             setShowAuthPopup(true)
         } else {

@@ -108,7 +108,7 @@ export default function SoraWatermarkRemoverClientNo() {
         setUploadedImage(file)
         setOriginalPreview(preview)
         setProcessedImage(preview) // Simulated processed image
-        const isAuthenticated = localStorage.getItem('userAuthenticated')
+        const isAuthenticated = user
         if (!isAuthenticated) {
             setShowAuthPopup(true)
         }
@@ -165,7 +165,7 @@ export default function SoraWatermarkRemoverClientNo() {
     }
 
     const handleGetStarted = () => {
-        const authenticated = localStorage.getItem('userAuthenticated') === 'true'
+        const authenticated = !!user
         if (!authenticated) {
             setShowAuthPopup(true)
         } else {

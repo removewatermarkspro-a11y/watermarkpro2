@@ -34,16 +34,12 @@ export default function TextRemoverClientEs() {
     const [isProcessing, setIsProcessing] = useState(false)
     const [processedImage, setProcessedImage] = useState<string | null>(null)
     const [showAuthPopup, setShowAuthPopup] = useState(false)
-    const [showPromoPopup, setShowPromoPopup] = useState(false)    const uploadRef = useRef<HTMLDivElement>(null)
+    const [showPromoPopup, setShowPromoPopup] = useState(false)
+    const uploadRef = useRef<HTMLDivElement>(null)
     const { user } = useAuth()
     const { language } = useLanguage()
     // Force Spanish language
     const t = (translations as any).es
-
-    useEffect(() => {
-        const authenticated = localStorage.getItem('userAuthenticated') === 'true'
-        setIsAuthenticated(authenticated)
-    }, [])
 
     const handleImageUpload = (file: File, preview: string) => {
         setUploadedImage(file)
@@ -72,8 +68,6 @@ export default function TextRemoverClientEs() {
 
     const handleAuthClose = () => {
         setShowAuthPopup(false)
-        const authenticated = localStorage.getItem('userAuthenticated') === 'true'
-        setIsAuthenticated(authenticated)
     }
 
     const handleDownload = () => {
@@ -96,8 +90,7 @@ export default function TextRemoverClientEs() {
     }
 
     const handleGetStarted = () => {
-        const authenticated = localStorage.getItem('userAuthenticated') === 'true'
-        if (!authenticated) {
+        if (!user) {
             setShowAuthPopup(true)
         } else {
             if (uploadRef.current) {
