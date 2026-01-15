@@ -60,8 +60,7 @@ export default function TextRemoverClientPt() {
     }
 
     const handleGetStarted = () => {
-        const authenticated = localStorage.getItem('userAuthenticated') === 'true'
-        if (!authenticated) setShowAuthPopup(true)
+        if (!user) setShowAuthPopup(true)
         else if (uploadRef.current) uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' })
     }
 
