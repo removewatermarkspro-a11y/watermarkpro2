@@ -18,6 +18,7 @@ import ResultDisplay from '@/components/ResultDisplay'
 import RelatedTools from '@/components/RelatedTools'
 import PromptInput from '@/components/PromptInput'
 import { peopleRemovalFaqItemsEs } from '@/utils/peopleRemovalFaqItemsEs'
+import { useAuth } from '@/contexts/AuthContext'
 import { useLanguage } from '@/contexts/LanguageContext'
 import { translations } from '@/locales/translations'
 import styles from '../../watermark-remover/watermark.module.css'
@@ -27,13 +28,9 @@ export default function PeopleRemoverClientEs() {
     const [originalPreview, setOriginalPreview] = useState<string | null>(null)
     const [processedImage, setProcessedImage] = useState<string | null>(null)
     const [showAuthPopup, setShowAuthPopup] = useState(false)
-    const [showPromoPopup, setShowPromoPopup] = useState(false)
-    const [isAuthenticated, setIsAuthenticated] = useState(false)
-    const uploadRef = useRef<HTMLDivElement>(null)
+    const [showPromoPopup, setShowPromoPopup] = useState(false)    const uploadRef = useRef<HTMLDivElement>(null)
+    const { user } = useAuth()
     const t = (translations as any).es
-
-    useEffect(() => { setIsAuthenticated(localStorage.getItem('userAuthenticated') === 'true') }, [])
-
     return (
         <>
             <Header />
@@ -47,7 +44,7 @@ export default function PeopleRemoverClientEs() {
                         <CategoryTabs />
                         <PromptInput placeholder={t.peopleRemovalPage.hero.promptPlaceholder} />
                         <div ref={uploadRef} className={styles.uploadSection}>
-                            <ImageUploader onImageUpload={(file, preview) => { setUploadedImage(file); setOriginalPreview(preview); setProcessedImage(preview); }} isAuthenticated={isAuthenticated} onAuthRequired={() => setShowAuthPopup(true)} />
+                            <ImageUploader onImageUpload={(file, preview) => { setUploadedImage(file); setOriginalPreview(preview); setProcessedImage(preview); }} isAuthenticated={!!user} onAuthRequired={() => setShowAuthPopup(true)} />
                             {processedImage && originalPreview && (<><ResultDisplay originalImage={originalPreview} processedImage={processedImage} onDownload={() => { if (!processedImage) return; const link = document.createElement('a'); link.href = processedImage; link.download = 'processed-image.png'; link.click(); }} onGenerateNew={() => { setUploadedImage(null); setOriginalPreview(null); setProcessedImage(null); setTimeout(() => { if (uploadRef.current) uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' }) }, 100); }} /><RelatedTools /></>)}
                         </div>
                         <div className={styles.ratingsBelow}><RatingBadges /></div>
@@ -56,7 +53,7 @@ export default function PeopleRemoverClientEs() {
                     <section className={styles.features}>
                         <div style={{ textAlign: 'center' }}><span className={styles.badge}>{t.peopleRemovalPage.features.badge}</span></div>
                         <div className={styles.featureGrid}>
-                            {[1, 2, 3].map(i => (<div key={i} className={styles.featureItem}><div className={styles.featureImage} style={{ padding: 0, overflow: 'hidden' }}><img src={`/images/feature-people-remover-${i === 1 ? 'beach-new.png' : i === 2 ? 'street.jpg' : 'plaza.jpg'}`} alt="Feature" style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy" decoding="async" /></div><div className={styles.featureContent}><h3>{t.peopleRemovalPage.features[`feature${i}`].title}</h3><p className={styles.sectionText}>{t.peopleRemovalPage.features[`feature${i}`].description}</p><button className="btn btn-primary" onClick={() => { if (!localStorage.getItem('userAuthenticated')) setShowAuthPopup(true); else if (uploadRef.current) uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' }); }}>{t.peopleRemovalPage.features[`feature${i}`].button}<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button></div></div>))}
+                            {[1, 2, 3].map(i => (<div key={i} className={styles.featureItem}><div className={styles.featureImage} style={{ padding: 0, overflow: 'hidden' }}><img src={`/images/feature-people-remover-${i === 1 ? 'beach-new.png' : i === 2 ? 'street.jpg' : 'plaza.jpg'}`} alt="Feature" style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy" decoding="async" /></div><div className={styles.featureContent}><h3>{t.peopleRemovalPage.features[`feature${i}`].title}</h3><p className={styles.sectionText}>{t.peopleRemovalPage.features[`feature${i}`].description}</p><button className="btn btn-primary" onClick={() => { if (!user) setShowAuthPopup(true); else if (uploadRef.current) uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' }); }}>{t.peopleRemovalPage.features[`feature${i}`].button}<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button></div></div>))}
                         </div>
                     </section>
                     <section className={styles.howItWorks}>
@@ -70,7 +67,7 @@ export default function PeopleRemoverClientEs() {
                 </div>
             </main>
             <Footer />
-            <AuthPopup isOpen={showAuthPopup} onClose={() => { setShowAuthPopup(false); setIsAuthenticated(localStorage.getItem('userAuthenticated') === 'true'); }} />
+            <AuthPopup isOpen={showAuthPopup} onClose={() => setShowAuthPopup(false)} />
             <PromoPopup isOpen={showPromoPopup} onClose={() => setShowPromoPopup(false)} />
         </>
     )

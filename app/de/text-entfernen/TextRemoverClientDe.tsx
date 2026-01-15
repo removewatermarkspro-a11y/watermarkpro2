@@ -23,6 +23,7 @@ import { textRemovalFaqItemsEs } from '@/utils/textRemovalFaqItemsEs'
 import { textRemovalFaqItemsPt } from '@/utils/textRemovalFaqItemsPt'
 import { textRemovalFaqItemsKo } from '@/utils/textRemovalFaqItemsKo'
 import { textRemovalFaqItemsNo } from '@/utils/textRemovalFaqItemsNo'
+import { useAuth } from '@/contexts/AuthContext'
 import { useLanguage } from '@/contexts/LanguageContext'
 import { translations } from '@/locales/translations'
 import styles from '../../watermark-remover/watermark.module.css'
@@ -33,9 +34,8 @@ export default function TextRemoverClientDe() {
     const [isProcessing, setIsProcessing] = useState(false)
     const [processedImage, setProcessedImage] = useState<string | null>(null)
     const [showAuthPopup, setShowAuthPopup] = useState(false)
-    const [showPromoPopup, setShowPromoPopup] = useState(false)
-    const [isAuthenticated, setIsAuthenticated] = useState(false)
-    const uploadRef = useRef<HTMLDivElement>(null)
+    const [showPromoPopup, setShowPromoPopup] = useState(false)    const uploadRef = useRef<HTMLDivElement>(null)
+    const { user } = useAuth()
     const { language } = useLanguage()
     // Force German language
     const t = (translations as any).de
@@ -125,7 +125,7 @@ export default function TextRemoverClientDe() {
                         <div ref={uploadRef} className={styles.uploadSection}>
                             <ImageUploader
                                 onImageUpload={handleImageUpload}
-                                isAuthenticated={isAuthenticated}
+                                isAuthenticated={!!user}
                                 onAuthRequired={() => setShowAuthPopup(true)}
                             />
 

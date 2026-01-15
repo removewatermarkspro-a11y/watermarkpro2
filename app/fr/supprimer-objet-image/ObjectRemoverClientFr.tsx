@@ -18,6 +18,7 @@ import ResultDisplay from '@/components/ResultDisplay'
 import RelatedTools from '@/components/RelatedTools'
 import PromptInput from '@/components/PromptInput'
 import { objectRemovalFaqItemsFr } from '@/utils/commonFaqItemsFr'
+import { useAuth } from '@/contexts/AuthContext'
 import { useLanguage } from '@/contexts/LanguageContext'
 import { translations } from '@/locales/translations'
 import styles from '../../watermark-remover/watermark.module.css'
@@ -27,9 +28,8 @@ export default function ObjectRemoverClientFr() {
     const [originalPreview, setOriginalPreview] = useState<string | null>(null)
     const [processedImage, setProcessedImage] = useState<string | null>(null)
     const [showAuthPopup, setShowAuthPopup] = useState(false)
-    const [showPromoPopup, setShowPromoPopup] = useState(false)
-    const [isAuthenticated, setIsAuthenticated] = useState(false)
-    const uploadRef = useRef<HTMLDivElement>(null)
+    const [showPromoPopup, setShowPromoPopup] = useState(false)    const uploadRef = useRef<HTMLDivElement>(null)
+    const { user } = useAuth()
     const { language } = useLanguage()
     // Force French language
     const t = (translations as any).fr
@@ -95,7 +95,7 @@ export default function ObjectRemoverClientFr() {
                         <CategoryTabs />
                         <PromptInput placeholder={t.removeObjectPage.hero.promptPlaceholder} />
                         <div ref={uploadRef} className={styles.uploadSection}>
-                            <ImageUploader onImageUpload={handleImageUpload} isAuthenticated={isAuthenticated} onAuthRequired={() => setShowAuthPopup(true)} />
+                            <ImageUploader onImageUpload={handleImageUpload} isAuthenticated={!!user} onAuthRequired={() => setShowAuthPopup(true)} />
                             {processedImage && originalPreview && (
                                 <>
                                     <ResultDisplay originalImage={originalPreview} processedImage={processedImage} onDownload={handleDownload} onGenerateNew={handleGenerateNew} />

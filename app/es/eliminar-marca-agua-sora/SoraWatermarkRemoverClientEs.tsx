@@ -23,6 +23,7 @@ import { soraRemoverFaqItemsDe } from '@/utils/soraRemoverFaqItemsDe'
 import { soraRemoverFaqItemsPt } from '@/utils/soraRemoverFaqItemsPt'
 import { soraRemoverFaqItemsKo } from '@/utils/soraRemoverFaqItemsKo'
 import { soraRemoverFaqItemsNo } from '@/utils/soraRemoverFaqItemsNo'
+import { useAuth } from '@/contexts/AuthContext'
 import { useLanguage } from '@/contexts/LanguageContext'
 import { translations } from '@/locales/translations'
 import styles from '../../watermark-remover/watermark.module.css'
@@ -41,9 +42,8 @@ export default function SoraWatermarkRemoverClientEs() {
     const [isProcessing, setIsProcessing] = useState(false)
     const [processedImage, setProcessedImage] = useState<string | null>(null)
     const [showAuthPopup, setShowAuthPopup] = useState(false)
-    const [showPromoPopup, setShowPromoPopup] = useState(false)
-    const [isAuthenticated, setIsAuthenticated] = useState(false)
-    const uploadRef = useRef<HTMLDivElement>(null)
+    const [showPromoPopup, setShowPromoPopup] = useState(false)    const uploadRef = useRef<HTMLDivElement>(null)
+    const { user } = useAuth()
     const playerRef = useRef<any>(null)
     const videoContainerRef = useRef<HTMLDivElement>(null)
     const soraVideoRef = useRef<HTMLVideoElement>(null)

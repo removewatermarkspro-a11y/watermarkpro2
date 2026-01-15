@@ -17,6 +17,7 @@ import PromoPopup from '@/components/PromoPopup'
 import ResultDisplay from '@/components/ResultDisplay'
 import RelatedTools from '@/components/RelatedTools'
 import { textRemovalFaqItemsPt } from '@/utils/textRemovalFaqItemsPt'
+import { useAuth } from '@/contexts/AuthContext'
 import { useLanguage } from '@/contexts/LanguageContext'
 import { translations } from '@/locales/translations'
 import styles from '../../watermark-remover/watermark.module.css'
@@ -27,9 +28,8 @@ export default function TextRemoverClientPt() {
     const [isProcessing, setIsProcessing] = useState(false)
     const [processedImage, setProcessedImage] = useState<string | null>(null)
     const [showAuthPopup, setShowAuthPopup] = useState(false)
-    const [showPromoPopup, setShowPromoPopup] = useState(false)
-    const [isAuthenticated, setIsAuthenticated] = useState(false)
-    const uploadRef = useRef<HTMLDivElement>(null)
+    const [showPromoPopup, setShowPromoPopup] = useState(false)    const uploadRef = useRef<HTMLDivElement>(null)
+    const { user } = useAuth()
     const { language } = useLanguage()
     const t = (translations as any).pt
 
@@ -83,7 +83,7 @@ export default function TextRemoverClientPt() {
                         <p className={styles.description}>{t.removeTextPage.hero.description}</p>
                         <CategoryTabs />
                         <div ref={uploadRef} className={styles.uploadSection}>
-                            <ImageUploader onImageUpload={handleImageUpload} isAuthenticated={isAuthenticated} onAuthRequired={() => setShowAuthPopup(true)} />
+                            <ImageUploader onImageUpload={handleImageUpload} isAuthenticated={!!user} onAuthRequired={() => setShowAuthPopup(true)} />
                             {processedImage && originalPreview && (<><ResultDisplay originalImage={originalPreview} processedImage={processedImage} onDownload={handleDownload} onGenerateNew={handleGenerateNew} /><RelatedTools /></>)}
                         </div>
                         <div className={styles.ratingsBelow}><RatingBadges /></div>
