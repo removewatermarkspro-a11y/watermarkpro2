@@ -28,7 +28,8 @@ export default function PeopleRemoverClientNo() {
     const [originalPreview, setOriginalPreview] = useState<string | null>(null)
     const [processedImage, setProcessedImage] = useState<string | null>(null)
     const [showAuthPopup, setShowAuthPopup] = useState(false)
-    const [showPromoPopup, setShowPromoPopup] = useState(false)    const uploadRef = useRef<HTMLDivElement>(null)
+    const [showPromoPopup, setShowPromoPopup] = useState(false)
+    const uploadRef = useRef<HTMLDivElement>(null)
     const { user } = useAuth()
     const t = (translations as any).no || (translations as any).en // Using English as fallback for Norwegian
     return (

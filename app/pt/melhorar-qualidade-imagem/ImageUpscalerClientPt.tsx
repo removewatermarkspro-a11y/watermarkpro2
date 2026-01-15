@@ -27,7 +27,8 @@ export default function ImageUpscalerClientPt() {
     const [originalPreview, setOriginalPreview] = useState<string | null>(null)
     const [processedImage, setProcessedImage] = useState<string | null>(null)
     const [showAuthPopup, setShowAuthPopup] = useState(false)
-    const [showPromoPopup, setShowPromoPopup] = useState(false)    const uploadRef = useRef<HTMLDivElement>(null)
+    const [showPromoPopup, setShowPromoPopup] = useState(false)
+    const uploadRef = useRef<HTMLDivElement>(null)
     const { user } = useAuth()
     const t = (translations as any).es // Using Spanish as fallback for Portuguese
     return (
