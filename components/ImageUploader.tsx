@@ -130,6 +130,18 @@ export default function ImageUploader({
             return
         }
 
+        // Handle video files - pass directly without API processing
+        if (file.type.startsWith('video/')) {
+            const reader = new FileReader()
+            reader.onload = (e) => {
+                const videoUrl = e.target?.result as string
+                onImageUpload(file, videoUrl)
+            }
+            reader.readAsDataURL(file)
+            return
+        }
+
+        // Handle image files - process through API
         if (file.type.startsWith('image/')) {
             // Show processing popup
             setIsProcessing(true)
