@@ -1,5 +1,10 @@
-import { put } from '@vercel/blob'
+import Replicate from 'replicate'
 import { NextRequest, NextResponse } from 'next/server'
+
+// Initialize Replicate client
+const replicate = new Replicate({
+    auth: process.env.REPLICATE_API_TOKEN || '',
+})
 
 export async function POST(request: NextRequest) {
     try {
@@ -13,22 +18,19 @@ export async function POST(request: NextRequest) {
             )
         }
 
-        console.log('[upload-to-blob] Uploading file:', file.name, 'Size:', file.size)
+        console.log('[upload-to-blob] Uploading file to Replicate:', file.name, 'Size:', file.size)
 
-        // Upload to Vercel Blob with automatic deletion after 1 hour
-        const blob = await put(file.name, file, {
-            access: 'public',
-            addRandomSuffix: true,
-        })
+        // Upload to Replicate using their file API
+        const uploadedFile = await replicate.files.create(file)
 
-        console.log('[upload-to-blob] Upload successful:', blob.url)
+        console.log('[upload-to-blob] Upload successful:', uploadedFile.urls.get)
 
         return NextResponse.json({
             success: true,
-            url: blob.url
+            url: uploadedFile.urls.get
         })
     } catch (error) {
-        console.error('Error uploading to blob:', error)
+        console.error('Error uploading to Replicate:', error)
         return NextResponse.json(
             { error: 'Failed to upload file' },
             { status: 500 }
