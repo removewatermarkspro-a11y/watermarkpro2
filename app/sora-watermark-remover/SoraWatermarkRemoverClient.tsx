@@ -48,7 +48,6 @@ export default function SoraWatermarkRemoverClient() {
     const playerRef = useRef<any>(null)
     const videoContainerRef = useRef<HTMLDivElement>(null)
     const soraVideoRef = useRef<HTMLVideoElement>(null)
-    const { user } = useAuth()
     const { language } = useLanguage()
     const { user, credits } = useAuth()
     const t = (translations as any)[language] || translations.en
