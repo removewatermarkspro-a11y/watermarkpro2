@@ -2,26 +2,46 @@ import { NextRequest, NextResponse } from 'next/server'
 import { removeSoraWatermark } from '@/lib/replicate'
 import { consumeCreditServer } from '@/lib/supabase-server'
 
+export const config = {
+    api: {
+        bodyParser: false,
+    },
+}
+
+// Increase max duration for video processing
+export const maxDuration = 300 // 5 minutes
+
 export async function POST(request: NextRequest) {
     try {
-        const body = await request.json()
-        const { videoUrl, userId } = body
+        const formData = await request.formData()
+        const videoFile = formData.get('video') as File
+        const userId = formData.get('userId') as string | null
 
         console.log('[remove-sora-watermark API] Request received:', {
             userId: userId?.substring(0, 8) + '...',
-            videoUrl: videoUrl?.substring(0, 50) + '...'
+            fileName: videoFile?.name,
+            fileSize: videoFile?.size
         })
 
         // Validate required fields
-        if (!videoUrl) {
+        if (!videoFile) {
             return NextResponse.json(
-                { error: 'Missing required field: videoUrl' },
+                { error: 'Missing required field: video file' },
                 { status: 400 }
             )
         }
 
+        // Convert video to base64 data URL
+        const arrayBuffer = await videoFile.arrayBuffer()
+        const buffer = Buffer.from(arrayBuffer)
+        const base64 = buffer.toString('base64')
+        const mimeType = videoFile.type || 'video/mp4'
+        const dataUrl = `data:${mimeType};base64,${base64}`
+
+        console.log('[remove-sora-watermark API] Video converted to base64, size:', base64.length)
+
         // Remove Sora watermark using Replicate
-        const result = await removeSoraWatermark(videoUrl)
+        const result = await removeSoraWatermark(dataUrl)
 
         if (!result.success) {
             return NextResponse.json(
