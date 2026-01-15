@@ -2,13 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { removeSoraWatermark } from '@/lib/replicate'
 import { consumeCreditServer } from '@/lib/supabase-server'
 
-export const config = {
-    api: {
-        bodyParser: false,
-    },
-}
-
-// Increase max duration for video processing
+// Increase max duration for video processing (Next.js 14 syntax)
 export const maxDuration = 300 // 5 minutes
 
 export async function POST(request: NextRequest) {
