@@ -13,58 +13,59 @@ import Testimonials from '@/components/Testimonials'
 import FAQ from '@/components/FAQ'
 import ToolsGrid from '@/components/ToolsGrid'
 import AuthPopup from '@/components/AuthPopup'
-import PromoPopup from '@/components/PromoPopup'
 import ResultDisplay from '@/components/ResultDisplay'
 import RelatedTools from '@/components/RelatedTools'
+import ProcessingPopup from '@/components/ProcessingPopup'
 import PromptInput from '@/components/PromptInput'
 import { replaceBackgroundFaqItems } from '@/utils/faqItems'
 import { useAuth } from '@/contexts/AuthContext'
 import { useLanguage } from '@/contexts/LanguageContext'
+import { useImageEdit } from '@/hooks/useImageEdit'
 import { translations } from '@/locales/translations'
 import styles from '../watermark-remover/watermark.module.css'
 
 export default function BackgroundReplacerClient() {
     const [uploadedImage, setUploadedImage] = useState<File | null>(null)
     const [originalPreview, setOriginalPreview] = useState<string | null>(null)
-    const [processedImage, setProcessedImage] = useState<string | null>(null)
     const [showAuthPopup, setShowAuthPopup] = useState(false)
-    const [showPromoPopup, setShowPromoPopup] = useState(false)
-    const [isAuthenticated, setIsAuthenticated] = useState(false)
+    const [userPrompt, setUserPrompt] = useState<string>('')
     const uploadRef = useRef<HTMLDivElement>(null)
     const { user } = useAuth()
     const { language } = useLanguage()
+    const { editImage, isLoading, error, editedImageUrl, reset } = useImageEdit({
+        operationType: 'replace-background',
+        userId: user?.id
+    })
     // Force English language
     const t = (translations as any).en
 
-    useEffect(() => {
-        const authenticated = !!user
-        setIsAuthenticated(authenticated)
-    }, [])
-
-    const handleImageUpload = (file: File, preview: string) => {
+    const handleImageUpload = async (file: File, preview: string) => {
         setUploadedImage(file)
         setOriginalPreview(preview)
-        setProcessedImage(preview)
+
+        try {
+            await editImage({ imageFile: file, userPrompt: userPrompt || undefined })
+        } catch (err) {
+            console.error('Error replacing background:', err)
+        }
     }
 
     const handleAuthClose = () => {
         setShowAuthPopup(false)
-        const authenticated = !!user
-        setIsAuthenticated(authenticated)
     }
 
     const handleDownload = () => {
-        if (!processedImage) return
+        if (!editedImageUrl) return
         const link = document.createElement('a')
-        link.href = processedImage
-        link.download = 'processed-image.png'
+        link.href = editedImageUrl
+        link.download = 'background-replaced.png'
         link.click()
     }
 
     const handleGenerateNew = () => {
         setUploadedImage(null)
         setOriginalPreview(null)
-        setProcessedImage(null)
+        reset()
         setTimeout(() => {
             if (uploadRef.current) {
                 uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' })
@@ -73,8 +74,7 @@ export default function BackgroundReplacerClient() {
     }
 
     const handleGetStarted = () => {
-        const authenticated = !!user
-        if (!authenticated) {
+        if (!user) {
             setShowAuthPopup(true)
         } else {
             if (uploadRef.current) {
@@ -93,12 +93,15 @@ export default function BackgroundReplacerClient() {
                         <h1 className={styles.title}><span className={styles.violetText}>{t.replaceBackgroundPage.hero.titleHighlight}</span> {t.replaceBackgroundPage.hero.title}</h1>
                         <p className={styles.description}>{t.replaceBackgroundPage.hero.description}</p>
                         <CategoryTabs />
-                        <PromptInput placeholder={t.replaceBackgroundPage.hero.promptPlaceholder} />
+                        <PromptInput
+                            placeholder={t.replaceBackgroundPage.hero.promptPlaceholder}
+                            onChange={(prompt) => setUserPrompt(prompt)}
+                        />
                         <div ref={uploadRef} className={styles.uploadSection}>
-                            <ImageUploader onImageUpload={handleImageUpload} isAuthenticated={isAuthenticated} onAuthRequired={() => setShowAuthPopup(true)} />
-                            {processedImage && originalPreview && (
+                            <ImageUploader onImageUpload={handleImageUpload} isAuthenticated={!!user} onAuthRequired={() => setShowAuthPopup(true)} />
+                            {editedImageUrl && originalPreview && (
                                 <>
-                                    <ResultDisplay originalImage={originalPreview} processedImage={processedImage} onDownload={handleDownload} onGenerateNew={handleGenerateNew} />
+                                    <ResultDisplay originalImage={originalPreview} processedImage={editedImageUrl} onDownload={handleDownload} onGenerateNew={handleGenerateNew} />
                                     <RelatedTools />
                                 </>
                             )}
@@ -175,7 +178,7 @@ export default function BackgroundReplacerClient() {
             </main>
             <Footer />
             <AuthPopup isOpen={showAuthPopup} onClose={handleAuthClose} />
-            <PromoPopup isOpen={showPromoPopup} onClose={() => setShowPromoPopup(false)} />
+            <ProcessingPopup isOpen={isLoading} />
         </>
     )
 }
