@@ -13,9 +13,7 @@ import Testimonials from '@/components/Testimonials'
 import FAQ from '@/components/FAQ'
 import ToolsGrid from '@/components/ToolsGrid'
 import AuthPopup from '@/components/AuthPopup'
-import PromoPopup from '@/components/PromoPopup'
-import ResultDisplay from '@/components/ResultDisplay'
-import RelatedTools from '@/components/RelatedTools'
+import ProcessingPopup from '@/components/ProcessingPopup'
 import { soraRemoverFaqItems } from '@/utils/soraRemoverFaqItems'
 import { soraRemoverFaqItemsFr } from '@/utils/soraRemoverFaqItemsFr'
 import { soraRemoverFaqItemsEs } from '@/utils/soraRemoverFaqItemsEs'
@@ -26,6 +24,7 @@ import { soraRemoverFaqItemsNo } from '@/utils/soraRemoverFaqItemsNo'
 import { soraRemoverTestimonialDataFr } from '@/utils/soraRemoverTestimonialData'
 import { useLanguage } from '@/contexts/LanguageContext'
 import { useAuth } from '@/contexts/AuthContext'
+import { useSoraWatermarkRemoval } from '@/hooks/useSoraWatermarkRemoval'
 import { translations } from '@/locales/translations'
 import styles from '../watermark-remover/watermark.module.css'
 
@@ -38,18 +37,16 @@ declare global {
 }
 
 export default function SoraWatermarkRemoverClient() {
-    const [uploadedImage, setUploadedImage] = useState<File | null>(null)
+    const [uploadedVideo, setUploadedVideo] = useState<File | null>(null)
     const [originalPreview, setOriginalPreview] = useState<string | null>(null)
-    const [isProcessing, setIsProcessing] = useState(false)
-    const [processedImage, setProcessedImage] = useState<string | null>(null)
     const [showAuthPopup, setShowAuthPopup] = useState(false)
-    const [showPromoPopup, setShowPromoPopup] = useState(false)
     const uploadRef = useRef<HTMLDivElement>(null)
     const playerRef = useRef<any>(null)
     const videoContainerRef = useRef<HTMLDivElement>(null)
     const soraVideoRef = useRef<HTMLVideoElement>(null)
     const { language } = useLanguage()
     const { user, credits } = useAuth()
+    const { removeWatermark, isLoading, error, cleanedVideoUrl, reset } = useSoraWatermarkRemoval(user?.id)
     const t = (translations as any)[language] || translations.en
 
     // Set video playback speed to 75% for smoother viewing
@@ -58,6 +55,7 @@ export default function SoraWatermarkRemoverClient() {
             soraVideoRef.current.playbackRate = 0.75
         }
     }, [])
+
     // Fallback to English for soraRemoverPage if not available in current language
     const soraPage = t?.soraRemoverPage || {
         hero: {
@@ -105,58 +103,39 @@ export default function SoraWatermarkRemoverClient() {
     // Select FAQ items based on language
     const faqItems = language === 'fr' ? soraRemoverFaqItemsFr : language === 'es' ? soraRemoverFaqItemsEs : language === 'de' ? soraRemoverFaqItemsDe : language === 'pt' ? soraRemoverFaqItemsPt : language === 'ko' ? soraRemoverFaqItemsKo : language === 'no' ? soraRemoverFaqItemsNo : soraRemoverFaqItems
 
-    const handleImageUpload = (file: File, preview: string) => {
-        setUploadedImage(file)
-        setOriginalPreview(preview)
-        setProcessedImage(preview) // Simulated processed image
-        const isAuthenticated = user
-        if (!isAuthenticated) {
+    const handleVideoUpload = async (file: File, preview: string) => {
+        if (!user) {
             setShowAuthPopup(true)
-        }
-    }
-
-    const handleProcess = async () => {
-        if (!uploadedImage) return
-
-        // Use credits from AuthContext (Supabase) instead of localStorage
-        if (!credits || credits < 1) {
-            setShowPromoPopup(true)
             return
         }
 
-        setIsProcessing(true)
-        setTimeout(() => {
-            const reader = new FileReader()
-            reader.onload = (e) => {
-                setProcessedImage(e.target?.result as string)
-                setIsProcessing(false)
+        setUploadedVideo(file)
+        setOriginalPreview(preview)
 
-                const newCredits = credits - 1
-                localStorage.setItem('userCredits', newCredits.toString())
-            }
-            reader.readAsDataURL(uploadedImage)
-        }, 2000)
+        try {
+            // Pass the actual file to the API
+            await removeWatermark(file)
+        } catch (err) {
+            console.error('Error removing Sora watermark:', err)
+        }
     }
 
     const handleAuthClose = () => {
         setShowAuthPopup(false)
-        localStorage.setItem('userAuthenticated', 'true')
-        localStorage.setItem('userCredits', '1')
     }
 
     const handleDownload = () => {
-        if (!processedImage) return
+        if (!cleanedVideoUrl) return
         const link = document.createElement('a')
-        link.href = processedImage
-        link.download = 'processed-video.mp4'
+        link.href = cleanedVideoUrl
+        link.download = 'sora-cleaned-video.mp4'
         link.click()
     }
 
     const handleGenerateNew = () => {
-        setUploadedImage(null)
+        setUploadedVideo(null)
         setOriginalPreview(null)
-        setProcessedImage(null)
-
+        reset()
         setTimeout(() => {
             if (uploadRef.current) {
                 uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' })
@@ -165,7 +144,6 @@ export default function SoraWatermarkRemoverClient() {
     }
 
     const handleGetStarted = () => {
-        // Use user from AuthContext instead of localStorage
         if (!user) {
             setShowAuthPopup(true)
         } else {
@@ -195,24 +173,33 @@ export default function SoraWatermarkRemoverClient() {
 
                         <div ref={uploadRef} className={styles.uploadSection}>
                             <ImageUploader
-                                onImageUpload={handleImageUpload}
+                                onImageUpload={handleVideoUpload}
                                 uploadText={soraPage.uploader.uploadText}
                                 formatText={soraPage.uploader.formatText}
                                 processingText={soraPage.uploader.processingText || "Processing your video..."}
                                 acceptedFormats="video/mp4,video/quicktime,video/x-msvideo,video/avi"
+                                isAuthenticated={!!user}
                                 onAuthRequired={() => setShowAuthPopup(true)}
                             />
 
-                            {processedImage && originalPreview && (
-                                <>
-                                    <ResultDisplay
-                                        originalImage={originalPreview}
-                                        processedImage={processedImage}
-                                        onDownload={handleDownload}
-                                        onGenerateNew={handleGenerateNew}
-                                    />
-                                    <RelatedTools />
-                                </>
+                            {cleanedVideoUrl && originalPreview && (
+                                <div className={styles.videoResults}>
+                                    <h3>Your watermark-free video is ready!</h3>
+                                    <div className={styles.videoComparison}>
+                                        <div className={styles.videoBox}>
+                                            <h4>Original</h4>
+                                            <video src={originalPreview} controls style={{ width: '100%', maxHeight: '400px' }} />
+                                        </div>
+                                        <div className={styles.videoBox}>
+                                            <h4>Cleaned</h4>
+                                            <video src={cleanedVideoUrl} controls style={{ width: '100%', maxHeight: '400px' }} />
+                                        </div>
+                                    </div>
+                                    <div className={styles.resultActions}>
+                                        <button onClick={handleDownload} className="btn btn-primary">Download Cleaned Video</button>
+                                        <button onClick={handleGenerateNew} className="btn btn-secondary">Process Another Video</button>
+                                    </div>
+                                </div>
                             )}
                         </div>
 
@@ -357,7 +344,7 @@ export default function SoraWatermarkRemoverClient() {
 
             {/* Popups */}
             <AuthPopup isOpen={showAuthPopup} onClose={handleAuthClose} />
-            <PromoPopup isOpen={showPromoPopup} onClose={() => setShowPromoPopup(false)} />
+            <ProcessingPopup isOpen={isLoading} />
         </>
     )
 }

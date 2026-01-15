@@ -154,3 +154,87 @@ export async function fileToBase64(file: File): Promise<string> {
         reader.readAsDataURL(file)
     })
 }
+
+/**
+ * Remove Sora watermark from video using uglyrobot/sora2-watermark-remover model
+ * Includes automatic retry logic for rate limiting (429 errors)
+ */
+export async function removeSoraWatermark(
+    videoUrl: string,
+    retryCount = 0,
+    maxRetries = 3
+): Promise<{ success: boolean; videoUrl?: string; error?: string }> {
+    try {
+        console.log('[Replicate] Starting Sora watermark removal for video:', videoUrl)
+
+        // Call Sora2 Watermark Remover model
+        const prediction = await replicate.predictions.create({
+            model: "uglyrobot/sora2-watermark-remover",
+            input: {
+                video: videoUrl
+            }
+        })
+
+        // Wait for the prediction to complete
+        const finalPrediction = await replicate.wait(prediction)
+
+        console.log('[Replicate] Sora watermark removal completed:', finalPrediction.status)
+        console.log('[Replicate] Output:', finalPrediction.output)
+
+        // Check if we got a result
+        if (!finalPrediction.output) {
+            return {
+                success: false,
+                error: 'No video was generated'
+            }
+        }
+
+        // The output should be a URL string
+        const cleanedVideoUrl = finalPrediction.output as string
+        console.log('[Replicate] Cleaned video URL:', cleanedVideoUrl)
+
+        if (typeof cleanedVideoUrl !== 'string') {
+            console.error('[Replicate] Unexpected output type:', typeof cleanedVideoUrl)
+            return {
+                success: false,
+                error: 'Unexpected output format from Replicate'
+            }
+        }
+
+        return {
+            success: true,
+            videoUrl: cleanedVideoUrl
+        }
+    } catch (error: any) {
+        console.error('Error removing Sora watermark with Replicate:', error)
+
+        // Handle rate limiting (429 errors)
+        const is429Error = error?.message?.includes('429') ||
+            error?.message?.includes('Too Many Requests') ||
+            error?.message?.includes('throttled')
+
+        if (is429Error && retryCount < maxRetries) {
+            // Try to extract retry_after from error message
+            let retryAfter = 4 // Default to 4 seconds
+            const retryMatch = error?.message?.match(/retry_after[\":]?\s*(\d+)/)
+            if (retryMatch) {
+                retryAfter = parseInt(retryMatch[1])
+            }
+
+            const waitTime = retryAfter * 1000 // Convert to milliseconds
+
+            console.log(`[Replicate] Rate limited. Retrying in ${retryAfter}s... (Attempt ${retryCount + 1}/${maxRetries})`)
+
+            // Wait before retrying
+            await new Promise(resolve => setTimeout(resolve, waitTime))
+
+            // Retry the request
+            return removeSoraWatermark(videoUrl, retryCount + 1, maxRetries)
+        }
+
+        return {
+            success: false,
+            error: error instanceof Error ? error.message : 'Unknown error occurred'
+        }
+    }
+}
