@@ -12,6 +12,9 @@ export async function POST(request: NextRequest) {
         let videoUrl: string
         let userId: string | undefined
 
+        console.log('[remove-sora-watermark API] Content-Type:', contentType)
+        console.log('[remove-sora-watermark API] BLOB_READ_WRITE_TOKEN exists:', !!process.env.BLOB_READ_WRITE_TOKEN)
+
         // Handle both FormData (file upload) and JSON (URL)
         if (contentType.includes('multipart/form-data')) {
             console.log('[remove-sora-watermark API] Received file upload')
@@ -27,22 +30,39 @@ export async function POST(request: NextRequest) {
                 )
             }
 
-            console.log('[remove-sora-watermark API] Uploading file to Vercel Blob:', file.name, 'Size:', file.size)
+            console.log('[remove-sora-watermark API] File details:', {
+                name: file.name,
+                size: file.size,
+                type: file.type
+            })
 
             // Try to upload to Vercel Blob
             try {
+                console.log('[remove-sora-watermark API] Attempting Vercel Blob upload...')
+                console.log('[remove-sora-watermark API] Token length:', process.env.BLOB_READ_WRITE_TOKEN?.length || 0)
+
                 const blob = await put(file.name, file, {
                     access: 'public',
                     addRandomSuffix: true,
                 })
+
                 videoUrl = blob.url
                 console.log('[remove-sora-watermark API] Upload successful:', videoUrl)
-            } catch (blobError) {
-                console.error('[remove-sora-watermark API] Vercel Blob upload failed:', blobError)
+            } catch (blobError: any) {
+                console.error('[remove-sora-watermark API] Vercel Blob upload failed')
+                console.error('[remove-sora-watermark API] Error type:', blobError?.constructor?.name)
+                console.error('[remove-sora-watermark API] Error message:', blobError?.message)
+                console.error('[remove-sora-watermark API] Error status:', blobError?.status)
+
                 return NextResponse.json(
                     {
-                        error: 'Failed to upload video. Please check Vercel Blob configuration.',
-                        details: blobError instanceof Error ? blobError.message : 'Unknown error'
+                        error: 'Failed to upload video to Vercel Blob',
+                        details: blobError instanceof Error ? blobError.message : 'Unknown error',
+                        debugInfo: {
+                            hasToken: !!process.env.BLOB_READ_WRITE_TOKEN,
+                            errorType: blobError?.constructor?.name,
+                            errorStatus: blobError?.status
+                        }
                     },
                     { status: 500 }
                 )
