@@ -167,39 +167,31 @@ export async function removeSoraWatermark(
     try {
         console.log('[Replicate] Starting Sora watermark removal for video:', videoUrl)
 
-        // Call Sora2 Watermark Remover model
-        const prediction = await replicate.predictions.create({
-            model: "uglyrobot/sora2-watermark-remover",
-            input: {
-                video: videoUrl
+        // Call Sora2 Watermark Remover model using run API
+        const output = await replicate.run(
+            "uglyrobot/sora2-watermark-remover:latest",
+            {
+                input: {
+                    video: videoUrl
+                }
             }
-        })
+        )
 
-        // Wait for the prediction to complete
-        const finalPrediction = await replicate.wait(prediction)
-
-        console.log('[Replicate] Sora watermark removal completed:', finalPrediction.status)
-        console.log('[Replicate] Output:', finalPrediction.output)
+        console.log('[Replicate] Sora watermark removal completed')
+        console.log('[Replicate] Output:', output)
 
         // Check if we got a result
-        if (!finalPrediction.output) {
+        const cleanedVideoUrl = typeof output === 'string' ? output : String(output)
+
+        if (!cleanedVideoUrl) {
+            console.error('[Replicate] No output received')
             return {
                 success: false,
                 error: 'No video was generated'
             }
         }
 
-        // The output should be a URL string
-        const cleanedVideoUrl = finalPrediction.output as string
         console.log('[Replicate] Cleaned video URL:', cleanedVideoUrl)
-
-        if (typeof cleanedVideoUrl !== 'string') {
-            console.error('[Replicate] Unexpected output type:', typeof cleanedVideoUrl)
-            return {
-                success: false,
-                error: 'Unexpected output format from Replicate'
-            }
-        }
 
         return {
             success: true,
