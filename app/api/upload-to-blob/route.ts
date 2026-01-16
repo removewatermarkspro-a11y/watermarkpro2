@@ -29,9 +29,14 @@ export async function POST(request: NextRequest) {
             url: blob.url
         })
     } catch (error) {
-        console.error('Error uploading to Vercel Blob:', error)
+        console.error('[upload-to-blob] Error uploading to Vercel Blob:', error)
+        console.error('[upload-to-blob] Error details:', {
+            message: error instanceof Error ? error.message : 'Unknown error',
+            stack: error instanceof Error ? error.stack : undefined,
+            env: process.env.BLOB_READ_WRITE_TOKEN ? 'Token is set' : 'Token is NOT set'
+        })
         return NextResponse.json(
-            { error: 'Failed to upload file' },
+            { error: 'Failed to upload file', details: error instanceof Error ? error.message : 'Unknown error' },
             { status: 500 }
         )
     }

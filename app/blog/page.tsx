@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import styles from './BlogPage.module.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
@@ -70,8 +71,8 @@ export default function BlogPage() {
                     </div>
 
                     <div className={styles.blogGrid}>
-                        {/* Blog Post Card 1 */}
-                        <article className={styles.blogCard}>
+                        {/* Blog Post Card 1 - Remove Watermark AI Guide */}
+                        <Link href="/blog/remove-watermark-ai-free" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
                                 <div className={styles.blogImagePlaceholder}>
                                     <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
@@ -82,14 +83,23 @@ export default function BlogPage() {
                                 </div>
                             </div>
                             <div className={styles.blogCardContent}>
+                                <span className={styles.blogCategory}>AI TOOLS</span>
                                 <h2 className={styles.blogCardTitle}>
-                                    Blog Post Title 1
+                                    How to Remove Watermarks from Photos and Videos for Free in Seconds with AI
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                                         <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
                                 </h2>
+                                <p className={styles.blogCardDescription}>
+                                    Learn how to remove watermarks from photos and videos using AI technology. Complete guide with step-by-step instructions and expert tips.
+                                </p>
+                                <div className={styles.blogCardMeta}>
+                                    <span>January 16, 2026</span>
+                                    <span>•</span>
+                                    <span>8 min read</span>
+                                </div>
                             </div>
-                        </article>
+                        </Link>
 
                         {/* Blog Post Card 2 */}
                         <article className={styles.blogCard}>

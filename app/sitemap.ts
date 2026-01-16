@@ -160,5 +160,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
         })
     })
 
+    // Add blog pages
+    sitemap.push({
+        url: `${baseUrl}/blog`,
+        lastModified: new Date(),
+        changeFrequency: 'weekly',
+        priority: 0.8,
+    })
+
+    sitemap.push({
+        url: `${baseUrl}/blog/remove-watermark-ai-free`,
+        lastModified: new Date('2026-01-16'),
+        changeFrequency: 'monthly',
+        priority: 0.7,
+    })
+
     return sitemap
 }
