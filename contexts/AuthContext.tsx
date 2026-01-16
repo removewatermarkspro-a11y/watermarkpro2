@@ -55,6 +55,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
     // Sign in with Google OAuth
     const signInWithGoogle = async () => {
+        // Store current page URL for post-auth redirect
+        localStorage.setItem('auth_redirect_url', window.location.pathname)
+
         await supabase.auth.signInWithOAuth({
             provider: 'google',
             options: {
@@ -65,6 +68,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
     // Sign in with Magic Link (email)
     const signInWithEmail = async (email: string) => {
+        // Store current page URL for post-auth redirect
+        localStorage.setItem('auth_redirect_url', window.location.pathname)
+
         const { error } = await supabase.auth.signInWithOtp({
             email,
             options: {
