@@ -169,7 +169,7 @@ export async function removeSoraWatermark(
 
         // Call Sora2 Watermark Remover model using run API with specific version
         const output = await replicate.run(
-            "uglyrobot/sora2-watermark-remover:7b636d39",
+            "uglyrobot/sora2-watermark-remover:a88d6526",
             {
                 input: {
                     video: videoUrl
