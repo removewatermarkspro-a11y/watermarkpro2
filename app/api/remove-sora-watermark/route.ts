@@ -6,6 +6,12 @@ import { put } from '@vercel/blob'
 // Increase max duration for video processing (Next.js 14 syntax)
 export const maxDuration = 300 // 5 minutes
 
+// Increase body size limit for video uploads (50MB)
+export const runtime = 'nodejs'
+export const bodyParser = {
+    sizeLimit: '50mb'
+}
+
 export async function POST(request: NextRequest) {
     try {
         const contentType = request.headers.get('content-type') || ''
