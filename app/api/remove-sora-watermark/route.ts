@@ -1,24 +1,68 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { removeSoraWatermark } from '@/lib/replicate'
 import { consumeCreditServer } from '@/lib/supabase-server'
+import { put } from '@vercel/blob'
 
 // Increase max duration for video processing (Next.js 14 syntax)
 export const maxDuration = 300 // 5 minutes
 
 export async function POST(request: NextRequest) {
     try {
-        const body = await request.json()
-        const { videoUrl, userId } = body
+        const contentType = request.headers.get('content-type') || ''
+        let videoUrl: string
+        let userId: string | undefined
 
-        console.log('[remove-sora-watermark API] Request received:', {
-            userId: userId?.substring(0, 8) + '...',
-            videoUrl: videoUrl?.substring(0, 50) + '...'
-        })
+        // Handle both FormData (file upload) and JSON (URL)
+        if (contentType.includes('multipart/form-data')) {
+            console.log('[remove-sora-watermark API] Received file upload')
+
+            const formData = await request.formData()
+            const file = formData.get('file') as File
+            userId = formData.get('userId') as string | undefined
+
+            if (!file) {
+                return NextResponse.json(
+                    { error: 'No file provided' },
+                    { status: 400 }
+                )
+            }
+
+            console.log('[remove-sora-watermark API] Uploading file to Vercel Blob:', file.name, 'Size:', file.size)
+
+            // Try to upload to Vercel Blob
+            try {
+                const blob = await put(file.name, file, {
+                    access: 'public',
+                    addRandomSuffix: true,
+                })
+                videoUrl = blob.url
+                console.log('[remove-sora-watermark API] Upload successful:', videoUrl)
+            } catch (blobError) {
+                console.error('[remove-sora-watermark API] Vercel Blob upload failed:', blobError)
+                return NextResponse.json(
+                    {
+                        error: 'Failed to upload video. Please check Vercel Blob configuration.',
+                        details: blobError instanceof Error ? blobError.message : 'Unknown error'
+                    },
+                    { status: 500 }
+                )
+            }
+        } else {
+            // Handle JSON request with URL
+            const body = await request.json()
+            videoUrl = body.videoUrl
+            userId = body.userId
+
+            console.log('[remove-sora-watermark API] Request received:', {
+                userId: userId?.substring(0, 8) + '...',
+                videoUrl: videoUrl?.substring(0, 50) + '...'
+            })
+        }
 
         // Validate required fields
         if (!videoUrl) {
             return NextResponse.json(
-                { error: 'Missing required field: videoUrl' },
+                { error: 'Missing required field: videoUrl or file' },
                 { status: 400 }
             )
         }
@@ -49,7 +93,10 @@ export async function POST(request: NextRequest) {
     } catch (error) {
         console.error('Error in remove-sora-watermark API:', error)
         return NextResponse.json(
-            { error: 'Internal server error' },
+            {
+                error: 'Internal server error',
+                details: error instanceof Error ? error.message : 'Unknown error'
+            },
             { status: 500 }
         )
     }

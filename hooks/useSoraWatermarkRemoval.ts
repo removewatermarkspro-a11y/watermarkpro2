@@ -13,42 +13,23 @@ export function useSoraWatermarkRemoval(userId?: string) {
         try {
             console.log('[useSoraWatermarkRemoval] Starting watermark removal for:', videoFile.name)
 
-            // Step 1: Upload video to Vercel Blob Storage
-            console.log('[useSoraWatermarkRemoval] Uploading to Vercel Blob Storage...')
-            const uploadFormData = new FormData()
-            uploadFormData.append('file', videoFile)
-
-            const uploadResponse = await fetch('/api/upload-to-blob', {
-                method: 'POST',
-                body: uploadFormData,
-            })
-
-            const uploadData = await uploadResponse.json()
-
-            if (!uploadResponse.ok || !uploadData.success) {
-                throw new Error(uploadData.error || 'Failed to upload video')
+            // Send file directly to remove-sora-watermark API
+            const formData = new FormData()
+            formData.append('file', videoFile)
+            if (userId) {
+                formData.append('userId', userId)
             }
 
-            const videoUrl = uploadData.url
-            console.log('[useSoraWatermarkRemoval] Video uploaded to:', videoUrl)
-
-            // Step 2: Call Sora watermark removal API with the video URL
-            console.log('[useSoraWatermarkRemoval] Removing watermark...')
+            console.log('[useSoraWatermarkRemoval] Uploading and processing video...')
             const response = await fetch('/api/remove-sora-watermark', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    videoUrl,
-                    userId
-                }),
+                body: formData,
             })
 
             const data = await response.json()
 
             if (!response.ok) {
-                throw new Error(data.error || 'Failed to remove watermark')
+                throw new Error(data.error || data.details || 'Failed to remove watermark')
             }
 
             console.log('[useSoraWatermarkRemoval] Watermark removed successfully:', data.videoUrl)
