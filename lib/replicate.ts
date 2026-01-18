@@ -176,7 +176,30 @@ export async function removeSoraWatermark(
             }
         }
 
-        // Step 1: Create prediction using direct REST API with model identifier
+        // Step 1: Get the latest version of the model
+        console.log('[Replicate] Fetching latest model version...')
+        const modelResponse = await fetch('https://api.replicate.com/v1/models/uglyrobot/sora2-watermark-remover', {
+            headers: {
+                'Authorization': `Bearer ${apiToken}`,
+            }
+        })
+
+        if (!modelResponse.ok) {
+            const errorData = await modelResponse.json()
+            console.error('[Replicate] Error fetching model:', errorData)
+            throw new Error(`Failed to fetch model: ${JSON.stringify(errorData)}`)
+        }
+
+        const modelData = await modelResponse.json()
+        const latestVersion = modelData.latest_version?.id
+
+        if (!latestVersion) {
+            throw new Error('Could not find latest version for model')
+        }
+
+        console.log('[Replicate] Latest version:', latestVersion)
+
+        // Step 2: Create prediction using the version hash
         const createResponse = await fetch('https://api.replicate.com/v1/predictions', {
             method: 'POST',
             headers: {
@@ -184,7 +207,7 @@ export async function removeSoraWatermark(
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                model: "uglyrobot/sora2-watermark-remover",
+                version: latestVersion,
                 input: {
                     video: videoUrl
                 }
