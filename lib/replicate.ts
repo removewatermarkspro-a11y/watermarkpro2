@@ -157,7 +157,7 @@ export async function fileToBase64(file: File): Promise<string> {
 
 /**
  * Remove Sora watermark from video using uglyrobot/sora2-watermark-remover model
- * Includes automatic retry logic for rate limiting (429 errors)
+ * Uses direct REST API instead of SDK to avoid endpoint issues
  */
 export async function removeSoraWatermark(
     videoUrl: string,
@@ -166,31 +166,65 @@ export async function removeSoraWatermark(
 ): Promise<{ success: boolean; videoUrl?: string; error?: string }> {
     try {
         console.log('[Replicate] Starting Sora watermark removal for video:', videoUrl)
+        console.log('[Replicate] Using direct REST API')
 
-        // Call Sora2 Watermark Remover model - let Replicate choose the version
-        // This allows Replicate to automatically select the version your account has access to
-        const output = await replicate.run(
-            "uglyrobot/sora2-watermark-remover",
-            {
+        const apiToken = process.env.REPLICATE_API_TOKEN
+        if (!apiToken) {
+            return {
+                success: false,
+                error: 'REPLICATE_API_TOKEN is not set'
+            }
+        }
+
+        // Step 1: Create prediction using direct REST API with model identifier
+        const createResponse = await fetch('https://api.replicate.com/v1/predictions', {
+            method: 'POST',
+            headers: {
+                'Authorization': `Bearer ${apiToken}`,
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                model: "uglyrobot/sora2-watermark-remover",
                 input: {
                     video: videoUrl
                 }
-            }
-        )
+            })
+        })
 
-        console.log('[Replicate] Sora watermark removal completed')
-        console.log('[Replicate] Output:', output)
+        if (!createResponse.ok) {
+            const errorData = await createResponse.json()
+            console.error('[Replicate] API error:', errorData)
+            throw new Error(`Replicate API error: ${JSON.stringify(errorData)}`)
+        }
 
-        // Check if we got a result
-        const cleanedVideoUrl = typeof output === 'string' ? output : String(output)
+        const prediction = await createResponse.json()
+        console.log('[Replicate] Prediction created:', prediction.id)
 
-        if (!cleanedVideoUrl) {
-            console.error('[Replicate] No output received')
+        // Poll for completion
+        let finalPrediction = prediction
+        while (finalPrediction.status !== 'succeeded' && finalPrediction.status !== 'failed' && finalPrediction.status !== 'canceled') {
+            await new Promise(resolve => setTimeout(resolve, 2000))
+
+            const pollResponse = await fetch(`https://api.replicate.com/v1/predictions/${prediction.id}`, {
+                headers: {
+                    'Authorization': `Bearer ${apiToken}`,
+                }
+            })
+
+            finalPrediction = await pollResponse.json()
+            console.log('[Replicate] Prediction status:', finalPrediction.status)
+        }
+
+        if (finalPrediction.status === 'failed') {
             return {
                 success: false,
-                error: 'No video was generated'
+                error: finalPrediction.error || 'Prediction failed'
             }
         }
+
+        const cleanedVideoUrl = typeof finalPrediction.output === 'string'
+            ? finalPrediction.output
+            : JSON.stringify(finalPrediction.output)
 
         console.log('[Replicate] Cleaned video URL:', cleanedVideoUrl)
 
@@ -207,21 +241,18 @@ export async function removeSoraWatermark(
             error?.message?.includes('throttled')
 
         if (is429Error && retryCount < maxRetries) {
-            // Try to extract retry_after from error message
-            let retryAfter = 4 // Default to 4 seconds
+            let retryAfter = 4
             const retryMatch = error?.message?.match(/retry_after[\":]?\s*(\d+)/)
             if (retryMatch) {
                 retryAfter = parseInt(retryMatch[1])
             }
 
-            const waitTime = retryAfter * 1000 // Convert to milliseconds
+            const waitTime = retryAfter * 1000
 
             console.log(`[Replicate] Rate limited. Retrying in ${retryAfter}s... (Attempt ${retryCount + 1}/${maxRetries})`)
 
-            // Wait before retrying
             await new Promise(resolve => setTimeout(resolve, waitTime))
 
-            // Retry the request
             return removeSoraWatermark(videoUrl, retryCount + 1, maxRetries)
         }
 
