@@ -4823,9 +4823,6 @@ if (!(translations as any).ko) {
     }
 };
 
-// Portuguese translations - using English as fallback for now
-(translations as any).pt = (translations as any).en;
-
 
 
 
