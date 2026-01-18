@@ -167,9 +167,10 @@ export async function removeSoraWatermark(
     try {
         console.log('[Replicate] Starting Sora watermark removal for video:', videoUrl)
 
-        // Call Sora2 Watermark Remover model using run API with specific version
+        // Call Sora2 Watermark Remover model - let Replicate choose the version
+        // This allows Replicate to automatically select the version your account has access to
         const output = await replicate.run(
-            "uglyrobot/sora2-watermark-remover:a88d6526",
+            "uglyrobot/sora2-watermark-remover",
             {
                 input: {
                     video: videoUrl
