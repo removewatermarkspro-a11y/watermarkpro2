@@ -30,7 +30,7 @@ export default function WatermarkRemoverClientEs() {
 
     // ⚠️ DO NOT CHANGE - Force Spanish language (translations.es)
     // This must always use translations.es for Spanish pages
-    const t = translations.es
+    const t = (translations as any).es
 
     const handleImageUpload = (file: File, preview: string) => {
         setUploadedImage(file)

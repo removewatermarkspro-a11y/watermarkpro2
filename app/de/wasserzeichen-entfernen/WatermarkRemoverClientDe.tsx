@@ -28,8 +28,9 @@ export default function WatermarkRemoverClientDe() {
     const uploadRef = useRef<HTMLDivElement>(null)
     const { user } = useAuth()
 
-    // Force German language
-    const t = translations.de
+    // ⚠️ DO NOT CHANGE - Force German language (translations.de)
+    // This must always use translations.de for German pages
+    const t = (translations as any).de
 
     // Debug: log what we're getting
     console.log('German translations loaded:', {

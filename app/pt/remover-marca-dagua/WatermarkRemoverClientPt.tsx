@@ -30,7 +30,7 @@ export default function WatermarkRemoverClientPt() {
 
     // ⚠️ DO NOT CHANGE - Force Portuguese language (translations.pt)
     // This must always use translations.pt for Portuguese pages
-    const t = translations.pt
+    const t = (translations as any).pt
 
     const handleImageUpload = (file: File, preview: string) => {
         setUploadedImage(file)
