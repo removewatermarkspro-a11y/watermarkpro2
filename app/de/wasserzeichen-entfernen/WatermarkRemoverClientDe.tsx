@@ -31,6 +31,13 @@ export default function WatermarkRemoverClientDe() {
     // Force German language
     const t = translations.de
 
+    // Debug: log what we're getting
+    console.log('German translations loaded:', {
+        hero: t?.hero,
+        features: t?.features?.badge,
+        howItWorks: t?.howItWorks?.badge
+    })
+
     const handleImageUpload = (file: File, preview: string) => {
         setUploadedImage(file)
         setOriginalPreview(preview)
