@@ -4823,6 +4823,10 @@ if (!(translations as any).ko) {
     }
 };
 
+// ⚠️ IMPORTANT: DO NOT add any code here that overrides translations.pt, translations.es, or translations.de
+// Portuguese, Spanish, and German translations are defined above and must not be replaced with English
+// If you need to update translations, edit the respective language sections above
+
 
 
 

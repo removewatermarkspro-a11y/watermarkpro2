@@ -28,7 +28,8 @@ export default function WatermarkRemoverClientEs() {
     const uploadRef = useRef<HTMLDivElement>(null)
     const { user } = useAuth()
 
-    // Force Spanish language
+    // ⚠️ DO NOT CHANGE - Force Spanish language (translations.es)
+    // This must always use translations.es for Spanish pages
     const t = translations.es
 
     const handleImageUpload = (file: File, preview: string) => {
