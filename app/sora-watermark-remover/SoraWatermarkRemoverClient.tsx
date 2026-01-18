@@ -188,11 +188,11 @@ export default function SoraWatermarkRemoverClient() {
                                     <div className={styles.videoComparison}>
                                         <div className={styles.videoBox}>
                                             <h4>Original</h4>
-                                            <video src={originalPreview} controls style={{ width: '100%', maxHeight: '400px' }} />
+                                            <video src={originalPreview} controls />
                                         </div>
                                         <div className={styles.videoBox}>
                                             <h4>Cleaned</h4>
-                                            <video src={cleanedVideoUrl} controls style={{ width: '100%', maxHeight: '400px' }} />
+                                            <video src={cleanedVideoUrl} controls />
                                         </div>
                                     </div>
                                     <div className={styles.resultActions}>
@@ -344,7 +344,7 @@ export default function SoraWatermarkRemoverClient() {
 
             {/* Popups */}
             <AuthPopup isOpen={showAuthPopup} onClose={handleAuthClose} />
-            <ProcessingPopup isOpen={isLoading} />
+            <ProcessingPopup isOpen={isLoading} processingText="Processing your video..." />
         </>
     )
 }

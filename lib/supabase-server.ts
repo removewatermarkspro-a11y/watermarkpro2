@@ -39,7 +39,8 @@ export const consumeCreditServer = async (
     userId: string,
     operationType: string,
     fileSize?: number,
-    processingTime?: number
+    processingTime?: number,
+    creditsToConsume: number = 1
 ): Promise<boolean> => {
     try {
         console.log('[consumeCreditServer] Consuming credit for userId:', userId?.substring(0, 8) + '...')
@@ -57,16 +58,16 @@ export const consumeCreditServer = async (
             return true
         }
 
-        if (!creditsData || creditsData.balance < 1) {
-            console.error('[consumeCreditServer] Insufficient credits:', creditsData?.balance)
+        if (!creditsData || creditsData.balance < creditsToConsume) {
+            console.error('[consumeCreditServer] Insufficient credits:', creditsData?.balance, 'needed:', creditsToConsume)
             return false
         }
 
-        // Decrement credit
+        // Decrement credits
         const { error: updateError } = await supabaseAdmin
             .from('credits')
             .update({
-                balance: creditsData.balance - 1,
+                balance: creditsData.balance - creditsToConsume,
                 last_updated: new Date().toISOString()
             })
             .eq('user_id', userId)
@@ -77,7 +78,7 @@ export const consumeCreditServer = async (
             return true
         }
 
-        console.log('[consumeCreditServer] Credit consumed successfully, new balance:', creditsData.balance - 1)
+        console.log('[consumeCreditServer] Credits consumed successfully:', creditsToConsume, 'new balance:', creditsData.balance - creditsToConsume)
 
         // Record usage history
         await supabaseAdmin
@@ -85,7 +86,7 @@ export const consumeCreditServer = async (
             .insert({
                 user_id: userId,
                 operation_type: operationType,
-                credits_used: 1,
+                credits_used: creditsToConsume,
                 file_size: fileSize,
                 processing_time: processingTime
             })

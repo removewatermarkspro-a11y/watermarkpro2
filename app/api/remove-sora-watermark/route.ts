@@ -97,10 +97,10 @@ export async function POST(request: NextRequest) {
             )
         }
 
-        // Try to consume credit (don't fail if it doesn't work)
+        // Consume 8 credits for video processing
         if (userId) {
             try {
-                await consumeCreditServer(userId, 'sora-watermark-remover')
+                await consumeCreditServer(userId, 'sora-watermark-remover', undefined, undefined, 8)
             } catch (creditError) {
                 console.error('[remove-sora-watermark API] Credit consumption failed, continuing anyway:', creditError)
             }

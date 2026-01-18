@@ -314,11 +314,105 @@
     }
 }
 
-/* Violet gradient text for "Free" in H1 titles */
 .violetText {
     background: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     filter: drop-shadow(0 0 20px rgba(139, 92, 246, 0.4));
+}
+
+/* Video Results Section */
+.videoResults {
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 900px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    padding: 2rem;
+    backdrop-filter: blur(12px);
+    animation: fadeIn 0.5s ease-out;
+}
+
+.videoResults h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-family: 'Outfit', sans-serif;
+}
+
+.videoComparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.videoBox {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.videoBox h4 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    text-align: center;
+    padding: 0.75rem;
+    background: rgba(0, 0, 0, 0.4);
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.videoBox video {
+    width: 100%;
+    display: block;
+}
+
+.resultActions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.resultActions .btn {
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .videoComparison {
+        grid-template-columns: 1fr;
+    }
+
+    .videoResults {
+        padding: 1.5rem;
+    }
+
+    .resultActions {
+        flex-direction: column;
+    }
+
+    .resultActions .btn {
+        width: 100%;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
