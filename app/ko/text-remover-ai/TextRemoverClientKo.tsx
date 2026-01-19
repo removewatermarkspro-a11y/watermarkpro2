@@ -51,7 +51,36 @@ export default function TextRemoverClientKo() {
                     <section className={styles.features}>
                         <div style={{ textAlign: 'center' }}><span className={styles.badge}>{t.removeTextPage.features.badge}</span></div>
                         <div className={styles.featureGrid}>
-                            {[1, 2, 3].map(i => (<div key={i} className={styles.featureItem}><div className={styles.featureImage} style={{ padding: 0, overflow: 'hidden' }}><img src={`/images/feature-remove-text-${i === 1 ? 'tablet.png' : i === 2 ? 'tshirt.jpg' : 'paint.png'}`} alt="Feature" style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy" decoding="async" /></div><div className={styles.featureContent}><h3>{t.removeTextPage.features[`feature${i}`].title}</h3><p className={styles.sectionText}>{t.removeTextPage.features[`feature${i}`].description}</p><button className="btn btn-primary" onClick={() => { if (!user) setShowAuthPopup(true); else if (uploadRef.current) uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' }); }}>{t.removeTextPage.features[`feature${i}`].button}<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button></div></div>))}
+                            <div className={styles.featureItem}>
+                                <div className={styles.featureImage} style={{ padding: 0, overflow: 'hidden' }}>
+                                    <img src="/images-optimized/delete-text-from-photo.webp" alt="Remove text from image" style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy" decoding="async" />
+                                </div>
+                                <div className={styles.featureContent}>
+                                    <h3>{t.removeTextPage.features.feature1.title}</h3>
+                                    <p className={styles.sectionText}>{t.removeTextPage.features.feature1.description}</p>
+                                    <button className="btn btn-primary" onClick={() => { if (!user) setShowAuthPopup(true); else if (uploadRef.current) uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' }); }}>{t.removeTextPage.features.feature1.button}<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button>
+                                </div>
+                            </div>
+                            <div className={styles.featureItem}>
+                                <div className={styles.featureImage} style={{ padding: 0, overflow: 'hidden' }}>
+                                    <img src="/images-optimized/remove-text-from-tshirt-photo.webp" alt="Fast text removal" style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy" decoding="async" />
+                                </div>
+                                <div className={styles.featureContent}>
+                                    <h3>{t.removeTextPage.features.feature2.title}</h3>
+                                    <p className={styles.sectionText}>{t.removeTextPage.features.feature2.description}</p>
+                                    <button className="btn btn-primary" onClick={() => { if (!user) setShowAuthPopup(true); else if (uploadRef.current) uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' }); }}>{t.removeTextPage.features.feature2.button}<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button>
+                                </div>
+                            </div>
+                            <div className={styles.featureItem}>
+                                <div className={styles.featureImage} style={{ padding: 0, overflow: 'hidden' }}>
+                                    <img src="/images-optimized/remove-text-from-image-ai.webp" alt="Complete text removal solution" style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy" decoding="async" />
+                                </div>
+                                <div className={styles.featureContent}>
+                                    <h3>{t.removeTextPage.features.feature3.title}</h3>
+                                    <p className={styles.sectionText}>{t.removeTextPage.features.feature3.description}</p>
+                                    <button className="btn btn-primary" onClick={() => { if (!user) setShowAuthPopup(true); else if (uploadRef.current) uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' }); }}>{t.removeTextPage.features.feature3.button}<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button>
+                                </div>
+                            </div>
                         </div>
                     </section>
                     <section className={styles.howItWorks}>

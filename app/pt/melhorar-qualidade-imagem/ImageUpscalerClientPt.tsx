@@ -49,10 +49,39 @@ export default function ImageUpscalerClientPt() {
                         <div className={styles.ratingsBelow}><RatingBadges /></div>
                     </section>
                     <ExamplesSection />
-                    <section className={styles.features}>
+                                        <section className={styles.features}>
                         <div style={{ textAlign: 'center' }}><span className={styles.badge}>{t.imageUpscalerPage.features.badge}</span></div>
                         <div className={styles.featureGrid}>
-                            {[1, 2, 3].map(i => (<div key={i} className={styles.featureItem}><div className={styles.featureImage} style={{ padding: 0, overflow: 'hidden' }}><img src={`/images/feature-upscale-${i === 1 ? 'woman.jpg' : i === 2 ? 'cat-new.png' : 'boat.png'}`} alt="Feature" style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy" decoding="async" /></div><div className={styles.featureContent}><h3>{t.imageUpscalerPage.features[`feature${i}`].title}</h3><p className={styles.sectionText}>{t.imageUpscalerPage.features[`feature${i}`].description}</p><button className="btn btn-primary" onClick={() => { if (!user) setShowAuthPopup(true); else if (uploadRef.current) uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' }); }}>{t.imageUpscalerPage.features[`feature${i}`].button}<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button></div></div>))}
+                            <div className={styles.featureItem}>
+                                <div className={styles.featureImage} style={{ padding: 0, overflow: 'hidden' }}>
+                                    <img src="/images-optimized/upscale-portrait-photo-ai.webp" alt="Upscale portrait photo AI" style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy" decoding="async" />
+                                </div>
+                                <div className={styles.featureContent}>
+                                    <h3>{t.imageUpscalerPage.features.feature1.title}</h3>
+                                    <p className={styles.sectionText}>{t.imageUpscalerPage.features.feature1.description}</p>
+                                    <button className="btn btn-primary" onClick={() => { if (!user) setShowAuthPopup(true); else if (uploadRef.current) uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' }); }}>{t.imageUpscalerPage.features.feature1.button}<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button>
+                                </div>
+                            </div>
+                            <div className={styles.featureItem}>
+                                <div className={styles.featureImage} style={{ padding: 0, overflow: 'hidden' }}>
+                                    <img src="/images-optimized/enhance-cat-image-quality.webp" alt="Enhance cat image quality" style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy" decoding="async" />
+                                </div>
+                                <div className={styles.featureContent}>
+                                    <h3>{t.imageUpscalerPage.features.feature2.title}</h3>
+                                    <p className={styles.sectionText}>{t.imageUpscalerPage.features.feature2.description}</p>
+                                    <button className="btn btn-primary" onClick={() => { if (!user) setShowAuthPopup(true); else if (uploadRef.current) uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' }); }}>{t.imageUpscalerPage.features.feature2.button}<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button>
+                                </div>
+                            </div>
+                            <div className={styles.featureItem}>
+                                <div className={styles.featureImage} style={{ padding: 0, overflow: 'hidden' }}>
+                                    <img src="/images-optimized/photo-upscaler-boat-example.webp" alt="Photo upscaler boat example" style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy" decoding="async" />
+                                </div>
+                                <div className={styles.featureContent}>
+                                    <h3>{t.imageUpscalerPage.features.feature3.title}</h3>
+                                    <p className={styles.sectionText}>{t.imageUpscalerPage.features.feature3.description}</p>
+                                    <button className="btn btn-primary" onClick={() => { if (!user) setShowAuthPopup(true); else if (uploadRef.current) uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' }); }}>{t.imageUpscalerPage.features.feature3.button}<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button>
+                                </div>
+                            </div>
                         </div>
                     </section>
                     <section className={styles.howItWorks}>

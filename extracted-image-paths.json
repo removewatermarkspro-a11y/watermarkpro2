@@ -1,0 +1,42 @@
+{
+  "TextRemoverClient": {
+    "images": [
+      "/images-optimized/delete-text-from-photo.webp",
+      "/images-optimized/remove-text-from-tshirt-photo.webp",
+      "/images-optimized/remove-text-from-image-ai.webp"
+    ],
+    "pageKey": "removeTextPage"
+  },
+  "PeopleRemoverClient": {
+    "images": [
+      "/images-optimized/beach-photo-people-remover.webp",
+      "/images-optimized/street-people-remover-ai.webp",
+      "/images-optimized/plaza-people-removal-tool.webp"
+    ],
+    "pageKey": "peopleRemovalPage"
+  },
+  "ObjectRemoverClient": {
+    "images": [
+      "/images-optimized/delete-objects-from-image-ai.webp",
+      "/images-optimized/ai-object-remover-tool.webp",
+      "/images-optimized/remove-unwanted-objects-photo.webp"
+    ],
+    "pageKey": "removeObjectPage"
+  },
+  "BackgroundRemoverClient": {
+    "images": [
+      "/images-optimized/background-removal-tool-ai.webp",
+      "/images-optimized/ai-background-remover-free.webp",
+      "/images-optimized/remove-background-from-image.webp"
+    ],
+    "pageKey": "removeBackgroundPage"
+  },
+  "ImageUpscalerClient": {
+    "images": [
+      "/images-optimized/upscale-portrait-photo-ai.webp",
+      "/images-optimized/enhance-cat-image-quality.webp",
+      "/images-optimized/photo-upscaler-boat-example.webp"
+    ],
+    "pageKey": "imageUpscalerPage"
+  }
+}

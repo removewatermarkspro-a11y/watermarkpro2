@@ -1,0 +1,769 @@
+{
+  "used": [],
+  "unused": [
+    {
+      "name": "auth-popup-image.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\auth-popup-image.png",
+      "relativePath": "auth-popup-image.png",
+      "size": 729741
+    },
+    {
+      "name": "example-remove-object.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\example-remove-object.png",
+      "relativePath": "example-remove-object.png",
+      "size": 260064
+    },
+    {
+      "name": "example-remove-people.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\example-remove-people.png",
+      "relativePath": "example-remove-people.png",
+      "size": 971228
+    },
+    {
+      "name": "example-swap-background-v2.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\example-swap-background-v2.png",
+      "relativePath": "example-swap-background-v2.png",
+      "size": 867752
+    },
+    {
+      "name": "example-swap-background.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\example-swap-background.png",
+      "relativePath": "example-swap-background.png",
+      "size": 886144
+    },
+    {
+      "name": "feature-people-remover-1.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\feature-people-remover-1.png",
+      "relativePath": "feature-people-remover-1.png",
+      "size": 971228
+    },
+    {
+      "name": "feature-people-remover-2.jpg",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\feature-people-remover-2.jpg",
+      "relativePath": "feature-people-remover-2.jpg",
+      "size": 80366
+    },
+    {
+      "name": "feature-people-remover-2.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\feature-people-remover-2.png",
+      "relativePath": "feature-people-remover-2.png",
+      "size": 458983
+    },
+    {
+      "name": "feature-people-remover-3.jpg",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\feature-people-remover-3.jpg",
+      "relativePath": "feature-people-remover-3.jpg",
+      "size": 126015
+    },
+    {
+      "name": "feature-people-remover-beach-new.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\feature-people-remover-beach-new.png",
+      "relativePath": "feature-people-remover-beach-new.png",
+      "size": 475739
+    },
+    {
+      "name": "feature-people-remover-beach.jpg",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\feature-people-remover-beach.jpg",
+      "relativePath": "feature-people-remover-beach.jpg",
+      "size": 315121
+    },
+    {
+      "name": "feature-people-remover-plaza.jpg",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\feature-people-remover-plaza.jpg",
+      "relativePath": "feature-people-remover-plaza.jpg",
+      "size": 383005
+    },
+    {
+      "name": "feature-people-remover-street.jpg",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\feature-people-remover-street.jpg",
+      "relativePath": "feature-people-remover-street.jpg",
+      "size": 327516
+    },
+    {
+      "name": "feature-remove-bg-1.jpg",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\feature-remove-bg-1.jpg",
+      "relativePath": "feature-remove-bg-1.jpg",
+      "size": 114936
+    },
+    {
+      "name": "feature-remove-bg-2.jpg",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\feature-remove-bg-2.jpg",
+      "relativePath": "feature-remove-bg-2.jpg",
+      "size": 222943
+    },
+    {
+      "name": "feature-remove-bg-3.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\feature-remove-bg-3.png",
+      "relativePath": "feature-remove-bg-3.png",
+      "size": 1031937
+    },
+    {
+      "name": "feature-remove-object-1.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\feature-remove-object-1.png",
+      "relativePath": "feature-remove-object-1.png",
+      "size": 396155
+    },
+    {
+      "name": "feature-remove-object-2.jpg",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\feature-remove-object-2.jpg",
+      "relativePath": "feature-remove-object-2.jpg",
+      "size": 132527
+    },
+    {
+      "name": "feature-remove-object-3.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\feature-remove-object-3.png",
+      "relativePath": "feature-remove-object-3.png",
+      "size": 260064
+    },
+    {
+      "name": "feature-remove-text-paint.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\feature-remove-text-paint.png",
+      "relativePath": "feature-remove-text-paint.png",
+      "size": 433665
+    },
+    {
+      "name": "feature-remove-text-spring.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\feature-remove-text-spring.png",
+      "relativePath": "feature-remove-text-spring.png",
+      "size": 880980
+    },
+    {
+      "name": "feature-remove-text-tablet.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\feature-remove-text-tablet.png",
+      "relativePath": "feature-remove-text-tablet.png",
+      "size": 224902
+    },
+    {
+      "name": "feature-remove-text-tshirt.jpg",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\feature-remove-text-tshirt.jpg",
+      "relativePath": "feature-remove-text-tshirt.jpg",
+      "size": 425261
+    },
+    {
+      "name": "feature-replace-background-1.jpg",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\feature-replace-background-1.jpg",
+      "relativePath": "feature-replace-background-1.jpg",
+      "size": 248083
+    },
+    {
+      "name": "feature-replace-background-2.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\feature-replace-background-2.png",
+      "relativePath": "feature-replace-background-2.png",
+      "size": 867752
+    },
+    {
+      "name": "feature-replace-background-3.jpg",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\feature-replace-background-3.jpg",
+      "relativePath": "feature-replace-background-3.jpg",
+      "size": 312690
+    },
+    {
+      "name": "feature-replace-background-new-2.jpg",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\feature-replace-background-new-2.jpg",
+      "relativePath": "feature-replace-background-new-2.jpg",
+      "size": 229485
+    },
+    {
+      "name": "feature-tiktok-remover-v2.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\feature-tiktok-remover-v2.png",
+      "relativePath": "feature-tiktok-remover-v2.png",
+      "size": 850626
+    },
+    {
+      "name": "feature-tiktok-remover.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\feature-tiktok-remover.png",
+      "relativePath": "feature-tiktok-remover.png",
+      "size": 541647
+    },
+    {
+      "name": "feature-upscale-1.jpg",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\feature-upscale-1.jpg",
+      "relativePath": "feature-upscale-1.jpg",
+      "size": 310553
+    },
+    {
+      "name": "feature-upscale-boat.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\feature-upscale-boat.png",
+      "relativePath": "feature-upscale-boat.png",
+      "size": 408235
+    },
+    {
+      "name": "feature-upscale-cat-new.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\feature-upscale-cat-new.png",
+      "relativePath": "feature-upscale-cat-new.png",
+      "size": 363996
+    },
+    {
+      "name": "feature-upscale-cat.jpg",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\feature-upscale-cat.jpg",
+      "relativePath": "feature-upscale-cat.jpg",
+      "size": 293451
+    },
+    {
+      "name": "feature-upscale-woman.jpg",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\feature-upscale-woman.jpg",
+      "relativePath": "feature-upscale-woman.jpg",
+      "size": 335955
+    },
+    {
+      "name": "feature-upscale.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\feature-upscale.png",
+      "relativePath": "feature-upscale.png",
+      "size": 715896
+    },
+    {
+      "name": "feature-watermark-remover-3.jpg",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\feature-watermark-remover-3.jpg",
+      "relativePath": "feature-watermark-remover-3.jpg",
+      "size": 167235
+    },
+    {
+      "name": "feature-watermark-remover.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\feature-watermark-remover.png",
+      "relativePath": "feature-watermark-remover.png",
+      "size": 729741
+    },
+    {
+      "name": "sora-page-man.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\features\\sora-page-man.png",
+      "relativePath": "features\\sora-page-man.png",
+      "size": 1033030
+    },
+    {
+      "name": "sora-page-woman-v2.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\features\\sora-page-woman-v2.png",
+      "relativePath": "features\\sora-page-woman-v2.png",
+      "size": 740172
+    },
+    {
+      "name": "sora-page-woman-v3.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\features\\sora-page-woman-v3.png",
+      "relativePath": "features\\sora-page-woman-v3.png",
+      "size": 722831
+    },
+    {
+      "name": "sora-page-woman-v4.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\features\\sora-page-woman-v4.png",
+      "relativePath": "features\\sora-page-woman-v4.png",
+      "size": 912970
+    },
+    {
+      "name": "sora-page-woman.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\features\\sora-page-woman.png",
+      "relativePath": "features\\sora-page-woman.png",
+      "size": 716657
+    },
+    {
+      "name": "video-page-red-panda.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\features\\video-page-red-panda.png",
+      "relativePath": "features\\video-page-red-panda.png",
+      "size": 842088
+    },
+    {
+      "name": "video-page-tiktok-girls.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\features\\video-page-tiktok-girls.png",
+      "relativePath": "features\\video-page-tiktok-girls.png",
+      "size": 870468
+    },
+    {
+      "name": "hero-comparison-v2.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\hero-comparison-v2.png",
+      "relativePath": "hero-comparison-v2.png",
+      "size": 729741
+    },
+    {
+      "name": "hero-comparison.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\hero-comparison.png",
+      "relativePath": "hero-comparison.png",
+      "size": 697371
+    },
+    {
+      "name": "people-remover-beach-woman.jpg",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\people-remover-beach-woman.jpg",
+      "relativePath": "tools\\people-remover-beach-woman.jpg",
+      "size": 310192
+    },
+    {
+      "name": "people-remover-colosseum.jpg",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\people-remover-colosseum.jpg",
+      "relativePath": "tools\\people-remover-colosseum.jpg",
+      "size": 410072
+    },
+    {
+      "name": "people-remover-field-man.jpg",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\people-remover-field-man.jpg",
+      "relativePath": "tools\\people-remover-field-man.jpg",
+      "size": 400681
+    },
+    {
+      "name": "people-remover-field-woman.jpg",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\people-remover-field-woman.jpg",
+      "relativePath": "tools\\people-remover-field-woman.jpg",
+      "size": 421136
+    },
+    {
+      "name": "people-remover-museum.jpg",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\people-remover-museum.jpg",
+      "relativePath": "tools\\people-remover-museum.jpg",
+      "size": 276742
+    },
+    {
+      "name": "people-remover-station.jpg",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\people-remover-station.jpg",
+      "relativePath": "tools\\people-remover-station.jpg",
+      "size": 439798
+    },
+    {
+      "name": "people-remover-street-man.jpg",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\people-remover-street-man.jpg",
+      "relativePath": "tools\\people-remover-street-man.jpg",
+      "size": 319864
+    },
+    {
+      "name": "people-remover-street-woman.jpg",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\people-remover-street-woman.jpg",
+      "relativePath": "tools\\people-remover-street-woman.jpg",
+      "size": 358302
+    },
+    {
+      "name": "remove-text-beige.jpg",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\remove-text-beige.jpg",
+      "relativePath": "tools\\remove-text-beige.jpg",
+      "size": 293193
+    },
+    {
+      "name": "remove-text-dark-blue.jpg",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\remove-text-dark-blue.jpg",
+      "relativePath": "tools\\remove-text-dark-blue.jpg",
+      "size": 307536
+    },
+    {
+      "name": "remove-text-green.jpg",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\remove-text-green.jpg",
+      "relativePath": "tools\\remove-text-green.jpg",
+      "size": 338659
+    },
+    {
+      "name": "remove-text-light-blue.jpg",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\remove-text-light-blue.jpg",
+      "relativePath": "tools\\remove-text-light-blue.jpg",
+      "size": 356703
+    },
+    {
+      "name": "remove-text-lime.jpg",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\remove-text-lime.jpg",
+      "relativePath": "tools\\remove-text-lime.jpg",
+      "size": 286129
+    },
+    {
+      "name": "remove-text-orange.jpg",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\remove-text-orange.jpg",
+      "relativePath": "tools\\remove-text-orange.jpg",
+      "size": 293825
+    },
+    {
+      "name": "remove-text-pink.jpg",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\remove-text-pink.jpg",
+      "relativePath": "tools\\remove-text-pink.jpg",
+      "size": 304739
+    },
+    {
+      "name": "remove-text-yellow.jpg",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\remove-text-yellow.jpg",
+      "relativePath": "tools\\remove-text-yellow.jpg",
+      "size": 319468
+    },
+    {
+      "name": "sora-page-tool1.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\sora-page-tool1.png",
+      "relativePath": "tools\\sora-page-tool1.png",
+      "size": 790516
+    },
+    {
+      "name": "sora-page-tool2.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\sora-page-tool2.png",
+      "relativePath": "tools\\sora-page-tool2.png",
+      "size": 826570
+    },
+    {
+      "name": "sora-page-tool3.jpg",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\sora-page-tool3.jpg",
+      "relativePath": "tools\\sora-page-tool3.jpg",
+      "size": 300104
+    },
+    {
+      "name": "sora-page-tool4.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\sora-page-tool4.png",
+      "relativePath": "tools\\sora-page-tool4.png",
+      "size": 850546
+    },
+    {
+      "name": "sora-page-tool5.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\sora-page-tool5.png",
+      "relativePath": "tools\\sora-page-tool5.png",
+      "size": 767569
+    },
+    {
+      "name": "sora-page-tool6.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\sora-page-tool6.png",
+      "relativePath": "tools\\sora-page-tool6.png",
+      "size": 1048292
+    },
+    {
+      "name": "sora-page-tool7.jpg",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\sora-page-tool7.jpg",
+      "relativePath": "tools\\sora-page-tool7.jpg",
+      "size": 254054
+    },
+    {
+      "name": "sora-page-tool8.jpg",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\sora-page-tool8.jpg",
+      "relativePath": "tools\\sora-page-tool8.jpg",
+      "size": 453206
+    },
+    {
+      "name": "sora-remover-1.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\sora-remover-1.png",
+      "relativePath": "tools\\sora-remover-1.png",
+      "size": 646469
+    },
+    {
+      "name": "sora-remover-2.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\sora-remover-2.png",
+      "relativePath": "tools\\sora-remover-2.png",
+      "size": 600347
+    },
+    {
+      "name": "sora-remover-3.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\sora-remover-3.png",
+      "relativePath": "tools\\sora-remover-3.png",
+      "size": 574360
+    },
+    {
+      "name": "sora-remover-4.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\sora-remover-4.png",
+      "relativePath": "tools\\sora-remover-4.png",
+      "size": 579321
+    },
+    {
+      "name": "sora-remover-5.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\sora-remover-5.png",
+      "relativePath": "tools\\sora-remover-5.png",
+      "size": 607591
+    },
+    {
+      "name": "sora-remover-6.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\sora-remover-6.png",
+      "relativePath": "tools\\sora-remover-6.png",
+      "size": 560850
+    },
+    {
+      "name": "sora-remover-7.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\sora-remover-7.png",
+      "relativePath": "tools\\sora-remover-7.png",
+      "size": 576866
+    },
+    {
+      "name": "sora-remover-8.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\sora-remover-8.png",
+      "relativePath": "tools\\sora-remover-8.png",
+      "size": 585405
+    },
+    {
+      "name": "sora-remover-9.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\sora-remover-9.png",
+      "relativePath": "tools\\sora-remover-9.png",
+      "size": 561155
+    },
+    {
+      "name": "tool-card-auto-people-page.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\tool-card-auto-people-page.png",
+      "relativePath": "tools\\tool-card-auto-people-page.png",
+      "size": 998325
+    },
+    {
+      "name": "tool-card-object-page.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\tool-card-object-page.png",
+      "relativePath": "tools\\tool-card-object-page.png",
+      "size": 946283
+    },
+    {
+      "name": "tool-card-remove-bg-home.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\tool-card-remove-bg-home.png",
+      "relativePath": "tools\\tool-card-remove-bg-home.png",
+      "size": 1003451
+    },
+    {
+      "name": "tool-card-remove-bg-object.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\tool-card-remove-bg-object.png",
+      "relativePath": "tools\\tool-card-remove-bg-object.png",
+      "size": 964019
+    },
+    {
+      "name": "tool-card-remove-bg-page.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\tool-card-remove-bg-page.png",
+      "relativePath": "tools\\tool-card-remove-bg-page.png",
+      "size": 903744
+    },
+    {
+      "name": "tool-card-remove-bg-people-page.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\tool-card-remove-bg-people-page.png",
+      "relativePath": "tools\\tool-card-remove-bg-people-page.png",
+      "size": 1032030
+    },
+    {
+      "name": "tool-card-remove-bg-remove-bg-page.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\tool-card-remove-bg-remove-bg-page.png",
+      "relativePath": "tools\\tool-card-remove-bg-remove-bg-page.png",
+      "size": 239959
+    },
+    {
+      "name": "tool-card-remove-bg-replace-page.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\tool-card-remove-bg-replace-page.png",
+      "relativePath": "tools\\tool-card-remove-bg-replace-page.png",
+      "size": 1038013
+    },
+    {
+      "name": "tool-card-remove-bg-text.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\tool-card-remove-bg-text.png",
+      "relativePath": "tools\\tool-card-remove-bg-text.png",
+      "size": 215375
+    },
+    {
+      "name": "tool-card-remove-bg-upscaler-page.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\tool-card-remove-bg-upscaler-page.png",
+      "relativePath": "tools\\tool-card-remove-bg-upscaler-page.png",
+      "size": 267541
+    },
+    {
+      "name": "tool-card-remove-bg-video.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\tool-card-remove-bg-video.png",
+      "relativePath": "tools\\tool-card-remove-bg-video.png",
+      "size": 215193
+    },
+    {
+      "name": "tool-card-remove-object-home.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\tool-card-remove-object-home.png",
+      "relativePath": "tools\\tool-card-remove-object-home.png",
+      "size": 1028637
+    },
+    {
+      "name": "tool-card-remove-object-object-page.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\tool-card-remove-object-object-page.png",
+      "relativePath": "tools\\tool-card-remove-object-object-page.png",
+      "size": 807261
+    },
+    {
+      "name": "tool-card-remove-object-people-page.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\tool-card-remove-object-people-page.png",
+      "relativePath": "tools\\tool-card-remove-object-people-page.png",
+      "size": 895659
+    },
+    {
+      "name": "tool-card-remove-object-remove-bg-page.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\tool-card-remove-object-remove-bg-page.png",
+      "relativePath": "tools\\tool-card-remove-object-remove-bg-page.png",
+      "size": 822711
+    },
+    {
+      "name": "tool-card-remove-object-replace-page.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\tool-card-remove-object-replace-page.png",
+      "relativePath": "tools\\tool-card-remove-object-replace-page.png",
+      "size": 818542
+    },
+    {
+      "name": "tool-card-remove-object-text.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\tool-card-remove-object-text.png",
+      "relativePath": "tools\\tool-card-remove-object-text.png",
+      "size": 790987
+    },
+    {
+      "name": "tool-card-remove-object-upscaler-page.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\tool-card-remove-object-upscaler-page.png",
+      "relativePath": "tools\\tool-card-remove-object-upscaler-page.png",
+      "size": 842382
+    },
+    {
+      "name": "tool-card-remove-object-video.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\tool-card-remove-object-video.png",
+      "relativePath": "tools\\tool-card-remove-object-video.png",
+      "size": 1005619
+    },
+    {
+      "name": "tool-card-replace-bg-home.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\tool-card-replace-bg-home.png",
+      "relativePath": "tools\\tool-card-replace-bg-home.png",
+      "size": 830293
+    },
+    {
+      "name": "tool-card-replace-bg-object.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\tool-card-replace-bg-object.png",
+      "relativePath": "tools\\tool-card-replace-bg-object.png",
+      "size": 845910
+    },
+    {
+      "name": "tool-card-replace-bg-page.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\tool-card-replace-bg-page.png",
+      "relativePath": "tools\\tool-card-replace-bg-page.png",
+      "size": 852026
+    },
+    {
+      "name": "tool-card-replace-bg-people-page.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\tool-card-replace-bg-people-page.png",
+      "relativePath": "tools\\tool-card-replace-bg-people-page.png",
+      "size": 901406
+    },
+    {
+      "name": "tool-card-replace-bg-remove-page.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\tool-card-replace-bg-remove-page.png",
+      "relativePath": "tools\\tool-card-replace-bg-remove-page.png",
+      "size": 791716
+    },
+    {
+      "name": "tool-card-replace-bg-replace-page.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\tool-card-replace-bg-replace-page.png",
+      "relativePath": "tools\\tool-card-replace-bg-replace-page.png",
+      "size": 839103
+    },
+    {
+      "name": "tool-card-replace-bg-text.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\tool-card-replace-bg-text.png",
+      "relativePath": "tools\\tool-card-replace-bg-text.png",
+      "size": 829427
+    },
+    {
+      "name": "tool-card-replace-bg-upscaler-page.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\tool-card-replace-bg-upscaler-page.png",
+      "relativePath": "tools\\tool-card-replace-bg-upscaler-page.png",
+      "size": 892075
+    },
+    {
+      "name": "tool-card-replace-bg-video.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\tool-card-replace-bg-video.png",
+      "relativePath": "tools\\tool-card-replace-bg-video.png",
+      "size": 833747
+    },
+    {
+      "name": "tool-card-text-page.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\tool-card-text-page.png",
+      "relativePath": "tools\\tool-card-text-page.png",
+      "size": 888096
+    },
+    {
+      "name": "tool-card-upscaler-page.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\tool-card-upscaler-page.png",
+      "relativePath": "tools\\tool-card-upscaler-page.png",
+      "size": 1003073
+    },
+    {
+      "name": "tool-card-video-page.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\tool-card-video-page.png",
+      "relativePath": "tools\\tool-card-video-page.png",
+      "size": 838161
+    },
+    {
+      "name": "upscaler-bear.jpg",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\upscaler-bear.jpg",
+      "relativePath": "tools\\upscaler-bear.jpg",
+      "size": 440479
+    },
+    {
+      "name": "upscaler-fox.jpg",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\upscaler-fox.jpg",
+      "relativePath": "tools\\upscaler-fox.jpg",
+      "size": 348569
+    },
+    {
+      "name": "upscaler-lion.jpg",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\upscaler-lion.jpg",
+      "relativePath": "tools\\upscaler-lion.jpg",
+      "size": 415919
+    },
+    {
+      "name": "upscaler-owl.jpg",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\upscaler-owl.jpg",
+      "relativePath": "tools\\upscaler-owl.jpg",
+      "size": 347046
+    },
+    {
+      "name": "upscaler-panda.jpg",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\upscaler-panda.jpg",
+      "relativePath": "tools\\upscaler-panda.jpg",
+      "size": 357840
+    },
+    {
+      "name": "upscaler-panther.jpg",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\upscaler-panther.jpg",
+      "relativePath": "tools\\upscaler-panther.jpg",
+      "size": 375219
+    },
+    {
+      "name": "upscaler-penguin.jpg",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\upscaler-penguin.jpg",
+      "relativePath": "tools\\upscaler-penguin.jpg",
+      "size": 328532
+    },
+    {
+      "name": "upscaler-tiger.jpg",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\upscaler-tiger.jpg",
+      "relativePath": "tools\\upscaler-tiger.jpg",
+      "size": 358854
+    },
+    {
+      "name": "video-watermark-2.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\video-watermark-2.png",
+      "relativePath": "tools\\video-watermark-2.png",
+      "size": 786254
+    },
+    {
+      "name": "video-watermark-3.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\video-watermark-3.png",
+      "relativePath": "tools\\video-watermark-3.png",
+      "size": 812530
+    },
+    {
+      "name": "video-watermark-4.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\video-watermark-4.png",
+      "relativePath": "tools\\video-watermark-4.png",
+      "size": 864866
+    },
+    {
+      "name": "video-watermark-5.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\video-watermark-5.png",
+      "relativePath": "tools\\video-watermark-5.png",
+      "size": 833367
+    },
+    {
+      "name": "video-watermark-6.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\video-watermark-6.png",
+      "relativePath": "tools\\video-watermark-6.png",
+      "size": 783041
+    },
+    {
+      "name": "video-watermark-7.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\video-watermark-7.png",
+      "relativePath": "tools\\video-watermark-7.png",
+      "size": 726203
+    },
+    {
+      "name": "video-watermark-8.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\video-watermark-8.png",
+      "relativePath": "tools\\video-watermark-8.png",
+      "size": 726260
+    },
+    {
+      "name": "video-watermark-home.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\video-watermark-home.png",
+      "relativePath": "tools\\video-watermark-home.png",
+      "size": 688955
+    },
+    {
+      "name": "watermark-remover.png",
+      "path": "C:\\Users\\victo\\Desktop\\REMOVE WATER\\public\\images\\tools\\watermark-remover.png",
+      "relativePath": "tools\\watermark-remover.png",
+      "size": 715896
+    }
+  ],
+  "totalSize": 75727799,
+  "unusedSize": 75727799
+}

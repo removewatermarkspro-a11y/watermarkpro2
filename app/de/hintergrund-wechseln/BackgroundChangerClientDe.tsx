@@ -51,10 +51,39 @@ export default function BackgroundChangerClientDe() {
                         <div className={styles.ratingsBelow}><RatingBadges /></div>
                     </section>
                     <ExamplesSection />
-                    <section className={styles.features}>
+                                        <section className={styles.features}>
                         <div style={{ textAlign: 'center' }}><span className={styles.badge}>{t.replaceBackgroundPage.features.badge}</span></div>
                         <div className={styles.featureGrid}>
-                            {[1, 2, 3].map(i => (<div key={i} className={styles.featureItem}><div className={styles.featureImage} style={{ padding: 0, overflow: 'hidden' }}><img src={`/images/feature-replace-background-${i === 1 ? '2.png' : i === 2 ? 'new-2.jpg' : '3.jpg'}`} alt="Feature" style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy" decoding="async" /></div><div className={styles.featureContent}><h3>{t.replaceBackgroundPage.features[`feature${i}`].title}</h3><p className={styles.sectionText}>{t.replaceBackgroundPage.features[`feature${i}`].description}</p><button className="btn btn-primary" onClick={() => { if (!user) setShowAuthPopup(true); else if (uploadRef.current) uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' }); }}>{t.replaceBackgroundPage.features[`feature${i}`].button}<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button></div></div>))}
+                            <div className={styles.featureItem}>
+                                <div className={styles.featureImage} style={{ padding: 0, overflow: 'hidden' }}>
+                                    <img src="/images-optimized/replace-background-photo-ai.webp" alt="Replace background photo AI" style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy" decoding="async" />
+                                </div>
+                                <div className={styles.featureContent}>
+                                    <h3>{t.replaceBackgroundPage.features.feature1.title}</h3>
+                                    <p className={styles.sectionText}>{t.replaceBackgroundPage.features.feature1.description}</p>
+                                    <button className="btn btn-primary" onClick={() => { if (!user) setShowAuthPopup(true); else if (uploadRef.current) uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' }); }}>{t.replaceBackgroundPage.features.feature1.button}<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button>
+                                </div>
+                            </div>
+                            <div className={styles.featureItem}>
+                                <div className={styles.featureImage} style={{ padding: 0, overflow: 'hidden' }}>
+                                    <img src="/images-optimized/swap-image-background-ai.webp" alt="Swap image background AI" style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy" decoding="async" />
+                                </div>
+                                <div className={styles.featureContent}>
+                                    <h3>{t.replaceBackgroundPage.features.feature2.title}</h3>
+                                    <p className={styles.sectionText}>{t.replaceBackgroundPage.features.feature2.description}</p>
+                                    <button className="btn btn-primary" onClick={() => { if (!user) setShowAuthPopup(true); else if (uploadRef.current) uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' }); }}>{t.replaceBackgroundPage.features.feature2.button}<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button>
+                                </div>
+                            </div>
+                            <div className={styles.featureItem}>
+                                <div className={styles.featureImage} style={{ padding: 0, overflow: 'hidden' }}>
+                                    <img src="/images-optimized/change-photo-background-free.webp" alt="Change photo background free" style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy" decoding="async" />
+                                </div>
+                                <div className={styles.featureContent}>
+                                    <h3>{t.replaceBackgroundPage.features.feature3.title}</h3>
+                                    <p className={styles.sectionText}>{t.replaceBackgroundPage.features.feature3.description}</p>
+                                    <button className="btn btn-primary" onClick={() => { if (!user) setShowAuthPopup(true); else if (uploadRef.current) uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' }); }}>{t.replaceBackgroundPage.features.feature3.button}<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></svg></button>
+                                </div>
+                            </div>
                         </div>
                     </section>
                     <section className={styles.howItWorks}>
