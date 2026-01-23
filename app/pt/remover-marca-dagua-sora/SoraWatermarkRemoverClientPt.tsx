@@ -203,6 +203,7 @@ export default function SoraWatermarkRemoverClientPt() {
                                 processingText={soraPage.uploader.processingText || "Processing your video..."}
                                 acceptedFormats="video/mp4,video/quicktime,video/x-msvideo,video/avi"
                                 onAuthRequired={() => setShowAuthPopup(true)}
+                                noCreditsImage="/images-optimized/openai-sora-watermark-remover.webp"
                             />
 
                             {processedImage && originalPreview && (

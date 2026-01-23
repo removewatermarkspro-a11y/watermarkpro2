@@ -89,7 +89,7 @@ export default function ObjectRemoverClientDe() {
                         <CategoryTabs />
                         <PromptInput placeholder={t.removeObjectPage.hero.promptPlaceholder} />
                         <div ref={uploadRef} className={styles.uploadSection}>
-                            <ImageUploader onImageUpload={handleImageUpload} isAuthenticated={!!user} onAuthRequired={() => setShowAuthPopup(true)} />
+                            <ImageUploader onImageUpload={handleImageUpload} isAuthenticated={!!user} onAuthRequired={() => setShowAuthPopup(true)} noCreditsImage="/images-optimized/delete-objects-from-image-ai.webp" />
                             {processedImage && originalPreview && (
                                 <>
                                     <ResultDisplay originalImage={originalPreview} processedImage={processedImage} onDownload={handleDownload} onGenerateNew={handleGenerateNew} />
@@ -102,7 +102,7 @@ export default function ObjectRemoverClientDe() {
 
                     <ExamplesSection />
 
-                                        <section className={styles.features}>
+                    <section className={styles.features}>
                         <div style={{ textAlign: 'center' }}><span className={styles.badge}>{t.removeObjectPage.features.badge}</span></div>
                         <div className={styles.featureGrid}>
                             <div className={styles.featureItem}>

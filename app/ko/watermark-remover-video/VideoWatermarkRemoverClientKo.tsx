@@ -27,7 +27,7 @@ export default function VideoWatermarkRemoverClientKo() {
     const [showAuthPopup, setShowAuthPopup] = useState(false)
     const uploadRef = useRef<HTMLDivElement>(null)
     const { user } = useAuth()
-    
+
     // Force Korean language
     const t = (translations as any).ko
 
@@ -98,6 +98,7 @@ export default function VideoWatermarkRemoverClientKo() {
                                 acceptedFormats="video/mp4,video/quicktime,video/x-msvideo,video/avi"
                                 isAuthenticated={!!user}
                                 onAuthRequired={() => setShowAuthPopup(true)}
+                                noCreditsImage="/images-optimized/video-watermark-remover-tool.webp"
                             />
 
                             {processedImage && originalPreview && (
@@ -158,7 +159,7 @@ export default function VideoWatermarkRemoverClientKo() {
                                     </button>
                                 </div>
                             </div>
-                            
+
                             <div className={styles.featureItem}>
                                 <div className={styles.featureImage}>
                                     <img src="/images-optimized/remove-tiktok-watermark-video.webp" alt="TikTok 워터마크 제거" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '12px' }} loading="lazy" decoding="async" />
@@ -176,7 +177,7 @@ export default function VideoWatermarkRemoverClientKo() {
                                     </button>
                                 </div>
                             </div>
-                            
+
                             <div className={styles.featureItem}>
                                 <div className={styles.featureImage}>
                                     <img src="/images-optimized/video-watermark-removal-example.webp" alt="비디오 워터마크 제거" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '12px' }} loading="lazy" decoding="async" />
@@ -239,7 +240,7 @@ export default function VideoWatermarkRemoverClientKo() {
                             if (uploadRef.current) {
                                 uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' })
                             }
-                        }} 
+                        }}
                     />
                     <FAQ items={videoWatermarkFaqItemsKo} />
                     <ToolsGrid
