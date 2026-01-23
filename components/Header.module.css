@@ -7,8 +7,6 @@
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     padding: 1rem 0;
-    overflow-x: hidden;
-    /* Prevent horizontal scroll */
 }
 
 .nav {
@@ -479,21 +477,15 @@
 
     .mobileMenu {
         display: block;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        width: auto;
-        /* Allow it to fill the space defined by left/right */
-        max-height: 75vh;
+        width: 100%;
+        max-height: 70vh;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
         padding: 1rem;
         box-sizing: border-box;
-        /* Crucial for padding to be included in width */
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-        margin-top: 0;
-        border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+        margin-top: 1rem;
+        background: rgba(15, 17, 21, 0.98);
+        border-radius: var(--radius-lg);
     }
 
     .mobileMenuItem {
