@@ -4,6 +4,7 @@ import { useState } from 'react'
 import styles from './Pricing.module.css'
 import { useLanguage } from '@/contexts/LanguageContext'
 import { translations } from '@/locales/translations'
+import { STRIPE_PLANS } from '@/lib/stripe-config'
 
 export default function Pricing() {
     const [isYearly, setIsYearly] = useState(true)
@@ -40,7 +41,73 @@ export default function Pricing() {
         return { price, yearlyTotal, pricePerImage, currentCredits, monthlyFromYearly }
     }
 
+    const handleCheckout = async (priceId: string, mode: 'payment' | 'subscription') => {
+        console.log('Initiating checkout for:', priceId, mode); // Debug log
+        if (!priceId) {
+            alert('Error: Product configuration missing (Price ID is empty).');
+            console.error('Price ID is missing');
+            return;
+        }
+
+        try {
+            const response = await fetch('/api/checkout', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    priceId,
+                    mode,
+                }),
+            })
+
+            const data = await response.json()
+            const { url, error } = data
+
+            if (error) {
+                console.error('Checkout error:', error)
+                alert(`Checkout Error: ${error}`); // Show error to user
+                return
+            }
+
+            if (url) {
+                window.location.href = url
+            } else {
+                console.error('No URL in response:', data);
+                alert('Error: No checkout URL received from server.');
+            }
+        } catch (error) {
+            console.error('Failed to initiate checkout:', error)
+            alert('Failed to initiate request. Check console for details.');
+        }
+    }
+
     const { price, yearlyTotal, pricePerImage, currentCredits, monthlyFromYearly } = getCurrentPrice()
+
+    // Get the correct price ID for subscription
+    const getSubscriptionPriceId = () => {
+        const option = creditOptions.find(opt => opt.credits === selectedCredits)
+        if (!option) return ''
+
+        // Dynamic import or direct usage if possible. Since we are in client component, 
+        // we might need to pass this as prop or just hardcode for valid TS if importing from lib fails client-side.
+        // For now, let's hardcode the map here or import it if compatible. 
+        // Importing simple object from lib is usually fine in Next.js client/server.
+        // But to be safe and cleaner, let's use the helper.
+
+        // Note: We need to import STRIPE_PLANS at the top level. 
+        // Assuming we will fix imports. For now, logic:
+
+        // subscriptions.monthly[credits] or subscriptions.yearly[credits]
+        return isYearly
+            ? STRIPE_PLANS.subscriptions.yearly[option.credits as keyof typeof STRIPE_PLANS.subscriptions.yearly]
+            : STRIPE_PLANS.subscriptions.monthly[option.credits as keyof typeof STRIPE_PLANS.subscriptions.monthly]
+    }
+
+    // Get the correct price ID for one-time
+    const getOneTimePriceId = () => {
+        return STRIPE_PLANS.oneTime[selectedOneTimeCredits as keyof typeof STRIPE_PLANS.oneTime]
+    }
 
     return (
         <section className={styles.pricing}>
@@ -128,7 +195,10 @@ export default function Pricing() {
                         </div>
                     </div>
 
-                    <button className={styles.proButton}>
+                    <button
+                        className={styles.proButton}
+                        onClick={() => handleCheckout(getSubscriptionPriceId(), 'subscription')}
+                    >
                         {t.pricing.pro.button} <span className={styles.buttonPrice}>${isYearly ? yearlyTotal.toFixed(2) : price.toFixed(2)}</span>
                     </button>
 
@@ -196,7 +266,10 @@ export default function Pricing() {
                         </div>
                     </div>
 
-                    <button className={styles.proButton}>
+                    <button
+                        className={styles.proButton}
+                        onClick={() => handleCheckout(getOneTimePriceId(), 'payment')}
+                    >
                         {t.pricing.oneTime.button}
                     </button>
 

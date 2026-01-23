@@ -13,6 +13,9 @@ export const metadata: Metadata = {
         description: 'Remove watermarks, backgrounds, objects and enhance images with AI',
         type: 'website',
     },
+    icons: {
+        icon: '/favicon.png',
+    },
 }
 
 export default function RootLayout({
