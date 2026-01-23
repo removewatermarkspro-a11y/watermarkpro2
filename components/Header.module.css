@@ -481,14 +481,16 @@
         top: 100%;
         left: 0;
         right: 0;
-        width: 100%;
+        width: auto;
+        /* Allow it to fill the space defined by left/right */
         max-height: 75vh;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
         padding: 1rem;
+        box-sizing: border-box;
+        /* Crucial for padding to be included in width */
         box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
         margin-top: 0;
-        /* Remove top margin as we are absolute */
         border-radius: 0 0 var(--radius-lg) var(--radius-lg);
     }
 
