@@ -47,18 +47,46 @@
 
 @media (max-width: 768px) {
     .tabsScroll {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         gap: 0.5rem;
+        width: 100%;
+        padding: 0 0.5rem;
+        /* Add side padding */
     }
 
     .tab {
-        padding: 0.625rem 1.25rem;
-        font-size: 0.875rem;
+        padding: 0.625rem 0.25rem;
+        /* Reduced horizontal padding */
+        font-size: 0.8rem;
+        /* Slightly smaller font */
+        width: 100%;
+        text-align: center;
+        white-space: normal;
+        /* Allow text wrapping */
+        line-height: 1.2;
+        height: 100%;
+        /* Ensure equal height */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Center the last item if it's alone on the last row */
+    .tab:last-child:nth-child(odd) {
+        grid-column: span 2;
+        width: auto;
+        justify-self: center;
+        min-width: 50%;
+        /* Make it at least half width */
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
     }
 }
 
 @media (max-width: 480px) {
     .tab {
-        padding: 0.5rem 1rem;
-        font-size: 0.8125rem;
+        font-size: 0.75rem;
+        /* Even smaller for very small screens */
     }
 }
