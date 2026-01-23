@@ -463,6 +463,10 @@
 
 
 @media (max-width: 1024px) {
+    .nav {
+        gap: 0.5rem;
+    }
+
     .desktopMenu {
         display: none;
     }
@@ -473,6 +477,7 @@
 
     .mobileMenuBtn {
         display: block;
+        flex-shrink: 0;
     }
 
     .mobileMenu {
@@ -490,30 +495,31 @@
 
     .mobileMenuItem {
         padding: 0.5rem 0.75rem;
-        /* Reduced padding */
         font-size: 0.875rem;
-        /* Reduced font size */
         margin-bottom: 0.125rem;
-        /* Reduced spacing */
     }
 
     .logo {
         padding-left: 0;
+        gap: 0.5rem;
+        flex: 1;
+        min-width: 0;
     }
 
     .logoIcon {
-        width: 100px;
-        /* Increased from 80px */
-        height: 100px;
-        /* Increased from 80px */
+        width: 50px;
+        height: 50px;
         position: relative;
         left: 0;
         transform: none;
-        margin-right: 0.5rem;
+        margin-right: 0.25rem;
+        flex-shrink: 0;
     }
 
     .logoText {
-        font-size: 1.125rem;
-        /* Slightly larger text to match logo */
+        font-size: 0.9rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 }
