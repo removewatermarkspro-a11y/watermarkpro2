@@ -30,11 +30,11 @@ export default function PeopleRemoverClient() {
     const [showAuthPopup, setShowAuthPopup] = useState(false)
     const [userPrompt, setUserPrompt] = useState<string>('')
     const uploadRef = useRef<HTMLDivElement>(null)
-    const { user } = useAuth()
+    const { user, getAccessToken } = useAuth()
     const { language } = useLanguage()
     const { editImage, isLoading, error, editedImageUrl, reset } = useImageEdit({
         operationType: 'auto-remove-people',
-        userId: user?.id
+        getAccessToken
     })
     // Force English language
     const t = (translations as any).en

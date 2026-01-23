@@ -6,10 +6,10 @@ import { useAuth } from '@/contexts/AuthContext'
 import styles from './test.module.css'
 
 export default function TestQwenPage() {
-    const { user, credits } = useAuth()
+    const { user, credits, getAccessToken } = useAuth()
     const { editImage, isLoading, error, editedImageUrl, reset } = useImageEdit({
         operationType: 'watermark-remover',
-        userId: user?.id
+        getAccessToken
     })
     const [selectedFile, setSelectedFile] = useState<File | null>(null)
     const [preview, setPreview] = useState<string | null>(null)

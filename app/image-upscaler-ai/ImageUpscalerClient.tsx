@@ -28,11 +28,11 @@ export default function ImageUpscalerClient() {
     const [originalPreview, setOriginalPreview] = useState<string | null>(null)
     const [showAuthPopup, setShowAuthPopup] = useState(false)
     const uploadRef = useRef<HTMLDivElement>(null)
-    const { user } = useAuth()
+    const { user, getAccessToken } = useAuth()
     const { language } = useLanguage()
     const { editImage, isLoading, error, editedImageUrl, reset } = useImageEdit({
         operationType: 'image-upscaler',
-        userId: user?.id
+        getAccessToken
     })
     // Force English language
     const t = (translations as any).en
