@@ -146,6 +146,7 @@ export default function VideoWatermarkRemoverClient() {
                                 processingText={t.videoWatermarkPage.uploader.processingText || "Processing your video..."}
                                 acceptedFormats="video/mp4,video/quicktime,video/x-msvideo,video/avi"
                                 onAuthRequired={() => setShowAuthPopup(true)}
+                                noCreditsImage="/images-optimized/video-watermark-remover-tool.webp"
                             />
 
                             {processedImage && originalPreview && (

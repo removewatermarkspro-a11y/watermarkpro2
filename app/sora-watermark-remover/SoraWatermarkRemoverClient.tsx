@@ -180,6 +180,7 @@ export default function SoraWatermarkRemoverClient() {
                                 acceptedFormats="video/mp4,video/quicktime,video/x-msvideo,video/avi"
                                 isAuthenticated={!!user}
                                 onAuthRequired={() => setShowAuthPopup(true)}
+                                noCreditsImage="/images-optimized/openai-sora-watermark-remover.webp"
                             />
 
                             {cleanedVideoUrl && originalPreview && (

@@ -123,6 +123,7 @@ export default function WatermarkRemoverClient() {
                                 onImageUpload={handleImageUpload}
                                 isAuthenticated={!!user}
                                 onAuthRequired={() => setShowAuthPopup(true)}
+                                noCreditsImage="/images-optimized/free-watermark-remover-tool.webp"
                             />
 
                             {processedImageUrl && originalPreview && (
