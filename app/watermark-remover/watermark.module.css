@@ -312,6 +312,10 @@
         grid-template-columns: 1fr;
         gap: 2rem;
     }
+
+    .featureContent {
+        text-align: center;
+    }
 }
 
 .violetText {
