@@ -27,12 +27,14 @@
 .modal {
     background: white;
     border-radius: 20px;
-    max-width: 800px; /* Reduced width */
+    max-width: 1000px;
+    /* Increased from 800px */
     width: 95%;
     position: relative;
     animation: slideUp 0.3s ease-out;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-    overflow: hidden; /* Ensure image doesn't overflow rounded corners */
+    overflow: hidden;
+    /* Ensure image doesn't overflow rounded corners */
 }
 
 @keyframes slideUp {
@@ -53,7 +55,8 @@
     right: 1rem;
     background: rgba(0, 0, 0, 0.05);
     border: none;
-    width: 32px; /* Smaller close button */
+    width: 32px;
+    /* Smaller close button */
     height: 32px;
     border-radius: 50%;
     display: flex;
@@ -77,9 +80,11 @@
 
 .content {
     display: grid;
-    grid-template-columns: 40% 60%; /* Adjusted ratio */
+    grid-template-columns: 45% 55%;
+    /* Adjusted ratio to give image more space */
     gap: 0;
-    min-height: 450px; /* Adjusted height */
+    min-height: 500px;
+    /* Increased min-height slightly */
 }
 
 .leftSection {
@@ -89,7 +94,8 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    padding: 0; /* Remove padding to let image fill */
+    padding: 0;
+    /* Remove padding to let image fill */
 }
 
 .imageContainer {
@@ -135,7 +141,8 @@
 }
 
 .rightSection {
-    padding: 2rem; /* Reduced padding */
+    padding: 2rem;
+    /* Reduced padding */
     display: flex;
     flex-direction: column;
     gap: 1rem;
