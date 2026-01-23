@@ -477,6 +477,12 @@
 
     .mobileMenu {
         display: block;
+        max-height: 80vh;
+        /* Limit height */
+        overflow-y: auto;
+        /* Enable scrolling */
+        -webkit-overflow-scrolling: touch;
+        /* Smooth scrolling on iOS */
     }
 
     .logo {
@@ -484,10 +490,10 @@
     }
 
     .logoIcon {
-        width: 65px;
-        /* Increased from 50px */
-        height: 65px;
-        /* Increased from 50px */
+        width: 80px;
+        /* Increased from 65px */
+        height: 80px;
+        /* Increased from 65px */
         position: relative;
         left: 0;
         transform: none;
