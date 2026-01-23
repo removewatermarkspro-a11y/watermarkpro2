@@ -9,6 +9,11 @@ export async function POST(req: Request) {
             return NextResponse.json({ error: 'Price ID is required' }, { status: 400 });
         }
 
+        // Dynamically get the origin from the request
+        const host = req.headers.get('host');
+        const protocol = req.headers.get('x-forwarded-proto') || 'http';
+        const origin = process.env.NEXT_PUBLIC_APP_URL || `${protocol}://${host}`;
+
         const stripe = getStripe();
         const session = await stripe.checkout.sessions.create({
             line_items: [
@@ -18,8 +23,8 @@ export async function POST(req: Request) {
                 },
             ],
             mode: mode as 'payment' | 'subscription',
-            success_url: `${process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'}/dashboard?success=true`,
-            cancel_url: `${process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'}/pricing?canceled=true`,
+            success_url: `${origin}/dashboard?success=true`,
+            cancel_url: `${origin}/pricing?canceled=true`,
             // automatic_tax: { enabled: true },
         });
 
