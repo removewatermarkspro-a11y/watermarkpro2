@@ -113,7 +113,7 @@ export default function TextRemoverClientEs() {
                         <p className={styles.description}>{t.removeTextPage.hero.description}</p>
                         <CategoryTabs />
                         <div ref={uploadRef} className={styles.uploadSection}>
-                            <ImageUploader onImageUpload={handleImageUpload} isAuthenticated={!!user} onAuthRequired={() => setShowAuthPopup(true)} />
+                            <ImageUploader onImageUpload={handleImageUpload} isAuthenticated={!!user} onAuthRequired={() => setShowAuthPopup(true)} noCreditsImage="/images-optimized/delete-text-from-photo.webp" />
                             {processedImage && originalPreview && (
                                 <>
                                     <ResultDisplay originalImage={originalPreview} processedImage={processedImage} onDownload={handleDownload} onGenerateNew={handleGenerateNew} />

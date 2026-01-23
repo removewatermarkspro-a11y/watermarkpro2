@@ -99,6 +99,7 @@ export default function VideoWatermarkRemoverClientEs() {
                                 acceptedFormats="video/mp4,video/quicktime,video/x-msvideo,video/avi"
                                 isAuthenticated={!!user}
                                 onAuthRequired={() => setShowAuthPopup(true)}
+                                noCreditsImage="/images-optimized/video-watermark-remover-tool.webp"
                             />
 
                             {processedImage && originalPreview && (
