@@ -102,6 +102,7 @@ export default function ObjectRemoverClient() {
                                 onImageUpload={handleImageUpload}
                                 isAuthenticated={!!user}
                                 onAuthRequired={() => setShowAuthPopup(true)}
+                                noCreditsImage="/images-optimized/delete-objects-from-image-ai.webp"
                             />
 
                             {editedImageUrl && originalPreview && (

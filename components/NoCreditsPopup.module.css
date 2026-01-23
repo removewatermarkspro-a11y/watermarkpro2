@@ -26,12 +26,13 @@
 
 .modal {
     background: white;
-    border-radius: 24px;
-    max-width: 900px;
-    width: 100%;
+    border-radius: 20px;
+    max-width: 800px; /* Reduced width */
+    width: 95%;
     position: relative;
     animation: slideUp 0.3s ease-out;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    overflow: hidden; /* Ensure image doesn't overflow rounded corners */
 }
 
 @keyframes slideUp {
@@ -48,12 +49,12 @@
 
 .closeButton {
     position: absolute;
-    top: 1.5rem;
-    right: 1.5rem;
+    top: 1rem;
+    right: 1rem;
     background: rgba(0, 0, 0, 0.05);
     border: none;
-    width: 40px;
-    height: 40px;
+    width: 32px; /* Smaller close button */
+    height: 32px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -70,53 +71,50 @@
 
 .closeButton svg {
     color: #666;
+    width: 20px;
+    height: 20px;
 }
 
 .content {
     display: grid;
-    grid-template-columns: 1fr 1.2fr;
+    grid-template-columns: 40% 60%; /* Adjusted ratio */
     gap: 0;
+    min-height: 450px; /* Adjusted height */
 }
 
 .leftSection {
     background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%);
-    border-radius: 24px 0 0 24px;
-    padding: 3rem;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
     overflow: hidden;
+    padding: 0; /* Remove padding to let image fill */
 }
 
-.leftSection::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
-    animation: pulse 3s ease-in-out infinite;
+.imageContainer {
+    width: 100%;
+    height: 100%;
+    position: relative;
 }
 
-@keyframes pulse {
-
-    0%,
-    100% {
-        transform: scale(1);
-        opacity: 0.5;
-    }
-
-    50% {
-        transform: scale(1.1);
-        opacity: 0.8;
-    }
+.featureImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
+/* Fallback style for when no image is present */
 .iconContainer {
     position: relative;
     z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
 }
 
 .sparkleIcon {
@@ -137,10 +135,11 @@
 }
 
 .rightSection {
-    padding: 3rem;
+    padding: 2rem; /* Reduced padding */
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem;
+    justify-content: center;
 }
 
 .badge {

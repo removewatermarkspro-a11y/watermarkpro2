@@ -92,7 +92,12 @@ export default function ImageUpscalerClient() {
                         <p className={styles.description}>{t.imageUpscalerPage.hero.description}</p>
                         <CategoryTabs />
                         <div ref={uploadRef} className={styles.uploadSection}>
-                            <ImageUploader onImageUpload={handleImageUpload} isAuthenticated={!!user} onAuthRequired={() => setShowAuthPopup(true)} />
+                            <ImageUploader
+                                onImageUpload={handleImageUpload}
+                                isAuthenticated={!!user}
+                                onAuthRequired={() => setShowAuthPopup(true)}
+                                noCreditsImage="/images-optimized/upscale-portrait-photo-ai.webp"
+                            />
                             {editedImageUrl && originalPreview && (
                                 <>
                                     <ResultDisplay originalImage={originalPreview} processedImage={editedImageUrl} onDownload={handleDownload} onGenerateNew={handleGenerateNew} />

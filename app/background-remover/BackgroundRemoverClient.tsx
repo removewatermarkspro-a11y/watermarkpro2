@@ -92,7 +92,12 @@ export default function BackgroundRemoverClient() {
                         <p className={styles.description}>{t.removeBackgroundPage.hero.description}</p>
                         <CategoryTabs />
                         <div ref={uploadRef} className={styles.uploadSection}>
-                            <ImageUploader onImageUpload={handleImageUpload} isAuthenticated={!!user} onAuthRequired={() => setShowAuthPopup(true)} />
+                            <ImageUploader
+                                onImageUpload={handleImageUpload}
+                                isAuthenticated={!!user}
+                                onAuthRequired={() => setShowAuthPopup(true)}
+                                noCreditsImage="/images-optimized/background-removal-tool-ai.webp"
+                            />
                             {editedImageUrl && originalPreview && (
                                 <>
                                     <ResultDisplay originalImage={originalPreview} processedImage={editedImageUrl} onDownload={handleDownload} onGenerateNew={handleGenerateNew} />

@@ -20,6 +20,7 @@ interface ImageUploaderProps {
     onAuthRequired?: () => void
     operationType?: OperationType // Type of operation (watermark-remover, remove-text, etc.)
     userPrompt?: string // For remove-object and replace-background operations
+    noCreditsImage?: string // Image to show in the no credits popup
 }
 
 export default function ImageUploader({
@@ -31,7 +32,8 @@ export default function ImageUploader({
     isAuthenticated = true,
     onAuthRequired,
     operationType = 'watermark-remover',
-    userPrompt
+    userPrompt,
+    noCreditsImage
 }: ImageUploaderProps) {
     const [isDragging, setIsDragging] = useState(false)
     const [isProcessing, setIsProcessing] = useState(false)
@@ -217,7 +219,7 @@ export default function ImageUploader({
     return (
         <>
             <ProcessingPopup isOpen={isProcessing} processingText={processingText} />
-            <NoCreditsPopup isOpen={showNoCreditsPopup} onClose={() => setShowNoCreditsPopup(false)} />
+            <NoCreditsPopup isOpen={showNoCreditsPopup} onClose={() => setShowNoCreditsPopup(false)} imageSrc={noCreditsImage} />
             <div className={styles.uploader}>
                 <div
                     className={`${styles.dropzone} ${isDragging ? styles.dragging : ''}`}

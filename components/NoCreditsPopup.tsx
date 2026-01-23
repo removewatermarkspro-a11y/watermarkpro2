@@ -9,9 +9,10 @@ import { translations } from '@/locales/translations'
 interface NoCreditsPopupProps {
     isOpen: boolean
     onClose: () => void
+    imageSrc?: string
 }
 
-export default function NoCreditsPopup({ isOpen, onClose }: NoCreditsPopupProps) {
+export default function NoCreditsPopup({ isOpen, onClose, imageSrc }: NoCreditsPopupProps) {
     const [timeLeft, setTimeLeft] = useState({ minutes: 0, seconds: 0 })
     const { language } = useLanguage()
     const t = (translations as any)[language] || translations.en
@@ -76,17 +77,23 @@ export default function NoCreditsPopup({ isOpen, onClose }: NoCreditsPopupProps)
 
                 <div className={styles.content}>
                     <div className={styles.leftSection}>
-                        <div className={styles.iconContainer}>
-                            <svg className={styles.sparkleIcon} width="120" height="120" viewBox="0 0 120 120" fill="none">
-                                <path d="M60 10L65 45L80 35L70 50L105 55L70 60L80 75L65 65L60 100L55 65L40 75L50 60L15 55L50 50L40 35L55 45L60 10Z" fill="url(#sparkle-gradient)" />
-                                <defs>
-                                    <linearGradient id="sparkle-gradient" x1="15" y1="10" x2="105" y2="100" gradientUnits="userSpaceOnUse">
-                                        <stop offset="0%" stopColor="#8b5cf6" />
-                                        <stop offset="100%" stopColor="#d946ef" />
-                                    </linearGradient>
-                                </defs>
-                            </svg>
-                        </div>
+                        {imageSrc ? (
+                            <div className={styles.imageContainer}>
+                                <img src={imageSrc} alt="Feature preview" className={styles.featureImage} />
+                            </div>
+                        ) : (
+                            <div className={styles.iconContainer}>
+                                <svg className={styles.sparkleIcon} width="120" height="120" viewBox="0 0 120 120" fill="none">
+                                    <path d="M60 10L65 45L80 35L70 50L105 55L70 60L80 75L65 65L60 100L55 65L40 75L50 60L15 55L50 50L40 35L55 45L60 10Z" fill="url(#sparkle-gradient)" />
+                                    <defs>
+                                        <linearGradient id="sparkle-gradient" x1="15" y1="10" x2="105" y2="100" gradientUnits="userSpaceOnUse">
+                                            <stop offset="0%" stopColor="#8b5cf6" />
+                                            <stop offset="100%" stopColor="#d946ef" />
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                        )}
                     </div>
 
                     <div className={styles.rightSection}>

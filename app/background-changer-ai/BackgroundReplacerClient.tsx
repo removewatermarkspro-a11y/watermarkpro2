@@ -98,7 +98,12 @@ export default function BackgroundReplacerClient() {
                             onChange={(prompt) => setUserPrompt(prompt)}
                         />
                         <div ref={uploadRef} className={styles.uploadSection}>
-                            <ImageUploader onImageUpload={handleImageUpload} isAuthenticated={!!user} onAuthRequired={() => setShowAuthPopup(true)} />
+                            <ImageUploader
+                                onImageUpload={handleImageUpload}
+                                isAuthenticated={!!user}
+                                onAuthRequired={() => setShowAuthPopup(true)}
+                                noCreditsImage="/images-optimized/replace-background-photo-ai.webp"
+                            />
                             {editedImageUrl && originalPreview && (
                                 <>
                                     <ResultDisplay originalImage={originalPreview} processedImage={editedImageUrl} onDownload={handleDownload} onGenerateNew={handleGenerateNew} />

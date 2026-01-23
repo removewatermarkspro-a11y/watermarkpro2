@@ -98,7 +98,12 @@ export default function PeopleRemoverClient() {
                             onChange={(prompt) => setUserPrompt(prompt)}
                         />
                         <div ref={uploadRef} className={styles.uploadSection}>
-                            <ImageUploader onImageUpload={handleImageUpload} isAuthenticated={!!user} onAuthRequired={() => setShowAuthPopup(true)} />
+                            <ImageUploader
+                                onImageUpload={handleImageUpload}
+                                isAuthenticated={!!user}
+                                onAuthRequired={() => setShowAuthPopup(true)}
+                                noCreditsImage="/images-optimized/beach-photo-people-remover.webp"
+                            />
                             {editedImageUrl && originalPreview && (
                                 <>
                                     <ResultDisplay originalImage={originalPreview} processedImage={editedImageUrl} onDownload={handleDownload} onGenerateNew={handleGenerateNew} />

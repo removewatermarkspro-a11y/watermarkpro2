@@ -108,6 +108,7 @@ export default function TextRemoverClient() {
                                 onImageUpload={handleImageUpload}
                                 isAuthenticated={!!user}
                                 onAuthRequired={() => setShowAuthPopup(true)}
+                                noCreditsImage="/images-optimized/delete-text-from-photo.webp"
                             />
 
                             {editedImageUrl && originalPreview && (
