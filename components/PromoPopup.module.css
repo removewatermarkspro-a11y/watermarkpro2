@@ -238,36 +238,66 @@
 }
 
 @media (max-width: 480px) {
+    .modal {
+        max-width: 90vw;
+        /* Ensure it fits width */
+    }
+
     .content {
-        padding: 2rem 1.5rem;
+        padding: 1.5rem 1rem;
+        /* Reduce padding further */
+    }
+
+    .iconWrapper {
+        margin-bottom: 0.75rem;
     }
 
     .icon {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .title {
-        font-size: 1.375rem;
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
     }
 
     .subtitle {
-        font-size: 0.875rem;
+        font-size: 0.8125rem;
+        margin-bottom: 1.25rem;
     }
 
     .promoBox {
-        padding: 1.25rem 1rem;
+        padding: 1rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .promoBadge {
+        font-size: 0.625rem;
+        margin-bottom: 0.5rem;
+        padding: 0.2rem 0.5rem;
     }
 
     .promoTitle {
-        font-size: 1.5rem;
-    }
-
-    .timerDisplay {
         font-size: 1.25rem;
     }
 
+    .promoSubtitle {
+        font-size: 0.8125rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .timer {
+        padding: 0.5rem 0.75rem;
+    }
+
+    .timerDisplay {
+        font-size: 1.125rem;
+    }
+
     .ctaButton {
-        padding: 0.875rem 1.75rem;
+        width: 100%;
+        /* Full width button */
+        padding: 0.75rem 1.5rem;
         font-size: 0.875rem;
     }
 }
