@@ -478,11 +478,19 @@
     .mobileMenu {
         display: block;
         max-height: 80vh;
-        /* Limit height */
         overflow-y: auto;
-        /* Enable scrolling */
         -webkit-overflow-scrolling: touch;
-        /* Smooth scrolling on iOS */
+        padding: 1rem;
+        /* Reduced from 1.5rem */
+    }
+
+    .mobileMenuItem {
+        padding: 0.5rem 0.75rem;
+        /* Reduced padding */
+        font-size: 0.875rem;
+        /* Reduced font size */
+        margin-bottom: 0.125rem;
+        /* Reduced spacing */
     }
 
     .logo {
@@ -490,10 +498,10 @@
     }
 
     .logoIcon {
-        width: 80px;
-        /* Increased from 65px */
-        height: 80px;
-        /* Increased from 65px */
+        width: 100px;
+        /* Increased from 80px */
+        height: 100px;
+        /* Increased from 80px */
         position: relative;
         left: 0;
         transform: none;
@@ -501,6 +509,7 @@
     }
 
     .logoText {
-        font-size: 1rem;
+        font-size: 1.125rem;
+        /* Slightly larger text to match logo */
     }
 }
