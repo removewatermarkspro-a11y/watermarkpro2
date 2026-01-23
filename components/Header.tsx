@@ -16,6 +16,7 @@ export default function Header() {
     const t = (translations as any)[language]
     const { user, credits, signOut } = useAuth()
     const [showUserMenu, setShowUserMenu] = useState(false)
+    const [showMobileLanguages, setShowMobileLanguages] = useState(false)
     const userMenuRef = useRef<HTMLDivElement>(null)
 
     const getUserInitial = () => {
@@ -405,35 +406,49 @@ export default function Header() {
                             </Link>
 
                             <div className={styles.mobileMenuSection}>
-                                <p className={styles.mobileMenuTitle}>{t.header.language || 'Language'}</p>
-                                <button onClick={() => handleLanguageChange('en')} className={styles.mobileMenuItem} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', textAlign: 'left' }}>
-                                    <img src="https://flagcdn.com/us.svg" alt="US Flag" width={20} height={15} />
-                                    English
+                                <button
+                                    onClick={() => setShowMobileLanguages(!showMobileLanguages)}
+                                    className={styles.mobileMenuItem}
+                                    style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%', background: 'none', border: 'none', cursor: 'pointer' }}
+                                >
+                                    <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                                        <img
+                                            src={language === 'en' ? "https://flagcdn.com/us.svg" : language === 'fr' ? "https://flagcdn.com/fr.svg" : language === 'de' ? "https://flagcdn.com/de.svg" : language === 'es' ? "https://flagcdn.com/es.svg" : language === 'pt' ? "https://flagcdn.com/pt.svg" : language === 'ko' ? "https://flagcdn.com/kr.svg" : "https://flagcdn.com/no.svg"}
+                                            alt="Flag"
+                                            width={20}
+                                            height={15}
+                                        />
+                                        {language === 'en' ? 'English' : language === 'fr' ? 'Français' : language === 'de' ? 'Deutsch' : language === 'es' ? 'Español' : language === 'pt' ? 'Português' : language === 'ko' ? '한국어' : 'Norsk'}
+                                    </span>
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style={{ transform: showMobileLanguages ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s' }}>
+                                        <path d="M4 6L8 10L12 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                                    </svg>
                                 </button>
-                                <button onClick={() => handleLanguageChange('fr')} className={styles.mobileMenuItem} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', textAlign: 'left' }}>
-                                    <img src="https://flagcdn.com/fr.svg" alt="French Flag" width={20} height={15} />
-                                    Français
-                                </button>
-                                <button onClick={() => handleLanguageChange('de')} className={styles.mobileMenuItem} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', textAlign: 'left' }}>
-                                    <img src="https://flagcdn.com/de.svg" alt="German Flag" width={20} height={15} />
-                                    Deutsch
-                                </button>
-                                <button onClick={() => handleLanguageChange('es')} className={styles.mobileMenuItem} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', textAlign: 'left' }}>
-                                    <img src="https://flagcdn.com/es.svg" alt="Spanish Flag" width={20} height={15} />
-                                    Español
-                                </button>
-                                <button onClick={() => handleLanguageChange('pt')} className={styles.mobileMenuItem} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', textAlign: 'left' }}>
-                                    <img src="https://flagcdn.com/pt.svg" alt="Portuguese Flag" width={20} height={15} />
-                                    Português
-                                </button>
-                                <button onClick={() => handleLanguageChange('ko')} className={styles.mobileMenuItem} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', textAlign: 'left' }}>
-                                    <img src="https://flagcdn.com/kr.svg" alt="Korean Flag" width={20} height={15} />
-                                    한국어
-                                </button>
-                                <button onClick={() => handleLanguageChange('no')} className={styles.mobileMenuItem} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', textAlign: 'left' }}>
-                                    <img src="https://flagcdn.com/no.svg" alt="Norwegian Flag" width={20} height={15} />
-                                    Norsk
-                                </button>
+                                {showMobileLanguages && (
+                                    <div style={{ paddingLeft: '1rem', marginTop: '0.5rem' }}>
+                                        <button onClick={() => { handleLanguageChange('en'); setShowMobileLanguages(false); }} className={styles.mobileMenuItem} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', width: '100%', background: 'none', border: 'none', cursor: 'pointer' }}>
+                                            <img src="https://flagcdn.com/us.svg" alt="US" width={20} height={15} /> English
+                                        </button>
+                                        <button onClick={() => { handleLanguageChange('fr'); setShowMobileLanguages(false); }} className={styles.mobileMenuItem} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', width: '100%', background: 'none', border: 'none', cursor: 'pointer' }}>
+                                            <img src="https://flagcdn.com/fr.svg" alt="FR" width={20} height={15} /> Français
+                                        </button>
+                                        <button onClick={() => { handleLanguageChange('de'); setShowMobileLanguages(false); }} className={styles.mobileMenuItem} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', width: '100%', background: 'none', border: 'none', cursor: 'pointer' }}>
+                                            <img src="https://flagcdn.com/de.svg" alt="DE" width={20} height={15} /> Deutsch
+                                        </button>
+                                        <button onClick={() => { handleLanguageChange('es'); setShowMobileLanguages(false); }} className={styles.mobileMenuItem} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', width: '100%', background: 'none', border: 'none', cursor: 'pointer' }}>
+                                            <img src="https://flagcdn.com/es.svg" alt="ES" width={20} height={15} /> Español
+                                        </button>
+                                        <button onClick={() => { handleLanguageChange('pt'); setShowMobileLanguages(false); }} className={styles.mobileMenuItem} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', width: '100%', background: 'none', border: 'none', cursor: 'pointer' }}>
+                                            <img src="https://flagcdn.com/pt.svg" alt="PT" width={20} height={15} /> Português
+                                        </button>
+                                        <button onClick={() => { handleLanguageChange('ko'); setShowMobileLanguages(false); }} className={styles.mobileMenuItem} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', width: '100%', background: 'none', border: 'none', cursor: 'pointer' }}>
+                                            <img src="https://flagcdn.com/kr.svg" alt="KO" width={20} height={15} /> 한국어
+                                        </button>
+                                        <button onClick={() => { handleLanguageChange('no'); setShowMobileLanguages(false); }} className={styles.mobileMenuItem} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', width: '100%', background: 'none', border: 'none', cursor: 'pointer' }}>
+                                            <img src="https://flagcdn.com/no.svg" alt="NO" width={20} height={15} /> Norsk
+                                        </button>
+                                    </div>
+                                )}
                             </div>
 
                             <div className={styles.mobileMenuActions}>
