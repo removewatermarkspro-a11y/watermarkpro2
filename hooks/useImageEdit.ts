@@ -3,7 +3,7 @@ import { OperationType } from '@/lib/replicate'
 
 interface UseImageEditParams {
     operationType: OperationType
-    userId?: string
+    getAccessToken?: () => Promise<string | null>
 }
 
 interface EditImageOptions {
@@ -11,7 +11,7 @@ interface EditImageOptions {
     userPrompt?: string
 }
 
-export function useImageEdit({ operationType, userId }: UseImageEditParams) {
+export function useImageEdit({ operationType, getAccessToken }: UseImageEditParams) {
     const [isLoading, setIsLoading] = useState(false)
     const [error, setError] = useState<string | null>(null)
     const [editedImageUrl, setEditedImageUrl] = useState<string | null>(null)
@@ -22,20 +22,26 @@ export function useImageEdit({ operationType, userId }: UseImageEditParams) {
         setEditedImageUrl(null)
 
         try {
+            // Get access token for authentication
+            const token = getAccessToken ? await getAccessToken() : null
+            if (!token) {
+                throw new Error('Please log in to use this feature')
+            }
+
             // Convert image to base64
             const base64 = await fileToBase64(imageFile)
 
-            // Call API
+            // Call API with Authorization header
             const response = await fetch('/api/edit-image', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`,
                 },
                 body: JSON.stringify({
                     imageBase64: base64,
                     operationType,
                     userPrompt,
-                    userId
                 }),
             })
 

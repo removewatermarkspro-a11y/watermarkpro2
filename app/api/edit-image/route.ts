@@ -1,11 +1,19 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { editImage, OperationType } from '@/lib/replicate'
 import { consumeCreditServer } from '@/lib/supabase-server'
+import { verifyAuth, unauthorizedResponse } from '@/lib/auth'
 
 export async function POST(request: NextRequest) {
     try {
+        // Verify authentication first
+        const authResult = await verifyAuth(request)
+        if (!authResult) {
+            return unauthorizedResponse('Authentication required to edit images')
+        }
+
         const body = await request.json()
-        const { imageBase64, operationType, userPrompt, userId } = body
+        const { imageBase64, operationType, userPrompt } = body
+        const userId = authResult.userId // Use authenticated user ID
 
         console.log('[edit-image API] Request received:', { operationType, userId: userId?.substring(0, 8) + '...' })
 

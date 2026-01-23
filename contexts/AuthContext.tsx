@@ -12,6 +12,7 @@ interface AuthContextType {
     signInWithEmail: (email: string) => Promise<{ error?: string }>
     signOut: () => Promise<void>
     refreshCredits: () => Promise<void>
+    getAccessToken: () => Promise<string | null>
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined)
@@ -99,6 +100,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         }
     }
 
+    // Get access token for API calls
+    const getAccessToken = async (): Promise<string | null> => {
+        const { data: { session } } = await supabase.auth.getSession()
+        return session?.access_token ?? null
+    }
+
     const value = {
         user,
         credits,
@@ -107,6 +114,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         signInWithEmail,
         signOut,
         refreshCredits,
+        getAccessToken,
     }
 
     return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>

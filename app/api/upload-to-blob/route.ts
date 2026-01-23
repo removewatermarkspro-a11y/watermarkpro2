@@ -1,8 +1,15 @@
 import { put } from '@vercel/blob'
 import { NextRequest, NextResponse } from 'next/server'
+import { verifyAuth, unauthorizedResponse } from '@/lib/auth'
 
 export async function POST(request: NextRequest) {
     try {
+        // Verify authentication first
+        const authResult = await verifyAuth(request)
+        if (!authResult) {
+            return unauthorizedResponse('Authentication required to upload files')
+        }
+
         const formData = await request.formData()
         const file = formData.get('file') as File
 
@@ -13,7 +20,7 @@ export async function POST(request: NextRequest) {
             )
         }
 
-        console.log('[upload-to-blob] Uploading file to Vercel Blob:', file.name, 'Size:', file.size)
+        console.log('[upload-to-blob] Uploading file to Vercel Blob:', file.name, 'Size:', file.size, 'User:', authResult.userId.substring(0, 8) + '...')
 
         // Upload to Vercel Blob Storage
         // Files are automatically cleaned up after a period of inactivity

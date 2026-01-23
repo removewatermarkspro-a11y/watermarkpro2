@@ -36,7 +36,7 @@ export default function ImageUploader({
     const [isDragging, setIsDragging] = useState(false)
     const [isProcessing, setIsProcessing] = useState(false)
     const [showNoCreditsPopup, setShowNoCreditsPopup] = useState(false)
-    const { user, credits, refreshCredits } = useAuth()
+    const { user, credits, refreshCredits, getAccessToken } = useAuth()
     const { language } = useLanguage()
     const t = (translations as any)[language] || translations.en
     const fileInputRef = useRef<HTMLInputElement>(null)
@@ -153,17 +153,25 @@ export default function ImageUploader({
                     const imageBase64 = e.target?.result as string
 
                     try {
-                        // Call the Replicate API
+                        // Get access token for authentication
+                        const token = await getAccessToken()
+                        if (!token) {
+                            console.error('[ImageUploader] No access token available')
+                            setIsProcessing(false)
+                            return
+                        }
+
+                        // Call the Replicate API with Authorization header
                         const response = await fetch('/api/edit-image', {
                             method: 'POST',
                             headers: {
                                 'Content-Type': 'application/json',
+                                'Authorization': `Bearer ${token}`,
                             },
                             body: JSON.stringify({
                                 imageBase64,
                                 operationType,
                                 userPrompt,
-                                userId: user.id
                             }),
                         })
 
