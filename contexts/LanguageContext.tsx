@@ -17,18 +17,13 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
     useEffect(() => {
         setMounted(true)
-
-        // Load language preference from localStorage
-        const savedLanguage = localStorage.getItem('language') as Language
-        if (savedLanguage && ['en', 'fr', 'de', 'es', 'pt', 'ko', 'no'].includes(savedLanguage)) {
-            setLanguageState(savedLanguage)
-        }
-        // otherwise default state is already 'en'
+        // Language always defaults to 'en' - no localStorage loading
     }, [])
 
     const setLanguage = (lang: Language) => {
         setLanguageState(lang)
-        localStorage.setItem('language', lang)
+        // Language selection only persists during current session navigation
+        // Does NOT persist across page reloads - always defaults to English
     }
 
     return (
