@@ -1,0 +1,134 @@
+.sidebar {
+    position: sticky;
+    top: 120px;
+    height: fit-content;
+    max-height: calc(100vh - 140px);
+}
+
+.sidebarContent {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 24px;
+    backdrop-filter: blur(10px);
+}
+
+.sidebarTitle {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 20px 0;
+    text-align: center;
+}
+
+/* Image Carousel */
+.imageCarousel {
+    margin-bottom: 20px;
+}
+
+.imageWrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border-radius: 16px;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.aiBadge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    padding: 6px 12px;
+    background: linear-gradient(135deg, #ec4899 0%, #f43f5e 100%);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+    border-radius: 20px;
+    z-index: 10;
+    letter-spacing: 0.5px;
+}
+
+.carouselImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+/* Carousel Indicators */
+.carouselIndicators {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.indicator:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.indicatorActive {
+    background: #f43f5e;
+    width: 24px;
+    border-radius: 4px;
+}
+
+/* CTA Button */
+.ctaButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 16px 24px;
+    background: linear-gradient(135deg, #f43f5e 0%, #ec4899 100%);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 24px rgba(244, 63, 94, 0.3);
+}
+
+.ctaButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(244, 63, 94, 0.4);
+}
+
+.ctaButton svg {
+    transition: transform 0.3s ease;
+}
+
+.ctaButton:hover svg {
+    transform: translateX(4px);
+}
+
+.ctaSubtext {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 13px;
+    margin: 12px 0 0 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .sidebar {
+        position: static;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto 40px;
+    }
+}
