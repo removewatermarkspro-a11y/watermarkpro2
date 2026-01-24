@@ -12,7 +12,7 @@ export default function CategoryTabs() {
     const t = (translations as any)[language] || translations.en
 
     const categories = [
-        { name: t.categoryTabs.watermarkRemover, href: language === 'fr' ? '/fr/enlever-filigrane' : language === 'de' ? '/de/wasserzeichen-entfernen' : language === 'es' ? '/es/eliminar-marca-agua' : language === 'pt' ? '/pt/remover-marca-dagua' : language === 'ko' ? '/ko/watermark-remover' : language === 'no' ? '/no/fjern-vannmerke' : '/watermark-remover' },
+        { name: t.categoryTabs.watermarkRemover, href: language === 'fr' ? '/fr/enlever-filigrane' : language === 'de' ? '/de/wasserzeichen-entfernen' : language === 'es' ? '/es/eliminar-marca-agua' : language === 'pt' ? '/pt/remover-marca-dagua' : language === 'ko' ? '/ko/watermark-remover' : language === 'no' ? '/no/fjern-vannmerke' : '/' },
         { name: t.categoryTabs.videoWatermark, href: language === 'fr' ? '/fr/enlever-filigrane-video' : language === 'de' ? '/de/wasserzeichen-entfernen-video' : language === 'es' ? '/es/eliminar-marca-agua-video' : language === 'pt' ? '/pt/remover-marca-dagua-video' : language === 'ko' ? '/ko/watermark-remover-video' : language === 'no' ? '/no/fjern-vannmerke-video' : '/watermark-remover-video' },
         { name: t.categoryTabs.soraRemover, href: language === 'fr' ? '/fr/enlever-filigrane-sora' : language === 'de' ? '/de/sora-wasserzeichen-entfernen' : language === 'es' ? '/es/eliminar-marca-agua-sora' : language === 'pt' ? '/pt/remover-marca-dagua-sora' : language === 'ko' ? '/ko/sora-watermark-remover' : language === 'no' ? '/no/fjern-sora-vannmerke' : '/sora-watermark-remover' },
         { name: t.categoryTabs.removeText, href: language === 'fr' ? '/fr/supprimer-texte-image' : language === 'de' ? '/de/text-entfernen' : language === 'es' ? '/es/eliminar-texto-imagen' : language === 'pt' ? '/pt/remover-texto-imagem' : language === 'ko' ? '/ko/text-remover-ai' : language === 'no' ? '/no/fjern-tekst-fra-bilde' : '/text-remover-ai' },
@@ -29,13 +29,13 @@ export default function CategoryTabs() {
                 {categories.map((category) => {
                     // Check if this category is active
                     const isActive = pathname === category.href ||
-                        (category.href === '/watermark-remover' && pathname === '/') ||
-                        (category.href === '/watermark-remover' && pathname === '/fr/enlever-filigrane') ||
-                        (category.href === '/watermark-remover' && pathname === '/de/wasserzeichen-entfernen') ||
-                        (category.href === '/watermark-remover' && pathname === '/es/eliminar-marca-agua') ||
-                        (category.href === '/watermark-remover' && pathname === '/pt/remover-marca-dagua') ||
-                        (category.href === '/watermark-remover' && pathname === '/ko/watermark-remover') ||
-                        (category.href === '/watermark-remover' && pathname === '/no/fjern-vannmerke')
+                        (category.href === '/' && pathname === '/watermark-remover') ||
+                        (category.href === '/' && pathname === '/fr/enlever-filigrane') ||
+                        (category.href === '/' && pathname === '/de/wasserzeichen-entfernen') ||
+                        (category.href === '/' && pathname === '/es/eliminar-marca-agua') ||
+                        (category.href === '/' && pathname === '/pt/remover-marca-dagua') ||
+                        (category.href === '/' && pathname === '/ko/watermark-remover') ||
+                        (category.href === '/' && pathname === '/no/fjern-vannmerke')
 
                     return (
                         <Link
