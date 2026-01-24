@@ -71,8 +71,8 @@ export default function BlogPage() {
                     </div>
 
                     <div className={styles.blogGrid}>
-                        {/* Blog Post Card 1 - Remove Watermark AI Guide */}
-                        <Link href="/blog/remove-watermark-ai-free" className={styles.blogCard}>
+                        {/* Blog Post Card - TikTok Watermark Remover */}
+                        <Link href="/blog/tiktok-watermark-remover" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
                                 <div className={styles.blogImagePlaceholder}>
                                     <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
@@ -83,128 +83,23 @@ export default function BlogPage() {
                                 </div>
                             </div>
                             <div className={styles.blogCardContent}>
-                                <span className={styles.blogCategory}>AI TOOLS</span>
+                                <span className={styles.blogCategory}>TIKTOK TOOLS</span>
                                 <h2 className={styles.blogCardTitle}>
-                                    How to Remove Watermarks from Photos and Videos for Free in Seconds with AI
+                                    Best TikTok Watermark Remover Tools in 2026 (Free & Paid)
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                                         <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
                                 </h2>
                                 <p className={styles.blogCardDescription}>
-                                    Learn how to remove watermarks from photos and videos using AI technology. Complete guide with step-by-step instructions and expert tips.
+                                    Discover the best TikTok watermark remover tools in 2026. Compare free and paid options, learn step-by-step removal techniques, and find the perfect solution for your needs.
                                 </p>
                                 <div className={styles.blogCardMeta}>
-                                    <span>January 16, 2026</span>
+                                    <span>January 24, 2026</span>
                                     <span>•</span>
-                                    <span>8 min read</span>
+                                    <span>12 min read</span>
                                 </div>
                             </div>
                         </Link>
-
-                        {/* Blog Post Card 2 */}
-                        <article className={styles.blogCard}>
-                            <div className={styles.blogImageWrapper}>
-                                <div className={styles.blogImagePlaceholder}>
-                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
-                                        <path d="M21 16V8C21 6.89543 20.1046 6 19 6H5C3.89543 6 3 6.89543 3 8V16C3 17.1046 3.89543 18 5 18H19C20.1046 18 21 17.1046 21 16Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                        <path d="M3 10H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                        <circle cx="7" cy="8" r="0.5" fill="currentColor" />
-                                    </svg>
-                                </div>
-                            </div>
-                            <div className={styles.blogCardContent}>
-                                <h2 className={styles.blogCardTitle}>
-                                    Blog Post Title 2
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                    </svg>
-                                </h2>
-                            </div>
-                        </article>
-
-                        {/* Blog Post Card 3 */}
-                        <article className={styles.blogCard}>
-                            <div className={styles.blogImageWrapper}>
-                                <div className={styles.blogImagePlaceholder}>
-                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
-                                        <path d="M21 16V8C21 6.89543 20.1046 6 19 6H5C3.89543 6 3 6.89543 3 8V16C3 17.1046 3.89543 18 5 18H19C20.1046 18 21 17.1046 21 16Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                        <path d="M3 10H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                        <circle cx="7" cy="8" r="0.5" fill="currentColor" />
-                                    </svg>
-                                </div>
-                            </div>
-                            <div className={styles.blogCardContent}>
-                                <h2 className={styles.blogCardTitle}>
-                                    Blog Post Title 3
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                    </svg>
-                                </h2>
-                            </div>
-                        </article>
-
-                        {/* Blog Post Card 4 */}
-                        <article className={styles.blogCard}>
-                            <div className={styles.blogImageWrapper}>
-                                <div className={styles.blogImagePlaceholder}>
-                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
-                                        <path d="M21 16V8C21 6.89543 20.1046 6 19 6H5C3.89543 6 3 6.89543 3 8V16C3 17.1046 3.89543 18 5 18H19C20.1046 18 21 17.1046 21 16Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                        <path d="M3 10H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                        <circle cx="7" cy="8" r="0.5" fill="currentColor" />
-                                    </svg>
-                                </div>
-                            </div>
-                            <div className={styles.blogCardContent}>
-                                <h2 className={styles.blogCardTitle}>
-                                    Blog Post Title 4
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                    </svg>
-                                </h2>
-                            </div>
-                        </article>
-
-                        {/* Blog Post Card 5 */}
-                        <article className={styles.blogCard}>
-                            <div className={styles.blogImageWrapper}>
-                                <div className={styles.blogImagePlaceholder}>
-                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
-                                        <path d="M21 16V8C21 6.89543 20.1046 6 19 6H5C3.89543 6 3 6.89543 3 8V16C3 17.1046 3.89543 18 5 18H19C20.1046 18 21 17.1046 21 16Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                        <path d="M3 10H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                        <circle cx="7" cy="8" r="0.5" fill="currentColor" />
-                                    </svg>
-                                </div>
-                            </div>
-                            <div className={styles.blogCardContent}>
-                                <h2 className={styles.blogCardTitle}>
-                                    Blog Post Title 5
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                    </svg>
-                                </h2>
-                            </div>
-                        </article>
-
-                        {/* Blog Post Card 6 */}
-                        <article className={styles.blogCard}>
-                            <div className={styles.blogImageWrapper}>
-                                <div className={styles.blogImagePlaceholder}>
-                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
-                                        <path d="M21 16V8C21 6.89543 20.1046 6 19 6H5C3.89543 6 3 6.89543 3 8V16C3 17.1046 3.89543 18 5 18H19C20.1046 18 21 17.1046 21 16Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                        <path d="M3 10H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                        <circle cx="7" cy="8" r="0.5" fill="currentColor" />
-                                    </svg>
-                                </div>
-                            </div>
-                            <div className={styles.blogCardContent}>
-                                <h2 className={styles.blogCardTitle}>
-                                    Blog Post Title 6
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                    </svg>
-                                </h2>
-                            </div>
-                        </article>
                     </div>
                 </div>
             </main>
