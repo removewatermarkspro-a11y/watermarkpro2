@@ -185,6 +185,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // or use a static list if fs issues arise. Given the environment, let's use the known directory we saw.
     const blogPosts = [
         'tiktok-watermark-remover',
+        'remove-watermark-from-video-online-free',
         // Add other blog folders here as they are created
     ]
 

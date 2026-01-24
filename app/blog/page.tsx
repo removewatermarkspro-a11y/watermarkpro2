@@ -98,6 +98,34 @@ export default function BlogPage() {
                                 </div>
                             </div>
                         </Link>
+
+                        {/* Blog Post Card - Remove Watermark From Video Online Free */}
+                        <Link href="/blog/remove-watermark-from-video-online-free" className={styles.blogCard}>
+                            <div className={styles.blogImageWrapper}>
+                                <img
+                                    src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800&h=400&fit=crop"
+                                    alt="Video editing workspace"
+                                    className={styles.blogCardImage}
+                                />
+                            </div>
+                            <div className={styles.blogCardContent}>
+                                <span className={styles.blogCategory}>VIDEO TOOLS</span>
+                                <h2 className={styles.blogCardTitle}>
+                                    Top 5 Ways to Remove Watermark From Video Online Free in 2026
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    </svg>
+                                </h2>
+                                <p className={styles.blogCardDescription}>
+                                    Discover the best free ways to remove watermarks from videos. We tested 18 tools and identified the top 5 solutions.
+                                </p>
+                                <div className={styles.blogCardMeta}>
+                                    <span>January 24, 2026</span>
+                                    <span>•</span>
+                                    <span>15 min read</span>
+                                </div>
+                            </div>
+                        </Link>
                     </div>
                 </div>
             </main>
