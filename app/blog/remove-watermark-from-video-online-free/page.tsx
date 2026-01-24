@@ -4,6 +4,8 @@ import Image from 'next/image'
 import styles from '../tiktok-watermark-remover/Article.module.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import BlogSidebar from '@/components/BlogSidebar'
+import MobileFloatingCTA from '@/components/MobileFloatingCTA'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 
 export const metadata: Metadata = {
@@ -576,8 +578,13 @@ export default function RemoveWatermarkFromVideoArticle() {
                         </section>
 
                     </article>
+
+                    <div className={styles.sidebarWrapper}>
+                        <BlogSidebar />
+                    </div>
                 </div>
             </main>
+            <MobileFloatingCTA />
             <Footer />
         </LanguageProvider>
     )
