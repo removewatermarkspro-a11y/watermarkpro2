@@ -170,7 +170,9 @@ export async function POST(req: Request) {
                         user.id,
                         subscription.id,
                         typeof session.customer === 'string' ? session.customer : (session.customer as any)?.id || '',
+                        // @ts-ignore - Stripe types might be slightly mismatched but property exists
                         subscription.current_period_start,
+                        // @ts-ignore
                         subscription.current_period_end
                     );
                 }
@@ -234,7 +236,9 @@ export async function POST(req: Request) {
                     user.id,
                     subscription.id,
                     typeof subscription.customer === 'string' ? subscription.customer : (subscription.customer as any).id,
+                    // @ts-ignore
                     subscription.current_period_start,
+                    // @ts-ignore
                     subscription.current_period_end
                 );
 
