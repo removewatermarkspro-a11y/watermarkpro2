@@ -33,6 +33,10 @@ export interface Subscription {
     price: number
     billing_cycle_start: string
     billing_cycle_end: string
+    stripe_subscription_id?: string
+    stripe_customer_id?: string
+    current_period_start?: string
+    current_period_end?: string
     created_at: string
     updated_at: string
 }

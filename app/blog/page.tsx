@@ -75,8 +75,8 @@ export default function BlogPage() {
                         <Link href="/blog/tiktok-watermark-remover" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
                                 <img
-                                    src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=400&fit=crop"
-                                    alt="TikTok content creation on smartphone"
+                                    src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800&h=400&fit=crop"
+                                    alt="Content creator editing video on smartphone"
                                     className={styles.blogCardImage}
                                 />
                             </div>

@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = 'https://removewatermarkspro.com'
+    const baseUrl = 'https://removewatermarkpro.co'
 
     // Define all feature pages
     const featurePages = [
@@ -160,7 +160,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
         })
     })
 
-    // Add blog pages
+    // Add legal pages (English only as per folder structure)
+    const legalPages = ['cookies', 'privacy', 'terms']
+    legalPages.forEach(page => {
+        sitemap.push({
+            url: `${baseUrl}/${page}`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.5,
+        })
+    })
+
+    // Add blog index
     sitemap.push({
         url: `${baseUrl}/blog`,
         lastModified: new Date(),
@@ -168,11 +179,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.8,
     })
 
-    sitemap.push({
-        url: `${baseUrl}/blog/remove-watermark-ai-free`,
-        lastModified: new Date('2026-01-16'),
-        changeFrequency: 'monthly',
-        priority: 0.7,
+    // Dynamically add blog posts
+    // Note: We're manually adding the known blog post for now as we can't use node fs in edge runtime if configured, 
+    // but typically sitemap runs in node. Let's stick to safe manual addition based on file system check 
+    // or use a static list if fs issues arise. Given the environment, let's use the known directory we saw.
+    const blogPosts = [
+        'tiktok-watermark-remover',
+        // Add other blog folders here as they are created
+    ]
+
+    blogPosts.forEach(post => {
+        sitemap.push({
+            url: `${baseUrl}/blog/${post}`,
+            lastModified: new Date(), // Could be updated to file mtime in a real dynamic setup
+            changeFrequency: 'monthly',
+            priority: 0.7,
+        })
     })
 
     return sitemap

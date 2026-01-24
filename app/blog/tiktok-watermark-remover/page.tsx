@@ -155,10 +155,10 @@ export default function TikTokWatermarkRemoverArticle() {
                         {/* Hero Image */}
                         <div className={styles.heroImage}>
                             <Image
-                                src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=1200&h=600&fit=crop"
+                                src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=1200&h=630&fit=crop"
                                 alt="Person creating TikTok content on smartphone"
                                 width={1200}
-                                height={600}
+                                height={630}
                                 priority
                             />
                         </div>

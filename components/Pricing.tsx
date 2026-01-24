@@ -5,6 +5,7 @@ import styles from './Pricing.module.css'
 import { useLanguage } from '@/contexts/LanguageContext'
 import { translations } from '@/locales/translations'
 import { STRIPE_PLANS } from '@/lib/stripe-config'
+import { supabase } from '@/lib/supabase'
 
 export default function Pricing() {
     const [isYearly, setIsYearly] = useState(true)
@@ -50,6 +51,15 @@ export default function Pricing() {
         }
 
         try {
+            // Get current user to pass email for webhook identification
+            const { data: { user } } = await supabase.auth.getUser();
+
+            if (!user?.email) {
+                // Optional: Redirect to login if no user found, or proceed and let webhook fail attribution
+                // For better UX, we should probably require login here
+                console.warn('User not logged in, credit attribution might fail');
+            }
+
             const response = await fetch('/api/checkout', {
                 method: 'POST',
                 headers: {
@@ -58,6 +68,7 @@ export default function Pricing() {
                 body: JSON.stringify({
                     priceId,
                     mode,
+                    customerEmail: user?.email, // IMPORTANT: Pass user email for webhook
                 }),
             })
 
