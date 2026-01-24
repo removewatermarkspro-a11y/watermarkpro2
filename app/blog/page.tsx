@@ -74,13 +74,11 @@ export default function BlogPage() {
                         {/* Blog Post Card - TikTok Watermark Remover */}
                         <Link href="/blog/tiktok-watermark-remover" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
-                                <div className={styles.blogImagePlaceholder}>
-                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
-                                        <path d="M21 16V8C21 6.89543 20.1046 6 19 6H5C3.89543 6 3 6.89543 3 8V16C3 17.1046 3.89543 18 5 18H19C20.1046 18 21 17.1046 21 16Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                        <path d="M3 10H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                        <circle cx="7" cy="8" r="0.5" fill="currentColor" />
-                                    </svg>
-                                </div>
+                                <img
+                                    src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=400&fit=crop"
+                                    alt="TikTok content creation on smartphone"
+                                    className={styles.blogCardImage}
+                                />
                             </div>
                             <div className={styles.blogCardContent}>
                                 <span className={styles.blogCategory}>TIKTOK TOOLS</span>

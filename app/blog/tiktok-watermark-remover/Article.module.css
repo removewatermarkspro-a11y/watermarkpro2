@@ -121,14 +121,14 @@
 }
 
 .toolLink {
-    color: #a855f7;
+    color: #ec4899;
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s ease;
 }
 
 .toolLink:hover {
-    color: #c084fc;
+    color: #f472b6;
 }
 
 .ctaButton {

@@ -85,6 +85,13 @@
     color: rgba(168, 85, 247, 0.4);
 }
 
+.blogCardImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
 .blogCardContent {
     padding: 24px;
 }
