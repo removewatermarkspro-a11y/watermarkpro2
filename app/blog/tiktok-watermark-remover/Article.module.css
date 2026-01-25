@@ -131,6 +131,20 @@
     color: #f472b6;
 }
 
+.articleContent p a,
+.articleContent li a {
+    color: #ec4899;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.articleContent p a:hover,
+.articleContent li a:hover {
+    color: #be185d;
+}
+
 .ctaButton {
     display: inline-block;
     padding: 14px 28px;
