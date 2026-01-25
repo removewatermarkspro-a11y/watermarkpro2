@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
-import styles from './Article.module.css'
+import styles from '../tiktok-watermark-remover/Article.module.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import BlogSidebar from '@/components/BlogSidebar'
