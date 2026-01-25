@@ -155,8 +155,8 @@ export default function InstagramWatermarkRemoverArticle() {
                         {/* Hero Image */}
                         <div className={styles.heroImage}>
                             <Image
-                                src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?w=1200&h=630&fit=crop"
-                                alt="Content creator filming TikTok video with smartphone"
+                                src="/og-video-watermark.jpg"
+                                alt="Instagram Watermark Remover Tool Interface"
                                 width={1200}
                                 height={630}
                                 priority
@@ -204,8 +204,8 @@ export default function InstagramWatermarkRemoverArticle() {
 
                             <div className={styles.sectionImage}>
                                 <Image
-                                    src="https://images.unsplash.com/photo-1611162618479-ee3d24aaef0b?w=1200&h=600&fit=crop"
-                                    alt="Social media content creator using smartphone for TikTok"
+                                    src="/watermark-remover-card.png"
+                                    alt="Remove Watermark Pro Tool Demonstration"
                                     width={1200}
                                     height={600}
                                 />
