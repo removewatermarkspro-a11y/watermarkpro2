@@ -155,22 +155,15 @@ export default function PhotoWatermarkRemoverArticle() {
                         {/* Hero Image */}
                         <div className={styles.heroImage}>
                             <Image
-                                src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=1200&h=630&fit=crop"
-                                alt="Photographer editing photos on computer"
+                                src="https://images.unsplash.com/photo-_UjF5d8xV9M?w=1200&h=630&fit=crop"
+                                alt="Influencer taking a selfie with a camera"
                                 width={1200}
                                 height={630}
                                 priority
                             />
                         </div>
 
-                        <div className={styles.sectionImage}>
-                            <Image
-                                src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=1200&h=600&fit=crop"
-                                alt="Digital tools for creators"
-                                width={1200}
-                                height={600}
-                            />
-                        </div>
+
 
                         <p>
                             You've found the perfect image for your project. The composition is flawless, the lighting is ideal, and it fits your vision perfectly. But there's one frustrating obstacle: that prominent watermark ruining the entire photo. Whether it's a stock photo watermark, a photographer's signature, or a platform logo, these unwanted marks can destroy an otherwise perfect image.
@@ -277,8 +270,8 @@ export default function PhotoWatermarkRemoverArticle() {
 
                             <div className={styles.sectionImage}>
                                 <Image
-                                    src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?w=1200&h=600&fit=crop"
-                                    alt="Professional editor working on a project"
+                                    src="https://images.unsplash.com/photo-wz48f1s1I_k?w=1200&h=600&fit=crop"
+                                    alt="Creative workspace with tools offering aesthetic vibe"
                                     width={1200}
                                     height={600}
                                 />
@@ -366,8 +359,8 @@ export default function PhotoWatermarkRemoverArticle() {
 
                             <div className={styles.sectionImage}>
                                 <Image
-                                    src="https://images.unsplash.com/photo-1626785774573-4b799315345d?w=1200&h=600&fit=crop"
-                                    alt="Comparing different software tools on screen"
+                                    src="https://images.unsplash.com/photo-_F3G5n_v_m0?w=1200&h=600&fit=crop"
+                                    alt="Magazines and lifestyle content on bed"
                                     width={1200}
                                     height={600}
                                 />
