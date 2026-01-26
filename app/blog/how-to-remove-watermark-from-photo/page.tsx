@@ -28,7 +28,7 @@ export const metadata: Metadata = {
         authors: ['Remove Watermark Pro'],
         images: [
             {
-                url: 'https://removewatermarkspro.com/blog-photo-watermark-og.jpg',
+                url: 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=1200&h=630&fit=crop',
                 width: 1200,
                 height: 630,
                 alt: 'How to Remove Watermark from Photo 2026'
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'How to Remove Watermark from Photo in 2026',
         description: 'Tested 19 tools on 850+ images. Best free & paid ways to remove photo watermarks.',
-        images: ['https://removewatermarkspro.com/blog-photo-watermark-og.jpg']
+        images: ['https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=1200&h=630&fit=crop']
     },
 
     robots: {
@@ -155,7 +155,7 @@ export default function PhotoWatermarkRemoverArticle() {
                         {/* Hero Image */}
                         <div className={styles.heroImage}>
                             <Image
-                                src="https://images.unsplash.com/photo-1542038784456-1ea8c9356efb?w=1200&h=630&fit=crop"
+                                src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=1200&h=630&fit=crop"
                                 alt="Photographer editing photos on computer"
                                 width={1200}
                                 height={630}

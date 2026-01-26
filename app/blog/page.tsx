@@ -75,7 +75,7 @@ export default function BlogPage() {
                         <Link href="/blog/how-to-remove-watermark-from-photo" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
                                 <img
-                                    src="https://images.unsplash.com/photo-1542038784456-1ea8c9356efb?w=800&h=400&fit=crop"
+                                    src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800&h=400&fit=crop"
                                     alt="Photographer removing watermark from photo"
                                     className={styles.blogCardImage}
                                 />
