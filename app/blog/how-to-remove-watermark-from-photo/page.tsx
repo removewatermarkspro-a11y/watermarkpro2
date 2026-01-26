@@ -28,7 +28,7 @@ export const metadata: Metadata = {
         authors: ['Remove Watermark Pro'],
         images: [
             {
-                url: 'https://images.unsplash.com/photo-_UjF5d8xV9M?w=1200&h=630&fit=crop',
+                url: 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=1200&h=630&fit=crop',
                 width: 1200,
                 height: 630,
                 alt: 'How to Remove Watermark from Photo 2026'
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'How to Remove Watermark from Photo in 2026',
         description: 'Tested 19 tools on 850+ images. Best free & paid ways to remove photo watermarks.',
-        images: ['https://images.unsplash.com/photo-_UjF5d8xV9M?w=1200&h=630&fit=crop']
+        images: ['https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=1200&h=630&fit=crop']
     },
 
     robots: {
@@ -155,8 +155,8 @@ export default function PhotoWatermarkRemoverArticle() {
                         {/* Hero Image */}
                         <div className={styles.heroImage}>
                             <Image
-                                src="https://images.unsplash.com/photo-_UjF5d8xV9M?w=1200&h=630&fit=crop"
-                                alt="Influencer taking a selfie with a camera"
+                                src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=1200&h=630&fit=crop"
+                                alt="Influencer editing content on computer"
                                 width={1200}
                                 height={630}
                                 priority
@@ -207,8 +207,8 @@ export default function PhotoWatermarkRemoverArticle() {
 
                             <div className={styles.sectionImage}>
                                 <Image
-                                    src="https://images.unsplash.com/photo-b70B2s7Tj38?w=1200&h=600&fit=crop"
-                                    alt="Fashion influencer lifestyle"
+                                    src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1200&h=600&fit=crop"
+                                    alt="Fashion influencer lifestyle content"
                                     width={1200}
                                     height={600}
                                 />
@@ -240,7 +240,7 @@ export default function PhotoWatermarkRemoverArticle() {
 
                             <div className={styles.sectionImage}>
                                 <Image
-                                    src="https://images.unsplash.com/photo-PACNRKpj1gU?w=1200&h=600&fit=crop"
+                                    src="https://images.unsplash.com/photo-1606761568499-5ddd45e43b32?w=1200&h=600&fit=crop"
                                     alt="Social media content creation kit"
                                     width={1200}
                                     height={600}
@@ -270,8 +270,8 @@ export default function PhotoWatermarkRemoverArticle() {
 
                             <div className={styles.sectionImage}>
                                 <Image
-                                    src="https://images.unsplash.com/photo-wz48f1s1I_k?w=1200&h=600&fit=crop"
-                                    alt="Creative workspace with tools offering aesthetic vibe"
+                                    src="https://images.unsplash.com/photo-1507090960745-b32f65d3113a?w=1200&h=600&fit=crop"
+                                    alt="Creative workspace with aesthetic vibe"
                                     width={1200}
                                     height={600}
                                 />
@@ -359,8 +359,8 @@ export default function PhotoWatermarkRemoverArticle() {
 
                             <div className={styles.sectionImage}>
                                 <Image
-                                    src="https://images.unsplash.com/photo-_F3G5n_v_m0?w=1200&h=600&fit=crop"
-                                    alt="Magazines and lifestyle content on bed"
+                                    src="https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?w=1200&h=600&fit=crop"
+                                    alt="Digital lifestyle content"
                                     width={1200}
                                     height={600}
                                 />
@@ -430,7 +430,7 @@ export default function PhotoWatermarkRemoverArticle() {
                             <h2>Real Test Results: Quality Analysis Across 850 Photos</h2>
                             <div className={styles.sectionImage}>
                                 <Image
-                                    src="https://images.unsplash.com/photo-T4p72-fc2_A?w=1200&h=600&fit=crop"
+                                    src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?w=1200&h=600&fit=crop"
                                     alt="Influencer agency aesthetic visuals"
                                     width={1200}
                                     height={600}
@@ -459,7 +459,7 @@ export default function PhotoWatermarkRemoverArticle() {
                             <h2>Manual vs AI Removal: When to Use Each Method</h2>
                             <div className={styles.sectionImage}>
                                 <Image
-                                    src="https://images.unsplash.com/photo-_P87Q0Ie8gM?w=1200&h=600&fit=crop"
+                                    src="https://images.unsplash.com/photo-1531417049-7e90d76cb0f7?w=1200&h=600&fit=crop"
                                     alt="Person standing in sunset field aesthetic"
                                     width={1200}
                                     height={600}
@@ -492,7 +492,7 @@ export default function PhotoWatermarkRemoverArticle() {
                             <h2>Legal and Ethical Considerations for Photo Watermark Removal</h2>
                             <div className={styles.sectionImage}>
                                 <Image
-                                    src="https://images.unsplash.com/photo-hVfGv-vXyI0?w=1200&h=600&fit=crop"
+                                    src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=1200&h=600&fit=crop"
                                     alt="Minimalist monochromatic aesthetic object"
                                     width={1200}
                                     height={600}
