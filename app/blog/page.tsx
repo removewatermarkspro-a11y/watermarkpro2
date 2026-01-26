@@ -71,6 +71,33 @@ export default function BlogPage() {
                     </div>
 
                     <div className={styles.blogGrid}>
+                        {/* Blog Post Card - Remove Watermark From Photo */}
+                        <Link href="/blog/how-to-remove-watermark-from-photo" className={styles.blogCard}>
+                            <div className={styles.blogImageWrapper}>
+                                <img
+                                    src="https://images.unsplash.com/photo-1542038784456-1ea8c9356efb?w=800&h=400&fit=crop"
+                                    alt="Photographer removing watermark from photo"
+                                    className={styles.blogCardImage}
+                                />
+                            </div>
+                            <div className={styles.blogCardContent}>
+                                <span className={styles.blogCategory}>PHOTO TOOLS</span>
+                                <h2 className={styles.blogCardTitle}>
+                                    How to Remove Watermark from Photo Online in 2026 (Free & Paid)
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    </svg>
+                                </h2>
+                                <p className={styles.blogCardDescription}>
+                                    We comprehensive tested 19 photo watermark removal tools on 850+ images. Discover exactly how to eliminate logos, text, and overlays in seconds while preserving image quality.
+                                </p>
+                                <div className={styles.blogCardMeta}>
+                                    <span>January 26, 2026</span>
+                                    <span>•</span>
+                                    <span>12 min read</span>
+                                </div>
+                            </div>
+                        </Link>
                         {/* Blog Post Card - Instagram Watermark Remover */}
                         <Link href="/blog/instagram-watermark-remover" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
