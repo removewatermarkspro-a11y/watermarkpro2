@@ -383,15 +383,22 @@ async function generateImages(replicate, keyword) {
                 }
             });
 
-            // prunaai/z-image-turbo typically returns a direct string URL or a FileOutput stream, or array
             let imageUrl = null;
             if (typeof output === 'string') {
                 imageUrl = output;
             } else if (Array.isArray(output) && output.length > 0) {
                 const first = output[0];
-                imageUrl = typeof first === 'string' ? first : (first.url ? (typeof first.url === 'function' ? await first.url() : first.url) : null);
+                if (typeof first === 'string') {
+                    imageUrl = first;
+                } else if (first && first.constructor && first.constructor.name === 'FileOutput') {
+                    imageUrl = String(first);
+                } else if (first && first.url) {
+                    imageUrl = typeof first.url === 'function' ? await first.url() : first.url;
+                }
             } else if (output && typeof output === 'object') {
-                if (typeof output.url === 'function') {
+                if (output.constructor && output.constructor.name === 'FileOutput') {
+                    imageUrl = String(output);
+                } else if (typeof output.url === 'function') {
                     imageUrl = await output.url();
                 } else if (output.url) {
                     imageUrl = output.url;
@@ -400,13 +407,14 @@ async function generateImages(replicate, keyword) {
                 }
             }
 
-            // The replicate SDK's url() method returns a native URL object (or occasionally FileOutput instances).
-            // Convert it to string so it passes our checks.
-            if (imageUrl && typeof imageUrl === 'object' && imageUrl.href) {
-                imageUrl = imageUrl.href;
-            } else if (imageUrl && typeof imageUrl === 'object' && typeof imageUrl.toString === 'function') {
-                imageUrl = imageUrl.toString();
+            // Convert anything that's still an object (like a native URL) to string
+            if (imageUrl && typeof imageUrl === 'object') {
+                if (imageUrl.href) imageUrl = imageUrl.href;
+                else imageUrl = String(imageUrl);
             }
+
+            // Fallback for empty/bad strings
+            if (imageUrl === '[object Object]') imageUrl = null;
 
             if (imageUrl && typeof imageUrl === 'string') {
                 imageUrls.push(imageUrl);
