@@ -371,25 +371,33 @@ async function generateImages(replicate, keyword) {
         console.log(`   Image ${i + 1}/5: Generating...`);
 
         try {
-            const output = await replicate.run('black-forest-labs/flux-schnell', {
+            const output = await replicate.run('prunaai/z-image-turbo', {
                 input: {
                     prompt: prompts[i],
-                    aspect_ratio: "16:9",
+                    width: 1024,
+                    height: 576, // 16:9 equivalent
                     output_format: "jpg",
-                    output_quality: 85
+                    output_quality: 85,
+                    guidance_scale: 0,
+                    num_inference_steps: 8
                 }
             });
 
             // Flux may return a string directly or an array/object containing the URL
+            // prunaai/z-image-turbo typically returns a direct string URL or a FileOutput stream, or array
             let imageUrl = null;
             if (typeof output === 'string') {
                 imageUrl = output;
             } else if (Array.isArray(output) && output.length > 0) {
-                // Sometimes re-wrapped in a stream stream
-                imageUrl = typeof output[0] === 'string' ? output[0] : (output[0].url || null);
+                imageUrl = typeof output[0] === 'string' ? output[0] : (output[0].url ? output[0].url() : null);
             } else if (output && typeof output === 'object') {
-                // If it's an object with a URL property (ReadableStream from Replicate SDK)
-                imageUrl = output.url || output.result || null;
+                if (typeof output.url === 'function') {
+                    imageUrl = await output.url();
+                } else if (output.url) {
+                    imageUrl = output.url;
+                } else if (output.result) {
+                    imageUrl = output.result;
+                }
             }
             if (imageUrl && typeof imageUrl === 'string') {
                 imageUrls.push(imageUrl);
