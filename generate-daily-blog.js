@@ -695,7 +695,7 @@ async function processOneTopic(replicate, topic, topicIndex, topics) {
         topics[topicIndex].status = 'completed';
         topics[topicIndex].completedDate = new Date().toISOString();
         fs.writeFileSync(TOPICS_FILE, JSON.stringify(topics, null, 2), 'utf8');
-        return true;
+        return false; // Return false so it doesn't count towards the daily limit
     }
 
     // PHASE 1: Generate article
@@ -779,21 +779,27 @@ async function main() {
         return;
     }
 
-    // Process topics
+    // Process topics until LIMIT is reached (or no more topics)
     let processed = 0;
-    for (let i = 0; i < Math.min(LIMIT, pendingTopics.length); i++) {
-        const topic = pendingTopics[i];
+    let index = 0;
+
+    while (processed < LIMIT && index < pendingTopics.length) {
+        const topic = pendingTopics[index];
+        index++;
+
         try {
             const success = await processOneTopic(replicate, topic, topic._index, topics);
             if (success) processed++;
         } catch (error) {
             console.error(`\n❌ Failed to process topic "${topic.keyword}": ${error.message}`);
             console.error(error.stack);
+            // If it failed completely, we still count it towards the limit to prevent infinite error loops
+            processed++;
         }
     }
 
     console.log(`\n${'🔷'.repeat(30)}`);
-    console.log(`✅ Done! Processed ${processed}/${Math.min(LIMIT, pendingTopics.length)} topic(s)`);
+    console.log(`✅ Done! Processed ${processed} new topic(s). Checked ${index} topic(s) total.`);
     console.log(`${'🔷'.repeat(30)}\n`);
 }
 
