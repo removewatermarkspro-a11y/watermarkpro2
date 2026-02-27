@@ -384,6 +384,13 @@ async function generateImages(replicate, keyword) {
             });
 
             // Flux may return a string directly or an array/object containing the URL
+            console.log(`DEBUG OUTPUT TYPE: typeof=${typeof output}, isArray=${Array.isArray(output)}, constructor=${output?.constructor?.name}`);
+            try {
+                console.log(`DEBUG RAW DATA: ${JSON.stringify(output)}`);
+            } catch (e) {
+                console.log(`DEBUG RAW PRINT FAILED: ${e.message}`);
+            }
+
             // prunaai/z-image-turbo typically returns a direct string URL or a FileOutput stream, or array
             let imageUrl = null;
             if (typeof output === 'string') {
