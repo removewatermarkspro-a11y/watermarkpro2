@@ -74,6 +74,7 @@ function buildArticlePrompt(keyword, otherKeywords) {
     return `You are an expert SEO content writer and digital marketing specialist. You write for ${SITE_NAME} (${BRAND_URL}), the leading AI-powered watermark removal tool.
 
 TASK: Write a comprehensive, SEO-optimized blog article about "${keyword}".
+IMPORTANT: You MUST write the ENTIRE article in ENGLISH ONLY, regardless of the language of the keyword. Even if the keyword is in Spanish, Portuguese, or French, the title, headings, and all body text MUST be in English.
 
 === CRITICAL REQUIREMENTS ===
 
@@ -136,10 +137,12 @@ TASK: Write a comprehensive, SEO-optimized blog article about "${keyword}".
    - Photoshop — $22.99/mo, professional but complex, steep learning curve
 
 9. IMAGE PLACEHOLDERS:
-   - Insert exactly 3 image placeholders in the article:
+   - Insert exactly 5 image placeholders in the article:
      [IMAGE_PLACEHOLDER_1] — After the introduction
-     [IMAGE_PLACEHOLDER_2] — In the middle of the article (after step-by-step or comparison)
-     [IMAGE_PLACEHOLDER_3] — Before the FAQ section
+     [IMAGE_PLACEHOLDER_2] — After the Understanding the Topic section
+     [IMAGE_PLACEHOLDER_3] — In the Step-by-Step Guide section
+     [IMAGE_PLACEHOLDER_4] — In the Top Tools Comparison section
+     [IMAGE_PLACEHOLDER_5] — Before the FAQ section
    - Each placeholder should be on its own line
 
 10. LINK STYLE:
@@ -219,7 +222,7 @@ const IMAGE_SCENE_TEMPLATES = [
     "Night-time coding session with a developer building an AI watermark removal tool, dark room lit by screens, {keyword}, realistic, 8k, neon ambient glow, no text"
 ];
 
-function getImagePrompts(keyword, count = 3) {
+function getImagePrompts(keyword, count = 5) {
     // Deterministic selection based on keyword hash
     let hash = 0;
     for (let i = 0; i < keyword.length; i++) {
@@ -359,25 +362,21 @@ function sanitizeHtml(html) {
 // ============================================================
 
 async function generateImages(replicate, keyword) {
-    console.log(`\n🎨 Phase 2: Generating 3 images...`);
+    console.log(`\n🎨 Phase 2: Generating 5 images...`);
 
-    const prompts = getImagePrompts(keyword, 3);
+    const prompts = getImagePrompts(keyword, 5);
     const imageUrls = [];
 
     for (let i = 0; i < prompts.length; i++) {
-        console.log(`   Image ${i + 1}/3: Generating...`);
+        console.log(`   Image ${i + 1}/5: Generating...`);
 
         try {
-            const output = await replicate.run('prunaai/z-image-turbo', {
+            const output = await replicate.run('black-forest-labs/flux-schnell', {
                 input: {
                     prompt: prompts[i],
-                    width: 1024,
-                    height: 576, // 16:9 ratio
-                    num_inference_steps: 8,
-                    guidance_scale: 0,
-                    output_format: 'jpg',
-                    output_quality: 85,
-                    go_fast: true
+                    aspect_ratio: "16:9",
+                    output_format: "jpg",
+                    output_quality: 85
                 }
             });
 
@@ -399,7 +398,7 @@ async function generateImages(replicate, keyword) {
         if (i < prompts.length - 1) await sleep(1000);
     }
 
-    console.log(`   📊 Generated ${imageUrls.filter(u => !u.includes('placehold')).length}/3 images successfully`);
+    console.log(`   📊 Generated ${imageUrls.filter(u => !u.includes('placehold')).length}/5 images successfully`);
     return imageUrls;
 }
 
@@ -411,7 +410,7 @@ function buildPageTsx(metadata, htmlContent, imageUrls, slug) {
     const today = getToday();
 
     // Replace image placeholders
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 5; i++) {
         const placeholder = `[IMAGE_PLACEHOLDER_${i + 1}]`;
         const imgUrl = imageUrls[i] || 'https://placehold.co/1024x576/1a1a2e/a855f7?text=Image';
         const imgTag = `<div class="sectionImage"><img src="${imgUrl}" alt="${metadata.title} - illustration ${i + 1}" width="1024" height="576" loading="${i === 0 ? 'eager' : 'lazy'}" style="width:100%;height:auto;border-radius:12px;" /></div>`;
