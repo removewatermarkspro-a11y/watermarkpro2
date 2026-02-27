@@ -380,11 +380,20 @@ async function generateImages(replicate, keyword) {
                 }
             });
 
-            const imageUrl = typeof output === 'string' ? output : (output && output[0] ? output[0] : null);
-
-            if (imageUrl) {
+            // Flux may return a string directly or an array/object containing the URL
+            let imageUrl = null;
+            if (typeof output === 'string') {
+                imageUrl = output;
+            } else if (Array.isArray(output) && output.length > 0) {
+                // Sometimes re-wrapped in a stream stream
+                imageUrl = typeof output[0] === 'string' ? output[0] : (output[0].url || null);
+            } else if (output && typeof output === 'object') {
+                // If it's an object with a URL property (ReadableStream from Replicate SDK)
+                imageUrl = output.url || output.result || null;
+            }
+            if (imageUrl && typeof imageUrl === 'string') {
                 imageUrls.push(imageUrl);
-                console.log(`   ✅ Image ${i + 1} generated: ${imageUrl.substring(0, 80)}...`);
+                console.log(`   ✅ Image ${i + 1} generated: ${imageUrl.substring(0, Math.min(imageUrl.length, 80))}...`);
             } else {
                 console.log(`   ❌ Image ${i + 1} failed: no URL returned`);
                 imageUrls.push('https://placehold.co/1024x576/1a1a2e/a855f7?text=Image+Generation+Failed');
@@ -394,11 +403,13 @@ async function generateImages(replicate, keyword) {
             imageUrls.push('https://placehold.co/1024x576/1a1a2e/a855f7?text=Image+Generation+Failed');
         }
 
-        // Small pause between image generations
-        if (i < prompts.length - 1) await sleep(1000);
+        // 10-second pause between image generations to avoid 429 Too Many Requests
+        // The Replicate account has a limit of 6 requests per minute
+        if (i < prompts.length - 1) await sleep(10000);
     }
 
-    console.log(`   📊 Generated ${imageUrls.filter(u => !u.includes('placehold')).length}/5 images successfully`);
+    const successfulImageUrls = imageUrls.filter(u => u && typeof u === 'string' && !u.includes('placehold'));
+    console.log(`   📊 Generated ${successfulImageUrls.length}/5 images successfully`);
     return imageUrls;
 }
 
