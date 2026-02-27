@@ -1,0 +1,804 @@
+/**
+ * generate-daily-blog.js
+ * 
+ * Automated daily blog article generator for RemoveWatermark Pro
+ * Uses Claude (via Replicate) for text + z-image (via Replicate) for images
+ * English only — generates ~2000-word SEO-optimized articles
+ */
+
+const Replicate = require('replicate');
+const fs = require('fs');
+const path = require('path');
+
+// ============================================================
+// CONFIGURATION
+// ============================================================
+
+const REPLICATE_API_TOKEN = process.env.REPLICATE_API_TOKEN;
+const DOMAIN = 'https://removewatermarkspro.com';
+const SITE_NAME = 'Remove Watermark Pro';
+const BRAND = 'RemoveWatermarkPro';
+const BRAND_URL = 'https://removewatermarkpro.co';
+const CTA_COLOR = '#a855f7'; // Purple accent matching the site
+const LINK_COLOR = '#ec4899'; // Pink link color matching existing articles
+
+const TOPICS_FILE = path.join(__dirname, 'data', 'blog-topics.json');
+const BLOG_DIR = path.join(__dirname, 'app', 'blog');
+const BLOG_INDEX_FILE = path.join(BLOG_DIR, 'page.tsx');
+const ARTICLE_CSS_TEMPLATE = path.join(BLOG_DIR, 'how-to-remove-watermark-from-photo', 'Article.module.css');
+
+const LIMIT = 1; // Number of topics to process per run
+
+// ============================================================
+// HELPERS
+// ============================================================
+
+function slugify(text) {
+    return text
+        .toLowerCase()
+        .trim()
+        .replace(/[^\w\s-]/g, '')
+        .replace(/[\s_]+/g, '-')
+        .replace(/^-+|-+$/g, '');
+}
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function getToday() {
+    const d = new Date();
+    const months = ['January', 'February', 'March', 'April', 'May', 'June',
+        'July', 'August', 'September', 'October', 'November', 'December'];
+    return {
+        formatted: `${months[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`,
+        iso: d.toISOString(),
+        year: d.getFullYear()
+    };
+}
+
+function escapeForJsx(str) {
+    return str
+        .replace(/&/g, '&amp;')
+        .replace(/'/g, "&apos;");
+}
+
+// ============================================================
+// CLAUDE PROMPT — ARTICLE GENERATION
+// ============================================================
+
+function buildArticlePrompt(keyword, otherKeywords) {
+    const today = getToday();
+    const otherKwList = otherKeywords.map(k => `"${k}"`).join(', ');
+
+    return `You are an expert SEO content writer and digital marketing specialist. You write for ${SITE_NAME} (${BRAND_URL}), the leading AI-powered watermark removal tool.
+
+TASK: Write a comprehensive, SEO-optimized blog article about "${keyword}".
+
+=== CRITICAL REQUIREMENTS ===
+
+1. TITLE:
+   - Must be approximately 60-70 characters long
+   - Must start with one of: "How to", "Best Ways to", "Top 5", "Top 10", "Best"
+   - Must contain the exact keyword "${keyword}"
+   - Do NOT use colons (:) in the title
+   - Include the year ${today.year}
+
+2. SLUG:
+   - The slug must be EXACTLY: "${slugify(keyword)}"
+
+3. KEYWORD DENSITY:
+   - The exact phrase "${keyword}" must appear in the H1 title
+   - The exact phrase "${keyword}" must appear approximately 10 times naturally throughout the article body
+   - These other related keywords must also appear naturally in the text (2-3 times each, NO keyword stuffing): ${otherKwList}
+
+4. ARTICLE LENGTH:
+   - Target: 1800-2200 words
+   - Must have substantial, valuable content — NOT filler
+
+5. ARTICLE STRUCTURE (must include ALL of these sections):
+   a) Quick Answer — A concise 2-3 sentence answer optimized for Google Featured Snippets and LLM quick answers
+   b) Table of Contents — Links to all sections
+   c) Introduction — Hook the reader, mention testing credentials
+   d) Understanding the Topic — Deep dive into the subject
+   e) Step-by-Step Guide — Numbered actionable steps (8-10 steps)
+   f) Top Tools Comparison — Compare 5-7 tools with ${BRAND} as #1
+   g) Real Test Results — Data-driven section with specific numbers
+   h) Tips & Best Practices — Expert advice section
+   i) Legal/Ethical Considerations — When relevant to watermark topics
+   j) FAQ Section — EXACTLY 15 questions with detailed answers
+
+6. CREDIBILITY & TESTING CLAIMS:
+   - Include phrases like "I tested 45 different tools and among those..." or "After testing 38 watermark removal solutions..."
+   - Use specific numbers: "processed over 920 images", "achieved 94% success rate"
+   - Mention testing methodology briefly
+   - Sound like a real expert who genuinely tested these tools
+
+7. PROMOTION OF ${BRAND} (SUBTLE, NOT FLAGRANT):
+   - ${BRAND} should be mentioned as the #1 recommended tool
+   - Include 5-8 natural mentions throughout the article
+   - Use internal links: <a href="${BRAND_URL}" style="color: ${LINK_COLOR}; font-weight: bold;">${BRAND}</a>
+   - Also link to specific features:
+     * <a href="${BRAND_URL}/watermark-remover" style="color: ${LINK_COLOR}; font-weight: bold;">watermark remover tool</a>
+     * <a href="${BRAND_URL}/background-remover" style="color: ${LINK_COLOR}; font-weight: bold;">background remover</a>
+     * <a href="${BRAND_URL}/text-remover-ai" style="color: ${LINK_COLOR}; font-weight: bold;">text remover AI</a>
+     * <a href="${BRAND_URL}/object-remover-ai" style="color: ${LINK_COLOR}; font-weight: bold;">object remover AI</a>
+   - The promotion must feel natural and editorial, NOT like an ad
+   - Compare fairly with competitors but highlight ${BRAND}'s advantages
+
+8. COMPETITOR DATA (use these real competitors with realistic data):
+   - ${BRAND} — Best overall, AI-powered, 3 free removals, $9.99/mo pro
+   - Apowersoft Watermark Remover — $29.95/year, desktop app, decent for batch
+   - HitPaw Watermark Remover — $19.95/month, good for video, slower
+   - Inpaint — $19.99 one-time, manual selection, good for simple cases
+   - Fotor — Free tier available, AI-powered, adds own watermark
+   - MarkGo (iMyFone) — $29.99/month, video & photo, feature-rich
+   - Photoshop — $22.99/mo, professional but complex, steep learning curve
+
+9. IMAGE PLACEHOLDERS:
+   - Insert exactly 3 image placeholders in the article:
+     [IMAGE_PLACEHOLDER_1] — After the introduction
+     [IMAGE_PLACEHOLDER_2] — In the middle of the article (after step-by-step or comparison)
+     [IMAGE_PLACEHOLDER_3] — Before the FAQ section
+   - Each placeholder should be on its own line
+
+10. LINK STYLE:
+    - All links to ${BRAND_URL} should use: <a href="URL" style="color: ${LINK_COLOR}; font-weight: bold;">text</a>
+    - External competitor links should use: <a href="URL" target="_blank" rel="noopener noreferrer">text</a>
+
+11. HTML FORMATTING:
+    - Use proper HTML tags: <h2>, <h3>, <p>, <ul>, <ol>, <li>, <strong>, <em>, <a>
+    - Do NOT include <h1> in the HTML body (it will be added separately)
+    - Do NOT include <html>, <head>, <body> tags
+    - Use <div class="step"> for step-by-step items
+    - Use <div class="faq-item"> for FAQ items
+
+=== OUTPUT FORMAT ===
+
+You MUST return your response in this EXACT format:
+
+\`\`\`json
+{
+  "title": "Your Article Title Here (60-70 chars)",
+  "meta_description": "Compelling meta description under 160 characters with the keyword",
+  "slug": "${slugify(keyword)}",
+  "quick_answer": "2-3 sentence quick answer for featured snippets",
+  "category": "APPROPRIATE CATEGORY IN CAPS (e.g., PHOTO TOOLS, VIDEO TOOLS, AI TOOLS, IMAGE EDITING)",
+  "read_time": "12 min read",
+  "faq": [
+    {"question": "FAQ question 1?", "answer": "Detailed answer 1"},
+    {"question": "FAQ question 2?", "answer": "Detailed answer 2"},
+    {"question": "FAQ question 3?", "answer": "Detailed answer 3"},
+    {"question": "FAQ question 4?", "answer": "Detailed answer 4"},
+    {"question": "FAQ question 5?", "answer": "Detailed answer 5"},
+    {"question": "FAQ question 6?", "answer": "Detailed answer 6"},
+    {"question": "FAQ question 7?", "answer": "Detailed answer 7"},
+    {"question": "FAQ question 8?", "answer": "Detailed answer 8"},
+    {"question": "FAQ question 9?", "answer": "Detailed answer 9"},
+    {"question": "FAQ question 10?", "answer": "Detailed answer 10"},
+    {"question": "FAQ question 11?", "answer": "Detailed answer 11"},
+    {"question": "FAQ question 12?", "answer": "Detailed answer 12"},
+    {"question": "FAQ question 13?", "answer": "Detailed answer 13"},
+    {"question": "FAQ question 14?", "answer": "Detailed answer 14"},
+    {"question": "FAQ question 15?", "answer": "Detailed answer 15"}
+  ]
+}
+\`\`\`
+
+[[[HTML_CONTENT_START]]]
+<Your full HTML article content here>
+[[[HTML_CONTENT_END]]]
+
+IMPORTANT: The JSON block must come FIRST, then the HTML content between the markers. Do not put HTML inside the JSON.`;
+}
+
+// ============================================================
+// IMAGE PROMPT TEMPLATES
+// ============================================================
+
+const IMAGE_SCENE_TEMPLATES = [
+    "A professional photographer editing photos on a sleek modern laptop in a bright minimalist workspace, removing watermarks from images displayed on screen, {keyword}, realistic, 8k, cinematic lighting, soft focus background, no text",
+    "Close-up of a modern computer screen showing before-and-after comparison of watermark removal from a stunning landscape photo, {keyword}, realistic, 8k, sharp details, professional workspace, no text",
+    "Young creative professional using AI tools on a large monitor to clean up photos, modern office with plants and natural light, {keyword}, realistic, 8k, cinematic lighting, no text",
+    "Split-screen view on a high-end display showing a watermarked image transforming into a clean image, sleek desk setup with coffee cup, {keyword}, realistic, 8k, warm lighting, no text",
+    "Aerial view of a creative workspace with multiple screens showing image editing software, watermark removal in progress, {keyword}, realistic, 8k, soft ambient lighting, no text",
+    "Freelancer working on a tablet editing photos in a cozy cafe setting, removing watermarks from downloaded images, {keyword}, realistic, 8k, golden hour lighting, bokeh background, no text",
+    "Digital artist at a standing desk with ultrawide monitor displaying AI-powered photo editing tools, clean modern apartment, {keyword}, realistic, 8k, natural daylight, no text",
+    "Close-up of hands typing on a keyboard while an AI tool processes and removes watermarks from photos on screen, {keyword}, realistic, 8k, shallow depth of field, no text",
+    "Modern home office setup with dual monitors showing batch watermark removal processing, dark theme interface, {keyword}, realistic, 8k, moody lighting, no text",
+    "Content creator reviewing cleaned photos on a sleek laptop in a bright studio space, social media content preparation, {keyword}, realistic, 8k, professional lighting, no text",
+    "Team of creatives collaborating around a large screen displaying watermark removal results, modern office space, {keyword}, realistic, 8k, bright ambient lighting, no text",
+    "Minimalist desk with MacBook showing a clear before-after watermark removal comparison, aesthetic workspace with succulents, {keyword}, realistic, 8k, soft natural light, no text",
+    "Professional retoucher using advanced AI software to process multiple images simultaneously, removing watermarks efficiently, {keyword}, realistic, 8k, studio lighting, no text",
+    "E-commerce product photographer cleaning watermarks from product images on a calibrated monitor, studio setup, {keyword}, realistic, 8k, precise lighting, no text",
+    "Social media manager batch processing images for content calendar, removing watermarks from stock photos, {keyword}, realistic, 8k, trendy office space, no text",
+    "Close-up of a smartphone screen showing an app that removes watermarks from photos instantly, hand holding phone, {keyword}, realistic, 8k, blurred city background, no text",
+    "Designer's workspace with Wacom tablet and large monitor showing precise watermark removal work, creative studio, {keyword}, realistic, 8k, warm studio lighting, no text",
+    "Student using a free online tool to remove watermarks for a school project, laptop on desk in library, {keyword}, realistic, 8k, quiet ambiance, no text",
+    "Marketing professional preparing clean visuals for a campaign, AI watermark remover on screen, corporate office, {keyword}, realistic, 8k, professional setting, no text",
+    "Night-time coding session with a developer building an AI watermark removal tool, dark room lit by screens, {keyword}, realistic, 8k, neon ambient glow, no text"
+];
+
+function getImagePrompts(keyword, count = 3) {
+    // Deterministic selection based on keyword hash
+    let hash = 0;
+    for (let i = 0; i < keyword.length; i++) {
+        hash = ((hash << 5) - hash) + keyword.charCodeAt(i);
+        hash |= 0;
+    }
+    hash = Math.abs(hash);
+
+    const prompts = [];
+    const usedIndices = new Set();
+    for (let i = 0; i < count; i++) {
+        let idx = (hash + i * 7) % IMAGE_SCENE_TEMPLATES.length;
+        while (usedIndices.has(idx)) {
+            idx = (idx + 1) % IMAGE_SCENE_TEMPLATES.length;
+        }
+        usedIndices.add(idx);
+        prompts.push(IMAGE_SCENE_TEMPLATES[idx].replace('{keyword}', keyword));
+    }
+    return prompts;
+}
+
+// ============================================================
+// PHASE 1: GENERATE ARTICLE VIA CLAUDE
+// ============================================================
+
+async function generateArticle(replicate, keyword, otherKeywords) {
+    const prompt = buildArticlePrompt(keyword, otherKeywords);
+    const maxRetries = 3;
+
+    for (let attempt = 1; attempt <= maxRetries; attempt++) {
+        console.log(`\n📝 Phase 1: Generating article (attempt ${attempt}/${maxRetries})...`);
+        console.log(`   Keyword: "${keyword}"`);
+
+        try {
+            const output = await replicate.run('anthropic/claude-4-sonnet', {
+                input: {
+                    prompt: prompt,
+                    system_prompt: 'You are an expert SEO content writer. Follow the instructions precisely and output in the exact format requested.',
+                    max_tokens: 8192
+                }
+            });
+
+            // Claude returns an array of strings, concatenate them
+            const fullResponse = Array.isArray(output) ? output.join('') : String(output);
+            console.log(`   Response length: ${fullResponse.length} chars`);
+
+            // Parse JSON metadata
+            const jsonMatch = fullResponse.match(/```json\s*([\s\S]*?)```/);
+            if (!jsonMatch) {
+                console.log('   ❌ No JSON block found in response');
+                if (attempt < maxRetries) { await sleep(3000); continue; }
+                throw new Error('Failed to extract JSON metadata from Claude response');
+            }
+
+            let metadata;
+            try {
+                metadata = JSON.parse(jsonMatch[1].trim());
+            } catch (e) {
+                console.log('   ❌ Failed to parse JSON:', e.message);
+                if (attempt < maxRetries) { await sleep(3000); continue; }
+                throw new Error('Failed to parse JSON metadata: ' + e.message);
+            }
+
+            // Parse HTML content
+            let htmlContent = '';
+            const htmlMatch = fullResponse.match(/\[\[\[HTML_CONTENT_START\]\]\]([\s\S]*?)\[\[\[HTML_CONTENT_END\]\]\]/);
+            if (htmlMatch) {
+                htmlContent = htmlMatch[1].trim();
+            } else {
+                // Fallback: try to find HTML after the JSON block
+                const afterJson = fullResponse.substring(fullResponse.indexOf('```', jsonMatch.index + 7) + 3);
+                const htmlStartIdx = afterJson.indexOf('<');
+                if (htmlStartIdx !== -1) {
+                    htmlContent = afterJson.substring(htmlStartIdx).trim();
+                    // Clean up any trailing markers
+                    htmlContent = htmlContent.replace(/\[\[\[.*?\]\]\]/g, '').trim();
+                }
+            }
+
+            if (htmlContent.length < 2000) {
+                console.log(`   ❌ HTML content too short: ${htmlContent.length} chars`);
+                if (attempt < maxRetries) { await sleep(3000); continue; }
+                throw new Error('Generated HTML content is too short');
+            }
+
+            // Sanitize HTML
+            htmlContent = sanitizeHtml(htmlContent);
+
+            console.log(`   ✅ Article generated successfully`);
+            console.log(`   📊 Title: "${metadata.title}"`);
+            console.log(`   📊 HTML length: ${htmlContent.length} chars`);
+            console.log(`   📊 FAQ count: ${metadata.faq ? metadata.faq.length : 0}`);
+
+            return { metadata, htmlContent };
+
+        } catch (error) {
+            console.log(`   ❌ Error: ${error.message}`);
+            if (attempt < maxRetries) {
+                console.log(`   ⏳ Retrying in 3 seconds...`);
+                await sleep(3000);
+            } else {
+                throw error;
+            }
+        }
+    }
+}
+
+function sanitizeHtml(html) {
+    // Remove any duplicate H1 tags (they'll be added in the template)
+    html = html.replace(/<h1[^>]*>[\s\S]*?<\/h1>/gi, '');
+
+    // Remove empty paragraphs
+    html = html.replace(/<p>\s*<\/p>/g, '');
+
+    // Fix self-closing tags
+    html = html.replace(/<br\s*\/?>/g, '<br />');
+    html = html.replace(/<hr\s*\/?>/g, '<hr />');
+
+    // Clean up markdown artifacts that might have leaked
+    html = html.replace(/```[\s\S]*?```/g, '');
+    html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+    html = html.replace(/\*(.*?)\*/g, '<em>$1</em>');
+
+    // Add rel attributes to external links
+    html = html.replace(/<a\s+href="(https?:\/\/(?!removewatermark)[^"]*)"(?![^>]*rel=)/g,
+        '<a href="$1" target="_blank" rel="noopener noreferrer"');
+
+    // Ensure all links to our domain have proper styling
+    html = html.replace(/<a\s+href="(https?:\/\/removewatermark[^"]*)"(?![^>]*style=)/g,
+        `<a href="$1" style="color: ${LINK_COLOR}; font-weight: bold;"`);
+
+    return html;
+}
+
+// ============================================================
+// PHASE 2: GENERATE IMAGES VIA Z-IMAGE
+// ============================================================
+
+async function generateImages(replicate, keyword) {
+    console.log(`\n🎨 Phase 2: Generating 3 images...`);
+
+    const prompts = getImagePrompts(keyword, 3);
+    const imageUrls = [];
+
+    for (let i = 0; i < prompts.length; i++) {
+        console.log(`   Image ${i + 1}/3: Generating...`);
+
+        try {
+            const output = await replicate.run('prunaai/z-image-turbo', {
+                input: {
+                    prompt: prompts[i],
+                    width: 1024,
+                    height: 576, // 16:9 ratio
+                    num_inference_steps: 8,
+                    guidance_scale: 0,
+                    output_format: 'jpg',
+                    output_quality: 85,
+                    go_fast: true
+                }
+            });
+
+            const imageUrl = typeof output === 'string' ? output : (output && output[0] ? output[0] : null);
+
+            if (imageUrl) {
+                imageUrls.push(imageUrl);
+                console.log(`   ✅ Image ${i + 1} generated: ${imageUrl.substring(0, 80)}...`);
+            } else {
+                console.log(`   ❌ Image ${i + 1} failed: no URL returned`);
+                imageUrls.push('https://placehold.co/1024x576/1a1a2e/a855f7?text=Image+Generation+Failed');
+            }
+        } catch (error) {
+            console.log(`   ❌ Image ${i + 1} error: ${error.message}`);
+            imageUrls.push('https://placehold.co/1024x576/1a1a2e/a855f7?text=Image+Generation+Failed');
+        }
+
+        // Small pause between image generations
+        if (i < prompts.length - 1) await sleep(1000);
+    }
+
+    console.log(`   📊 Generated ${imageUrls.filter(u => !u.includes('placehold')).length}/3 images successfully`);
+    return imageUrls;
+}
+
+// ============================================================
+// PHASE 3: WRITE ARTICLE PAGE.TSX
+// ============================================================
+
+function buildPageTsx(metadata, htmlContent, imageUrls, slug) {
+    const today = getToday();
+
+    // Replace image placeholders
+    for (let i = 0; i < 3; i++) {
+        const placeholder = `[IMAGE_PLACEHOLDER_${i + 1}]`;
+        const imgUrl = imageUrls[i] || 'https://placehold.co/1024x576/1a1a2e/a855f7?text=Image';
+        const imgTag = `<div class="sectionImage"><img src="${imgUrl}" alt="${metadata.title} - illustration ${i + 1}" width="1024" height="576" loading="${i === 0 ? 'eager' : 'lazy'}" style="width:100%;height:auto;border-radius:12px;" /></div>`;
+        htmlContent = htmlContent.replace(placeholder, imgTag);
+    }
+
+    // Remove any remaining unreplaced placeholders
+    htmlContent = htmlContent.replace(/\[IMAGE_PLACEHOLDER_\d+\]/g, '');
+
+    // Escape backticks and ${} in HTML for template literal safety
+    const safeHtml = htmlContent
+        .replace(/\\/g, '\\\\')
+        .replace(/`/g, '\\`')
+        .replace(/\$\{/g, '\\${');
+
+    // Build FAQ schema
+    const faqSchemaEntries = (metadata.faq || []).map(f => `            {
+                "@type": "Question",
+                "name": ${JSON.stringify(f.question)},
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": ${JSON.stringify(f.answer)}
+                }
+            }`).join(',\n');
+
+    // Build FAQ HTML
+    const faqHtml = (metadata.faq || []).map((f, i) => `                                <div className={styles.faqItem}>
+                                    <h3>${i + 1}. ${escapeForJsx(f.question)}</h3>
+                                    <p>${escapeForJsx(f.answer)}</p>
+                                </div>`).join('\n');
+
+    const title = metadata.title || 'Blog Article';
+    const metaDesc = metadata.meta_description || '';
+    const quickAnswer = metadata.quick_answer || '';
+    const category = metadata.category || 'AI TOOLS';
+    const readTime = metadata.read_time || '12 min read';
+    const heroImage = imageUrls[0] || 'https://placehold.co/1200x630/1a1a2e/a855f7?text=Blog+Image';
+
+    const pageTsx = `import type { Metadata } from 'next'
+import Link from 'next/link'
+import styles from './Article.module.css'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
+import BlogSidebar from '@/components/BlogSidebar'
+import MobileFloatingCTA from '@/components/MobileFloatingCTA'
+import { LanguageProvider } from '@/contexts/LanguageContext'
+
+export const metadata: Metadata = {
+    title: '${title.replace(/'/g, "\\'")}',
+    description: '${metaDesc.replace(/'/g, "\\'")}',
+
+    alternates: {
+        canonical: '${DOMAIN}/blog/${slug}',
+    },
+
+    openGraph: {
+        title: '${title.replace(/'/g, "\\'")}',
+        description: '${metaDesc.replace(/'/g, "\\'")}',
+        url: '${DOMAIN}/blog/${slug}',
+        siteName: '${SITE_NAME}',
+        locale: 'en_US',
+        type: 'article',
+        publishedTime: '${today.iso}',
+        modifiedTime: '${today.iso}',
+        authors: ['${SITE_NAME}'],
+        images: [
+            {
+                url: '${heroImage}',
+                width: 1200,
+                height: 630,
+                alt: '${title.replace(/'/g, "\\'")}'
+            }
+        ]
+    },
+
+    twitter: {
+        card: 'summary_large_image',
+        title: '${title.replace(/'/g, "\\'")}',
+        description: '${metaDesc.replace(/'/g, "\\'")}',
+        images: ['${heroImage}']
+    },
+
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            'max-video-preview': -1,
+            'max-image-preview': 'large',
+            'max-snippet': -1,
+        },
+    },
+}
+
+export default function BlogArticle() {
+    const faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+${faqSchemaEntries}
+        ]
+    }
+
+    const articleSchema = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "${title.replace(/"/g, '\\"')}",
+        "image": "${heroImage}",
+        "datePublished": "${today.iso}",
+        "dateModified": "${today.iso}",
+        "author": {
+            "@type": "Organization",
+            "name": "${SITE_NAME}"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "${SITE_NAME}",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "${DOMAIN}/logo.png"
+            }
+        },
+        "description": "${metaDesc.replace(/"/g, '\\"')}"
+    }
+
+    return (
+        <LanguageProvider>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+            />
+            <Header />
+            <main className={styles.article}>
+                <div className={styles.container}>
+                    <article className={styles.articleContent}>
+                        <div className={styles.articleHeader}>
+                            <span className={styles.category}>${category}</span>
+                            <h1 className={styles.title}>
+                                ${escapeForJsx(title)}
+                            </h1>
+                            <div className={styles.meta}>
+                                <span>${today.formatted}</span>
+                                <span>&bull;</span>
+                                <span>${readTime}</span>
+                            </div>
+                        </div>
+
+                        {/* Hero Image */}
+                        <div className={styles.heroImage}>
+                            <img
+                                src="${heroImage}"
+                                alt="${escapeForJsx(title)}"
+                                width={1200}
+                                height={630}
+                            />
+                        </div>
+
+                        {/* Quick Answer */}
+                        <div className={styles.quickAnswer}>
+                            <h2>🔹 Quick Answer</h2>
+                            <p>
+                                ${escapeForJsx(quickAnswer)}
+                            </p>
+                        </div>
+
+                        {/* Article Body */}
+                        <div
+                            className={styles.section}
+                            dangerouslySetInnerHTML={{ __html: \`${safeHtml}\` }}
+                        />
+
+                        {/* FAQ Section */}
+                        <section id="faq" className={styles.section}>
+                            <h2>Frequently Asked Questions</h2>
+                            <div className={styles.faq}>
+${faqHtml}
+                            </div>
+                        </section>
+
+                        <div className={styles.finalCta}>
+                            <h2>Ready to Remove Watermarks in Seconds?</h2>
+                            <p>Try the #1 rated watermark remover today. No credit card required for trial.</p>
+                            <Link href="/watermark-remover" className={styles.ctaButtonLarge}>
+                                Remove Watermark Now
+                            </Link>
+                        </div>
+
+                    </article>
+
+                    <div className={styles.sidebarWrapper}>
+                        <BlogSidebar />
+                    </div>
+                </div>
+                <MobileFloatingCTA />
+            </main>
+            <Footer />
+        </LanguageProvider>
+    )
+}
+`;
+
+    return pageTsx;
+}
+
+// ============================================================
+// PHASE 4: UPDATE BLOG INDEX
+// ============================================================
+
+function updateBlogIndex(slug, title, category, description, heroImage) {
+    const today = getToday();
+
+    console.log(`\n📋 Phase 4: Updating blog index...`);
+
+    let indexContent = fs.readFileSync(BLOG_INDEX_FILE, 'utf8');
+
+    // Create new card JSX
+    const newCard = `                        {/* Blog Post Card - ${title} */}
+                        <Link href="/blog/${slug}" className={styles.blogCard}>
+                            <div className={styles.blogImageWrapper}>
+                                <img
+                                    src="${heroImage}"
+                                    alt="${escapeForJsx(title)}"
+                                    className={styles.blogCardImage}
+                                />
+                            </div>
+                            <div className={styles.blogCardContent}>
+                                <span className={styles.blogCategory}>${category}</span>
+                                <h2 className={styles.blogCardTitle}>
+                                    ${escapeForJsx(title)}
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    </svg>
+                                </h2>
+                                <p className={styles.blogCardDescription}>
+                                    ${escapeForJsx(description)}
+                                </p>
+                                <div className={styles.blogCardMeta}>
+                                    <span>${today.formatted}</span>
+                                    <span>&bull;</span>
+                                    <span>12 min read</span>
+                                </div>
+                            </div>
+                        </Link>`;
+
+    // Insert at the TOP of the blogGrid (after the opening div)
+    const gridMarker = '<div className={styles.blogGrid}>';
+    const gridIndex = indexContent.indexOf(gridMarker);
+
+    if (gridIndex !== -1) {
+        const insertPos = gridIndex + gridMarker.length;
+        indexContent = indexContent.substring(0, insertPos) + '\n' + newCard + '\n' + indexContent.substring(insertPos);
+        fs.writeFileSync(BLOG_INDEX_FILE, indexContent, 'utf8');
+        console.log(`   ✅ Blog index updated with new card for "${slug}"`);
+    } else {
+        console.log(`   ❌ Could not find blogGrid in blog index file`);
+    }
+}
+
+// ============================================================
+// PHASE 5: WRITE FILES AND MARK COMPLETE
+// ============================================================
+
+async function processOneTopic(replicate, topic, topicIndex, topics) {
+    const keyword = topic.keyword;
+    const otherKeywords = topic.otherKeywords || [];
+    const slug = slugify(keyword);
+
+    console.log(`\n${'='.repeat(60)}`);
+    console.log(`🚀 Processing topic: "${keyword}"`);
+    console.log(`   Slug: ${slug}`);
+    console.log(`${'='.repeat(60)}`);
+
+    // Check if article already exists
+    const articleDir = path.join(BLOG_DIR, slug);
+    if (fs.existsSync(path.join(articleDir, 'page.tsx'))) {
+        console.log(`   ⏭️  Article already exists at app/blog/${slug}/page.tsx — skipping`);
+        topics[topicIndex].status = 'completed';
+        topics[topicIndex].completedDate = new Date().toISOString();
+        fs.writeFileSync(TOPICS_FILE, JSON.stringify(topics, null, 2), 'utf8');
+        return true;
+    }
+
+    // PHASE 1: Generate article
+    const { metadata, htmlContent } = await generateArticle(replicate, keyword, otherKeywords);
+
+    // PHASE 2: Generate images
+    const imageUrls = await generateImages(replicate, keyword);
+
+    // PHASE 3: Write article files
+    console.log(`\n📁 Phase 3: Writing article files...`);
+
+    // Create article directory
+    if (!fs.existsSync(articleDir)) {
+        fs.mkdirSync(articleDir, { recursive: true });
+    }
+
+    // Copy CSS template
+    if (fs.existsSync(ARTICLE_CSS_TEMPLATE)) {
+        fs.copyFileSync(ARTICLE_CSS_TEMPLATE, path.join(articleDir, 'Article.module.css'));
+        console.log(`   ✅ Copied Article.module.css`);
+    } else {
+        console.log(`   ❌ CSS template not found at ${ARTICLE_CSS_TEMPLATE}`);
+    }
+
+    // Build and write page.tsx
+    const pageTsx = buildPageTsx(metadata, htmlContent, imageUrls, slug);
+    fs.writeFileSync(path.join(articleDir, 'page.tsx'), pageTsx, 'utf8');
+    console.log(`   ✅ Written page.tsx (${pageTsx.length} chars)`);
+
+    // PHASE 4: Update blog index
+    const heroImage = imageUrls[0] || 'https://placehold.co/800x450/1a1a2e/a855f7?text=Blog';
+    const description = metadata.meta_description || `Learn about ${keyword} with our comprehensive guide.`;
+    updateBlogIndex(slug, metadata.title, metadata.category || 'AI TOOLS', description, heroImage);
+
+    // PHASE 5: Mark topic completed
+    console.log(`\n✅ Phase 5: Marking topic as completed...`);
+    topics[topicIndex].status = 'completed';
+    topics[topicIndex].completedDate = new Date().toISOString();
+    topics[topicIndex].primaryImage = heroImage;
+    if (metadata.title) { topics[topicIndex].title = metadata.title; }
+    fs.writeFileSync(TOPICS_FILE, JSON.stringify(topics, null, 2), 'utf8');
+    console.log(`   ✅ Topic "${keyword}" marked as completed`);
+
+    return true;
+}
+
+// ============================================================
+// MAIN
+// ============================================================
+
+async function main() {
+    console.log(`\n${'🔷'.repeat(30)}`);
+    console.log(`📰 RemoveWatermark Pro — Daily Blog Generator`);
+    console.log(`📅 ${getToday().formatted}`);
+    console.log(`${'🔷'.repeat(30)}\n`);
+
+    // Validate token
+    if (!REPLICATE_API_TOKEN) {
+        console.error('❌ REPLICATE_API_TOKEN environment variable is required');
+        process.exit(1);
+    }
+
+    // Initialize Replicate client
+    const replicate = new Replicate({ auth: REPLICATE_API_TOKEN });
+
+    // Read topics
+    if (!fs.existsSync(TOPICS_FILE)) {
+        console.error(`❌ Topics file not found: ${TOPICS_FILE}`);
+        process.exit(1);
+    }
+
+    const topics = JSON.parse(fs.readFileSync(TOPICS_FILE, 'utf8'));
+    const pendingTopics = topics.map((t, i) => ({ ...t, _index: i })).filter(t => t.status === 'pending');
+
+    console.log(`📊 Total topics: ${topics.length}`);
+    console.log(`📊 Pending topics: ${pendingTopics.length}`);
+    console.log(`📊 Will process: ${Math.min(LIMIT, pendingTopics.length)} topic(s)\n`);
+
+    if (pendingTopics.length === 0) {
+        console.log('✅ No pending topics to process. All done!');
+        return;
+    }
+
+    // Process topics
+    let processed = 0;
+    for (let i = 0; i < Math.min(LIMIT, pendingTopics.length); i++) {
+        const topic = pendingTopics[i];
+        try {
+            const success = await processOneTopic(replicate, topic, topic._index, topics);
+            if (success) processed++;
+        } catch (error) {
+            console.error(`\n❌ Failed to process topic "${topic.keyword}": ${error.message}`);
+            console.error(error.stack);
+        }
+    }
+
+    console.log(`\n${'🔷'.repeat(30)}`);
+    console.log(`✅ Done! Processed ${processed}/${Math.min(LIMIT, pendingTopics.length)} topic(s)`);
+    console.log(`${'🔷'.repeat(30)}\n`);
+}
+
+main().catch(error => {
+    console.error('❌ Fatal error:', error);
+    process.exit(1);
+});
