@@ -383,20 +383,13 @@ async function generateImages(replicate, keyword) {
                 }
             });
 
-            // Flux may return a string directly or an array/object containing the URL
-            console.log(`DEBUG OUTPUT TYPE: typeof=${typeof output}, isArray=${Array.isArray(output)}, constructor=${output?.constructor?.name}`);
-            try {
-                console.log(`DEBUG RAW DATA: ${JSON.stringify(output)}`);
-            } catch (e) {
-                console.log(`DEBUG RAW PRINT FAILED: ${e.message}`);
-            }
-
             // prunaai/z-image-turbo typically returns a direct string URL or a FileOutput stream, or array
             let imageUrl = null;
             if (typeof output === 'string') {
                 imageUrl = output;
             } else if (Array.isArray(output) && output.length > 0) {
-                imageUrl = typeof output[0] === 'string' ? output[0] : (output[0].url ? output[0].url() : null);
+                const first = output[0];
+                imageUrl = typeof first === 'string' ? first : (first.url ? (typeof first.url === 'function' ? await first.url() : first.url) : null);
             } else if (output && typeof output === 'object') {
                 if (typeof output.url === 'function') {
                     imageUrl = await output.url();
@@ -406,6 +399,15 @@ async function generateImages(replicate, keyword) {
                     imageUrl = output.result;
                 }
             }
+
+            // The replicate SDK's url() method returns a native URL object (or occasionally FileOutput instances).
+            // Convert it to string so it passes our checks.
+            if (imageUrl && typeof imageUrl === 'object' && imageUrl.href) {
+                imageUrl = imageUrl.href;
+            } else if (imageUrl && typeof imageUrl === 'object' && typeof imageUrl.toString === 'function') {
+                imageUrl = imageUrl.toString();
+            }
+
             if (imageUrl && typeof imageUrl === 'string') {
                 imageUrls.push(imageUrl);
                 console.log(`   ✅ Image ${i + 1} generated: ${imageUrl.substring(0, Math.min(imageUrl.length, 80))}...`);
