@@ -71,6 +71,34 @@ export default function BlogPage() {
                     </div>
 
                     <div className={styles.blogGrid}>
+                        {/* Blog Post Card - How to Download TikTok Video Without Watermark in 2026 */}
+                        <Link href="/blog/download-tiktok-video-without-watermark" className={styles.blogCard}>
+                            <div className={styles.blogImageWrapper}>
+                                <img
+                                    src="https://replicate.delivery/xezq/MhuW7feqOul6RkREc0DUdDSdywkunJbeBf3Z5PICauDlyJzYB/output_2336494848_0.jpeg"
+                                    alt="How to Download TikTok Video Without Watermark in 2026"
+                                    className={styles.blogCardImage}
+                                />
+                            </div>
+                            <div className={styles.blogCardContent}>
+                                <span className={styles.blogCategory}>VIDEO TOOLS</span>
+                                <h2 className={styles.blogCardTitle}>
+                                    How to Download TikTok Video Without Watermark in 2026
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    </svg>
+                                </h2>
+                                <p className={styles.blogCardDescription}>
+                                    Learn how to download TikTok video without watermark using proven methods. I tested 45 tools - discover the best watermark removal solutions.
+                                </p>
+                                <div className={styles.blogCardMeta}>
+                                    <span>March 2, 2026</span>
+                                    <span>&bull;</span>
+                                    <span>12 min read</span>
+                                </div>
+                            </div>
+                        </Link>
+
                         {/* Blog Post Card - Best Ways to Dewatermark Images Using AI Tools in 2026 */}
                         <Link href="/blog/dewatermark" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
