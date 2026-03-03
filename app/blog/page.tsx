@@ -71,6 +71,34 @@ export default function BlogPage() {
                     </div>
 
                     <div className={styles.blogGrid}>
+                        {/* Blog Post Card - Best Ways to Remove TikTok Watermark in 2026 */}
+                        <Link href="/blog/remove-tiktok-watermark" className={styles.blogCard}>
+                            <div className={styles.blogImageWrapper}>
+                                <img
+                                    src="https://replicate.delivery/xezq/M7cvsLGGp7rILJzruxrpu8VZN1BqMkcvwCGTKJ1eVbsTxjGLA/output_3348469527_0.jpeg"
+                                    alt="Best Ways to Remove TikTok Watermark in 2026"
+                                    className={styles.blogCardImage}
+                                />
+                            </div>
+                            <div className={styles.blogCardContent}>
+                                <span className={styles.blogCategory}>VIDEO TOOLS</span>
+                                <h2 className={styles.blogCardTitle}>
+                                    Best Ways to Remove TikTok Watermark in 2026
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    </svg>
+                                </h2>
+                                <p className={styles.blogCardDescription}>
+                                    Learn how to remove TikTok watermark from videos with AI tools. Step-by-step guide, tool comparisons, and legal tips for clean video downloads.
+                                </p>
+                                <div className={styles.blogCardMeta}>
+                                    <span>March 3, 2026</span>
+                                    <span>&bull;</span>
+                                    <span>12 min read</span>
+                                </div>
+                            </div>
+                        </Link>
+
                         {/* Blog Post Card - How to Download TikTok Video Without Watermark in 2026 */}
                         <Link href="/blog/download-tiktok-video-without-watermark" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
