@@ -71,6 +71,34 @@ export default function BlogPage() {
                     </div>
 
                     <div className={styles.blogGrid}>
+                        {/* Blog Post Card - Best Ways to Remove Video Watermark Using AI Tools in 2026 */}
+                        <Link href="/blog/remove-video-watermark" className={styles.blogCard}>
+                            <div className={styles.blogImageWrapper}>
+                                <img
+                                    src="https://replicate.delivery/xezq/jX8WqAMgXr5HLdf7Ikf67lOjlRHuQ5wJdal9fnv4eQ3UfNuxC/output_3992776026_0.jpeg"
+                                    alt="Best Ways to Remove Video Watermark Using AI Tools in 2026"
+                                    className={styles.blogCardImage}
+                                />
+                            </div>
+                            <div className={styles.blogCardContent}>
+                                <span className={styles.blogCategory}>VIDEO TOOLS</span>
+                                <h2 className={styles.blogCardTitle}>
+                                    Best Ways to Remove Video Watermark Using AI Tools in 2026
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    </svg>
+                                </h2>
+                                <p className={styles.blogCardDescription}>
+                                    Learn how to remove video watermark effectively with AI-powered tools. Compare top solutions, get step-by-step guides, and discover the best watermark removal methods.
+                                </p>
+                                <div className={styles.blogCardMeta}>
+                                    <span>March 5, 2026</span>
+                                    <span>&bull;</span>
+                                    <span>12 min read</span>
+                                </div>
+                            </div>
+                        </Link>
+
                         {/* Blog Post Card - How to Save TikTok Without Watermark - Best Methods 2026 */}
                         <Link href="/blog/save-tiktok-without-watermark" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
