@@ -423,6 +423,104 @@
     line-height: 1.7;
 }
 
+/* Key Takeaways Box (GEO) */
+.keyTakeaways {
+    background: rgba(34, 197, 94, 0.05);
+    border: 1px solid rgba(34, 197, 94, 0.25);
+    border-left: 4px solid #22c55e;
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin-bottom: 48px;
+}
+
+.keyTakeaways h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 16px 0;
+}
+
+.keyTakeaways ul {
+    margin: 0;
+    padding-left: 20px;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.8;
+}
+
+.keyTakeaways li {
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+/* Pro Tip / Expert Tip */
+.proTip,
+.section .proTip {
+    background: rgba(251, 191, 36, 0.08);
+    border: 1px solid rgba(251, 191, 36, 0.25);
+    border-left: 4px solid #fbbf24;
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin: 32px 0;
+}
+
+.proTip h3,
+.section .proTip h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fbbf24;
+    margin: 0 0 12px 0;
+}
+
+.proTip p,
+.section .proTip p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+/* Inline Comparison Tables (inside article body / dangerouslySetInnerHTML) */
+.section table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 24px 0;
+}
+
+.section thead {
+    background: rgba(168, 85, 247, 0.1);
+}
+
+.section th {
+    padding: 14px 16px;
+    text-align: left;
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.section td {
+    padding: 14px 16px;
+    text-align: left;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.section tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.section tbody tr:hover {
+    background: rgba(168, 85, 247, 0.05);
+}
+
 /* Final CTA */
 .finalCta {
     text-align: center;
@@ -562,8 +660,14 @@
 
     .quickAnswer,
     .tableOfContents,
-    .finalCta {
+    .finalCta,
+    .keyTakeaways {
         padding: 24px;
+    }
+
+    .proTip,
+    .section .proTip {
+        padding: 20px;
     }
 
     .sectionImage {
@@ -584,6 +688,22 @@
     .comparisonTable td {
         padding: 12px 8px;
         font-size: 13px;
+    }
+
+    .section table {
+        font-size: 14px;
+    }
+
+    .section th,
+    .section td {
+        padding: 10px 8px;
+        font-size: 13px;
+    }
+
+    .section table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
     }
 }
 

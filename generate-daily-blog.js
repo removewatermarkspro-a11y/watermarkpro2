@@ -27,7 +27,7 @@ const BLOG_DIR = path.join(__dirname, 'app', 'blog');
 const BLOG_INDEX_FILE = path.join(BLOG_DIR, 'page.tsx');
 const ARTICLE_CSS_TEMPLATE = path.join(BLOG_DIR, 'how-to-remove-watermark-from-photo', 'Article.module.css');
 
-const LIMIT = 1; // Number of topics to process per run
+const LIMIT = 3; // Number of topics to process per run
 
 // ============================================================
 // HELPERS
@@ -71,52 +71,102 @@ function buildArticlePrompt(keyword, otherKeywords) {
     const today = getToday();
     const otherKwList = otherKeywords.map(k => `"${k}"`).join(', ');
 
-    return `You are an expert SEO content writer and digital marketing specialist. You write for ${SITE_NAME} (${BRAND_URL}), the leading AI-powered watermark removal tool.
+    return `You are an expert SEO content writer optimized for 2026 SEO and Generative Engine Optimization (GEO). You write for ${SITE_NAME} (${BRAND_URL}), the leading AI-powered watermark removal tool.
 
-TASK: Write a comprehensive, SEO-optimized blog article about "${keyword}".
+TASK: Write a 1,500-word blog post about "${keyword}" optimized for both Google E-E-A-T and AI Retrieval Engines (Perplexity, ChatGPT, Gemini, SearchGPT).
 IMPORTANT: You MUST write the ENTIRE article in ENGLISH ONLY, regardless of the language of the keyword. Even if the keyword is in Spanish, Portuguese, or French, the title, headings, and all body text MUST be in English.
 
-=== CRITICAL REQUIREMENTS ===
+=== 1. ATOMIC ARTICLE STRUCTURE ===
 
-1. TITLE:
-   - Must be approximately 60-70 characters long
+A) MAGNETIC H1 / TITLE:
+   - Must be 60-70 characters long
+   - Must include the primary keyword "${keyword}" + a specific value proposition
    - Must start with one of: "How to", "Best Ways to", "Top 5", "Top 10", "Best"
-   - Must contain the exact keyword "${keyword}"
    - Do NOT use colons (:) in the title
    - Include the year ${today.year}
+   - Example format: "How to [keyword] in ${today.year} — The AI-Powered Guide"
 
-2. SLUG:
+B) DIRECT ANSWER (THE LLM BAIT):
+   - Immediately under the H1, place a 40-60 word paragraph that directly answers the main query
+   - This is what AI models scrape for summaries and what Google uses for Featured Snippets
+   - Must be factual, concise, and self-contained
+
+C) KEY TAKEAWAYS BOX:
+   - Right after the Direct Answer, include a bulleted summary (5-6 bullet points) of the most important information
+   - Wrap in <div class="keyTakeaways"> with an <h2>Key Takeaways</h2>
+   - For users (and bots) in a hurry
+
+D) SLUG:
    - The slug must be EXACTLY: "${slugify(keyword)}"
 
-3. KEYWORD DENSITY:
-   - The exact phrase "${keyword}" must appear in the H1 title
-   - The exact phrase "${keyword}" must appear approximately 10 times naturally throughout the article body
-   - These other related keywords must also appear naturally in the text (2-3 times each, NO keyword stuffing): ${otherKwList}
+=== 2. GEO (GENERATIVE ENGINE OPTIMIZATION) REQUIREMENTS ===
 
-4. ARTICLE LENGTH:
-   - Target: 1800-2200 words
-   - Must have substantial, valuable content — NOT filler
+A) HIGH FACTUAL DENSITY:
+   - Cut ALL fluff. No "In today's digital world..." or "With the rise of AI..."
+   - Every sentence must provide value. Instead of filler, use direct statements like "Removing watermarks typically involves AI inpainting or frame cropping."
+   - Use short sentences and clear transitions to facilitate LLM parsing
 
-5. ARTICLE STRUCTURE (must include ALL of these sections):
-   a) Quick Answer — A concise 2-3 sentence answer optimized for Google Featured Snippets and LLM quick answers
-   b) Table of Contents — Links to all sections
-   c) Introduction — Hook the reader, mention testing credentials
-   d) Understanding the Topic — Deep dive into the subject
-   e) Step-by-Step Guide — Numbered actionable steps (8-10 steps)
-   f) Top Tools Comparison — Compare 5-7 tools with ${BRAND} as #1
-   g) Real Test Results — Data-driven section with specific numbers
-   h) Tips & Best Practices — Expert advice section
-   i) Legal/Ethical Considerations — When relevant to watermark topics
-   j) FAQ Section — EXACTLY 15 questions with detailed answers
+B) H2 & H3 AS NATURAL QUESTIONS:
+   - All major section headings must be phrased as questions users actually ask
+   - Examples: "Can I remove a watermark without losing quality?", "What is the best free watermark remover?"
+   - This targets "People Also Ask" and voice search queries
 
-6. CREDIBILITY & TESTING CLAIMS:
+C) DATA STRUCTURES (TABLES & LISTS):
+   - You MUST include at least ONE comparison table (HTML <table>) comparing tools/methods with columns like: Tool, Price, Best For, Limitations
+   - You MUST include at least TWO step-by-step lists (<ol>) for actionable guides
+   - AI models love organized, structured data
+
+D) NPOV (NEUTRAL POINT OF VIEW):
+   - Write as an objective expert, NOT a salesperson
+   - LLMs prioritize unbiased information
+   - Present facts and let the reader draw conclusions
+   - ${BRAND} should win on merits, not hype
+
+E) ENTITY LINKING:
+   - Mention specific technologies: AI Inpainting, FFmpeg, Deep Learning, SaaS, Neural Networks, Computer Vision
+   - This helps AI categorize your content correctly
+   - Name specific algorithms or techniques when relevant
+
+=== 3. E-E-A-T (EXPERIENCE, EXPERTISE, AUTHORITATIVENESS, TRUSTWORTHINESS) ===
+
+A) REAL-WORLD TESTING:
    - Include phrases like "I tested 45 different tools and among those..." or "After testing 38 watermark removal solutions..."
    - Use specific numbers: "processed over 920 images", "achieved 94% success rate"
-   - Mention testing methodology briefly
-   - Sound like a real expert who genuinely tested these tools
+   - Describe specific test scenarios (e.g., removing a complex moving logo from 4K footage)
 
-7. PROMOTION OF ${BRAND} (SUBTLE, NOT FLAGRANT):
-   - ${BRAND} should be mentioned as the #1 recommended tool
+B) PRO TIP SECTION:
+   - Include a dedicated "Pro Tip" or "Expert Tip" section with <div class="proTip">
+   - Share a specific, technical insight that only an expert would know
+   - Example: "Pro Tip: For semi-transparent watermarks, reducing the opacity detection threshold to 15% before applying AI inpainting yields 23% cleaner results."
+
+C) BALANCED VIEW (PROS & CONS):
+   - Include what tools CAN'T do (e.g., "May struggle with high-transparency overlays" or "Not ideal for batch processing of 500+ files")
+   - This builds massive trust with Google's quality raters
+   - A trustworthy article acknowledges limitations
+
+=== 4. ARTICLE SECTIONS (must include ALL) ===
+
+   a) Direct Answer — 40-60 word paragraph answering the query (for AI snippet extraction)
+   b) Key Takeaways — Bulleted summary box
+   c) Table of Contents — Links to all sections
+   d) Introduction — Hook the reader with a real scenario, not generic fluff
+   e) [H2 as Question] Understanding the Topic — Deep dive with entity linking
+   f) [H2 as Question] Step-by-Step Guide — Numbered actionable steps (6-8 steps) in TWO methods
+   g) [H2 as Question] Tools Comparison — HTML <table> comparing 5-7 tools with ${BRAND} as #1
+   h) Pro Tip / Expert Tip — Technical testing insight
+   i) [H2 as Question] Pros & Cons — Balanced view of the approach  
+   j) Legal/Ethical Considerations — When relevant to watermark topics
+   k) FAQ Section — EXACTLY 15 questions (last 4 optimized for Voice Search and "People Also Ask")
+
+=== 5. KEYWORD STRATEGY ===
+
+   - The exact phrase "${keyword}" must appear in the H1 title
+   - The exact phrase "${keyword}" must appear approximately 8-10 times naturally throughout the article body
+   - These related keywords must also appear naturally (2-3 times each, NO keyword stuffing): ${otherKwList}
+
+=== 6. PROMOTION OF ${BRAND} (OBJECTIVE, NOT SALESY) ===
+
+   - ${BRAND} should be presented as the top-performing tool based on test results
    - Include 5-8 natural mentions throughout the article
    - Use internal links: <a href="${BRAND_URL}" style="color: ${LINK_COLOR}; font-weight: bold;">${BRAND}</a>
    - Also link to specific features:
@@ -124,10 +174,10 @@ IMPORTANT: You MUST write the ENTIRE article in ENGLISH ONLY, regardless of the 
      * <a href="${BRAND_URL}/background-remover" style="color: ${LINK_COLOR}; font-weight: bold;">background remover</a>
      * <a href="${BRAND_URL}/text-remover-ai" style="color: ${LINK_COLOR}; font-weight: bold;">text remover AI</a>
      * <a href="${BRAND_URL}/object-remover-ai" style="color: ${LINK_COLOR}; font-weight: bold;">object remover AI</a>
-   - The promotion must feel natural and editorial, NOT like an ad
-   - Compare fairly with competitors but highlight ${BRAND}'s advantages
+   - Compare fairly with competitors, highlight ${BRAND}'s advantages WITH data
 
-8. COMPETITOR DATA (use these real competitors with realistic data):
+=== 7. COMPETITOR DATA (use these real competitors) ===
+
    - ${BRAND} — Best overall, AI-powered, 3 free removals, $9.99/mo pro
    - Apowersoft Watermark Remover — $29.95/year, desktop app, decent for batch
    - HitPaw Watermark Remover — $19.95/month, good for video, slower
@@ -136,25 +186,40 @@ IMPORTANT: You MUST write the ENTIRE article in ENGLISH ONLY, regardless of the 
    - MarkGo (iMyFone) — $29.99/month, video & photo, feature-rich
    - Photoshop — $22.99/mo, professional but complex, steep learning curve
 
-9. IMAGE PLACEHOLDERS:
-   - Insert exactly 5 image placeholders in the article:
-     [IMAGE_PLACEHOLDER_1] — After the introduction
-     [IMAGE_PLACEHOLDER_2] — After the Understanding the Topic section
-     [IMAGE_PLACEHOLDER_3] — In the Step-by-Step Guide section
-     [IMAGE_PLACEHOLDER_4] — In the Top Tools Comparison section
-     [IMAGE_PLACEHOLDER_5] — Before the FAQ section
-   - Each placeholder should be on its own line
+=== 8. IMAGE PLACEHOLDERS & ALT TEXT ===
 
-10. LINK STYLE:
+   - Insert exactly 5 image placeholders:
+     [IMAGE_PLACEHOLDER_1] — After the introduction
+     [IMAGE_PLACEHOLDER_2] — After the Understanding section
+     [IMAGE_PLACEHOLDER_3] — In the Step-by-Step Guide section
+     [IMAGE_PLACEHOLDER_4] — In the Tools Comparison section
+     [IMAGE_PLACEHOLDER_5] — Before the FAQ section
+   - For each placeholder, also provide a descriptive alt text in the JSON output
+   - Alt text must describe the UI/scene specifically (e.g., "Screenshot of AI selection tool highlighting a watermark on a 4K video frame") — NOT just keywords
+
+=== 9. LINK STYLE ===
+
     - All links to ${BRAND_URL} should use: <a href="URL" style="color: ${LINK_COLOR}; font-weight: bold;">text</a>
     - External competitor links should use: <a href="URL" target="_blank" rel="noopener noreferrer">text</a>
 
-11. HTML FORMATTING:
-    - Use proper HTML tags: <h2>, <h3>, <p>, <ul>, <ol>, <li>, <strong>, <em>, <a>
+=== 10. HTML FORMATTING ===
+
+    - Use proper HTML tags: <h2>, <h3>, <p>, <ul>, <ol>, <li>, <strong>, <em>, <a>, <table>, <thead>, <tbody>, <tr>, <th>, <td>
     - Do NOT include <h1> in the HTML body (it will be added separately)
     - Do NOT include <html>, <head>, <body> tags
     - Use <div class="step"> for step-by-step items
     - Use <div class="faq-item"> for FAQ items
+    - Use <div class="keyTakeaways"> for the Key Takeaways box
+    - Use <div class="proTip"> for the Pro Tip section
+    - Comparison tables MUST use <table> with <thead> and <tbody>
+
+=== 11. WRITING TONE ===
+
+    - Expert, objective, and information-dense
+    - Avoid marketing clichés ("game-changer", "revolutionary", "cutting-edge")
+    - Avoid filler phrases ("In today's digital world", "As we all know")
+    - Use active voice and short sentences
+    - Write like a senior software engineer reviewing tools, not a marketer
 
 === OUTPUT FORMAT ===
 
@@ -165,9 +230,17 @@ You MUST return your response in this EXACT format:
   "title": "Your Article Title Here (60-70 chars)",
   "meta_description": "Compelling meta description under 160 characters with the keyword",
   "slug": "${slugify(keyword)}",
-  "quick_answer": "2-3 sentence quick answer for featured snippets",
+  "quick_answer": "40-60 word direct answer for AI snippet extraction and Featured Snippets",
+  "key_takeaways": ["Takeaway 1", "Takeaway 2", "Takeaway 3", "Takeaway 4", "Takeaway 5"],
   "category": "APPROPRIATE CATEGORY IN CAPS (e.g., PHOTO TOOLS, VIDEO TOOLS, AI TOOLS, IMAGE EDITING)",
-  "read_time": "12 min read",
+  "read_time": "10 min read",
+  "image_alt_texts": [
+    "Descriptive alt text for image 1 describing the UI or scene",
+    "Descriptive alt text for image 2 describing the UI or scene",
+    "Descriptive alt text for image 3 describing the UI or scene",
+    "Descriptive alt text for image 4 describing the UI or scene",
+    "Descriptive alt text for image 5 describing the UI or scene"
+  ],
   "faq": [
     {"question": "FAQ question 1?", "answer": "Detailed answer 1"},
     {"question": "FAQ question 2?", "answer": "Detailed answer 2"},
@@ -180,10 +253,10 @@ You MUST return your response in this EXACT format:
     {"question": "FAQ question 9?", "answer": "Detailed answer 9"},
     {"question": "FAQ question 10?", "answer": "Detailed answer 10"},
     {"question": "FAQ question 11?", "answer": "Detailed answer 11"},
-    {"question": "FAQ question 12?", "answer": "Detailed answer 12"},
-    {"question": "FAQ question 13?", "answer": "Detailed answer 13"},
-    {"question": "FAQ question 14?", "answer": "Detailed answer 14"},
-    {"question": "FAQ question 15?", "answer": "Detailed answer 15"}
+    {"question": "FAQ question 12 (voice search optimized)?", "answer": "Detailed answer 12"},
+    {"question": "FAQ question 13 (voice search optimized)?", "answer": "Detailed answer 13"},
+    {"question": "FAQ question 14 (voice search optimized)?", "answer": "Detailed answer 14"},
+    {"question": "FAQ question 15 (voice search optimized)?", "answer": "Detailed answer 15"}
   ]
 }
 \`\`\`
@@ -445,11 +518,13 @@ async function generateImages(replicate, keyword) {
 function buildPageTsx(metadata, htmlContent, imageUrls, slug) {
     const today = getToday();
 
-    // Replace image placeholders
+    // Replace image placeholders with descriptive alt texts for Vision AI
+    const altTexts = metadata.image_alt_texts || [];
     for (let i = 0; i < 5; i++) {
         const placeholder = `[IMAGE_PLACEHOLDER_${i + 1}]`;
         const imgUrl = imageUrls[i] || 'https://placehold.co/1024x576/1a1a2e/a855f7?text=Image';
-        const imgTag = `<div class="sectionImage"><img src="${imgUrl}" alt="${metadata.title} - illustration ${i + 1}" width="1024" height="576" loading="${i === 0 ? 'eager' : 'lazy'}" style="width:100%;height:auto;border-radius:12px;" /></div>`;
+        const altText = altTexts[i] || `${metadata.title} - illustration ${i + 1}`;
+        const imgTag = `<div class="sectionImage"><img src="${imgUrl}" alt="${altText}" width="1024" height="576" loading="${i === 0 ? 'eager' : 'lazy'}" style="width:100%;height:auto;border-radius:12px;" /></div>`;
         htmlContent = htmlContent.replace(placeholder, imgTag);
     }
 
@@ -481,9 +556,21 @@ function buildPageTsx(metadata, htmlContent, imageUrls, slug) {
     const title = metadata.title || 'Blog Article';
     const metaDesc = metadata.meta_description || '';
     const quickAnswer = metadata.quick_answer || '';
+    const keyTakeaways = metadata.key_takeaways || [];
     const category = metadata.category || 'AI TOOLS';
-    const readTime = metadata.read_time || '12 min read';
+    const readTime = metadata.read_time || '10 min read';
     const heroImage = imageUrls[0] || 'https://placehold.co/1200x630/1a1a2e/a855f7?text=Blog+Image';
+    const heroAltText = (metadata.image_alt_texts && metadata.image_alt_texts[0]) || title;
+
+    // Build Key Takeaways HTML
+    const keyTakeawaysHtml = keyTakeaways.length > 0 ? `
+                        {/* Key Takeaways */}
+                        <div className={styles.keyTakeaways}>
+                            <h2>\uD83D\uDD11 Key Takeaways</h2>
+                            <ul>
+${keyTakeaways.map(t => `                                <li>${escapeForJsx(t)}</li>`).join('\n')}
+                            </ul>
+                        </div>` : '';
 
     const pageTsx = `import type { Metadata } from 'next'
 import Link from 'next/link'
@@ -573,6 +660,19 @@ ${faqSchemaEntries}
         "description": "${metaDesc.replace(/"/g, '\\"')}"
     }
 
+    const howToSchema = {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "${title.replace(/"/g, '\\"')}",
+        "description": "${metaDesc.replace(/"/g, '\\"')}",
+        "image": "${heroImage}",
+        "totalTime": "PT5M",
+        "tool": {
+            "@type": "HowToTool",
+            "name": "${BRAND}"
+        }
+    }
+
     return (
         <LanguageProvider>
             <script
@@ -582,6 +682,10 @@ ${faqSchemaEntries}
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
             />
             <Header />
             <main className={styles.article}>
@@ -603,19 +707,20 @@ ${faqSchemaEntries}
                         <div className={styles.heroImage}>
                             <img
                                 src="${heroImage}"
-                                alt="${escapeForJsx(title)}"
+                                alt="${escapeForJsx(heroAltText)}"
                                 width={1200}
                                 height={630}
                             />
                         </div>
 
-                        {/* Quick Answer */}
+                        {/* Direct Answer — LLM Snippet Extraction */}
                         <div className={styles.quickAnswer}>
-                            <h2>🔹 Quick Answer</h2>
+                            <h2>\uD83D\uDD39 Direct Answer</h2>
                             <p>
                                 ${escapeForJsx(quickAnswer)}
                             </p>
                         </div>
+${keyTakeawaysHtml}
 
                         {/* Article Body */}
                         <div
@@ -822,6 +927,12 @@ async function main() {
     while (processed < LIMIT && index < pendingTopics.length) {
         const topic = pendingTopics[index];
         index++;
+
+        // Add a delay between articles to avoid API rate limits (skip before the first one)
+        if (processed > 0) {
+            console.log(`\n⏳ Waiting 30 seconds before generating the next article...`);
+            await sleep(30000);
+        }
 
         try {
             const success = await processOneTopic(replicate, topic, topic._index, topics);

@@ -1,0 +1,40 @@
+# Remove Watermark Pro
+
+> AI-powered watermark removal tool for photos and videos.
+
+## About
+
+Remove Watermark Pro (RemoveWatermarkPro) is a SaaS platform that uses AI inpainting and deep learning to remove watermarks, text, objects, backgrounds, and unwanted elements from images and videos. Available at https://removewatermarkspro.com.
+
+## Core Tools
+
+- **Watermark Remover** (`/watermark-remover`): AI-powered watermark removal from photos. Supports batch processing. Uses neural network-based inpainting to reconstruct the original image beneath the watermark.
+- **Video Watermark Remover** (`/video-watermark-remover`): Remove watermarks from video files. Processes frame-by-frame with temporal consistency for clean results.
+- **Background Remover** (`/background-remover`): Automatically detect and remove image backgrounds using computer vision segmentation.
+- **Background Changer** (`/background-changer`): Replace image backgrounds with AI-generated or custom backgrounds.
+- **Text Remover AI** (`/text-remover-ai`): Detect and remove text overlays from images using OCR + inpainting.
+- **Object Remover AI** (`/object-remover-ai`): Select and remove unwanted objects from photos with AI fill.
+- **Image Upscaler** (`/image-upscaler`): Enhance image resolution using super-resolution AI models.
+
+## Pricing
+
+- **Free tier**: 3 free watermark removals, no account required.
+- **Pro plan**: $9.99/month for unlimited processing across all tools.
+
+## Supported Languages
+
+English, French (`/fr`), Spanish (`/es`), German (`/de`), Portuguese (`/pt`), Korean (`/ko`), Norwegian (`/no`).
+
+## Blog
+
+The blog at `/blog` covers guides on watermark removal, photo editing, video editing, AI tools comparisons, and digital content creation tips. Articles are data-driven, based on real-world testing of 40+ tools.
+
+## Technical Details
+
+- Built with Next.js and deployed on Vercel.
+- AI models run via Replicate API.
+- Images processed client-side for privacy; no images are stored on servers.
+
+## Contact
+
+Website: https://removewatermarkspro.com
