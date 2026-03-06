@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         authors: ['Remove Watermark Pro'],
         images: [
             {
-                url: 'https://replicate.delivery/xezq/jX8WqAMgXr5HLdf7Ikf67lOjlRHuQ5wJdal9fnv4eQ3UfNuxC/output_3992776026_0.jpeg',
+                url: '/images/blog/remove-video-watermark-1.jpg',
                 width: 1200,
                 height: 630,
                 alt: 'Best Ways to Remove Video Watermark Using AI Tools in 2026'
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'Best Ways to Remove Video Watermark Using AI Tools in 2026',
         description: 'Learn how to remove video watermark effectively with AI-powered tools. Compare top solutions, get step-by-step guides, and discover the best watermark removal methods.',
-        images: ['https://replicate.delivery/xezq/jX8WqAMgXr5HLdf7Ikf67lOjlRHuQ5wJdal9fnv4eQ3UfNuxC/output_3992776026_0.jpeg']
+        images: ['/images/blog/remove-video-watermark-1.jpg']
     },
 
     robots: {
@@ -187,7 +187,7 @@ export default function BlogArticle() {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "Best Ways to Remove Video Watermark Using AI Tools in 2026",
-        "image": "https://replicate.delivery/xezq/jX8WqAMgXr5HLdf7Ikf67lOjlRHuQ5wJdal9fnv4eQ3UfNuxC/output_3992776026_0.jpeg",
+        "image": "/images/blog/remove-video-watermark-1.jpg",
         "datePublished": "2026-03-05T11:33:54.007Z",
         "dateModified": "2026-03-05T11:33:54.007Z",
         "author": {
@@ -234,7 +234,7 @@ export default function BlogArticle() {
                         {/* Hero Image */}
                         <div className={styles.heroImage}>
                             <img
-                                src="https://replicate.delivery/xezq/jX8WqAMgXr5HLdf7Ikf67lOjlRHuQ5wJdal9fnv4eQ3UfNuxC/output_3992776026_0.jpeg"
+                                src="/images/blog/remove-video-watermark-1.jpg"
                                 alt="Best Ways to Remove Video Watermark Using AI Tools in 2026"
                                 width={1200}
                                 height={630}
@@ -277,7 +277,7 @@ export default function BlogArticle() {
 
 <p>In this comprehensive guide, I'll share everything I learned about how to effectively remove video watermark, including detailed comparisons of the top tools, real performance data, and expert techniques that can save you both time and frustration.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/jX8WqAMgXr5HLdf7Ikf67lOjlRHuQ5wJdal9fnv4eQ3UfNuxC/output_3992776026_0.jpeg" alt="Best Ways to Remove Video Watermark Using AI Tools in 2026 - illustration 1" width="1024" height="576" loading="eager" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/remove-video-watermark-1.jpg" alt="Best Ways to Remove Video Watermark Using AI Tools in 2026 - illustration 1" width="1024" height="576" loading="eager" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="understanding-video-watermarks">Understanding Video Watermarks</h2>
 
@@ -310,7 +310,7 @@ export default function BlogArticle() {
 
 <p>This is where AI-powered solutions excel. Tools like <a href="https://removewatermarkpro.co" style="color: #ec4899; font-weight: bold;">RemoveWatermarkPro</a> use machine learning algorithms trained on millions of watermarked videos, enabling them to intelligently reconstruct the underlying content while maintaining temporal consistency across frames.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/YwdAeAJMNrwf4kivLRuWdXYqWBChLJPbNJsJuQkvNeEBgjbsA/output_2048462230_0.jpeg" alt="Best Ways to Remove Video Watermark Using AI Tools in 2026 - illustration 2" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/remove-video-watermark-2.jpg" alt="Best Ways to Remove Video Watermark Using AI Tools in 2026 - illustration 2" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="step-by-step-guide">Step-by-Step Guide to Remove Video Watermark</h2>
 
@@ -366,7 +366,7 @@ export default function BlogArticle() {
 <p>Keep a backup of both the original and cleaned versions. Some tools allow you to save project settings for future use with similar watermark types.</p>
 </div>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/Hd8xGeZl7P23EyLYVAMcC8mn5GPX3xflfUEoCqDERoIZgjbsA/output_1573126900_0.jpeg" alt="Best Ways to Remove Video Watermark Using AI Tools in 2026 - illustration 3" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/remove-video-watermark-3.jpg" alt="Best Ways to Remove Video Watermark Using AI Tools in 2026 - illustration 3" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="top-tools-comparison">Top Tools Comparison</h2>
 
@@ -442,7 +442,7 @@ export default function BlogArticle() {
 <li><strong>Success rate in testing:</strong> 91% (with expert use)</li>
 </ul>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/wS5wSB0afA1dLayxNUz6u6weuPJgg7fVlapa2enLwcsdBH3YB/output_1300061847_0.jpeg" alt="Best Ways to Remove Video Watermark Using AI Tools in 2026 - illustration 4" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/remove-video-watermark-4.jpg" alt="Best Ways to Remove Video Watermark Using AI Tools in 2026 - illustration 4" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="test-results">Real Test Results</h2>
 
@@ -593,7 +593,7 @@ export default function BlogArticle() {
 
 <p>Remember that watermarks serve important purposes including copyright protection and attribution. The tools and techniques I've tested should be used responsibly and within legal boundaries.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/ZphQd3UgfRW1C6bGBiSB2phEJNiW3xjvmtzHb9upftThwxNWA/output_1955720238_0.jpeg" alt="Best Ways to Remove Video Watermark Using AI Tools in 2026 - illustration 5" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/remove-video-watermark-5.jpg" alt="Best Ways to Remove Video Watermark Using AI Tools in 2026 - illustration 5" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="faq">Frequently Asked Questions</h2>
 

@@ -159,7 +159,7 @@ export default function BlogPage() {
                         <Link href="/blog/remove-video-watermark" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
                                 <img
-                                    src="https://replicate.delivery/xezq/jX8WqAMgXr5HLdf7Ikf67lOjlRHuQ5wJdal9fnv4eQ3UfNuxC/output_3992776026_0.jpeg"
+                                    src="/images/blog/remove-video-watermark-1.jpg"
                                     alt="Best Ways to Remove Video Watermark Using AI Tools in 2026"
                                     className={styles.blogCardImage}
                                 />
@@ -187,7 +187,7 @@ export default function BlogPage() {
                         <Link href="/blog/save-tiktok-without-watermark" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
                                 <img
-                                    src="https://replicate.delivery/xezq/EdIKcwCfNqQnVSVY8Qc9zfye1e4CHEluPLIhHfi9eYIBlJXjF/output_1047554526_0.jpeg"
+                                    src="/images/blog/save-tiktok-without-watermark-1.jpg"
                                     alt="How to Save TikTok Without Watermark - Best Methods 2026"
                                     className={styles.blogCardImage}
                                 />
@@ -215,7 +215,7 @@ export default function BlogPage() {
                         <Link href="/blog/remove-tiktok-watermark" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
                                 <img
-                                    src="https://replicate.delivery/xezq/M7cvsLGGp7rILJzruxrpu8VZN1BqMkcvwCGTKJ1eVbsTxjGLA/output_3348469527_0.jpeg"
+                                    src="/images/blog/remove-tiktok-watermark-1.jpg"
                                     alt="Best Ways to Remove TikTok Watermark in 2026"
                                     className={styles.blogCardImage}
                                 />
@@ -243,7 +243,7 @@ export default function BlogPage() {
                         <Link href="/blog/download-tiktok-video-without-watermark" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
                                 <img
-                                    src="https://replicate.delivery/xezq/MhuW7feqOul6RkREc0DUdDSdywkunJbeBf3Z5PICauDlyJzYB/output_2336494848_0.jpeg"
+                                    src="/images/blog/download-tiktok-video-without-watermark-1.jpg"
                                     alt="How to Download TikTok Video Without Watermark in 2026"
                                     className={styles.blogCardImage}
                                 />
@@ -271,7 +271,7 @@ export default function BlogPage() {
                         <Link href="/blog/dewatermark" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
                                 <img
-                                    src="https://replicate.delivery/xezq/WcNnYOntwioiIdXFOP0GPBU7Prf5CUbPchg6v0PLPHB1lOGLA/output_57431091_0.jpeg"
+                                    src="/images/blog/dewatermark-1.jpg"
                                     alt="Best Ways to Dewatermark Images Using AI Tools in 2026"
                                     className={styles.blogCardImage}
                                 />
@@ -299,7 +299,7 @@ export default function BlogPage() {
                         <Link href="/blog/remove-proof-from-picture" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
                                 <img
-                                    src="https://replicate.delivery/xezq/xsSf3awayM1vTSnN7C1Tpl1T11QoNBNO6sEzxuDxdKH1BEGLA/output_540687804_0.jpeg"
+                                    src="/images/blog/remove-proof-from-picture-1.jpg"
                                     alt="Best Ways to Remove Proof From Picture Using AI Tools 2026"
                                     className={styles.blogCardImage}
                                 />

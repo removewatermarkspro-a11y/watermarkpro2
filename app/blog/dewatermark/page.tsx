@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         authors: ['Remove Watermark Pro'],
         images: [
             {
-                url: 'https://replicate.delivery/xezq/WcNnYOntwioiIdXFOP0GPBU7Prf5CUbPchg6v0PLPHB1lOGLA/output_57431091_0.jpeg',
+                url: '/images/blog/dewatermark-1.jpg',
                 width: 1200,
                 height: 630,
                 alt: 'Best Ways to Dewatermark Images Using AI Tools in 2026'
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'Best Ways to Dewatermark Images Using AI Tools in 2026',
         description: 'Learn the best ways to dewatermark images in 2026. Compare top AI tools, get step-by-step guides, and discover professional techniques for watermark removal.',
-        images: ['https://replicate.delivery/xezq/WcNnYOntwioiIdXFOP0GPBU7Prf5CUbPchg6v0PLPHB1lOGLA/output_57431091_0.jpeg']
+        images: ['/images/blog/dewatermark-1.jpg']
     },
 
     robots: {
@@ -187,7 +187,7 @@ export default function BlogArticle() {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "Best Ways to Dewatermark Images Using AI Tools in 2026",
-        "image": "https://replicate.delivery/xezq/WcNnYOntwioiIdXFOP0GPBU7Prf5CUbPchg6v0PLPHB1lOGLA/output_57431091_0.jpeg",
+        "image": "/images/blog/dewatermark-1.jpg",
         "datePublished": "2026-03-01T11:20:55.438Z",
         "dateModified": "2026-03-01T11:20:55.438Z",
         "author": {
@@ -234,7 +234,7 @@ export default function BlogArticle() {
                         {/* Hero Image */}
                         <div className={styles.heroImage}>
                             <img
-                                src="https://replicate.delivery/xezq/WcNnYOntwioiIdXFOP0GPBU7Prf5CUbPchg6v0PLPHB1lOGLA/output_57431091_0.jpeg"
+                                src="/images/blog/dewatermark-1.jpg"
                                 alt="Best Ways to Dewatermark Images Using AI Tools in 2026"
                                 width={1200}
                                 height={630}
@@ -254,7 +254,7 @@ export default function BlogArticle() {
                             className={styles.section}
                             dangerouslySetInnerHTML={{ __html: `<p>Need to dewatermark images but don't know where to start? You're in the right place. After testing 45 different watermark removal solutions and processing over 920 images, I've discovered the most effective methods to dewatermark content in 2026. Whether you're dealing with simple text overlays or complex logo watermarks, this comprehensive guide will show you exactly how to get professional results.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/WcNnYOntwioiIdXFOP0GPBU7Prf5CUbPchg6v0PLPHB1lOGLA/output_57431091_0.jpeg" alt="Best Ways to Dewatermark Images Using AI Tools in 2026 - illustration 1" width="1024" height="576" loading="eager" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-1.jpg" alt="Best Ways to Dewatermark Images Using AI Tools in 2026 - illustration 1" width="1024" height="576" loading="eager" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2>Table of Contents</h2>
 <ul>
@@ -279,7 +279,7 @@ export default function BlogArticle() {
 
 <p>The technology has also improved significantly in handling edge cases. Semi-transparent watermarks, watermarks over complex backgrounds, and repeated pattern watermarks that once posed significant challenges can now be processed with high accuracy rates.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/RwGGum5gZP4sJlFAnFYZzjR4jCsAyL0zuRH1SSAK8We6lOGLA/output_2170838163_0.jpeg" alt="Best Ways to Dewatermark Images Using AI Tools in 2026 - illustration 2" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-2.jpg" alt="Best Ways to Dewatermark Images Using AI Tools in 2026 - illustration 2" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="step-by-step-guide">Step-by-Step Dewatermarking Guide</h2>
 
@@ -305,7 +305,7 @@ export default function BlogArticle() {
 <p>Upload your image to your chosen dewatermarking tool. Most AI-powered solutions will automatically detect the watermark without requiring manual selection. Wait for the processing to complete – this typically takes 10-30 seconds depending on image complexity.</p>
 </div>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/xSUkOIQHv9ruMJe47A5oSAFFegqUKiSf3Fw3DJV0so4CY6YsA/output_345664996_0.jpeg" alt="Best Ways to Dewatermark Images Using AI Tools in 2026 - illustration 3" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-3.jpg" alt="Best Ways to Dewatermark Images Using AI Tools in 2026 - illustration 3" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <div class="step">
 <h3>Step 5: Review Initial Results</h3>
@@ -341,7 +341,7 @@ export default function BlogArticle() {
 
 <p>After extensively testing 38 watermark removal solutions, I've identified the top performers in 2026. Here's my comprehensive comparison based on accuracy, ease of use, pricing, and feature sets:</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/qRRYB4oE5Xr9EtKWdVIbOBpgpei1SlYCHrf6ZyflaSGZY6YsA/output_1659463422_0.jpeg" alt="Best Ways to Dewatermark Images Using AI Tools in 2026 - illustration 4" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-4.jpg" alt="Best Ways to Dewatermark Images Using AI Tools in 2026 - illustration 4" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h3>1. RemoveWatermarkPro - Best Overall</h3>
 <p><strong>Rating: 9.4/10</strong></p>
@@ -507,7 +507,7 @@ export default function BlogArticle() {
 
 <p><strong>Use alternatives when possible.</strong> Instead of removing watermarks from others' work, consider purchasing unwatermarked versions, commissioning original content, or using properly licensed stock imagery.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/fvJn8gUJyCVjBqP56k5yDT0vCd91t1Tqdefi0LShdJpuY6YsA/output_4067982668_0.jpeg" alt="Best Ways to Dewatermark Images Using AI Tools in 2026 - illustration 5" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-5.jpg" alt="Best Ways to Dewatermark Images Using AI Tools in 2026 - illustration 5" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="faq">Frequently Asked Questions</h2>
 

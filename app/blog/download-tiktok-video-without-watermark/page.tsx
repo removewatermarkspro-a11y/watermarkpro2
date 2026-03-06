@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         authors: ['Remove Watermark Pro'],
         images: [
             {
-                url: 'https://replicate.delivery/xezq/MhuW7feqOul6RkREc0DUdDSdywkunJbeBf3Z5PICauDlyJzYB/output_2336494848_0.jpeg',
+                url: '/images/blog/download-tiktok-video-without-watermark-1.jpg',
                 width: 1200,
                 height: 630,
                 alt: 'How to Download TikTok Video Without Watermark in 2026'
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'How to Download TikTok Video Without Watermark in 2026',
         description: 'Learn how to download TikTok video without watermark using proven methods. I tested 45 tools - discover the best watermark removal solutions.',
-        images: ['https://replicate.delivery/xezq/MhuW7feqOul6RkREc0DUdDSdywkunJbeBf3Z5PICauDlyJzYB/output_2336494848_0.jpeg']
+        images: ['/images/blog/download-tiktok-video-without-watermark-1.jpg']
     },
 
     robots: {
@@ -187,7 +187,7 @@ export default function BlogArticle() {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "How to Download TikTok Video Without Watermark in 2026",
-        "image": "https://replicate.delivery/xezq/MhuW7feqOul6RkREc0DUdDSdywkunJbeBf3Z5PICauDlyJzYB/output_2336494848_0.jpeg",
+        "image": "/images/blog/download-tiktok-video-without-watermark-1.jpg",
         "datePublished": "2026-03-02T11:32:38.219Z",
         "dateModified": "2026-03-02T11:32:38.219Z",
         "author": {
@@ -234,7 +234,7 @@ export default function BlogArticle() {
                         {/* Hero Image */}
                         <div className={styles.heroImage}>
                             <img
-                                src="https://replicate.delivery/xezq/MhuW7feqOul6RkREc0DUdDSdywkunJbeBf3Z5PICauDlyJzYB/output_2336494848_0.jpeg"
+                                src="/images/blog/download-tiktok-video-without-watermark-1.jpg"
                                 alt="How to Download TikTok Video Without Watermark in 2026"
                                 width={1200}
                                 height={630}
@@ -274,7 +274,7 @@ export default function BlogArticle() {
 
 <p>The landscape of watermark removal has evolved significantly, with AI-powered solutions now offering near-perfect results that were impossible just a few years ago. From simple online converters to sophisticated desktop applications, I'll break down exactly which tools work best and why.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/MhuW7feqOul6RkREc0DUdDSdywkunJbeBf3Z5PICauDlyJzYB/output_2336494848_0.jpeg" alt="How to Download TikTok Video Without Watermark in 2026 - illustration 1" width="1024" height="576" loading="eager" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/download-tiktok-video-without-watermark-1.jpg" alt="How to Download TikTok Video Without Watermark in 2026 - illustration 1" width="1024" height="576" loading="eager" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="understanding">Understanding TikTok Watermark Removal</h2>
 <p>TikTok watermarks serve multiple purposes beyond simple branding. They act as a digital signature that identifies content origin, protects creators' intellectual property, and maintains platform attribution when videos are shared elsewhere. Understanding how these watermarks work is essential for choosing the right removal method.</p>
@@ -287,7 +287,7 @@ export default function BlogArticle() {
 
 <p>When you need to remove video watermark effectively, consider factors like watermark transparency, background complexity, video resolution, and movement patterns. Static backgrounds are generally easier to process than dynamic scenes with multiple moving elements. The positioning of the watermark also affects removal difficulty – corner watermarks are typically easier to remove than those placed over central content areas.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/Td5kgfBV3yz8HyRzCmzIm8b6JDujGZ94Syg0ftse2BEp5kZsA/output_3782577093_0.jpeg" alt="How to Download TikTok Video Without Watermark in 2026 - illustration 2" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/download-tiktok-video-without-watermark-2.jpg" alt="How to Download TikTok Video Without Watermark in 2026 - illustration 2" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="step-by-step">Step-by-Step Guide to Download TikTok Video Without Watermark</h2>
 
@@ -316,7 +316,7 @@ export default function BlogArticle() {
 <p>Advanced tools allow you to adjust removal parameters such as processing strength, output quality, and file format. For TikTok videos, maintain the original MP4 format and highest quality setting for best results. Some tools offer preset configurations optimized for different platforms.</p>
 </div>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/yfeNIEHge4TB6J1Z81lsBuTKqR7qDAMVkcMW70Q7wvhezJzYB/output_2170978034_0.jpeg" alt="How to Download TikTok Video Without Watermark in 2026 - illustration 3" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/download-tiktok-video-without-watermark-3.jpg" alt="How to Download TikTok Video Without Watermark in 2026 - illustration 3" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <div class="step">
 <h3>Step 6: Preview and Adjust (If Available)</h3>
@@ -346,7 +346,7 @@ export default function BlogArticle() {
 <h2 id="tools-comparison">Top Tools Comparison for TikTok Watermark Removal</h2>
 <p>After testing 45 different watermark removal solutions over the past year, I've identified the top performers that consistently deliver quality results when you need to remove tiktok watermark. Here's my comprehensive comparison based on actual testing data:</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/qaOkwOXJXPpyIxb3kK4fL9ssnFoUn1qcMsuahzVUUwKlOZGLA/output_300927476_0.jpeg" alt="How to Download TikTok Video Without Watermark in 2026 - illustration 4" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/download-tiktok-video-without-watermark-4.jpg" alt="How to Download TikTok Video Without Watermark in 2026 - illustration 4" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h3>1. RemoveWatermarkPro - Best Overall Choice</h3>
 <p><strong>Rating: 9.8/10</strong></p>
@@ -471,7 +471,7 @@ export default function BlogArticle() {
 <h3>Best Practices for Ethical Use</h3>
 <p>Establish clear usage policies for watermark-removed content. Document the source of each video, intended use, and any permissions obtained. When in doubt, contact content creators directly to request usage permissions.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/jsKPOTCkFeWbGCbM4Vt0DRGRAiRhi6mXUGby24deVets6kZsA/output_588846433_0.jpeg" alt="How to Download TikTok Video Without Watermark in 2026 - illustration 5" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/download-tiktok-video-without-watermark-5.jpg" alt="How to Download TikTok Video Without Watermark in 2026 - illustration 5" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="faq">Frequently Asked Questions</h2>
 <div class="faq-item">
