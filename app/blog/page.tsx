@@ -71,6 +71,90 @@ export default function BlogPage() {
                     </div>
 
                     <div className={styles.blogGrid}>
+                        {/* Blog Post Card - How to Download TikTok Video No Watermark in 2026 — AI Guide */}
+                        <Link href="/blog/download-tiktok-video-no-watermark" className={styles.blogCard}>
+                            <div className={styles.blogImageWrapper}>
+                                <img
+                                    src="https://replicate.delivery/xezq/9XWXxQyyA0bNF9YYW2Y8trhZTz5ioMZIWjeFn55ciGMe1GOWA/output_819486818_0.jpeg"
+                                    alt="How to Download TikTok Video No Watermark in 2026 — AI Guide"
+                                    className={styles.blogCardImage}
+                                />
+                            </div>
+                            <div className={styles.blogCardContent}>
+                                <span className={styles.blogCategory}>VIDEO TOOLS</span>
+                                <h2 className={styles.blogCardTitle}>
+                                    How to Download TikTok Video No Watermark in 2026 — AI Guide
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    </svg>
+                                </h2>
+                                <p className={styles.blogCardDescription}>
+                                    Learn how to download TikTok video no watermark using AI tools. Compare 7 top watermark removers with step-by-step guides and expert testing results.
+                                </p>
+                                <div className={styles.blogCardMeta}>
+                                    <span>March 6, 2026</span>
+                                    <span>&bull;</span>
+                                    <span>12 min read</span>
+                                </div>
+                            </div>
+                        </Link>
+
+                        {/* Blog Post Card - How to Remove Watermark Video in 2026 — The AI-Powered Guide */}
+                        <Link href="/blog/remove-watermark-video" className={styles.blogCard}>
+                            <div className={styles.blogImageWrapper}>
+                                <img
+                                    src="https://replicate.delivery/xezq/q4q1b6HsUspoN1nuXBp99sLDt1HKyRlmOf9K5dXuw39jZDHLA/output_3700074971_0.jpeg"
+                                    alt="How to Remove Watermark Video in 2026 — The AI-Powered Guide"
+                                    className={styles.blogCardImage}
+                                />
+                            </div>
+                            <div className={styles.blogCardContent}>
+                                <span className={styles.blogCategory}>VIDEO TOOLS</span>
+                                <h2 className={styles.blogCardTitle}>
+                                    How to Remove Watermark Video in 2026 — The AI-Powered Guide
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    </svg>
+                                </h2>
+                                <p className={styles.blogCardDescription}>
+                                    Learn how to remove watermark video with AI-powered tools in 2026. Compare top solutions, step-by-step guides, and expert tips for clean results.
+                                </p>
+                                <div className={styles.blogCardMeta}>
+                                    <span>March 6, 2026</span>
+                                    <span>&bull;</span>
+                                    <span>12 min read</span>
+                                </div>
+                            </div>
+                        </Link>
+
+                        {/* Blog Post Card - Best TikTok Video Downloader Without Watermark in 2026 */}
+                        <Link href="/blog/tiktok-video-downloader-without-watermark" className={styles.blogCard}>
+                            <div className={styles.blogImageWrapper}>
+                                <img
+                                    src="https://replicate.delivery/xezq/e8p6qFdWhn25Yi6NxoebJyRxPyisZViO23f1rYabKc3rgNcsA/output_1582927764_0.jpeg"
+                                    alt="Best TikTok Video Downloader Without Watermark in 2026"
+                                    className={styles.blogCardImage}
+                                />
+                            </div>
+                            <div className={styles.blogCardContent}>
+                                <span className={styles.blogCategory}>VIDEO TOOLS</span>
+                                <h2 className={styles.blogCardTitle}>
+                                    Best TikTok Video Downloader Without Watermark in 2026
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    </svg>
+                                </h2>
+                                <p className={styles.blogCardDescription}>
+                                    Download TikTok videos without watermarks using AI-powered tools. Complete guide with 7 tested methods and step-by-step instructions for 2026.
+                                </p>
+                                <div className={styles.blogCardMeta}>
+                                    <span>March 6, 2026</span>
+                                    <span>&bull;</span>
+                                    <span>12 min read</span>
+                                </div>
+                            </div>
+                        </Link>
+
                         {/* Blog Post Card - Best Ways to Remove Video Watermark Using AI Tools in 2026 */}
                         <Link href="/blog/remove-video-watermark" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
