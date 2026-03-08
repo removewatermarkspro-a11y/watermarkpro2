@@ -62,11 +62,7 @@ export default function BlogPage() {
                             Remove Watermark Pro <span className={styles.highlight}>Blog</span>
                         </h1>
                         <p className={styles.description}>
-                            Unlock the full potential of AI-powered image editing with our expert blog. Learn how to remove watermarks from photos and videos,
-                            enhance image quality, upscale resolution, and master advanced photo editing techniques. From free watermark removal tools to
-                            professional background editing, object removal, and AI enhancement—discover step-by-step tutorials, insider tips, and proven
-                            strategies. Perfect for content creators, photographers, social media managers, and digital marketers looking to create
-                            stunning, professional-grade visuals that drive engagement and stand out online.
+                            Unlock the full potential of AI image editing. Discover expert tutorials to remove watermarks, enhance photos, and master advanced editing techniques for professional-grade visuals.
                         </p>
                     </div>
 
