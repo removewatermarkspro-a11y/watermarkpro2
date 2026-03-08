@@ -58,25 +58,19 @@
 
     .avatar,
     .avatarCount {
-        width: 24px;
-        /* Reduced from 36px/28px */
-        height: 24px;
-        /* Reduced from 36px/28px */
-        font-size: 0.55rem;
+        width: 20px;
+        height: 20px;
+        font-size: 0.5rem;
         border-width: 1px;
-        /* Thinner border */
-        margin-left: -6px;
-        /* Adjusted overlap */
+        margin-left: -4px;
     }
 
     .socialProof {
-        gap: 0.4rem;
-        /* Reduced gap */
-        margin-bottom: 0.5rem;
+        gap: 0.3rem;
+        margin-bottom: 0.25rem;
     }
 
     .text {
-        font-size: 0.70rem;
-        /* Reduced font size */
+        font-size: 0.65rem;
     }
 }
