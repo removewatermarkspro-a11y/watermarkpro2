@@ -71,7 +71,7 @@ export default function BlogPage() {
                         <Link href="/blog/mediaio-watermark-remover" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
                                 <img
-                                    src="https://replicate.delivery/xezq/BLFzvReWKwxyP6WKINMJKpchD8O24x2zT64pkuXyy4OXdYHLA/output_258716039_0.jpeg"
+                                    src="/images/blog/dewatermark-1.jpg"
                                     alt="Best Media.io Watermark Remover Alternatives in 2026 — AI Guide"
                                     className={styles.blogCardImage}
                                 />
@@ -99,7 +99,7 @@ export default function BlogPage() {
                         <Link href="/blog/tiktok-without-watermark" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
                                 <img
-                                    src="https://replicate.delivery/xezq/TFjjBk5ev4xjCqrpfudX3ad8jmCTemQgVWZ1Mqd2ah8bwhdsA/output_1345702138_0.jpeg"
+                                    src="/images/blog/remove-tiktok-watermark-2.jpg"
                                     alt="How to Get TikTok Without Watermark in 2026 — AI-Powered Guide"
                                     className={styles.blogCardImage}
                                 />
@@ -127,7 +127,7 @@ export default function BlogPage() {
                         <Link href="/blog/tiktok-download-without-watermark" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
                                 <img
-                                    src="https://replicate.delivery/xezq/LK6thNdBoV4tKRq8ovCWE2Af2pJlePPksnJe7TJvKTuyqhdsA/output_352769132_0.jpeg"
+                                    src="/images/blog/save-tiktok-without-watermark-2.jpg"
                                     alt="Best Ways to TikTok Download Without Watermark in 2026"
                                     className={styles.blogCardImage}
                                 />
@@ -155,7 +155,7 @@ export default function BlogPage() {
                         <Link href="/blog/tiktok-video-download-without-watermark" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
                                 <img
-                                    src="https://replicate.delivery/xezq/aWTwlxVWltLZCF9fmowjvzxXTRUWWKgRfTRlNaOEnf00n3csA/output_398942726_0.jpeg"
+                                    src="/images/blog/download-tiktok-video-without-watermark-2.jpg"
                                     alt="How to TikTok Video Download Without Watermark in 2026 — AI Guide"
                                     className={styles.blogCardImage}
                                 />
@@ -183,7 +183,7 @@ export default function BlogPage() {
                         <Link href="/blog/download-tiktok-videos-without-watermark" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
                                 <img
-                                    src="https://replicate.delivery/xezq/GX0NxoeKAnUveUU2KWPSUxArX8f38Jq9Iy1uA8XIfQcVEv5YB/output_454219200_0.jpeg"
+                                    src="/images/blog/remove-tiktok-watermark-3.jpg"
                                     alt="How to Download TikTok Videos Without Watermark in 2026 — The AI Guide"
                                     className={styles.blogCardImage}
                                 />
@@ -211,7 +211,7 @@ export default function BlogPage() {
                         <Link href="/blog/watermark-remover-video-free" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
                                 <img
-                                    src="https://replicate.delivery/xezq/KELZj9vT4DoaIZ2ZweiOI3yEdwpfsCwugIBpvVLeppe05u5YB/output_1120573138_0.jpeg"
+                                    src="/images/blog/remove-video-watermark-2.jpg"
                                     alt="Best Free Watermark Remover Video Tools in 2026 — AI Guide"
                                     className={styles.blogCardImage}
                                 />
@@ -239,7 +239,7 @@ export default function BlogPage() {
                         <Link href="/blog/download-tiktok-video-no-watermark" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
                                 <img
-                                    src="https://replicate.delivery/xezq/9XWXxQyyA0bNF9YYW2Y8trhZTz5ioMZIWjeFn55ciGMe1GOWA/output_819486818_0.jpeg"
+                                    src="/images/blog/save-tiktok-without-watermark-3.jpg"
                                     alt="How to Download TikTok Video No Watermark in 2026 — AI Guide"
                                     className={styles.blogCardImage}
                                 />
@@ -267,7 +267,7 @@ export default function BlogPage() {
                         <Link href="/blog/remove-watermark-video" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
                                 <img
-                                    src="https://replicate.delivery/xezq/q4q1b6HsUspoN1nuXBp99sLDt1HKyRlmOf9K5dXuw39jZDHLA/output_3700074971_0.jpeg"
+                                    src="/images/blog/remove-video-watermark-3.jpg"
                                     alt="How to Remove Watermark Video in 2026 — The AI-Powered Guide"
                                     className={styles.blogCardImage}
                                 />
@@ -295,7 +295,7 @@ export default function BlogPage() {
                         <Link href="/blog/tiktok-video-downloader-without-watermark" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
                                 <img
-                                    src="https://replicate.delivery/xezq/e8p6qFdWhn25Yi6NxoebJyRxPyisZViO23f1rYabKc3rgNcsA/output_1582927764_0.jpeg"
+                                    src="/images/blog/download-tiktok-video-without-watermark-3.jpg"
                                     alt="Best TikTok Video Downloader Without Watermark in 2026"
                                     className={styles.blogCardImage}
                                 />

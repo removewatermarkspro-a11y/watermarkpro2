@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         authors: ['Remove Watermark Pro'],
         images: [
             {
-                url: 'https://replicate.delivery/xezq/9XWXxQyyA0bNF9YYW2Y8trhZTz5ioMZIWjeFn55ciGMe1GOWA/output_819486818_0.jpeg',
+                url: '/images/blog/save-tiktok-without-watermark-3.jpg',
                 width: 1200,
                 height: 630,
                 alt: 'How to Download TikTok Video No Watermark in 2026 — AI Guide'
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'How to Download TikTok Video No Watermark in 2026 — AI Guide',
         description: 'Learn how to download TikTok video no watermark using AI tools. Compare 7 top watermark removers with step-by-step guides and expert testing results.',
-        images: ['https://replicate.delivery/xezq/9XWXxQyyA0bNF9YYW2Y8trhZTz5ioMZIWjeFn55ciGMe1GOWA/output_819486818_0.jpeg']
+        images: ['/images/blog/save-tiktok-without-watermark-3.jpg']
     },
 
     robots: {
@@ -195,7 +195,7 @@ export default function BlogArticle() {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "How to Download TikTok Video No Watermark in 2026 — AI Guide",
-        "image": "https://replicate.delivery/xezq/9XWXxQyyA0bNF9YYW2Y8trhZTz5ioMZIWjeFn55ciGMe1GOWA/output_819486818_0.jpeg",
+        "image": "/images/blog/save-tiktok-without-watermark-3.jpg",
         "datePublished": "2026-03-06T11:33:59.655Z",
         "dateModified": "2026-03-06T11:33:59.655Z",
         "author": {
@@ -218,7 +218,7 @@ export default function BlogArticle() {
         "@type": "HowTo",
         "name": "How to Download TikTok Video No Watermark in 2026 — AI Guide",
         "description": "Learn how to download TikTok video no watermark using AI tools. Compare 7 top watermark removers with step-by-step guides and expert testing results.",
-        "image": "https://replicate.delivery/xezq/9XWXxQyyA0bNF9YYW2Y8trhZTz5ioMZIWjeFn55ciGMe1GOWA/output_819486818_0.jpeg",
+        "image": "/images/blog/save-tiktok-without-watermark-3.jpg",
         "totalTime": "PT5M",
         "tool": {
             "@type": "HowToTool",
@@ -259,7 +259,7 @@ export default function BlogArticle() {
                         {/* Hero Image */}
                         <div className={styles.heroImage}>
                             <img
-                                src="https://replicate.delivery/xezq/9XWXxQyyA0bNF9YYW2Y8trhZTz5ioMZIWjeFn55ciGMe1GOWA/output_819486818_0.jpeg"
+                                src="/images/blog/save-tiktok-without-watermark-3.jpg"
                                 alt="Screenshot of TikTok video with visible watermark overlay in bottom right corner"
                                 width={1200}
                                 height={630}
@@ -322,7 +322,7 @@ export default function BlogArticle() {
 
 <p>Modern watermark removal relies on Computer Vision and Deep Learning algorithms. These technologies analyze video frames, detect watermark patterns, and use Neural Networks to reconstruct underlying content through inpainting processes.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/9XWXxQyyA0bNF9YYW2Y8trhZTz5ioMZIWjeFn55ciGMe1GOWA/output_819486818_0.jpeg" alt="Screenshot of TikTok video with visible watermark overlay in bottom right corner" width="1024" height="576" loading="eager" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/save-tiktok-without-watermark-3.jpg" alt="Screenshot of TikTok video with visible watermark overlay in bottom right corner" width="1024" height="576" loading="eager" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <p>The challenge involves preserving video integrity while removing overlays that may be semi-transparent, animated, or positioned dynamically across frames. Traditional cropping reduces dimensions, but AI inpainting maintains full resolution.</p>
 

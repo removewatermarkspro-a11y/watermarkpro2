@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         authors: ['Remove Watermark Pro'],
         images: [
             {
-                url: 'https://replicate.delivery/xezq/TFjjBk5ev4xjCqrpfudX3ad8jmCTemQgVWZ1Mqd2ah8bwhdsA/output_1345702138_0.jpeg',
+                url: '/images/blog/remove-tiktok-watermark-2.jpg',
                 width: 1200,
                 height: 630,
                 alt: 'How to Get TikTok Without Watermark in 2026 — AI-Powered Guide'
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'How to Get TikTok Without Watermark in 2026 — AI-Powered Guide',
         description: 'Learn how to get TikTok without watermark using AI tools. Compare 7 watermark removers, step-by-step guides, and pro tips for clean video downloads.',
-        images: ['https://replicate.delivery/xezq/TFjjBk5ev4xjCqrpfudX3ad8jmCTemQgVWZ1Mqd2ah8bwhdsA/output_1345702138_0.jpeg']
+        images: ['/images/blog/remove-tiktok-watermark-2.jpg']
     },
 
     robots: {
@@ -187,7 +187,7 @@ export default function BlogArticle() {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "How to Get TikTok Without Watermark in 2026 — AI-Powered Guide",
-        "image": "https://replicate.delivery/xezq/TFjjBk5ev4xjCqrpfudX3ad8jmCTemQgVWZ1Mqd2ah8bwhdsA/output_1345702138_0.jpeg",
+        "image": "/images/blog/remove-tiktok-watermark-2.jpg",
         "datePublished": "2026-03-08T11:23:39.735Z",
         "dateModified": "2026-03-08T11:23:39.735Z",
         "author": {
@@ -210,7 +210,7 @@ export default function BlogArticle() {
         "@type": "HowTo",
         "name": "How to Get TikTok Without Watermark in 2026 — AI-Powered Guide",
         "description": "Learn how to get TikTok without watermark using AI tools. Compare 7 watermark removers, step-by-step guides, and pro tips for clean video downloads.",
-        "image": "https://replicate.delivery/xezq/TFjjBk5ev4xjCqrpfudX3ad8jmCTemQgVWZ1Mqd2ah8bwhdsA/output_1345702138_0.jpeg",
+        "image": "/images/blog/remove-tiktok-watermark-2.jpg",
         "totalTime": "PT5M",
         "tool": {
             "@type": "HowToTool",
@@ -251,7 +251,7 @@ export default function BlogArticle() {
                         {/* Hero Image */}
                         <div className={styles.heroImage}>
                             <img
-                                src="https://replicate.delivery/xezq/TFjjBk5ev4xjCqrpfudX3ad8jmCTemQgVWZ1Mqd2ah8bwhdsA/output_1345702138_0.jpeg"
+                                src="/images/blog/remove-tiktok-watermark-2.jpg"
                                 alt="TikTok video interface showing the distinctive watermark overlay on a dance video with transparent logo placement"
                                 width={1200}
                                 height={630}
@@ -314,7 +314,7 @@ export default function BlogArticle() {
 
 <p>After testing 38 watermark removal solutions across 920 TikTok videos, the landscape reveals significant quality differences between AI-powered tools and traditional manual methods. Modern neural networks achieve 94% success rates while maintaining 4K resolution integrity.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/TFjjBk5ev4xjCqrpfudX3ad8jmCTemQgVWZ1Mqd2ah8bwhdsA/output_1345702138_0.jpeg" alt="TikTok video interface showing the distinctive watermark overlay on a dance video with transparent logo placement" width="1024" height="576" loading="eager" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/remove-tiktok-watermark-2.jpg" alt="TikTok video interface showing the distinctive watermark overlay on a dance video with transparent logo placement" width="1024" height="576" loading="eager" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <p>The challenge extends beyond simple logo removal. TikTok's watermark employs semi-transparent overlays that change position and opacity throughout video playback, requiring sophisticated computer vision algorithms for clean extraction.</p>
 

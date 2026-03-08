@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         authors: ['Remove Watermark Pro'],
         images: [
             {
-                url: 'https://replicate.delivery/xezq/q4q1b6HsUspoN1nuXBp99sLDt1HKyRlmOf9K5dXuw39jZDHLA/output_3700074971_0.jpeg',
+                url: '/images/blog/remove-video-watermark-3.jpg',
                 width: 1200,
                 height: 630,
                 alt: 'How to Remove Watermark Video in 2026 — The AI-Powered Guide'
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'How to Remove Watermark Video in 2026 — The AI-Powered Guide',
         description: 'Learn how to remove watermark video with AI-powered tools in 2026. Compare top solutions, step-by-step guides, and expert tips for clean results.',
-        images: ['https://replicate.delivery/xezq/q4q1b6HsUspoN1nuXBp99sLDt1HKyRlmOf9K5dXuw39jZDHLA/output_3700074971_0.jpeg']
+        images: ['/images/blog/remove-video-watermark-3.jpg']
     },
 
     robots: {
@@ -187,7 +187,7 @@ export default function BlogArticle() {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "How to Remove Watermark Video in 2026 — The AI-Powered Guide",
-        "image": "https://replicate.delivery/xezq/q4q1b6HsUspoN1nuXBp99sLDt1HKyRlmOf9K5dXuw39jZDHLA/output_3700074971_0.jpeg",
+        "image": "/images/blog/remove-video-watermark-3.jpg",
         "datePublished": "2026-03-06T11:30:59.222Z",
         "dateModified": "2026-03-06T11:30:59.222Z",
         "author": {
@@ -210,7 +210,7 @@ export default function BlogArticle() {
         "@type": "HowTo",
         "name": "How to Remove Watermark Video in 2026 — The AI-Powered Guide",
         "description": "Learn how to remove watermark video with AI-powered tools in 2026. Compare top solutions, step-by-step guides, and expert tips for clean results.",
-        "image": "https://replicate.delivery/xezq/q4q1b6HsUspoN1nuXBp99sLDt1HKyRlmOf9K5dXuw39jZDHLA/output_3700074971_0.jpeg",
+        "image": "/images/blog/remove-video-watermark-3.jpg",
         "totalTime": "PT5M",
         "tool": {
             "@type": "HowToTool",
@@ -251,7 +251,7 @@ export default function BlogArticle() {
                         {/* Hero Image */}
                         <div className={styles.heroImage}>
                             <img
-                                src="https://replicate.delivery/xezq/q4q1b6HsUspoN1nuXBp99sLDt1HKyRlmOf9K5dXuw39jZDHLA/output_3700074971_0.jpeg"
+                                src="/images/blog/remove-video-watermark-3.jpg"
                                 alt="Screenshot showing video player with watermarked content before AI removal process"
                                 width={1200}
                                 height={630}
@@ -310,7 +310,7 @@ export default function BlogArticle() {
 
 <p>After testing 45 different tools across 920 video samples, ranging from simple static logos to complex animated overlays, the landscape has shifted dramatically. AI inpainting algorithms now process video frames with unprecedented accuracy, while deep learning models understand temporal coherence between frames to maintain seamless results.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/q4q1b6HsUspoN1nuXBp99sLDt1HKyRlmOf9K5dXuw39jZDHLA/output_3700074971_0.jpeg" alt="Screenshot showing video player with watermarked content before AI removal process" width="1024" height="576" loading="eager" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/remove-video-watermark-3.jpg" alt="Screenshot showing video player with watermarked content before AI removal process" width="1024" height="576" loading="eager" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="understanding">What Makes Video Watermark Removal Challenging in 2026?</h2>
 

@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         authors: ['Remove Watermark Pro'],
         images: [
             {
-                url: 'https://replicate.delivery/xezq/BLFzvReWKwxyP6WKINMJKpchD8O24x2zT64pkuXyy4OXdYHLA/output_258716039_0.jpeg',
+                url: '/images/blog/dewatermark-1.jpg',
                 width: 1200,
                 height: 630,
                 alt: 'Best Media.io Watermark Remover Alternatives in 2026 — AI Guide'
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'Best Media.io Watermark Remover Alternatives in 2026 — AI Guide',
         description: 'Discover the best media.io watermark remover alternatives in 2026. Compare AI-powered tools, features, and pricing to remove watermarks efficiently.',
-        images: ['https://replicate.delivery/xezq/BLFzvReWKwxyP6WKINMJKpchD8O24x2zT64pkuXyy4OXdYHLA/output_258716039_0.jpeg']
+        images: ['/images/blog/dewatermark-1.jpg']
     },
 
     robots: {
@@ -187,7 +187,7 @@ export default function BlogArticle() {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "Best Media.io Watermark Remover Alternatives in 2026 — AI Guide",
-        "image": "https://replicate.delivery/xezq/BLFzvReWKwxyP6WKINMJKpchD8O24x2zT64pkuXyy4OXdYHLA/output_258716039_0.jpeg",
+        "image": "/images/blog/dewatermark-1.jpg",
         "datePublished": "2026-03-08T11:26:17.961Z",
         "dateModified": "2026-03-08T11:26:17.961Z",
         "author": {
@@ -210,7 +210,7 @@ export default function BlogArticle() {
         "@type": "HowTo",
         "name": "Best Media.io Watermark Remover Alternatives in 2026 — AI Guide",
         "description": "Discover the best media.io watermark remover alternatives in 2026. Compare AI-powered tools, features, and pricing to remove watermarks efficiently.",
-        "image": "https://replicate.delivery/xezq/BLFzvReWKwxyP6WKINMJKpchD8O24x2zT64pkuXyy4OXdYHLA/output_258716039_0.jpeg",
+        "image": "/images/blog/dewatermark-1.jpg",
         "totalTime": "PT5M",
         "tool": {
             "@type": "HowToTool",
@@ -251,7 +251,7 @@ export default function BlogArticle() {
                         {/* Hero Image */}
                         <div className={styles.heroImage}>
                             <img
-                                src="https://replicate.delivery/xezq/BLFzvReWKwxyP6WKINMJKpchD8O24x2zT64pkuXyy4OXdYHLA/output_258716039_0.jpeg"
+                                src="/images/blog/dewatermark-1.jpg"
                                 alt="Screenshot of media.io watermark remover interface showing upload area and processing options"
                                 width={1200}
                                 height={630}
@@ -310,7 +310,7 @@ export default function BlogArticle() {
 
 <p>After testing 45 different watermark removal tools over six months, processing over 920 images and 230 videos, clear performance patterns emerged. The <strong>media.io watermark remover</strong> represents one approach, but newer AI-powered alternatives demonstrate significantly better results.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/BLFzvReWKwxyP6WKINMJKpchD8O24x2zT64pkuXyy4OXdYHLA/output_258716039_0.jpeg" alt="Screenshot of media.io watermark remover interface showing upload area and processing options" width="1024" height="576" loading="eager" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-1.jpg" alt="Screenshot of media.io watermark remover interface showing upload area and processing options" width="1024" height="576" loading="eager" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="understanding">What Makes Media.io Watermark Remover Different?</h2>
 

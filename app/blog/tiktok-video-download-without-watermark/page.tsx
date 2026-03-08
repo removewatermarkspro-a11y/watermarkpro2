@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         authors: ['Remove Watermark Pro'],
         images: [
             {
-                url: 'https://replicate.delivery/xezq/aWTwlxVWltLZCF9fmowjvzxXTRUWWKgRfTRlNaOEnf00n3csA/output_398942726_0.jpeg',
+                url: '/images/blog/download-tiktok-video-without-watermark-2.jpg',
                 width: 1200,
                 height: 630,
                 alt: 'How to TikTok Video Download Without Watermark in 2026 — AI Guide'
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'How to TikTok Video Download Without Watermark in 2026 — AI Guide',
         description: 'Download TikTok videos without watermarks using AI tools. Complete guide with step-by-step methods, tool comparisons, and legal considerations for 2026.',
-        images: ['https://replicate.delivery/xezq/aWTwlxVWltLZCF9fmowjvzxXTRUWWKgRfTRlNaOEnf00n3csA/output_398942726_0.jpeg']
+        images: ['/images/blog/download-tiktok-video-without-watermark-2.jpg']
     },
 
     robots: {
@@ -187,7 +187,7 @@ export default function BlogArticle() {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "How to TikTok Video Download Without Watermark in 2026 — AI Guide",
-        "image": "https://replicate.delivery/xezq/aWTwlxVWltLZCF9fmowjvzxXTRUWWKgRfTRlNaOEnf00n3csA/output_398942726_0.jpeg",
+        "image": "/images/blog/download-tiktok-video-without-watermark-2.jpg",
         "datePublished": "2026-03-07T11:25:26.423Z",
         "dateModified": "2026-03-07T11:25:26.423Z",
         "author": {
@@ -210,7 +210,7 @@ export default function BlogArticle() {
         "@type": "HowTo",
         "name": "How to TikTok Video Download Without Watermark in 2026 — AI Guide",
         "description": "Download TikTok videos without watermarks using AI tools. Complete guide with step-by-step methods, tool comparisons, and legal considerations for 2026.",
-        "image": "https://replicate.delivery/xezq/aWTwlxVWltLZCF9fmowjvzxXTRUWWKgRfTRlNaOEnf00n3csA/output_398942726_0.jpeg",
+        "image": "/images/blog/download-tiktok-video-without-watermark-2.jpg",
         "totalTime": "PT5M",
         "tool": {
             "@type": "HowToTool",
@@ -251,7 +251,7 @@ export default function BlogArticle() {
                         {/* Hero Image */}
                         <div className={styles.heroImage}>
                             <img
-                                src="https://replicate.delivery/xezq/aWTwlxVWltLZCF9fmowjvzxXTRUWWKgRfTRlNaOEnf00n3csA/output_398942726_0.jpeg"
+                                src="/images/blog/download-tiktok-video-without-watermark-2.jpg"
                                 alt="Screenshot of TikTok mobile interface showing watermark placement on video player with download options highlighted"
                                 width={1200}
                                 height={630}
@@ -312,7 +312,7 @@ export default function BlogArticle() {
 
 <p>The challenge with <strong>tiktok video download without watermark</strong> involves understanding TikTok's embedding system and choosing appropriate removal methods. TikTok applies watermarks during video encoding, not as simple overlays, requiring sophisticated techniques for clean removal.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/aWTwlxVWltLZCF9fmowjvzxXTRUWWKgRfTRlNaOEnf00n3csA/output_398942726_0.jpeg" alt="Screenshot of TikTok mobile interface showing watermark placement on video player with download options highlighted" width="1024" height="576" loading="eager" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/download-tiktok-video-without-watermark-2.jpg" alt="Screenshot of TikTok mobile interface showing watermark placement on video player with download options highlighted" width="1024" height="576" loading="eager" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="understanding-tiktok-watermarks">What makes TikTok watermarks challenging to remove?</h2>
 

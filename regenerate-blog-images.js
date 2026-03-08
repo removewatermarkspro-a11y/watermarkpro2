@@ -14,6 +14,17 @@ const path = require('path');
 const https = require('https');
 const http = require('http');
 
+// Manually parse .env.local since dotenv is not installed
+if (fs.existsSync('.env.local')) {
+    const envContent = fs.readFileSync('.env.local', 'utf8');
+    envContent.split('\n').forEach(line => {
+        const match = line.match(/^([^=]+)=(.*)$/);
+        if (match) {
+            process.env[match[1]] = match[2].trim().replace(/^"|"$/g, '');
+        }
+    });
+}
+
 const REPLICATE_API_TOKEN = process.env.REPLICATE_API_TOKEN;
 if (!REPLICATE_API_TOKEN) {
     console.error('❌ REPLICATE_API_TOKEN environment variable is required');
@@ -24,14 +35,17 @@ const BLOG_DIR = path.join(__dirname, 'app', 'blog');
 const PUBLIC_BLOG_IMAGES_DIR = path.join(__dirname, 'public', 'images', 'blog');
 const BLOG_INDEX_FILE = path.join(BLOG_DIR, 'page.tsx');
 
-// The 6 articles with broken replicate.delivery image URLs
+// The 9 articles with broken replicate.delivery image URLs
 const ARTICLES = [
-    'remove-video-watermark',
-    'save-tiktok-without-watermark',
-    'remove-tiktok-watermark',
-    'download-tiktok-video-without-watermark',
-    'dewatermark',
-    'remove-proof-from-picture',
+    'mediaio-watermark-remover',
+    'tiktok-without-watermark',
+    'tiktok-download-without-watermark',
+    'tiktok-video-download-without-watermark',
+    'download-tiktok-videos-without-watermark',
+    'watermark-remover-video-free',
+    'download-tiktok-video-no-watermark',
+    'remove-watermark-video',
+    'tiktok-video-downloader-without-watermark',
 ];
 
 // Image scene templates (same as generate-daily-blog.js)
@@ -60,12 +74,15 @@ const IMAGE_SCENE_TEMPLATES = [
 
 // Map slug -> keyword (the original keyword used to generate each article)
 const SLUG_TO_KEYWORD = {
-    'remove-video-watermark': 'remove video watermark',
-    'save-tiktok-without-watermark': 'save tiktok without watermark',
-    'remove-tiktok-watermark': 'remove tiktok watermark',
-    'download-tiktok-video-without-watermark': 'download tiktok video without watermark',
-    'dewatermark': 'dewatermark',
-    'remove-proof-from-picture': 'remove proof from picture',
+    'mediaio-watermark-remover': 'media.io watermark remover',
+    'tiktok-without-watermark': 'tiktok without watermark',
+    'tiktok-download-without-watermark': 'tiktok download without watermark',
+    'tiktok-video-download-without-watermark': 'tiktok video download without watermark',
+    'download-tiktok-videos-without-watermark': 'download tiktok videos without watermark',
+    'watermark-remover-video-free': 'watermark remover video free',
+    'download-tiktok-video-no-watermark': 'download tiktok video no watermark',
+    'remove-watermark-video': 'remove watermark video',
+    'tiktok-video-downloader-without-watermark': 'tiktok video downloader without watermark',
 };
 
 function sleep(ms) {

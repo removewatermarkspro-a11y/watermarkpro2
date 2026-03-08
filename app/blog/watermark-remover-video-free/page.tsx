@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         authors: ['Remove Watermark Pro'],
         images: [
             {
-                url: 'https://replicate.delivery/xezq/KELZj9vT4DoaIZ2ZweiOI3yEdwpfsCwugIBpvVLeppe05u5YB/output_1120573138_0.jpeg',
+                url: '/images/blog/remove-video-watermark-2.jpg',
                 width: 1200,
                 height: 630,
                 alt: 'Best Free Watermark Remover Video Tools in 2026 — AI Guide'
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'Best Free Watermark Remover Video Tools in 2026 — AI Guide',
         description: 'Discover the best watermark remover video free tools in 2026. Compare AI-powered solutions, step-by-step guides, and expert testing results.',
-        images: ['https://replicate.delivery/xezq/KELZj9vT4DoaIZ2ZweiOI3yEdwpfsCwugIBpvVLeppe05u5YB/output_1120573138_0.jpeg']
+        images: ['/images/blog/remove-video-watermark-2.jpg']
     },
 
     robots: {
@@ -195,7 +195,7 @@ export default function BlogArticle() {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "Best Free Watermark Remover Video Tools in 2026 — AI Guide",
-        "image": "https://replicate.delivery/xezq/KELZj9vT4DoaIZ2ZweiOI3yEdwpfsCwugIBpvVLeppe05u5YB/output_1120573138_0.jpeg",
+        "image": "/images/blog/remove-video-watermark-2.jpg",
         "datePublished": "2026-03-07T11:19:41.272Z",
         "dateModified": "2026-03-07T11:19:41.272Z",
         "author": {
@@ -218,7 +218,7 @@ export default function BlogArticle() {
         "@type": "HowTo",
         "name": "Best Free Watermark Remover Video Tools in 2026 — AI Guide",
         "description": "Discover the best watermark remover video free tools in 2026. Compare AI-powered solutions, step-by-step guides, and expert testing results.",
-        "image": "https://replicate.delivery/xezq/KELZj9vT4DoaIZ2ZweiOI3yEdwpfsCwugIBpvVLeppe05u5YB/output_1120573138_0.jpeg",
+        "image": "/images/blog/remove-video-watermark-2.jpg",
         "totalTime": "PT5M",
         "tool": {
             "@type": "HowToTool",
@@ -259,7 +259,7 @@ export default function BlogArticle() {
                         {/* Hero Image */}
                         <div className={styles.heroImage}>
                             <img
-                                src="https://replicate.delivery/xezq/KELZj9vT4DoaIZ2ZweiOI3yEdwpfsCwugIBpvVLeppe05u5YB/output_1120573138_0.jpeg"
+                                src="/images/blog/remove-video-watermark-2.jpg"
                                 alt="Screenshot showing before and after comparison of AI watermark removal on a 4K video frame with TikTok logo"
                                 width={1200}
                                 height={630}
@@ -317,7 +317,7 @@ export default function BlogArticle() {
 
 <p>Sarah, a social media manager, discovered her promotional videos contained competitor watermarks after downloading content from various platforms. She needed a reliable <strong>watermark remover video free</strong> solution that wouldn't compromise video quality or require technical expertise. After testing multiple tools, she found AI-powered solutions delivered professional results in minutes rather than hours of manual editing.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/KELZj9vT4DoaIZ2ZweiOI3yEdwpfsCwugIBpvVLeppe05u5YB/output_1120573138_0.jpeg" alt="Screenshot showing before and after comparison of AI watermark removal on a 4K video frame with TikTok logo" width="1024" height="576" loading="eager" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/remove-video-watermark-2.jpg" alt="Screenshot showing before and after comparison of AI watermark removal on a 4K video frame with TikTok logo" width="1024" height="576" loading="eager" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="understanding">What Makes Video Watermark Removal Effective?</h2>
 

@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         authors: ['Remove Watermark Pro'],
         images: [
             {
-                url: 'https://replicate.delivery/xezq/e8p6qFdWhn25Yi6NxoebJyRxPyisZViO23f1rYabKc3rgNcsA/output_1582927764_0.jpeg',
+                url: '/images/blog/download-tiktok-video-without-watermark-3.jpg',
                 width: 1200,
                 height: 630,
                 alt: 'Best TikTok Video Downloader Without Watermark in 2026'
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'Best TikTok Video Downloader Without Watermark in 2026',
         description: 'Download TikTok videos without watermarks using AI-powered tools. Complete guide with 7 tested methods and step-by-step instructions for 2026.',
-        images: ['https://replicate.delivery/xezq/e8p6qFdWhn25Yi6NxoebJyRxPyisZViO23f1rYabKc3rgNcsA/output_1582927764_0.jpeg']
+        images: ['/images/blog/download-tiktok-video-without-watermark-3.jpg']
     },
 
     robots: {
@@ -187,7 +187,7 @@ export default function BlogArticle() {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "Best TikTok Video Downloader Without Watermark in 2026",
-        "image": "https://replicate.delivery/xezq/e8p6qFdWhn25Yi6NxoebJyRxPyisZViO23f1rYabKc3rgNcsA/output_1582927764_0.jpeg",
+        "image": "/images/blog/download-tiktok-video-without-watermark-3.jpg",
         "datePublished": "2026-03-06T11:28:00.846Z",
         "dateModified": "2026-03-06T11:28:00.846Z",
         "author": {
@@ -210,7 +210,7 @@ export default function BlogArticle() {
         "@type": "HowTo",
         "name": "Best TikTok Video Downloader Without Watermark in 2026",
         "description": "Download TikTok videos without watermarks using AI-powered tools. Complete guide with 7 tested methods and step-by-step instructions for 2026.",
-        "image": "https://replicate.delivery/xezq/e8p6qFdWhn25Yi6NxoebJyRxPyisZViO23f1rYabKc3rgNcsA/output_1582927764_0.jpeg",
+        "image": "/images/blog/download-tiktok-video-without-watermark-3.jpg",
         "totalTime": "PT5M",
         "tool": {
             "@type": "HowToTool",
@@ -251,7 +251,7 @@ export default function BlogArticle() {
                         {/* Hero Image */}
                         <div className={styles.heroImage}>
                             <img
-                                src="https://replicate.delivery/xezq/e8p6qFdWhn25Yi6NxoebJyRxPyisZViO23f1rYabKc3rgNcsA/output_1582927764_0.jpeg"
+                                src="/images/blog/download-tiktok-video-without-watermark-3.jpg"
                                 alt="Screenshot of TikTok video download interface showing watermark overlay on mobile screen"
                                 width={1200}
                                 height={630}
@@ -309,7 +309,7 @@ export default function BlogArticle() {
 
 <p>A content creator discovers their viral TikTok video being shared across platforms with the watermark cropped out. Meanwhile, another user struggles to download their favorite TikTok video for a presentation without the distracting logo overlay. This scenario highlights the complex relationship between content protection and user needs in social media platforms.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/e8p6qFdWhn25Yi6NxoebJyRxPyisZViO23f1rYabKc3rgNcsA/output_1582927764_0.jpeg" alt="Screenshot of TikTok video download interface showing watermark overlay on mobile screen" width="1024" height="576" loading="eager" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/download-tiktok-video-without-watermark-3.jpg" alt="Screenshot of TikTok video download interface showing watermark overlay on mobile screen" width="1024" height="576" loading="eager" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="understanding">Why Do TikTok Videos Have Watermarks?</h2>
 
