@@ -193,19 +193,32 @@ export default function ImageUploader({
                         } else {
                             console.error('[ImageUploader] API error:', result.error)
                             setIsProcessing(false)
+                            
                             // If error is about credits, show no credits popup
-                            if (response.status === 402) {
+                            const isCreditError = response.status === 402 || 
+                                (result.error && result.error.toLowerCase().includes('credit'));
+                                
+                            if (isCreditError) {
                                 setShowNoCreditsPopup(true)
                             } else {
                                 // For now, fallback to original image on error
                                 onImageUpload(file, imageBase64)
                             }
                         }
-                    } catch (apiError) {
+                    } catch (apiError: any) {
                         console.error('[ImageUploader] API call failed:', apiError)
                         setIsProcessing(false)
-                        // Fallback to original image on error
-                        onImageUpload(file, e.target?.result as string)
+                        
+                        // Check if error might be credit related
+                        const isCreditError = apiError?.message?.toLowerCase().includes('credit') || 
+                                             apiError?.status === 402;
+                        
+                        if (isCreditError) {
+                            setShowNoCreditsPopup(true)
+                        } else {
+                            // Fallback to original image on error
+                            onImageUpload(file, e.target?.result as string)
+                        }
                     }
                 }
                 reader.readAsDataURL(file)
