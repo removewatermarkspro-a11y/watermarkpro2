@@ -3,7 +3,7 @@ import WatermarkRemoverClient from './watermark-remover/WatermarkRemoverClient'
 import StructuredData, { websiteSchema, organizationSchema, createSoftwareSchema } from '@/components/StructuredData'
 
 export const metadata: Metadata = {
-    title: 'Watermark Remover Free | AI Tool - Remove in 1 Second',
+    title: 'Free Watermark Remover',
     description: 'Remove watermarks from images instantly with AI. 100% free tool. Professional results in 1 click. Works on photos, logos & text. Try it now!',
 
     alternates: {
