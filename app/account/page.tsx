@@ -2,7 +2,7 @@ import AccountClient from './AccountClient'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-    title: 'My Account - Remove Watermark Pro',
+    title: 'My Account',
     description: 'Manage your Remove Watermark Pro account, subscription, and billing information.',
 
     alternates: {

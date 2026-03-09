@@ -4,7 +4,7 @@ import StructuredData, { createSoftwareSchema, createFAQSchema } from '@/compone
 import { peopleRemovalFaqItems } from '@/utils/faqItems'
 
 export const metadata: Metadata = {
-    title: 'People Remover AI Free | Delete People from Photos Fast',
+    title: 'Free AI People Eraser',
     description: 'Remove people from photos with AI. Delete unwanted people, crowds & tourists in seconds. 100% free tool. Clean up your photos perfectly. Try it free!',
     keywords: 'people remover ai, remove people from photo, delete people, crowd remover, ai people eraser, photo people removal',
     openGraph: {

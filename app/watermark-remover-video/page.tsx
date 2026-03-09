@@ -4,7 +4,7 @@ import StructuredData, { createSoftwareSchema, createFAQSchema } from '@/compone
 import { commonFaqItems } from '@/utils/faqItems'
 
 export const metadata: Metadata = {
-    title: 'Video Watermark Remover | Remove from MP4, MOV, AVI - Free',
+    title: 'Free Video Watermark Remover',
     description: 'Remove watermarks from videos in 1 click. Supports MP4, MOV, AVI & more. 100% free AI tool. Remove TikTok watermarks & logos. Try it today!',
 
     alternates: {

@@ -4,7 +4,7 @@ import StructuredData, { createSoftwareSchema, createFAQSchema } from '@/compone
 import { backgroundRemovalFaqItems } from '@/utils/faqItems'
 
 export const metadata: Metadata = {
-    title: 'Background Remover AI | Remove Photo Backgrounds in 1 Click',
+    title: 'Free AI Background Remover',
     description: 'Remove backgrounds from photos instantly with AI. Create transparent PNGs in 1 click. 100% free tool. Perfect for products, portraits & logos!',
     keywords: 'background remover, remove photo background, delete background, transparent background, ai background remover, photo background eraser',
     openGraph: {

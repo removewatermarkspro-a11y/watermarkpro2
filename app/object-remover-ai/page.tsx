@@ -4,7 +4,7 @@ import StructuredData, { createSoftwareSchema, createFAQSchema } from '@/compone
 import { objectRemovalFaqItems } from '@/utils/faqItems'
 
 export const metadata: Metadata = {
-    title: 'Object Remover AI Free | Delete Unwanted Objects Fast',
+    title: 'Free AI Object Remover',
     description: 'Delete unwanted objects, people & elements from photos with AI. 100% free tool. Remove photobombers, clutter & distractions. Try it today!',
     keywords: 'object remover ai, remove object from photo, erase unwanted objects, delete objects from image, ai object removal, remove photobombers',
     openGraph: {

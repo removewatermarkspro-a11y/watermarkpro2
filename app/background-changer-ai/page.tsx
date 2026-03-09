@@ -4,7 +4,7 @@ import StructuredData, { createSoftwareSchema, createFAQSchema } from '@/compone
 import { replaceBackgroundFaqItems } from '@/utils/faqItems'
 
 export const metadata: Metadata = {
-    title: 'Background Changer AI | Replace Photo Backgrounds Instantly',
+    title: 'Free AI Background Changer',
     description: 'Change photo backgrounds with AI in seconds. Replace, swap & transform backgrounds instantly. 100% free tool. Perfect results every time. Try now!',
     keywords: 'background changer ai, change photo background, replace background, swap background, ai background changer, photo background editor',
     openGraph: {

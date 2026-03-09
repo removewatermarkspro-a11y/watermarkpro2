@@ -6,7 +6,7 @@ import Footer from '@/components/Footer'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 
 export const metadata: Metadata = {
-    title: 'AI Image Editing Blog | Tips & Tutorials - Remove Watermark Pro',
+    title: 'AI Image Editing Blog',
     description: 'Discover expert tips, tutorials, and insights on AI-powered image editing. Learn how to remove watermarks, enhance photos, and master professional editing techniques.',
 
     alternates: {

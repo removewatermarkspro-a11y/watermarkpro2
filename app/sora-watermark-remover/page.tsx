@@ -4,7 +4,7 @@ import StructuredData, { createSoftwareSchema, createFAQSchema } from '@/compone
 import { soraRemoverFaqItems } from '@/utils/soraRemoverFaqItems'
 
 export const metadata: Metadata = {
-    title: 'Sora Watermark Remover | Remove OpenAI Sora Logos Instantly',
+    title: 'Free Sora Watermark Remover',
     description: 'Remove Sora AI watermarks & logos from videos instantly. 100% free tool for OpenAI Sora content. Clean videos in seconds. Try it now!',
 
     alternates: {

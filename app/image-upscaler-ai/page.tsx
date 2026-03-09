@@ -4,7 +4,7 @@ import StructuredData, { createSoftwareSchema, createFAQSchema } from '@/compone
 import { imageUpscalerFaqItems } from '@/utils/faqItems'
 
 export const metadata: Metadata = {
-    title: 'Image Upscaler AI Free | Enhance Photos to 4K Quality',
+    title: 'Free AI Image Upscaler',
     description: 'Upscale images to 4K with AI. Enhance photo quality up to 4x resolution. 100% free tool. No quality loss, perfect details. Try it now!',
     keywords: 'image upscaler ai, upscale image, enhance photo quality, increase resolution, ai image enhancer, photo upscaler',
     openGraph: {

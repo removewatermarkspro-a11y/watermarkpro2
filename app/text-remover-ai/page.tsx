@@ -4,7 +4,7 @@ import StructuredData, { createSoftwareSchema, createFAQSchema } from '@/compone
 import { textRemovalFaqItems } from '@/utils/faqItems'
 
 export const metadata: Metadata = {
-    title: 'Text Remover AI Free | Erase Text from Photos Instantly',
+    title: 'Free AI Text Remover',
     description: 'Erase text, captions & subtitles from images with AI. 100% free tool. Remove watermarks, logos & unwanted text in seconds. Try it now!',
     keywords: 'text remover ai, remove text from image, ai text remover, erase text from photo, delete text from image, remove captions, remove subtitles',
     openGraph: {
