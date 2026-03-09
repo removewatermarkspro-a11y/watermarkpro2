@@ -7,29 +7,29 @@ export const metadata: Metadata = {
     description: 'Entfernen Sie Wasserzeichen von Bildern sofort mit KI. 100% kostenloses Tool. Professionelle Ergebnisse in 1 Klick. Funktioniert bei Fotos, Logos & Text. Jetzt testen!',
 
     alternates: {
-        canonical: 'https://removewatermarkspro.com/de/wasserzeichen-entfernen',
+        canonical: 'https://removewatermarkpro.co/de/wasserzeichen-entfernen',
         languages: {
-            'en': 'https://removewatermarkspro.com/watermark-remover',
-            'fr': 'https://removewatermarkspro.com/fr/enlever-filigrane',
-            'de': 'https://removewatermarkspro.com/de/wasserzeichen-entfernen',
-            'es': 'https://removewatermarkspro.com/es/eliminar-marca-agua',
-            'pt': 'https://removewatermarkspro.com/pt/remover-marca-dagua',
-            'ko': 'https://removewatermarkspro.com/ko/watermark-remover',
-            'no': 'https://removewatermarkspro.com/no/fjern-vannmerke',
-            'x-default': 'https://removewatermarkspro.com/watermark-remover'
+            'en': 'https://removewatermarkpro.co/watermark-remover',
+            'fr': 'https://removewatermarkpro.co/fr/enlever-filigrane',
+            'de': 'https://removewatermarkpro.co/de/wasserzeichen-entfernen',
+            'es': 'https://removewatermarkpro.co/es/eliminar-marca-agua',
+            'pt': 'https://removewatermarkpro.co/pt/remover-marca-dagua',
+            'ko': 'https://removewatermarkpro.co/ko/watermark-remover',
+            'no': 'https://removewatermarkpro.co/no/fjern-vannmerke',
+            'x-default': 'https://removewatermarkpro.co/watermark-remover'
         }
     },
 
     openGraph: {
         title: 'Wasserzeichen Entfernen Kostenlos | In 1 Klick',
         description: 'Entfernen Sie Wasserzeichen von Bildern in 1 Klick. Kostenloses KI-Tool, schnell und ohne Anmeldung.',
-        url: 'https://removewatermarkspro.com/de/wasserzeichen-entfernen',
+        url: 'https://removewatermarkpro.co/de/wasserzeichen-entfernen',
         siteName: 'Remove Watermark Pro',
         locale: 'de_DE',
         type: 'website',
         images: [
             {
-                url: 'https://removewatermarkspro.com/og-image-de.jpg',
+                url: 'https://removewatermarkpro.co/og-image-de.jpg',
                 width: 1200,
                 height: 630,
                 alt: 'Wasserzeichen Entferner Tool - Vorher und Nachher'
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'Wasserzeichen Entfernen Kostenlos | In 1 Klick',
         description: 'Entfernen Sie Wasserzeichen von Bildern in 1 Klick. Kostenloses KI-Tool, schnell und ohne Anmeldung.',
-        images: ['https://removewatermarkspro.com/og-image-de.jpg']
+        images: ['https://removewatermarkpro.co/og-image-de.jpg']
     },
 
     robots: {
@@ -62,7 +62,7 @@ export default function WatermarkRemoverGermanPage() {
         <>
             <StructuredData data={createSoftwareSchema({
                 name: "Wasserzeichen Entfernen - KI Kostenlos",
-                url: "https://removewatermarkpro.com/de/wasserzeichen-entfernen",
+                url: "https://removewatermarkpro.co/de/wasserzeichen-entfernen",
                 description: "Entfernen Sie Wasserzeichen von Bildern in 1 Klick. Kostenloses KI-Tool, schnell und ohne Anmeldung."
             })} />
             <WatermarkRemoverClientDe />

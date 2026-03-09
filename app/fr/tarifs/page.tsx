@@ -8,23 +8,23 @@ export const metadata: Metadata = {
     description: 'Découvrez nos tarifs pour supprimer les filigranes. Plans gratuits et premium avec crédits pour enlever les filigranes de vos images et vidéos.',
 
     alternates: {
-        canonical: 'https://removewatermarkspro.com/fr/tarifs',
+        canonical: 'https://removewatermarkpro.co/fr/tarifs',
         languages: {
-            'en': 'https://removewatermarkspro.com/pricing',
-            'fr': 'https://removewatermarkspro.com/fr/tarifs',
-            'de': 'https://removewatermarkspro.com/de/preise',
-            'es': 'https://removewatermarkspro.com/es/precios',
-            'pt': 'https://removewatermarkspro.com/pt/precos',
-            'ko': 'https://removewatermarkspro.com/ko/pricing',
-            'no': 'https://removewatermarkspro.com/no/pricing',
-            'x-default': 'https://removewatermarkspro.com/pricing'
+            'en': 'https://removewatermarkpro.co/pricing',
+            'fr': 'https://removewatermarkpro.co/fr/tarifs',
+            'de': 'https://removewatermarkpro.co/de/preise',
+            'es': 'https://removewatermarkpro.co/es/precios',
+            'pt': 'https://removewatermarkpro.co/pt/precos',
+            'ko': 'https://removewatermarkpro.co/ko/pricing',
+            'no': 'https://removewatermarkpro.co/no/pricing',
+            'x-default': 'https://removewatermarkpro.co/pricing'
         }
     },
 
     openGraph: {
         title: 'Tarifs - Remove Watermark Pro | Plans et Prix',
         description: 'Découvrez nos tarifs pour supprimer les filigranes. Plans gratuits et premium avec crédits pour enlever les filigranes de vos images et vidéos.',
-        url: 'https://removewatermarkspro.com/fr/tarifs',
+        url: 'https://removewatermarkpro.co/fr/tarifs',
         siteName: 'Remove Watermark Pro',
         locale: 'fr_FR',
         type: 'website',

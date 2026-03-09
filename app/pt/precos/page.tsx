@@ -8,23 +8,23 @@ export const metadata: Metadata = {
     description: 'Descubra nossos preços para remover marcas d\'água. Planos gratuitos e premium com créditos para remover marcas d\'água de suas imagens e vídeos.',
 
     alternates: {
-        canonical: 'https://removewatermarkspro.com/pt/precos',
+        canonical: 'https://removewatermarkpro.co/pt/precos',
         languages: {
-            'en': 'https://removewatermarkspro.com/pricing',
-            'fr': 'https://removewatermarkspro.com/fr/tarifs',
-            'de': 'https://removewatermarkspro.com/de/preise',
-            'es': 'https://removewatermarkspro.com/es/precios',
-            'pt': 'https://removewatermarkspro.com/pt/precos',
-            'ko': 'https://removewatermarkspro.com/ko/pricing',
-            'no': 'https://removewatermarkspro.com/no/priser',
-            'x-default': 'https://removewatermarkspro.com/pricing'
+            'en': 'https://removewatermarkpro.co/pricing',
+            'fr': 'https://removewatermarkpro.co/fr/tarifs',
+            'de': 'https://removewatermarkpro.co/de/preise',
+            'es': 'https://removewatermarkpro.co/es/precios',
+            'pt': 'https://removewatermarkpro.co/pt/precos',
+            'ko': 'https://removewatermarkpro.co/ko/pricing',
+            'no': 'https://removewatermarkpro.co/no/priser',
+            'x-default': 'https://removewatermarkpro.co/pricing'
         }
     },
 
     openGraph: {
         title: 'Preços - Remove Watermark Pro | Planos e Preços',
         description: 'Descubra nossos preços para remover marcas d\'água. Planos gratuitos e premium com créditos.',
-        url: 'https://removewatermarkspro.com/pt/precos',
+        url: 'https://removewatermarkpro.co/pt/precos',
         siteName: 'Remove Watermark Pro',
         locale: 'pt_PT',
         type: 'website',

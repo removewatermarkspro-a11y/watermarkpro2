@@ -6,23 +6,23 @@ export const metadata: Metadata = {
     description: 'Obtenez de l\'aide avec Remove Watermark Pro. Contactez notre équipe de support pour obtenir de l\'aide concernant la suppression de filigrane, les problèmes de compte et les questions techniques.',
 
     alternates: {
-        canonical: 'https://removewatermarkspro.com/fr/support',
+        canonical: 'https://removewatermarkpro.co/fr/support',
         languages: {
-            'en': 'https://removewatermarkspro.com/support',
-            'fr': 'https://removewatermarkspro.com/fr/support',
-            'de': 'https://removewatermarkspro.com/de/support',
-            'es': 'https://removewatermarkspro.com/es/soporte',
-            'pt': 'https://removewatermarkspro.com/pt/suporte',
-            'ko': 'https://removewatermarkspro.com/ko/support',
-            'no': 'https://removewatermarkspro.com/no/support',
-            'x-default': 'https://removewatermarkspro.com/support'
+            'en': 'https://removewatermarkpro.co/support',
+            'fr': 'https://removewatermarkpro.co/fr/support',
+            'de': 'https://removewatermarkpro.co/de/support',
+            'es': 'https://removewatermarkpro.co/es/soporte',
+            'pt': 'https://removewatermarkpro.co/pt/suporte',
+            'ko': 'https://removewatermarkpro.co/ko/support',
+            'no': 'https://removewatermarkpro.co/no/support',
+            'x-default': 'https://removewatermarkpro.co/support'
         }
     },
 
     openGraph: {
         title: 'Support - Remove Watermark Pro | Aide & Contact',
         description: 'Obtenez de l\'aide avec Remove Watermark Pro. Contactez notre équipe de support pour obtenir de l\'aide concernant la suppression de filigrane.',
-        url: 'https://removewatermarkspro.com/fr/support',
+        url: 'https://removewatermarkpro.co/fr/support',
         siteName: 'Remove Watermark Pro',
         locale: 'fr_FR',
         type: 'website',

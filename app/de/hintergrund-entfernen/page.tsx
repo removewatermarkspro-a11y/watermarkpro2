@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: 'Kostenlos Hintergrund Entfernen | Foto Hintergrund Löschen KI',
         description: 'Entfernen Sie Hintergründe aus Fotos sofort mit KI.',
-        url: 'https://removewatermarkpro.com/de/hintergrund-entfernen',
+        url: 'https://removewatermarkpro.co/de/hintergrund-entfernen',
         siteName: 'Remove Watermark Pro',
         locale: 'de_DE',
         type: 'website',
@@ -20,15 +20,15 @@ export const metadata: Metadata = {
         description: 'Entfernen Sie Hintergründe aus Fotos sofort mit KI.',
     },
     alternates: {
-        canonical: 'https://removewatermarkpro.com/de/hintergrund-entfernen',
+        canonical: 'https://removewatermarkpro.co/de/hintergrund-entfernen',
         languages: {
-            'en': 'https://removewatermarkpro.com/background-remover',
-            'fr': 'https://removewatermarkpro.com/fr/supprimer-arriere-plan',
-            'de': 'https://removewatermarkpro.com/de/hintergrund-entfernen',
-            'es': 'https://removewatermarkpro.com/es/eliminar-fondo-imagen',
-            'pt': 'https://removewatermarkpro.com/pt/remover-fundo-imagem',
-            'ko': 'https://removewatermarkpro.com/ko/background-remover',
-            'no': 'https://removewatermarkpro.com/no/fjern-bakgrunn',
+            'en': 'https://removewatermarkpro.co/background-remover',
+            'fr': 'https://removewatermarkpro.co/fr/supprimer-arriere-plan',
+            'de': 'https://removewatermarkpro.co/de/hintergrund-entfernen',
+            'es': 'https://removewatermarkpro.co/es/eliminar-fondo-imagen',
+            'pt': 'https://removewatermarkpro.co/pt/remover-fundo-imagem',
+            'ko': 'https://removewatermarkpro.co/ko/background-remover',
+            'no': 'https://removewatermarkpro.co/no/fjern-bakgrunn',
         },
     },
 }
@@ -38,7 +38,7 @@ export default function HintergrundEntfernen() {
         <>
             <StructuredData data={createSoftwareSchema({
                 name: "Hintergrund Entfernen - KI Kostenlos",
-                url: "https://removewatermarkpro.com/de/hintergrund-entfernen",
+                url: "https://removewatermarkpro.co/de/hintergrund-entfernen",
                 description: "Entfernen Sie Hintergründe von Fotos sofort mit KI. Erstellen Sie transparente Bilder in Sekunden."
             })} />
             <BackgroundRemoverClientDe />

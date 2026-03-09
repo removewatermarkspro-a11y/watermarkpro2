@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: '무료 AI 배경 변경 | 사진 배경 바꾸기',
         description: 'AI로 사진 배경을 즉시 변경하세요.',
-        url: 'https://removewatermarkpro.com/ko/background-changer-ai',
+        url: 'https://removewatermarkpro.co/ko/background-changer-ai',
         siteName: 'Remove Watermark Pro',
         locale: 'ko_KR',
         type: 'website',
@@ -20,15 +20,15 @@ export const metadata: Metadata = {
         description: 'AI로 사진 배경을 즉시 변경하세요.',
     },
     alternates: {
-        canonical: 'https://removewatermarkpro.com/ko/background-changer-ai',
+        canonical: 'https://removewatermarkpro.co/ko/background-changer-ai',
         languages: {
-            'en': 'https://removewatermarkpro.com/background-changer-ai',
-            'fr': 'https://removewatermarkpro.com/fr/changer-arriere-plan',
-            'de': 'https://removewatermarkpro.com/de/hintergrund-wechseln',
-            'es': 'https://removewatermarkpro.com/es/cambiar-fondo-imagen',
-            'pt': 'https://removewatermarkpro.com/pt/trocar-fundo-imagem',
-            'ko': 'https://removewatermarkpro.com/ko/background-changer-ai',
-            'no': 'https://removewatermarkpro.com/no/endre-bakgrunn',
+            'en': 'https://removewatermarkpro.co/background-changer-ai',
+            'fr': 'https://removewatermarkpro.co/fr/changer-arriere-plan',
+            'de': 'https://removewatermarkpro.co/de/hintergrund-wechseln',
+            'es': 'https://removewatermarkpro.co/es/cambiar-fondo-imagen',
+            'pt': 'https://removewatermarkpro.co/pt/trocar-fundo-imagem',
+            'ko': 'https://removewatermarkpro.co/ko/background-changer-ai',
+            'no': 'https://removewatermarkpro.co/no/endre-bakgrunn',
         },
     },
 }

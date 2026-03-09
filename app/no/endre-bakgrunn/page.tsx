@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: 'Gratis Endre Bakgrunn | Bytt Foto Bakgrunn AI',
         description: 'Endre bakgrunner i bilder øyeblikkelig med AI. Bytt fotobakgrunner, bytt scener og transformer bilder på sekunder.',
-        url: 'https://removewatermarkpro.com/no/endre-bakgrunn',
+        url: 'https://removewatermarkpro.co/no/endre-bakgrunn',
         siteName: 'Remove Watermark Pro',
         locale: 'no_NO',
         type: 'website',
@@ -19,15 +19,15 @@ export const metadata: Metadata = {
         description: 'Endre bakgrunner i bilder øyeblikkelig med AI.',
     },
     alternates: {
-        canonical: 'https://removewatermarkpro.com/no/endre-bakgrunn',
+        canonical: 'https://removewatermarkpro.co/no/endre-bakgrunn',
         languages: {
-            'en': 'https://removewatermarkpro.com/background-changer-ai',
-            'fr': 'https://removewatermarkpro.com/fr/changer-arriere-plan',
-            'de': 'https://removewatermarkpro.com/de/hintergrund-wechseln',
-            'es': 'https://removewatermarkpro.com/es/cambiar-fondo-imagen',
-            'pt': 'https://removewatermarkpro.com/pt/trocar-fundo-imagem',
-            'ko': 'https://removewatermarkpro.com/ko/background-changer-ai',
-            'no': 'https://removewatermarkpro.com/no/endre-bakgrunn',
+            'en': 'https://removewatermarkpro.co/background-changer-ai',
+            'fr': 'https://removewatermarkpro.co/fr/changer-arriere-plan',
+            'de': 'https://removewatermarkpro.co/de/hintergrund-wechseln',
+            'es': 'https://removewatermarkpro.co/es/cambiar-fondo-imagen',
+            'pt': 'https://removewatermarkpro.co/pt/trocar-fundo-imagem',
+            'ko': 'https://removewatermarkpro.co/ko/background-changer-ai',
+            'no': 'https://removewatermarkpro.co/no/endre-bakgrunn',
         },
     },
 }

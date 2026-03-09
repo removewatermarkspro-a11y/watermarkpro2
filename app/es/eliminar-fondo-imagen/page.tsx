@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: 'Eliminar Fondo Imagen Gratis | Borrar Fondo Foto IA',
         description: 'Elimina fondos de fotos al instante con IA.',
-        url: 'https://removewatermarkpro.com/es/eliminar-fondo-imagen',
+        url: 'https://removewatermarkpro.co/es/eliminar-fondo-imagen',
         siteName: 'Remove Watermark Pro',
         locale: 'es_ES',
         type: 'website',
@@ -20,15 +20,15 @@ export const metadata: Metadata = {
         description: 'Elimina fondos de fotos al instante con IA.',
     },
     alternates: {
-        canonical: 'https://removewatermarkpro.com/es/eliminar-fondo-imagen',
+        canonical: 'https://removewatermarkpro.co/es/eliminar-fondo-imagen',
         languages: {
-            'en': 'https://removewatermarkpro.com/background-remover',
-            'fr': 'https://removewatermarkpro.com/fr/supprimer-arriere-plan',
-            'de': 'https://removewatermarkpro.com/de/hintergrund-entfernen',
-            'es': 'https://removewatermarkpro.com/es/eliminar-fondo-imagen',
-            'pt': 'https://removewatermarkpro.com/pt/remover-fundo-imagem',
-            'ko': 'https://removewatermarkpro.com/ko/background-remover',
-            'no': 'https://removewatermarkpro.com/no/fjern-bakgrunn',
+            'en': 'https://removewatermarkpro.co/background-remover',
+            'fr': 'https://removewatermarkpro.co/fr/supprimer-arriere-plan',
+            'de': 'https://removewatermarkpro.co/de/hintergrund-entfernen',
+            'es': 'https://removewatermarkpro.co/es/eliminar-fondo-imagen',
+            'pt': 'https://removewatermarkpro.co/pt/remover-fundo-imagem',
+            'ko': 'https://removewatermarkpro.co/ko/background-remover',
+            'no': 'https://removewatermarkpro.co/no/fjern-bakgrunn',
         },
     },
 }
@@ -38,7 +38,7 @@ export default function EliminarFondoImagen() {
         <>
             <StructuredData data={createSoftwareSchema({
                 name: "Eliminar Fondo de Imagen - IA Gratis",
-                url: "https://removewatermarkpro.com/es/eliminar-fondo-imagen",
+                url: "https://removewatermarkpro.co/es/eliminar-fondo-imagen",
                 description: "Elimina fondos de fotos al instante con IA. Crea imágenes transparentes en segundos."
             })} />
             <BackgroundRemoverClientEs />

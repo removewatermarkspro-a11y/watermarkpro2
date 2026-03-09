@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: 'Remover Marca d\'Água Sora Grátis | Remover Logo OpenAI Sora',
         description: 'Remova marcas d\'água Sora AI de vídeos instantaneamente com IA. Remova branding OpenAI Sora, logos e marcas d\'água de vídeos gerados por IA em segundos.',
-        url: 'https://removewatermarkpro.com/pt/remover-marca-dagua-sora',
+        url: 'https://removewatermarkpro.co/pt/remover-marca-dagua-sora',
         siteName: 'Remove Watermark Pro',
         locale: 'pt_PT',
         type: 'website',
@@ -20,15 +20,15 @@ export const metadata: Metadata = {
         description: 'Remova marcas d\'água Sora AI de vídeos instantaneamente com IA.',
     },
     alternates: {
-        canonical: 'https://removewatermarkpro.com/pt/remover-marca-dagua-sora',
+        canonical: 'https://removewatermarkpro.co/pt/remover-marca-dagua-sora',
         languages: {
-            'en': 'https://removewatermarkpro.com/sora-watermark-remover',
-            'fr': 'https://removewatermarkpro.com/fr/enlever-filigrane-sora',
-            'de': 'https://removewatermarkpro.com/de/sora-wasserzeichen-entfernen',
-            'es': 'https://removewatermarkpro.com/es/eliminar-marca-agua-sora',
-            'pt': 'https://removewatermarkpro.com/pt/remover-marca-dagua-sora',
-            'ko': 'https://removewatermarkpro.com/ko/sora-watermark-remover',
-            'no': 'https://removewatermarkpro.com/no/fjern-sora-vannmerke',
+            'en': 'https://removewatermarkpro.co/sora-watermark-remover',
+            'fr': 'https://removewatermarkpro.co/fr/enlever-filigrane-sora',
+            'de': 'https://removewatermarkpro.co/de/sora-wasserzeichen-entfernen',
+            'es': 'https://removewatermarkpro.co/es/eliminar-marca-agua-sora',
+            'pt': 'https://removewatermarkpro.co/pt/remover-marca-dagua-sora',
+            'ko': 'https://removewatermarkpro.co/ko/sora-watermark-remover',
+            'no': 'https://removewatermarkpro.co/no/fjern-sora-vannmerke',
         },
     },
 }

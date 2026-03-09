@@ -6,10 +6,10 @@ export const metadata: Metadata = {
     description: 'Learn about how Remove Watermark Pro uses cookies and how you can manage them.',
 
     alternates: {
-        canonical: 'https://removewatermarkspro.com/cookies',
+        canonical: 'https://removewatermarkpro.co/cookies',
         languages: {
-            'en': 'https://removewatermarkspro.com/cookies',
-            'x-default': 'https://removewatermarkspro.com/cookies'
+            'en': 'https://removewatermarkpro.co/cookies',
+            'x-default': 'https://removewatermarkpro.co/cookies'
         }
     },
 

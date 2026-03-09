@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: 'Kostenlos Bild Hochskalieren | Fotoqualität Verbessern KI',
         description: 'Skalieren Sie Bilder mit KI bis zu 4x der Auflösung hoch.',
-        url: 'https://removewatermarkpro.com/de/bild-hochskalieren',
+        url: 'https://removewatermarkpro.co/de/bild-hochskalieren',
         siteName: 'Remove Watermark Pro',
         locale: 'de_DE',
         type: 'website',
@@ -20,15 +20,15 @@ export const metadata: Metadata = {
         description: 'Skalieren Sie Bilder mit KI bis zu 4x der Auflösung hoch.',
     },
     alternates: {
-        canonical: 'https://removewatermarkpro.com/de/bild-hochskalieren',
+        canonical: 'https://removewatermarkpro.co/de/bild-hochskalieren',
         languages: {
-            'en': 'https://removewatermarkpro.com/image-upscaler-ai',
-            'fr': 'https://removewatermarkpro.com/fr/agrandir-image',
-            'de': 'https://removewatermarkpro.com/de/bild-hochskalieren',
-            'es': 'https://removewatermarkpro.com/es/mejorar-calidad-imagen',
-            'pt': 'https://removewatermarkpro.com/pt/melhorar-qualidade-imagem',
-            'ko': 'https://removewatermarkpro.com/ko/image-upscaler-ai',
-            'no': 'https://removewatermarkpro.com/no/forbedre-bildekvalitet',
+            'en': 'https://removewatermarkpro.co/image-upscaler-ai',
+            'fr': 'https://removewatermarkpro.co/fr/agrandir-image',
+            'de': 'https://removewatermarkpro.co/de/bild-hochskalieren',
+            'es': 'https://removewatermarkpro.co/es/mejorar-calidad-imagen',
+            'pt': 'https://removewatermarkpro.co/pt/melhorar-qualidade-imagem',
+            'ko': 'https://removewatermarkpro.co/ko/image-upscaler-ai',
+            'no': 'https://removewatermarkpro.co/no/forbedre-bildekvalitet',
         },
     },
 }
@@ -38,7 +38,7 @@ export default function BildHochskalieren() {
         <>
             <StructuredData data={createSoftwareSchema({
                 name: "Bild Hochskalieren - KI Kostenlos",
-                url: "https://removewatermarkpro.com/de/bild-hochskalieren",
+                url: "https://removewatermarkpro.co/de/bild-hochskalieren",
                 description: "Skalieren Sie Bilder mit KI bis zu 4x Auflösung hoch. Verbessern Sie die Fotoqualität sofort."
             })} />
             <ImageUpscalerClientDe />

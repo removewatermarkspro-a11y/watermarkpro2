@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: '무료 AI 배경 제거 | 사진 배경 삭제',
         description: 'AI로 사진 배경을 즉시 제거하세요.',
-        url: 'https://removewatermarkpro.com/ko/background-remover',
+        url: 'https://removewatermarkpro.co/ko/background-remover',
         siteName: 'Remove Watermark Pro',
         locale: 'ko_KR',
         type: 'website',
@@ -20,15 +20,15 @@ export const metadata: Metadata = {
         description: 'AI로 사진 배경을 즉시 제거하세요.',
     },
     alternates: {
-        canonical: 'https://removewatermarkpro.com/ko/background-remover',
+        canonical: 'https://removewatermarkpro.co/ko/background-remover',
         languages: {
-            'en': 'https://removewatermarkpro.com/background-remover',
-            'fr': 'https://removewatermarkpro.com/fr/supprimer-arriere-plan',
-            'de': 'https://removewatermarkpro.com/de/hintergrund-entfernen',
-            'es': 'https://removewatermarkpro.com/es/eliminar-fondo-imagen',
-            'pt': 'https://removewatermarkpro.com/pt/remover-fundo-imagem',
-            'ko': 'https://removewatermarkpro.com/ko/background-remover',
-            'no': 'https://removewatermarkpro.com/no/fjern-bakgrunn',
+            'en': 'https://removewatermarkpro.co/background-remover',
+            'fr': 'https://removewatermarkpro.co/fr/supprimer-arriere-plan',
+            'de': 'https://removewatermarkpro.co/de/hintergrund-entfernen',
+            'es': 'https://removewatermarkpro.co/es/eliminar-fondo-imagen',
+            'pt': 'https://removewatermarkpro.co/pt/remover-fundo-imagem',
+            'ko': 'https://removewatermarkpro.co/ko/background-remover',
+            'no': 'https://removewatermarkpro.co/no/fjern-bakgrunn',
         },
     },
 }
@@ -38,7 +38,7 @@ export default function BackgroundRemoverKo() {
         <>
             <StructuredData data={createSoftwareSchema({
                 name: "AI Background Remover - Free",
-                url: "https://removewatermarkpro.com/ko/background-remover",
+                url: "https://removewatermarkpro.co/ko/background-remover",
                 description: "Remove backgrounds from photos instantly with AI. Create transparent images in seconds."
             })} />
             <BackgroundRemoverClientKo />

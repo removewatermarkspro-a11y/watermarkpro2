@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: '무료 AI 텍스트 제거 | 이미지 텍스트 지우기',
         description: 'AI로 이미지에서 텍스트, 자막 및 캡션을 즉시 제거하세요.',
-        url: 'https://removewatermarkpro.com/ko/text-remover-ai',
+        url: 'https://removewatermarkpro.co/ko/text-remover-ai',
         siteName: 'Remove Watermark Pro',
         locale: 'ko_KR',
         type: 'website',
@@ -20,15 +20,15 @@ export const metadata: Metadata = {
         description: 'AI로 이미지에서 텍스트를 즉시 제거하세요.',
     },
     alternates: {
-        canonical: 'https://removewatermarkpro.com/ko/text-remover-ai',
+        canonical: 'https://removewatermarkpro.co/ko/text-remover-ai',
         languages: {
-            'en': 'https://removewatermarkpro.com/text-remover-ai',
-            'fr': 'https://removewatermarkpro.com/fr/supprimer-texte-image',
-            'de': 'https://removewatermarkpro.com/de/text-entfernen',
-            'es': 'https://removewatermarkpro.com/es/eliminar-texto-imagen',
-            'pt': 'https://removewatermarkpro.com/pt/remover-texto-imagem',
-            'ko': 'https://removewatermarkpro.com/ko/text-remover-ai',
-            'no': 'https://removewatermarkpro.com/no/fjern-tekst-fra-bilde',
+            'en': 'https://removewatermarkpro.co/text-remover-ai',
+            'fr': 'https://removewatermarkpro.co/fr/supprimer-texte-image',
+            'de': 'https://removewatermarkpro.co/de/text-entfernen',
+            'es': 'https://removewatermarkpro.co/es/eliminar-texto-imagen',
+            'pt': 'https://removewatermarkpro.co/pt/remover-texto-imagem',
+            'ko': 'https://removewatermarkpro.co/ko/text-remover-ai',
+            'no': 'https://removewatermarkpro.co/no/fjern-tekst-fra-bilde',
         },
     },
 }

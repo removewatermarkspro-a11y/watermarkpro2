@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: '무료 AI 이미지 업스케일러 | 사진 화질 개선',
         description: 'AI로 이미지를 최대 4배 해상도로 업스케일하세요.',
-        url: 'https://removewatermarkpro.com/ko/image-upscaler-ai',
+        url: 'https://removewatermarkpro.co/ko/image-upscaler-ai',
         siteName: 'Remove Watermark Pro',
         locale: 'ko_KR',
         type: 'website',
@@ -20,15 +20,15 @@ export const metadata: Metadata = {
         description: 'AI로 이미지를 최대 4배 해상도로 업스케일하세요.',
     },
     alternates: {
-        canonical: 'https://removewatermarkpro.com/ko/image-upscaler-ai',
+        canonical: 'https://removewatermarkpro.co/ko/image-upscaler-ai',
         languages: {
-            'en': 'https://removewatermarkpro.com/image-upscaler-ai',
-            'fr': 'https://removewatermarkpro.com/fr/agrandir-image',
-            'de': 'https://removewatermarkpro.com/de/bild-hochskalieren',
-            'es': 'https://removewatermarkpro.com/es/mejorar-calidad-imagen',
-            'pt': 'https://removewatermarkpro.com/pt/melhorar-qualidade-imagem',
-            'ko': 'https://removewatermarkpro.com/ko/image-upscaler-ai',
-            'no': 'https://removewatermarkpro.com/no/forbedre-bildekvalitet',
+            'en': 'https://removewatermarkpro.co/image-upscaler-ai',
+            'fr': 'https://removewatermarkpro.co/fr/agrandir-image',
+            'de': 'https://removewatermarkpro.co/de/bild-hochskalieren',
+            'es': 'https://removewatermarkpro.co/es/mejorar-calidad-imagen',
+            'pt': 'https://removewatermarkpro.co/pt/melhorar-qualidade-imagem',
+            'ko': 'https://removewatermarkpro.co/ko/image-upscaler-ai',
+            'no': 'https://removewatermarkpro.co/no/forbedre-bildekvalitet',
         },
     },
 }

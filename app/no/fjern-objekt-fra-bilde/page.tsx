@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: 'Gratis Fjern Objekt Fra Bilde | Slette Uønskede Objekter AI',
         description: 'Fjern uønskede objekter, personer og elementer fra bilder øyeblikkelig med AI.',
-        url: 'https://removewatermarkpro.com/no/fjern-objekt-fra-bilde',
+        url: 'https://removewatermarkpro.co/no/fjern-objekt-fra-bilde',
         siteName: 'Remove Watermark Pro',
         locale: 'no_NO',
         type: 'website',
@@ -19,15 +19,15 @@ export const metadata: Metadata = {
         description: 'Fjern uønskede objekter fra bilder øyeblikkelig med AI.',
     },
     alternates: {
-        canonical: 'https://removewatermarkpro.com/no/fjern-objekt-fra-bilde',
+        canonical: 'https://removewatermarkpro.co/no/fjern-objekt-fra-bilde',
         languages: {
-            'en': 'https://removewatermarkpro.com/object-remover-ai',
-            'fr': 'https://removewatermarkpro.com/fr/supprimer-objet-image',
-            'de': 'https://removewatermarkpro.com/de/objekt-entfernen',
-            'es': 'https://removewatermarkpro.com/es/eliminar-objeto-imagen',
-            'pt': 'https://removewatermarkpro.com/pt/remover-objeto-imagem',
-            'ko': 'https://removewatermarkpro.com/ko/object-remover-ai',
-            'no': 'https://removewatermarkpro.com/no/fjern-objekt-fra-bilde',
+            'en': 'https://removewatermarkpro.co/object-remover-ai',
+            'fr': 'https://removewatermarkpro.co/fr/supprimer-objet-image',
+            'de': 'https://removewatermarkpro.co/de/objekt-entfernen',
+            'es': 'https://removewatermarkpro.co/es/eliminar-objeto-imagen',
+            'pt': 'https://removewatermarkpro.co/pt/remover-objeto-imagem',
+            'ko': 'https://removewatermarkpro.co/ko/object-remover-ai',
+            'no': 'https://removewatermarkpro.co/no/fjern-objekt-fra-bilde',
         },
     },
 }

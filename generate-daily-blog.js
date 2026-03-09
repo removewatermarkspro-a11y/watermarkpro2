@@ -15,7 +15,7 @@ const path = require('path');
 // ============================================================
 
 const REPLICATE_API_TOKEN = process.env.REPLICATE_API_TOKEN;
-const DOMAIN = 'https://removewatermarkspro.com';
+const DOMAIN = 'https://removewatermarkpro.co';
 const SITE_NAME = 'Remove Watermark Pro';
 const BRAND = 'RemoveWatermarkPro';
 const BRAND_URL = 'https://removewatermarkpro.co';

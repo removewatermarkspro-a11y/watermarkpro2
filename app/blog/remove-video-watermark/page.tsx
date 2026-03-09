@@ -12,13 +12,13 @@ export const metadata: Metadata = {
     description: 'Learn how to remove video watermark effectively with AI-powered tools. Compare top solutions, get step-by-step guides, and discover the best watermark removal methods.',
 
     alternates: {
-        canonical: 'https://removewatermarkspro.com/blog/remove-video-watermark',
+        canonical: 'https://removewatermarkpro.co/blog/remove-video-watermark',
     },
 
     openGraph: {
         title: 'Best Ways to Remove Video Watermark Using AI Tools in 2026',
         description: 'Learn how to remove video watermark effectively with AI-powered tools. Compare top solutions, get step-by-step guides, and discover the best watermark removal methods.',
-        url: 'https://removewatermarkspro.com/blog/remove-video-watermark',
+        url: 'https://removewatermarkpro.co/blog/remove-video-watermark',
         siteName: 'Remove Watermark Pro',
         locale: 'en_US',
         type: 'article',
@@ -199,7 +199,7 @@ export default function BlogArticle() {
             "name": "Remove Watermark Pro",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https://removewatermarkspro.com/logo.png"
+                "url": "https://removewatermarkpro.co/logo.png"
             }
         },
         "description": "Learn how to remove video watermark effectively with AI-powered tools. Compare top solutions, get step-by-step guides, and discover the best watermark removal methods."

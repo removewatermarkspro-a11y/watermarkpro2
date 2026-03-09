@@ -18,13 +18,13 @@ export const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Remove Watermark Pro",
-    "url": "https://removewatermarkspro.com",
+    "url": "https://removewatermarkpro.co",
     "description": "Professional AI-powered watermark removal tool. Remove watermarks from images and videos instantly with our free online tool.",
     "potentialAction": {
         "@type": "SearchAction",
         "target": {
             "@type": "EntryPoint",
-            "urlTemplate": "https://removewatermarkspro.com/search?q={search_term_string}"
+            "urlTemplate": "https://removewatermarkpro.co/search?q={search_term_string}"
         },
         "query-input": "required name=search_term_string"
     }
@@ -35,8 +35,8 @@ export const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Remove Watermark Pro",
-    "url": "https://removewatermarkspro.com",
-    "logo": "https://removewatermarkspro.com/logo.png",
+    "url": "https://removewatermarkpro.co",
+    "logo": "https://removewatermarkpro.co/logo.png",
     "description": "Professional AI-powered watermark removal and image editing tools",
     "sameAs": [
         // Add social media links when available

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: 'Kostenlos Personen Entfernen | Menschen Löschen KI',
         description: 'Entfernen Sie Personen aus Fotos sofort mit KI.',
-        url: 'https://removewatermarkpro.com/de/personen-entfernen',
+        url: 'https://removewatermarkpro.co/de/personen-entfernen',
         siteName: 'Remove Watermark Pro',
         locale: 'de_DE',
         type: 'website',
@@ -20,15 +20,15 @@ export const metadata: Metadata = {
         description: 'Entfernen Sie Personen aus Fotos sofort mit KI.',
     },
     alternates: {
-        canonical: 'https://removewatermarkpro.com/de/personen-entfernen',
+        canonical: 'https://removewatermarkpro.co/de/personen-entfernen',
         languages: {
-            'en': 'https://removewatermarkpro.com/people-remover-ai',
-            'fr': 'https://removewatermarkpro.com/fr/effacer-personnes-photo',
-            'de': 'https://removewatermarkpro.com/de/personen-entfernen',
-            'es': 'https://removewatermarkpro.com/es/eliminar-personas-foto',
-            'pt': 'https://removewatermarkpro.com/pt/remover-pessoas-foto',
-            'ko': 'https://removewatermarkpro.com/ko/people-remover-ai',
-            'no': 'https://removewatermarkpro.com/no/fjern-personer-foto',
+            'en': 'https://removewatermarkpro.co/people-remover-ai',
+            'fr': 'https://removewatermarkpro.co/fr/effacer-personnes-photo',
+            'de': 'https://removewatermarkpro.co/de/personen-entfernen',
+            'es': 'https://removewatermarkpro.co/es/eliminar-personas-foto',
+            'pt': 'https://removewatermarkpro.co/pt/remover-pessoas-foto',
+            'ko': 'https://removewatermarkpro.co/ko/people-remover-ai',
+            'no': 'https://removewatermarkpro.co/no/fjern-personer-foto',
         },
     },
 }
@@ -38,7 +38,7 @@ export default function PersonenEntfernen() {
         <>
             <StructuredData data={createSoftwareSchema({
                 name: "Personen Entfernen - KI Kostenlos",
-                url: "https://removewatermarkpro.com/de/personen-entfernen",
+                url: "https://removewatermarkpro.co/de/personen-entfernen",
                 description: "Entfernen Sie Personen sofort von Fotos mit KI. Löschen Sie unerwünschte Personen in Sekunden."
             })} />
             <PeopleRemoverClientDe />

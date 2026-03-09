@@ -13,13 +13,13 @@ export const metadata: Metadata = {
     description: 'Discover the best Instagram watermark remover tools tested on 700+ Instagram Reels. Compare free vs paid options, learn why Instagram penalizes watermarks, and get professional results in seconds.',
 
     alternates: {
-        canonical: 'https://removewatermarkspro.com/blog/instagram-watermark-remover',
+        canonical: 'https://removewatermarkpro.co/blog/instagram-watermark-remover',
     },
 
     openGraph: {
         title: 'Best Instagram Watermark Remover Tools in 2026 (Reels & Posts)',
         description: 'Tested 21 tools on 700+ Instagram Reels. Discover which Instagram watermark removers actually work and why Instagram penalizes watermarked content.',
-        url: 'https://removewatermarkspro.com/blog/instagram-watermark-remover',
+        url: 'https://removewatermarkpro.co/blog/instagram-watermark-remover',
         siteName: 'Remove Watermark Pro',
         locale: 'en_US',
         type: 'article',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
         authors: ['Remove Watermark Pro'],
         images: [
             {
-                url: 'https://removewatermarkspro.com/blog-tiktok-watermark-og.jpg',
+                url: 'https://removewatermarkpro.co/blog-tiktok-watermark-og.jpg',
                 width: 1200,
                 height: 630,
                 alt: 'Best Instagram watermark Remover Tools 2026'
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'Best Instagram watermark Remover Tools in 2026',
         description: 'Tested 21 tools on 700+ Instagram Reels. Compare free vs paid Instagram watermark removers.',
-        images: ['https://removewatermarkspro.com/blog-tiktok-watermark-og.jpg']
+        images: ['https://removewatermarkpro.co/blog-tiktok-watermark-og.jpg']
     },
 
     robots: {
@@ -108,7 +108,7 @@ export default function InstagramWatermarkRemoverArticle() {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "Best Instagram Watermark Remover Tools in 2026 (Reels & Posts)",
-        "image": "https://removewatermarkspro.com/blog-tiktok-watermark-og.jpg",
+        "image": "https://removewatermarkpro.co/blog-tiktok-watermark-og.jpg",
         "datePublished": "2026-01-25T00:00:00Z",
         "dateModified": "2026-01-25T00:00:00Z",
         "author": {
@@ -120,7 +120,7 @@ export default function InstagramWatermarkRemoverArticle() {
             "name": "Remove Watermark Pro",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https://removewatermarkspro.com/logo.png"
+                "url": "https://removewatermarkpro.co/logo.png"
             }
         },
         "description": "Comprehensive guide to the best Instagram watermark remover tools in 2026. Tested 21 tools on 700+ Instagram Reels with real data on speed, quality, and accuracy."

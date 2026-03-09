@@ -13,13 +13,13 @@ export const metadata: Metadata = {
     description: 'Discover the best TikTok watermark remover tools tested on 500+ videos. Compare free vs paid options, learn why Instagram penalizes watermarks, and get professional results in seconds.',
 
     alternates: {
-        canonical: 'https://removewatermarkspro.com/blog/tiktok-watermark-remover',
+        canonical: 'https://removewatermarkpro.co/blog/tiktok-watermark-remover',
     },
 
     openGraph: {
         title: 'Best TikTok Watermark Remover Tools in 2026 (Free & Paid)',
         description: 'Tested 23 tools on 500+ videos. Discover which TikTok watermark removers actually work and why Instagram penalizes watermarked content.',
-        url: 'https://removewatermarkspro.com/blog/tiktok-watermark-remover',
+        url: 'https://removewatermarkpro.co/blog/tiktok-watermark-remover',
         siteName: 'Remove Watermark Pro',
         locale: 'en_US',
         type: 'article',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
         authors: ['Remove Watermark Pro'],
         images: [
             {
-                url: 'https://removewatermarkspro.com/blog-tiktok-watermark-og.jpg',
+                url: 'https://removewatermarkpro.co/blog-tiktok-watermark-og.jpg',
                 width: 1200,
                 height: 630,
                 alt: 'Best TikTok Watermark Remover Tools 2026'
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'Best TikTok Watermark Remover Tools in 2026',
         description: 'Tested 23 tools on 500+ videos. Compare free vs paid TikTok watermark removers.',
-        images: ['https://removewatermarkspro.com/blog-tiktok-watermark-og.jpg']
+        images: ['https://removewatermarkpro.co/blog-tiktok-watermark-og.jpg']
     },
 
     robots: {
@@ -108,7 +108,7 @@ export default function TikTokWatermarkRemoverArticle() {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "Best TikTok Watermark Remover Tools in 2026 (Free & Paid)",
-        "image": "https://removewatermarkspro.com/blog-tiktok-watermark-og.jpg",
+        "image": "https://removewatermarkpro.co/blog-tiktok-watermark-og.jpg",
         "datePublished": "2026-01-24T00:00:00Z",
         "dateModified": "2026-01-24T00:00:00Z",
         "author": {
@@ -120,7 +120,7 @@ export default function TikTokWatermarkRemoverArticle() {
             "name": "Remove Watermark Pro",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https://removewatermarkspro.com/logo.png"
+                "url": "https://removewatermarkpro.co/logo.png"
             }
         },
         "description": "Comprehensive guide to the best TikTok watermark remover tools in 2026. Tested 23 tools on 500+ videos with real data on speed, quality, and accuracy."

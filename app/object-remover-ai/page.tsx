@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: 'Free AI Object Remover | Remove Unwanted Objects from Photos',
         description: 'Remove unwanted objects, people, and elements from photos instantly with AI. Erase photobombers, clutter, and distractions in seconds.',
-        url: 'https://removewatermarkpro.com/object-remover-ai',
+        url: 'https://removewatermarkpro.co/object-remover-ai',
         siteName: 'Remove Watermark Pro',
         locale: 'en_US',
         type: 'website',
@@ -21,15 +21,15 @@ export const metadata: Metadata = {
         description: 'Remove unwanted objects from photos instantly with AI.',
     },
     alternates: {
-        canonical: 'https://removewatermarkpro.com/object-remover-ai',
+        canonical: 'https://removewatermarkpro.co/object-remover-ai',
         languages: {
-            'en': 'https://removewatermarkpro.com/object-remover-ai',
-            'fr': 'https://removewatermarkpro.com/fr/supprimer-objet-image',
-            'de': 'https://removewatermarkpro.com/de/objekt-entfernen',
-            'es': 'https://removewatermarkpro.com/es/eliminar-objeto-imagen',
-            'pt': 'https://removewatermarkpro.com/pt/remover-objeto-imagem',
-            'ko': 'https://removewatermarkpro.com/ko/object-remover-ai',
-            'no': 'https://removewatermarkpro.com/no/fjern-objekt-fra-bilde',
+            'en': 'https://removewatermarkpro.co/object-remover-ai',
+            'fr': 'https://removewatermarkpro.co/fr/supprimer-objet-image',
+            'de': 'https://removewatermarkpro.co/de/objekt-entfernen',
+            'es': 'https://removewatermarkpro.co/es/eliminar-objeto-imagen',
+            'pt': 'https://removewatermarkpro.co/pt/remover-objeto-imagem',
+            'ko': 'https://removewatermarkpro.co/ko/object-remover-ai',
+            'no': 'https://removewatermarkpro.co/no/fjern-objekt-fra-bilde',
         },
     },
 }
@@ -39,7 +39,7 @@ export default function ObjectRemoverAI() {
         <>
             <StructuredData data={createSoftwareSchema({
                 name: "AI Object Remover - Free",
-                url: "https://removewatermarkpro.com/object-remover-ai",
+                url: "https://removewatermarkpro.co/object-remover-ai",
                 description: "Remove unwanted objects, people, and elements from photos instantly with AI. Erase photobombers, clutter, and distractions in seconds."
             })} />
             <ObjectRemoverClient />

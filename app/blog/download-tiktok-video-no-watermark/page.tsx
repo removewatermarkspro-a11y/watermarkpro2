@@ -12,13 +12,13 @@ export const metadata: Metadata = {
     description: 'Learn how to download TikTok video no watermark using AI tools. Compare 7 top watermark removers with step-by-step guides and expert testing results.',
 
     alternates: {
-        canonical: 'https://removewatermarkspro.com/blog/download-tiktok-video-no-watermark',
+        canonical: 'https://removewatermarkpro.co/blog/download-tiktok-video-no-watermark',
     },
 
     openGraph: {
         title: 'How to Download TikTok Video No Watermark in 2026 — AI Guide',
         description: 'Learn how to download TikTok video no watermark using AI tools. Compare 7 top watermark removers with step-by-step guides and expert testing results.',
-        url: 'https://removewatermarkspro.com/blog/download-tiktok-video-no-watermark',
+        url: 'https://removewatermarkpro.co/blog/download-tiktok-video-no-watermark',
         siteName: 'Remove Watermark Pro',
         locale: 'en_US',
         type: 'article',
@@ -207,7 +207,7 @@ export default function BlogArticle() {
             "name": "Remove Watermark Pro",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https://removewatermarkspro.com/logo.png"
+                "url": "https://removewatermarkpro.co/logo.png"
             }
         },
         "description": "Learn how to download TikTok video no watermark using AI tools. Compare 7 top watermark removers with step-by-step guides and expert testing results."

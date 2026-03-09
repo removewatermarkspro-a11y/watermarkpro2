@@ -12,13 +12,13 @@ export const metadata: Metadata = {
     description: 'Learn the best ways to dewatermark images in 2026. Compare top AI tools, get step-by-step guides, and discover professional techniques for watermark removal.',
 
     alternates: {
-        canonical: 'https://removewatermarkspro.com/blog/dewatermark',
+        canonical: 'https://removewatermarkpro.co/blog/dewatermark',
     },
 
     openGraph: {
         title: 'Best Ways to Dewatermark Images Using AI Tools in 2026',
         description: 'Learn the best ways to dewatermark images in 2026. Compare top AI tools, get step-by-step guides, and discover professional techniques for watermark removal.',
-        url: 'https://removewatermarkspro.com/blog/dewatermark',
+        url: 'https://removewatermarkpro.co/blog/dewatermark',
         siteName: 'Remove Watermark Pro',
         locale: 'en_US',
         type: 'article',
@@ -199,7 +199,7 @@ export default function BlogArticle() {
             "name": "Remove Watermark Pro",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https://removewatermarkspro.com/logo.png"
+                "url": "https://removewatermarkpro.co/logo.png"
             }
         },
         "description": "Learn the best ways to dewatermark images in 2026. Compare top AI tools, get step-by-step guides, and discover professional techniques for watermark removal."

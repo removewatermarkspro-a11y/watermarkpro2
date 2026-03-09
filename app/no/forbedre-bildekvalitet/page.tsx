@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: 'Gratis Forbedre Bildekvalitet | Øke Oppløsning AI',
         description: 'Skaler opp bilder med AI opptil 4x oppløsningen.',
-        url: 'https://removewatermarkpro.com/no/forbedre-bildekvalitet',
+        url: 'https://removewatermarkpro.co/no/forbedre-bildekvalitet',
         siteName: 'Remove Watermark Pro',
         locale: 'no_NO',
         type: 'website',
@@ -19,15 +19,15 @@ export const metadata: Metadata = {
         description: 'Skaler opp bilder med AI opptil 4x oppløsningen.',
     },
     alternates: {
-        canonical: 'https://removewatermarkpro.com/no/forbedre-bildekvalitet',
+        canonical: 'https://removewatermarkpro.co/no/forbedre-bildekvalitet',
         languages: {
-            'en': 'https://removewatermarkpro.com/image-upscaler-ai',
-            'fr': 'https://removewatermarkpro.com/fr/agrandir-image',
-            'de': 'https://removewatermarkpro.com/de/bild-hochskalieren',
-            'es': 'https://removewatermarkpro.com/es/mejorar-calidad-imagen',
-            'pt': 'https://removewatermarkpro.com/pt/melhorar-qualidade-imagem',
-            'ko': 'https://removewatermarkpro.com/ko/image-upscaler-ai',
-            'no': 'https://removewatermarkpro.com/no/forbedre-bildekvalitet',
+            'en': 'https://removewatermarkpro.co/image-upscaler-ai',
+            'fr': 'https://removewatermarkpro.co/fr/agrandir-image',
+            'de': 'https://removewatermarkpro.co/de/bild-hochskalieren',
+            'es': 'https://removewatermarkpro.co/es/mejorar-calidad-imagen',
+            'pt': 'https://removewatermarkpro.co/pt/melhorar-qualidade-imagem',
+            'ko': 'https://removewatermarkpro.co/ko/image-upscaler-ai',
+            'no': 'https://removewatermarkpro.co/no/forbedre-bildekvalitet',
         },
     },
 }

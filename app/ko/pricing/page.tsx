@@ -8,23 +8,23 @@ export const metadata: Metadata = {
     description: '워터마크 제거를 위한 가격을 확인하세요. 이미지와 비디오에서 워터마크를 제거할 수 있는 무료 및 프리미엄 플랜.',
 
     alternates: {
-        canonical: 'https://removewatermarkspro.com/ko/pricing',
+        canonical: 'https://removewatermarkpro.co/ko/pricing',
         languages: {
-            'en': 'https://removewatermarkspro.com/pricing',
-            'fr': 'https://removewatermarkspro.com/fr/tarifs',
-            'de': 'https://removewatermarkspro.com/de/preise',
-            'es': 'https://removewatermarkspro.com/es/precios',
-            'pt': 'https://removewatermarkspro.com/pt/precos',
-            'ko': 'https://removewatermarkspro.com/ko/pricing',
-            'no': 'https://removewatermarkspro.com/no/priser',
-            'x-default': 'https://removewatermarkspro.com/pricing'
+            'en': 'https://removewatermarkpro.co/pricing',
+            'fr': 'https://removewatermarkpro.co/fr/tarifs',
+            'de': 'https://removewatermarkpro.co/de/preise',
+            'es': 'https://removewatermarkpro.co/es/precios',
+            'pt': 'https://removewatermarkpro.co/pt/precos',
+            'ko': 'https://removewatermarkpro.co/ko/pricing',
+            'no': 'https://removewatermarkpro.co/no/priser',
+            'x-default': 'https://removewatermarkpro.co/pricing'
         }
     },
 
     openGraph: {
         title: '가격 - Remove Watermark Pro | 요금제 및 가격',
         description: '워터마크 제거를 위한 가격을 확인하세요. 이미지와 비디오에서 워터마크를 제거할 수 있는 무료 및 프리미엄 플랜.',
-        url: 'https://removewatermarkspro.com/ko/pricing',
+        url: 'https://removewatermarkpro.co/ko/pricing',
         siteName: 'Remove Watermark Pro',
         locale: 'ko_KR',
         type: 'website',

@@ -8,23 +8,23 @@ export const metadata: Metadata = {
     description: 'Discover our pricing plans to remove watermarks. Free and premium plans with credits to remove watermarks from your images and videos.',
 
     alternates: {
-        canonical: 'https://removewatermarkspro.com/pricing',
+        canonical: 'https://removewatermarkpro.co/pricing',
         languages: {
-            'en': 'https://removewatermarkspro.com/pricing',
-            'fr': 'https://removewatermarkspro.com/fr/tarifs',
-            'de': 'https://removewatermarkspro.com/de/preise',
-            'es': 'https://removewatermarkspro.com/es/precios',
-            'pt': 'https://removewatermarkspro.com/pt/precos',
-            'ko': 'https://removewatermarkspro.com/ko/pricing',
-            'no': 'https://removewatermarkspro.com/no/pricing',
-            'x-default': 'https://removewatermarkspro.com/pricing'
+            'en': 'https://removewatermarkpro.co/pricing',
+            'fr': 'https://removewatermarkpro.co/fr/tarifs',
+            'de': 'https://removewatermarkpro.co/de/preise',
+            'es': 'https://removewatermarkpro.co/es/precios',
+            'pt': 'https://removewatermarkpro.co/pt/precos',
+            'ko': 'https://removewatermarkpro.co/ko/pricing',
+            'no': 'https://removewatermarkpro.co/no/pricing',
+            'x-default': 'https://removewatermarkpro.co/pricing'
         }
     },
 
     openGraph: {
         title: 'Pricing - Remove Watermark Pro | Plans & Pricing',
         description: 'Discover our pricing plans to remove watermarks. Free and premium plans with credits to remove watermarks from your images and videos.',
-        url: 'https://removewatermarkspro.com/pricing',
+        url: 'https://removewatermarkpro.co/pricing',
         siteName: 'Remove Watermark Pro',
         locale: 'en_US',
         type: 'website',

@@ -6,10 +6,10 @@ export const metadata: Metadata = {
     description: 'Read the terms and conditions for using Remove Watermark Pro services.',
 
     alternates: {
-        canonical: 'https://removewatermarkspro.com/terms',
+        canonical: 'https://removewatermarkpro.co/terms',
         languages: {
-            'en': 'https://removewatermarkspro.com/terms',
-            'x-default': 'https://removewatermarkspro.com/terms'
+            'en': 'https://removewatermarkpro.co/terms',
+            'x-default': 'https://removewatermarkpro.co/terms'
         }
     },
 

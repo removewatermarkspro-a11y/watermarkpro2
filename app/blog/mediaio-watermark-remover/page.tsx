@@ -12,13 +12,13 @@ export const metadata: Metadata = {
     description: 'Discover the best media.io watermark remover alternatives in 2026. Compare AI-powered tools, features, and pricing to remove watermarks efficiently.',
 
     alternates: {
-        canonical: 'https://removewatermarkspro.com/blog/mediaio-watermark-remover',
+        canonical: 'https://removewatermarkpro.co/blog/mediaio-watermark-remover',
     },
 
     openGraph: {
         title: 'Best Media.io Watermark Remover Alternatives in 2026 — AI Guide',
         description: 'Discover the best media.io watermark remover alternatives in 2026. Compare AI-powered tools, features, and pricing to remove watermarks efficiently.',
-        url: 'https://removewatermarkspro.com/blog/mediaio-watermark-remover',
+        url: 'https://removewatermarkpro.co/blog/mediaio-watermark-remover',
         siteName: 'Remove Watermark Pro',
         locale: 'en_US',
         type: 'article',
@@ -199,7 +199,7 @@ export default function BlogArticle() {
             "name": "Remove Watermark Pro",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https://removewatermarkspro.com/logo.png"
+                "url": "https://removewatermarkpro.co/logo.png"
             }
         },
         "description": "Discover the best media.io watermark remover alternatives in 2026. Compare AI-powered tools, features, and pricing to remove watermarks efficiently."

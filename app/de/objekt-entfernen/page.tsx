@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: 'Kostenlos Objekt Entfernen | Unerwünschte Objekte Löschen KI',
         description: 'Entfernen Sie unerwünschte Objekte, Personen und Elemente sofort aus Fotos mit KI.',
-        url: 'https://removewatermarkpro.com/de/objekt-entfernen',
+        url: 'https://removewatermarkpro.co/de/objekt-entfernen',
         siteName: 'Remove Watermark Pro',
         locale: 'de_DE',
         type: 'website',
@@ -20,15 +20,15 @@ export const metadata: Metadata = {
         description: 'Entfernen Sie unerwünschte Objekte aus Fotos sofort mit KI.',
     },
     alternates: {
-        canonical: 'https://removewatermarkpro.com/de/objekt-entfernen',
+        canonical: 'https://removewatermarkpro.co/de/objekt-entfernen',
         languages: {
-            'en': 'https://removewatermarkpro.com/object-remover-ai',
-            'fr': 'https://removewatermarkpro.com/fr/supprimer-objet-image',
-            'de': 'https://removewatermarkpro.com/de/objekt-entfernen',
-            'es': 'https://removewatermarkpro.com/es/eliminar-objeto-imagen',
-            'pt': 'https://removewatermarkpro.com/pt/remover-objeto-imagem',
-            'ko': 'https://removewatermarkpro.com/ko/object-remover-ai',
-            'no': 'https://removewatermarkpro.com/no/fjern-objekt-fra-bilde',
+            'en': 'https://removewatermarkpro.co/object-remover-ai',
+            'fr': 'https://removewatermarkpro.co/fr/supprimer-objet-image',
+            'de': 'https://removewatermarkpro.co/de/objekt-entfernen',
+            'es': 'https://removewatermarkpro.co/es/eliminar-objeto-imagen',
+            'pt': 'https://removewatermarkpro.co/pt/remover-objeto-imagem',
+            'ko': 'https://removewatermarkpro.co/ko/object-remover-ai',
+            'no': 'https://removewatermarkpro.co/no/fjern-objekt-fra-bilde',
         },
     },
 }
@@ -38,7 +38,7 @@ export default function ObjektEntfernen() {
         <>
             <StructuredData data={createSoftwareSchema({
                 name: "Objekt Entfernen - KI Kostenlos",
-                url: "https://removewatermarkpro.com/de/objekt-entfernen",
+                url: "https://removewatermarkpro.co/de/objekt-entfernen",
                 description: "Entfernen Sie unerwünschte Objekte, Personen und Elemente sofort von Fotos mit KI. Löschen Sie Störungen in Sekunden."
             })} />
             <ObjectRemoverClientDe />

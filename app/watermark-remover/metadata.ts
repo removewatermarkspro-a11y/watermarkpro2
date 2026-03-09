@@ -5,23 +5,23 @@ export const metadata: Metadata = {
     description: 'Remove watermarks from images in 1 click. Free AI tool, fast and no signup required. Try now and get professional results instantly!',
 
     alternates: {
-        canonical: 'https://removewatermarkspro.com/en/watermark-remover',
+        canonical: 'https://removewatermarkpro.co/en/watermark-remover',
         languages: {
-            'en': 'https://removewatermarkspro.com/en/watermark-remover',
-            'x-default': 'https://removewatermarkspro.com/en/watermark-remover'
+            'en': 'https://removewatermarkpro.co/en/watermark-remover',
+            'x-default': 'https://removewatermarkpro.co/en/watermark-remover'
         }
     },
 
     openGraph: {
         title: 'Watermark Remover Free | Remove in 1 Click',
         description: 'Remove watermarks from images in 1 click. Free AI tool, fast and no signup required.',
-        url: 'https://removewatermarkspro.com/en/watermark-remover',
+        url: 'https://removewatermarkpro.co/en/watermark-remover',
         siteName: 'Remove Watermark Pro',
         locale: 'en_US',
         type: 'website',
         images: [
             {
-                url: 'https://removewatermarkspro.com/og-image-en.jpg',
+                url: 'https://removewatermarkpro.co/og-image-en.jpg',
                 width: 1200,
                 height: 630,
                 alt: 'Watermark Remover Tool - Before and After'
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'Watermark Remover Free | Remove in 1 Click',
         description: 'Remove watermarks from images in 1 click. Free AI tool, fast and no signup required.',
-        images: ['https://removewatermarkspro.com/og-image-en.jpg']
+        images: ['https://removewatermarkpro.co/og-image-en.jpg']
     },
 
     robots: {

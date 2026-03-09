@@ -7,29 +7,29 @@ export const metadata: Metadata = {
     description: 'Fjern vannmerker fra bilder på 1 klikk. Gratis AI-verktøy, raskt og ingen registrering nødvendig. Prøv nå og få profesjonelle resultater øyeblikkelig!',
 
     alternates: {
-        canonical: 'https://removewatermarkspro.com/no/fjern-vannmerke',
+        canonical: 'https://removewatermarkpro.co/no/fjern-vannmerke',
         languages: {
-            'en': 'https://removewatermarkspro.com/watermark-remover',
-            'fr': 'https://removewatermarkspro.com/fr/enlever-filigrane',
-            'de': 'https://removewatermarkspro.com/de/wasserzeichen-entfernen',
-            'es': 'https://removewatermarkspro.com/es/eliminar-marca-agua',
-            'pt': 'https://removewatermarkspro.com/pt/remover-marca-dagua',
-            'ko': 'https://removewatermarkspro.com/ko/watermark-remover',
-            'no': 'https://removewatermarkspro.com/no/fjern-vannmerke',
-            'x-default': 'https://removewatermarkspro.com/watermark-remover'
+            'en': 'https://removewatermarkpro.co/watermark-remover',
+            'fr': 'https://removewatermarkpro.co/fr/enlever-filigrane',
+            'de': 'https://removewatermarkpro.co/de/wasserzeichen-entfernen',
+            'es': 'https://removewatermarkpro.co/es/eliminar-marca-agua',
+            'pt': 'https://removewatermarkpro.co/pt/remover-marca-dagua',
+            'ko': 'https://removewatermarkpro.co/ko/watermark-remover',
+            'no': 'https://removewatermarkpro.co/no/fjern-vannmerke',
+            'x-default': 'https://removewatermarkpro.co/watermark-remover'
         }
     },
 
     openGraph: {
         title: 'Fjern Vannmerke Gratis | Fjern på 1 Klikk',
         description: 'Fjern vannmerker fra bilder på 1 klikk. Gratis AI-verktøy, raskt og ingen registrering nødvendig.',
-        url: 'https://removewatermarkspro.com/no/fjern-vannmerke',
+        url: 'https://removewatermarkpro.co/no/fjern-vannmerke',
         siteName: 'Remove Watermark Pro',
         locale: 'no_NO',
         type: 'website',
         images: [
             {
-                url: 'https://removewatermarkspro.com/og-image-no.jpg',
+                url: 'https://removewatermarkpro.co/og-image-no.jpg',
                 width: 1200,
                 height: 630,
                 alt: 'Vannmerke Fjerner Verktøy - Før og Etter'
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'Fjern Vannmerke Gratis | Fjern på 1 Klikk',
         description: 'Fjern vannmerker fra bilder på 1 klikk. Gratis AI-verktøy, raskt og ingen registrering nødvendig.',
-        images: ['https://removewatermarkspro.com/og-image-no.jpg']
+        images: ['https://removewatermarkpro.co/og-image-no.jpg']
     },
 
     robots: {

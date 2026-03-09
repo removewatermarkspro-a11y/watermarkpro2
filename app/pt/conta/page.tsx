@@ -6,16 +6,16 @@ export const metadata: Metadata = {
     description: 'Gerencie sua conta Remove Watermark Pro, assinatura e informações de cobrança.',
 
     alternates: {
-        canonical: 'https://removewatermarkspro.com/pt/conta',
+        canonical: 'https://removewatermarkpro.co/pt/conta',
         languages: {
-            'en': 'https://removewatermarkspro.com/account',
-            'fr': 'https://removewatermarkspro.com/fr/compte',
-            'de': 'https://removewatermarkspro.com/de/konto',
-            'es': 'https://removewatermarkspro.com/es/cuenta',
-            'pt': 'https://removewatermarkspro.com/pt/conta',
-            'ko': 'https://removewatermarkspro.com/ko/account',
-            'no': 'https://removewatermarkspro.com/no/konto',
-            'x-default': 'https://removewatermarkspro.com/account'
+            'en': 'https://removewatermarkpro.co/account',
+            'fr': 'https://removewatermarkpro.co/fr/compte',
+            'de': 'https://removewatermarkpro.co/de/konto',
+            'es': 'https://removewatermarkpro.co/es/cuenta',
+            'pt': 'https://removewatermarkpro.co/pt/conta',
+            'ko': 'https://removewatermarkpro.co/ko/account',
+            'no': 'https://removewatermarkpro.co/no/konto',
+            'x-default': 'https://removewatermarkpro.co/account'
         }
     },
 

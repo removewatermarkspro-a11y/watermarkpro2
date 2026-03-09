@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: 'Free AI Image Upscaler | Enhance Photo Quality & Resolution',
         description: 'Upscale images instantly with AI. Enhance photo quality, increase resolution, and improve image clarity in seconds.',
-        url: 'https://removewatermarkpro.com/image-upscaler-ai',
+        url: 'https://removewatermarkpro.co/image-upscaler-ai',
         siteName: 'Remove Watermark Pro',
         locale: 'en_US',
         type: 'website',
@@ -21,15 +21,15 @@ export const metadata: Metadata = {
         description: 'Upscale images instantly with AI.',
     },
     alternates: {
-        canonical: 'https://removewatermarkpro.com/image-upscaler-ai',
+        canonical: 'https://removewatermarkpro.co/image-upscaler-ai',
         languages: {
-            'en': 'https://removewatermarkpro.com/image-upscaler-ai',
-            'fr': 'https://removewatermarkpro.com/fr/agrandir-image',
-            'de': 'https://removewatermarkpro.com/de/bild-hochskalieren',
-            'es': 'https://removewatermarkpro.com/es/mejorar-calidad-imagen',
-            'pt': 'https://removewatermarkpro.com/pt/melhorar-qualidade-imagem',
-            'ko': 'https://removewatermarkpro.com/ko/image-upscaler-ai',
-            'no': 'https://removewatermarkpro.com/no/forbedre-bildekvalitet',
+            'en': 'https://removewatermarkpro.co/image-upscaler-ai',
+            'fr': 'https://removewatermarkpro.co/fr/agrandir-image',
+            'de': 'https://removewatermarkpro.co/de/bild-hochskalieren',
+            'es': 'https://removewatermarkpro.co/es/mejorar-calidad-imagen',
+            'pt': 'https://removewatermarkpro.co/pt/melhorar-qualidade-imagem',
+            'ko': 'https://removewatermarkpro.co/ko/image-upscaler-ai',
+            'no': 'https://removewatermarkpro.co/no/forbedre-bildekvalitet',
         },
     },
 }
@@ -39,7 +39,7 @@ export default function ImageUpscalerAI() {
         <>
             <StructuredData data={createSoftwareSchema({
                 name: "AI Image Upscaler - Free",
-                url: "https://removewatermarkpro.com/image-upscaler-ai",
+                url: "https://removewatermarkpro.co/image-upscaler-ai",
                 description: "Upscale images instantly with AI. Enhance photo quality, increase resolution, and improve image clarity in seconds."
             })} />
             <ImageUpscalerClient />

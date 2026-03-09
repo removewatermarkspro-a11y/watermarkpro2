@@ -12,13 +12,13 @@ export const metadata: Metadata = {
     description: 'Discover the best watermark remover video free tools in 2026. Compare AI-powered solutions, step-by-step guides, and expert testing results.',
 
     alternates: {
-        canonical: 'https://removewatermarkspro.com/blog/watermark-remover-video-free',
+        canonical: 'https://removewatermarkpro.co/blog/watermark-remover-video-free',
     },
 
     openGraph: {
         title: 'Best Free Watermark Remover Video Tools in 2026 — AI Guide',
         description: 'Discover the best watermark remover video free tools in 2026. Compare AI-powered solutions, step-by-step guides, and expert testing results.',
-        url: 'https://removewatermarkspro.com/blog/watermark-remover-video-free',
+        url: 'https://removewatermarkpro.co/blog/watermark-remover-video-free',
         siteName: 'Remove Watermark Pro',
         locale: 'en_US',
         type: 'article',
@@ -207,7 +207,7 @@ export default function BlogArticle() {
             "name": "Remove Watermark Pro",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https://removewatermarkspro.com/logo.png"
+                "url": "https://removewatermarkpro.co/logo.png"
             }
         },
         "description": "Discover the best watermark remover video free tools in 2026. Compare AI-powered solutions, step-by-step guides, and expert testing results."

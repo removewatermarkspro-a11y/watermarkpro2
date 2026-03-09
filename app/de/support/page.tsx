@@ -6,23 +6,23 @@ export const metadata: Metadata = {
     description: 'Erhalten Sie Hilfe mit Remove Watermark Pro. Kontaktieren Sie unser Support-Team für Unterstützung bei Wasserzeichenentfernung, Kontoproblemen und technischen Fragen.',
 
     alternates: {
-        canonical: 'https://removewatermarkspro.com/de/support',
+        canonical: 'https://removewatermarkpro.co/de/support',
         languages: {
-            'en': 'https://removewatermarkspro.com/support',
-            'fr': 'https://removewatermarkspro.com/fr/support',
-            'de': 'https://removewatermarkspro.com/de/support',
-            'es': 'https://removewatermarkspro.com/es/soporte',
-            'pt': 'https://removewatermarkspro.com/pt/suporte',
-            'ko': 'https://removewatermarkspro.com/ko/support',
-            'no': 'https://removewatermarkspro.com/no/support',
-            'x-default': 'https://removewatermarkspro.com/support'
+            'en': 'https://removewatermarkpro.co/support',
+            'fr': 'https://removewatermarkpro.co/fr/support',
+            'de': 'https://removewatermarkpro.co/de/support',
+            'es': 'https://removewatermarkpro.co/es/soporte',
+            'pt': 'https://removewatermarkpro.co/pt/suporte',
+            'ko': 'https://removewatermarkpro.co/ko/support',
+            'no': 'https://removewatermarkpro.co/no/support',
+            'x-default': 'https://removewatermarkpro.co/support'
         }
     },
 
     openGraph: {
         title: 'Support - Remove Watermark Pro | Hilfe & Kontakt',
         description: 'Erhalten Sie Hilfe mit Remove Watermark Pro. Kontaktieren Sie unser Support-Team für Unterstützung.',
-        url: 'https://removewatermarkspro.com/de/support',
+        url: 'https://removewatermarkpro.co/de/support',
         siteName: 'Remove Watermark Pro',
         locale: 'de_DE',
         type: 'website',

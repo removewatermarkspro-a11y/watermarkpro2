@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: 'Free AI Text Remover | Remove Text from Image Instantly',
         description: 'Remove text, captions, and subtitles from images instantly with AI. Clean photos by erasing unwanted text overlays in seconds.',
-        url: 'https://removewatermarkpro.com/text-remover-ai',
+        url: 'https://removewatermarkpro.co/text-remover-ai',
         siteName: 'Remove Watermark Pro',
         locale: 'en_US',
         type: 'website',
@@ -21,15 +21,15 @@ export const metadata: Metadata = {
         description: 'Remove text, captions, and subtitles from images instantly with AI.',
     },
     alternates: {
-        canonical: 'https://removewatermarkpro.com/text-remover-ai',
+        canonical: 'https://removewatermarkpro.co/text-remover-ai',
         languages: {
-            'en': 'https://removewatermarkpro.com/text-remover-ai',
-            'fr': 'https://removewatermarkpro.com/fr/supprimer-texte-image',
-            'de': 'https://removewatermarkpro.com/de/text-entfernen',
-            'es': 'https://removewatermarkpro.com/es/eliminar-texto-imagen',
-            'pt': 'https://removewatermarkpro.com/pt/remover-texto-imagem',
-            'ko': 'https://removewatermarkpro.com/ko/text-remover-ai',
-            'no': 'https://removewatermarkpro.com/no/fjern-tekst-fra-bilde',
+            'en': 'https://removewatermarkpro.co/text-remover-ai',
+            'fr': 'https://removewatermarkpro.co/fr/supprimer-texte-image',
+            'de': 'https://removewatermarkpro.co/de/text-entfernen',
+            'es': 'https://removewatermarkpro.co/es/eliminar-texto-imagen',
+            'pt': 'https://removewatermarkpro.co/pt/remover-texto-imagem',
+            'ko': 'https://removewatermarkpro.co/ko/text-remover-ai',
+            'no': 'https://removewatermarkpro.co/no/fjern-tekst-fra-bilde',
         },
     },
 }
@@ -39,7 +39,7 @@ export default function TextRemoverAI() {
         <>
             <StructuredData data={createSoftwareSchema({
                 name: "AI Text Remover - Free",
-                url: "https://removewatermarkpro.com/text-remover-ai",
+                url: "https://removewatermarkpro.co/text-remover-ai",
                 description: "Remove text, captions, and subtitles from images instantly with AI. Clean photos by erasing unwanted text overlays in seconds."
             })} />
             <TextRemoverClient />

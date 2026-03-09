@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: 'Changer Arrière-Plan Gratuit | Modifier Fond Photo IA',
         description: 'Changez l\'arrière-plan des photos instantanément avec l\'IA. Remplacez les fonds de photos, échangez les scènes et transformez les images en quelques secondes.',
-        url: 'https://removewatermarkpro.com/fr/changer-arriere-plan',
+        url: 'https://removewatermarkpro.co/fr/changer-arriere-plan',
         siteName: 'Remove Watermark Pro',
         locale: 'fr_FR',
         type: 'website',
@@ -20,15 +20,15 @@ export const metadata: Metadata = {
         description: 'Changez l\'arrière-plan des photos instantanément avec l\'IA.',
     },
     alternates: {
-        canonical: 'https://removewatermarkpro.com/fr/changer-arriere-plan',
+        canonical: 'https://removewatermarkpro.co/fr/changer-arriere-plan',
         languages: {
-            'en': 'https://removewatermarkpro.com/background-changer-ai',
-            'fr': 'https://removewatermarkpro.com/fr/changer-arriere-plan',
-            'de': 'https://removewatermarkpro.com/de/hintergrund-wechseln',
-            'es': 'https://removewatermarkpro.com/es/cambiar-fondo-imagen',
-            'pt': 'https://removewatermarkpro.com/pt/trocar-fundo-imagem',
-            'ko': 'https://removewatermarkpro.com/ko/background-changer-ai',
-            'no': 'https://removewatermarkpro.com/no/endre-bakgrunn',
+            'en': 'https://removewatermarkpro.co/background-changer-ai',
+            'fr': 'https://removewatermarkpro.co/fr/changer-arriere-plan',
+            'de': 'https://removewatermarkpro.co/de/hintergrund-wechseln',
+            'es': 'https://removewatermarkpro.co/es/cambiar-fondo-imagen',
+            'pt': 'https://removewatermarkpro.co/pt/trocar-fundo-imagem',
+            'ko': 'https://removewatermarkpro.co/ko/background-changer-ai',
+            'no': 'https://removewatermarkpro.co/no/endre-bakgrunn',
         },
     },
 }
@@ -38,7 +38,7 @@ export default function ChangerArrierePlan() {
         <>
             <StructuredData data={createSoftwareSchema({
                 name: "Changer Arrière-Plan - IA Gratuit",
-                url: "https://removewatermarkpro.com/fr/changer-arriere-plan",
+                url: "https://removewatermarkpro.co/fr/changer-arriere-plan",
                 description: "Changez l'arrière-plan des photos instantanément avec l'IA. Remplacez les fonds et transformez vos images."
             })} />
             <BackgroundChangerClientFr />

@@ -6,23 +6,23 @@ export const metadata: Metadata = {
     description: 'Få hjelp med Remove Watermark Pro. Kontakt vårt supportteam for hjelp med vannmerkefjerning, kontoproblemer og tekniske spørsmål.',
 
     alternates: {
-        canonical: 'https://removewatermarkspro.com/no/support',
+        canonical: 'https://removewatermarkpro.co/no/support',
         languages: {
-            'en': 'https://removewatermarkspro.com/support',
-            'fr': 'https://removewatermarkspro.com/fr/support',
-            'de': 'https://removewatermarkspro.com/de/support',
-            'es': 'https://removewatermarkspro.com/es/soporte',
-            'pt': 'https://removewatermarkspro.com/pt/suporte',
-            'ko': 'https://removewatermarkspro.com/ko/support',
-            'no': 'https://removewatermarkspro.com/no/support',
-            'x-default': 'https://removewatermarkspro.com/support'
+            'en': 'https://removewatermarkpro.co/support',
+            'fr': 'https://removewatermarkpro.co/fr/support',
+            'de': 'https://removewatermarkpro.co/de/support',
+            'es': 'https://removewatermarkpro.co/es/soporte',
+            'pt': 'https://removewatermarkpro.co/pt/suporte',
+            'ko': 'https://removewatermarkpro.co/ko/support',
+            'no': 'https://removewatermarkpro.co/no/support',
+            'x-default': 'https://removewatermarkpro.co/support'
         }
     },
 
     openGraph: {
         title: 'Support - Remove Watermark Pro | Hjelp & Kontakt',
         description: 'Få hjelp med Remove Watermark Pro. Kontakt vårt supportteam.',
-        url: 'https://removewatermarkspro.com/no/support',
+        url: 'https://removewatermarkpro.co/no/support',
         siteName: 'Remove Watermark Pro',
         locale: 'no_NO',
         type: 'website',

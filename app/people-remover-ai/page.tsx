@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: 'Free AI People Remover | Remove People from Photos Instantly',
         description: 'Remove people from photos instantly with AI. Delete unwanted people, clear crowds, and clean up your images in seconds.',
-        url: 'https://removewatermarkpro.com/people-remover-ai',
+        url: 'https://removewatermarkpro.co/people-remover-ai',
         siteName: 'Remove Watermark Pro',
         locale: 'en_US',
         type: 'website',
@@ -21,15 +21,15 @@ export const metadata: Metadata = {
         description: 'Remove people from photos instantly with AI.',
     },
     alternates: {
-        canonical: 'https://removewatermarkpro.com/people-remover-ai',
+        canonical: 'https://removewatermarkpro.co/people-remover-ai',
         languages: {
-            'en': 'https://removewatermarkpro.com/people-remover-ai',
-            'fr': 'https://removewatermarkpro.com/fr/effacer-personnes-photo',
-            'de': 'https://removewatermarkpro.com/de/personen-entfernen',
-            'es': 'https://removewatermarkpro.com/es/eliminar-personas-foto',
-            'pt': 'https://removewatermarkpro.com/pt/remover-pessoas-foto',
-            'ko': 'https://removewatermarkpro.com/ko/people-remover-ai',
-            'no': 'https://removewatermarkpro.com/no/fjern-personer-foto',
+            'en': 'https://removewatermarkpro.co/people-remover-ai',
+            'fr': 'https://removewatermarkpro.co/fr/effacer-personnes-photo',
+            'de': 'https://removewatermarkpro.co/de/personen-entfernen',
+            'es': 'https://removewatermarkpro.co/es/eliminar-personas-foto',
+            'pt': 'https://removewatermarkpro.co/pt/remover-pessoas-foto',
+            'ko': 'https://removewatermarkpro.co/ko/people-remover-ai',
+            'no': 'https://removewatermarkpro.co/no/fjern-personer-foto',
         },
     },
 }
@@ -39,7 +39,7 @@ export default function PeopleRemoverAI() {
         <>
             <StructuredData data={createSoftwareSchema({
                 name: "AI People Remover - Free",
-                url: "https://removewatermarkpro.com/people-remover-ai",
+                url: "https://removewatermarkpro.co/people-remover-ai",
                 description: "Remove people from photos instantly with AI. Delete unwanted people, clear crowds, and clean up your images in seconds."
             })} />
             <PeopleRemoverClient />

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: 'Free Remove Text from Image | AI Text Remover Tool',
         description: 'Remove text, captions, and subtitles from images instantly with AI. Clean photos by erasing unwanted text overlays in seconds.',
-        url: 'https://removewatermarkpro.com/remove-text-from-image',
+        url: 'https://removewatermarkpro.co/remove-text-from-image',
         siteName: 'Remove Watermark Pro',
         locale: 'en_US',
         type: 'website',
@@ -19,15 +19,15 @@ export const metadata: Metadata = {
         description: 'Remove text, captions, and subtitles from images instantly with AI.',
     },
     alternates: {
-        canonical: 'https://removewatermarkpro.com/remove-text-from-image',
+        canonical: 'https://removewatermarkpro.co/remove-text-from-image',
         languages: {
-            'en': 'https://removewatermarkpro.com/remove-text-from-image',
-            'fr': 'https://removewatermarkpro.com/fr/supprimer-texte-image',
-            'de': 'https://removewatermarkpro.com/de/text-entfernen',
-            'es': 'https://removewatermarkpro.com/es/eliminar-texto-imagen',
-            'pt': 'https://removewatermarkpro.com/pt/remover-texto-imagem',
-            'ko': 'https://removewatermarkpro.com/ko/remove-text-from-image',
-            'no': 'https://removewatermarkpro.com/no/fjern-tekst-fra-bilde',
+            'en': 'https://removewatermarkpro.co/remove-text-from-image',
+            'fr': 'https://removewatermarkpro.co/fr/supprimer-texte-image',
+            'de': 'https://removewatermarkpro.co/de/text-entfernen',
+            'es': 'https://removewatermarkpro.co/es/eliminar-texto-imagen',
+            'pt': 'https://removewatermarkpro.co/pt/remover-texto-imagem',
+            'ko': 'https://removewatermarkpro.co/ko/remove-text-from-image',
+            'no': 'https://removewatermarkpro.co/no/fjern-tekst-fra-bilde',
         },
     },
 }

@@ -10,19 +10,19 @@ export const metadata: Metadata = {
     description: 'Discover expert tips, tutorials, and insights on AI-powered image editing. Learn how to remove watermarks, enhance photos, and master professional editing techniques.',
 
     alternates: {
-        canonical: 'https://removewatermarkspro.com/blog',
+        canonical: 'https://removewatermarkpro.co/blog',
     },
 
     openGraph: {
         title: 'AI Image Editing Blog | Remove Watermark Pro',
         description: 'Expert tips and tutorials on AI-powered image editing, watermark removal, and photo enhancement techniques.',
-        url: 'https://removewatermarkspro.com/blog',
+        url: 'https://removewatermarkpro.co/blog',
         siteName: 'Remove Watermark Pro',
         locale: 'en_US',
         type: 'website',
         images: [
             {
-                url: 'https://removewatermarkspro.com/og-image-en.jpg',
+                url: 'https://removewatermarkpro.co/og-image-en.jpg',
                 width: 1200,
                 height: 630,
                 alt: 'Remove Watermark Pro Blog'
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'AI Image Editing Blog | Remove Watermark Pro',
         description: 'Expert tips and tutorials on AI-powered image editing, watermark removal, and photo enhancement techniques.',
-        images: ['https://removewatermarkspro.com/og-image-en.jpg']
+        images: ['https://removewatermarkpro.co/og-image-en.jpg']
     },
 
     robots: {

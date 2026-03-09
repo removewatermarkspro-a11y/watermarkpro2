@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: 'Remover Objeto Imagem Grátis | Apagar Objetos Indesejados IA',
         description: 'Remova objetos indesejados, pessoas e elementos de fotos instantaneamente com IA.',
-        url: 'https://removewatermarkpro.com/pt/remover-objeto-imagem',
+        url: 'https://removewatermarkpro.co/pt/remover-objeto-imagem',
         siteName: 'Remove Watermark Pro',
         locale: 'pt_PT',
         type: 'website',
@@ -20,15 +20,15 @@ export const metadata: Metadata = {
         description: 'Remova objetos indesejados de fotos instantaneamente com IA.',
     },
     alternates: {
-        canonical: 'https://removewatermarkpro.com/pt/remover-objeto-imagem',
+        canonical: 'https://removewatermarkpro.co/pt/remover-objeto-imagem',
         languages: {
-            'en': 'https://removewatermarkpro.com/object-remover-ai',
-            'fr': 'https://removewatermarkpro.com/fr/supprimer-objet-image',
-            'de': 'https://removewatermarkpro.com/de/objekt-entfernen',
-            'es': 'https://removewatermarkpro.com/es/eliminar-objeto-imagen',
-            'pt': 'https://removewatermarkpro.com/pt/remover-objeto-imagem',
-            'ko': 'https://removewatermarkpro.com/ko/object-remover-ai',
-            'no': 'https://removewatermarkpro.com/no/fjern-objekt-fra-bilde',
+            'en': 'https://removewatermarkpro.co/object-remover-ai',
+            'fr': 'https://removewatermarkpro.co/fr/supprimer-objet-image',
+            'de': 'https://removewatermarkpro.co/de/objekt-entfernen',
+            'es': 'https://removewatermarkpro.co/es/eliminar-objeto-imagen',
+            'pt': 'https://removewatermarkpro.co/pt/remover-objeto-imagem',
+            'ko': 'https://removewatermarkpro.co/ko/object-remover-ai',
+            'no': 'https://removewatermarkpro.co/no/fjern-objekt-fra-bilde',
         },
     },
 }
@@ -38,7 +38,7 @@ export default function RemoverObjetoImagem() {
         <>
             <StructuredData data={createSoftwareSchema({
                 name: "Remover Objeto de Imagem - IA Grátis",
-                url: "https://removewatermarkpro.com/pt/remover-objeto-imagem",
+                url: "https://removewatermarkpro.co/pt/remover-objeto-imagem",
                 description: "Remova objetos indesejados, pessoas e elementos de fotos instantaneamente com IA. Apague distrações em segundos."
             })} />
             <ObjectRemoverClientPt />

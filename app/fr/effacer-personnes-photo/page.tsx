@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: 'Effacer Personnes Photo Gratuit | Supprimer Personnes IA',
         description: 'Effacez les personnes des photos instantanément avec l\'IA.',
-        url: 'https://removewatermarkpro.com/fr/effacer-personnes-photo',
+        url: 'https://removewatermarkpro.co/fr/effacer-personnes-photo',
         siteName: 'Remove Watermark Pro',
         locale: 'fr_FR',
         type: 'website',
@@ -20,15 +20,15 @@ export const metadata: Metadata = {
         description: 'Effacez les personnes des photos instantanément avec l\'IA.',
     },
     alternates: {
-        canonical: 'https://removewatermarkpro.com/fr/effacer-personnes-photo',
+        canonical: 'https://removewatermarkpro.co/fr/effacer-personnes-photo',
         languages: {
-            'en': 'https://removewatermarkpro.com/people-remover-ai',
-            'fr': 'https://removewatermarkpro.com/fr/effacer-personnes-photo',
-            'de': 'https://removewatermarkpro.com/de/personen-entfernen',
-            'es': 'https://removewatermarkpro.com/es/eliminar-personas-foto',
-            'pt': 'https://removewatermarkpro.com/pt/remover-pessoas-foto',
-            'ko': 'https://removewatermarkpro.com/ko/people-remover-ai',
-            'no': 'https://removewatermarkpro.com/no/fjern-personer-foto',
+            'en': 'https://removewatermarkpro.co/people-remover-ai',
+            'fr': 'https://removewatermarkpro.co/fr/effacer-personnes-photo',
+            'de': 'https://removewatermarkpro.co/de/personen-entfernen',
+            'es': 'https://removewatermarkpro.co/es/eliminar-personas-foto',
+            'pt': 'https://removewatermarkpro.co/pt/remover-pessoas-foto',
+            'ko': 'https://removewatermarkpro.co/ko/people-remover-ai',
+            'no': 'https://removewatermarkpro.co/no/fjern-personer-foto',
         },
     },
 }
@@ -38,7 +38,7 @@ export default function EffacerPersonnesPhoto() {
         <>
             <StructuredData data={createSoftwareSchema({
                 name: "Effacer Personnes Photo - IA Gratuit",
-                url: "https://removewatermarkpro.com/fr/effacer-personnes-photo",
+                url: "https://removewatermarkpro.co/fr/effacer-personnes-photo",
                 description: "Effacez les personnes des photos instantanément avec l'IA. Supprimez les personnes indésirables en quelques secondes."
             })} />
             <PeopleRemoverClientFr />

@@ -12,13 +12,13 @@ export const metadata: Metadata = {
     description: 'Learn how to remove proof from picture with expert-tested methods. Complete guide with top AI tools, step-by-step instructions, and professional tips.',
 
     alternates: {
-        canonical: 'https://removewatermarkspro.com/blog/remove-proof-from-picture',
+        canonical: 'https://removewatermarkpro.co/blog/remove-proof-from-picture',
     },
 
     openGraph: {
         title: 'Best Ways to Remove Proof From Picture Using AI Tools 2026',
         description: 'Learn how to remove proof from picture with expert-tested methods. Complete guide with top AI tools, step-by-step instructions, and professional tips.',
-        url: 'https://removewatermarkspro.com/blog/remove-proof-from-picture',
+        url: 'https://removewatermarkpro.co/blog/remove-proof-from-picture',
         siteName: 'Remove Watermark Pro',
         locale: 'en_US',
         type: 'article',
@@ -199,7 +199,7 @@ export default function BlogArticle() {
             "name": "Remove Watermark Pro",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https://removewatermarkspro.com/logo.png"
+                "url": "https://removewatermarkpro.co/logo.png"
             }
         },
         "description": "Learn how to remove proof from picture with expert-tested methods. Complete guide with top AI tools, step-by-step instructions, and professional tips."

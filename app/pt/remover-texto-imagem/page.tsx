@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: 'Remover Texto Imagem Grátis | Apagar Texto Foto IA',
         description: 'Remova texto, legendas e subtítulos de imagens instantaneamente com IA.',
-        url: 'https://removewatermarkpro.com/pt/remover-texto-imagem',
+        url: 'https://removewatermarkpro.co/pt/remover-texto-imagem',
         siteName: 'Remove Watermark Pro',
         locale: 'pt_PT',
         type: 'website',
@@ -20,15 +20,15 @@ export const metadata: Metadata = {
         description: 'Remova texto, legendas e subtítulos de imagens instantaneamente com IA.',
     },
     alternates: {
-        canonical: 'https://removewatermarkpro.com/pt/remover-texto-imagem',
+        canonical: 'https://removewatermarkpro.co/pt/remover-texto-imagem',
         languages: {
-            'en': 'https://removewatermarkpro.com/text-remover-ai',
-            'fr': 'https://removewatermarkpro.com/fr/supprimer-texte-image',
-            'de': 'https://removewatermarkpro.com/de/text-entfernen',
-            'es': 'https://removewatermarkpro.com/es/eliminar-texto-imagen',
-            'pt': 'https://removewatermarkpro.com/pt/remover-texto-imagem',
-            'ko': 'https://removewatermarkpro.com/ko/text-remover-ai',
-            'no': 'https://removewatermarkpro.com/no/fjern-tekst-fra-bilde',
+            'en': 'https://removewatermarkpro.co/text-remover-ai',
+            'fr': 'https://removewatermarkpro.co/fr/supprimer-texte-image',
+            'de': 'https://removewatermarkpro.co/de/text-entfernen',
+            'es': 'https://removewatermarkpro.co/es/eliminar-texto-imagen',
+            'pt': 'https://removewatermarkpro.co/pt/remover-texto-imagem',
+            'ko': 'https://removewatermarkpro.co/ko/text-remover-ai',
+            'no': 'https://removewatermarkpro.co/no/fjern-tekst-fra-bilde',
         },
     },
 }
@@ -38,7 +38,7 @@ export default function RemoverTextoImagem() {
         <>
             <StructuredData data={createSoftwareSchema({
                 name: "Remover Texto de Imagem - IA Grátis",
-                url: "https://removewatermarkpro.com/pt/remover-texto-imagem",
+                url: "https://removewatermarkpro.co/pt/remover-texto-imagem",
                 description: "Remova texto, legendas e subtítulos de imagens instantaneamente com IA. Limpe fotos em segundos."
             })} />
             <TextRemoverClientPt />

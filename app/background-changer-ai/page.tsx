@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: 'Free AI Background Changer | Change Photo Background Instantly',
         description: 'Change backgrounds in photos instantly with AI. Replace photo backgrounds, swap scenes, and transform images in seconds.',
-        url: 'https://removewatermarkpro.com/background-changer-ai',
+        url: 'https://removewatermarkpro.co/background-changer-ai',
         siteName: 'Remove Watermark Pro',
         locale: 'en_US',
         type: 'website',
@@ -21,15 +21,15 @@ export const metadata: Metadata = {
         description: 'Change backgrounds in photos instantly with AI.',
     },
     alternates: {
-        canonical: 'https://removewatermarkpro.com/background-changer-ai',
+        canonical: 'https://removewatermarkpro.co/background-changer-ai',
         languages: {
-            'en': 'https://removewatermarkpro.com/background-changer-ai',
-            'fr': 'https://removewatermarkpro.com/fr/changer-arriere-plan',
-            'de': 'https://removewatermarkpro.com/de/hintergrund-wechseln',
-            'es': 'https://removewatermarkpro.com/es/cambiar-fondo-imagen',
-            'pt': 'https://removewatermarkpro.com/pt/trocar-fundo-imagem',
-            'ko': 'https://removewatermarkpro.com/ko/background-changer-ai',
-            'no': 'https://removewatermarkpro.com/no/endre-bakgrunn',
+            'en': 'https://removewatermarkpro.co/background-changer-ai',
+            'fr': 'https://removewatermarkpro.co/fr/changer-arriere-plan',
+            'de': 'https://removewatermarkpro.co/de/hintergrund-wechseln',
+            'es': 'https://removewatermarkpro.co/es/cambiar-fondo-imagen',
+            'pt': 'https://removewatermarkpro.co/pt/trocar-fundo-imagem',
+            'ko': 'https://removewatermarkpro.co/ko/background-changer-ai',
+            'no': 'https://removewatermarkpro.co/no/endre-bakgrunn',
         },
     },
 }
@@ -39,7 +39,7 @@ export default function BackgroundChangerAI() {
         <>
             <StructuredData data={createSoftwareSchema({
                 name: "AI Background Changer - Free",
-                url: "https://removewatermarkpro.com/background-changer-ai",
+                url: "https://removewatermarkpro.co/background-changer-ai",
                 description: "Change backgrounds in photos instantly with AI. Replace photo backgrounds, swap scenes, and transform images in seconds."
             })} />
             <BackgroundReplacerClient />

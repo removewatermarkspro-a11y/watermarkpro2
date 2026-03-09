@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: 'Free AI Background Remover | Remove Photo Background Instantly',
         description: 'Remove backgrounds from photos instantly with AI. Delete photo backgrounds, isolate subjects, and create transparent images in seconds.',
-        url: 'https://removewatermarkpro.com/background-remover',
+        url: 'https://removewatermarkpro.co/background-remover',
         siteName: 'Remove Watermark Pro',
         locale: 'en_US',
         type: 'website',
@@ -21,15 +21,15 @@ export const metadata: Metadata = {
         description: 'Remove backgrounds from photos instantly with AI.',
     },
     alternates: {
-        canonical: 'https://removewatermarkpro.com/background-remover',
+        canonical: 'https://removewatermarkpro.co/background-remover',
         languages: {
-            'en': 'https://removewatermarkpro.com/background-remover',
-            'fr': 'https://removewatermarkpro.com/fr/supprimer-arriere-plan',
-            'de': 'https://removewatermarkpro.com/de/hintergrund-entfernen',
-            'es': 'https://removewatermarkpro.com/es/eliminar-fondo-imagen',
-            'pt': 'https://removewatermarkpro.com/pt/remover-fundo-imagem',
-            'ko': 'https://removewatermarkpro.com/ko/background-remover',
-            'no': 'https://removewatermarkpro.com/no/fjern-bakgrunn',
+            'en': 'https://removewatermarkpro.co/background-remover',
+            'fr': 'https://removewatermarkpro.co/fr/supprimer-arriere-plan',
+            'de': 'https://removewatermarkpro.co/de/hintergrund-entfernen',
+            'es': 'https://removewatermarkpro.co/es/eliminar-fondo-imagen',
+            'pt': 'https://removewatermarkpro.co/pt/remover-fundo-imagem',
+            'ko': 'https://removewatermarkpro.co/ko/background-remover',
+            'no': 'https://removewatermarkpro.co/no/fjern-bakgrunn',
         },
     },
 }
@@ -39,7 +39,7 @@ export default function BackgroundRemover() {
         <>
             <StructuredData data={createSoftwareSchema({
                 name: "AI Background Remover - Free",
-                url: "https://removewatermarkpro.com/background-remover",
+                url: "https://removewatermarkpro.co/background-remover",
                 description: "Remove backgrounds from photos instantly with AI. Delete photo backgrounds, isolate subjects, and create transparent images in seconds."
             })} />
             <BackgroundRemoverClient />

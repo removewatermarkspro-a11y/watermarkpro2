@@ -13,13 +13,13 @@ export const metadata: Metadata = {
     description: 'We tested 19 photo watermark removal tools on 850+ images. Discover the best free and paid methods to remove watermarks, logos, and text from photos in seconds.',
 
     alternates: {
-        canonical: 'https://removewatermarkspro.com/blog/how-to-remove-watermark-from-photo',
+        canonical: 'https://removewatermarkpro.co/blog/how-to-remove-watermark-from-photo',
     },
 
     openGraph: {
         title: 'How to Remove Watermark from Photo Online in 2026 (Free & Paid)',
         description: 'Comprehensive guide to removing watermarks from photos. Tested 19 tools on 850+ images. Compare free vs paid options.',
-        url: 'https://removewatermarkspro.com/blog/how-to-remove-watermark-from-photo',
+        url: 'https://removewatermarkpro.co/blog/how-to-remove-watermark-from-photo',
         siteName: 'Remove Watermark Pro',
         locale: 'en_US',
         type: 'article',
@@ -108,7 +108,7 @@ export default function PhotoWatermarkRemoverArticle() {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "How to Remove Watermark from Photo Online in 2026 (Free & Paid)",
-        "image": "https://removewatermarkspro.com/blog-photo-watermark-og.jpg",
+        "image": "https://removewatermarkpro.co/blog-photo-watermark-og.jpg",
         "datePublished": "2026-01-26T00:00:00Z",
         "dateModified": "2026-01-26T00:00:00Z",
         "author": {
@@ -120,7 +120,7 @@ export default function PhotoWatermarkRemoverArticle() {
             "name": "Remove Watermark Pro",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https://removewatermarkspro.com/logo.png"
+                "url": "https://removewatermarkpro.co/logo.png"
             }
         },
         "description": "Comprehensive guide to removing watermarks from photos. We tested 19 tools across 850 images to find the best solutions."

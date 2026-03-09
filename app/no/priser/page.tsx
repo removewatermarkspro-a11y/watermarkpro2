@@ -8,23 +8,23 @@ export const metadata: Metadata = {
     description: 'Oppdag våre priser for å fjerne vannmerker. Gratis og premium-planer med kreditter for å fjerne vannmerker fra bildene og videoene dine.',
 
     alternates: {
-        canonical: 'https://removewatermarkspro.com/no/priser',
+        canonical: 'https://removewatermarkpro.co/no/priser',
         languages: {
-            'en': 'https://removewatermarkspro.com/pricing',
-            'fr': 'https://removewatermarkspro.com/fr/tarifs',
-            'de': 'https://removewatermarkspro.com/de/preise',
-            'es': 'https://removewatermarkspro.com/es/precios',
-            'pt': 'https://removewatermarkspro.com/pt/precos',
-            'ko': 'https://removewatermarkspro.com/ko/pricing',
-            'no': 'https://removewatermarkspro.com/no/priser',
-            'x-default': 'https://removewatermarkspro.com/pricing'
+            'en': 'https://removewatermarkpro.co/pricing',
+            'fr': 'https://removewatermarkpro.co/fr/tarifs',
+            'de': 'https://removewatermarkpro.co/de/preise',
+            'es': 'https://removewatermarkpro.co/es/precios',
+            'pt': 'https://removewatermarkpro.co/pt/precos',
+            'ko': 'https://removewatermarkpro.co/ko/pricing',
+            'no': 'https://removewatermarkpro.co/no/priser',
+            'x-default': 'https://removewatermarkpro.co/pricing'
         }
     },
 
     openGraph: {
         title: 'Priser - Remove Watermark Pro | Planer og Priser',
         description: 'Oppdag våre priser for å fjerne vannmerker. Gratis og premium-planer med kreditter.',
-        url: 'https://removewatermarkspro.com/no/priser',
+        url: 'https://removewatermarkpro.co/no/priser',
         siteName: 'Remove Watermark Pro',
         locale: 'no_NO',
         type: 'website',

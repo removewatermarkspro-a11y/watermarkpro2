@@ -8,29 +8,29 @@ export const metadata: Metadata = {
     description: 'Remove Sora AI watermarks & logos from videos instantly. 100% free tool for OpenAI Sora content. Clean videos in seconds. Try it now!',
 
     alternates: {
-        canonical: 'https://removewatermarkspro.com/sora-watermark-remover',
+        canonical: 'https://removewatermarkpro.co/sora-watermark-remover',
         languages: {
-            'en': 'https://removewatermarkspro.com/sora-watermark-remover',
-            'fr': 'https://removewatermarkspro.com/fr/supprimer-filigrane-sora',
-            'de': 'https://removewatermarkspro.com/de/sora-wasserzeichen-entfernen',
-            'es': 'https://removewatermarkspro.com/es/eliminar-marca-agua-sora',
-            'pt': 'https://removewatermarkspro.com/pt/remover-marca-dagua-sora',
-            'ko': 'https://removewatermarkspro.com/ko/sora-watermark-remover',
-            'no': 'https://removewatermarkspro.com/no/fjern-sora-vannmerke',
-            'x-default': 'https://removewatermarkspro.com/sora-watermark-remover'
+            'en': 'https://removewatermarkpro.co/sora-watermark-remover',
+            'fr': 'https://removewatermarkpro.co/fr/supprimer-filigrane-sora',
+            'de': 'https://removewatermarkpro.co/de/sora-wasserzeichen-entfernen',
+            'es': 'https://removewatermarkpro.co/es/eliminar-marca-agua-sora',
+            'pt': 'https://removewatermarkpro.co/pt/remover-marca-dagua-sora',
+            'ko': 'https://removewatermarkpro.co/ko/sora-watermark-remover',
+            'no': 'https://removewatermarkpro.co/no/fjern-sora-vannmerke',
+            'x-default': 'https://removewatermarkpro.co/sora-watermark-remover'
         }
     },
 
     openGraph: {
         title: 'Free Sora Watermark Remover | Remove OpenAI Sora Logo & Branding',
         description: 'Remove Sora AI watermarks instantly. Free tool to erase OpenAI Sora logos, branding & watermarks from AI-generated videos.',
-        url: 'https://removewatermarkspro.com/sora-watermark-remover',
+        url: 'https://removewatermarkpro.co/sora-watermark-remover',
         siteName: 'Remove Watermark Pro',
         locale: 'en_US',
         type: 'website',
         images: [
             {
-                url: 'https://removewatermarkspro.com/og-sora-remover.jpg',
+                url: 'https://removewatermarkpro.co/og-sora-remover.jpg',
                 width: 1200,
                 height: 630,
                 alt: 'Sora Watermark Remover Tool - Before and After'
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'Free Sora Watermark Remover | Remove OpenAI Sora Logo & Branding',
         description: 'Remove Sora AI watermarks instantly. Free tool to erase OpenAI Sora logos, branding & watermarks from AI-generated videos.',
-        images: ['https://removewatermarkspro.com/og-sora-remover.jpg']
+        images: ['https://removewatermarkpro.co/og-sora-remover.jpg']
     },
 
     robots: {
@@ -63,7 +63,7 @@ export default function SoraWatermarkRemoverPage() {
         <>
             <StructuredData data={createSoftwareSchema({
                 name: "Sora Watermark Remover - Free",
-                url: "https://removewatermarkspro.com/sora-watermark-remover",
+                url: "https://removewatermarkpro.co/sora-watermark-remover",
                 description: "Remove Sora AI watermarks instantly. Free tool to erase OpenAI Sora logos, branding & watermarks from AI-generated videos."
             })} />
             <SoraWatermarkRemoverClient />

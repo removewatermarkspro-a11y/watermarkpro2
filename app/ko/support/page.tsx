@@ -6,23 +6,23 @@ export const metadata: Metadata = {
     description: 'Remove Watermark Pro에 대한 도움을 받으세요. 워터마크 제거, 계정 문제 및 기술적 질문에 대한 지원을 받으려면 지원팀에 문의하세요.',
 
     alternates: {
-        canonical: 'https://removewatermarkspro.com/ko/support',
+        canonical: 'https://removewatermarkpro.co/ko/support',
         languages: {
-            'en': 'https://removewatermarkspro.com/support',
-            'fr': 'https://removewatermarkspro.com/fr/support',
-            'de': 'https://removewatermarkspro.com/de/support',
-            'es': 'https://removewatermarkspro.com/es/soporte',
-            'pt': 'https://removewatermarkspro.com/pt/suporte',
-            'ko': 'https://removewatermarkspro.com/ko/support',
-            'no': 'https://removewatermarkspro.com/no/support',
-            'x-default': 'https://removewatermarkspro.com/support'
+            'en': 'https://removewatermarkpro.co/support',
+            'fr': 'https://removewatermarkpro.co/fr/support',
+            'de': 'https://removewatermarkpro.co/de/support',
+            'es': 'https://removewatermarkpro.co/es/soporte',
+            'pt': 'https://removewatermarkpro.co/pt/suporte',
+            'ko': 'https://removewatermarkpro.co/ko/support',
+            'no': 'https://removewatermarkpro.co/no/support',
+            'x-default': 'https://removewatermarkpro.co/support'
         }
     },
 
     openGraph: {
         title: '지원 - Remove Watermark Pro | 도움말 & 문의',
         description: 'Remove Watermark Pro에 대한 도움을 받으세요. 지원팀에 문의하세요.',
-        url: 'https://removewatermarkspro.com/ko/support',
+        url: 'https://removewatermarkpro.co/ko/support',
         siteName: 'Remove Watermark Pro',
         locale: 'ko_KR',
         type: 'website',

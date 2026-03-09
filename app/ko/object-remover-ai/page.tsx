@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: '무료 AI 객체 제거 | 원치 않는 물체 지우기',
         description: 'AI로 사진에서 원치 않는 객체를 즉시 제거하세요.',
-        url: 'https://removewatermarkpro.com/ko/object-remover-ai',
+        url: 'https://removewatermarkpro.co/ko/object-remover-ai',
         siteName: 'Remove Watermark Pro',
         locale: 'ko_KR',
         type: 'website',
@@ -20,15 +20,15 @@ export const metadata: Metadata = {
         description: 'AI로 사진에서 원치 않는 객체를 즉시 제거하세요.',
     },
     alternates: {
-        canonical: 'https://removewatermarkpro.com/ko/object-remover-ai',
+        canonical: 'https://removewatermarkpro.co/ko/object-remover-ai',
         languages: {
-            'en': 'https://removewatermarkpro.com/object-remover-ai',
-            'fr': 'https://removewatermarkpro.com/fr/supprimer-objet-image',
-            'de': 'https://removewatermarkpro.com/de/objekt-entfernen',
-            'es': 'https://removewatermarkpro.com/es/eliminar-objeto-imagen',
-            'pt': 'https://removewatermarkpro.com/pt/remover-objeto-imagem',
-            'ko': 'https://removewatermarkpro.com/ko/object-remover-ai',
-            'no': 'https://removewatermarkpro.com/no/fjern-objekt-fra-bilde',
+            'en': 'https://removewatermarkpro.co/object-remover-ai',
+            'fr': 'https://removewatermarkpro.co/fr/supprimer-objet-image',
+            'de': 'https://removewatermarkpro.co/de/objekt-entfernen',
+            'es': 'https://removewatermarkpro.co/es/eliminar-objeto-imagen',
+            'pt': 'https://removewatermarkpro.co/pt/remover-objeto-imagem',
+            'ko': 'https://removewatermarkpro.co/ko/object-remover-ai',
+            'no': 'https://removewatermarkpro.co/no/fjern-objekt-fra-bilde',
         },
     },
 }

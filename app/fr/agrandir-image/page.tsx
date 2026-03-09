@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: 'Agrandir Image Gratuit | Améliorer Qualité Photo IA',
         description: 'Agrandissez les images avec l\'IA jusqu\'à 4x la résolution.',
-        url: 'https://removewatermarkpro.com/fr/agrandir-image',
+        url: 'https://removewatermarkpro.co/fr/agrandir-image',
         siteName: 'Remove Watermark Pro',
         locale: 'fr_FR',
         type: 'website',
@@ -20,15 +20,15 @@ export const metadata: Metadata = {
         description: 'Agrandissez les images avec l\'IA jusqu\'à 4x la résolution.',
     },
     alternates: {
-        canonical: 'https://removewatermarkpro.com/fr/agrandir-image',
+        canonical: 'https://removewatermarkpro.co/fr/agrandir-image',
         languages: {
-            'en': 'https://removewatermarkpro.com/image-upscaler-ai',
-            'fr': 'https://removewatermarkpro.com/fr/agrandir-image',
-            'de': 'https://removewatermarkpro.com/de/bild-hochskalieren',
-            'es': 'https://removewatermarkpro.com/es/mejorar-calidad-imagen',
-            'pt': 'https://removewatermarkpro.com/pt/melhorar-qualidade-imagem',
-            'ko': 'https://removewatermarkpro.com/ko/image-upscaler-ai',
-            'no': 'https://removewatermarkpro.com/no/forbedre-bildekvalitet',
+            'en': 'https://removewatermarkpro.co/image-upscaler-ai',
+            'fr': 'https://removewatermarkpro.co/fr/agrandir-image',
+            'de': 'https://removewatermarkpro.co/de/bild-hochskalieren',
+            'es': 'https://removewatermarkpro.co/es/mejorar-calidad-imagen',
+            'pt': 'https://removewatermarkpro.co/pt/melhorar-qualidade-imagem',
+            'ko': 'https://removewatermarkpro.co/ko/image-upscaler-ai',
+            'no': 'https://removewatermarkpro.co/no/forbedre-bildekvalitet',
         },
     },
 }
@@ -38,7 +38,7 @@ export default function AgrandirImage() {
         <>
             <StructuredData data={createSoftwareSchema({
                 name: "Agrandir Image - IA Gratuit",
-                url: "https://removewatermarkpro.com/fr/agrandir-image",
+                url: "https://removewatermarkpro.co/fr/agrandir-image",
                 description: "Agrandissez les images avec l'IA jusqu'à 4x la résolution. Améliorez la qualité photo instantanément."
             })} />
             <ImageUpscalerClientFr />

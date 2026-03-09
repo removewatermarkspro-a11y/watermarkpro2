@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: 'Gratis Fjern Personer Foto | Slett Personer AI',
         description: 'Fjern personer fra bilder øyeblikkelig med AI.',
-        url: 'https://removewatermarkpro.com/no/fjern-personer-foto',
+        url: 'https://removewatermarkpro.co/no/fjern-personer-foto',
         siteName: 'Remove Watermark Pro',
         locale: 'no_NO',
         type: 'website',
@@ -19,15 +19,15 @@ export const metadata: Metadata = {
         description: 'Fjern personer fra bilder øyeblikkelig med AI.',
     },
     alternates: {
-        canonical: 'https://removewatermarkpro.com/no/fjern-personer-foto',
+        canonical: 'https://removewatermarkpro.co/no/fjern-personer-foto',
         languages: {
-            'en': 'https://removewatermarkpro.com/people-remover-ai',
-            'fr': 'https://removewatermarkpro.com/fr/effacer-personnes-photo',
-            'de': 'https://removewatermarkpro.com/de/personen-entfernen',
-            'es': 'https://removewatermarkpro.com/es/eliminar-personas-foto',
-            'pt': 'https://removewatermarkpro.com/pt/remover-pessoas-foto',
-            'ko': 'https://removewatermarkpro.com/ko/people-remover-ai',
-            'no': 'https://removewatermarkpro.com/no/fjern-personer-foto',
+            'en': 'https://removewatermarkpro.co/people-remover-ai',
+            'fr': 'https://removewatermarkpro.co/fr/effacer-personnes-photo',
+            'de': 'https://removewatermarkpro.co/de/personen-entfernen',
+            'es': 'https://removewatermarkpro.co/es/eliminar-personas-foto',
+            'pt': 'https://removewatermarkpro.co/pt/remover-pessoas-foto',
+            'ko': 'https://removewatermarkpro.co/ko/people-remover-ai',
+            'no': 'https://removewatermarkpro.co/no/fjern-personer-foto',
         },
     },
 }

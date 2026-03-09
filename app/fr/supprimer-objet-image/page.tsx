@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: 'Supprimer Objet Image Gratuit | Effacer Objets Indésirables IA',
         description: 'Supprimez les objets indésirables, personnes et éléments des photos instantanément avec l\'IA. Effacez les photobombers, l\'encombrement et les distractions en quelques secondes.',
-        url: 'https://removewatermarkpro.com/fr/supprimer-objet-image',
+        url: 'https://removewatermarkpro.co/fr/supprimer-objet-image',
         siteName: 'Remove Watermark Pro',
         locale: 'fr_FR',
         type: 'website',
@@ -20,15 +20,15 @@ export const metadata: Metadata = {
         description: 'Supprimez les objets indésirables des photos instantanément avec l\'IA.',
     },
     alternates: {
-        canonical: 'https://removewatermarkpro.com/fr/supprimer-objet-image',
+        canonical: 'https://removewatermarkpro.co/fr/supprimer-objet-image',
         languages: {
-            'en': 'https://removewatermarkpro.com/object-remover-ai',
-            'fr': 'https://removewatermarkpro.com/fr/supprimer-objet-image',
-            'de': 'https://removewatermarkpro.com/de/objekt-entfernen',
-            'es': 'https://removewatermarkpro.com/es/eliminar-objeto-imagen',
-            'pt': 'https://removewatermarkpro.com/pt/remover-objeto-imagem',
-            'ko': 'https://removewatermarkpro.com/ko/object-remover-ai',
-            'no': 'https://removewatermarkpro.com/no/fjern-objekt-fra-bilde',
+            'en': 'https://removewatermarkpro.co/object-remover-ai',
+            'fr': 'https://removewatermarkpro.co/fr/supprimer-objet-image',
+            'de': 'https://removewatermarkpro.co/de/objekt-entfernen',
+            'es': 'https://removewatermarkpro.co/es/eliminar-objeto-imagen',
+            'pt': 'https://removewatermarkpro.co/pt/remover-objeto-imagem',
+            'ko': 'https://removewatermarkpro.co/ko/object-remover-ai',
+            'no': 'https://removewatermarkpro.co/no/fjern-objekt-fra-bilde',
         },
     },
 }
@@ -38,7 +38,7 @@ export default function SupprimerObjetImage() {
         <>
             <StructuredData data={createSoftwareSchema({
                 name: "Supprimer Objet Image - IA Gratuit",
-                url: "https://removewatermarkspro.com/fr/supprimer-objet-image",
+                url: "https://removewatermarkpro.co/fr/supprimer-objet-image",
                 description: "Supprimez les objets indésirables, personnes et éléments des photos instantanément avec l'IA. Effacez les photobombers en quelques secondes."
             })} />
             <ObjectRemoverClientFr />

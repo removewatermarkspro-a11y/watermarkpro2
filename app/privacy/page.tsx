@@ -6,10 +6,10 @@ export const metadata: Metadata = {
     description: 'Learn how Remove Watermark Pro protects your privacy and handles your data.',
 
     alternates: {
-        canonical: 'https://removewatermarkspro.com/privacy',
+        canonical: 'https://removewatermarkpro.co/privacy',
         languages: {
-            'en': 'https://removewatermarkspro.com/privacy',
-            'x-default': 'https://removewatermarkspro.com/privacy'
+            'en': 'https://removewatermarkpro.co/privacy',
+            'x-default': 'https://removewatermarkpro.co/privacy'
         }
     },
 
