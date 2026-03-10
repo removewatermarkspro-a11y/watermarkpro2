@@ -139,6 +139,7 @@ export default function ResultDisplay({
                     grid-template-columns: 1fr 1fr;
                     gap: 1.5rem;
                     margin-bottom: 1.5rem;
+                    align-items: start;
                 }
 
                 .comparison-column {
@@ -157,7 +158,6 @@ export default function ResultDisplay({
                 .image-box {
                     position: relative;
                     width: 100%;
-                    aspect-ratio: 16 / 9;
                     border-radius: 0.75rem;
                     overflow: hidden;
                     background: #1f2937;
@@ -172,8 +172,9 @@ export default function ResultDisplay({
 
                 .image-box img {
                     width: 100%;
-                    height: 100%;
-                    object-fit: cover;
+                    height: auto;
+                    display: block;
+                    object-fit: contain;
                 }
 
                 .checkmark {

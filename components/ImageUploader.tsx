@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useCallback, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import styles from './ImageUploader.module.css'
 import ProcessingPopup from './ProcessingPopup'
 import NoCreditsPopup from './NoCreditsPopup'
@@ -48,7 +48,7 @@ export default function ImageUploader({
         console.log('[ImageUploader] Auth state changed - user:', user, 'credits:', credits, 'onAuthRequired:', !!onAuthRequired)
     }, [user, credits, onAuthRequired])
 
-    const handleClick = useCallback((e: React.MouseEvent) => {
+    const handleClick = (e: React.MouseEvent) => {
         console.log('[ImageUploader] handleClick - user:', user, 'onAuthRequired:', !!onAuthRequired)
 
         if (!user && onAuthRequired) {
@@ -61,9 +61,9 @@ export default function ImageUploader({
 
         // User is authenticated, allow file input to be triggered
         console.log('[ImageUploader] User authenticated, opening file dialog')
-    }, [user, onAuthRequired])
+    }
 
-    const handleFileInputClick = useCallback((e: React.MouseEvent<HTMLInputElement>) => {
+    const handleFileInputClick = (e: React.MouseEvent<HTMLInputElement>) => {
         console.log('[ImageUploader] handleFileInputClick - user:', user)
 
         if (!user && onAuthRequired) {
@@ -73,19 +73,19 @@ export default function ImageUploader({
             onAuthRequired()
             return false
         }
-    }, [user, onAuthRequired])
+    }
 
-    const handleDragOver = useCallback((e: React.DragEvent) => {
+    const handleDragOver = (e: React.DragEvent) => {
         e.preventDefault()
         setIsDragging(true)
-    }, [])
+    }
 
-    const handleDragLeave = useCallback((e: React.DragEvent) => {
+    const handleDragLeave = (e: React.DragEvent) => {
         e.preventDefault()
         setIsDragging(false)
-    }, [])
+    }
 
-    const handleDrop = useCallback((e: React.DragEvent) => {
+    const handleDrop = (e: React.DragEvent) => {
         e.preventDefault()
         setIsDragging(false)
 
@@ -101,9 +101,9 @@ export default function ImageUploader({
         if (files.length > 0) {
             handleFile(files[0])
         }
-    }, [user, onAuthRequired])
+    }
 
-    const handleFileInput = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+    const handleFileInput = (e: React.ChangeEvent<HTMLInputElement>) => {
         console.log('[ImageUploader] handleFileInput - user:', user, 'onAuthRequired:', !!onAuthRequired)
 
         if (!user && onAuthRequired) {
@@ -117,9 +117,16 @@ export default function ImageUploader({
         if (files && files.length > 0) {
             handleFile(files[0])
         }
-    }, [user, onAuthRequired])
+        // Reset file input so the same file can be re-selected
+        e.target.value = ''
+    }
 
     const handleFile = async (file: File) => {
+        // Reset file input so the same file can be re-selected via click
+        if (fileInputRef.current) {
+            fileInputRef.current.value = ''
+        }
+
         if (!user) {
             if (onAuthRequired) onAuthRequired()
             return
@@ -193,11 +200,11 @@ export default function ImageUploader({
                         } else {
                             console.error('[ImageUploader] API error:', result.error)
                             setIsProcessing(false)
-                            
+
                             // If error is about credits, show no credits popup
-                            const isCreditError = response.status === 402 || 
+                            const isCreditError = response.status === 402 ||
                                 (result.error && result.error.toLowerCase().includes('credit'));
-                                
+
                             if (isCreditError) {
                                 setShowNoCreditsPopup(true)
                             } else {
@@ -208,11 +215,11 @@ export default function ImageUploader({
                     } catch (apiError: any) {
                         console.error('[ImageUploader] API call failed:', apiError)
                         setIsProcessing(false)
-                        
+
                         // Check if error might be credit related
-                        const isCreditError = apiError?.message?.toLowerCase().includes('credit') || 
-                                             apiError?.status === 402;
-                        
+                        const isCreditError = apiError?.message?.toLowerCase().includes('credit') ||
+                            apiError?.status === 402;
+
                         if (isCreditError) {
                             setShowNoCreditsPopup(true)
                         } else {
