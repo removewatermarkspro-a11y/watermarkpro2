@@ -67,6 +67,90 @@ export default function BlogPage() {
                     </div>
 
                     <div className={styles.blogGrid}>
+                        {/* Blog Post Card - How to Remove Watermark from PDF in 2026 — The AI-Powered Guide */}
+                        <Link href="/blog/remove-watermark-from-pdf" className={styles.blogCard}>
+                            <div className={styles.blogImageWrapper}>
+                                <img
+                                    src="https://replicate.delivery/xezq/5bRWwkoJSILvLRWeNFhwg81UeSX9k0VMvdGMf2J3rH8bxgfYB/output_2641997439_0.jpeg"
+                                    alt="How to Remove Watermark from PDF in 2026 — The AI-Powered Guide"
+                                    className={styles.blogCardImage}
+                                />
+                            </div>
+                            <div className={styles.blogCardContent}>
+                                <span className={styles.blogCategory}>PDF TOOLS</span>
+                                <h2 className={styles.blogCardTitle}>
+                                    How to Remove Watermark from PDF in 2026 — The AI-Powered Guide
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    </svg>
+                                </h2>
+                                <p className={styles.blogCardDescription}>
+                                    Learn how to remove watermark from PDF files using AI-powered tools. Complete guide with step-by-step instructions and tool comparisons for 2026.
+                                </p>
+                                <div className={styles.blogCardMeta}>
+                                    <span>March 11, 2026</span>
+                                    <span>&bull;</span>
+                                    <span>12 min read</span>
+                                </div>
+                            </div>
+                        </Link>
+
+                        {/* Blog Post Card - How to Remove Proof from Photo in 2026 — The AI-Powered Guide */}
+                        <Link href="/blog/how-to-remove-proof-from-photo" className={styles.blogCard}>
+                            <div className={styles.blogImageWrapper}>
+                                <img
+                                    src="https://replicate.delivery/xezq/9IgyOT939e2ybSnBG3DtpxIYPu7TEfAs8GberrfhBbRPXBfxC/output_3008580125_0.jpeg"
+                                    alt="How to Remove Proof from Photo in 2026 — The AI-Powered Guide"
+                                    className={styles.blogCardImage}
+                                />
+                            </div>
+                            <div className={styles.blogCardContent}>
+                                <span className={styles.blogCategory}>PHOTO TOOLS</span>
+                                <h2 className={styles.blogCardTitle}>
+                                    How to Remove Proof from Photo in 2026 — The AI-Powered Guide
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    </svg>
+                                </h2>
+                                <p className={styles.blogCardDescription}>
+                                    Learn how to remove proof watermarks from photos using AI tools. Compare 7 proven methods with step-by-step guides and expert tips for 2026.
+                                </p>
+                                <div className={styles.blogCardMeta}>
+                                    <span>March 11, 2026</span>
+                                    <span>&bull;</span>
+                                    <span>12 min read</span>
+                                </div>
+                            </div>
+                        </Link>
+
+                        {/* Blog Post Card - How to Remove Watermarks from Photos in 2026 — AI-Powered Guide */}
+                        <Link href="/blog/how-do-you-remove-watermarks-from-photos" className={styles.blogCard}>
+                            <div className={styles.blogImageWrapper}>
+                                <img
+                                    src="https://replicate.delivery/xezq/mVKFhKRXe2yALScwdTDShnglnKKGyXvYLy8vRvTqubGYJ4HLA/output_1869870482_0.jpeg"
+                                    alt="How to Remove Watermarks from Photos in 2026 — AI-Powered Guide"
+                                    className={styles.blogCardImage}
+                                />
+                            </div>
+                            <div className={styles.blogCardContent}>
+                                <span className={styles.blogCategory}>PHOTO TOOLS</span>
+                                <h2 className={styles.blogCardTitle}>
+                                    How to Remove Watermarks from Photos in 2026 — AI-Powered Guide
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    </svg>
+                                </h2>
+                                <p className={styles.blogCardDescription}>
+                                    Learn how to remove watermarks from photos using AI-powered tools. Step-by-step guide with 7 tested methods and expert tips for clean results.
+                                </p>
+                                <div className={styles.blogCardMeta}>
+                                    <span>March 11, 2026</span>
+                                    <span>&bull;</span>
+                                    <span>12 min read</span>
+                                </div>
+                            </div>
+                        </Link>
+
                         {/* Blog Post Card - How to Delete Watermark From Photo in 2026 — The AI-Powered Guide */}
                         <Link href="/blog/delete-watermark-from-photo" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
