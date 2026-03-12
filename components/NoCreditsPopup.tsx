@@ -155,7 +155,7 @@ export default function NoCreditsPopup({ isOpen, onClose, imageSrc }: NoCreditsP
                             </div>
                         </div>
 
-                        <Link href="/pricing" className={styles.ctaButton} onClick={onClose}>
+                        <Link href="/pricing#pro-plan" className={styles.ctaButton} onClick={onClose}>
                             {t.noCreditsPopup.button}
                         </Link>
                     </div>
