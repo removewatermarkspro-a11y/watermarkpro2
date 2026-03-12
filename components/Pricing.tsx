@@ -10,6 +10,7 @@ import { supabase } from '@/lib/supabase'
 export default function Pricing() {
     const [isYearly, setIsYearly] = useState(true)
     const [selectedCredits, setSelectedCredits] = useState(1200)
+    const [isLoading, setIsLoading] = useState<'subscription' | 'payment' | null>(null)
     const { language } = useLanguage()
     const t = (translations as any)[language] || translations.en
 
@@ -50,6 +51,8 @@ export default function Pricing() {
             return;
         }
 
+        setIsLoading(mode);
+
         try {
             // Get current user to pass email for webhook identification
             const { data: { user } } = await supabase.auth.getUser();
@@ -78,6 +81,7 @@ export default function Pricing() {
             if (error) {
                 console.error('Checkout error:', error)
                 alert(`Checkout Error: ${error}`); // Show error to user
+                setIsLoading(null);
                 return
             }
 
@@ -86,10 +90,12 @@ export default function Pricing() {
             } else {
                 console.error('No URL in response:', data);
                 alert('Error: No checkout URL received from server.');
+                setIsLoading(null);
             }
         } catch (error) {
             console.error('Failed to initiate checkout:', error)
             alert('Failed to initiate request. Check console for details.');
+            setIsLoading(null);
         }
     }
 
@@ -209,8 +215,13 @@ export default function Pricing() {
                     <button
                         className={styles.proButton}
                         onClick={() => handleCheckout(getSubscriptionPriceId(), 'subscription')}
+                        disabled={isLoading !== null}
                     >
-                        {t.pricing.pro.button} <span className={styles.buttonPrice}>${isYearly ? yearlyTotal.toFixed(2) : price.toFixed(2)}</span>
+                        {isLoading === 'subscription' ? (
+                            <span className={styles.loader}></span>
+                        ) : (
+                            <>{t.pricing.pro.button} <span className={styles.buttonPrice}>${isYearly ? yearlyTotal.toFixed(2) : price.toFixed(2)}</span></>
+                        )}
                     </button>
 
                     <ul className={styles.features}>
@@ -280,8 +291,13 @@ export default function Pricing() {
                     <button
                         className={styles.proButton}
                         onClick={() => handleCheckout(getOneTimePriceId(), 'payment')}
+                        disabled={isLoading !== null}
                     >
-                        {t.pricing.oneTime.button}
+                        {isLoading === 'payment' ? (
+                            <span className={styles.loader}></span>
+                        ) : (
+                            t.pricing.oneTime.button
+                        )}
                     </button>
 
                     <ul className={styles.features}>
