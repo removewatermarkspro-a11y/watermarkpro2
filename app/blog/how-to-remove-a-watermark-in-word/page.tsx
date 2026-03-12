@@ -262,7 +262,7 @@ export default function BlogArticle() {
                         <div className={styles.quickAnswer}>
                             <h2>🔹 Direct Answer</h2>
                             <p>
-                                Remove watermarks in Word by accessing Format > Design > Watermark > No Watermark, or use AI-powered tools like RemoveWatermarkPro for complex watermarks and images within documents.
+                                Remove watermarks in Word by accessing Format &gt; Design &gt; Watermark &gt; No Watermark, or use AI-powered tools like RemoveWatermarkPro for complex watermarks and images within documents.
                             </p>
                         </div>
 
@@ -598,15 +598,15 @@ export default function BlogArticle() {
                                 </div>
                                 <div className={styles.faqItem}>
                                     <h3>2. Why can&apos;t I remove a watermark in my Word document?</h3>
-                                    <p>Document protection, read-only mode, or watermarks embedded in images prevent removal. Disable protection through Review > Restrict Editing, then attempt removal again.</p>
+                                    <p>Document protection, read-only mode, or watermarks embedded in images prevent removal. Disable protection through Review &gt; Restrict Editing, then attempt removal again.</p>
                                 </div>
                                 <div className={styles.faqItem}>
                                     <h3>3. How do I remove watermarks from Word headers and footers?</h3>
-                                    <p>Double-click the header/footer area, select watermark elements, and delete them. Use Insert > Header &amp; Footer > Edit Header for precise control over watermark removal.</p>
+                                    <p>Double-click the header/footer area, select watermark elements, and delete them. Use Insert &gt; Header &amp; Footer &gt; Edit Header for precise control over watermark removal.</p>
                                 </div>
                                 <div className={styles.faqItem}>
                                     <h3>4. What&apos;s the difference between background images and watermarks in Word?</h3>
-                                    <p>Watermarks are semi-transparent overlays added through Design > Watermark. Background images are inserted through Design > Page Color > Fill Effects and require different removal methods.</p>
+                                    <p>Watermarks are semi-transparent overlays added through Design &gt; Watermark. Background images are inserted through Design &gt; Page Color &gt; Fill Effects and require different removal methods.</p>
                                 </div>
                                 <div className={styles.faqItem}>
                                     <h3>5. Can I remove watermarks from Word documents without Microsoft Office?</h3>

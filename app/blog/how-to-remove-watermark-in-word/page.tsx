@@ -599,7 +599,7 @@ export default function BlogArticle() {
                                 </div>
                                 <div className={styles.faqItem}>
                                     <h3>3. Does Word have built-in watermark removal features?</h3>
-                                    <p>Word allows removal of watermarks you&apos;ve added through Design > Watermark > Remove Watermark, but cannot remove watermarks embedded in images or added by other users without advanced tools.</p>
+                                    <p>Word allows removal of watermarks you&apos;ve added through Design &gt; Watermark &gt; Remove Watermark, but cannot remove watermarks embedded in images or added by other users without advanced tools.</p>
                                 </div>
                                 <div className={styles.faqItem}>
                                     <h3>4. Can I batch remove watermarks from multiple Word documents?</h3>
