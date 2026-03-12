@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         authors: ['Remove Watermark Pro'],
         images: [
             {
-                url: 'https://replicate.delivery/xezq/pFtFsTkHSVL6HNnNhxprmmmH0RtBBfAbP9D64V5on7RbEjHLA/output_2983931076_0.jpeg',
+                url: '/images/blog/dewatermark-1.jpg',
                 width: 1200,
                 height: 630,
                 alt: 'Best HitPaw Watermark Remover Alternatives in 2026 — AI Guide'
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'Best HitPaw Watermark Remover Alternatives in 2026 — AI Guide',
         description: 'Discover the best HitPaw watermark remover alternatives in 2026. Compare AI-powered tools, pricing, and features for removing watermarks from photos and videos.',
-        images: ['https://replicate.delivery/xezq/pFtFsTkHSVL6HNnNhxprmmmH0RtBBfAbP9D64V5on7RbEjHLA/output_2983931076_0.jpeg']
+        images: ['/images/blog/dewatermark-1.jpg']
     },
 
     robots: {
@@ -187,7 +187,7 @@ export default function BlogArticle() {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "Best HitPaw Watermark Remover Alternatives in 2026 — AI Guide",
-        "image": "https://replicate.delivery/xezq/pFtFsTkHSVL6HNnNhxprmmmH0RtBBfAbP9D64V5on7RbEjHLA/output_2983931076_0.jpeg",
+        "image": "/images/blog/dewatermark-1.jpg",
         "datePublished": "2026-03-09T11:34:59.819Z",
         "dateModified": "2026-03-09T11:34:59.819Z",
         "author": {
@@ -210,7 +210,7 @@ export default function BlogArticle() {
         "@type": "HowTo",
         "name": "Best HitPaw Watermark Remover Alternatives in 2026 — AI Guide",
         "description": "Discover the best HitPaw watermark remover alternatives in 2026. Compare AI-powered tools, pricing, and features for removing watermarks from photos and videos.",
-        "image": "https://replicate.delivery/xezq/pFtFsTkHSVL6HNnNhxprmmmH0RtBBfAbP9D64V5on7RbEjHLA/output_2983931076_0.jpeg",
+        "image": "/images/blog/dewatermark-1.jpg",
         "totalTime": "PT5M",
         "tool": {
             "@type": "HowToTool",
@@ -251,7 +251,7 @@ export default function BlogArticle() {
                         {/* Hero Image */}
                         <div className={styles.heroImage}>
                             <img
-                                src="https://replicate.delivery/xezq/pFtFsTkHSVL6HNnNhxprmmmH0RtBBfAbP9D64V5on7RbEjHLA/output_2983931076_0.jpeg"
+                                src="/images/blog/dewatermark-1.jpg"
                                 alt="Screenshot showing HitPaw watermark remover interface with video preview window and removal options"
                                 width={1200}
                                 height={630}
@@ -312,7 +312,7 @@ export default function BlogArticle() {
 
 <p>After testing 38 different <strong>watermark removal tools</strong> across 920 images and videos, specific patterns emerge regarding effectiveness, pricing, and usability. HitPaw watermark remover represents one option in an increasingly competitive field of AI-powered removal tools.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/pFtFsTkHSVL6HNnNhxprmmmH0RtBBfAbP9D64V5on7RbEjHLA/output_2983931076_0.jpeg" alt="Screenshot showing HitPaw watermark remover interface with video preview window and removal options" width="1024" height="576" loading="eager" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-1.jpg" alt="Screenshot showing HitPaw watermark remover interface with video preview window and removal options" width="1024" height="576" loading="eager" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="understanding">What Makes HitPaw Watermark Remover Different?</h2>
 
@@ -333,7 +333,7 @@ export default function BlogArticle() {
 
 <p>However, testing reveals limitations in handling semi-transparent overlays and complex background patterns. Success rates drop to approximately 65% when processing <strong>TikTok watermark removal</strong> scenarios with busy backgrounds or moving elements.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/Hrw0RfwZUOUXJKKymzteNEZfvVC4Hir5mhgzxC241QNHSMeYB/output_1873707520_0.jpeg" alt="Comparison chart displaying AI watermark removal accuracy rates across different tools and watermark types" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-2.jpg" alt="Comparison chart displaying AI watermark removal accuracy rates across different tools and watermark types" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="step-by-step">How Do You Remove Watermarks Using AI Tools?</h2>
 
@@ -353,7 +353,7 @@ export default function BlogArticle() {
 </ol>
 </div>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/ByCfjEeRHpkeFontK3Y5MCPueezj5e3YyOMof0GazzIcnEjHLA/output_3359413470_0.jpeg" alt="Step-by-step interface showing AI selection tool automatically detecting a TikTok watermark on video frame" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-3.jpg" alt="Step-by-step interface showing AI selection tool automatically detecting a TikTok watermark on video frame" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h3>Method 2: Manual Selection and Removal</h3>
 <div class="step">
@@ -437,7 +437,7 @@ export default function BlogArticle() {
 </tbody>
 </table>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/QeXLgwWxuAUvC6g6zSHWsYMLc9BivgIXtzLcUVdtZoCsEjHLA/output_3351816400_0.jpeg" alt="Side-by-side comparison table showing RemoveWatermarkPro vs HitPaw pricing and feature differences" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-4.jpg" alt="Side-by-side comparison table showing RemoveWatermarkPro vs HitPaw pricing and feature differences" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <p>Success rates derive from processing identical test sets including TikTok videos, Instagram photos, stock images, and complex overlays. <a href="https://removewatermarkpro.co" style="color: #ec4899; font-weight: bold;">RemoveWatermarkPro</a> achieved the highest accuracy while maintaining competitive pricing.</p>
 
@@ -494,7 +494,7 @@ export default function BlogArticle() {
 
 <p>Professional content creators should implement <a href="https://removewatermarkpro.co/object-remover-ai" style="color: #ec4899; font-weight: bold;">object remover AI</a> tools responsibly, ensuring compliance with applicable copyright laws and platform terms of service.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/3NJUVNL1duatGpoPZfcej9f09p6pSJilxnFumfvsXf6YMx4xC/output_3705125811_0.jpeg" alt="Before and after examples of watermark removal results from different AI-powered tools" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-5.jpg" alt="Before and after examples of watermark removal results from different AI-powered tools" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="faq">Frequently Asked Questions</h2>
 

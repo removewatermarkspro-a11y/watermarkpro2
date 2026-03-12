@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         authors: ['Remove Watermark Pro'],
         images: [
             {
-                url: 'https://replicate.delivery/xezq/gwneJyYkFQxOOSRY3A927gzlI4rVZwfGKVO7uRG4Yb9xXFQWA/output_247584905_0.jpeg',
+                url: '/images/blog/dewatermark-1.jpg',
                 width: 1200,
                 height: 630,
                 alt: 'How to Remove Watermarks from Photos in 2026 — The AI-Powered Guide'
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'How to Remove Watermarks from Photos in 2026 — The AI-Powered Guide',
         description: 'Learn how to remove watermarks from photos using AI-powered tools. Compare 7 top methods including free and paid options. Complete 2026 guide.',
-        images: ['https://replicate.delivery/xezq/gwneJyYkFQxOOSRY3A927gzlI4rVZwfGKVO7uRG4Yb9xXFQWA/output_247584905_0.jpeg']
+        images: ['/images/blog/dewatermark-1.jpg']
     },
 
     robots: {
@@ -187,7 +187,7 @@ export default function BlogArticle() {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "How to Remove Watermarks from Photos in 2026 — The AI-Powered Guide",
-        "image": "https://replicate.delivery/xezq/gwneJyYkFQxOOSRY3A927gzlI4rVZwfGKVO7uRG4Yb9xXFQWA/output_247584905_0.jpeg",
+        "image": "/images/blog/dewatermark-1.jpg",
         "datePublished": "2026-03-12T11:31:41.981Z",
         "dateModified": "2026-03-12T11:31:41.981Z",
         "author": {
@@ -210,7 +210,7 @@ export default function BlogArticle() {
         "@type": "HowTo",
         "name": "How to Remove Watermarks from Photos in 2026 — The AI-Powered Guide",
         "description": "Learn how to remove watermarks from photos using AI-powered tools. Compare 7 top methods including free and paid options. Complete 2026 guide.",
-        "image": "https://replicate.delivery/xezq/gwneJyYkFQxOOSRY3A927gzlI4rVZwfGKVO7uRG4Yb9xXFQWA/output_247584905_0.jpeg",
+        "image": "/images/blog/dewatermark-1.jpg",
         "totalTime": "PT5M",
         "tool": {
             "@type": "HowToTool",
@@ -251,7 +251,7 @@ export default function BlogArticle() {
                         {/* Hero Image */}
                         <div className={styles.heroImage}>
                             <img
-                                src="https://replicate.delivery/xezq/gwneJyYkFQxOOSRY3A927gzlI4rVZwfGKVO7uRG4Yb9xXFQWA/output_247584905_0.jpeg"
+                                src="/images/blog/dewatermark-1.jpg"
                                 alt="Screenshot showing before and after watermark removal on a professional photography image"
                                 width={1200}
                                 height={630}
@@ -314,7 +314,7 @@ export default function BlogArticle() {
 
 <p>After testing 47 different watermark removal solutions across 920 images, I've identified the most effective methods for removing watermarks in 2026. Modern AI inpainting technology now achieves 94% success rates while preserving original image quality.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/gwneJyYkFQxOOSRY3A927gzlI4rVZwfGKVO7uRG4Yb9xXFQWA/output_247584905_0.jpeg" alt="Screenshot showing before and after watermark removal on a professional photography image" width="1024" height="576" loading="eager" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-1.jpg" alt="Screenshot showing before and after watermark removal on a professional photography image" width="1024" height="576" loading="eager" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <p>This guide examines proven techniques for how to remove watermarks from photos, comparing AI-powered tools, manual methods, and specialized software. Each approach offers distinct advantages depending on watermark complexity and batch processing requirements.</p>
 
@@ -324,7 +324,7 @@ export default function BlogArticle() {
 
 <p>AI inpainting algorithms analyze surrounding pixel patterns to intelligently fill removed watermark areas. <a href="https://removewatermarkpro.co" style="color: #ec4899; font-weight: bold;">RemoveWatermarkPro</a> employs neural networks trained on millions of image reconstructions, achieving superior results compared to basic clone stamp methods.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/IPMwZjyQXi62FBjHff9PiZI4R5qYaIieFv6I5yYn5iN5vKgsA/output_2488676897_0.jpeg" alt="Diagram illustrating AI inpainting technology process for watermark detection and removal" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-2.jpg" alt="Diagram illustrating AI inpainting technology process for watermark detection and removal" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <p>Computer vision technology identifies watermark boundaries automatically, reducing manual selection time by 78%. Deep learning models recognize text overlays, logo patterns, and semi-transparent elements with 96% accuracy across diverse image types.</p>
 
@@ -345,7 +345,7 @@ export default function BlogArticle() {
 <li><div class="step">Compare quality metrics: sharpness, color accuracy, and artifact presence</div></li>
 </ol>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/8pbaRNzHMBYNDFJu2x7zpH1mCEmL78kpQmVAXwb2qOeDsCILA/output_921163151_0.jpeg" alt="Step-by-step interface walkthrough of watermark selection and removal tool" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-3.jpg" alt="Step-by-step interface walkthrough of watermark selection and removal tool" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h3>Method 2: Manual Photoshop Technique</h3>
 
@@ -435,7 +435,7 @@ export default function BlogArticle() {
 </tbody>
 </table>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/KKaLLS4EcTLBGlGf8ey3e8SHU2ek7LbLeX8Ecz6waxaUCrAyC/output_2746869783_0.jpeg" alt="Comparison table displaying various watermark removal tools with pricing and features" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-4.jpg" alt="Comparison table displaying various watermark removal tools with pricing and features" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <p>Based on extensive testing, <a href="https://removewatermarkpro.co" style="color: #ec4899; font-weight: bold;">RemoveWatermarkPro</a> delivers optimal balance of quality, speed, and ease of use. The AI-powered platform processes 4K images in 12-18 seconds while maintaining 98% of original quality.</p>
 
@@ -494,7 +494,7 @@ export default function BlogArticle() {
 
 <p>Ethical considerations include respecting photographer attribution, maintaining content integrity, and avoiding misrepresentation of image sources. Professional workflows should document image sources and editing modifications for transparency.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/uytFieaffetqhSYoErGRaUG8U0cbeYGsXUzQ6Y2HNCaqDrAyC/output_194114441_0.jpeg" alt="Collection of sample images showing different watermark types and removal results" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-5.jpg" alt="Collection of sample images showing different watermark types and removal results" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="faq">Frequently Asked Questions</h2>
 

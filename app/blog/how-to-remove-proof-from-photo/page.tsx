@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         authors: ['Remove Watermark Pro'],
         images: [
             {
-                url: 'https://replicate.delivery/xezq/9IgyOT939e2ybSnBG3DtpxIYPu7TEfAs8GberrfhBbRPXBfxC/output_3008580125_0.jpeg',
+                url: '/images/blog/remove-proof-from-picture-1.jpg',
                 width: 1200,
                 height: 630,
                 alt: 'How to Remove Proof from Photo in 2026 — The AI-Powered Guide'
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'How to Remove Proof from Photo in 2026 — The AI-Powered Guide',
         description: 'Learn how to remove proof watermarks from photos using AI tools. Compare 7 proven methods with step-by-step guides and expert tips for 2026.',
-        images: ['https://replicate.delivery/xezq/9IgyOT939e2ybSnBG3DtpxIYPu7TEfAs8GberrfhBbRPXBfxC/output_3008580125_0.jpeg']
+        images: ['/images/blog/remove-proof-from-picture-1.jpg']
     },
 
     robots: {
@@ -187,7 +187,7 @@ export default function BlogArticle() {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "How to Remove Proof from Photo in 2026 — The AI-Powered Guide",
-        "image": "https://replicate.delivery/xezq/9IgyOT939e2ybSnBG3DtpxIYPu7TEfAs8GberrfhBbRPXBfxC/output_3008580125_0.jpeg",
+        "image": "/images/blog/remove-proof-from-picture-1.jpg",
         "datePublished": "2026-03-11T11:36:12.016Z",
         "dateModified": "2026-03-11T11:36:12.016Z",
         "author": {
@@ -210,7 +210,7 @@ export default function BlogArticle() {
         "@type": "HowTo",
         "name": "How to Remove Proof from Photo in 2026 — The AI-Powered Guide",
         "description": "Learn how to remove proof watermarks from photos using AI tools. Compare 7 proven methods with step-by-step guides and expert tips for 2026.",
-        "image": "https://replicate.delivery/xezq/9IgyOT939e2ybSnBG3DtpxIYPu7TEfAs8GberrfhBbRPXBfxC/output_3008580125_0.jpeg",
+        "image": "/images/blog/remove-proof-from-picture-1.jpg",
         "totalTime": "PT5M",
         "tool": {
             "@type": "HowToTool",
@@ -251,7 +251,7 @@ export default function BlogArticle() {
                         {/* Hero Image */}
                         <div className={styles.heroImage}>
                             <img
-                                src="https://replicate.delivery/xezq/9IgyOT939e2ybSnBG3DtpxIYPu7TEfAs8GberrfhBbRPXBfxC/output_3008580125_0.jpeg"
+                                src="/images/blog/remove-proof-from-picture-1.jpg"
                                 alt="Before and after comparison showing a photo with proof watermark removed using AI technology"
                                 width={1200}
                                 height={630}
@@ -310,7 +310,7 @@ export default function BlogArticle() {
 <h2>Introduction</h2>
 <p>A wedding photographer sends you 50 stunning images from your special day, but each photo bears a semi-transparent "PROOF" overlay across the center. You need clean versions for your social media and family albums. After testing 38 watermark removal solutions across 920 different image scenarios, I've identified the most effective methods for removing proof watermarks while maintaining image quality.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/9IgyOT939e2ybSnBG3DtpxIYPu7TEfAs8GberrfhBbRPXBfxC/output_3008580125_0.jpeg" alt="Before and after comparison showing a photo with proof watermark removed using AI technology" width="1024" height="576" loading="eager" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/remove-proof-from-picture-1.jpg" alt="Before and after comparison showing a photo with proof watermark removed using AI technology" width="1024" height="576" loading="eager" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="understanding-proof-watermarks">What Are Proof Watermarks and Why Remove Them?</h2>
 
@@ -329,7 +329,7 @@ export default function BlogArticle() {
 
 <p>Neural networks specifically designed for image restoration use context-aware filling to seamlessly blend reconstructed areas with existing image content. This process involves edge detection, texture synthesis, and color matching algorithms working together to produce natural-looking results.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/eojhgwQkOnRzK6yRe7oc1CACPuLhO8CY5HmsirrwOSSFWwPWA/output_336201338_0.jpeg" alt="Screenshot of AI watermark detection interface highlighting transparent overlay elements on a landscape photo" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/remove-proof-from-picture-2.jpg" alt="Screenshot of AI watermark detection interface highlighting transparent overlay elements on a landscape photo" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="step-by-step-removal">How Do You Remove Proof Watermarks Step-by-Step?</h2>
 
@@ -361,7 +361,7 @@ export default function BlogArticle() {
 </ol>
 </div>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/1S1aEkoEdXpYL5yVVrEvtItq8u1Vne8mV2UGU3ukqZxKL4HLA/output_543127890_0.jpeg" alt="Step-by-step interface showing watermark selection and removal process in RemoveWatermarkPro software" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/remove-proof-from-picture-3.jpg" alt="Step-by-step interface showing watermark selection and removal process in RemoveWatermarkPro software" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="tools-comparison">Which Tools Work Best for Watermark Removal?</h2>
 
@@ -440,7 +440,7 @@ export default function BlogArticle() {
 
 <p><a href="https://removewatermarkpro.co" style="color: #ec4899; font-weight: bold;">RemoveWatermarkPro</a> consistently outperformed competitors in automated testing scenarios, achieving 94% success rates across diverse watermark types including transparent overlays, text-based proofs, and complex logo watermarks. The platform's neural network architecture specifically optimized for watermark detection processes images 60% faster than comparable AI tools.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/FUBNhrK9iTadENa5yjsToDoyHdfrTBdXvw9z3jOgP2VQL4HLA/output_2157695104_0.jpeg" alt="Comparison table interface displaying different watermark removal tools with pricing and feature columns" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/remove-proof-from-picture-4.jpg" alt="Comparison table interface displaying different watermark removal tools with pricing and feature columns" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="expert-tip">Pro Tip: Advanced Selection Techniques</h2>
 
@@ -492,7 +492,7 @@ export default function BlogArticle() {
 
 <p>Always verify ownership rights and comply with licensing agreements before using watermark removal tools. When in doubt, contact the copyright holder for explicit permission.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/f7lrRbt5boS9GqDw9XqnG1euwzdQdwD5FQD1gh2xRb8rWwPWA/output_3556998999_0.jpeg" alt="Professional photographer reviewing watermark removal results on multiple test images with quality metrics" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/remove-proof-from-picture-5.jpg" alt="Professional photographer reviewing watermark removal results on multiple test images with quality metrics" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="faq">Frequently Asked Questions</h2>
 

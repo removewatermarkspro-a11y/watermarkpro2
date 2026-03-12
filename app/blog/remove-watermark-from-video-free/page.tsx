@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         authors: ['Remove Watermark Pro'],
         images: [
             {
-                url: 'https://replicate.delivery/xezq/p1nFqEfccz3STawzFOLdLt7KydsHhvMWBiyAm6FEpJBNHjHLA/output_3459758559_0.jpeg',
+                url: '/images/blog/remove-video-watermark-1.jpg',
                 width: 1200,
                 height: 630,
                 alt: 'How to Remove Watermark from Video Free in 2026 — AI Guide'
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'How to Remove Watermark from Video Free in 2026 — AI Guide',
         description: 'Learn how to remove watermark from video free using AI-powered tools. Compare 7 top solutions, step-by-step guides, and expert tips for clean results.',
-        images: ['https://replicate.delivery/xezq/p1nFqEfccz3STawzFOLdLt7KydsHhvMWBiyAm6FEpJBNHjHLA/output_3459758559_0.jpeg']
+        images: ['/images/blog/remove-video-watermark-1.jpg']
     },
 
     robots: {
@@ -187,7 +187,7 @@ export default function BlogArticle() {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "How to Remove Watermark from Video Free in 2026 — AI Guide",
-        "image": "https://replicate.delivery/xezq/p1nFqEfccz3STawzFOLdLt7KydsHhvMWBiyAm6FEpJBNHjHLA/output_3459758559_0.jpeg",
+        "image": "/images/blog/remove-video-watermark-1.jpg",
         "datePublished": "2026-03-09T11:40:54.047Z",
         "dateModified": "2026-03-09T11:40:54.047Z",
         "author": {
@@ -210,7 +210,7 @@ export default function BlogArticle() {
         "@type": "HowTo",
         "name": "How to Remove Watermark from Video Free in 2026 — AI Guide",
         "description": "Learn how to remove watermark from video free using AI-powered tools. Compare 7 top solutions, step-by-step guides, and expert tips for clean results.",
-        "image": "https://replicate.delivery/xezq/p1nFqEfccz3STawzFOLdLt7KydsHhvMWBiyAm6FEpJBNHjHLA/output_3459758559_0.jpeg",
+        "image": "/images/blog/remove-video-watermark-1.jpg",
         "totalTime": "PT5M",
         "tool": {
             "@type": "HowToTool",
@@ -251,7 +251,7 @@ export default function BlogArticle() {
                         {/* Hero Image */}
                         <div className={styles.heroImage}>
                             <img
-                                src="https://replicate.delivery/xezq/p1nFqEfccz3STawzFOLdLt7KydsHhvMWBiyAm6FEpJBNHjHLA/output_3459758559_0.jpeg"
+                                src="/images/blog/remove-video-watermark-1.jpg"
                                 alt="Screenshot of video player showing watermarked footage with visible logo overlay in corner"
                                 width={1200}
                                 height={630}
@@ -314,7 +314,7 @@ export default function BlogArticle() {
 
 <p>After testing 45 different watermark removal solutions over six months, processing over 920 video files ranging from 30-second clips to hour-long presentations, clear patterns emerged. AI-powered tools consistently outperform manual methods, while truly free solutions remain limited but functional for specific use cases.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/p1nFqEfccz3STawzFOLdLt7KydsHhvMWBiyAm6FEpJBNHjHLA/output_3459758559_0.jpeg" alt="Screenshot of video player showing watermarked footage with visible logo overlay in corner" width="1024" height="576" loading="eager" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/remove-video-watermark-1.jpg" alt="Screenshot of video player showing watermarked footage with visible logo overlay in corner" width="1024" height="576" loading="eager" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <p>Modern watermark removal relies on computer vision algorithms and neural networks trained on massive datasets. These systems analyze pixel patterns, detect foreign elements, and reconstruct background imagery through sophisticated inpainting techniques.</p>
 
@@ -326,7 +326,7 @@ export default function BlogArticle() {
 
 <p>Temporal consistency poses the primary challenge. Each video frame requires individual processing while maintaining smooth transitions between frames. Advanced tools use motion tracking to ensure removed areas don't flicker or create visual artifacts during playback.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/XOmEUlAsmcYmHdYVctJNAKok1GLbKLiPZ9X3cMMIQ2QpjxjF/output_1551689931_0.jpeg" alt="Diagram illustrating AI inpainting process detecting and analyzing watermark patterns on video frames" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/remove-video-watermark-2.jpg" alt="Diagram illustrating AI inpainting process detecting and analyzing watermark patterns on video frames" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <p>FFmpeg, the industry-standard video processing framework, provides manual watermark removal through complex command-line operations. However, this approach requires technical expertise and produces inconsistent results without AI assistance.</p>
 
@@ -349,7 +349,7 @@ export default function BlogArticle() {
 </ol>
 </div>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/elWeUUaSKanbMEYazKEeivq81aN9e1icueyMr5QRrCrC2x4xC/output_2995153565_0.jpeg" alt="Step-by-step interface showing watermark selection tool highlighting unwanted text on video timeline" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/remove-video-watermark-3.jpg" alt="Step-by-step interface showing watermark selection tool highlighting unwanted text on video timeline" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h3>Method 2: Manual Selection and Processing</h3>
 
@@ -435,7 +435,7 @@ export default function BlogArticle() {
 </tbody>
 </table>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/HftLWef0HtU3fTydhkHbp7J0LewvdRTZ4VNdFuiy8OZfujxjF/output_2041531803_0.jpeg" alt="Comparison table interface displaying different watermark removal tools with pricing and features" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/remove-video-watermark-4.jpg" alt="Comparison table interface displaying different watermark removal tools with pricing and features" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <p><a href="https://removewatermarkpro.co" style="color: #ec4899; font-weight: bold;">RemoveWatermarkPro</a> consistently delivers superior results across different watermark types. The platform's neural networks specifically trained for watermark detection achieve higher accuracy rates than general-purpose image editing tools.</p>
 
@@ -492,7 +492,7 @@ export default function BlogArticle() {
 
 <p>When using tools like <a href="https://removewatermarkpro.co/text-remover-ai" style="color: #ec4899; font-weight: bold;">text remover AI</a> or <a href="https://removewatermarkpro.co/object-remover-ai" style="color: #ec4899; font-weight: bold;">object remover AI</a>, ensure you have legal authority to modify the content. Documentation of ownership or licensing agreements provides protection against potential legal challenges.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/mUHKgaUhJw4HLBXLz6rttZsQdAgItiN5uENLreCyab5iHjHLA/output_3600318536_0.jpeg" alt="Before and after video frames showing successful watermark removal without quality loss" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/remove-video-watermark-5.jpg" alt="Before and after video frames showing successful watermark removal without quality loss" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="faq">Frequently Asked Questions</h2>
 

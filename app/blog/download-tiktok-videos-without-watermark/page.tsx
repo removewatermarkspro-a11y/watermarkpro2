@@ -327,7 +327,7 @@ export default function BlogArticle() {
 <li><strong>Temporal consistency:</strong> Ensuring smooth transitions between frames</li>
 </ul>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/6pGMz470bgbHLdebaUfYnKnPoadtALh8I2QhfI34K5Ogi3csA/output_3489740617_0.jpeg" alt="Comparison view of TikTok video before and after AI watermark removal process" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/download-tiktok-video-without-watermark-1.jpg" alt="Comparison view of TikTok video before and after AI watermark removal process" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="step-by-step">How Do I Remove Watermarks from Downloaded TikTok Videos?</h2>
 
@@ -359,7 +359,7 @@ export default function BlogArticle() {
 </ol>
 </div>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/XDyRFNEEqOK0NJUdTTNbhsmtI1rMRtrVttlaw72YcSyW8mjF/output_2090378158_0.jpeg" alt="Step-by-step tutorial interface demonstrating watermark removal from TikTok video" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/download-tiktok-video-without-watermark-2.jpg" alt="Step-by-step tutorial interface demonstrating watermark removal from TikTok video" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="tools-comparison">Which Tool Works Best for TikTok Watermark Removal?</h2>
 
@@ -428,7 +428,7 @@ export default function BlogArticle() {
 </tbody>
 </table>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/cDWdSfQY63z7fE5bXLaf5DMAebf074hg0TV9y0zTGUofZ8mjF/output_2634392426_0.jpeg" alt="Comparison table interface showing different TikTok video download tools and features" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/download-tiktok-video-without-watermark-3.jpg" alt="Comparison table interface showing different TikTok video download tools and features" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <div class="proTip">
 <h2 id="pro-tip">Expert Testing Results</h2>
@@ -482,7 +482,7 @@ export default function BlogArticle() {
 
 <p>Always credit original creators and respect copyright laws. Consider reaching out to creators for explicit permission when using their content beyond personal use.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/w88Dt3dX3Pp6FBVyHdYFpbvfEWoceVfszMw8fg3mkayLHv5YB/output_1128444296_0.jpeg" alt="FAQ section layout with common questions about TikTok video downloading" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/download-tiktok-video-without-watermark-4.jpg" alt="FAQ section layout with common questions about TikTok video downloading" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 ` }}
                         />

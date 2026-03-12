@@ -319,7 +319,7 @@ export default function BlogArticle() {
 
 <p>Modern AI inpainting technologies analyze pixel patterns surrounding the watermark area. Neural networks trained on millions of images predict what the underlying content should look like, filling the watermarked region with contextually appropriate visual data.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/I6f0XQwkOM1WPqBsuoV2oIcAWSC82kYEb4dmgsxiZZ0yaYHLA/output_690984118_0.jpeg" alt="Side-by-side comparison of TikTok video frames showing before and after watermark removal process" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/download-tiktok-video-without-watermark-1.jpg" alt="Side-by-side comparison of TikTok video frames showing before and after watermark removal process" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="methods">What Are the Best Methods to Download TikTok Without Watermarks?</h2>
 
@@ -340,7 +340,7 @@ export default function BlogArticle() {
 </ol>
 </div>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/NnWB0DCjKdZvKhfEURNZIELaWaC7JEe66pnKxJeN9EdjrhdsA/output_1548294950_0.jpeg" alt="Screenshot of AI watermark removal tool interface with video upload area and processing options" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/download-tiktok-video-without-watermark-2.jpg" alt="Screenshot of AI watermark removal tool interface with video upload area and processing options" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h3>Method 2: Manual Editing Approach</h3>
 
@@ -430,7 +430,7 @@ export default function BlogArticle() {
 </tbody>
 </table>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/f39gyiAhm5VJDyGaANnQT6PCZcPEzuU9qfhp6OAbwWf5rhdsA/output_4253815465_0.jpeg" alt="Comparison table display showing different watermark removal tools with pricing and features highlighted" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/download-tiktok-video-without-watermark-3.jpg" alt="Comparison table display showing different watermark removal tools with pricing and features highlighted" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <div class="proTip">
 <h2 id="expert-tip">Pro Tip: Advanced Watermark Detection</h2>
@@ -466,7 +466,7 @@ export default function BlogArticle() {
 
 <p>Always maintain original creator attribution when sharing derivative works. Even with watermarks removed, ethical content sharing includes proper crediting and links to original sources.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/7PL61dp6OTKfciTfEpw3YUJf8MX4QSXdQnieBc3qJCtewG2xC/output_758828156_0.jpeg" alt="Mobile phone screen displaying clean TikTok video without watermark alongside original watermarked version" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/download-tiktok-video-without-watermark-4.jpg" alt="Mobile phone screen displaying clean TikTok video without watermark alongside original watermarked version" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 ` }}
                         />

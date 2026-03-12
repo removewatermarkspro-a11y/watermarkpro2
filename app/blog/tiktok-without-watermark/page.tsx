@@ -330,7 +330,7 @@ export default function BlogArticle() {
 
 <p>Modern tools leverage Deep Learning models trained on millions of watermarked videos. These neural networks identify watermark patterns through computer vision techniques, then apply generative algorithms to fill removed areas seamlessly.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/0muXGQA2uhYfKqfe3rhV8iSYFNARvfX1sN7YshiMgZMchD7YB/output_2199327771_0.jpeg" alt="RemoveWatermarkPro AI detection interface highlighting TikTok watermark areas with green selection boundaries on 4K video frame" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/remove-tiktok-watermark-1.jpg" alt="RemoveWatermarkPro AI detection interface highlighting TikTok watermark areas with green selection boundaries on 4K video frame" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <p>Processing complexity increases with video resolution and frame rate. 4K TikTok videos require significantly more computational power than standard definition content, with processing times scaling exponentially based on watermark complexity.</p>
 
@@ -351,7 +351,7 @@ export default function BlogArticle() {
 </ol>
 </div>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/BweEhi7nzhyqfEu8nfjIMpsP2yI737fb3aXFiPgeXHbREH2xC/output_2645359981_0.jpeg" alt="Step-by-step screenshot showing upload process with drag-and-drop interface for TikTok video file selection" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/remove-tiktok-watermark-2.jpg" alt="Step-by-step screenshot showing upload process with drag-and-drop interface for TikTok video file selection" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h3>Method 2: Manual Removal Using Professional Software</h3>
 
@@ -371,7 +371,7 @@ export default function BlogArticle() {
 
 <p>Comprehensive testing across 45 different watermark removal solutions reveals significant performance variations. The following comparison analyzes the seven most effective tools based on quality retention, processing speed, and ease of use.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/QfuKJa0ZgesK0ka38IPX46IdgpVtpIe8xI2zhQdHf1K9iD7YB/output_3708120694_0.jpeg" alt="Comparison table interface displaying seven watermark removal tools with pricing and feature columns side by side" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/remove-tiktok-watermark-3.jpg" alt="Comparison table interface displaying seven watermark removal tools with pricing and feature columns side by side" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <table>
 <thead>
@@ -488,7 +488,7 @@ export default function BlogArticle() {
 <li>Consider reaching out to creators directly for permission when possible</li>
 </ul>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/DD7i2HpzhJ73P1T5SKXJ8VzEYdY5LONRoC4IpPKzaw7OOsjF/output_2398327985_0.jpeg" alt="Before and after comparison showing TikTok video frame with watermark removed using AI inpainting technology" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/remove-tiktok-watermark-4.jpg" alt="Before and after comparison showing TikTok video frame with watermark removed using AI inpainting technology" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 ` }}
                         />

@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         authors: ['Remove Watermark Pro'],
         images: [
             {
-                url: 'https://replicate.delivery/xezq/pIaMpfb6B0xfSUSEbqUo8moiZg9hnODDqd63LvfreRhYFDfxC/output_329493448_0.jpeg',
+                url: '/images/blog/remove-tiktok-watermark-1.jpg',
                 width: 1200,
                 height: 630,
                 alt: 'How to TikTok Remove Watermark in 2026 — The AI-Powered Guide'
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'How to TikTok Remove Watermark in 2026 — The AI-Powered Guide',
         description: 'Learn how to TikTok remove watermark using AI tools. Compare 7 methods, step-by-step guides, and find the best watermark remover for clean videos.',
-        images: ['https://replicate.delivery/xezq/pIaMpfb6B0xfSUSEbqUo8moiZg9hnODDqd63LvfreRhYFDfxC/output_329493448_0.jpeg']
+        images: ['/images/blog/remove-tiktok-watermark-1.jpg']
     },
 
     robots: {
@@ -187,7 +187,7 @@ export default function BlogArticle() {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "How to TikTok Remove Watermark in 2026 — The AI-Powered Guide",
-        "image": "https://replicate.delivery/xezq/pIaMpfb6B0xfSUSEbqUo8moiZg9hnODDqd63LvfreRhYFDfxC/output_329493448_0.jpeg",
+        "image": "/images/blog/remove-tiktok-watermark-1.jpg",
         "datePublished": "2026-03-11T12:05:26.008Z",
         "dateModified": "2026-03-11T12:05:26.008Z",
         "author": {
@@ -210,7 +210,7 @@ export default function BlogArticle() {
         "@type": "HowTo",
         "name": "How to TikTok Remove Watermark in 2026 — The AI-Powered Guide",
         "description": "Learn how to TikTok remove watermark using AI tools. Compare 7 methods, step-by-step guides, and find the best watermark remover for clean videos.",
-        "image": "https://replicate.delivery/xezq/pIaMpfb6B0xfSUSEbqUo8moiZg9hnODDqd63LvfreRhYFDfxC/output_329493448_0.jpeg",
+        "image": "/images/blog/remove-tiktok-watermark-1.jpg",
         "totalTime": "PT5M",
         "tool": {
             "@type": "HowToTool",
@@ -251,7 +251,7 @@ export default function BlogArticle() {
                         {/* Hero Image */}
                         <div className={styles.heroImage}>
                             <img
-                                src="https://replicate.delivery/xezq/pIaMpfb6B0xfSUSEbqUo8moiZg9hnODDqd63LvfreRhYFDfxC/output_329493448_0.jpeg"
+                                src="/images/blog/remove-tiktok-watermark-1.jpg"
                                 alt="TikTok video player showing watermark overlay on smartphone screen with editing interface"
                                 width={1200}
                                 height={630}
@@ -308,7 +308,7 @@ export default function BlogArticle() {
 
 <p>A content creator uploads a viral TikTok video but needs the clean version for Instagram Reels. The TikTok watermark covers critical visual elements. After testing 47 different watermark removal solutions, I processed over 1,200 videos to identify the most effective methods for removing TikTok watermarks while preserving video quality.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/pIaMpfb6B0xfSUSEbqUo8moiZg9hnODDqd63LvfreRhYFDfxC/output_329493448_0.jpeg" alt="TikTok video player showing watermark overlay on smartphone screen with editing interface" width="1024" height="576" loading="eager" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/remove-tiktok-watermark-1.jpg" alt="TikTok video player showing watermark overlay on smartphone screen with editing interface" width="1024" height="576" loading="eager" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <p>Modern <a href="https://removewatermarkpro.co" style="color: #ec4899; font-weight: bold;">RemoveWatermarkPro</a> uses computer vision and neural networks to achieve 94% success rates. The AI detects watermark boundaries, analyzes surrounding pixels, and reconstructs missing content through advanced inpainting algorithms.</p>
 
@@ -316,7 +316,7 @@ export default function BlogArticle() {
 
 <p>TikTok automatically adds watermarks to downloaded videos for brand protection and content attribution. The watermark appears as a semi-transparent logo in the bottom-right corner, containing the TikTok logo and creator username.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/22C0rzG8DeT6aS54AK5zYM9AQwFBEHLlPeSzi1Ro3svjxwPWA/output_3221556293_0.jpeg" alt="AI watermark detection algorithm highlighting semi-transparent logo areas in red outline" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/remove-tiktok-watermark-2.jpg" alt="AI watermark detection algorithm highlighting semi-transparent logo areas in red outline" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <p>The watermark serves multiple purposes: preventing unauthorized redistribution, maintaining creator attribution, and promoting the TikTok platform. Technical implementation involves alpha channel compositing, where the watermark overlay blends with background video at 40-60% opacity.</p>
 
@@ -330,7 +330,7 @@ export default function BlogArticle() {
 
 <p>Two primary methods exist for TikTok watermark removal: AI-powered automated tools and manual editing software. I'll detail both approaches with specific steps and expected outcomes.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/9n6Dccw8wezVXSt6mzq7ev9dF4osL92O4cC2UMlctCauxwPWA/output_501101520_0.jpeg" alt="RemoveWatermarkPro dashboard showing before and after comparison of processed TikTok video" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/remove-tiktok-watermark-3.jpg" alt="RemoveWatermarkPro dashboard showing before and after comparison of processed TikTok video" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h3>Method 1: AI-Powered Removal (Recommended)</h3>
 
@@ -364,7 +364,7 @@ export default function BlogArticle() {
 
 <p>After comprehensive testing across 47 different solutions, I evaluated performance based on removal accuracy, processing speed, output quality, and ease of use. The following table presents the top 7 tools with detailed specifications.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/nMWNB9tPKApMNFePxHHIXNcxfTfses9SCDO3DPEEIGVnHDfxC/output_11101708_0.jpeg" alt="Comparison table interface displaying watermark removal tools with pricing and features" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/remove-tiktok-watermark-4.jpg" alt="Comparison table interface displaying watermark removal tools with pricing and features" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <table>
 <thead>
@@ -478,7 +478,7 @@ export default function BlogArticle() {
 
 <p>Before using tools like <a href="https://removewatermarkpro.co/text-remover-ai" style="color: #ec4899; font-weight: bold;">text remover AI</a>, verify content ownership and applicable licensing agreements. Document permissions for commercial use cases to avoid legal complications.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/iisNd1AjQsLwNltctTdI9mtemUKChFP9UjnCb8kzfVRFywPWA/output_504364174_0.jpeg" alt="Clean TikTok video export screen showing successful watermark removal with quality metrics" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/remove-tiktok-watermark-5.jpg" alt="Clean TikTok video export screen showing successful watermark removal with quality metrics" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="faq">Frequently Asked Questions</h2>
 

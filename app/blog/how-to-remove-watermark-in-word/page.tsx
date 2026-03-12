@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         authors: ['Remove Watermark Pro'],
         images: [
             {
-                url: 'https://replicate.delivery/xezq/Dx1ekdq5wIw7SakqMVYEdMbf92aDqEx9FsUw0eAgpWdOZ2eYB/output_4254735129_0.jpeg',
+                url: '/images/blog/dewatermark-1.jpg',
                 width: 1200,
                 height: 630,
                 alt: 'How to Remove Watermark in Word 2026 — The Complete AI Guide'
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'How to Remove Watermark in Word 2026 — The Complete AI Guide',
         description: 'Learn how to remove watermark in Word using advanced AI methods. Step-by-step guide with 7 tested tools comparison. Remove text watermarks efficiently.',
-        images: ['https://replicate.delivery/xezq/Dx1ekdq5wIw7SakqMVYEdMbf92aDqEx9FsUw0eAgpWdOZ2eYB/output_4254735129_0.jpeg']
+        images: ['/images/blog/dewatermark-1.jpg']
     },
 
     robots: {
@@ -195,7 +195,7 @@ export default function BlogArticle() {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "How to Remove Watermark in Word 2026 — The Complete AI Guide",
-        "image": "https://replicate.delivery/xezq/Dx1ekdq5wIw7SakqMVYEdMbf92aDqEx9FsUw0eAgpWdOZ2eYB/output_4254735129_0.jpeg",
+        "image": "/images/blog/dewatermark-1.jpg",
         "datePublished": "2026-03-10T11:32:35.005Z",
         "dateModified": "2026-03-10T11:32:35.005Z",
         "author": {
@@ -218,7 +218,7 @@ export default function BlogArticle() {
         "@type": "HowTo",
         "name": "How to Remove Watermark in Word 2026 — The Complete AI Guide",
         "description": "Learn how to remove watermark in Word using advanced AI methods. Step-by-step guide with 7 tested tools comparison. Remove text watermarks efficiently.",
-        "image": "https://replicate.delivery/xezq/Dx1ekdq5wIw7SakqMVYEdMbf92aDqEx9FsUw0eAgpWdOZ2eYB/output_4254735129_0.jpeg",
+        "image": "/images/blog/dewatermark-1.jpg",
         "totalTime": "PT5M",
         "tool": {
             "@type": "HowToTool",
@@ -259,7 +259,7 @@ export default function BlogArticle() {
                         {/* Hero Image */}
                         <div className={styles.heroImage}>
                             <img
-                                src="https://replicate.delivery/xezq/Dx1ekdq5wIw7SakqMVYEdMbf92aDqEx9FsUw0eAgpWdOZ2eYB/output_4254735129_0.jpeg"
+                                src="/images/blog/dewatermark-1.jpg"
                                 alt="Screenshot of Microsoft Word document with visible watermark overlay showing typical document editing interface"
                                 width={1200}
                                 height={630}
@@ -320,7 +320,7 @@ export default function BlogArticle() {
 
 <p>Word watermarks serve legitimate purposes—brand protection, draft identification, and copyright enforcement. However, situations arise where watermark removal becomes necessary for document usability, presentation purposes, or content repurposing within legal boundaries.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/Dx1ekdq5wIw7SakqMVYEdMbf92aDqEx9FsUw0eAgpWdOZ2eYB/output_4254735129_0.jpeg" alt="Screenshot of Microsoft Word document with visible watermark overlay showing typical document editing interface" width="1024" height="576" loading="eager" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-1.jpg" alt="Screenshot of Microsoft Word document with visible watermark overlay showing typical document editing interface" width="1024" height="576" loading="eager" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <p>Modern solutions combine Microsoft Word's built-in features with AI-powered external tools. After testing 38 watermark removal solutions across 920+ documents, specific methods emerge as consistently effective for different watermark types and document complexities.</p>
 
@@ -334,7 +334,7 @@ export default function BlogArticle() {
 
 <p><strong>Text Overlay Watermarks</strong> are semi-transparent text elements positioned over document content. Neural networks detect text patterns and apply content-aware fill techniques to restore underlying document structure.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/6YE3Ne7Q9CSJGybJHCgABiom7xuWImE594JMy7keIJelZ2eYB/output_2251303951_0.jpeg" alt="Comparison view showing Word document before and after watermark removal using AI technology" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-2.jpg" alt="Comparison view showing Word document before and after watermark removal using AI technology" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <p>Document protection motivations include draft version control, copyright assertion, and brand identification. Legal documents often include watermarks for authenticity verification, while business documents use watermarks for confidentiality marking.</p>
 
@@ -359,7 +359,7 @@ export default function BlogArticle() {
 
 <h3>Method 2: Using AI-Powered Removal Tools</h3>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/t025obDb5kJNHBgIM2NfU7X0HFibnYD7ZZyfxEM42lE9MbPWA/output_1243970314_0.jpeg" alt="Step-by-step interface of RemoveWatermarkPro highlighting watermark selection tool on Word document" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-3.jpg" alt="Step-by-step interface of RemoveWatermarkPro highlighting watermark selection tool on Word document" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <div class="step">
 <ol>
@@ -380,7 +380,7 @@ export default function BlogArticle() {
 
 <h2 id="tools-comparison">Which Tools Remove Word Watermarks Most Effectively?</h2>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/f2hC9dPYP9WkSScDSo0x7BlS53G2Se0tMFw4eIuWhRjRa2eYB/output_3410829659_0.jpeg" alt="Table comparison interface showing different watermark removal tools with performance metrics and pricing" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-4.jpg" alt="Table comparison interface showing different watermark removal tools with performance metrics and pricing" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <p>After testing 45 different watermark removal solutions, performance varies significantly across tools, pricing models, and feature sets. The following comparison reflects real-world testing results across 920+ Word documents with various watermark types.</p>
 
@@ -500,7 +500,7 @@ export default function BlogArticle() {
 
 <p>When uncertain about removal legality, consult intellectual property attorneys familiar with your jurisdiction's laws. The complexity of <strong>how to remove watermark in word</strong> extends beyond technical implementation to legal compliance requirements.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/4hnch0JIbiJ7KpLl8ewBhcUxQESPtzAKyXCtyPtYWBapmtHLA/output_4088323461_0.jpeg" alt="FAQ interface displaying common questions about Word watermark removal with expandable answers" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-5.jpg" alt="FAQ interface displaying common questions about Word watermark removal with expandable answers" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="faq">Frequently Asked Questions</h2>
 

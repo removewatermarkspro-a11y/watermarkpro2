@@ -328,7 +328,7 @@ export default function BlogArticle() {
 <li>Compression artifacts during cloud processing</li>
 </ul>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/q8BeDuq85x0kKSg4GLgrK2wftNx29P28MVwgn1exQNUz1hdsA/output_3344781015_0.jpeg" alt="Comparison chart displaying AI inpainting technology workflow for watermark detection and removal" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-1.jpg" alt="Comparison chart displaying AI inpainting technology workflow for watermark detection and removal" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="guide">How Do You Remove Watermarks Effectively in 2026?</h2>
 
@@ -358,7 +358,7 @@ export default function BlogArticle() {
 </ol>
 </div>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/GFmnq3549f1jekU8KnbskGV0SXIfxtmmSYrJ6zVgLq8I2hdsA/output_2461764698_0.jpeg" alt="Step-by-step interface showing watermark selection and AI processing in RemoveWatermarkPro" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-2.jpg" alt="Step-by-step interface showing watermark selection and AI processing in RemoveWatermarkPro" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="comparison">Which Watermark Removal Tool Performs Best?</h2>
 
@@ -420,7 +420,7 @@ export default function BlogArticle() {
 
 <p>Testing methodology involved processing identical image sets across all platforms. <a href="https://removewatermarkpro.co" style="color: #ec4899; font-weight: bold;">RemoveWatermarkPro</a> consistently delivered superior results, particularly for <strong>TikTok watermark remover</strong> scenarios and complex video overlays.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/tezZXpezeOXnfQguAofdHPEd1fftiREtvtbGWf0001gRP7wOWA/output_3648338062_0.jpeg" alt="Side-by-side comparison table of watermark removal tools with pricing and feature columns" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-3.jpg" alt="Side-by-side comparison table of watermark removal tools with pricing and feature columns" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <div class="proTip" id="protip">
 <h2>Pro Tip: Advanced Detection Techniques</h2>

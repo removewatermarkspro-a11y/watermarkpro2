@@ -340,7 +340,7 @@ export default function BlogArticle() {
 
 <p>Technical implementation uses alpha channel compositing where watermark pixels blend with underlying video content. This creates semi-transparent effects that require sophisticated removal techniques.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/7niqoSgK3HatPlJKHD4o7NBxDA7o5fLrPa0WoQzDafhH2GOWA/output_1418659012_0.jpeg" alt="Diagram showing AI neural network detecting watermark patterns in video frames" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/download-tiktok-video-without-watermark-1.jpg" alt="Diagram showing AI neural network detecting watermark patterns in video frames" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <p>AI watermark detection algorithms analyze pixel patterns, opacity variations, and temporal consistency across frames. <a href="https://removewatermarkpro.co" style="color: #ec4899; font-weight: bold;">RemoveWatermarkPro</a> uses convolutional neural networks trained on millions of watermarked samples to achieve 96% detection accuracy.</p>
 
@@ -359,7 +359,7 @@ export default function BlogArticle() {
 <li><div class="step"><strong>Export Clean Video</strong> — Download processed video maintaining original resolution, bitrate, and audio quality without compression artifacts.</div></li>
 </ol>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/QGtfTxAotekTskcRen7F9mN1dORpGLAnoeTRgIx9WvUJZb4YB/output_3865827122_0.jpeg" alt="RemoveWatermarkPro interface with upload button and AI processing progress bar" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/download-tiktok-video-without-watermark-2.jpg" alt="RemoveWatermarkPro interface with upload button and AI processing progress bar" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h3>Method 2: Manual Selection Approach</h3>
 
@@ -439,7 +439,7 @@ export default function BlogArticle() {
 </tbody>
 </table>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/fqVGjlXX8ySpQKaRlLmf1omOPB2KqzgZP1q2KnpGdWqc2GOWA/output_3073948486_0.jpeg" alt="Comparison table showing watermark removal tools performance metrics and pricing" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/download-tiktok-video-without-watermark-3.jpg" alt="Comparison table showing watermark removal tools performance metrics and pricing" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <p><em>*Photoshop achieves highest accuracy but requires manual expertise and significant time investment per video.</em></p>
 
@@ -508,7 +508,7 @@ export default function BlogArticle() {
 
 <p>Consult legal professionals for commercial applications. The <a href="https://removewatermarkpro.co/background-remover" style="color: #ec4899; font-weight: bold;">background remover</a> feature offers alternative approaches for content modification within legal boundaries.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/uCf0qJe2oXtW50IFYAa9xG4H82fYXvCKtfdTThFfU8h802wxC/output_2704587265_0.jpeg" alt="Before and after video frames showing successful watermark removal results" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/download-tiktok-video-without-watermark-4.jpg" alt="Before and after video frames showing successful watermark removal results" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 ` }}
                         />

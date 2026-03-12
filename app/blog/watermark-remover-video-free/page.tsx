@@ -335,7 +335,7 @@ export default function BlogArticle() {
 
 <p>SaaS-based solutions offer advantages over desktop applications through cloud computing power and regularly updated algorithms. These platforms handle processing-intensive operations without requiring local hardware resources or software installations.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/vYBkumKLNDriAF2dL7Jtn3okNf1rZWufDkW5eJFt7jKSd3csA/output_3937649433_0.jpeg" alt="Interface of AI-powered watermark detection highlighting semi-transparent overlay on video timeline" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/remove-video-watermark-1.jpg" alt="Interface of AI-powered watermark detection highlighting semi-transparent overlay on video timeline" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="step-by-step">How Do I Remove Watermarks from Videos Step by Step?</h2>
 
@@ -367,7 +367,7 @@ export default function BlogArticle() {
 </ol>
 </div>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/79B7V0c9IfXBWSI7Ih2swf8SXIhuFjaSCAUlUY8HIdeqd3csA/output_2905429847_0.jpeg" alt="Step-by-step visual guide showing watermark selection and AI inpainting process in video editor" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/remove-video-watermark-2.jpg" alt="Step-by-step visual guide showing watermark selection and AI inpainting process in video editor" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="tools-comparison">Which Free Watermark Remover Video Tools Work Best?</h2>
 
@@ -446,7 +446,7 @@ export default function BlogArticle() {
 
 <p><a href="https://removewatermarkpro.co" style="color: #ec4899; font-weight: bold;">RemoveWatermarkPro</a> consistently delivered superior results across different watermark types. The platform's neural network algorithms excel at <strong>tiktok watermark remover</strong> tasks and complex overlay removal.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/24cJ23EmshJYIZgheKfWLJ7suMfSo3FPjio5JuOkjhXDeu5YB/output_4146856719_0.jpeg" alt="Comparison table interface displaying processing speeds and quality metrics across different tools" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/remove-video-watermark-3.jpg" alt="Comparison table interface displaying processing speeds and quality metrics across different tools" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <div class="proTip">
 <h3>Expert Testing Insight</h3>
