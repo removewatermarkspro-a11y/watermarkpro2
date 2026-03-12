@@ -8,7 +8,7 @@ import MobileFloatingCTA from '@/components/MobileFloatingCTA'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 
 export const metadata: Metadata = {
-    title: 'Best HitPaw Watermark Remover Alternatives in 2026 — AI Guide',
+    title: 'Best HitPaw Watermark Remover Alternatives in 2026',
     description: 'Discover the best HitPaw watermark remover alternatives in 2026. Compare AI-powered tools, pricing, and features for removing watermarks from photos and videos.',
 
     alternates: {
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     },
 
     openGraph: {
-        title: 'Best HitPaw Watermark Remover Alternatives in 2026 — AI Guide',
+        title: 'Best HitPaw Watermark Remover Alternatives in 2026',
         description: 'Discover the best HitPaw watermark remover alternatives in 2026. Compare AI-powered tools, pricing, and features for removing watermarks from photos and videos.',
         url: 'https://removewatermarkspro.com/blog/hitpaw-watermark-remover',
         siteName: 'Remove Watermark Pro',
@@ -30,14 +30,14 @@ export const metadata: Metadata = {
                 url: '/images/blog/dewatermark-1.jpg',
                 width: 1200,
                 height: 630,
-                alt: 'Best HitPaw Watermark Remover Alternatives in 2026 — AI Guide'
+                alt: 'Best HitPaw Watermark Remover Alternatives in 2026'
             }
         ]
     },
 
     twitter: {
         card: 'summary_large_image',
-        title: 'Best HitPaw Watermark Remover Alternatives in 2026 — AI Guide',
+        title: 'Best HitPaw Watermark Remover Alternatives in 2026',
         description: 'Discover the best HitPaw watermark remover alternatives in 2026. Compare AI-powered tools, pricing, and features for removing watermarks from photos and videos.',
         images: ['/images/blog/dewatermark-1.jpg']
     },
@@ -186,7 +186,7 @@ export default function BlogArticle() {
     const articleSchema = {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Best HitPaw Watermark Remover Alternatives in 2026 — AI Guide",
+        "headline": "Best HitPaw Watermark Remover Alternatives in 2026",
         "image": "/images/blog/dewatermark-1.jpg",
         "datePublished": "2026-03-09T11:34:59.819Z",
         "dateModified": "2026-03-09T11:34:59.819Z",
@@ -208,7 +208,7 @@ export default function BlogArticle() {
     const howToSchema = {
         "@context": "https://schema.org",
         "@type": "HowTo",
-        "name": "Best HitPaw Watermark Remover Alternatives in 2026 — AI Guide",
+        "name": "Best HitPaw Watermark Remover Alternatives in 2026",
         "description": "Discover the best HitPaw watermark remover alternatives in 2026. Compare AI-powered tools, pricing, and features for removing watermarks from photos and videos.",
         "image": "/images/blog/dewatermark-1.jpg",
         "totalTime": "PT5M",
@@ -239,7 +239,7 @@ export default function BlogArticle() {
                         <div className={styles.articleHeader}>
                             <span className={styles.category}>AI TOOLS</span>
                             <h1 className={styles.title}>
-                                Best HitPaw Watermark Remover Alternatives in 2026 — AI Guide
+                                Best HitPaw Watermark Remover Alternatives in 2026
                             </h1>
                             <div className={styles.meta}>
                                 <span>March 9, 2026</span>

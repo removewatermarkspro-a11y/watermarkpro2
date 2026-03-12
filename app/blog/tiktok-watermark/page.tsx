@@ -8,7 +8,7 @@ import MobileFloatingCTA from '@/components/MobileFloatingCTA'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 
 export const metadata: Metadata = {
-    title: 'Best Ways to Remove TikTok Watermark in 2026 — The AI-Powered Guide',
+    title: 'Best Ways to Remove TikTok Watermark in 2026',
     description: 'Learn how to remove TikTok watermark using AI-powered tools. Compare 7 top watermark removers with step-by-step guides for clean, professional results.',
 
     alternates: {
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     },
 
     openGraph: {
-        title: 'Best Ways to Remove TikTok Watermark in 2026 — The AI-Powered Guide',
+        title: 'Best Ways to Remove TikTok Watermark in 2026',
         description: 'Learn how to remove TikTok watermark using AI-powered tools. Compare 7 top watermark removers with step-by-step guides for clean, professional results.',
         url: 'https://removewatermarkpro.co/blog/tiktok-watermark',
         siteName: 'Remove Watermark Pro',
@@ -30,14 +30,14 @@ export const metadata: Metadata = {
                 url: '/images/blog/remove-tiktok-watermark-1.jpg',
                 width: 1200,
                 height: 630,
-                alt: 'Best Ways to Remove TikTok Watermark in 2026 — The AI-Powered Guide'
+                alt: 'Best Ways to Remove TikTok Watermark in 2026'
             }
         ]
     },
 
     twitter: {
         card: 'summary_large_image',
-        title: 'Best Ways to Remove TikTok Watermark in 2026 — The AI-Powered Guide',
+        title: 'Best Ways to Remove TikTok Watermark in 2026',
         description: 'Learn how to remove TikTok watermark using AI-powered tools. Compare 7 top watermark removers with step-by-step guides for clean, professional results.',
         images: ['/images/blog/remove-tiktok-watermark-1.jpg']
     },
@@ -186,7 +186,7 @@ export default function BlogArticle() {
     const articleSchema = {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Best Ways to Remove TikTok Watermark in 2026 — The AI-Powered Guide",
+        "headline": "Best Ways to Remove TikTok Watermark in 2026",
         "image": "/images/blog/remove-tiktok-watermark-1.jpg",
         "datePublished": "2026-03-10T11:35:50.274Z",
         "dateModified": "2026-03-10T11:35:50.274Z",
@@ -208,7 +208,7 @@ export default function BlogArticle() {
     const howToSchema = {
         "@context": "https://schema.org",
         "@type": "HowTo",
-        "name": "Best Ways to Remove TikTok Watermark in 2026 — The AI-Powered Guide",
+        "name": "Best Ways to Remove TikTok Watermark in 2026",
         "description": "Learn how to remove TikTok watermark using AI-powered tools. Compare 7 top watermark removers with step-by-step guides for clean, professional results.",
         "image": "/images/blog/remove-tiktok-watermark-1.jpg",
         "totalTime": "PT5M",
@@ -239,7 +239,7 @@ export default function BlogArticle() {
                         <div className={styles.articleHeader}>
                             <span className={styles.category}>VIDEO TOOLS</span>
                             <h1 className={styles.title}>
-                                Best Ways to Remove TikTok Watermark in 2026 — The AI-Powered Guide
+                                Best Ways to Remove TikTok Watermark in 2026
                             </h1>
                             <div className={styles.meta}>
                                 <span>March 10, 2026</span>

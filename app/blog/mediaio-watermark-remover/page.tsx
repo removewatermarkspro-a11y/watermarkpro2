@@ -8,7 +8,7 @@ import MobileFloatingCTA from '@/components/MobileFloatingCTA'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 
 export const metadata: Metadata = {
-    title: 'Best Media.io Watermark Remover Alternatives in 2026 — AI Guide',
+    title: 'Best Media.io Watermark Remover Alternatives in 2026',
     description: 'Discover the best media.io watermark remover alternatives in 2026. Compare AI-powered tools, features, and pricing to remove watermarks efficiently.',
 
     alternates: {
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     },
 
     openGraph: {
-        title: 'Best Media.io Watermark Remover Alternatives in 2026 — AI Guide',
+        title: 'Best Media.io Watermark Remover Alternatives in 2026',
         description: 'Discover the best media.io watermark remover alternatives in 2026. Compare AI-powered tools, features, and pricing to remove watermarks efficiently.',
         url: 'https://removewatermarkpro.co/blog/mediaio-watermark-remover',
         siteName: 'Remove Watermark Pro',
@@ -30,14 +30,14 @@ export const metadata: Metadata = {
                 url: '/images/blog/dewatermark-1.jpg',
                 width: 1200,
                 height: 630,
-                alt: 'Best Media.io Watermark Remover Alternatives in 2026 — AI Guide'
+                alt: 'Best Media.io Watermark Remover Alternatives in 2026'
             }
         ]
     },
 
     twitter: {
         card: 'summary_large_image',
-        title: 'Best Media.io Watermark Remover Alternatives in 2026 — AI Guide',
+        title: 'Best Media.io Watermark Remover Alternatives in 2026',
         description: 'Discover the best media.io watermark remover alternatives in 2026. Compare AI-powered tools, features, and pricing to remove watermarks efficiently.',
         images: ['/images/blog/dewatermark-1.jpg']
     },
@@ -186,7 +186,7 @@ export default function BlogArticle() {
     const articleSchema = {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Best Media.io Watermark Remover Alternatives in 2026 — AI Guide",
+        "headline": "Best Media.io Watermark Remover Alternatives in 2026",
         "image": "/images/blog/dewatermark-1.jpg",
         "datePublished": "2026-03-08T11:26:17.961Z",
         "dateModified": "2026-03-08T11:26:17.961Z",
@@ -208,7 +208,7 @@ export default function BlogArticle() {
     const howToSchema = {
         "@context": "https://schema.org",
         "@type": "HowTo",
-        "name": "Best Media.io Watermark Remover Alternatives in 2026 — AI Guide",
+        "name": "Best Media.io Watermark Remover Alternatives in 2026",
         "description": "Discover the best media.io watermark remover alternatives in 2026. Compare AI-powered tools, features, and pricing to remove watermarks efficiently.",
         "image": "/images/blog/dewatermark-1.jpg",
         "totalTime": "PT5M",
@@ -239,7 +239,7 @@ export default function BlogArticle() {
                         <div className={styles.articleHeader}>
                             <span className={styles.category}>AI TOOLS</span>
                             <h1 className={styles.title}>
-                                Best Media.io Watermark Remover Alternatives in 2026 — AI Guide
+                                Best Media.io Watermark Remover Alternatives in 2026
                             </h1>
                             <div className={styles.meta}>
                                 <span>March 8, 2026</span>

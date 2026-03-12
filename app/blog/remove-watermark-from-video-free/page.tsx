@@ -8,7 +8,7 @@ import MobileFloatingCTA from '@/components/MobileFloatingCTA'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 
 export const metadata: Metadata = {
-    title: 'How to Remove Watermark from Video Free in 2026 — AI Guide',
+    title: 'How to Remove Watermark from Video Free in 2026',
     description: 'Learn how to remove watermark from video free using AI-powered tools. Compare 7 top solutions, step-by-step guides, and expert tips for clean results.',
 
     alternates: {
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     },
 
     openGraph: {
-        title: 'How to Remove Watermark from Video Free in 2026 — AI Guide',
+        title: 'How to Remove Watermark from Video Free in 2026',
         description: 'Learn how to remove watermark from video free using AI-powered tools. Compare 7 top solutions, step-by-step guides, and expert tips for clean results.',
         url: 'https://removewatermarkspro.com/blog/remove-watermark-from-video-free',
         siteName: 'Remove Watermark Pro',
@@ -30,14 +30,14 @@ export const metadata: Metadata = {
                 url: '/images/blog/remove-video-watermark-1.jpg',
                 width: 1200,
                 height: 630,
-                alt: 'How to Remove Watermark from Video Free in 2026 — AI Guide'
+                alt: 'How to Remove Watermark from Video Free in 2026'
             }
         ]
     },
 
     twitter: {
         card: 'summary_large_image',
-        title: 'How to Remove Watermark from Video Free in 2026 — AI Guide',
+        title: 'How to Remove Watermark from Video Free in 2026',
         description: 'Learn how to remove watermark from video free using AI-powered tools. Compare 7 top solutions, step-by-step guides, and expert tips for clean results.',
         images: ['/images/blog/remove-video-watermark-1.jpg']
     },
@@ -186,7 +186,7 @@ export default function BlogArticle() {
     const articleSchema = {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "How to Remove Watermark from Video Free in 2026 — AI Guide",
+        "headline": "How to Remove Watermark from Video Free in 2026",
         "image": "/images/blog/remove-video-watermark-1.jpg",
         "datePublished": "2026-03-09T11:40:54.047Z",
         "dateModified": "2026-03-09T11:40:54.047Z",
@@ -208,7 +208,7 @@ export default function BlogArticle() {
     const howToSchema = {
         "@context": "https://schema.org",
         "@type": "HowTo",
-        "name": "How to Remove Watermark from Video Free in 2026 — AI Guide",
+        "name": "How to Remove Watermark from Video Free in 2026",
         "description": "Learn how to remove watermark from video free using AI-powered tools. Compare 7 top solutions, step-by-step guides, and expert tips for clean results.",
         "image": "/images/blog/remove-video-watermark-1.jpg",
         "totalTime": "PT5M",
@@ -239,7 +239,7 @@ export default function BlogArticle() {
                         <div className={styles.articleHeader}>
                             <span className={styles.category}>VIDEO TOOLS</span>
                             <h1 className={styles.title}>
-                                How to Remove Watermark from Video Free in 2026 — AI Guide
+                                How to Remove Watermark from Video Free in 2026
                             </h1>
                             <div className={styles.meta}>
                                 <span>March 9, 2026</span>

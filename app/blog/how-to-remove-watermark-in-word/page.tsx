@@ -8,7 +8,7 @@ import MobileFloatingCTA from '@/components/MobileFloatingCTA'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 
 export const metadata: Metadata = {
-    title: 'How to Remove Watermark in Word 2026 — The Complete AI Guide',
+    title: 'How to Remove Watermark in Word 2026',
     description: 'Learn how to remove watermark in Word using advanced AI methods. Step-by-step guide with 7 tested tools comparison. Remove text watermarks efficiently.',
 
     alternates: {
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     },
 
     openGraph: {
-        title: 'How to Remove Watermark in Word 2026 — The Complete AI Guide',
+        title: 'How to Remove Watermark in Word 2026',
         description: 'Learn how to remove watermark in Word using advanced AI methods. Step-by-step guide with 7 tested tools comparison. Remove text watermarks efficiently.',
         url: 'https://removewatermarkpro.co/blog/how-to-remove-watermark-in-word',
         siteName: 'Remove Watermark Pro',
@@ -30,14 +30,14 @@ export const metadata: Metadata = {
                 url: '/images/blog/dewatermark-1.jpg',
                 width: 1200,
                 height: 630,
-                alt: 'How to Remove Watermark in Word 2026 — The Complete AI Guide'
+                alt: 'How to Remove Watermark in Word 2026'
             }
         ]
     },
 
     twitter: {
         card: 'summary_large_image',
-        title: 'How to Remove Watermark in Word 2026 — The Complete AI Guide',
+        title: 'How to Remove Watermark in Word 2026',
         description: 'Learn how to remove watermark in Word using advanced AI methods. Step-by-step guide with 7 tested tools comparison. Remove text watermarks efficiently.',
         images: ['/images/blog/dewatermark-1.jpg']
     },
@@ -194,7 +194,7 @@ export default function BlogArticle() {
     const articleSchema = {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "How to Remove Watermark in Word 2026 — The Complete AI Guide",
+        "headline": "How to Remove Watermark in Word 2026",
         "image": "/images/blog/dewatermark-1.jpg",
         "datePublished": "2026-03-10T11:32:35.005Z",
         "dateModified": "2026-03-10T11:32:35.005Z",
@@ -216,7 +216,7 @@ export default function BlogArticle() {
     const howToSchema = {
         "@context": "https://schema.org",
         "@type": "HowTo",
-        "name": "How to Remove Watermark in Word 2026 — The Complete AI Guide",
+        "name": "How to Remove Watermark in Word 2026",
         "description": "Learn how to remove watermark in Word using advanced AI methods. Step-by-step guide with 7 tested tools comparison. Remove text watermarks efficiently.",
         "image": "/images/blog/dewatermark-1.jpg",
         "totalTime": "PT5M",
@@ -247,7 +247,7 @@ export default function BlogArticle() {
                         <div className={styles.articleHeader}>
                             <span className={styles.category}>AI TOOLS</span>
                             <h1 className={styles.title}>
-                                How to Remove Watermark in Word 2026 — The Complete AI Guide
+                                How to Remove Watermark in Word 2026
                             </h1>
                             <div className={styles.meta}>
                                 <span>March 10, 2026</span>

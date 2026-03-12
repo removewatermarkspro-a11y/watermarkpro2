@@ -67,19 +67,19 @@ export default function BlogPage() {
                     </div>
 
                     <div className={styles.blogGrid}>
-                        {/* Blog Post Card - How to Remove Watermark from Photo Free in 2026 — AI-Powered Guide */}
+                        {/* Blog Post Card - How to Remove Watermark from Photo Free in 2026 */}
                         <Link href="/blog/remove-watermark-from-photo-free" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
                                 <img
                                     src="/images/blog/dewatermark-1.jpg"
-                                    alt="How to Remove Watermark from Photo Free in 2026 — AI-Powered Guide"
+                                    alt="How to Remove Watermark from Photo Free in 2026"
                                     className={styles.blogCardImage}
                                 />
                             </div>
                             <div className={styles.blogCardContent}>
                                 <span className={styles.blogCategory}>PHOTO TOOLS</span>
                                 <h2 className={styles.blogCardTitle}>
-                                    How to Remove Watermark from Photo Free in 2026 — AI-Powered Guide
+                                    How to Remove Watermark from Photo Free in 2026
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                                         <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
@@ -95,19 +95,19 @@ export default function BlogPage() {
                             </div>
                         </Link>
 
-                        {/* Blog Post Card - How to Remove a Watermark in Word 2026 — The AI-Powered Guide */}
+                        {/* Blog Post Card - How to Remove a Watermark in Word 2026 */}
                         <Link href="/blog/how-to-remove-a-watermark-in-word" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
                                 <img
                                     src="/images/blog/dewatermark-2.jpg"
-                                    alt="How to Remove a Watermark in Word 2026 — The AI-Powered Guide"
+                                    alt="How to Remove a Watermark in Word 2026"
                                     className={styles.blogCardImage}
                                 />
                             </div>
                             <div className={styles.blogCardContent}>
                                 <span className={styles.blogCategory}>DOCUMENT TOOLS</span>
                                 <h2 className={styles.blogCardTitle}>
-                                    How to Remove a Watermark in Word 2026 — The AI-Powered Guide
+                                    How to Remove a Watermark in Word 2026
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                                         <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
@@ -123,19 +123,19 @@ export default function BlogPage() {
                             </div>
                         </Link>
 
-                        {/* Blog Post Card - How to Remove Watermarks from Photos in 2026 — The AI-Powered Guide */}
+                        {/* Blog Post Card - How to Remove Watermarks from Photos in 2026 */}
                         <Link href="/blog/how-do-i-remove-watermarks-from-photos" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
                                 <img
                                     src="/images/blog/dewatermark-3.jpg"
-                                    alt="How to Remove Watermarks from Photos in 2026 — The AI-Powered Guide"
+                                    alt="How to Remove Watermarks from Photos in 2026"
                                     className={styles.blogCardImage}
                                 />
                             </div>
                             <div className={styles.blogCardContent}>
                                 <span className={styles.blogCategory}>IMAGE EDITING</span>
                                 <h2 className={styles.blogCardTitle}>
-                                    How to Remove Watermarks from Photos in 2026 — The AI-Powered Guide
+                                    How to Remove Watermarks from Photos in 2026
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                                         <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
@@ -151,19 +151,19 @@ export default function BlogPage() {
                             </div>
                         </Link>
 
-                        {/* Blog Post Card - How to TikTok Remove Watermark in 2026 — The AI-Powered Guide */}
+                        {/* Blog Post Card - How to TikTok Remove Watermark in 2026 */}
                         <Link href="/blog/tiktok-remove-watermark" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
                                 <img
                                     src="/images/blog/remove-tiktok-watermark-1.jpg"
-                                    alt="How to TikTok Remove Watermark in 2026 — The AI-Powered Guide"
+                                    alt="How to TikTok Remove Watermark in 2026"
                                     className={styles.blogCardImage}
                                 />
                             </div>
                             <div className={styles.blogCardContent}>
                                 <span className={styles.blogCategory}>VIDEO TOOLS</span>
                                 <h2 className={styles.blogCardTitle}>
-                                    How to TikTok Remove Watermark in 2026 — The AI-Powered Guide
+                                    How to TikTok Remove Watermark in 2026
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                                         <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
@@ -179,19 +179,19 @@ export default function BlogPage() {
                             </div>
                         </Link>
 
-                        {/* Blog Post Card - Best Free Video Watermark Remover Tools in 2026 — AI-Powered Guide */}
+                        {/* Blog Post Card - Best Free Video Watermark Remover Tools in 2026 */}
                         <Link href="/blog/free-video-watermark-remover" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
                                 <img
                                     src="/images/blog/remove-video-watermark-1.jpg"
-                                    alt="Best Free Video Watermark Remover Tools in 2026 — AI-Powered Guide"
+                                    alt="Best Free Video Watermark Remover Tools in 2026"
                                     className={styles.blogCardImage}
                                 />
                             </div>
                             <div className={styles.blogCardContent}>
                                 <span className={styles.blogCategory}>VIDEO TOOLS</span>
                                 <h2 className={styles.blogCardTitle}>
-                                    Best Free Video Watermark Remover Tools in 2026 — AI-Powered Guide
+                                    Best Free Video Watermark Remover Tools in 2026
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                                         <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
@@ -207,19 +207,19 @@ export default function BlogPage() {
                             </div>
                         </Link>
 
-                        {/* Blog Post Card - How to Save TikTok Without Watermark in 2026 — The AI-Powered Guide */}
+                        {/* Blog Post Card - How to Save TikTok Without Watermark in 2026 */}
                         <Link href="/blog/how-to-save-tiktok-without-watermark" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
                                 <img
                                     src="/images/blog/save-tiktok-without-watermark-1.jpg"
-                                    alt="How to Save TikTok Without Watermark in 2026 — The AI-Powered Guide"
+                                    alt="How to Save TikTok Without Watermark in 2026"
                                     className={styles.blogCardImage}
                                 />
                             </div>
                             <div className={styles.blogCardContent}>
                                 <span className={styles.blogCategory}>VIDEO TOOLS</span>
                                 <h2 className={styles.blogCardTitle}>
-                                    How to Save TikTok Without Watermark in 2026 — The AI-Powered Guide
+                                    How to Save TikTok Without Watermark in 2026
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                                         <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
@@ -235,19 +235,19 @@ export default function BlogPage() {
                             </div>
                         </Link>
 
-                        {/* Blog Post Card - How to Remove Watermark from PDF in 2026 — The AI-Powered Guide */}
+                        {/* Blog Post Card - How to Remove Watermark from PDF in 2026 */}
                         <Link href="/blog/remove-watermark-from-pdf" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
                                 <img
                                     src="/images/blog/dewatermark-4.jpg"
-                                    alt="How to Remove Watermark from PDF in 2026 — The AI-Powered Guide"
+                                    alt="How to Remove Watermark from PDF in 2026"
                                     className={styles.blogCardImage}
                                 />
                             </div>
                             <div className={styles.blogCardContent}>
                                 <span className={styles.blogCategory}>PDF TOOLS</span>
                                 <h2 className={styles.blogCardTitle}>
-                                    How to Remove Watermark from PDF in 2026 — The AI-Powered Guide
+                                    How to Remove Watermark from PDF in 2026
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                                         <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
@@ -263,19 +263,19 @@ export default function BlogPage() {
                             </div>
                         </Link>
 
-                        {/* Blog Post Card - How to Remove Proof from Photo in 2026 — The AI-Powered Guide */}
+                        {/* Blog Post Card - How to Remove Proof from Photo in 2026 */}
                         <Link href="/blog/how-to-remove-proof-from-photo" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
                                 <img
                                     src="/images/blog/remove-proof-from-picture-1.jpg"
-                                    alt="How to Remove Proof from Photo in 2026 — The AI-Powered Guide"
+                                    alt="How to Remove Proof from Photo in 2026"
                                     className={styles.blogCardImage}
                                 />
                             </div>
                             <div className={styles.blogCardContent}>
                                 <span className={styles.blogCategory}>PHOTO TOOLS</span>
                                 <h2 className={styles.blogCardTitle}>
-                                    How to Remove Proof from Photo in 2026 — The AI-Powered Guide
+                                    How to Remove Proof from Photo in 2026
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                                         <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
@@ -291,19 +291,19 @@ export default function BlogPage() {
                             </div>
                         </Link>
 
-                        {/* Blog Post Card - How to Remove Watermarks from Photos in 2026 — AI-Powered Guide */}
+                        {/* Blog Post Card - How to Remove Watermarks from Photos in 2026 */}
                         <Link href="/blog/how-do-you-remove-watermarks-from-photos" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
                                 <img
                                     src="/images/blog/dewatermark-5.jpg"
-                                    alt="How to Remove Watermarks from Photos in 2026 — AI-Powered Guide"
+                                    alt="How to Remove Watermarks from Photos in 2026"
                                     className={styles.blogCardImage}
                                 />
                             </div>
                             <div className={styles.blogCardContent}>
                                 <span className={styles.blogCategory}>PHOTO TOOLS</span>
                                 <h2 className={styles.blogCardTitle}>
-                                    How to Remove Watermarks from Photos in 2026 — AI-Powered Guide
+                                    How to Remove Watermarks from Photos in 2026
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                                         <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
@@ -319,19 +319,19 @@ export default function BlogPage() {
                             </div>
                         </Link>
 
-                        {/* Blog Post Card - How to Delete Watermark From Photo in 2026 — The AI-Powered Guide */}
+                        {/* Blog Post Card - How to Delete Watermark From Photo in 2026 */}
                         <Link href="/blog/delete-watermark-from-photo" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
                                 <img
                                     src="/images/blog/remove-proof-from-picture-2.jpg"
-                                    alt="How to Delete Watermark From Photo in 2026 — The AI-Powered Guide"
+                                    alt="How to Delete Watermark From Photo in 2026"
                                     className={styles.blogCardImage}
                                 />
                             </div>
                             <div className={styles.blogCardContent}>
                                 <span className={styles.blogCategory}>PHOTO TOOLS</span>
                                 <h2 className={styles.blogCardTitle}>
-                                    How to Delete Watermark From Photo in 2026 — The AI-Powered Guide
+                                    How to Delete Watermark From Photo in 2026
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                                         <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
@@ -347,19 +347,19 @@ export default function BlogPage() {
                             </div>
                         </Link>
 
-                        {/* Blog Post Card - Best Ways to Remove TikTok Watermark in 2026 — The AI-Powered Guide */}
+                        {/* Blog Post Card - Best Ways to Remove TikTok Watermark in 2026 */}
                         <Link href="/blog/tiktok-watermark" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
                                 <img
                                     src="/images/blog/remove-tiktok-watermark-2.jpg"
-                                    alt="Best Ways to Remove TikTok Watermark in 2026 — The AI-Powered Guide"
+                                    alt="Best Ways to Remove TikTok Watermark in 2026"
                                     className={styles.blogCardImage}
                                 />
                             </div>
                             <div className={styles.blogCardContent}>
                                 <span className={styles.blogCategory}>VIDEO TOOLS</span>
                                 <h2 className={styles.blogCardTitle}>
-                                    Best Ways to Remove TikTok Watermark in 2026 — The AI-Powered Guide
+                                    Best Ways to Remove TikTok Watermark in 2026
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                                         <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
@@ -375,19 +375,19 @@ export default function BlogPage() {
                             </div>
                         </Link>
 
-                        {/* Blog Post Card - How to Remove Watermark in Word 2026 — The Complete AI Guide */}
+                        {/* Blog Post Card - How to Remove Watermark in Word 2026 */}
                         <Link href="/blog/how-to-remove-watermark-in-word" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
                                 <img
                                     src="/images/blog/remove-proof-from-picture-3.jpg"
-                                    alt="How to Remove Watermark in Word 2026 — The Complete AI Guide"
+                                    alt="How to Remove Watermark in Word 2026"
                                     className={styles.blogCardImage}
                                 />
                             </div>
                             <div className={styles.blogCardContent}>
                                 <span className={styles.blogCategory}>AI TOOLS</span>
                                 <h2 className={styles.blogCardTitle}>
-                                    How to Remove Watermark in Word 2026 — The Complete AI Guide
+                                    How to Remove Watermark in Word 2026
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                                         <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
@@ -403,19 +403,19 @@ export default function BlogPage() {
                             </div>
                         </Link>
 
-                        {/* Blog Post Card - How to Remove Watermark from Video Free in 2026 — AI Guide */}
+                        {/* Blog Post Card - How to Remove Watermark from Video Free in 2026 */}
                         <Link href="/blog/remove-watermark-from-video-free" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
                                 <img
                                     src="/images/blog/remove-video-watermark-2.jpg"
-                                    alt="How to Remove Watermark from Video Free in 2026 — AI Guide"
+                                    alt="How to Remove Watermark from Video Free in 2026"
                                     className={styles.blogCardImage}
                                 />
                             </div>
                             <div className={styles.blogCardContent}>
                                 <span className={styles.blogCategory}>VIDEO TOOLS</span>
                                 <h2 className={styles.blogCardTitle}>
-                                    How to Remove Watermark from Video Free in 2026 — AI Guide
+                                    How to Remove Watermark from Video Free in 2026
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                                         <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
@@ -431,19 +431,19 @@ export default function BlogPage() {
                             </div>
                         </Link>
 
-                        {/* Blog Post Card - Best Watermark Remover TikTok Tools in 2026 — AI-Powered Guide */}
+                        {/* Blog Post Card - Best Watermark Remover TikTok Tools in 2026 */}
                         <Link href="/blog/watermark-remover-tiktok" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
                                 <img
                                     src="/images/blog/remove-tiktok-watermark-3.jpg"
-                                    alt="Best Watermark Remover TikTok Tools in 2026 — AI-Powered Guide"
+                                    alt="Best Watermark Remover TikTok Tools in 2026"
                                     className={styles.blogCardImage}
                                 />
                             </div>
                             <div className={styles.blogCardContent}>
                                 <span className={styles.blogCategory}>VIDEO TOOLS</span>
                                 <h2 className={styles.blogCardTitle}>
-                                    Best Watermark Remover TikTok Tools in 2026 — AI-Powered Guide
+                                    Best Watermark Remover TikTok Tools in 2026
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                                         <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
@@ -459,19 +459,19 @@ export default function BlogPage() {
                             </div>
                         </Link>
 
-                        {/* Blog Post Card - Best HitPaw Watermark Remover Alternatives in 2026 — AI Guide */}
+                        {/* Blog Post Card - Best HitPaw Watermark Remover Alternatives in 2026 */}
                         <Link href="/blog/hitpaw-watermark-remover" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
                                 <img
                                     src="/images/blog/dewatermark-3.jpg"
-                                    alt="Best HitPaw Watermark Remover Alternatives in 2026 — AI Guide"
+                                    alt="Best HitPaw Watermark Remover Alternatives in 2026"
                                     className={styles.blogCardImage}
                                 />
                             </div>
                             <div className={styles.blogCardContent}>
                                 <span className={styles.blogCategory}>AI TOOLS</span>
                                 <h2 className={styles.blogCardTitle}>
-                                    Best HitPaw Watermark Remover Alternatives in 2026 — AI Guide
+                                    Best HitPaw Watermark Remover Alternatives in 2026
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                                         <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
@@ -487,19 +487,19 @@ export default function BlogPage() {
                             </div>
                         </Link>
 
-                        {/* Blog Post Card - Best Media.io Watermark Remover Alternatives in 2026 — AI Guide */}
+                        {/* Blog Post Card - Best Media.io Watermark Remover Alternatives in 2026 */}
                         <Link href="/blog/mediaio-watermark-remover" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
                                 <img
                                     src="/images/blog/dewatermark-1.jpg"
-                                    alt="Best Media.io Watermark Remover Alternatives in 2026 — AI Guide"
+                                    alt="Best Media.io Watermark Remover Alternatives in 2026"
                                     className={styles.blogCardImage}
                                 />
                             </div>
                             <div className={styles.blogCardContent}>
                                 <span className={styles.blogCategory}>AI TOOLS</span>
                                 <h2 className={styles.blogCardTitle}>
-                                    Best Media.io Watermark Remover Alternatives in 2026 — AI Guide
+                                    Best Media.io Watermark Remover Alternatives in 2026
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                                         <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
@@ -515,19 +515,19 @@ export default function BlogPage() {
                             </div>
                         </Link>
 
-                        {/* Blog Post Card - How to Get TikTok Without Watermark in 2026 — AI-Powered Guide */}
+                        {/* Blog Post Card - How to Get TikTok Without Watermark in 2026 */}
                         <Link href="/blog/tiktok-without-watermark" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
                                 <img
                                     src="/images/blog/remove-tiktok-watermark-2.jpg"
-                                    alt="How to Get TikTok Without Watermark in 2026 — AI-Powered Guide"
+                                    alt="How to Get TikTok Without Watermark in 2026"
                                     className={styles.blogCardImage}
                                 />
                             </div>
                             <div className={styles.blogCardContent}>
                                 <span className={styles.blogCategory}>VIDEO TOOLS</span>
                                 <h2 className={styles.blogCardTitle}>
-                                    How to Get TikTok Without Watermark in 2026 — AI-Powered Guide
+                                    How to Get TikTok Without Watermark in 2026
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                                         <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
@@ -571,19 +571,19 @@ export default function BlogPage() {
                             </div>
                         </Link>
 
-                        {/* Blog Post Card - How to TikTok Video Download Without Watermark in 2026 — AI Guide */}
+                        {/* Blog Post Card - How to TikTok Video Download Without Watermark in 2026 */}
                         <Link href="/blog/tiktok-video-download-without-watermark" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
                                 <img
                                     src="/images/blog/download-tiktok-video-without-watermark-2.jpg"
-                                    alt="How to TikTok Video Download Without Watermark in 2026 — AI Guide"
+                                    alt="How to TikTok Video Download Without Watermark in 2026"
                                     className={styles.blogCardImage}
                                 />
                             </div>
                             <div className={styles.blogCardContent}>
                                 <span className={styles.blogCategory}>VIDEO TOOLS</span>
                                 <h2 className={styles.blogCardTitle}>
-                                    How to TikTok Video Download Without Watermark in 2026 — AI Guide
+                                    How to TikTok Video Download Without Watermark in 2026
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                                         <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
@@ -599,19 +599,19 @@ export default function BlogPage() {
                             </div>
                         </Link>
 
-                        {/* Blog Post Card - How to Download TikTok Videos Without Watermark in 2026 — The AI Guide */}
+                        {/* Blog Post Card - How to Download TikTok Videos Without Watermark in 2026 */}
                         <Link href="/blog/download-tiktok-videos-without-watermark" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
                                 <img
                                     src="/images/blog/remove-tiktok-watermark-3.jpg"
-                                    alt="How to Download TikTok Videos Without Watermark in 2026 — The AI Guide"
+                                    alt="How to Download TikTok Videos Without Watermark in 2026"
                                     className={styles.blogCardImage}
                                 />
                             </div>
                             <div className={styles.blogCardContent}>
                                 <span className={styles.blogCategory}>VIDEO TOOLS</span>
                                 <h2 className={styles.blogCardTitle}>
-                                    How to Download TikTok Videos Without Watermark in 2026 — The AI Guide
+                                    How to Download TikTok Videos Without Watermark in 2026
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                                         <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
@@ -627,19 +627,19 @@ export default function BlogPage() {
                             </div>
                         </Link>
 
-                        {/* Blog Post Card - Best Free Watermark Remover Video Tools in 2026 — AI Guide */}
+                        {/* Blog Post Card - Best Free Watermark Remover Video Tools in 2026 */}
                         <Link href="/blog/watermark-remover-video-free" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
                                 <img
                                     src="/images/blog/remove-video-watermark-2.jpg"
-                                    alt="Best Free Watermark Remover Video Tools in 2026 — AI Guide"
+                                    alt="Best Free Watermark Remover Video Tools in 2026"
                                     className={styles.blogCardImage}
                                 />
                             </div>
                             <div className={styles.blogCardContent}>
                                 <span className={styles.blogCategory}>VIDEO TOOLS</span>
                                 <h2 className={styles.blogCardTitle}>
-                                    Best Free Watermark Remover Video Tools in 2026 — AI Guide
+                                    Best Free Watermark Remover Video Tools in 2026
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                                         <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
@@ -655,19 +655,19 @@ export default function BlogPage() {
                             </div>
                         </Link>
 
-                        {/* Blog Post Card - How to Download TikTok Video No Watermark in 2026 — AI Guide */}
+                        {/* Blog Post Card - How to Download TikTok Video No Watermark in 2026 */}
                         <Link href="/blog/download-tiktok-video-no-watermark" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
                                 <img
                                     src="/images/blog/save-tiktok-without-watermark-3.jpg"
-                                    alt="How to Download TikTok Video No Watermark in 2026 — AI Guide"
+                                    alt="How to Download TikTok Video No Watermark in 2026"
                                     className={styles.blogCardImage}
                                 />
                             </div>
                             <div className={styles.blogCardContent}>
                                 <span className={styles.blogCategory}>VIDEO TOOLS</span>
                                 <h2 className={styles.blogCardTitle}>
-                                    How to Download TikTok Video No Watermark in 2026 — AI Guide
+                                    How to Download TikTok Video No Watermark in 2026
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                                         <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>
@@ -683,19 +683,19 @@ export default function BlogPage() {
                             </div>
                         </Link>
 
-                        {/* Blog Post Card - How to Remove Watermark Video in 2026 — The AI-Powered Guide */}
+                        {/* Blog Post Card - How to Remove Watermark Video in 2026 */}
                         <Link href="/blog/remove-watermark-video" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
                                 <img
                                     src="/images/blog/remove-video-watermark-3.jpg"
-                                    alt="How to Remove Watermark Video in 2026 — The AI-Powered Guide"
+                                    alt="How to Remove Watermark Video in 2026"
                                     className={styles.blogCardImage}
                                 />
                             </div>
                             <div className={styles.blogCardContent}>
                                 <span className={styles.blogCategory}>VIDEO TOOLS</span>
                                 <h2 className={styles.blogCardTitle}>
-                                    How to Remove Watermark Video in 2026 — The AI-Powered Guide
+                                    How to Remove Watermark Video in 2026
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                                         <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                     </svg>

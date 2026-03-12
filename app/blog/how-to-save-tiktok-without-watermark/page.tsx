@@ -8,7 +8,7 @@ import MobileFloatingCTA from '@/components/MobileFloatingCTA'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 
 export const metadata: Metadata = {
-    title: 'How to Save TikTok Without Watermark in 2026 — The AI-Powered Guide',
+    title: 'How to Save TikTok Without Watermark in 2026',
     description: 'Learn how to save TikTok without watermark using AI-powered tools. Step-by-step guide with 7 tested methods and tool comparisons for 2026.',
 
     alternates: {
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     },
 
     openGraph: {
-        title: 'How to Save TikTok Without Watermark in 2026 — The AI-Powered Guide',
+        title: 'How to Save TikTok Without Watermark in 2026',
         description: 'Learn how to save TikTok without watermark using AI-powered tools. Step-by-step guide with 7 tested methods and tool comparisons for 2026.',
         url: 'https://removewatermarkpro.co/blog/how-to-save-tiktok-without-watermark',
         siteName: 'Remove Watermark Pro',
@@ -30,14 +30,14 @@ export const metadata: Metadata = {
                 url: '/images/blog/save-tiktok-without-watermark-1.jpg',
                 width: 1200,
                 height: 630,
-                alt: 'How to Save TikTok Without Watermark in 2026 — The AI-Powered Guide'
+                alt: 'How to Save TikTok Without Watermark in 2026'
             }
         ]
     },
 
     twitter: {
         card: 'summary_large_image',
-        title: 'How to Save TikTok Without Watermark in 2026 — The AI-Powered Guide',
+        title: 'How to Save TikTok Without Watermark in 2026',
         description: 'Learn how to save TikTok without watermark using AI-powered tools. Step-by-step guide with 7 tested methods and tool comparisons for 2026.',
         images: ['/images/blog/save-tiktok-without-watermark-1.jpg']
     },
@@ -186,7 +186,7 @@ export default function BlogArticle() {
     const articleSchema = {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "How to Save TikTok Without Watermark in 2026 — The AI-Powered Guide",
+        "headline": "How to Save TikTok Without Watermark in 2026",
         "image": "/images/blog/save-tiktok-without-watermark-1.jpg",
         "datePublished": "2026-03-11T11:59:40.179Z",
         "dateModified": "2026-03-11T11:59:40.179Z",
@@ -208,7 +208,7 @@ export default function BlogArticle() {
     const howToSchema = {
         "@context": "https://schema.org",
         "@type": "HowTo",
-        "name": "How to Save TikTok Without Watermark in 2026 — The AI-Powered Guide",
+        "name": "How to Save TikTok Without Watermark in 2026",
         "description": "Learn how to save TikTok without watermark using AI-powered tools. Step-by-step guide with 7 tested methods and tool comparisons for 2026.",
         "image": "/images/blog/save-tiktok-without-watermark-1.jpg",
         "totalTime": "PT5M",
@@ -239,7 +239,7 @@ export default function BlogArticle() {
                         <div className={styles.articleHeader}>
                             <span className={styles.category}>VIDEO TOOLS</span>
                             <h1 className={styles.title}>
-                                How to Save TikTok Without Watermark in 2026 — The AI-Powered Guide
+                                How to Save TikTok Without Watermark in 2026
                             </h1>
                             <div className={styles.meta}>
                                 <span>March 11, 2026</span>

@@ -8,7 +8,7 @@ import MobileFloatingCTA from '@/components/MobileFloatingCTA'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 
 export const metadata: Metadata = {
-    title: 'How to Remove Watermark from Photo Free in 2026 — AI-Powered Guide',
+    title: 'How to Remove Watermark from Photo Free in 2026',
     description: 'Learn how to remove watermark from photo free using AI tools. Compare top methods, step-by-step guides, and expert tips for clean results in 2026.',
 
     alternates: {
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     },
 
     openGraph: {
-        title: 'How to Remove Watermark from Photo Free in 2026 — AI-Powered Guide',
+        title: 'How to Remove Watermark from Photo Free in 2026',
         description: 'Learn how to remove watermark from photo free using AI tools. Compare top methods, step-by-step guides, and expert tips for clean results in 2026.',
         url: 'https://removewatermarkpro.co/blog/remove-watermark-from-photo-free',
         siteName: 'Remove Watermark Pro',
@@ -30,14 +30,14 @@ export const metadata: Metadata = {
                 url: '/images/blog/dewatermark-1.jpg',
                 width: 1200,
                 height: 630,
-                alt: 'How to Remove Watermark from Photo Free in 2026 — AI-Powered Guide'
+                alt: 'How to Remove Watermark from Photo Free in 2026'
             }
         ]
     },
 
     twitter: {
         card: 'summary_large_image',
-        title: 'How to Remove Watermark from Photo Free in 2026 — AI-Powered Guide',
+        title: 'How to Remove Watermark from Photo Free in 2026',
         description: 'Learn how to remove watermark from photo free using AI tools. Compare top methods, step-by-step guides, and expert tips for clean results in 2026.',
         images: ['/images/blog/dewatermark-1.jpg']
     },
@@ -186,7 +186,7 @@ export default function BlogArticle() {
     const articleSchema = {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "How to Remove Watermark from Photo Free in 2026 — AI-Powered Guide",
+        "headline": "How to Remove Watermark from Photo Free in 2026",
         "image": "/images/blog/dewatermark-1.jpg",
         "datePublished": "2026-03-12T11:37:35.790Z",
         "dateModified": "2026-03-12T11:37:35.790Z",
@@ -208,7 +208,7 @@ export default function BlogArticle() {
     const howToSchema = {
         "@context": "https://schema.org",
         "@type": "HowTo",
-        "name": "How to Remove Watermark from Photo Free in 2026 — AI-Powered Guide",
+        "name": "How to Remove Watermark from Photo Free in 2026",
         "description": "Learn how to remove watermark from photo free using AI tools. Compare top methods, step-by-step guides, and expert tips for clean results in 2026.",
         "image": "/images/blog/dewatermark-1.jpg",
         "totalTime": "PT5M",
@@ -239,7 +239,7 @@ export default function BlogArticle() {
                         <div className={styles.articleHeader}>
                             <span className={styles.category}>PHOTO TOOLS</span>
                             <h1 className={styles.title}>
-                                How to Remove Watermark from Photo Free in 2026 — AI-Powered Guide
+                                How to Remove Watermark from Photo Free in 2026
                             </h1>
                             <div className={styles.meta}>
                                 <span>March 12, 2026</span>

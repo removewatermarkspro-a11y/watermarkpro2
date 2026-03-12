@@ -8,7 +8,7 @@ import MobileFloatingCTA from '@/components/MobileFloatingCTA'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 
 export const metadata: Metadata = {
-    title: 'How to Remove Watermarks from Photos in 2026 — The AI-Powered Guide',
+    title: 'How to Remove Watermarks from Photos in 2026',
     description: 'Learn how to remove watermarks from photos using AI-powered tools. Compare 7 top methods including free and paid options. Complete 2026 guide.',
 
     alternates: {
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     },
 
     openGraph: {
-        title: 'How to Remove Watermarks from Photos in 2026 — The AI-Powered Guide',
+        title: 'How to Remove Watermarks from Photos in 2026',
         description: 'Learn how to remove watermarks from photos using AI-powered tools. Compare 7 top methods including free and paid options. Complete 2026 guide.',
         url: 'https://removewatermarkpro.co/blog/how-do-i-remove-watermarks-from-photos',
         siteName: 'Remove Watermark Pro',
@@ -30,14 +30,14 @@ export const metadata: Metadata = {
                 url: '/images/blog/dewatermark-1.jpg',
                 width: 1200,
                 height: 630,
-                alt: 'How to Remove Watermarks from Photos in 2026 — The AI-Powered Guide'
+                alt: 'How to Remove Watermarks from Photos in 2026'
             }
         ]
     },
 
     twitter: {
         card: 'summary_large_image',
-        title: 'How to Remove Watermarks from Photos in 2026 — The AI-Powered Guide',
+        title: 'How to Remove Watermarks from Photos in 2026',
         description: 'Learn how to remove watermarks from photos using AI-powered tools. Compare 7 top methods including free and paid options. Complete 2026 guide.',
         images: ['/images/blog/dewatermark-1.jpg']
     },
@@ -186,7 +186,7 @@ export default function BlogArticle() {
     const articleSchema = {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "How to Remove Watermarks from Photos in 2026 — The AI-Powered Guide",
+        "headline": "How to Remove Watermarks from Photos in 2026",
         "image": "/images/blog/dewatermark-1.jpg",
         "datePublished": "2026-03-12T11:31:41.981Z",
         "dateModified": "2026-03-12T11:31:41.981Z",
@@ -208,7 +208,7 @@ export default function BlogArticle() {
     const howToSchema = {
         "@context": "https://schema.org",
         "@type": "HowTo",
-        "name": "How to Remove Watermarks from Photos in 2026 — The AI-Powered Guide",
+        "name": "How to Remove Watermarks from Photos in 2026",
         "description": "Learn how to remove watermarks from photos using AI-powered tools. Compare 7 top methods including free and paid options. Complete 2026 guide.",
         "image": "/images/blog/dewatermark-1.jpg",
         "totalTime": "PT5M",
@@ -239,7 +239,7 @@ export default function BlogArticle() {
                         <div className={styles.articleHeader}>
                             <span className={styles.category}>IMAGE EDITING</span>
                             <h1 className={styles.title}>
-                                How to Remove Watermarks from Photos in 2026 — The AI-Powered Guide
+                                How to Remove Watermarks from Photos in 2026
                             </h1>
                             <div className={styles.meta}>
                                 <span>March 12, 2026</span>

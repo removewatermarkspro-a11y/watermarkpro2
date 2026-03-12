@@ -8,7 +8,7 @@ import MobileFloatingCTA from '@/components/MobileFloatingCTA'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 
 export const metadata: Metadata = {
-    title: 'Best Free Video Watermark Remover Tools in 2026 — AI-Powered Guide',
+    title: 'Best Free Video Watermark Remover Tools in 2026',
     description: 'Discover the best free video watermark remover tools in 2026. Compare AI-powered solutions, step-by-step guides, and expert tips for clean results.',
 
     alternates: {
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     },
 
     openGraph: {
-        title: 'Best Free Video Watermark Remover Tools in 2026 — AI-Powered Guide',
+        title: 'Best Free Video Watermark Remover Tools in 2026',
         description: 'Discover the best free video watermark remover tools in 2026. Compare AI-powered solutions, step-by-step guides, and expert tips for clean results.',
         url: 'https://removewatermarkpro.co/blog/free-video-watermark-remover',
         siteName: 'Remove Watermark Pro',
@@ -30,14 +30,14 @@ export const metadata: Metadata = {
                 url: '/images/blog/remove-video-watermark-1.jpg',
                 width: 1200,
                 height: 630,
-                alt: 'Best Free Video Watermark Remover Tools in 2026 — AI-Powered Guide'
+                alt: 'Best Free Video Watermark Remover Tools in 2026'
             }
         ]
     },
 
     twitter: {
         card: 'summary_large_image',
-        title: 'Best Free Video Watermark Remover Tools in 2026 — AI-Powered Guide',
+        title: 'Best Free Video Watermark Remover Tools in 2026',
         description: 'Discover the best free video watermark remover tools in 2026. Compare AI-powered solutions, step-by-step guides, and expert tips for clean results.',
         images: ['/images/blog/remove-video-watermark-1.jpg']
     },
@@ -186,7 +186,7 @@ export default function BlogArticle() {
     const articleSchema = {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Best Free Video Watermark Remover Tools in 2026 — AI-Powered Guide",
+        "headline": "Best Free Video Watermark Remover Tools in 2026",
         "image": "/images/blog/remove-video-watermark-1.jpg",
         "datePublished": "2026-03-11T12:02:31.850Z",
         "dateModified": "2026-03-11T12:02:31.850Z",
@@ -208,7 +208,7 @@ export default function BlogArticle() {
     const howToSchema = {
         "@context": "https://schema.org",
         "@type": "HowTo",
-        "name": "Best Free Video Watermark Remover Tools in 2026 — AI-Powered Guide",
+        "name": "Best Free Video Watermark Remover Tools in 2026",
         "description": "Discover the best free video watermark remover tools in 2026. Compare AI-powered solutions, step-by-step guides, and expert tips for clean results.",
         "image": "/images/blog/remove-video-watermark-1.jpg",
         "totalTime": "PT5M",
@@ -239,7 +239,7 @@ export default function BlogArticle() {
                         <div className={styles.articleHeader}>
                             <span className={styles.category}>VIDEO TOOLS</span>
                             <h1 className={styles.title}>
-                                Best Free Video Watermark Remover Tools in 2026 — AI-Powered Guide
+                                Best Free Video Watermark Remover Tools in 2026
                             </h1>
                             <div className={styles.meta}>
                                 <span>March 11, 2026</span>

@@ -8,7 +8,7 @@ import MobileFloatingCTA from '@/components/MobileFloatingCTA'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 
 export const metadata: Metadata = {
-    title: 'How to Download TikTok Video No Watermark in 2026 — AI Guide',
+    title: 'How to Download TikTok Video No Watermark in 2026',
     description: 'Learn how to download TikTok video no watermark using AI tools. Compare 7 top watermark removers with step-by-step guides and expert testing results.',
 
     alternates: {
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     },
 
     openGraph: {
-        title: 'How to Download TikTok Video No Watermark in 2026 — AI Guide',
+        title: 'How to Download TikTok Video No Watermark in 2026',
         description: 'Learn how to download TikTok video no watermark using AI tools. Compare 7 top watermark removers with step-by-step guides and expert testing results.',
         url: 'https://removewatermarkpro.co/blog/download-tiktok-video-no-watermark',
         siteName: 'Remove Watermark Pro',
@@ -30,14 +30,14 @@ export const metadata: Metadata = {
                 url: '/images/blog/save-tiktok-without-watermark-3.jpg',
                 width: 1200,
                 height: 630,
-                alt: 'How to Download TikTok Video No Watermark in 2026 — AI Guide'
+                alt: 'How to Download TikTok Video No Watermark in 2026'
             }
         ]
     },
 
     twitter: {
         card: 'summary_large_image',
-        title: 'How to Download TikTok Video No Watermark in 2026 — AI Guide',
+        title: 'How to Download TikTok Video No Watermark in 2026',
         description: 'Learn how to download TikTok video no watermark using AI tools. Compare 7 top watermark removers with step-by-step guides and expert testing results.',
         images: ['/images/blog/save-tiktok-without-watermark-3.jpg']
     },
@@ -194,7 +194,7 @@ export default function BlogArticle() {
     const articleSchema = {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "How to Download TikTok Video No Watermark in 2026 — AI Guide",
+        "headline": "How to Download TikTok Video No Watermark in 2026",
         "image": "/images/blog/save-tiktok-without-watermark-3.jpg",
         "datePublished": "2026-03-06T11:33:59.655Z",
         "dateModified": "2026-03-06T11:33:59.655Z",
@@ -216,7 +216,7 @@ export default function BlogArticle() {
     const howToSchema = {
         "@context": "https://schema.org",
         "@type": "HowTo",
-        "name": "How to Download TikTok Video No Watermark in 2026 — AI Guide",
+        "name": "How to Download TikTok Video No Watermark in 2026",
         "description": "Learn how to download TikTok video no watermark using AI tools. Compare 7 top watermark removers with step-by-step guides and expert testing results.",
         "image": "/images/blog/save-tiktok-without-watermark-3.jpg",
         "totalTime": "PT5M",
@@ -247,7 +247,7 @@ export default function BlogArticle() {
                         <div className={styles.articleHeader}>
                             <span className={styles.category}>VIDEO TOOLS</span>
                             <h1 className={styles.title}>
-                                How to Download TikTok Video No Watermark in 2026 — AI Guide
+                                How to Download TikTok Video No Watermark in 2026
                             </h1>
                             <div className={styles.meta}>
                                 <span>March 6, 2026</span>
