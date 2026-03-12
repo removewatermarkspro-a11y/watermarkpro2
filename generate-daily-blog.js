@@ -60,7 +60,10 @@ function getToday() {
 function escapeForJsx(str) {
     return str
         .replace(/&/g, '&amp;')
-        .replace(/'/g, "&apos;");
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/'/g, "&apos;")
+        .replace(/"/g, '&quot;');
 }
 
 // ============================================================

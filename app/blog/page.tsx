@@ -71,7 +71,7 @@ export default function BlogPage() {
                         <Link href="/blog/remove-watermark-from-photo-free" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
                                 <img
-                                    src="https://replicate.delivery/xezq/eYKHIma4AJSOOi64HvVom58sKE7pyVWmSakUoBrm0LnpuCILA/output_1026699769_0.jpeg"
+                                    src="/images/blog/dewatermark-1.jpg"
                                     alt="How to Remove Watermark from Photo Free in 2026 — AI-Powered Guide"
                                     className={styles.blogCardImage}
                                 />
@@ -99,7 +99,7 @@ export default function BlogPage() {
                         <Link href="/blog/how-to-remove-a-watermark-in-word" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
                                 <img
-                                    src="https://replicate.delivery/xezq/hFrlkY1fIrxxK68VSGqsQoacISDfcyp8Jo65YfyDAMrF1KgsA/output_1015750672_0.jpeg"
+                                    src="/images/blog/dewatermark-2.jpg"
                                     alt="How to Remove a Watermark in Word 2026 — The AI-Powered Guide"
                                     className={styles.blogCardImage}
                                 />
@@ -127,7 +127,7 @@ export default function BlogPage() {
                         <Link href="/blog/how-do-i-remove-watermarks-from-photos" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
                                 <img
-                                    src="https://replicate.delivery/xezq/gwneJyYkFQxOOSRY3A927gzlI4rVZwfGKVO7uRG4Yb9xXFQWA/output_247584905_0.jpeg"
+                                    src="/images/blog/dewatermark-3.jpg"
                                     alt="How to Remove Watermarks from Photos in 2026 — The AI-Powered Guide"
                                     className={styles.blogCardImage}
                                 />
@@ -155,7 +155,7 @@ export default function BlogPage() {
                         <Link href="/blog/tiktok-remove-watermark" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
                                 <img
-                                    src="https://replicate.delivery/xezq/pIaMpfb6B0xfSUSEbqUo8moiZg9hnODDqd63LvfreRhYFDfxC/output_329493448_0.jpeg"
+                                    src="/images/blog/remove-tiktok-watermark-1.jpg"
                                     alt="How to TikTok Remove Watermark in 2026 — The AI-Powered Guide"
                                     className={styles.blogCardImage}
                                 />
@@ -183,7 +183,7 @@ export default function BlogPage() {
                         <Link href="/blog/free-video-watermark-remover" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
                                 <img
-                                    src="https://replicate.delivery/xezq/VKVH3f2TFMUNJ6ZvVLFkubtdI6h5CfHm2wwtiT89gPEquwPWA/output_2508153297_0.jpeg"
+                                    src="/images/blog/remove-video-watermark-1.jpg"
                                     alt="Best Free Video Watermark Remover Tools in 2026 — AI-Powered Guide"
                                     className={styles.blogCardImage}
                                 />
@@ -211,7 +211,7 @@ export default function BlogPage() {
                         <Link href="/blog/how-to-save-tiktok-without-watermark" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
                                 <img
-                                    src="https://replicate.delivery/xezq/vU0n2jpIxwb6FlJLvf8kqLFq5pqYZcmYMIhWnS0q7HkfrwPWA/output_3561551398_0.jpeg"
+                                    src="/images/blog/save-tiktok-without-watermark-1.jpg"
                                     alt="How to Save TikTok Without Watermark in 2026 — The AI-Powered Guide"
                                     className={styles.blogCardImage}
                                 />
@@ -239,7 +239,7 @@ export default function BlogPage() {
                         <Link href="/blog/remove-watermark-from-pdf" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
                                 <img
-                                    src="https://replicate.delivery/xezq/5bRWwkoJSILvLRWeNFhwg81UeSX9k0VMvdGMf2J3rH8bxgfYB/output_2641997439_0.jpeg"
+                                    src="/images/blog/dewatermark-4.jpg"
                                     alt="How to Remove Watermark from PDF in 2026 — The AI-Powered Guide"
                                     className={styles.blogCardImage}
                                 />
@@ -267,7 +267,7 @@ export default function BlogPage() {
                         <Link href="/blog/how-to-remove-proof-from-photo" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
                                 <img
-                                    src="https://replicate.delivery/xezq/9IgyOT939e2ybSnBG3DtpxIYPu7TEfAs8GberrfhBbRPXBfxC/output_3008580125_0.jpeg"
+                                    src="/images/blog/remove-proof-from-picture-1.jpg"
                                     alt="How to Remove Proof from Photo in 2026 — The AI-Powered Guide"
                                     className={styles.blogCardImage}
                                 />
@@ -295,7 +295,7 @@ export default function BlogPage() {
                         <Link href="/blog/how-do-you-remove-watermarks-from-photos" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
                                 <img
-                                    src="https://replicate.delivery/xezq/mVKFhKRXe2yALScwdTDShnglnKKGyXvYLy8vRvTqubGYJ4HLA/output_1869870482_0.jpeg"
+                                    src="/images/blog/dewatermark-5.jpg"
                                     alt="How to Remove Watermarks from Photos in 2026 — AI-Powered Guide"
                                     className={styles.blogCardImage}
                                 />
@@ -323,7 +323,7 @@ export default function BlogPage() {
                         <Link href="/blog/delete-watermark-from-photo" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
                                 <img
-                                    src="https://replicate.delivery/xezq/Q35lg7IFm8KpJhpywil9ebMgfq3bjlX7ppekriqMdA94k2eYB/output_3522458303_0.jpeg"
+                                    src="/images/blog/remove-proof-from-picture-2.jpg"
                                     alt="How to Delete Watermark From Photo in 2026 — The AI-Powered Guide"
                                     className={styles.blogCardImage}
                                 />
@@ -351,7 +351,7 @@ export default function BlogPage() {
                         <Link href="/blog/tiktok-watermark" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
                                 <img
-                                    src="https://replicate.delivery/xezq/GVa53bWhS26rPdSPiQ3XWAWWBHvm7qgFYkvm5zlY0k95z2jF/output_1653428161_0.jpeg"
+                                    src="/images/blog/remove-tiktok-watermark-2.jpg"
                                     alt="Best Ways to Remove TikTok Watermark in 2026 — The AI-Powered Guide"
                                     className={styles.blogCardImage}
                                 />
@@ -379,7 +379,7 @@ export default function BlogPage() {
                         <Link href="/blog/how-to-remove-watermark-in-word" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
                                 <img
-                                    src="https://replicate.delivery/xezq/Dx1ekdq5wIw7SakqMVYEdMbf92aDqEx9FsUw0eAgpWdOZ2eYB/output_4254735129_0.jpeg"
+                                    src="/images/blog/remove-proof-from-picture-3.jpg"
                                     alt="How to Remove Watermark in Word 2026 — The Complete AI Guide"
                                     className={styles.blogCardImage}
                                 />
@@ -407,7 +407,7 @@ export default function BlogPage() {
                         <Link href="/blog/remove-watermark-from-video-free" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
                                 <img
-                                    src="https://replicate.delivery/xezq/p1nFqEfccz3STawzFOLdLt7KydsHhvMWBiyAm6FEpJBNHjHLA/output_3459758559_0.jpeg"
+                                    src="/images/blog/remove-video-watermark-2.jpg"
                                     alt="How to Remove Watermark from Video Free in 2026 — AI Guide"
                                     className={styles.blogCardImage}
                                 />
@@ -435,7 +435,7 @@ export default function BlogPage() {
                         <Link href="/blog/watermark-remover-tiktok" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
                                 <img
-                                    src="https://replicate.delivery/xezq/IytvMOtrvpoIC9pPOWEWfBDiR9IfVOh5O7c1yseJ1j6JXMeYB/output_2725583604_0.jpeg"
+                                    src="/images/blog/remove-tiktok-watermark-3.jpg"
                                     alt="Best Watermark Remover TikTok Tools in 2026 — AI-Powered Guide"
                                     className={styles.blogCardImage}
                                 />
@@ -463,7 +463,7 @@ export default function BlogPage() {
                         <Link href="/blog/hitpaw-watermark-remover" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
                                 <img
-                                    src="https://replicate.delivery/xezq/pFtFsTkHSVL6HNnNhxprmmmH0RtBBfAbP9D64V5on7RbEjHLA/output_2983931076_0.jpeg"
+                                    src="/images/blog/dewatermark-3.jpg"
                                     alt="Best HitPaw Watermark Remover Alternatives in 2026 — AI Guide"
                                     className={styles.blogCardImage}
                                 />
