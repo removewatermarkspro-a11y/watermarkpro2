@@ -163,7 +163,7 @@ C) BALANCED VIEW (PROS & CONS):
 
 === 5. KEYWORD STRATEGY ===
 
-   - The exact phrase "${keyword}" must appear in the H1 title
+   - A natural, grammatically correct variation of "${keyword}" must appear in the H1 title (e.g., if the keyword is "How to PDF Remove Watermark", write "How to Remove Watermarks from PDFs")
    - The exact phrase "${keyword}" must appear approximately 8-10 times naturally throughout the article body
    - These related keywords must also appear naturally (2-3 times each, NO keyword stuffing): ${otherKwList}
 
@@ -409,6 +409,11 @@ async function generateArticle(replicate, keyword, otherKeywords) {
 function sanitizeHtml(html) {
     // Remove any duplicate H1 tags (they'll be added in the template)
     html = html.replace(/<h1[^>]*>[\s\S]*?<\/h1>/gi, '');
+
+    // Strip duplicate Key Takeaways and FAQ blocks from the body, as they are rendered statically by the template
+    html = html.replace(/<div class="keyTakeaways">\s*<h2>Key Takeaways<\/h2>\s*<ul>[\s\S]*?<\/ul>\s*<\/div>/g, '');
+    html = html.replace(/<div class="keyTakeaways">[\s\S]*?<\/ul>\s*<\/div>/g, '');
+    html = html.replace(/<h2(?: id="?faq"?)?>Frequently Asked Questions<\/h2>[\s\S]*$/i, '');
 
     // Remove empty paragraphs
     html = html.replace(/<p>\s*<\/p>/g, '');

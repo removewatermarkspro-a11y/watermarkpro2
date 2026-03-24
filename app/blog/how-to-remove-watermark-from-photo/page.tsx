@@ -9,7 +9,7 @@ import MobileFloatingCTA from '@/components/MobileFloatingCTA'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 
 export const metadata: Metadata = {
-    title: 'How to Remove Watermark from Photo Online in 2026 (Free & Paid)',
+    title: 'How to Remove Watermarks from Photos Online in 2026 (Free & Paid)',
     description: 'We tested 19 photo watermark removal tools on 850+ images. Discover the best free and paid methods to remove watermarks, logos, and text from photos in seconds.',
 
     alternates: {
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     },
 
     openGraph: {
-        title: 'How to Remove Watermark from Photo Online in 2026 (Free & Paid)',
+        title: 'How to Remove Watermarks from Photos Online in 2026 (Free & Paid)',
         description: 'Comprehensive guide to removing watermarks from photos. Tested 19 tools on 850+ images. Compare free vs paid options.',
         url: 'https://removewatermarkpro.co/blog/how-to-remove-watermark-from-photo',
         siteName: 'Remove Watermark Pro',
@@ -107,7 +107,7 @@ export default function PhotoWatermarkRemoverArticle() {
     const articleSchema = {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "How to Remove Watermark from Photo Online in 2026 (Free & Paid)",
+        "headline": "How to Remove Watermarks from Photos Online in 2026 (Free & Paid)",
         "image": "https://removewatermarkpro.co/blog-photo-watermark-og.jpg",
         "datePublished": "2026-01-26T00:00:00Z",
         "dateModified": "2026-01-26T00:00:00Z",
@@ -143,7 +143,7 @@ export default function PhotoWatermarkRemoverArticle() {
                         <div className={styles.articleHeader}>
                             <span className={styles.category}>PHOTO TOOLS</span>
                             <h1 className={styles.title}>
-                                How to Remove Watermark from Photo Online in 2026 (Free & Paid)
+                                How to Remove Watermarks from Photos Online in 2026 (Free & Paid)
                             </h1>
                             <div className={styles.meta}>
                                 <span>January 26, 2026</span>

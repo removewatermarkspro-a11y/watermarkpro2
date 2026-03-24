@@ -9,7 +9,7 @@ import MobileFloatingCTA from '@/components/MobileFloatingCTA'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 
 export const metadata: Metadata = {
-    title: 'Top 5 Ways to Remove Watermark From Video Online Free in 2026',
+    title: 'Top 5 Ways to Remove Watermarks from Video Online for Free in 2026',
     description: 'We tested 18 differents free watermark removal solutions and identified the most effective methods to eliminate logos, text, and branding from your videos without spending a cent.',
 
     alternates: {
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     },
 
     openGraph: {
-        title: 'Top 5 Ways to Remove Watermark From Video Online Free in 2026',
+        title: 'Top 5 Ways to Remove Watermarks from Video Online for Free in 2026',
         description: 'Discover the best free ways to remove watermarks from videos. We tested 18 tools and identified the top 5 solutions.',
         url: 'https://removewatermarkspro.co/blog/remove-watermark-from-video-online-free',
         siteName: 'Remove Watermark Pro',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
 
     twitter: {
         card: 'summary_large_image',
-        title: 'Top 5 Ways to Remove Watermark From Video Online Free in 2026',
+        title: 'Top 5 Ways to Remove Watermarks from Video Online for Free in 2026',
         description: 'Discover the best free ways to remove watermarks from videos. We tested 18 tools and identified the top 5 solutions.',
         images: ['https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=1200&h=630&fit=crop']
     },
@@ -60,7 +60,7 @@ export default function RemoveWatermarkFromVideoArticle() {
     const articleSchema = {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Top 5 Ways to Remove Watermark From Video Online Free in 2026",
+        "headline": "Top 5 Ways to Remove Watermarks from Video Online for Free in 2026",
         "image": "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=1200&h=630&fit=crop",
         "datePublished": "2026-01-24T00:00:00Z",
         "dateModified": "2026-01-24T00:00:00Z",
@@ -223,7 +223,7 @@ export default function RemoveWatermarkFromVideoArticle() {
                         <div className={styles.articleHeader}>
                             <span className={styles.category}>VIDEO TOOLS</span>
                             <h1 className={styles.title}>
-                                Top 5 Ways to Remove Watermark From Video Online Free in 2026
+                                Top 5 Ways to Remove Watermarks from Video Online for Free in 2026
                             </h1>
                             <div className={styles.meta}>
                                 <span>January 24, 2026</span>
