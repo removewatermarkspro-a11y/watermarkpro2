@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         authors: ['Remove Watermark Pro'],
         images: [
             {
-                url: 'https://replicate.delivery/xezq/QZyYyHzsqIIHJJUed75j6kGUTe3rbQsYpjMjCoG5km2TkERWA/output_3004158096_0.jpeg',
+                url: '/images/blog/dewatermark-1.jpg',
                 width: 1200,
                 height: 630,
                 alt: 'How to Put Watermark on PDF in 2026 — The AI-Powered Guide'
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'How to Put Watermark on PDF in 2026 — The AI-Powered Guide',
         description: 'Learn how to put watermark on PDF files using AI tools in 2026. Step-by-step guide with 7 tested methods, comparison table, and expert tips.',
-        images: ['https://replicate.delivery/xezq/QZyYyHzsqIIHJJUed75j6kGUTe3rbQsYpjMjCoG5km2TkERWA/output_3004158096_0.jpeg']
+        images: ['/images/blog/dewatermark-1.jpg']
     },
 
     robots: {
@@ -187,7 +187,7 @@ export default function BlogArticle() {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "How to Put Watermark on PDF in 2026 — The AI-Powered Guide",
-        "image": "https://replicate.delivery/xezq/QZyYyHzsqIIHJJUed75j6kGUTe3rbQsYpjMjCoG5km2TkERWA/output_3004158096_0.jpeg",
+        "image": "/images/blog/dewatermark-1.jpg",
         "datePublished": "2026-03-15T11:25:50.888Z",
         "dateModified": "2026-03-15T11:25:50.888Z",
         "author": {
@@ -210,7 +210,7 @@ export default function BlogArticle() {
         "@type": "HowTo",
         "name": "How to Put Watermark on PDF in 2026 — The AI-Powered Guide",
         "description": "Learn how to put watermark on PDF files using AI tools in 2026. Step-by-step guide with 7 tested methods, comparison table, and expert tips.",
-        "image": "https://replicate.delivery/xezq/QZyYyHzsqIIHJJUed75j6kGUTe3rbQsYpjMjCoG5km2TkERWA/output_3004158096_0.jpeg",
+        "image": "/images/blog/dewatermark-1.jpg",
         "totalTime": "PT5M",
         "tool": {
             "@type": "HowToTool",
@@ -251,7 +251,7 @@ export default function BlogArticle() {
                         {/* Hero Image */}
                         <div className={styles.heroImage}>
                             <img
-                                src="https://replicate.delivery/xezq/QZyYyHzsqIIHJJUed75j6kGUTe3rbQsYpjMjCoG5km2TkERWA/output_3004158096_0.jpeg"
+                                src="/images/blog/dewatermark-1.jpg"
                                 alt="Screenshot of PDF watermarking interface showing document preview with transparent company logo overlay"
                                 width={1200}
                                 height={630}
@@ -312,7 +312,7 @@ export default function BlogArticle() {
 
 <p>PDF watermarking technology evolved significantly in 2026, with AI-powered tools offering automated positioning, content-aware opacity adjustment, and batch processing capabilities. Modern solutions can process thousands of documents while maintaining professional appearance and document integrity.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/QZyYyHzsqIIHJJUed75j6kGUTe3rbQsYpjMjCoG5km2TkERWA/output_3004158096_0.jpeg" alt="Screenshot of PDF watermarking interface showing document preview with transparent company logo overlay" width="1024" height="576" loading="eager" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-1.jpg" alt="Screenshot of PDF watermarking interface showing document preview with transparent company logo overlay" width="1024" height="576" loading="eager" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="why-watermark-pdfs">Why Do You Need to Put Watermark on PDF Documents?</h2>
 
@@ -322,7 +322,7 @@ export default function BlogArticle() {
 
 <p>AI-powered watermarking systems use Computer Vision algorithms to analyze document layout and automatically position watermarks in optimal locations. These systems detect text density, image placement, and white space to minimize content interference while maximizing watermark visibility.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/un4AnVNPoaqeMajRcnDK7p04Va3r10FWrqpwX8bLe1jeIJisA/output_3376291310_0.jpeg" alt="Comparison chart displaying different watermark types including text, image, and logo options on PDF pages" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-2.jpg" alt="Comparison chart displaying different watermark types including text, image, and logo options on PDF pages" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="step-by-step-guide">How Do You Put Watermark on PDF Files Step by Step?</h2>
 
@@ -354,7 +354,7 @@ export default function BlogArticle() {
 </ol>
 </div>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/Ui79Rt2o8qp8A1T8ewo9sRP0c9bU8rZh4N5iz3ln3EgUSiILA/output_4148900131_0.jpeg" alt="Step-by-step interface showing watermark positioning controls and opacity slider settings in PDF editor" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-3.jpg" alt="Step-by-step interface showing watermark positioning controls and opacity slider settings in PDF editor" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="tools-comparison">Which Tools Work Best for PDF Watermarking?</h2>
 
@@ -433,7 +433,7 @@ export default function BlogArticle() {
 
 <p><a href="https://removewatermarkpro.co" style="color: #ec4899; font-weight: bold;">RemoveWatermarkPro</a> excels in watermark analysis and removal scenarios, providing valuable insights into watermark implementation effectiveness. The <a href="https://removewatermarkpro.co/watermark-remover" style="color: #ec4899; font-weight: bold;">watermark remover tool</a> helps test watermark durability against removal attempts.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/flvFi0evlsqbF0MMDKYVdAuVEVArTfTj9i7X27fpYIsRTSEZB/output_3444980186_0.jpeg" alt="Side-by-side comparison table of PDF watermarking tools with pricing and feature columns highlighted" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-4.jpg" alt="Side-by-side comparison table of PDF watermarking tools with pricing and feature columns highlighted" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="pro-tips">Expert Tips for Professional PDF Watermarking</h2>
 
@@ -484,7 +484,7 @@ export default function BlogArticle() {
 
 <p>When working with watermark removal for legitimate purposes, tools like <a href="https://removewatermarkpro.co/object-remover-ai" style="color: #ec4899; font-weight: bold;">object remover AI</a> and <a href="https://removewatermarkpro.co/background-remover" style="color: #ec4899; font-weight: bold;">background remover</a> provide necessary functionality while respecting intellectual property rights.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/8KKrJfzPhzSzX60PI0jOOf89DfPiNoSwVff4KbDwEgQ2nkIyC/output_1256150527_0.jpeg" alt="FAQ section interface displaying common PDF watermarking questions and detailed answers" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-5.jpg" alt="FAQ section interface displaying common PDF watermarking questions and detailed answers" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="faq">Frequently Asked Questions</h2>
 

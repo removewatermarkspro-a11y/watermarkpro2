@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         authors: ['Remove Watermark Pro'],
         images: [
             {
-                url: 'https://replicate.delivery/xezq/CdfblhIU6CW9GybmtDaFg4bO8AoTrkgJjNJqzeZZaKmoLYTWA/output_689552464_0.jpeg',
+                url: '/images/blog/dewatermark-1.jpg',
                 width: 1200,
                 height: 630,
                 alt: 'How to Remove Draft Watermarks in 2026 — The AI-Powered Guide'
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'How to Remove Draft Watermarks in 2026 — The AI-Powered Guide',
         description: 'Learn how to remove draft watermarks from photos and videos using AI tools in 2026. Complete guide with step-by-step instructions and tool comparisons.',
-        images: ['https://replicate.delivery/xezq/CdfblhIU6CW9GybmtDaFg4bO8AoTrkgJjNJqzeZZaKmoLYTWA/output_689552464_0.jpeg']
+        images: ['/images/blog/dewatermark-1.jpg']
     },
 
     robots: {
@@ -187,7 +187,7 @@ export default function BlogArticle() {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "How to Remove Draft Watermarks in 2026 — The AI-Powered Guide",
-        "image": "https://replicate.delivery/xezq/CdfblhIU6CW9GybmtDaFg4bO8AoTrkgJjNJqzeZZaKmoLYTWA/output_689552464_0.jpeg",
+        "image": "/images/blog/dewatermark-1.jpg",
         "datePublished": "2026-03-22T11:23:44.666Z",
         "dateModified": "2026-03-22T11:23:44.666Z",
         "author": {
@@ -210,7 +210,7 @@ export default function BlogArticle() {
         "@type": "HowTo",
         "name": "How to Remove Draft Watermarks in 2026 — The AI-Powered Guide",
         "description": "Learn how to remove draft watermarks from photos and videos using AI tools in 2026. Complete guide with step-by-step instructions and tool comparisons.",
-        "image": "https://replicate.delivery/xezq/CdfblhIU6CW9GybmtDaFg4bO8AoTrkgJjNJqzeZZaKmoLYTWA/output_689552464_0.jpeg",
+        "image": "/images/blog/dewatermark-1.jpg",
         "totalTime": "PT5M",
         "tool": {
             "@type": "HowToTool",
@@ -251,7 +251,7 @@ export default function BlogArticle() {
                         {/* Hero Image */}
                         <div className={styles.heroImage}>
                             <img
-                                src="https://replicate.delivery/xezq/CdfblhIU6CW9GybmtDaFg4bO8AoTrkgJjNJqzeZZaKmoLYTWA/output_689552464_0.jpeg"
+                                src="/images/blog/dewatermark-1.jpg"
                                 alt="Screenshot showing a draft watermark overlay on a professional photograph before removal"
                                 width={1200}
                                 height={630}
@@ -313,7 +313,7 @@ export default function BlogArticle() {
 
 <p>Draft watermarks typically use 20-40% opacity levels and contain simple text elements, making them theoretically easier to remove than complex logo watermarks. However, their interaction with underlying image compression and transparency gradients creates specific technical hurdles that require specialized approaches.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/CdfblhIU6CW9GybmtDaFg4bO8AoTrkgJjNJqzeZZaKmoLYTWA/output_689552464_0.jpeg" alt="Screenshot showing a draft watermark overlay on a professional photograph before removal" width="1024" height="576" loading="eager" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-1.jpg" alt="Screenshot showing a draft watermark overlay on a professional photograph before removal" width="1024" height="576" loading="eager" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="understanding">What Are Draft Watermarks and Why Remove Them?</h2>
 <p>A draft watermark serves as a temporary overlay indicating unfinished content status. Unlike copyright watermarks designed for permanent protection, draft watermarks function as internal project management tools during review cycles.</p>
@@ -330,7 +330,7 @@ export default function BlogArticle() {
 
 <p>The technical challenge involves detecting watermark boundaries within compressed image data while preserving underlying pixel information. AI inpainting algorithms excel at this task by analyzing surrounding context and reconstructing missing areas through neural network processing.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/ez4bDoYIldwkACv6E23NiaSwAdAQsB5CfeXYlot2jI79XwmsA/output_4114195323_0.jpeg" alt="Comparison view of draft watermark detection algorithms highlighting transparent overlay elements" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-2.jpg" alt="Comparison view of draft watermark detection algorithms highlighting transparent overlay elements" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="step-by-step">How Do I Remove Draft Watermarks Step by Step?</h2>
 
@@ -360,7 +360,7 @@ export default function BlogArticle() {
 </ol>
 </div>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/hBGXyTAelqSjEq2FJftrtShr7MejY8k5ZhRfF1P9vhINxgNZB/output_2828529887_0.jpeg" alt="Step-by-step AI watermark removal process showing selection and inpainting stages" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-3.jpg" alt="Step-by-step AI watermark removal process showing selection and inpainting stages" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="tools-comparison">Which Tools Work Best for Draft Watermark Removal?</h2>
 
@@ -435,7 +435,7 @@ export default function BlogArticle() {
 </tbody>
 </table>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/uxEKYLgDkGrDItKmIp4bUBnQWewyvsxsoLmvNR41KkfoMYTWA/output_2075121258_0.jpeg" alt="Tool comparison interface displaying RemoveWatermarkPro dashboard with batch processing options" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-4.jpg" alt="Tool comparison interface displaying RemoveWatermarkPro dashboard with batch processing options" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <p>Based on extensive testing across different watermark types, <a href="https://removewatermarkpro.co" style="color: #ec4899; font-weight: bold;">RemoveWatermarkPro</a> consistently delivers superior results for draft watermark scenarios. The tool's advanced computer vision algorithms specifically handle semi-transparent overlays more effectively than competitors.</p>
 
@@ -477,7 +477,7 @@ export default function BlogArticle() {
 
 <p>The distinction between draft and copyright watermarks matters legally. Draft watermarks indicate workflow status rather than ownership protection, but underlying content copyright remains valid regardless of watermark purpose.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/v0jo07crdy4rH1Zd8EorHBpotpbMh9W6S0yWg3g7tHIQD2kF/output_569418078_0.jpeg" alt="Before and after results showing clean image after draft watermark removal" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-5.jpg" alt="Before and after results showing clean image after draft watermark removal" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="faq">Frequently Asked Questions</h2>
 

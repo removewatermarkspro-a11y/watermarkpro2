@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         authors: ['Remove Watermark Pro'],
         images: [
             {
-                url: 'https://replicate.delivery/xezq/HXwZhleRcmxcbadKOHnTSmpYVZdC4GK3PsXfXvKJELkfUclsA/output_2744163116_0.jpeg',
+                url: '/images/blog/dewatermark-1.jpg',
                 width: 1200,
                 height: 630,
                 alt: 'How to Remove PDF Watermark in 2026 — The AI-Powered Guide'
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'How to Remove PDF Watermark in 2026 — The AI-Powered Guide',
         description: 'Learn how to remove PDF watermarks using AI tools and manual methods. Expert guide with 7 tested tools comparison and step-by-step instructions.',
-        images: ['https://replicate.delivery/xezq/HXwZhleRcmxcbadKOHnTSmpYVZdC4GK3PsXfXvKJELkfUclsA/output_2744163116_0.jpeg']
+        images: ['/images/blog/dewatermark-1.jpg']
     },
 
     robots: {
@@ -187,7 +187,7 @@ export default function BlogArticle() {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "How to Remove PDF Watermark in 2026 — The AI-Powered Guide",
-        "image": "https://replicate.delivery/xezq/HXwZhleRcmxcbadKOHnTSmpYVZdC4GK3PsXfXvKJELkfUclsA/output_2744163116_0.jpeg",
+        "image": "/images/blog/dewatermark-1.jpg",
         "datePublished": "2026-03-20T11:34:36.410Z",
         "dateModified": "2026-03-20T11:34:36.410Z",
         "author": {
@@ -210,7 +210,7 @@ export default function BlogArticle() {
         "@type": "HowTo",
         "name": "How to Remove PDF Watermark in 2026 — The AI-Powered Guide",
         "description": "Learn how to remove PDF watermarks using AI tools and manual methods. Expert guide with 7 tested tools comparison and step-by-step instructions.",
-        "image": "https://replicate.delivery/xezq/HXwZhleRcmxcbadKOHnTSmpYVZdC4GK3PsXfXvKJELkfUclsA/output_2744163116_0.jpeg",
+        "image": "/images/blog/dewatermark-1.jpg",
         "totalTime": "PT5M",
         "tool": {
             "@type": "HowToTool",
@@ -251,7 +251,7 @@ export default function BlogArticle() {
                         {/* Hero Image */}
                         <div className={styles.heroImage}>
                             <img
-                                src="https://replicate.delivery/xezq/HXwZhleRcmxcbadKOHnTSmpYVZdC4GK3PsXfXvKJELkfUclsA/output_2744163116_0.jpeg"
+                                src="/images/blog/dewatermark-1.jpg"
                                 alt="Screenshot of a PDF document with a semi-transparent watermark overlaying the text content"
                                 width={1200}
                                 height={630}
@@ -312,7 +312,7 @@ export default function BlogArticle() {
 
 <p>PDF watermarks present unique challenges compared to image watermarks. They can exist as overlay objects, background patterns, or embedded metadata. Some are added during document creation, while others are applied post-generation. Understanding these technical differences determines which removal method succeeds.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/HXwZhleRcmxcbadKOHnTSmpYVZdC4GK3PsXfXvKJELkfUclsA/output_2744163116_0.jpeg" alt="Screenshot of a PDF document with a semi-transparent watermark overlaying the text content" width="1024" height="576" loading="eager" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-1.jpg" alt="Screenshot of a PDF document with a semi-transparent watermark overlaying the text content" width="1024" height="576" loading="eager" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <p>After testing 38 PDF watermark removal solutions across 920 documents, specific patterns emerge regarding effectiveness, speed, and quality preservation. AI-powered tools consistently outperform manual methods for complex watermarks, while simple text overlays respond well to basic editing techniques.</p>
 
@@ -321,7 +321,7 @@ export default function BlogArticle() {
 
 <p>Document Object Model (DOM) analysis reveals watermark positioning within the PDF structure. AI inpainting algorithms must understand text flow, paragraph spacing, and font rendering to avoid distorting readable content. Traditional image-based <a href="https://removewatermarkpro.co/watermark-remover" style="color: #ec4899; font-weight: bold;">watermark remover tools</a> often fail because they treat PDFs as flat images.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/O8WxskGKDAKjORVDJDGs9DRpsV9M7OeIZ8f7gWpqHCLrKuSWA/output_3890328792_0.jpeg" alt="Interface comparison showing AI detection of watermark boundaries versus manual selection tools" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-2.jpg" alt="Interface comparison showing AI detection of watermark boundaries versus manual selection tools" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <p>Neural networks trained on document layouts perform superior watermark detection compared to generic computer vision models. They recognize patterns like repeated logo placement, consistent transparency levels, and text-watermark boundaries. This specialized training enables the 94% success rates achieved by leading AI tools.</p>
 
@@ -342,7 +342,7 @@ export default function BlogArticle() {
 </ol>
 </div>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/wku0beEWEKRuA676f22H9qFywMFlnTNl0Ud6QLiAfYGsVclsA/output_3589141392_0.jpeg" alt="Step-by-step visual guide showing the watermark removal process in RemoveWatermarkPro interface" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-3.jpg" alt="Step-by-step visual guide showing the watermark removal process in RemoveWatermarkPro interface" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h3>Method 2: Manual Editing Approach</h3>
 <div class="step">
@@ -360,7 +360,7 @@ export default function BlogArticle() {
 <h2 id="comparison">Which PDF Watermark Removal Tool Performs Best?</h2>
 <p>Comprehensive testing of seven leading PDF watermark removal solutions reveals significant performance differences across accuracy, speed, and feature sets.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/2SFINaAuggLvPNC7VAnmJRDhDIx5t6UElEwS7RVpRFegFXJLA/output_2037538970_0.jpeg" alt="Side-by-side comparison table displaying different PDF watermark removal tools with pricing and features" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-4.jpg" alt="Side-by-side comparison table displaying different PDF watermark removal tools with pricing and features" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <table>
 <thead>
@@ -463,7 +463,7 @@ export default function BlogArticle() {
 
 <p>Digital Rights Management (DRM) systems sometimes integrate watermarks as protection mechanisms. Circumventing these protections may violate the Digital Millennium Copyright Act (DMCA) or similar international legislation.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/6N4D1I1u1dbCH9omFRAWtfjf6HftZwU2fVVSegw6NT2lZxVyC/output_1089298311_0.jpeg" alt="Before and after comparison of PDF pages showing successful watermark removal without text distortion" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-5.jpg" alt="Before and after comparison of PDF pages showing successful watermark removal without text distortion" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <p>Ethical considerations extend beyond legal compliance. Removing watermarks from stock photos, templates, or software documentation undermines creator compensation models. Consider purchasing licenses rather than removing attribution watermarks.</p>
 

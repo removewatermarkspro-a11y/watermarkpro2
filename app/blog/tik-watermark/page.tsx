@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         authors: ['Remove Watermark Pro'],
         images: [
             {
-                url: 'https://replicate.delivery/xezq/mGMiotuygK6GDRzjB0tpKAteRZagbLkvzeZsoCCvXAkybvQWA/output_1967823453_0.jpeg',
+                url: '/images/blog/dewatermark-1.jpg',
                 width: 1200,
                 height: 630,
                 alt: 'How to Remove TikTok Watermark in 2026 — The AI-Powered Guide'
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'How to Remove TikTok Watermark in 2026 — The AI-Powered Guide',
         description: 'Learn how to remove tik watermark from videos and photos using AI-powered tools. Complete guide with 7 tested methods and expert comparison.',
-        images: ['https://replicate.delivery/xezq/mGMiotuygK6GDRzjB0tpKAteRZagbLkvzeZsoCCvXAkybvQWA/output_1967823453_0.jpeg']
+        images: ['/images/blog/dewatermark-1.jpg']
     },
 
     robots: {
@@ -187,7 +187,7 @@ export default function BlogArticle() {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "How to Remove TikTok Watermark in 2026 — The AI-Powered Guide",
-        "image": "https://replicate.delivery/xezq/mGMiotuygK6GDRzjB0tpKAteRZagbLkvzeZsoCCvXAkybvQWA/output_1967823453_0.jpeg",
+        "image": "/images/blog/dewatermark-1.jpg",
         "datePublished": "2026-03-14T11:23:10.545Z",
         "dateModified": "2026-03-14T11:23:10.545Z",
         "author": {
@@ -210,7 +210,7 @@ export default function BlogArticle() {
         "@type": "HowTo",
         "name": "How to Remove TikTok Watermark in 2026 — The AI-Powered Guide",
         "description": "Learn how to remove tik watermark from videos and photos using AI-powered tools. Complete guide with 7 tested methods and expert comparison.",
-        "image": "https://replicate.delivery/xezq/mGMiotuygK6GDRzjB0tpKAteRZagbLkvzeZsoCCvXAkybvQWA/output_1967823453_0.jpeg",
+        "image": "/images/blog/dewatermark-1.jpg",
         "totalTime": "PT5M",
         "tool": {
             "@type": "HowToTool",
@@ -251,7 +251,7 @@ export default function BlogArticle() {
                         {/* Hero Image */}
                         <div className={styles.heroImage}>
                             <img
-                                src="https://replicate.delivery/xezq/mGMiotuygK6GDRzjB0tpKAteRZagbLkvzeZsoCCvXAkybvQWA/output_1967823453_0.jpeg"
+                                src="/images/blog/dewatermark-1.jpg"
                                 alt="Screenshot of TikTok video interface showing watermark placement in bottom-right corner with timestamp overlay"
                                 width={1200}
                                 height={630}
@@ -314,7 +314,7 @@ export default function BlogArticle() {
 
 <p>I tested 47 different watermark removal solutions over six months, processing over 1,200 TikTok videos. The landscape includes AI-powered SaaS platforms, desktop software, mobile apps, and manual editing techniques.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/mGMiotuygK6GDRzjB0tpKAteRZagbLkvzeZsoCCvXAkybvQWA/output_1967823453_0.jpeg" alt="Screenshot of TikTok video interface showing watermark placement in bottom-right corner with timestamp overlay" width="1024" height="576" loading="eager" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-1.jpg" alt="Screenshot of TikTok video interface showing watermark placement in bottom-right corner with timestamp overlay" width="1024" height="576" loading="eager" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="understanding-tik-watermark">What Makes TikTok Watermark Removal Challenging?</h2>
 
@@ -332,7 +332,7 @@ export default function BlogArticle() {
 
 <p>FFmpeg-based tools handle basic cropping but lack the sophisticated reconstruction capabilities of dedicated AI platforms. Deep learning models specifically trained for watermark removal demonstrate significantly higher success rates.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/BIJF2qNrzGr7AZIiqAL1qVKxlaBrYveHWkkzwaUdtttebvQWA/output_1688391952_0.jpeg" alt="Comparison view of TikTok video before and after watermark removal showing clear background reconstruction" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-2.jpg" alt="Comparison view of TikTok video before and after watermark removal showing clear background reconstruction" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="step-by-step-guide">How Can I Remove TikTok Watermarks Step by Step?</h2>
 
@@ -365,7 +365,7 @@ export default function BlogArticle() {
 </ol>
 </div>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/gCjtYzugS0qxMV8f5qHeKV06WNb7iFmMLx0CfXdF7bhR4eCZB/output_3671952461_0.jpeg" alt="RemoveWatermarkPro interface displaying AI selection tool highlighting watermark area on video frame" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-3.jpg" alt="RemoveWatermarkPro interface displaying AI selection tool highlighting watermark area on video frame" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="tools-comparison">Which Tools Work Best for TikTok Watermark Removal?</h2>
 
@@ -442,7 +442,7 @@ export default function BlogArticle() {
 </tbody>
 </table>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/aWViz5DAftTFYaRpjwJUYGV2kmnLae98T9lZWXNja0BTcvQWA/output_3106079474_0.jpeg" alt="Side-by-side comparison table showing different watermark removal tools with pricing and features" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-4.jpg" alt="Side-by-side comparison table showing different watermark removal tools with pricing and features" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <div class="proTip">
 <h2 id="pro-tip">Expert Tip</h2>
@@ -527,7 +527,7 @@ export default function BlogArticle() {
 
 <p>Many creators offer licensing agreements for commercial use. Platforms like TikTok Creator Fund provide revenue-sharing opportunities that respect original attribution.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/x1ahVgXDH1L6AxaNsOeRH35fRGodS4CCPzl8bk6FTtEe4eCZB/output_3572216830_0.jpeg" alt="Mobile app screenshot demonstrating watermark removal process on smartphone with progress indicator" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-5.jpg" alt="Mobile app screenshot demonstrating watermark removal process on smartphone with progress indicator" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="faq">Frequently Asked Questions</h2>
 

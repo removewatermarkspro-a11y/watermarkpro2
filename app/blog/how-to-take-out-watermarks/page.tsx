@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         authors: ['Remove Watermark Pro'],
         images: [
             {
-                url: 'https://replicate.delivery/xezq/veceYpHhUVi4qEdYWQOpQjeOuBlEMDC45aTpG4xdbPkQHeGZB/output_2287326555_0.jpeg',
+                url: '/images/blog/dewatermark-1.jpg',
                 width: 1200,
                 height: 630,
                 alt: 'How to Take Out Watermarks in 2026 — The AI-Powered Guide'
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'How to Take Out Watermarks in 2026 — The AI-Powered Guide',
         description: 'Learn how to take out watermarks from photos and videos using AI tools. Expert-tested methods, tool comparisons, and step-by-step guides for 2026.',
-        images: ['https://replicate.delivery/xezq/veceYpHhUVi4qEdYWQOpQjeOuBlEMDC45aTpG4xdbPkQHeGZB/output_2287326555_0.jpeg']
+        images: ['/images/blog/dewatermark-1.jpg']
     },
 
     robots: {
@@ -187,7 +187,7 @@ export default function BlogArticle() {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "How to Take Out Watermarks in 2026 — The AI-Powered Guide",
-        "image": "https://replicate.delivery/xezq/veceYpHhUVi4qEdYWQOpQjeOuBlEMDC45aTpG4xdbPkQHeGZB/output_2287326555_0.jpeg",
+        "image": "/images/blog/dewatermark-1.jpg",
         "datePublished": "2026-03-17T11:46:27.979Z",
         "dateModified": "2026-03-17T11:46:27.979Z",
         "author": {
@@ -210,7 +210,7 @@ export default function BlogArticle() {
         "@type": "HowTo",
         "name": "How to Take Out Watermarks in 2026 — The AI-Powered Guide",
         "description": "Learn how to take out watermarks from photos and videos using AI tools. Expert-tested methods, tool comparisons, and step-by-step guides for 2026.",
-        "image": "https://replicate.delivery/xezq/veceYpHhUVi4qEdYWQOpQjeOuBlEMDC45aTpG4xdbPkQHeGZB/output_2287326555_0.jpeg",
+        "image": "/images/blog/dewatermark-1.jpg",
         "totalTime": "PT5M",
         "tool": {
             "@type": "HowToTool",
@@ -251,7 +251,7 @@ export default function BlogArticle() {
                         {/* Hero Image */}
                         <div className={styles.heroImage}>
                             <img
-                                src="https://replicate.delivery/xezq/veceYpHhUVi4qEdYWQOpQjeOuBlEMDC45aTpG4xdbPkQHeGZB/output_2287326555_0.jpeg"
+                                src="/images/blog/dewatermark-1.jpg"
                                 alt="Screenshot showing before and after comparison of AI watermark removal on a landscape photograph"
                                 width={1200}
                                 height={630}
@@ -313,7 +313,7 @@ export default function BlogArticle() {
 
 <p>After testing 45 different watermark removal solutions across 920 processed files, I've identified the most effective methods for how to take out watermarks in 2026. Modern AI inpainting technology has revolutionized this process, achieving success rates exceeding 94% for most watermark types while preserving original image quality.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/veceYpHhUVi4qEdYWQOpQjeOuBlEMDC45aTpG4xdbPkQHeGZB/output_2287326555_0.jpeg" alt="Screenshot showing before and after comparison of AI watermark removal on a landscape photograph" width="1024" height="576" loading="eager" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-1.jpg" alt="Screenshot showing before and after comparison of AI watermark removal on a landscape photograph" width="1024" height="576" loading="eager" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <p>This comprehensive guide covers both automated AI solutions and manual techniques, helping you choose the right approach based on your specific watermark challenges, budget constraints, and quality requirements.</p>
 
@@ -330,7 +330,7 @@ export default function BlogArticle() {
 
 <p><strong>Batch Processing:</strong> Modern SaaS platforms leverage cloud computing to process multiple files simultaneously, reducing processing time from hours to minutes for large content libraries.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/duqq67Yid4qJMxHfU9pahRZwH2iIf8INzkL3qVP3XQmzDvRWA/output_2087427605_0.jpeg" alt="Interface diagram explaining AI inpainting technology workflow for watermark detection and removal" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-2.jpg" alt="Interface diagram explaining AI inpainting technology workflow for watermark detection and removal" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <p>The most effective tools combine these technologies with user-friendly interfaces that require minimal technical expertise. <a href="https://removewatermarkpro.co" style="color: #ec4899; font-weight: bold;">RemoveWatermarkPro</a> exemplifies this approach, offering professional-grade AI capabilities through simple upload-and-process workflows.</p>
 
@@ -347,7 +347,7 @@ export default function BlogArticle() {
 <li><div class="step">Download your clean file in the original format and resolution. Premium accounts can process unlimited files without watermarks on the output.</div></li>
 </ol>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/eC0KsA0ulkQBXS7XfAAx0SGRDEIPFjMOK3glVBGU5LreHeGZB/output_1608578914_0.jpeg" alt="Step-by-step visual guide showing watermark selection and AI processing in RemoveWatermarkPro interface" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-3.jpg" alt="Step-by-step visual guide showing watermark selection and AI processing in RemoveWatermarkPro interface" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h3>Method 2: Manual Editing Approach</h3>
 <ol>
@@ -425,7 +425,7 @@ export default function BlogArticle() {
 </tbody>
 </table>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/fa2Nyaedq3noxko0LnpOCdA2Q3AeMtCyIzNC7f26pXxlQ8GZB/output_2334090979_0.jpeg" alt="Comparison chart displaying tool performance metrics across different watermark removal software options" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-4.jpg" alt="Comparison chart displaying tool performance metrics across different watermark removal software options" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <p>*Photoshop's success rate requires significant manual expertise and time investment. For users seeking how to take out watermarks efficiently, <a href="https://removewatermarkpro.co" style="color: #ec4899; font-weight: bold;">RemoveWatermarkPro</a> offers the optimal balance of quality, speed, and ease of use.</p>
 
@@ -500,7 +500,7 @@ export default function BlogArticle() {
 
 <p>When using tools like <a href="https://removewatermarkpro.co/text-remover-ai" style="color: #ec4899; font-weight: bold;">RemoveWatermarkPro's text remover AI</a> or <a href="https://removewatermarkpro.co/object-remover-ai" style="color: #ec4899; font-weight: bold;">object remover AI</a>, ensure you have proper rights to modify the content. These tools should enhance your legitimate content creation workflow, not facilitate copyright infringement.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/g1x5JrSeujXjdaXQsNKfBI0h0QIjcLSvWBN1Pb3wjoWTEvRWA/output_3689079099_0.jpeg" alt="FAQ section visual with common watermark removal questions and expert answers displayed" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-5.jpg" alt="FAQ section visual with common watermark removal questions and expert answers displayed" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="faq">Frequently Asked Questions</h2>
 

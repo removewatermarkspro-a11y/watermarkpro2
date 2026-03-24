@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         authors: ['Remove Watermark Pro'],
         images: [
             {
-                url: 'https://replicate.delivery/xezq/KG62ir5xnUYgABNzoW7dDigfkLOsOm5S7q8fV8D7lEOTCaRWA/output_47356783_0.jpeg',
+                url: '/images/blog/remove-video-watermark-1.jpg',
                 width: 1200,
                 height: 630,
                 alt: 'Best Ways to Use a Watermark Remover from Video in 2026'
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'Best Ways to Use a Watermark Remover from Video in 2026',
         description: 'Discover the best watermark remover from video tools in 2026. AI-powered solutions tested on 800+ videos with 94% success rate. Free and paid options.',
-        images: ['https://replicate.delivery/xezq/KG62ir5xnUYgABNzoW7dDigfkLOsOm5S7q8fV8D7lEOTCaRWA/output_47356783_0.jpeg']
+        images: ['/images/blog/remove-video-watermark-1.jpg']
     },
 
     robots: {
@@ -187,7 +187,7 @@ export default function BlogArticle() {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "Best Ways to Use a Watermark Remover from Video in 2026",
-        "image": "https://replicate.delivery/xezq/KG62ir5xnUYgABNzoW7dDigfkLOsOm5S7q8fV8D7lEOTCaRWA/output_47356783_0.jpeg",
+        "image": "/images/blog/remove-video-watermark-1.jpg",
         "datePublished": "2026-03-16T11:51:31.216Z",
         "dateModified": "2026-03-16T11:51:31.216Z",
         "author": {
@@ -210,7 +210,7 @@ export default function BlogArticle() {
         "@type": "HowTo",
         "name": "Best Ways to Use a Watermark Remover from Video in 2026",
         "description": "Discover the best watermark remover from video tools in 2026. AI-powered solutions tested on 800+ videos with 94% success rate. Free and paid options.",
-        "image": "https://replicate.delivery/xezq/KG62ir5xnUYgABNzoW7dDigfkLOsOm5S7q8fV8D7lEOTCaRWA/output_47356783_0.jpeg",
+        "image": "/images/blog/remove-video-watermark-1.jpg",
         "totalTime": "PT5M",
         "tool": {
             "@type": "HowToTool",
@@ -251,7 +251,7 @@ export default function BlogArticle() {
                         {/* Hero Image */}
                         <div className={styles.heroImage}>
                             <img
-                                src="https://replicate.delivery/xezq/KG62ir5xnUYgABNzoW7dDigfkLOsOm5S7q8fV8D7lEOTCaRWA/output_47356783_0.jpeg"
+                                src="/images/blog/remove-video-watermark-1.jpg"
                                 alt="Screenshot showing before and after comparison of watermark removal from a 4K video frame with AI selection tool"
                                 width={1200}
                                 height={630}
@@ -314,7 +314,7 @@ export default function BlogArticle() {
 
 <p>The challenge involved animated watermarks, semi-transparent overlays, and moving logos positioned across various screen locations. Traditional manual editing would require 40+ hours of frame-by-frame work.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/KG62ir5xnUYgABNzoW7dDigfkLOsOm5S7q8fV8D7lEOTCaRWA/output_47356783_0.jpeg" alt="Screenshot showing before and after comparison of watermark removal from a 4K video frame with AI selection tool" width="1024" height="576" loading="eager" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/remove-video-watermark-1.jpg" alt="Screenshot showing before and after comparison of watermark removal from a 4K video frame with AI selection tool" width="1024" height="576" loading="eager" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <p>Modern AI-powered solutions solve this problem using deep learning algorithms trained on millions of video frames. These tools detect watermark patterns, analyze surrounding pixels, and reconstruct background content while maintaining temporal consistency across video sequences.</p>
 
@@ -332,7 +332,7 @@ export default function BlogArticle() {
 
 <p>Maintaining consistency across video frames presents unique challenges. Advanced algorithms track pixel movement between frames, ensuring removed watermarks don't create flickering artifacts or inconsistent backgrounds.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/4xdV4ee5WngkjUuAhQ9vTYNCTVDfVfUH2Nxh0939UCEDKoFZB/output_1114949569_0.jpeg" alt="Interface of video watermark detection algorithm highlighting semi-transparent logo overlays on moving footage" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/remove-video-watermark-2.jpg" alt="Interface of video watermark detection algorithm highlighting semi-transparent logo overlays on moving footage" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <p>The technology analyzes temporal patterns using optical flow estimation. This process maps pixel movement across sequences, allowing AI to predict appropriate background content for each frame.</p>
 
@@ -364,7 +364,7 @@ export default function BlogArticle() {
 </ol>
 </div>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/2tJf5I7ouoWDI6nt8mqqrGlLmjr9bGnUMAqE4iE8B5ZVBtILA/output_699244998_0.jpeg" alt="Step-by-step process visualization showing AI inpainting workflow for video watermark removal" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/remove-video-watermark-3.jpg" alt="Step-by-step process visualization showing AI inpainting workflow for video watermark removal" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h3>Method 2: Manual Selection with AI Enhancement</h3>
 
@@ -456,7 +456,7 @@ export default function BlogArticle() {
 </tbody>
 </table>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/7zHrF80Kd7bpG9HFECE6hBsFxcf3lKe8BeJhx89NWzFxF0isA/output_3900194734_0.jpeg" alt="Comparison table interface displaying different video watermark removal tools with performance metrics" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/remove-video-watermark-4.jpg" alt="Comparison table interface displaying different video watermark removal tools with performance metrics" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <p><em>*Photoshop achieves high success rates but requires significant manual editing expertise and time investment.</em></p>
 
@@ -523,7 +523,7 @@ export default function BlogArticle() {
 
 <p>Maintain documentation proving usage rights for any processed content. When working with client materials, obtain written permission specifying watermark removal authorization.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/B3Z79Wtdz2JDPRAC37ReDeBn6cJfBCOxXO2upxPBVdTEG0isA/output_2289948460_0.jpeg" alt="Advanced settings panel for video watermark remover showing quality controls and batch processing options" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/remove-video-watermark-5.jpg" alt="Advanced settings panel for video watermark remover showing quality controls and batch processing options" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="faq">Frequently Asked Questions</h2>
 

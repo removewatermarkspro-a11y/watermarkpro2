@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         authors: ['Remove Watermark Pro'],
         images: [
             {
-                url: 'https://replicate.delivery/xezq/lWDdqUUNFCLUGF0nEzCaa5RJK1cuOkeUsMeA4KI2LrHMTYTWA/output_1627417876_0.jpeg',
+                url: '/images/blog/dewatermark-1.jpg',
                 width: 1200,
                 height: 630,
                 alt: 'How to Remove Watermark from PDF in 2026 — The AI-Powered Guide'
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'How to Remove Watermark from PDF in 2026 — The AI-Powered Guide',
         description: 'Learn how to remove watermarks from PDF files using AI-powered tools. Step-by-step guide with 7 tested methods and expert tips for clean results.',
-        images: ['https://replicate.delivery/xezq/lWDdqUUNFCLUGF0nEzCaa5RJK1cuOkeUsMeA4KI2LrHMTYTWA/output_1627417876_0.jpeg']
+        images: ['/images/blog/dewatermark-1.jpg']
     },
 
     robots: {
@@ -187,7 +187,7 @@ export default function BlogArticle() {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "How to Remove Watermark from PDF in 2026 — The AI-Powered Guide",
-        "image": "https://replicate.delivery/xezq/lWDdqUUNFCLUGF0nEzCaa5RJK1cuOkeUsMeA4KI2LrHMTYTWA/output_1627417876_0.jpeg",
+        "image": "/images/blog/dewatermark-1.jpg",
         "datePublished": "2026-03-22T11:31:03.190Z",
         "dateModified": "2026-03-22T11:31:03.190Z",
         "author": {
@@ -210,7 +210,7 @@ export default function BlogArticle() {
         "@type": "HowTo",
         "name": "How to Remove Watermark from PDF in 2026 — The AI-Powered Guide",
         "description": "Learn how to remove watermarks from PDF files using AI-powered tools. Step-by-step guide with 7 tested methods and expert tips for clean results.",
-        "image": "https://replicate.delivery/xezq/lWDdqUUNFCLUGF0nEzCaa5RJK1cuOkeUsMeA4KI2LrHMTYTWA/output_1627417876_0.jpeg",
+        "image": "/images/blog/dewatermark-1.jpg",
         "totalTime": "PT5M",
         "tool": {
             "@type": "HowToTool",
@@ -251,7 +251,7 @@ export default function BlogArticle() {
                         {/* Hero Image */}
                         <div className={styles.heroImage}>
                             <img
-                                src="https://replicate.delivery/xezq/lWDdqUUNFCLUGF0nEzCaa5RJK1cuOkeUsMeA4KI2LrHMTYTWA/output_1627417876_0.jpeg"
+                                src="/images/blog/dewatermark-1.jpg"
                                 alt="Screenshot of a PDF document with a semi-transparent watermark overlay before removal process"
                                 width={1200}
                                 height={630}
@@ -308,7 +308,7 @@ export default function BlogArticle() {
 
 <p>A client sent you a PDF contract with their company watermark covering important text sections. You need clean documentation for your records, but the watermark makes key information difficult to read. After testing 47 different PDF watermark removal solutions, I discovered AI-powered tools deliver the most reliable results for this common business challenge.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/lWDdqUUNFCLUGF0nEzCaa5RJK1cuOkeUsMeA4KI2LrHMTYTWA/output_1627417876_0.jpeg" alt="Screenshot of a PDF document with a semi-transparent watermark overlay before removal process" width="1024" height="576" loading="eager" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-1.jpg" alt="Screenshot of a PDF document with a semi-transparent watermark overlay before removal process" width="1024" height="576" loading="eager" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="understanding-pdf-watermarks">What Types of PDF Watermarks Can Be Removed?</h2>
 
@@ -318,7 +318,7 @@ export default function BlogArticle() {
 
 <p>Watermark complexity directly impacts removal success rates. Simple text stamps achieve 94% removal accuracy with AI tools. Complex multi-layer graphics require advanced inpainting algorithms. Protected documents with encryption add security barriers that must be addressed first.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/ziVe8iOz5KQ7BC6YaWBHqCpRAeoJu21v6RW0HWP599IXTYTWA/output_2972697368_0.jpeg" alt="Side-by-side comparison showing PDF watermark types including text stamps and image overlays" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-2.jpg" alt="Side-by-side comparison showing PDF watermark types including text stamps and image overlays" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="ai-method">How to Remove PDF Watermarks Using AI Tools?</h2>
 
@@ -349,7 +349,7 @@ export default function BlogArticle() {
 <p>Export the processed PDF with watermarks removed. The file maintains original resolution, font formatting, and document structure. Save the clean version to your preferred location.</p>
 </div>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/rJ7bsaVJdObhIVk58xC3vg4TPkyZsc2HY6WOsPKOoWn4E2kF/output_1296151048_0.jpeg" alt="RemoveWatermarkPro interface displaying PDF upload area and AI processing options" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-3.jpg" alt="RemoveWatermarkPro interface displaying PDF upload area and AI processing options" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="manual-method">How to Remove PDF Watermarks Manually?</h2>
 
@@ -455,7 +455,7 @@ export default function BlogArticle() {
 </tbody>
 </table>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/h42rV62zumK7B5zZCwEdpbwRKyvNHbnQ2EfjcmoNEIk2JsJLA/output_1304489434_0.jpeg" alt="Comparison table interface showing different PDF watermark removal tools and their success rates" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-4.jpg" alt="Comparison table interface showing different PDF watermark removal tools and their success rates" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <div class="proTip">
 <h2 id="expert-tip">Pro Tip</h2>
@@ -490,7 +490,7 @@ export default function BlogArticle() {
 
 <p>Personal documents like contracts, invoices, or reports typically allow watermark removal by the document owner. When working with client materials, obtain written permission before modifying watermarked content. Document your authorization for future reference.</p>
 
-<div class="sectionImage"><img src="https://placehold.co/1024x576/1a1a2e/a855f7?text=Image+Generation+Failed" alt="Clean PDF document after successful watermark removal showing preserved formatting and quality" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-5.jpg" alt="Clean PDF document after successful watermark removal showing preserved formatting and quality" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="faq">Frequently Asked Questions</h2>
 

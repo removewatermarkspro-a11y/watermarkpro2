@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         authors: ['Remove Watermark Pro'],
         images: [
             {
-                url: 'https://replicate.delivery/xezq/b7pqbmXxoz42BNfZtN060u0mvpp4kDAfy130PPW9QI0sjvQWA/output_1090230149_0.jpeg',
+                url: '/images/blog/dewatermark-1.jpg',
                 width: 1200,
                 height: 630,
                 alt: 'How to Remove Link Watermarks From PDFs in 2026 — AI Guide'
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'How to Remove Link Watermarks From PDFs in 2026 — AI Guide',
         description: 'Learn how to remove link watermarks from PDFs using AI-powered tools. Complete guide with step-by-step instructions and tool comparisons for 2026.',
-        images: ['https://replicate.delivery/xezq/b7pqbmXxoz42BNfZtN060u0mvpp4kDAfy130PPW9QI0sjvQWA/output_1090230149_0.jpeg']
+        images: ['/images/blog/dewatermark-1.jpg']
     },
 
     robots: {
@@ -187,7 +187,7 @@ export default function BlogArticle() {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "How to Remove Link Watermarks From PDFs in 2026 — AI Guide",
-        "image": "https://replicate.delivery/xezq/b7pqbmXxoz42BNfZtN060u0mvpp4kDAfy130PPW9QI0sjvQWA/output_1090230149_0.jpeg",
+        "image": "/images/blog/dewatermark-1.jpg",
         "datePublished": "2026-03-14T11:31:36.876Z",
         "dateModified": "2026-03-14T11:31:36.876Z",
         "author": {
@@ -210,7 +210,7 @@ export default function BlogArticle() {
         "@type": "HowTo",
         "name": "How to Remove Link Watermarks From PDFs in 2026 — AI Guide",
         "description": "Learn how to remove link watermarks from PDFs using AI-powered tools. Complete guide with step-by-step instructions and tool comparisons for 2026.",
-        "image": "https://replicate.delivery/xezq/b7pqbmXxoz42BNfZtN060u0mvpp4kDAfy130PPW9QI0sjvQWA/output_1090230149_0.jpeg",
+        "image": "/images/blog/dewatermark-1.jpg",
         "totalTime": "PT5M",
         "tool": {
             "@type": "HowToTool",
@@ -251,7 +251,7 @@ export default function BlogArticle() {
                         {/* Hero Image */}
                         <div className={styles.heroImage}>
                             <img
-                                src="https://replicate.delivery/xezq/b7pqbmXxoz42BNfZtN060u0mvpp4kDAfy130PPW9QI0sjvQWA/output_1090230149_0.jpeg"
+                                src="/images/blog/dewatermark-1.jpg"
                                 alt="PDF document displaying a semi-transparent link watermark overlay across multiple pages"
                                 width={1200}
                                 height={630}
@@ -314,7 +314,7 @@ export default function BlogArticle() {
 
 <p>PDF link watermarks appear as clickable overlays, text stamps, or embedded URLs that redirect users to external websites. These elements often obstruct important content, create printing issues, or compromise document professionalism. Modern AI solutions now remove these watermarks while preserving original formatting and text clarity.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/b7pqbmXxoz42BNfZtN060u0mvpp4kDAfy130PPW9QI0sjvQWA/output_1090230149_0.jpeg" alt="PDF document displaying a semi-transparent link watermark overlay across multiple pages" width="1024" height="576" loading="eager" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-1.jpg" alt="PDF document displaying a semi-transparent link watermark overlay across multiple pages" width="1024" height="576" loading="eager" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <p>This comprehensive guide covers proven methods for pdf how to remove link watermark challenges, comparing 7 leading tools through extensive testing of 920 PDF documents across various complexity levels.</p>
 
@@ -334,7 +334,7 @@ export default function BlogArticle() {
 <li><strong>QR code watermarks</strong> — Scannable codes directing to online resources</li>
 </ul>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/LzUPMupIkXqJOVnxcG6trJdU9fvABdM0WxPQG6RItEe3jvQWA/output_1581789096_0.jpeg" alt="Screenshot of AI watermark detection interface highlighting clickable links in PDF viewer" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-2.jpg" alt="Screenshot of AI watermark detection interface highlighting clickable links in PDF viewer" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h3>Technical Challenges in PDF Watermark Removal</h3>
 
@@ -366,7 +366,7 @@ export default function BlogArticle() {
 </ol>
 </div>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/24y8Fe5JyfolpkLDZwvzULz6r4OCW8iwwPTfd4xzN1fJQeFyC/output_1479091805_0.jpeg" alt="Step-by-step watermark removal process showing before and after PDF comparison" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-3.jpg" alt="Step-by-step watermark removal process showing before and after PDF comparison" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h3>Method 2: Manual PDF Editor Approach</h3>
 
@@ -455,7 +455,7 @@ export default function BlogArticle() {
 </tbody>
 </table>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/C5IQGm5IKeS5G6WmRsp2jg5GegTH2sqzoIg2NSQPqa6NkvQWA/output_2525601847_0.jpeg" alt="Comparison table interface showing different PDF watermark removal tools and their features" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-4.jpg" alt="Comparison table interface showing different PDF watermark removal tools and their features" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h3>Performance Analysis</h3>
 
@@ -509,7 +509,7 @@ export default function BlogArticle() {
 
 <p>Tools like <a href="https://removewatermarkpro.co/background-remover" style="color: #ec4899; font-weight: bold;">background remover</a> include usage guidelines and terms of service that outline acceptable use cases for watermark removal functionality.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/mSP1drCxBGbsKVq0ZCPfbUeTN0bQVDEZR4hTqdQyODrYkvQWA/output_381770848_0.jpeg" alt="Clean PDF document after successful link watermark removal using AI technology" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-5.jpg" alt="Clean PDF document after successful link watermark removal using AI technology" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="faq">Frequently Asked Questions</h2>
 

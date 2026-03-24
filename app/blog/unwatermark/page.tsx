@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         authors: ['Remove Watermark Pro'],
         images: [
             {
-                url: 'https://replicate.delivery/xezq/yxTQeRYPUsxoLSJfx2xp0tQkJoQ7smMy8AOE99Yvn9zSFZSWA/output_1907583778_0.jpeg',
+                url: '/images/blog/dewatermark-1.jpg',
                 width: 1200,
                 height: 630,
                 alt: 'How to Unwatermark Images in 2026 — The AI-Powered Guide'
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'How to Unwatermark Images in 2026 — The AI-Powered Guide',
         description: 'Learn how to unwatermark images using AI tools in 2026. Compare top watermark removal software, step-by-step guides, and expert testing results.',
-        images: ['https://replicate.delivery/xezq/yxTQeRYPUsxoLSJfx2xp0tQkJoQ7smMy8AOE99Yvn9zSFZSWA/output_1907583778_0.jpeg']
+        images: ['/images/blog/dewatermark-1.jpg']
     },
 
     robots: {
@@ -187,7 +187,7 @@ export default function BlogArticle() {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "How to Unwatermark Images in 2026 — The AI-Powered Guide",
-        "image": "https://replicate.delivery/xezq/yxTQeRYPUsxoLSJfx2xp0tQkJoQ7smMy8AOE99Yvn9zSFZSWA/output_1907583778_0.jpeg",
+        "image": "/images/blog/dewatermark-1.jpg",
         "datePublished": "2026-03-19T11:35:31.099Z",
         "dateModified": "2026-03-19T11:35:31.099Z",
         "author": {
@@ -210,7 +210,7 @@ export default function BlogArticle() {
         "@type": "HowTo",
         "name": "How to Unwatermark Images in 2026 — The AI-Powered Guide",
         "description": "Learn how to unwatermark images using AI tools in 2026. Compare top watermark removal software, step-by-step guides, and expert testing results.",
-        "image": "https://replicate.delivery/xezq/yxTQeRYPUsxoLSJfx2xp0tQkJoQ7smMy8AOE99Yvn9zSFZSWA/output_1907583778_0.jpeg",
+        "image": "/images/blog/dewatermark-1.jpg",
         "totalTime": "PT5M",
         "tool": {
             "@type": "HowToTool",
@@ -251,7 +251,7 @@ export default function BlogArticle() {
                         {/* Hero Image */}
                         <div className={styles.heroImage}>
                             <img
-                                src="https://replicate.delivery/xezq/yxTQeRYPUsxoLSJfx2xp0tQkJoQ7smMy8AOE99Yvn9zSFZSWA/output_1907583778_0.jpeg"
+                                src="/images/blog/dewatermark-1.jpg"
                                 alt="Side-by-side comparison showing a watermarked photo and the same image after AI watermark removal processing"
                                 width={1200}
                                 height={630}
@@ -313,7 +313,7 @@ export default function BlogArticle() {
 
 <p>After testing 45 different watermark removal tools across 920 sample images, I've identified the most effective methods for removing unwanted overlays from digital photos. Modern AI algorithms can now unwatermark images with remarkable precision, often leaving no trace of the original marking.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/yxTQeRYPUsxoLSJfx2xp0tQkJoQ7smMy8AOE99Yvn9zSFZSWA/output_1907583778_0.jpeg" alt="Side-by-side comparison showing a watermarked photo and the same image after AI watermark removal processing" width="1024" height="576" loading="eager" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-1.jpg" alt="Side-by-side comparison showing a watermarked photo and the same image after AI watermark removal processing" width="1024" height="576" loading="eager" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="what-does-unwatermark-mean">What Does Unwatermark Mean in Digital Image Processing?</h2>
 <p>To unwatermark means removing visible text, logos, or transparent overlays from digital images using computational techniques. The process involves identifying watermark pixels and reconstructing the underlying image data through AI inpainting or pixel interpolation methods.</p>
@@ -328,7 +328,7 @@ export default function BlogArticle() {
 
 <p>The effectiveness depends on watermark characteristics. Solid watermarks with defined edges achieve 94% successful removal rates. Semi-transparent overlays present greater challenges, with success rates around 78% due to pixel blending complexity.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/xv6YDNQIHq49MBrep8a5Yo8iSnTxdUUcKk36u70w1GDviMJLA/output_2655500835_0.jpeg" alt="Screenshot of AI watermark detection interface highlighting a semi-transparent logo overlay on a landscape photo" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-2.jpg" alt="Screenshot of AI watermark detection interface highlighting a semi-transparent logo overlay on a landscape photo" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="step-by-step-guide">How Can I Remove Watermarks from Images Step by Step?</h2>
 <p>Two primary methods exist for watermark removal: AI-powered automatic detection and manual selection tools. Each approach suits different watermark types and user skill levels.</p>
@@ -360,7 +360,7 @@ export default function BlogArticle() {
 </ol>
 </div>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/kexH7rmE0NTpAqTsBxxSe6cAII7wilwhcW7eK3Qr0z4SLyksA/output_779346592_0.jpeg" alt="Step-by-step visual guide showing the watermark selection process in RemoveWatermarkPro's interface" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-3.jpg" alt="Step-by-step visual guide showing the watermark selection process in RemoveWatermarkPro's interface" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="tools-comparison">Which Tools Offer the Best Watermark Removal Performance?</h2>
 <p>After processing over 920 test images across seven leading platforms, performance varies significantly based on watermark complexity and processing algorithms.</p>
@@ -438,7 +438,7 @@ export default function BlogArticle() {
 
 <p>Testing methodology involved 920 images with various watermark types: text overlays (340 images), logo stamps (280 images), semi-transparent brands (200 images), and complex multi-element watermarks (100 images). Success rates measure complete watermark removal with minimal artifacts.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/QLlhbKxFfMXvSqvQecFECIWHq657TvMN7GSfEmPdWTdqLyksA/output_3614897997_0.jpeg" alt="Comparison table interface displaying processing times and quality scores for different watermark removal tools" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-4.jpg" alt="Comparison table interface displaying processing times and quality scores for different watermark removal tools" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <div class="proTip">
 <h2>Expert Testing Insight</h2>
@@ -488,7 +488,7 @@ export default function BlogArticle() {
 
 <p>Always verify image ownership before processing. When in doubt, contact the copyright holder for explicit permission or purchase appropriate licenses.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/QPCmHqqBfTzWWizDLief3XlwCwaS3LMS4gpnKj5n2eKKYkJZB/output_2615594703_0.jpeg" alt="Before and after gallery showing various watermark types removed from photos using AI technology" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-5.jpg" alt="Before and after gallery showing various watermark types removed from photos using AI technology" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="faq">Frequently Asked Questions</h2>
 

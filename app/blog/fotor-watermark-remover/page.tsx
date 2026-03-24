@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         authors: ['Remove Watermark Pro'],
         images: [
             {
-                url: 'https://replicate.delivery/xezq/S53fm409ND3jWK34nwi0I8tTpgPy7ZJ674UL1lKFqq5vUiILA/output_1455260182_0.jpeg',
+                url: '/images/blog/dewatermark-1.jpg',
                 width: 1200,
                 height: 630,
                 alt: 'Best Fotor Watermark Remover Alternatives in 2026 — AI Guide'
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'Best Fotor Watermark Remover Alternatives in 2026 — AI Guide',
         description: 'Discover top fotor watermark remover alternatives in 2026. Compare AI-powered tools, features, and pricing to remove watermarks effectively.',
-        images: ['https://replicate.delivery/xezq/S53fm409ND3jWK34nwi0I8tTpgPy7ZJ674UL1lKFqq5vUiILA/output_1455260182_0.jpeg']
+        images: ['/images/blog/dewatermark-1.jpg']
     },
 
     robots: {
@@ -187,7 +187,7 @@ export default function BlogArticle() {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "Best Fotor Watermark Remover Alternatives in 2026 — AI Guide",
-        "image": "https://replicate.delivery/xezq/S53fm409ND3jWK34nwi0I8tTpgPy7ZJ674UL1lKFqq5vUiILA/output_1455260182_0.jpeg",
+        "image": "/images/blog/dewatermark-1.jpg",
         "datePublished": "2026-03-15T11:31:24.687Z",
         "dateModified": "2026-03-15T11:31:24.687Z",
         "author": {
@@ -210,7 +210,7 @@ export default function BlogArticle() {
         "@type": "HowTo",
         "name": "Best Fotor Watermark Remover Alternatives in 2026 — AI Guide",
         "description": "Discover top fotor watermark remover alternatives in 2026. Compare AI-powered tools, features, and pricing to remove watermarks effectively.",
-        "image": "https://replicate.delivery/xezq/S53fm409ND3jWK34nwi0I8tTpgPy7ZJ674UL1lKFqq5vUiILA/output_1455260182_0.jpeg",
+        "image": "/images/blog/dewatermark-1.jpg",
         "totalTime": "PT5M",
         "tool": {
             "@type": "HowToTool",
@@ -251,7 +251,7 @@ export default function BlogArticle() {
                         {/* Hero Image */}
                         <div className={styles.heroImage}>
                             <img
-                                src="https://replicate.delivery/xezq/S53fm409ND3jWK34nwi0I8tTpgPy7ZJ674UL1lKFqq5vUiILA/output_1455260182_0.jpeg"
+                                src="/images/blog/dewatermark-1.jpg"
                                 alt="Screenshot of Fotor watermark removal interface showing AI-powered selection tool on a sample image"
                                 width={1200}
                                 height={630}
@@ -310,7 +310,7 @@ export default function BlogArticle() {
 
 <p>After testing 38 different watermark removal solutions on over 920 images, I discovered significant performance gaps between basic tools like fotor watermark remover and specialized AI solutions.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/S53fm409ND3jWK34nwi0I8tTpgPy7ZJ674UL1lKFqq5vUiILA/output_1455260182_0.jpeg" alt="Screenshot of Fotor watermark removal interface showing AI-powered selection tool on a sample image" width="1024" height="576" loading="eager" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-1.jpg" alt="Screenshot of Fotor watermark removal interface showing AI-powered selection tool on a sample image" width="1024" height="576" loading="eager" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="understanding">What makes a watermark remover effectively remove logos and text?</h2>
 
@@ -322,7 +322,7 @@ export default function BlogArticle() {
 
 <p>Key technical factors affecting removal quality include watermark opacity, background complexity, and color contrast. Semi-transparent watermarks below 30% opacity challenge most AI systems. Textured backgrounds require sophisticated pattern recognition algorithms.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/IEGVwzP24FaiHt4lDgl3Zp1DedKFgB761VCK6YLDWqi1UiILA/output_2244318629_0.jpeg" alt="Comparison chart displaying different AI watermark removal technologies and their accuracy rates" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-2.jpg" alt="Comparison chart displaying different AI watermark removal technologies and their accuracy rates" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="step-by-step">How do I remove watermarks step-by-step using different methods?</h2>
 
@@ -349,7 +349,7 @@ export default function BlogArticle() {
 <li><div class="step">Use 3 free removals or upgrade to Pro ($9.99/month) for unlimited access</div></li>
 </ol>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/Hwm6kP4KupKvDBQ8w8ENetClhKmEpI5Y4aLWc5iijIG7UiILA/output_3862609688_0.jpeg" alt="Step-by-step interface demonstration of uploading and processing an image with watermark removal" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-3.jpg" alt="Step-by-step interface demonstration of uploading and processing an image with watermark removal" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="comparison">Which watermark removal tool delivers the best results and value?</h2>
 
@@ -416,7 +416,7 @@ export default function BlogArticle() {
 </tbody>
 </table>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/QeTZaByAZPVJZa3Ejpvn3vjGSzd5Ux9iFic1dp8qtYvAViILA/output_3018668923_0.jpeg" alt="Side-by-side comparison table showing RemoveWatermarkPro versus Fotor features and pricing" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-4.jpg" alt="Side-by-side comparison table showing RemoveWatermarkPro versus Fotor features and pricing" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="expert-tip">Pro Tip: Optimizing AI Detection for Complex Watermarks</h2>
 
@@ -460,7 +460,7 @@ export default function BlogArticle() {
 
 <p>Tools like fotor watermark remover and <a href="https://removewatermarkpro.co" style="color: #ec4899; font-weight: bold;">RemoveWatermarkPro</a> operate as neutral technology providers. Users bear full legal responsibility for respecting intellectual property rights and obtaining proper permissions.</p>
 
-<div class="sectionImage"><img src="https://replicate.delivery/xezq/CfeOX4gW94st9kiWg9hCPYspHprmriVwYZN5J5eebuVzoSEZB/output_486103718_0.jpeg" alt="Before and after results showcase of complex watermark removal on various image types" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
+<div class="sectionImage"><img src="/images/blog/dewatermark-5.jpg" alt="Before and after results showcase of complex watermark removal on various image types" width="1024" height="576" loading="lazy" style="width:100%;height:auto;border-radius:12px;" /></div>
 
 <h2 id="faq">Frequently Asked Questions</h2>
 
