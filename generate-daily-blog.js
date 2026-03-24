@@ -86,8 +86,8 @@ A) MAGNETIC H1 / TITLE:
    - Must include the primary keyword "${keyword}" + a specific value proposition
    - Must start with one of: "How to", "Best Ways to", "Top 5", "Top 10", "Best"
    - Do NOT use colons (:) in the title
-   - Include the year ${today.year}
-   - Example format: "How to [keyword] in ${today.year} — The AI-Powered Guide"
+   - Do NOT append robotic suffixes like " — The AI-Powered Guide", "in ${today.year}", or "2026 AI Guide". Keep titles naturally human-sounding.
+   - Example format: "How to Remove Watermarks from PDFs: The Complete Guide"
 
 B) DIRECT ANSWER (THE LLM BAIT):
    - Immediately under the H1, place a 40-60 word paragraph that directly answers the main query
@@ -158,7 +158,7 @@ C) BALANCED VIEW (PROS & CONS):
    g) [H2 as Question] Tools Comparison — HTML <table> comparing 5-7 tools with ${BRAND} as #1
    h) Pro Tip / Expert Tip — Technical testing insight
    i) [H2 as Question] Pros & Cons — Balanced view of the approach  
-   j) Legal/Ethical Considerations — When relevant to watermark topics
+   j) Legal/Ethical Considerations — When relevant to watermark topics. You MUST include this exact sentence right after the H2: "<p>For official guidance on image copyright and fair use, we recommend consulting the <a href=\\"https://www.copyright.gov\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\" style=\\"color: #ec4899; font-weight: bold;\\">U.S. Copyright Office</a> or your local intellectual property authority.</p>"
    k) FAQ Section — EXACTLY 15 questions (last 4 optimized for Voice Search and "People Also Ask")
 
 === 5. KEYWORD STRATEGY ===

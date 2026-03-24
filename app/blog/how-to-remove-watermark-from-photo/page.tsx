@@ -9,7 +9,7 @@ import MobileFloatingCTA from '@/components/MobileFloatingCTA'
 import { LanguageProvider } from '@/contexts/LanguageContext'
 
 export const metadata: Metadata = {
-    title: 'How to Remove Watermarks from Photos Online in 2026 (Free & Paid)',
+    title: 'How to Remove Watermarks from Photos Online (Free & Paid)',
     description: 'We tested 19 photo watermark removal tools on 850+ images. Discover the best free and paid methods to remove watermarks, logos, and text from photos in seconds.',
 
     alternates: {
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     },
 
     openGraph: {
-        title: 'How to Remove Watermarks from Photos Online in 2026 (Free & Paid)',
+        title: 'How to Remove Watermarks from Photos Online (Free & Paid)',
         description: 'Comprehensive guide to removing watermarks from photos. Tested 19 tools on 850+ images. Compare free vs paid options.',
         url: 'https://removewatermarkpro.co/blog/how-to-remove-watermark-from-photo',
         siteName: 'Remove Watermark Pro',
@@ -31,14 +31,14 @@ export const metadata: Metadata = {
                 url: 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=1200&h=630&fit=crop',
                 width: 1200,
                 height: 630,
-                alt: 'How to Remove Watermark from Photo 2026'
+                alt: 'How to Remove Watermark from Photo'
             }
         ]
     },
 
     twitter: {
         card: 'summary_large_image',
-        title: 'How to Remove Watermark from Photo in 2026',
+        title: 'How to Remove Watermark from Photo',
         description: 'Tested 19 tools on 850+ images. Best free & paid ways to remove photo watermarks.',
         images: ['https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=1200&h=630&fit=crop']
     },
@@ -107,7 +107,7 @@ export default function PhotoWatermarkRemoverArticle() {
     const articleSchema = {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "How to Remove Watermarks from Photos Online in 2026 (Free & Paid)",
+        "headline": "How to Remove Watermarks from Photos Online (Free & Paid)",
         "image": "https://removewatermarkpro.co/blog-photo-watermark-og.jpg",
         "datePublished": "2026-01-26T00:00:00Z",
         "dateModified": "2026-01-26T00:00:00Z",
@@ -143,10 +143,10 @@ export default function PhotoWatermarkRemoverArticle() {
                         <div className={styles.articleHeader}>
                             <span className={styles.category}>PHOTO TOOLS</span>
                             <h1 className={styles.title}>
-                                How to Remove Watermarks from Photos Online in 2026 (Free & Paid)
+                                How to Remove Watermarks from Photos Online (Free & Paid)
                             </h1>
                             <div className={styles.meta}>
-                                <span>January 26, 2026</span>
+                                <span>January 26,</span>
                                 <span>•</span>
                                 <span>12 min read</span>
                             </div>
@@ -490,6 +490,7 @@ export default function PhotoWatermarkRemoverArticle() {
                         {/* 7. Legal and Ethical */}
                         <section id="legal-ethical" className={styles.section}>
                             <h2>Legal and Ethical Considerations for Photo Watermark Removal</h2>
+<p>For official guidance on image copyright and fair use, we recommend consulting the <a href="https://www.copyright.gov" target="_blank" rel="noopener noreferrer" style={{ color: '#ec4899', fontWeight: 'bold' }}>U.S. Copyright Office</a> or your local intellectual property authority.</p>
                             <div className={styles.sectionImage}>
                                 <Image
                                     src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=1200&h=600&fit=crop"
