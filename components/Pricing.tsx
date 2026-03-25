@@ -8,7 +8,7 @@ import { STRIPE_PLANS } from '@/lib/stripe-config'
 import { supabase } from '@/lib/supabase'
 
 export default function Pricing() {
-    const [isYearly, setIsYearly] = useState(true)
+    const [isYearly, setIsYearly] = useState(false)
     const [selectedCredits, setSelectedCredits] = useState(1200)
     const [isLoading, setIsLoading] = useState<'subscription' | 'payment' | null>(null)
     const { language } = useLanguage()
