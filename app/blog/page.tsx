@@ -67,6 +67,90 @@ export default function BlogPage() {
                     </div>
 
                     <div className={styles.blogGrid}>
+                        {/* Blog Post Card - How to Add Watermarks to Word Documents Using Best AI Tools */}
+                        <Link href="/blog/add-watermark-to-word" className={styles.blogCard}>
+                            <div className={styles.blogImageWrapper}>
+                                <img
+                                    src="https://replicate.delivery/xezq/iE8CzyABGoqRCpDm6QxsoT6nniaWD6AuOoV7rk33QArPnllF/output_3888421292_0.jpeg"
+                                    alt="How to Add Watermarks to Word Documents Using Best AI Tools"
+                                    className={styles.blogCardImage}
+                                />
+                            </div>
+                            <div className={styles.blogCardContent}>
+                                <span className={styles.blogCategory}>DOCUMENT TOOLS</span>
+                                <h2 className={styles.blogCardTitle}>
+                                    How to Add Watermarks to Word Documents Using Best AI Tools
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    </svg>
+                                </h2>
+                                <p className={styles.blogCardDescription}>
+                                    Learn how to add watermarks to Word documents with AI-powered tools. Complete guide with step-by-step instructions, tool comparisons, and expert tips.
+                                </p>
+                                <div className={styles.blogCardMeta}>
+                                    <span>March 31, 2026</span>
+                                    <span>&bull;</span>
+                                    <span>12 min read</span>
+                                </div>
+                            </div>
+                        </Link>
+
+                        {/* Blog Post Card - How to Add a Watermark on Word Documents: Complete Guide */}
+                        <Link href="/blog/how-to-add-a-watermark-on-word" className={styles.blogCard}>
+                            <div className={styles.blogImageWrapper}>
+                                <img
+                                    src="https://replicate.delivery/xezq/Cr7AcBo3sWreXS1let4XmVrlG2HDo5dq8DzWs0UusxoXaWWWA/output_3378933090_0.jpeg"
+                                    alt="How to Add a Watermark on Word Documents: Complete Guide"
+                                    className={styles.blogCardImage}
+                                />
+                            </div>
+                            <div className={styles.blogCardContent}>
+                                <span className={styles.blogCategory}>DOCUMENT TOOLS</span>
+                                <h2 className={styles.blogCardTitle}>
+                                    How to Add a Watermark on Word Documents: Complete Guide
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    </svg>
+                                </h2>
+                                <p className={styles.blogCardDescription}>
+                                    Learn how to add watermarks to Word documents with step-by-step instructions. Master text, image, and custom watermark insertion techniques.
+                                </p>
+                                <div className={styles.blogCardMeta}>
+                                    <span>March 31, 2026</span>
+                                    <span>&bull;</span>
+                                    <span>12 min read</span>
+                                </div>
+                            </div>
+                        </Link>
+
+                        {/* Blog Post Card - How to Remove a Watermark in Word Document Complete Guide */}
+                        <Link href="/blog/how-do-i-remove-a-watermark-in-word" className={styles.blogCard}>
+                            <div className={styles.blogImageWrapper}>
+                                <img
+                                    src="https://replicate.delivery/xezq/RWJ8BeJiDrwdEy230jJ4E4l2jNt2vevU6pSCib94s861XWWWA/output_117000495_0.jpeg"
+                                    alt="How to Remove a Watermark in Word Document Complete Guide"
+                                    className={styles.blogCardImage}
+                                />
+                            </div>
+                            <div className={styles.blogCardContent}>
+                                <span className={styles.blogCategory}>DOCUMENT TOOLS</span>
+                                <h2 className={styles.blogCardTitle}>
+                                    How to Remove a Watermark in Word Document Complete Guide
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    </svg>
+                                </h2>
+                                <p className={styles.blogCardDescription}>
+                                    Learn how to remove watermarks from Word documents using built-in tools, AI-powered solutions, and manual methods. Complete step-by-step guide.
+                                </p>
+                                <div className={styles.blogCardMeta}>
+                                    <span>March 31, 2026</span>
+                                    <span>&bull;</span>
+                                    <span>12 min read</span>
+                                </div>
+                            </div>
+                        </Link>
+
                         {/* Blog Post Card - How to Remove Watermarks from PDFs */}
                         <Link href="/blog/how-to-remove-watermark-from-pdf" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
