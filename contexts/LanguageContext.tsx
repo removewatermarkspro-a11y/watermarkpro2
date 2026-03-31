@@ -1,6 +1,7 @@
 'use client'
 
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react'
+import { usePathname } from 'next/navigation'
 
 export type Language = 'en' | 'fr' | 'de' | 'es' | 'pt' | 'ko' | 'no'
 
@@ -12,18 +13,27 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
+    const pathname = usePathname()
+    // Default to 'en' during SSR to prevent hydration mismatch
     const [language, setLanguageState] = useState<Language>('en')
     const [mounted, setMounted] = useState(false)
 
     useEffect(() => {
         setMounted(true)
-        // Language always defaults to 'en' - no localStorage loading
-    }, [])
+        // Derive language from URL on client side
+        if (pathname) {
+            if (pathname.startsWith('/fr/')) setLanguageState('fr')
+            else if (pathname.startsWith('/de/')) setLanguageState('de')
+            else if (pathname.startsWith('/es/')) setLanguageState('es')
+            else if (pathname.startsWith('/pt/')) setLanguageState('pt')
+            else if (pathname.startsWith('/ko/')) setLanguageState('ko')
+            else if (pathname.startsWith('/no/')) setLanguageState('no')
+            else setLanguageState('en')
+        }
+    }, [pathname])
 
     const setLanguage = (lang: Language) => {
         setLanguageState(lang)
-        // Language selection only persists during current session navigation
-        // Does NOT persist across page reloads - always defaults to English
     }
 
     return (
