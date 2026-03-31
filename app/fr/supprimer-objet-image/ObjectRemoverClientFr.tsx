@@ -86,7 +86,7 @@ export default function ObjectRemoverClientFr() {
                         </h1>
                         <p className={`${styles.description} ${styles.orderDescription}`}>{t.removeObjectPage.hero.description}</p>
                         <div className={styles.orderPills}><CategoryTabs /></div>
-                        <PromptInput placeholder={t.removeObjectPage.hero.promptPlaceholder} />
+                        <div className={styles.orderPrompt}><PromptInput placeholder={t.removeObjectPage.hero.promptPlaceholder} /></div>
                         <div className={styles.orderUpload}><div ref={uploadRef} className={styles.uploadSection}>
                             <ImageUploader onImageUpload={handleImageUpload} isAuthenticated={!!user} onAuthRequired={() => setShowAuthPopup(true)} noCreditsImage="/images-optimized/delete-objects-from-image-ai.webp" />
                             {processedImage && originalPreview && (

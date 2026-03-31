@@ -42,7 +42,7 @@ export default function BackgroundChangerClientNo() {
                         <h1 className={`${styles.title} ${styles.orderTitle}`}><span className={styles.violetText}>{t.replaceBackgroundPage.hero.titleHighlight}</span> {t.replaceBackgroundPage.hero.title}</h1>
                         <p className={`${styles.description} ${styles.orderDescription}`}>{t.replaceBackgroundPage.hero.description}</p>
                         <div className={styles.orderPills}><CategoryTabs /></div>
-                        <PromptInput placeholder={t.replaceBackgroundPage.hero.promptPlaceholder} />
+                        <div className={styles.orderPrompt}><PromptInput placeholder={t.replaceBackgroundPage.hero.promptPlaceholder} /></div>
                         <div className={styles.orderUpload}><div ref={uploadRef} className={styles.uploadSection}>
                             <ImageUploader onImageUpload={(file, preview) => { setUploadedImage(file); setOriginalPreview(preview); setProcessedImage(preview); }} isAuthenticated={!!user} onAuthRequired={() => setShowAuthPopup(true)} noCreditsImage="/images-optimized/replace-background-photo-ai.webp" />
                             {processedImage && originalPreview && (<><ResultDisplay originalImage={originalPreview} processedImage={processedImage} onDownload={() => { if (!processedImage) return; const link = document.createElement('a'); link.href = processedImage; link.download = 'processed-image.png'; link.click(); }} onGenerateNew={() => { setUploadedImage(null); setOriginalPreview(null); setProcessedImage(null); setTimeout(() => { if (uploadRef.current) uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' }) }, 100); }} /><RelatedTools /></>)}

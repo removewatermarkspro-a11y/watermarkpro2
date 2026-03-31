@@ -93,10 +93,12 @@ export default function PeopleRemoverClient() {
                         <h1 className={`${styles.title} ${styles.orderTitle}`}><span className={styles.violetText}>{t.peopleRemovalPage.hero.titleHighlight}</span> {t.peopleRemovalPage.hero.title}</h1>
                         <p className={`${styles.description} ${styles.orderDescription}`}>{t.peopleRemovalPage.hero.description}</p>
                         <div className={styles.orderPills}><CategoryTabs /></div>
-                        <PromptInput
-                            placeholder={t.peopleRemovalPage.hero.promptPlaceholder}
-                            onChange={(prompt) => setUserPrompt(prompt)}
-                        />
+                        <div className={styles.orderPrompt}>
+                            <PromptInput
+                                placeholder={t.peopleRemovalPage.hero.promptPlaceholder}
+                                onChange={(prompt) => setUserPrompt(prompt)}
+                            />
+                        </div>
                         <div className={styles.orderUpload}><div ref={uploadRef} className={styles.uploadSection}>
                             <ImageUploader
                                 onImageUpload={handleImageUpload}

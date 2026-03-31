@@ -93,10 +93,12 @@ export default function ObjectRemoverClient() {
                         <h1 className={`${styles.title} ${styles.orderTitle}`}><span className={styles.violetText}>{t.removeObjectPage.hero.titleHighlight}</span> {t.removeObjectPage.hero.title}</h1>
                         <p className={`${styles.description} ${styles.orderDescription}`}>{t.removeObjectPage.hero.description}</p>
                         <div className={styles.orderPills}><CategoryTabs /></div>
-                        <PromptInput
-                            placeholder={t.removeObjectPage.hero.promptPlaceholder}
-                            onChange={(prompt) => setUserPrompt(prompt)}
-                        />
+                        <div className={styles.orderPrompt}>
+                            <PromptInput
+                                placeholder={t.removeObjectPage.hero.promptPlaceholder}
+                                onChange={(prompt) => setUserPrompt(prompt)}
+                            />
+                        </div>
                         <div className={styles.orderUpload}><div ref={uploadRef} className={styles.uploadSection}>
                             <ImageUploader
                                 onImageUpload={handleImageUpload}

@@ -17,9 +17,10 @@
 .orderSocialProof { order: 0; width: 100%; }
 .orderTitle { order: 1; width: 100%; }
 .orderDescription { order: 2; width: 100%; }
-.orderUpload { order: 3; width: 100%; }
-.orderPills { order: 4; width: 100%; }
-.orderRatings { order: 5; width: 100%; }
+.orderPrompt { order: 3; width: 100%; max-width: 700px; margin: 0 auto; margin-bottom: 2rem; }
+.orderUpload { order: 4; width: 100%; }
+.orderPills { order: 5; width: 100%; }
+.orderRatings { order: 6; width: 100%; }
 
 .title {
     font-size: clamp(3rem, 6vw, 4.5rem);
