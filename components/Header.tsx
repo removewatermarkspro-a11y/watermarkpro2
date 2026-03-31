@@ -373,6 +373,20 @@ export default function Header() {
                                 )}
                             </svg>
                         </button>
+
+                        <div className={styles.mobileHeaderActions}>
+                            {mounted && user ? (
+                                <Link href={language === 'fr' ? '/fr/tarifs' : language === 'de' ? '/de/preise' : language === 'es' ? '/es/precios' : language === 'pt' ? '/pt/precos' : language === 'ko' ? '/ko/pricing' : language === 'no' ? '/no/priser' : '/pricing'} className={styles.mobileHeaderBtnSolid}>
+                                    {t.header.unlockPro}
+                                </Link>
+                            ) : mounted ? (
+                                <button onClick={() => setShowAuthPopup(true)} className={styles.mobileHeaderBtnOutline}>
+                                    {t.header.signIn || 'Login'}
+                                </button>
+                            ) : (
+                                <div style={{ width: '70px', height: '32px' }}></div>
+                            )}
+                        </div>
                     </nav >
 
                     {mobileMenuOpen && (
