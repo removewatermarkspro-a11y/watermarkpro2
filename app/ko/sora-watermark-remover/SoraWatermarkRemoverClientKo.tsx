@@ -182,19 +182,19 @@ export default function SoraWatermarkRemoverClientKo() {
             <main className={styles.main}>
                 <div className="container">
                     <section className={styles.hero}>
-                        <SocialProof pageId="free-sora-remover" />
+                        <div className={styles.orderSocialProof}><SocialProof pageId="free-sora-remover" /></div>
 
-                        <h1 className={styles.title}>
+                        <h1 className={`${styles.title} ${styles.orderTitle}`}>
                             <span className={styles.violetText}>{soraPage.hero.titleHighlight || 'Free'}</span> {soraPage.hero.title || 'sora watermark remover'}
                         </h1>
 
-                        <p className={styles.description}>
+                        <p className={`${styles.description} ${styles.orderDescription}`}>
                             {soraPage.hero.description}
                         </p>
 
-                        <CategoryTabs />
+                        <div className={styles.orderPills}><CategoryTabs /></div>
 
-                        <div ref={uploadRef} className={styles.uploadSection}>
+                        <div className={styles.orderUpload}><div ref={uploadRef} className={styles.uploadSection}>
                             <ImageUploader
                                 onImageUpload={handleImageUpload}
                                 uploadText={soraPage.uploader.uploadText}
@@ -216,9 +216,9 @@ export default function SoraWatermarkRemoverClientKo() {
                                     <RelatedTools />
                                 </>
                             )}
-                        </div>
+                        </div></div>
 
-                        <div className={styles.ratingsBelow}>
+                        <div className={`${styles.ratingsBelow} ${styles.orderRatings}`}>
                             <RatingBadges />
                         </div>
                     </section>

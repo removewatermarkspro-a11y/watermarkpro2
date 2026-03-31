@@ -108,15 +108,15 @@ export default function TextRemoverClientFr() {
             <main className={styles.main}>
                 <div className="container">
                     <section className={styles.hero}>
-                        <SocialProof pageId="remove-text" />
-                        <h1 className={styles.title}>
+                        <div className={styles.orderSocialProof}><SocialProof pageId="remove-text" /></div>
+                        <h1 className={`${styles.title} ${styles.orderTitle}`}>
                             {t.removeTextPage.hero.title} <span className={styles.violetText}>{t.removeTextPage.hero.titleHighlight}</span>
                         </h1>
-                        <p className={styles.description}>
+                        <p className={`${styles.description} ${styles.orderDescription}`}>
                             {t.removeTextPage.hero.description}
                         </p>
-                        <CategoryTabs />
-                        <div ref={uploadRef} className={styles.uploadSection}>
+                        <div className={styles.orderPills}><CategoryTabs /></div>
+                        <div className={styles.orderUpload}><div ref={uploadRef} className={styles.uploadSection}>
                             <ImageUploader
                                 onImageUpload={handleImageUpload}
                                 isAuthenticated={!!user}
@@ -135,8 +135,9 @@ export default function TextRemoverClientFr() {
                                     <RelatedTools />
                                 </>
                             )}
-                        </div>
-                        <div className={styles.ratingsBelow}><RatingBadges /></div>
+                        </div></div>
+
+                        <div className={`${styles.ratingsBelow} ${styles.orderRatings}`}><RatingBadges /></div>
                     </section>
 
                     {/* Examples Section */}

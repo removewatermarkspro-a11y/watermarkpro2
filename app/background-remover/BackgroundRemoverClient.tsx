@@ -87,11 +87,11 @@ export default function BackgroundRemoverClient() {
             <main className={styles.main}>
                 <div className="container">
                     <section className={styles.hero}>
-                        <SocialProof pageId="remove-background" />
-                        <h1 className={styles.title}><span className={styles.violetText}>{t.removeBackgroundPage.hero.titleHighlight}</span> {t.removeBackgroundPage.hero.title}</h1>
-                        <p className={styles.description}>{t.removeBackgroundPage.hero.description}</p>
-                        <CategoryTabs />
-                        <div ref={uploadRef} className={styles.uploadSection}>
+                        <div className={styles.orderSocialProof}><SocialProof pageId="remove-background" /></div>
+                        <h1 className={`${styles.title} ${styles.orderTitle}`}><span className={styles.violetText}>{t.removeBackgroundPage.hero.titleHighlight}</span> {t.removeBackgroundPage.hero.title}</h1>
+                        <p className={`${styles.description} ${styles.orderDescription}`}>{t.removeBackgroundPage.hero.description}</p>
+                        <div className={styles.orderPills}><CategoryTabs /></div>
+                        <div className={styles.orderUpload}><div ref={uploadRef} className={styles.uploadSection}>
                             <ImageUploader
                                 onImageUpload={handleImageUpload}
                                 isAuthenticated={!!user}
@@ -104,8 +104,9 @@ export default function BackgroundRemoverClient() {
                                     <RelatedTools />
                                 </>
                             )}
-                        </div>
-                        <div className={styles.ratingsBelow}><RatingBadges /></div>
+                        </div></div>
+
+                        <div className={`${styles.ratingsBelow} ${styles.orderRatings}`}><RatingBadges /></div>
                     </section>
 
                     <ExamplesSection />

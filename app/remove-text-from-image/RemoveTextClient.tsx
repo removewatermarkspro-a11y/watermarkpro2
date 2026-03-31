@@ -107,19 +107,19 @@ export default function RemoveTextClient() {
             <main className={styles.main}>
                 <div className="container">
                     <section className={styles.hero}>
-                        <SocialProof pageId="remove-text" />
+                        <div className={styles.orderSocialProof}><SocialProof pageId="remove-text" /></div>
 
-                        <h1 className={styles.title}>
+                        <h1 className={`${styles.title} ${styles.orderTitle}`}>
                             <span className={styles.violetText}>{t.textRemoval?.hero?.titleHighlight || 'Free'}</span> {t.textRemoval?.hero?.titleMain || 'Text Remover from Image'}
                         </h1>
 
-                        <p className={styles.description}>
+                        <p className={`${styles.description} ${styles.orderDescription}`}>
                             {t.textRemoval?.hero?.description || 'Remove text, captions, and subtitles from images instantly with AI. Clean photos by erasing unwanted text overlays in seconds.'}
                         </p>
 
-                        <CategoryTabs />
+                        <div className={styles.orderPills}><CategoryTabs /></div>
 
-                        <div ref={uploadRef} className={styles.uploadSection}>
+                        <div className={styles.orderUpload}><div ref={uploadRef} className={styles.uploadSection}>
                             <ImageUploader
                                 onImageUpload={handleImageUpload}
                                 isAuthenticated={!!user}
@@ -138,9 +138,9 @@ export default function RemoveTextClient() {
                                     <RelatedTools />
                                 </>
                             )}
-                        </div>
+                        </div></div>
 
-                        <div className={styles.ratingsBelow}>
+                        <div className={`${styles.ratingsBelow} ${styles.orderRatings}`}>
                             <RatingBadges />
                         </div>
                     </section>

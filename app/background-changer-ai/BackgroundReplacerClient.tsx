@@ -89,15 +89,15 @@ export default function BackgroundReplacerClient() {
             <main className={styles.main}>
                 <div className="container">
                     <section className={styles.hero}>
-                        <SocialProof pageId="replace-background" />
-                        <h1 className={styles.title}><span className={styles.violetText}>{t.replaceBackgroundPage.hero.titleHighlight}</span> {t.replaceBackgroundPage.hero.title}</h1>
-                        <p className={styles.description}>{t.replaceBackgroundPage.hero.description}</p>
-                        <CategoryTabs />
+                        <div className={styles.orderSocialProof}><SocialProof pageId="replace-background" /></div>
+                        <h1 className={`${styles.title} ${styles.orderTitle}`}><span className={styles.violetText}>{t.replaceBackgroundPage.hero.titleHighlight}</span> {t.replaceBackgroundPage.hero.title}</h1>
+                        <p className={`${styles.description} ${styles.orderDescription}`}>{t.replaceBackgroundPage.hero.description}</p>
+                        <div className={styles.orderPills}><CategoryTabs /></div>
                         <PromptInput
                             placeholder={t.replaceBackgroundPage.hero.promptPlaceholder}
                             onChange={(prompt) => setUserPrompt(prompt)}
                         />
-                        <div ref={uploadRef} className={styles.uploadSection}>
+                        <div className={styles.orderUpload}><div ref={uploadRef} className={styles.uploadSection}>
                             <ImageUploader
                                 onImageUpload={handleImageUpload}
                                 isAuthenticated={!!user}
@@ -110,8 +110,9 @@ export default function BackgroundReplacerClient() {
                                     <RelatedTools />
                                 </>
                             )}
-                        </div>
-                        <div className={styles.ratingsBelow}><RatingBadges /></div>
+                        </div></div>
+
+                        <div className={`${styles.ratingsBelow} ${styles.orderRatings}`}><RatingBadges /></div>
                     </section>
 
                     <ExamplesSection />

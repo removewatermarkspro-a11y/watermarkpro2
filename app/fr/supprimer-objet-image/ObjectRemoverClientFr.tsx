@@ -80,14 +80,14 @@ export default function ObjectRemoverClientFr() {
             <main className={styles.main}>
                 <div className="container">
                     <section className={styles.hero}>
-                        <SocialProof pageId="remove-object" />
-                        <h1 className={styles.title}>
+                        <div className={styles.orderSocialProof}><SocialProof pageId="remove-object" /></div>
+                        <h1 className={`${styles.title} ${styles.orderTitle}`}>
                             {t.removeObjectPage.hero.title} <span className={styles.violetText}>{t.removeObjectPage.hero.titleHighlight}</span>
                         </h1>
-                        <p className={styles.description}>{t.removeObjectPage.hero.description}</p>
-                        <CategoryTabs />
+                        <p className={`${styles.description} ${styles.orderDescription}`}>{t.removeObjectPage.hero.description}</p>
+                        <div className={styles.orderPills}><CategoryTabs /></div>
                         <PromptInput placeholder={t.removeObjectPage.hero.promptPlaceholder} />
-                        <div ref={uploadRef} className={styles.uploadSection}>
+                        <div className={styles.orderUpload}><div ref={uploadRef} className={styles.uploadSection}>
                             <ImageUploader onImageUpload={handleImageUpload} isAuthenticated={!!user} onAuthRequired={() => setShowAuthPopup(true)} noCreditsImage="/images-optimized/delete-objects-from-image-ai.webp" />
                             {processedImage && originalPreview && (
                                 <>
@@ -95,8 +95,9 @@ export default function ObjectRemoverClientFr() {
                                     <RelatedTools />
                                 </>
                             )}
-                        </div>
-                        <div className={styles.ratingsBelow}><RatingBadges /></div>
+                        </div></div>
+
+                        <div className={`${styles.ratingsBelow} ${styles.orderRatings}`}><RatingBadges /></div>
                     </section>
 
                     <ExamplesSection />

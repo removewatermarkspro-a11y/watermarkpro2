@@ -38,17 +38,18 @@ export default function BackgroundChangerClientEs() {
             <main className={styles.main}>
                 <div className="container">
                     <section className={styles.hero}>
-                        <SocialProof pageId="replace-background" />
-                        <h1 className={styles.title}>{t.replaceBackgroundPage.hero.title} <span className={styles.violetText}>{t.replaceBackgroundPage.hero.titleHighlight}</span></h1>
+                        <div className={styles.orderSocialProof}><SocialProof pageId="replace-background" /></div>
+                        <h1 className={`${styles.title} ${styles.orderTitle}`}>{t.replaceBackgroundPage.hero.title} <span className={styles.violetText}>{t.replaceBackgroundPage.hero.titleHighlight}</span></h1>
 
-                        <p className={styles.description}>{t.replaceBackgroundPage.hero.description}</p>
-                        <CategoryTabs />
+                        <p className={`${styles.description} ${styles.orderDescription}`}>{t.replaceBackgroundPage.hero.description}</p>
+                        <div className={styles.orderPills}><CategoryTabs /></div>
                         <PromptInput placeholder={t.replaceBackgroundPage.hero.promptPlaceholder} />
-                        <div ref={uploadRef} className={styles.uploadSection}>
+                        <div className={styles.orderUpload}><div ref={uploadRef} className={styles.uploadSection}>
                             <ImageUploader onImageUpload={(file, preview) => { setUploadedImage(file); setOriginalPreview(preview); setProcessedImage(preview); }} isAuthenticated={!!user} onAuthRequired={() => setShowAuthPopup(true)} noCreditsImage="/images-optimized/replace-background-photo-ai.webp" />
                             {processedImage && originalPreview && (<><ResultDisplay originalImage={originalPreview} processedImage={processedImage} onDownload={() => { if (!processedImage) return; const link = document.createElement('a'); link.href = processedImage; link.download = 'processed-image.png'; link.click(); }} onGenerateNew={() => { setUploadedImage(null); setOriginalPreview(null); setProcessedImage(null); setTimeout(() => { if (uploadRef.current) uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' }) }, 100); }} /><RelatedTools /></>)}
-                        </div>
-                        <div className={styles.ratingsBelow}><RatingBadges /></div>
+                        </div></div>
+
+                        <div className={`${styles.ratingsBelow} ${styles.orderRatings}`}><RatingBadges /></div>
                     </section>
                     <ExamplesSection />
                     <section className={styles.features}>

@@ -87,20 +87,20 @@ export default function WatermarkRemoverClientDe() {
             <main className={styles.main}>
                 <div className="container">
                     <section className={styles.hero}>
-                        <SocialProof pageId="home" />
+                        <div className={styles.orderSocialProof}><SocialProof pageId="home" /></div>
 
-                        <h1 className={styles.title}>
+                        <h1 className={`${styles.title} ${styles.orderTitle}`}>
                             {t.hero.titleMain} <span className={styles.violetText}>{t.hero.titleHighlight}</span>
 
                         </h1>
 
-                        <p className={styles.description}>
+                        <p className={`${styles.description} ${styles.orderDescription}`}>
                             {t.hero.description}
                         </p>
 
-                        <CategoryTabs />
+                        <div className={styles.orderPills}><CategoryTabs /></div>
 
-                        <div ref={uploadRef} className={styles.uploadSection}>
+                        <div className={styles.orderUpload}><div ref={uploadRef} className={styles.uploadSection}>
                             <ImageUploader
                                 onImageUpload={handleImageUpload}
                                 isAuthenticated={!!user}
@@ -119,9 +119,9 @@ export default function WatermarkRemoverClientDe() {
                                     <RelatedTools />
                                 </>
                             )}
-                        </div>
+                        </div></div>
 
-                        <div className={styles.ratingsBelow}>
+                        <div className={`${styles.ratingsBelow} ${styles.orderRatings}`}>
                             <RatingBadges />
                         </div>
                     </section>

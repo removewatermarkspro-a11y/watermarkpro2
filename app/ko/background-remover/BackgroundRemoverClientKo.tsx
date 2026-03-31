@@ -37,15 +37,16 @@ export default function BackgroundRemoverClientKo() {
             <main className={styles.main}>
                 <div className="container">
                     <section className={styles.hero}>
-                        <SocialProof pageId="remove-background" />
-                        <h1 className={styles.title}><span className={styles.violetText}>{t.removeBackgroundPage.hero.titleHighlight}</span> {t.removeBackgroundPage.hero.title}</h1>
-                        <p className={styles.description}>{t.removeBackgroundPage.hero.description}</p>
-                        <CategoryTabs />
-                        <div ref={uploadRef} className={styles.uploadSection}>
+                        <div className={styles.orderSocialProof}><SocialProof pageId="remove-background" /></div>
+                        <h1 className={`${styles.title} ${styles.orderTitle}`}><span className={styles.violetText}>{t.removeBackgroundPage.hero.titleHighlight}</span> {t.removeBackgroundPage.hero.title}</h1>
+                        <p className={`${styles.description} ${styles.orderDescription}`}>{t.removeBackgroundPage.hero.description}</p>
+                        <div className={styles.orderPills}><CategoryTabs /></div>
+                        <div className={styles.orderUpload}><div ref={uploadRef} className={styles.uploadSection}>
                             <ImageUploader onImageUpload={(file, preview) => { setUploadedImage(file); setOriginalPreview(preview); setProcessedImage(preview); }} isAuthenticated={!!user} onAuthRequired={() => setShowAuthPopup(true)} noCreditsImage="/images-optimized/background-removal-tool-ai.webp" />
                             {processedImage && originalPreview && (<><ResultDisplay originalImage={originalPreview} processedImage={processedImage} onDownload={() => { if (!processedImage) return; const link = document.createElement('a'); link.href = processedImage; link.download = 'processed-image.png'; link.click(); }} onGenerateNew={() => { setUploadedImage(null); setOriginalPreview(null); setProcessedImage(null); setTimeout(() => { if (uploadRef.current) uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' }) }, 100); }} /><RelatedTools /></>)}
-                        </div>
-                        <div className={styles.ratingsBelow}><RatingBadges /></div>
+                        </div></div>
+
+                        <div className={`${styles.ratingsBelow} ${styles.orderRatings}`}><RatingBadges /></div>
                     </section>
                     <ExamplesSection />
                     <section className={styles.features}>

@@ -38,17 +38,18 @@ export default function ObjectRemoverClientEs() {
             <main className={styles.main}>
                 <div className="container">
                     <section className={styles.hero}>
-                        <SocialProof pageId="remove-object" />
-                        <h1 className={styles.title}>{t.removeObjectPage.hero.title} <span className={styles.violetText}>{t.removeObjectPage.hero.titleHighlight}</span></h1>
+                        <div className={styles.orderSocialProof}><SocialProof pageId="remove-object" /></div>
+                        <h1 className={`${styles.title} ${styles.orderTitle}`}>{t.removeObjectPage.hero.title} <span className={styles.violetText}>{t.removeObjectPage.hero.titleHighlight}</span></h1>
 
-                        <p className={styles.description}>{t.removeObjectPage.hero.description}</p>
-                        <CategoryTabs />
+                        <p className={`${styles.description} ${styles.orderDescription}`}>{t.removeObjectPage.hero.description}</p>
+                        <div className={styles.orderPills}><CategoryTabs /></div>
                         <PromptInput placeholder={t.removeObjectPage.hero.promptPlaceholder} />
-                        <div ref={uploadRef} className={styles.uploadSection}>
+                        <div className={styles.orderUpload}><div ref={uploadRef} className={styles.uploadSection}>
                             <ImageUploader onImageUpload={(file, preview) => { setUploadedImage(file); setOriginalPreview(preview); setProcessedImage(preview); }} isAuthenticated={!!user} onAuthRequired={() => setShowAuthPopup(true)} noCreditsImage="/images-optimized/delete-objects-from-image-ai.webp" />
                             {processedImage && originalPreview && (<><ResultDisplay originalImage={originalPreview} processedImage={processedImage} onDownload={() => { if (!processedImage) return; const link = document.createElement('a'); link.href = processedImage; link.download = 'processed-image.png'; link.click(); }} onGenerateNew={() => { setUploadedImage(null); setOriginalPreview(null); setProcessedImage(null); setTimeout(() => { if (uploadRef.current) uploadRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' }) }, 100); }} /><RelatedTools /></>)}
-                        </div>
-                        <div className={styles.ratingsBelow}><RatingBadges /></div>
+                        </div></div>
+
+                        <div className={`${styles.ratingsBelow} ${styles.orderRatings}`}><RatingBadges /></div>
                     </section>
                     <ExamplesSection />
                     <section className={styles.features}>
