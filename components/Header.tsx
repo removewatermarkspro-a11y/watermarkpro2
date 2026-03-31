@@ -470,7 +470,7 @@ export default function Header() {
                                 {mounted && user ? (
                                     <>
                                         <Link href="/account" className="btn btn-secondary" onClick={() => setMobileMenuOpen(false)}>
-                                            {getUserInitial()}
+                                            Profil
                                         </Link>
                                         <Link href={language === 'fr' ? '/fr/tarifs' : language === 'de' ? '/de/preise' : language === 'es' ? '/es/precios' : language === 'pt' ? '/pt/precos' : language === 'ko' ? '/ko/pricing' : language === 'no' ? '/no/priser' : '/pricing'} className="btn btn-primary" onClick={() => setMobileMenuOpen(false)}>
                                             {t.header.unlockPro}
@@ -478,7 +478,7 @@ export default function Header() {
                                         <button
                                             onClick={() => { handleLogout(); setMobileMenuOpen(false); }}
                                             className="btn btn-secondary"
-                                            style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', width: '100%', marginTop: '0.5rem' }}
+                                            style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', width: '100%', marginTop: '0.5rem', color: '#ef4444', background: 'rgba(239, 68, 68, 0.1)', borderColor: 'rgba(239, 68, 68, 0.2)' }}
                                         >
                                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                                                 <path d="M9 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H9M16 17L21 12M21 12L16 7M21 12H9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
