@@ -435,6 +435,19 @@
 }
 
 @media (max-width: 768px) {
+    .orderSocialProof {
+        display: none;
+    }
+
+    .title {
+        font-size: clamp(3.25rem, 8vw, 4rem);
+    }
+
+    .description {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
     .videoComparison {
         grid-template-columns: 1fr;
     }
