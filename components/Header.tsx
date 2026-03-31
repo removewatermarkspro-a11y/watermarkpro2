@@ -316,7 +316,8 @@ export default function Header() {
                                 <>
                                     <div className={styles.userMenuWrapper} ref={userMenuRef}>
                                         <button className={styles.userBtn} onClick={() => setShowUserMenu(!showUserMenu)}>
-                                            {getUserInitial()}
+                                            <span className={styles.desktopUserInitial}>{getUserInitial()}</span>
+                                            <span className={styles.mobileUserText}>Profil</span>
                                         </button>
                                         {showUserMenu && (
                                             <div className={styles.userMenu}>

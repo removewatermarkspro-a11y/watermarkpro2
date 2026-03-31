@@ -347,7 +347,7 @@
     width: 100%;
     padding: 0.75rem;
     background: transparent;
-    color: #666;
+    color: #ef4444;
     border: none;
     border-radius: var(--radius-md);
     font-size: 0.9375rem;
@@ -489,8 +489,24 @@
     color: white;
 }
 
+.desktopUserInitial {
+    display: inline;
+}
+
+.mobileUserText {
+    display: none;
+}
+
 
 @media (max-width: 1024px) {
+    .desktopUserInitial {
+        display: none;
+    }
+    
+    .mobileUserText {
+        display: inline;
+    }
+
     .nav {
         gap: 0;
         justify-content: space-between;
