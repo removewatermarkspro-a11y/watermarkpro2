@@ -67,6 +67,90 @@ export default function BlogPage() {
                     </div>
 
                     <div className={styles.blogGrid}>
+                        {/* Blog Post Card - How to Remove CapCut Watermark with AI Tools and Manual Methods */}
+                        <Link href="/blog/how-to-remove-capcut-watermark" className={styles.blogCard}>
+                            <div className={styles.blogImageWrapper}>
+                                <img
+                                    src="https://replicate.delivery/xezq/0bDw0rHJ7IqnKFnw5tihevye1pw5IgqJ6Y9MRva0fgs5QXtsA/output_4077859976_0.jpeg"
+                                    alt="How to Remove CapCut Watermark with AI Tools and Manual Methods"
+                                    className={styles.blogCardImage}
+                                />
+                            </div>
+                            <div className={styles.blogCardContent}>
+                                <span className={styles.blogCategory}>VIDEO TOOLS</span>
+                                <h2 className={styles.blogCardTitle}>
+                                    How to Remove CapCut Watermark with AI Tools and Manual Methods
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    </svg>
+                                </h2>
+                                <p className={styles.blogCardDescription}>
+                                    Learn 5 proven methods to remove CapCut watermarks from videos. Compare AI tools, manual techniques, and free alternatives for clean, professional results.
+                                </p>
+                                <div className={styles.blogCardMeta}>
+                                    <span>April 1, 2026</span>
+                                    <span>&bull;</span>
+                                    <span>12 min read</span>
+                                </div>
+                            </div>
+                        </Link>
+
+                        {/* Blog Post Card - How to Download TikTok Videos Without Watermark Using AI Tools */}
+                        <Link href="/blog/how-to-download-tiktok-videos-without-watermark" className={styles.blogCard}>
+                            <div className={styles.blogImageWrapper}>
+                                <img
+                                    src="https://replicate.delivery/xezq/JeILgjQhcpWLVSJicA9biaaOWjayyRg0cGVDR0eWljYslrWWA/output_3091670279_0.jpeg"
+                                    alt="How to Download TikTok Videos Without Watermark Using AI Tools"
+                                    className={styles.blogCardImage}
+                                />
+                            </div>
+                            <div className={styles.blogCardContent}>
+                                <span className={styles.blogCategory}>VIDEO TOOLS</span>
+                                <h2 className={styles.blogCardTitle}>
+                                    How to Download TikTok Videos Without Watermark Using AI Tools
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    </svg>
+                                </h2>
+                                <p className={styles.blogCardDescription}>
+                                    Learn how to download TikTok videos without watermark using AI-powered tools. Step-by-step guide with 7 tested methods and expert tips for clean video downloads.
+                                </p>
+                                <div className={styles.blogCardMeta}>
+                                    <span>April 1, 2026</span>
+                                    <span>&bull;</span>
+                                    <span>12 min read</span>
+                                </div>
+                            </div>
+                        </Link>
+
+                        {/* Blog Post Card - How to Add Watermarks to PDF Files: Complete 2026 Guide */}
+                        <Link href="/blog/pdf-to-watermark" className={styles.blogCard}>
+                            <div className={styles.blogImageWrapper}>
+                                <img
+                                    src="https://replicate.delivery/xezq/WesesGdjPJgm1kF1Z3zAKMyfaFjMSE6GeYcd3opfMnlsYc1yC/output_1611997163_0.jpeg"
+                                    alt="How to Add Watermarks to PDF Files: Complete 2026 Guide"
+                                    className={styles.blogCardImage}
+                                />
+                            </div>
+                            <div className={styles.blogCardContent}>
+                                <span className={styles.blogCategory}>PDF TOOLS</span>
+                                <h2 className={styles.blogCardTitle}>
+                                    How to Add Watermarks to PDF Files: Complete 2026 Guide
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    </svg>
+                                </h2>
+                                <p className={styles.blogCardDescription}>
+                                    Learn how to add watermarks to PDF files with AI-powered tools. Step-by-step guide covering text, image, and transparent watermarks for documents.
+                                </p>
+                                <div className={styles.blogCardMeta}>
+                                    <span>April 1, 2026</span>
+                                    <span>&bull;</span>
+                                    <span>12 min read</span>
+                                </div>
+                            </div>
+                        </Link>
+
                         {/* Blog Post Card - How to Add Watermarks to Word Documents Using Best AI Tools */}
                         <Link href="/blog/add-watermark-to-word" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
