@@ -67,6 +67,90 @@ export default function BlogPage() {
                     </div>
 
                     <div className={styles.blogGrid}>
+                        {/* Blog Post Card - Best Ways to Remove Image Watermarks with AI Technology */}
+                        <Link href="/blog/remove-image-watermark" className={styles.blogCard}>
+                            <div className={styles.blogImageWrapper}>
+                                <img
+                                    src="https://replicate.delivery/xezq/b0Mcmnv9fC3SMi1JqoZUANvZA9FHKcSr1dMShp3wTfoioAXWA/output_2526702551_0.jpeg"
+                                    alt="Best Ways to Remove Image Watermarks with AI Technology"
+                                    className={styles.blogCardImage}
+                                />
+                            </div>
+                            <div className={styles.blogCardContent}>
+                                <span className={styles.blogCategory}>IMAGE EDITING</span>
+                                <h2 className={styles.blogCardTitle}>
+                                    Best Ways to Remove Image Watermarks with AI Technology
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    </svg>
+                                </h2>
+                                <p className={styles.blogCardDescription}>
+                                    Learn how to remove image watermarks effectively using AI-powered tools. Compare 7 top solutions and discover professional techniques for clean results.
+                                </p>
+                                <div className={styles.blogCardMeta}>
+                                    <span>April 2, 2026</span>
+                                    <span>&bull;</span>
+                                    <span>12 min read</span>
+                                </div>
+                            </div>
+                        </Link>
+
+                        {/* Blog Post Card - Best PNGTree Downloader Tools Without Watermarks in 2026 */}
+                        <Link href="/blog/pngtree-downloader" className={styles.blogCard}>
+                            <div className={styles.blogImageWrapper}>
+                                <img
+                                    src="https://replicate.delivery/xezq/HhVuUJVPDeXFMakuGe0Y2Utf8DjarmlXlJFYFzBwW8rHLBusA/output_790847068_0.jpeg"
+                                    alt="Best PNGTree Downloader Tools Without Watermarks in 2026"
+                                    className={styles.blogCardImage}
+                                />
+                            </div>
+                            <div className={styles.blogCardContent}>
+                                <span className={styles.blogCategory}>IMAGE EDITING</span>
+                                <h2 className={styles.blogCardTitle}>
+                                    Best PNGTree Downloader Tools Without Watermarks in 2026
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    </svg>
+                                </h2>
+                                <p className={styles.blogCardDescription}>
+                                    Discover the best PNGTree downloader tools to remove watermarks from stock images. Compare AI-powered solutions and learn step-by-step removal methods.
+                                </p>
+                                <div className={styles.blogCardMeta}>
+                                    <span>April 2, 2026</span>
+                                    <span>&bull;</span>
+                                    <span>12 min read</span>
+                                </div>
+                            </div>
+                        </Link>
+
+                        {/* Blog Post Card - Best Adobe Stock Downloader Tools That Remove Watermarks */}
+                        <Link href="/blog/adobe-stock-downloader" className={styles.blogCard}>
+                            <div className={styles.blogImageWrapper}>
+                                <img
+                                    src="https://replicate.delivery/xezq/sEaw41MUKqZGMtOEekaH6t8a0nuv06Jp0bhQEoNDmDALRgLLA/output_359665601_0.jpeg"
+                                    alt="Best Adobe Stock Downloader Tools That Remove Watermarks"
+                                    className={styles.blogCardImage}
+                                />
+                            </div>
+                            <div className={styles.blogCardContent}>
+                                <span className={styles.blogCategory}>PHOTO TOOLS</span>
+                                <h2 className={styles.blogCardTitle}>
+                                    Best Adobe Stock Downloader Tools That Remove Watermarks
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    </svg>
+                                </h2>
+                                <p className={styles.blogCardDescription}>
+                                    Discover the top Adobe Stock downloader tools for watermark-free images. Compare features, pricing, and effectiveness in our comprehensive guide.
+                                </p>
+                                <div className={styles.blogCardMeta}>
+                                    <span>April 2, 2026</span>
+                                    <span>&bull;</span>
+                                    <span>12 min read</span>
+                                </div>
+                            </div>
+                        </Link>
+
                         {/* Blog Post Card - How to Remove CapCut Watermark with AI Tools and Manual Methods */}
                         <Link href="/blog/how-to-remove-capcut-watermark" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
