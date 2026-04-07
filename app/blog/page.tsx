@@ -67,6 +67,90 @@ export default function BlogPage() {
                     </div>
 
                     <div className={styles.blogGrid}>
+                        {/* Blog Post Card - Does CapCut Have a Watermark - Best Ways to Remove It Completely */}
+                        <Link href="/blog/does-capcut-have-a-watermark" className={styles.blogCard}>
+                            <div className={styles.blogImageWrapper}>
+                                <img
+                                    src="https://replicate.delivery/xezq/BtLSgabPgKqFFpfiEKCQgPCdLhcb33puz6SThqliXYkMHVMLA/output_3971711611_0.jpeg"
+                                    alt="Does CapCut Have a Watermark - Best Ways to Remove It Completely"
+                                    className={styles.blogCardImage}
+                                />
+                            </div>
+                            <div className={styles.blogCardContent}>
+                                <span className={styles.blogCategory}>VIDEO TOOLS</span>
+                                <h2 className={styles.blogCardTitle}>
+                                    Does CapCut Have a Watermark - Best Ways to Remove It Completely
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    </svg>
+                                </h2>
+                                <p className={styles.blogCardDescription}>
+                                    CapCut adds watermarks to exported videos. Learn how to remove CapCut watermarks completely using AI tools and discover the best watermark removal methods.
+                                </p>
+                                <div className={styles.blogCardMeta}>
+                                    <span>April 7, 2026</span>
+                                    <span>&bull;</span>
+                                    <span>12 min read</span>
+                                </div>
+                            </div>
+                        </Link>
+
+                        {/* Blog Post Card - How to Remove CapCut Watermarks from Videos Effectively */}
+                        <Link href="/blog/capcut-watermark" className={styles.blogCard}>
+                            <div className={styles.blogImageWrapper}>
+                                <img
+                                    src="https://replicate.delivery/xezq/eIcK0Ca3HWX4P6YeAbzA0Bdz2VHyW6nZlEG51EfGpzGlXUxsA/output_2422975891_0.jpeg"
+                                    alt="How to Remove CapCut Watermarks from Videos Effectively"
+                                    className={styles.blogCardImage}
+                                />
+                            </div>
+                            <div className={styles.blogCardContent}>
+                                <span className={styles.blogCategory}>VIDEO TOOLS</span>
+                                <h2 className={styles.blogCardTitle}>
+                                    How to Remove CapCut Watermarks from Videos Effectively
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    </svg>
+                                </h2>
+                                <p className={styles.blogCardDescription}>
+                                    Learn proven methods to remove CapCut watermarks from your videos using AI tools and editing techniques. Compare 7 tools tested on 400+ videos.
+                                </p>
+                                <div className={styles.blogCardMeta}>
+                                    <span>April 7, 2026</span>
+                                    <span>&bull;</span>
+                                    <span>12 min read</span>
+                                </div>
+                            </div>
+                        </Link>
+
+                        {/* Blog Post Card - How to Remove Watermarks in Photoshop Fast and Effectively */}
+                        <Link href="/blog/remove-watermark-photoshop" className={styles.blogCard}>
+                            <div className={styles.blogImageWrapper}>
+                                <img
+                                    src="https://replicate.delivery/xezq/0SnGCsBQL6aZAJtWzcDiQPbKFE42seueeT58WwCQ7qHxRUxsA/output_3617645055_0.jpeg"
+                                    alt="How to Remove Watermarks in Photoshop Fast and Effectively"
+                                    className={styles.blogCardImage}
+                                />
+                            </div>
+                            <div className={styles.blogCardContent}>
+                                <span className={styles.blogCategory}>IMAGE EDITING</span>
+                                <h2 className={styles.blogCardTitle}>
+                                    How to Remove Watermarks in Photoshop Fast and Effectively
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    </svg>
+                                </h2>
+                                <p className={styles.blogCardDescription}>
+                                    Learn professional watermark removal techniques in Photoshop using AI tools. Step-by-step guide with 6 proven methods for clean, quality results.
+                                </p>
+                                <div className={styles.blogCardMeta}>
+                                    <span>April 7, 2026</span>
+                                    <span>&bull;</span>
+                                    <span>12 min read</span>
+                                </div>
+                            </div>
+                        </Link>
+
                         {/* Blog Post Card - How to Remove Draft Watermark from Word Documents Instantly */}
                         <Link href="/blog/how-to-remove-draft-watermark-from-word" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
