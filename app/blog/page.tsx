@@ -67,6 +67,90 @@ export default function BlogPage() {
                     </div>
 
                     <div className={styles.blogGrid}>
+                        {/* Blog Post Card - Does CapCut Have Watermark Remover Tools That Actually Work */}
+                        <Link href="/blog/does-capcut-have-watermark-remover" className={styles.blogCard}>
+                            <div className={styles.blogImageWrapper}>
+                                <img
+                                    src="https://replicate.delivery/xezq/uOKzefrnEMhfwpqeh3I8txohEoALXXLBbv6dEOfOmB0bFLNzC/output_2856225750_0.jpeg"
+                                    alt="Does CapCut Have Watermark Remover Tools That Actually Work"
+                                    className={styles.blogCardImage}
+                                />
+                            </div>
+                            <div className={styles.blogCardContent}>
+                                <span className={styles.blogCategory}>VIDEO TOOLS</span>
+                                <h2 className={styles.blogCardTitle}>
+                                    Does CapCut Have Watermark Remover Tools That Actually Work
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    </svg>
+                                </h2>
+                                <p className={styles.blogCardDescription}>
+                                    Discover if CapCut has watermark removal features and explore better AI-powered alternatives for removing watermarks from videos and photos effectively.
+                                </p>
+                                <div className={styles.blogCardMeta}>
+                                    <span>April 10, 2026</span>
+                                    <span>&bull;</span>
+                                    <span>12 min read</span>
+                                </div>
+                            </div>
+                        </Link>
+
+                        {/* Blog Post Card - How to Remove Watermarks from Videos Using AI Technology */}
+                        <Link href="/blog/how-to-remove-a-watermark-from-a-video" className={styles.blogCard}>
+                            <div className={styles.blogImageWrapper}>
+                                <img
+                                    src="https://replicate.delivery/xezq/eUUo78fxzQgOykJNe6lZrnQsfmg7lAZeU0T5FyectGVcgVamF/output_1858550474_0.jpeg"
+                                    alt="How to Remove Watermarks from Videos Using AI Technology"
+                                    className={styles.blogCardImage}
+                                />
+                            </div>
+                            <div className={styles.blogCardContent}>
+                                <span className={styles.blogCategory}>VIDEO TOOLS</span>
+                                <h2 className={styles.blogCardTitle}>
+                                    How to Remove Watermarks from Videos Using AI Technology
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    </svg>
+                                </h2>
+                                <p className={styles.blogCardDescription}>
+                                    Learn how to remove watermarks from videos using AI-powered tools. Step-by-step guide with 7 tested methods and tool comparisons for clean results.
+                                </p>
+                                <div className={styles.blogCardMeta}>
+                                    <span>April 10, 2026</span>
+                                    <span>&bull;</span>
+                                    <span>12 min read</span>
+                                </div>
+                            </div>
+                        </Link>
+
+                        {/* Blog Post Card - How to Use PixelBin Watermark Remover for Clean Image Editing */}
+                        <Link href="/blog/pixelbin-watermark-remover" className={styles.blogCard}>
+                            <div className={styles.blogImageWrapper}>
+                                <img
+                                    src="https://replicate.delivery/xezq/teNNWyjUx5UKWaKGiExlmAJYEtpbNEFsZSTvtrlPf7gYTpZWA/output_2533975805_0.jpeg"
+                                    alt="How to Use PixelBin Watermark Remover for Clean Image Editing"
+                                    className={styles.blogCardImage}
+                                />
+                            </div>
+                            <div className={styles.blogCardContent}>
+                                <span className={styles.blogCategory}>AI TOOLS</span>
+                                <h2 className={styles.blogCardTitle}>
+                                    How to Use PixelBin Watermark Remover for Clean Image Editing
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    </svg>
+                                </h2>
+                                <p className={styles.blogCardDescription}>
+                                    Complete guide to PixelBin watermark remover tools and alternatives. Learn AI-powered watermark removal with step-by-step instructions.
+                                </p>
+                                <div className={styles.blogCardMeta}>
+                                    <span>April 10, 2026</span>
+                                    <span>&bull;</span>
+                                    <span>12 min read</span>
+                                </div>
+                            </div>
+                        </Link>
+
                         {/* Blog Post Card - How to Remove Watermarks from Photos Using AI-Powered Tools */}
                         <Link href="/blog/removing-watermark-from-photo" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
