@@ -67,6 +67,90 @@ export default function BlogPage() {
                     </div>
 
                     <div className={styles.blogGrid}>
+                        {/* Blog Post Card - How to Remove Watermarks from Word Documents Effectively */}
+                        <Link href="/blog/remove-watermark-from-word-document" className={styles.blogCard}>
+                            <div className={styles.blogImageWrapper}>
+                                <img
+                                    src="https://replicate.delivery/xezq/MJfI1u4XoPyabiwRK091dSj5kzoacYZaN6FCywVy6ZqlHfZWA/output_481361894_0.jpeg"
+                                    alt="How to Remove Watermarks from Word Documents Effectively"
+                                    className={styles.blogCardImage}
+                                />
+                            </div>
+                            <div className={styles.blogCardContent}>
+                                <span className={styles.blogCategory}>DOCUMENT TOOLS</span>
+                                <h2 className={styles.blogCardTitle}>
+                                    How to Remove Watermarks from Word Documents Effectively
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    </svg>
+                                </h2>
+                                <p className={styles.blogCardDescription}>
+                                    Learn how to remove watermark from word document using proven methods. Compare 7 top tools and get step-by-step guides for clean document editing.
+                                </p>
+                                <div className={styles.blogCardMeta}>
+                                    <span>April 11, 2026</span>
+                                    <span>&bull;</span>
+                                    <span>12 min read</span>
+                                </div>
+                            </div>
+                        </Link>
+
+                        {/* Blog Post Card - Best CapCut Watermark Remover Tools and Complete Guide 2026 */}
+                        <Link href="/blog/capcut-watermark-remover" className={styles.blogCard}>
+                            <div className={styles.blogImageWrapper}>
+                                <img
+                                    src="https://replicate.delivery/xezq/SyaR7NexWVUSL6V7PcxZLOmtF6Ufs3mcxT5uHhrvtLglMezsA/output_893294226_0.jpeg"
+                                    alt="Best CapCut Watermark Remover Tools and Complete Guide 2026"
+                                    className={styles.blogCardImage}
+                                />
+                            </div>
+                            <div className={styles.blogCardContent}>
+                                <span className={styles.blogCategory}>VIDEO TOOLS</span>
+                                <h2 className={styles.blogCardTitle}>
+                                    Best CapCut Watermark Remover Tools and Complete Guide 2026
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    </svg>
+                                </h2>
+                                <p className={styles.blogCardDescription}>
+                                    Remove CapCut watermarks from TikTok videos with AI-powered tools. Compare 7 top solutions, step-by-step guides, and expert tips for clean video exports.
+                                </p>
+                                <div className={styles.blogCardMeta}>
+                                    <span>April 11, 2026</span>
+                                    <span>&bull;</span>
+                                    <span>12 min read</span>
+                                </div>
+                            </div>
+                        </Link>
+
+                        {/* Blog Post Card - How to Download TikTok Videos Without Watermarks Easily */}
+                        <Link href="/blog/how-to-download-tiktok-video-without-watermark" className={styles.blogCard}>
+                            <div className={styles.blogImageWrapper}>
+                                <img
+                                    src="https://replicate.delivery/xezq/7Pjq9gQEOSofLC3uAmR6dbFy6Z8MixH93cetfiFLseBEn4nZB/output_1291249670_0.jpeg"
+                                    alt="How to Download TikTok Videos Without Watermarks Easily"
+                                    className={styles.blogCardImage}
+                                />
+                            </div>
+                            <div className={styles.blogCardContent}>
+                                <span className={styles.blogCategory}>VIDEO TOOLS</span>
+                                <h2 className={styles.blogCardTitle}>
+                                    How to Download TikTok Videos Without Watermarks Easily
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    </svg>
+                                </h2>
+                                <p className={styles.blogCardDescription}>
+                                    Learn how to download TikTok videos without watermarks using AI tools, online downloaders, and apps. Compare 7 methods with step-by-step guides.
+                                </p>
+                                <div className={styles.blogCardMeta}>
+                                    <span>April 11, 2026</span>
+                                    <span>&bull;</span>
+                                    <span>12 min read</span>
+                                </div>
+                            </div>
+                        </Link>
+
                         {/* Blog Post Card - Does CapCut Have Watermark Remover Tools That Actually Work */}
                         <Link href="/blog/does-capcut-have-watermark-remover" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
