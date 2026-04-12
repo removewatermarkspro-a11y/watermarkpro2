@@ -67,6 +67,90 @@ export default function BlogPage() {
                     </div>
 
                     <div className={styles.blogGrid}>
+                        {/* Blog Post Card - How to Remove a Watermark from Word Documents in Minutes */}
+                        <Link href="/blog/how-to-remove-a-watermark-from-word" className={styles.blogCard}>
+                            <div className={styles.blogImageWrapper}>
+                                <img
+                                    src="https://replicate.delivery/xezq/MPMcGNTyF3K7N9VKuEArgn0e149G9VyCxGUYF5zL2wHwsJNLA/output_1612401121_0.jpeg"
+                                    alt="How to Remove a Watermark from Word Documents in Minutes"
+                                    className={styles.blogCardImage}
+                                />
+                            </div>
+                            <div className={styles.blogCardContent}>
+                                <span className={styles.blogCategory}>DOCUMENT TOOLS</span>
+                                <h2 className={styles.blogCardTitle}>
+                                    How to Remove a Watermark from Word Documents in Minutes
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    </svg>
+                                </h2>
+                                <p className={styles.blogCardDescription}>
+                                    Learn how to remove watermarks from Word documents using AI tools, manual methods, and professional software. Complete guide with step-by-step instructions.
+                                </p>
+                                <div className={styles.blogCardMeta}>
+                                    <span>April 12, 2026</span>
+                                    <span>&bull;</span>
+                                    <span>12 min read</span>
+                                </div>
+                            </div>
+                        </Link>
+
+                        {/* Blog Post Card - Best Free Watermark Removers Online Including Aiseesoft Review */}
+                        <Link href="/blog/aiseesoft-free-watermark-remover-online" className={styles.blogCard}>
+                            <div className={styles.blogImageWrapper}>
+                                <img
+                                    src="https://replicate.delivery/xezq/U4Ac84VeWVWmNCTUqEU7eThS1zpAIkIlk1d4Wwl7cLD9WTaWA/output_3093941869_0.jpeg"
+                                    alt="Best Free Watermark Removers Online Including Aiseesoft Review"
+                                    className={styles.blogCardImage}
+                                />
+                            </div>
+                            <div className={styles.blogCardContent}>
+                                <span className={styles.blogCategory}>PHOTO TOOLS</span>
+                                <h2 className={styles.blogCardTitle}>
+                                    Best Free Watermark Removers Online Including Aiseesoft Review
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    </svg>
+                                </h2>
+                                <p className={styles.blogCardDescription}>
+                                    Compare Aiseesoft free watermark remover online with top alternatives. Expert testing of 7 tools reveals which AI-powered solution delivers best results.
+                                </p>
+                                <div className={styles.blogCardMeta}>
+                                    <span>April 12, 2026</span>
+                                    <span>&bull;</span>
+                                    <span>12 min read</span>
+                                </div>
+                            </div>
+                        </Link>
+
+                        {/* Blog Post Card - Best Adobe Stock Image Downloader Tools Without Watermarks */}
+                        <Link href="/blog/adobe-stock-image-downloader" className={styles.blogCard}>
+                            <div className={styles.blogImageWrapper}>
+                                <img
+                                    src="https://replicate.delivery/xezq/Wey2wQhtxSxOTShFasZGa6gdoYC6SIVnSiAAwqs1JYf5TTaWA/output_3793495824_0.jpeg"
+                                    alt="Best Adobe Stock Image Downloader Tools Without Watermarks"
+                                    className={styles.blogCardImage}
+                                />
+                            </div>
+                            <div className={styles.blogCardContent}>
+                                <span className={styles.blogCategory}>IMAGE EDITING</span>
+                                <h2 className={styles.blogCardTitle}>
+                                    Best Adobe Stock Image Downloader Tools Without Watermarks
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    </svg>
+                                </h2>
+                                <p className={styles.blogCardDescription}>
+                                    Discover the top Adobe Stock image downloader tools to get clean images without watermarks. Compare features, pricing, and effectiveness of 7 leading solutions.
+                                </p>
+                                <div className={styles.blogCardMeta}>
+                                    <span>April 12, 2026</span>
+                                    <span>&bull;</span>
+                                    <span>12 min read</span>
+                                </div>
+                            </div>
+                        </Link>
+
                         {/* Blog Post Card - How to Remove Watermarks from Word Documents Effectively */}
                         <Link href="/blog/remove-watermark-from-word-document" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
