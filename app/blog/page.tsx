@@ -67,6 +67,90 @@ export default function BlogPage() {
                     </div>
 
                     <div className={styles.blogGrid}>
+                        {/* Blog Post Card - How to Remove Logo from Picture Using AI-Powered Tools */}
+                        <Link href="/blog/remove-logo-from-picture" className={styles.blogCard}>
+                            <div className={styles.blogImageWrapper}>
+                                <img
+                                    src="https://replicate.delivery/xezq/e4KqDuxf0skyDEpaf71Sd1UznEHVNwhDw4aJ0FrsKcRGCm2sA/output_759597883_0.jpeg"
+                                    alt="How to Remove Logo from Picture Using AI-Powered Tools"
+                                    className={styles.blogCardImage}
+                                />
+                            </div>
+                            <div className={styles.blogCardContent}>
+                                <span className={styles.blogCategory}>IMAGE EDITING</span>
+                                <h2 className={styles.blogCardTitle}>
+                                    How to Remove Logo from Picture Using AI-Powered Tools
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    </svg>
+                                </h2>
+                                <p className={styles.blogCardDescription}>
+                                    Learn how to remove logo from picture using advanced AI tools. Compare 7 top watermark removal solutions with step-by-step guides and expert tips.
+                                </p>
+                                <div className={styles.blogCardMeta}>
+                                    <span>April 15, 2026</span>
+                                    <span>&bull;</span>
+                                    <span>12 min read</span>
+                                </div>
+                            </div>
+                        </Link>
+
+                        {/* Blog Post Card - Best TikTok Logo Remover Tools for Clean Video Downloads */}
+                        <Link href="/blog/tiktok-logo-remover" className={styles.blogCard}>
+                            <div className={styles.blogImageWrapper}>
+                                <img
+                                    src="https://replicate.delivery/xezq/Uf38CWeLqwtIqkJiGeptPBeNQDcPpAHbTmiU7UoNeYA6wXazC/output_1457692157_0.jpeg"
+                                    alt="Best TikTok Logo Remover Tools for Clean Video Downloads"
+                                    className={styles.blogCardImage}
+                                />
+                            </div>
+                            <div className={styles.blogCardContent}>
+                                <span className={styles.blogCategory}>VIDEO TOOLS</span>
+                                <h2 className={styles.blogCardTitle}>
+                                    Best TikTok Logo Remover Tools for Clean Video Downloads
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    </svg>
+                                </h2>
+                                <p className={styles.blogCardDescription}>
+                                    Remove TikTok watermarks effortlessly with AI-powered tools. Compare the best TikTok logo remover options and learn step-by-step removal techniques.
+                                </p>
+                                <div className={styles.blogCardMeta}>
+                                    <span>April 15, 2026</span>
+                                    <span>&bull;</span>
+                                    <span>12 min read</span>
+                                </div>
+                            </div>
+                        </Link>
+
+                        {/* Blog Post Card - Best Ways to Remove Proof from Photo Online Using AI Technology */}
+                        <Link href="/blog/remove-proof-from-photo-online" className={styles.blogCard}>
+                            <div className={styles.blogImageWrapper}>
+                                <img
+                                    src="https://replicate.delivery/xezq/7MOouwFBaQYuH9wCpraeH5YxDhUNNeYUreLryWmk2iyi2l2sA/output_230787292_0.jpeg"
+                                    alt="Best Ways to Remove Proof from Photo Online Using AI Technology"
+                                    className={styles.blogCardImage}
+                                />
+                            </div>
+                            <div className={styles.blogCardContent}>
+                                <span className={styles.blogCategory}>PHOTO TOOLS</span>
+                                <h2 className={styles.blogCardTitle}>
+                                    Best Ways to Remove Proof from Photo Online Using AI Technology
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    </svg>
+                                </h2>
+                                <p className={styles.blogCardDescription}>
+                                    Learn how to remove proof from photo online with AI-powered tools. Complete guide with step-by-step instructions and tool comparisons for 2026.
+                                </p>
+                                <div className={styles.blogCardMeta}>
+                                    <span>April 15, 2026</span>
+                                    <span>&bull;</span>
+                                    <span>12 min read</span>
+                                </div>
+                            </div>
+                        </Link>
+
                         {/* Blog Post Card - Best TikTok Watermark Remover Tools That Actually Work */}
                         <Link href="/blog/tik-tok-watermark-remover" className={styles.blogCard}>
                             <div className={styles.blogImageWrapper}>
