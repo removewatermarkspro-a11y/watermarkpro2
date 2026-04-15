@@ -1,9 +1,7 @@
 name: Daily Blog Generation
 
 on:
-  schedule:
-    - cron: '0 11 * * *'  # 11:00 UTC = 12:00 noon Paris time
-  workflow_dispatch:  # Manual trigger
+  workflow_dispatch:  # Manual trigger only — automatic scheduling disabled
 
 permissions:
   contents: write
